@@ -27,9 +27,34 @@ One English Pikachu `card_print` can have several `print_variants`: `normal`, `r
 
 - `init/10-schema.sql`: creates the schema, comments, indexes, and update triggers.
 - `init/20-import-csv.sh`: runs the CSV importer during PostgreSQL initialization.
+- `scripts/generate_fake_dataset.py`: regenerates the deterministic development fixture CSVs.
 - `scripts/import_csv.py`: imports CSV files into PostgreSQL.
 - `scripts/normalization.py`: skeleton helpers for future API normalization.
 - `csv/*.csv`: source data for local rebuilds and test data.
+
+## Development Fixture
+
+The generated fixture contains:
+
+- 15 print languages.
+- 45 language-specific series.
+- 150 language-specific sets.
+- 11 card prints per set.
+- 1,650 card prints.
+- 3,362 print variants.
+- 3,362 card image rows using public `images.pokemontcg.io` URLs.
+
+Regenerate the CSV files from the project root:
+
+```sh
+python3 database/context/scripts/generate_fake_dataset.py
+```
+
+Replace the running dev database with the current CSV files:
+
+```sh
+CARD_MANAGER_RESET=1 python3 /app/context/scripts/import_csv.py
+```
 
 ## Import Order
 
@@ -55,6 +80,4 @@ CSV files are imported in dependency order:
 
 ## Important
 
-The official PostgreSQL Docker image runs files from `/docker-entrypoint-initdb.d` only when the database volume is empty.
-
-If you change the schema or CSV files and want to rebuild from scratch, remove the database PVC, then start again.
+The official PostgreSQL Docker image runs files from `/docker-entrypoint-initdb.d` only when the database volume is empty. For day-to-day fixture changes, prefer `CARD_MANAGER_RESET=1` with the importer instead of deleting the PVC.

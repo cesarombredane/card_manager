@@ -9,6 +9,7 @@ from psycopg2.extras import Json
 
 
 CSV_DIR = Path(os.environ.get("CARD_MANAGER_CSV_DIR", "/app/context/csv"))
+RESET_BEFORE_IMPORT = os.environ.get("CARD_MANAGER_RESET", "").lower() in {"1", "true", "yes", "y"}
 
 
 TABLES = [
@@ -271,6 +272,12 @@ def upsert_rows(cursor, table, rows):
     print(f"Imported {len(rows)} rows into {table['name']}")
 
 
+def reset_tables(cursor):
+    table_names = ", ".join(table["name"] for table in reversed(TABLES))
+    cursor.execute(f"TRUNCATE {table_names} RESTART IDENTITY CASCADE")
+    print("Reset existing CSV-managed tables")
+
+
 def main():
     connection = psycopg2.connect(
         dbname=os.environ["POSTGRES_DB"],
@@ -279,6 +286,9 @@ def main():
 
     with connection:
         with connection.cursor() as cursor:
+            if RESET_BEFORE_IMPORT:
+                reset_tables(cursor)
+
             for table in TABLES:
                 upsert_rows(cursor, table, read_rows(table))
 
