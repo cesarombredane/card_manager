@@ -27,5 +27,11 @@ dev:
 
   app:
     imageSelector: card-manager-app
+    sync:
+      - path: ./app:/usr/src/app
+        excludePaths:
+          - node_modules
+          - frontend/dist
     ports:
       - port: "3000:3000"
+      - port: "5173:5173"

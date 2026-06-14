@@ -17,7 +17,7 @@
 <template>
   <main class="app-shell">
     <section class="workspace">
-      <p class="eyebrow">Card Manager aze</p>
+      <p class="eyebrow">Card Manager</p>
       <h1>Collection workspace</h1>
       <p class="intro">
         Vue is ready for the frontend, Express is ready for the API, and the database pod can be wired in next.

@@ -18,12 +18,17 @@ spec:
         - name: app
           image: card-manager-app
           imagePullPolicy: IfNotPresent
+          securityContext:
+            runAsUser: 0
+            runAsGroup: 0
           ports:
-            - name: http
+            - name: api
               containerPort: 3000
+            - name: frontend
+              containerPort: 5173
           env:
             - name: NODE_ENV
-              value: production
+              value: development
             - name: PORT
               value: "3000"
             - name: DATABASE_URL
@@ -34,13 +39,13 @@ spec:
           readinessProbe:
             httpGet:
               path: /api/health
-              port: http
+              port: api
             initialDelaySeconds: 5
             periodSeconds: 10
           livenessProbe:
             httpGet:
               path: /api/health
-              port: http
+              port: api
             initialDelaySeconds: 15
             periodSeconds: 20
           resources:
@@ -63,7 +68,11 @@ spec:
   selector:
     app: card-manager-app
   ports:
-    - name: http
+    - name: api
       protocol: TCP
       port: 3000
-      targetPort: http
+      targetPort: api
+    - name: frontend
+      protocol: TCP
+      port: 5173
+      targetPort: frontend

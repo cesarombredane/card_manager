@@ -26,7 +26,7 @@ devspace dev
 Site:
 
 ```text
-http://localhost:3000
+http://localhost:5173
 ```
 
 API health:
