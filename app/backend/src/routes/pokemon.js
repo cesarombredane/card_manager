@@ -14,7 +14,7 @@ pokemonRouter.get('/', asyncHandler(async (req, res) => {
       WHERE card_category = 'pokemon'
         AND ($1 = '%%' OR canonical_name ILIKE $1)
       GROUP BY canonical_name
-      ORDER BY canonical_name
+      ORDER BY concept_count DESC, canonical_name
       LIMIT $2 OFFSET $3
     `,
     [likePattern(req.query.q ?? ''), limit, offset]

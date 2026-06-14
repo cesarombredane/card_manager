@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 
 import { apiGet } from '../api/client';
 import PageHeader from '../components/PageHeader.vue';
@@ -14,7 +14,7 @@ async function load() {
   loading.value = true;
   error.value = '';
   try {
-    const payload = await apiGet('/api/cards/search', filters.value);
+    const payload = await apiGet('/api/cards/search', { ...filters.value, limit: 10 });
     results.value = payload.results ?? [];
   } catch (requestError) {
     error.value = requestError.message;
@@ -22,6 +22,8 @@ async function load() {
     loading.value = false;
   }
 }
+
+onMounted(load);
 </script>
 
 <template>
@@ -43,10 +45,20 @@ async function load() {
       <q-banner v-if="error" class="bg-negative text-white">{{ error }}</q-banner>
       <result-list :items="results">
         <template #default="{ item }">
-          <div class="row items-center justify-between q-gutter-md">
-            <div>
+          <div class="row items-center justify-between q-gutter-md no-wrap">
+            <div class="row items-center q-gutter-md">
+              <q-img
+                v-if="item.image_preview"
+                :src="item.image_preview"
+                width="56px"
+                height="78px"
+                fit="contain"
+                class="bg-grey-9"
+              />
+              <div>
               <router-link class="text-primary text-subtitle1" :to="`/card-concepts/${item.id}`">{{ item.canonical_name || 'Unnamed concept' }}</router-link>
               <div class="text-caption text-grey-5">{{ item.card_category }} · {{ item.artist || 'Unknown artist' }}</div>
+              </div>
             </div>
             <div class="row q-gutter-sm">
               <q-chip square color="grey-9" text-color="white">{{ item.print_count }} prints</q-chip>

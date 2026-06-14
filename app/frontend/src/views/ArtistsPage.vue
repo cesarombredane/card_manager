@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 import { apiGet } from '../api/client';
 import PageHeader from '../components/PageHeader.vue';
 import ResultList from '../components/ResultList.vue';
@@ -8,8 +8,10 @@ const results = ref([]);
 const loading = ref(false);
 async function load() {
   loading.value = true;
-  try { results.value = (await apiGet('/api/artists', { q: q.value })).results ?? []; } finally { loading.value = false; }
+  try { results.value = (await apiGet('/api/artists', { q: q.value, limit: 10 })).results ?? []; } finally { loading.value = false; }
 }
+
+onMounted(load);
 </script>
 <template>
   <q-page class="bg-dark text-white q-pa-md q-pa-lg-md">

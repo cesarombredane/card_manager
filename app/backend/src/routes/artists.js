@@ -7,7 +7,7 @@ export const artistsRouter = Router();
 
 artistsRouter.get('/', asyncHandler(async (req, res) => {
   const { limit, offset } = parseLimitOffset(req.query);
-  const rows = await query('SELECT artist AS name, COUNT(*)::int AS concept_count FROM card_concepts WHERE artist IS NOT NULL AND ($1 = \'%%\' OR artist ILIKE $1) GROUP BY artist ORDER BY artist LIMIT $2 OFFSET $3', [likePattern(req.query.q ?? ''), limit, offset]);
+  const rows = await query('SELECT artist AS name, COUNT(*)::int AS concept_count FROM card_concepts WHERE artist IS NOT NULL AND ($1 = \'%%\' OR artist ILIKE $1) GROUP BY artist ORDER BY concept_count DESC, artist LIMIT $2 OFFSET $3', [likePattern(req.query.q ?? ''), limit, offset]);
   res.json({ results: rows, limit, offset });
 }));
 
