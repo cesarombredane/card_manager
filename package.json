@@ -7,11 +7,11 @@
     "server"
   ],
   "scripts": {
-    "dev": "concurrently \"npm run dev -w server\" \"npm run dev -w client\"",
     "build": "npm run build -w client",
-    "start": "npm run start -w server"
+    "dev": "devspace dev",
+    "deploy": "devspace deploy"
   },
   "devDependencies": {
-    "concurrently": "^9.1.2"
+    "concurrently": "^10.0.3"
   }
 }

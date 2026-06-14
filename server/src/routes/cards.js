@@ -29,18 +29,18 @@ export function createCardsRouter(database) {
     }
   });
 
-  router.post("/", upload.single("image"), async (request, response, next) => {
+  router.post("/", upload.any(), async (request, response, next) => {
     try {
-      const card = await createCard(database, request.body, request.file);
+      const card = await createCard(database, request.body, request.files);
       response.status(201).json(card);
     } catch (error) {
       next(error);
     }
   });
 
-  router.put("/:id", upload.single("image"), async (request, response, next) => {
+  router.put("/:id", upload.any(), async (request, response, next) => {
     try {
-      const card = await updateCard(database, request.params.id, request.body, request.file);
+      const card = await updateCard(database, request.params.id, request.body, request.files);
 
       if (!card) {
         response.status(404).json({ message: "Card not found." });
@@ -75,14 +75,18 @@ export function createCardsRouter(database) {
         header: true,
         columns: [
           "id",
+          "cardId",
           "name",
+          "seriesName",
           "setName",
           "cardNumber",
-          "rarity",
+          "modifierCode",
+          "modifierName",
           "condition",
           "quantity",
-          "notes",
+          "note",
           "hasImage",
+          "hasCollectedImage",
           "createdAt",
           "updatedAt"
         ]

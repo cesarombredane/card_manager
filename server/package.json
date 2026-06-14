@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "node --watch src/index.js",
+    "import:json": "node src/scripts/importJsonDatabase.js",
     "start": "node src/index.js"
   },
   "dependencies": {
@@ -13,6 +14,7 @@
     "csv-stringify": "^6.5.2",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "multer": "^2.1.1"
+    "multer": "^2.1.1",
+    "pg": "^8.13.1"
   }
 }

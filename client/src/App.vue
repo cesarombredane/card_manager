@@ -7,9 +7,10 @@ const saving = ref(false);
 const csvFile = ref(null);
 const form = reactive({
   name: "",
+  seriesName: "",
   setName: "",
   cardNumber: "",
-  rarity: "",
+  modifierCode: "normal",
   condition: "",
   quantity: 1,
   notes: "",
@@ -29,9 +30,10 @@ async function loadCards() {
 
 function resetForm() {
   form.name = "";
+  form.seriesName = "";
   form.setName = "";
   form.cardNumber = "";
-  form.rarity = "";
+  form.modifierCode = "normal";
   form.condition = "";
   form.quantity = 1;
   form.notes = "";
@@ -110,6 +112,10 @@ onMounted(loadCards);
           <input v-model="form.name" required placeholder="Pikachu" />
         </label>
         <label>
+          Series
+          <input v-model="form.seriesName" placeholder="Mega Evolution" />
+        </label>
+        <label>
           Set
           <input v-model="form.setName" placeholder="Base Set" />
         </label>
@@ -125,8 +131,15 @@ onMounted(loadCards);
         </div>
         <div class="grid-two">
           <label>
-            Rarity
-            <input v-model="form.rarity" placeholder="Common" />
+            Modifier
+            <select v-model="form.modifierCode">
+              <option value="normal">Normal</option>
+              <option value="first_edition">1st Edition</option>
+              <option value="holo">Holo</option>
+              <option value="reverse">Reverse</option>
+              <option value="reverse_holo">Reverse Holo</option>
+              <option value="promo">Promo</option>
+            </select>
           </label>
           <label>
             Condition
@@ -175,8 +188,8 @@ onMounted(loadCards);
                   <dd>{{ card.quantity }}</dd>
                 </div>
                 <div>
-                  <dt>Rarity</dt>
-                  <dd>{{ card.rarity || "-" }}</dd>
+                  <dt>Modifier</dt>
+                  <dd>{{ card.modifierName || "-" }}</dd>
                 </div>
                 <div>
                   <dt>Condition</dt>

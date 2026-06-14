@@ -1,0 +1,34 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: pokemon-card-manager-app
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgres://card_manager:card_manager@postgres:5432/card_manager
+      PORT: 3000
+    ports:
+      - "3000:3000"
+
+  postgres:
+    image: postgres:16-alpine
+    container_name: pokemon-card-manager-postgres
+    environment:
+      POSTGRES_DB: card_manager
+      POSTGRES_USER: card_manager
+      POSTGRES_PASSWORD: card_manager
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U card_manager -d card_manager"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  postgres-data:
