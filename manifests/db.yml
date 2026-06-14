@@ -74,6 +74,12 @@ spec:
                 - card_manager
             initialDelaySeconds: 15
             periodSeconds: 20
+          lifecycle:
+            postStart:
+              exec:
+                command:
+                  - /bin/sh
+                  - /app/context/scripts/ensure_database.sh
           volumeMounts:
             - name: postgres-data
               mountPath: /var/lib/postgresql/data

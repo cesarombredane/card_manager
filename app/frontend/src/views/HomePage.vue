@@ -1,11 +1,19 @@
 <script setup>
-  import { computed, onMounted } from 'vue';
-  import { useStore } from 'vuex';
+import { computed, onMounted } from 'vue';
+import { useStore } from 'vuex';
 
-  const store = useStore();
+const store = useStore();
 
-  const apiStatus = computed(() => store.state.apiStatus);
-  const statusColor = computed(() => (apiStatus.value === 'ok' ? 'positive' : 'warning'));
+const apiStatus = computed(() => store.state.apiStatus);
+const statusColor = computed(() => (apiStatus.value === 'ok' ? 'positive' : 'warning'));
+const sections = [
+  { title: 'Global search', caption: 'Search concepts, prints, sets, series, and artists.', icon: 'search', to: '/search' },
+  { title: 'Advanced cards', caption: 'Filter by language, print, variant, artist, release date, and more.', icon: 'tune', to: '/cards' },
+  { title: 'Sets', caption: 'Browse language-specific sets and relationships.', icon: 'folder', to: '/sets' },
+  { title: 'Languages', caption: 'Check coverage across official print languages.', icon: 'translate', to: '/languages' },
+  { title: 'Artists', caption: 'Explore artists and their illustrated cards.', icon: 'brush', to: '/artists' },
+  { title: 'Pokemon', caption: 'Browse Pokemon by concept names in the catalog.', icon: 'catching_pokemon', to: '/pokemon' }
+];
 
   onMounted(() => {
     store.dispatch('checkApiStatus');
@@ -30,30 +38,15 @@
       </section>
 
       <section class="row q-col-gutter-md">
-        <div class="col-12 col-md-6">
+        <div v-for="section in sections" :key="section.to" class="col-12 col-md-6 col-lg-4">
           <q-card flat bordered class="bg-grey-10 text-white">
             <q-card-section>
               <div class="row items-center q-gutter-sm">
-                <q-icon name="view_list" color="primary" size="md" />
-                <div class="text-h6">Card database</div>
+                <q-icon :name="section.icon" color="primary" size="md" />
+                <div class="text-h6">{{ section.title }}</div>
               </div>
-              <p class="text-grey-4 q-mb-none">
-                Browse Pokemon, series, sets, cards, languages, and variants from the local database context.
-              </p>
-            </q-card-section>
-          </q-card>
-        </div>
-
-        <div class="col-12 col-md-6">
-          <q-card flat bordered class="bg-grey-10 text-white">
-            <q-card-section>
-              <div class="row items-center q-gutter-sm">
-                <q-icon name="inventory_2" color="primary" size="md" />
-                <div class="text-h6">My collection</div>
-              </div>
-              <p class="text-grey-4 q-mb-none">
-                Keep track of owned cards, condition, quantity, language, value, storage, and trade status.
-              </p>
+              <p class="text-grey-4">{{ section.caption }}</p>
+              <q-btn color="primary" flat no-caps :to="section.to" label="Open" />
             </q-card-section>
           </q-card>
         </div>
