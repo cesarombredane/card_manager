@@ -4,11 +4,8 @@ import express from "express";
 import multer from "multer";
 import {
   createCard,
-  deleteCard,
   getCardImage,
-  importCards,
-  listCards,
-  updateCard
+  listCards
 } from "../cardsRepository.js";
 
 const upload = multer({
@@ -23,7 +20,7 @@ export function createCardsRouter(database) {
 
   router.get("/", async (request, response, next) => {
     try {
-      response.json(await listCards(database));
+      response.json(await listCards(database, request.query));
     } catch (error) {
       next(error);
     }
@@ -38,55 +35,24 @@ export function createCardsRouter(database) {
     }
   });
 
-  router.put("/:id", upload.any(), async (request, response, next) => {
-    try {
-      const card = await updateCard(database, request.params.id, request.body, request.files);
-
-      if (!card) {
-        response.status(404).json({ message: "Card not found." });
-        return;
-      }
-
-      response.json(card);
-    } catch (error) {
-      next(error);
-    }
-  });
-
-  router.delete("/:id", async (request, response, next) => {
-    try {
-      const deleted = await deleteCard(database, request.params.id);
-
-      if (!deleted) {
-        response.status(404).json({ message: "Card not found." });
-        return;
-      }
-
-      response.status(204).send();
-    } catch (error) {
-      next(error);
-    }
-  });
-
   router.get("/export.csv", async (request, response, next) => {
     try {
-      const cards = await listCards(database);
+      const cards = await listCards(database, request.query);
       const csv = stringify(cards, {
         header: true,
         columns: [
           "id",
-          "cardId",
           "name",
           "seriesName",
           "setName",
+          "setLanguage",
           "cardNumber",
           "modifierCode",
           "modifierName",
-          "condition",
-          "quantity",
-          "note",
+          "pokemonName",
+          "pokedexId",
+          "collectedCount",
           "hasImage",
-          "hasCollectedImage",
           "createdAt",
           "updatedAt"
         ]
@@ -113,7 +79,11 @@ export function createCardsRouter(database) {
         skip_empty_lines: true,
         trim: true
       });
-      const cards = await importCards(database, records);
+      const cards = [];
+
+      for (const record of records) {
+        cards.push(await createCard(database, record));
+      }
 
       response.status(201).json({ imported: cards.length, cards });
     } catch (error) {

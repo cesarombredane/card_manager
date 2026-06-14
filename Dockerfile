@@ -17,6 +17,7 @@ ENV PORT=3000
 ENV CLIENT_DIST_PATH=/app/client/dist
 
 COPY package.json package-lock.json ./
+COPY client/package.json client/package.json
 COPY server/package.json server/package.json
 RUN npm ci --omit=dev
 

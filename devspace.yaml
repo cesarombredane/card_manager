@@ -31,5 +31,18 @@ dev:
     namespace: card-manager
     ports:
       - port: "3000:3000"
+      - port: "5173:5173"
     logs:
       enabled: true
+    command:
+      - sh
+      - -c
+      - npm run dev -w server & npm run dev -w client
+    sync:
+      - path: ./server:/app/server
+        excludePaths:
+          - node_modules/
+      - path: ./client:/app/client
+        excludePaths:
+          - node_modules/
+          - dist/
