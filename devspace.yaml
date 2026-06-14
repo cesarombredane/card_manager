@@ -2,47 +2,30 @@ version: v2beta1
 name: card-manager
 
 images:
+  db:
+    image: card-manager-db
+    dockerfile: ./database/Dockerfile
+    context: ./database
+
   app:
-    image: pokemon-card-manager-app
-    tags:
-      - dev
-    dockerfile: ./Dockerfile
-    context: .
+    image: card-manager-app
+    dockerfile: ./app/Dockerfile
+    context: ./app
 
 deployments:
-  postgres:
+  card-manager:
     kubectl:
       manifests:
-        - k8s/namespace.yaml
-        - k8s/postgres-secret.yaml
-        - k8s/postgres-pvc.yaml
-        - k8s/postgres-deployment.yaml
-        - k8s/postgres-service.yaml
-  app:
-    kubectl:
-      manifests:
-        - k8s/namespace.yaml
-        - k8s/app-deployment.yaml
-        - k8s/app-service.yaml
+        - manifests/db.yml
+        - manifests/app.yml
 
 dev:
+  db:
+    imageSelector: card-manager-db
+    ports:
+      - port: "5432:5432"
+
   app:
-    imageSelector: pokemon-card-manager-app:dev
-    namespace: card-manager
+    imageSelector: card-manager-app
     ports:
       - port: "3000:3000"
-      - port: "5173:5173"
-    logs:
-      enabled: true
-    command:
-      - sh
-      - -c
-      - npm run dev -w server & npm run dev -w client
-    sync:
-      - path: ./server:/app/server
-        excludePaths:
-          - node_modules/
-      - path: ./client:/app/client
-        excludePaths:
-          - node_modules/
-          - dist/

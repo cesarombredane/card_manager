@@ -1,11 +1,17 @@
 varsEncrypted: true
 images:
     app:
-        imageConfigHash: e926a60d7effb8fa1bf87d1b281eea9aad6ef43d78b872ea7d35832dff0732d2
-        dockerfileHash: a589b05169c9b1fa1d66a0bd8d64e5f537ce3e4725d42d724755eaaf97ee8503
-        contextHash: 82088307619f4894f9f94ee308570e27df265d9c09d25339b779675bad49d814
-        imageName: pokemon-card-manager-app
-        tag: dev
+        imageConfigHash: 00116708b1976f4ee7a6d19982760e12a6a493abd9b57aa72a830ab8249bb1e7
+        dockerfileHash: 21becda17d94c2d9ec6df8d9b4867179492cc0051df771d97259d533f78a34da
+        contextHash: 7e63784040d3a64f768dc525fc6910d3b7fa124875053764e17dd57619183d06
+        imageName: card-manager-app
+        tag: InTUVEW
+    db:
+        imageConfigHash: b5782c87e52ebc38eece007adfb0cddc9d055e9231fada68799c1e5e18cdf24c
+        dockerfileHash: e1526bdfdc5f51c24c6933f51b6aa3e3a016451dd3b2d282058de1760903f1e7
+        contextHash: 9e5f2e191d353d49a8cccd1288c8830e1605bfd000c0aa22f2deea843332514e
+        imageName: card-manager-db
+        tag: yIrTsFP
 lastContext:
-    namespace: card-manager
-    context: card-manager
+    namespace: default
+    context: minikube

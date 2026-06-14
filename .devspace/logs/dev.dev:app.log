@@ -1,0 +1,23 @@
+{"level":"info","msg":"dev:app Waiting for pod to become ready...","time":"2026-06-14T20:21:40+02:00"}
+{"level":"info","msg":"dev:app Selected pod card-manager-app-55f8ffc946-vw84p","time":"2026-06-14T20:21:45+02:00"}
+{"level":"info","msg":"dev:app ports Port forwarding started on: 3000 -\u003e 3000","time":"2026-06-14T20:21:45+02:00"}
+{"level":"info","msg":"dev:app sync  Sync started on: ./app \u003c-\u003e /usr/src/app","time":"2026-06-14T20:21:47+02:00"}
+{"level":"info","msg":"dev:app sync  Waiting for initial sync to complete","time":"2026-06-14T20:21:47+02:00"}
+{"level":"info","msg":"dev:app sync  Initial sync completed","time":"2026-06-14T20:21:47+02:00"}
+{"level":"info","msg":"dev:app Waiting for pod to become ready...","time":"2026-06-14T20:25:03+02:00"}
+{"level":"info","msg":"dev:app Selected pod card-manager-app-55f8ffc946-vw84p","time":"2026-06-14T20:25:04+02:00"}
+{"level":"info","msg":"dev:app ports Port forwarding started on: 3000 -\u003e 3000","time":"2026-06-14T20:25:04+02:00"}
+{"level":"info","msg":"dev:app sync  Sync started on: ./app \u003c-\u003e /usr/src/app","time":"2026-06-14T20:25:04+02:00"}
+{"level":"info","msg":"dev:app sync  Waiting for initial sync to complete","time":"2026-06-14T20:25:04+02:00"}
+{"level":"info","msg":"dev:app sync  Initial sync completed","time":"2026-06-14T20:25:06+02:00"}
+{"level":"info","msg":"dev:app Waiting for pod to become ready...","time":"2026-06-14T20:25:38+02:00"}
+{"level":"info","msg":"dev:app Selected pod card-manager-app-55f8ffc946-vw84p","time":"2026-06-14T20:25:38+02:00"}
+{"level":"info","msg":"dev:app ports Port forwarding started on: 3000 -\u003e 3000","time":"2026-06-14T20:25:39+02:00"}
+{"level":"info","msg":"dev:app Waiting for pod to become ready...","time":"2026-06-14T20:27:30+02:00"}
+{"level":"warning","msg":"dev:app Pod card-manager-app-55f8ffc946-vw84p: Error: failed to sync secret cache: timed out waiting for the condition (Failed)","time":"2026-06-14T20:27:39+02:00"}
+{"level":"warning","msg":"dev:app Pod card-manager-app-55f8ffc946-vw84p: Back-off restarting failed container app in pod card-manager-app-55f8ffc946-vw84p_default(63d0ab8d-61f5-4d54-a4fa-c1a21bb75693) (BackOff)","time":"2026-06-14T20:27:39+02:00"}
+{"level":"warning","msg":"dev:app Pod card-manager-app-55f8ffc946-vw84p: Readiness probe failed: Get \"http://10.244.0.4:3000/api/health\": context deadline exceeded (Client.Timeout exceeded while awaiting headers) (Unhealthy)","time":"2026-06-14T20:27:39+02:00"}
+{"level":"warning","msg":"dev:app Pod card-manager-app-55f8ffc946-vw84p: Liveness probe failed: Get \"http://10.244.0.4:3000/api/health\": context deadline exceeded (Client.Timeout exceeded while awaiting headers) (Unhealthy)","time":"2026-06-14T20:27:39+02:00"}
+{"level":"warning","msg":"dev:app Pod card-manager-app-55f8ffc946-vw84p: Readiness probe failed: Get \"http://10.244.0.4:3000/api/health\": dial tcp 10.244.0.4:3000: connect: connection refused (Unhealthy)","time":"2026-06-14T20:27:39+02:00"}
+{"level":"info","msg":"dev:app Selected pod card-manager-app-55f8ffc946-vw84p","time":"2026-06-14T20:27:43+02:00"}
+{"level":"info","msg":"dev:app ports Port forwarding started on: 3000 -\u003e 3000","time":"2026-06-14T20:27:44+02:00"}
