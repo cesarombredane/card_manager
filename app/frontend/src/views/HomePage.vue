@@ -1,18 +1,3 @@
-<script setup>
-  import { useStore } from 'vuex';
-
-  const store = useStore();
-
-  const sections = [
-    { title: 'Global search', caption: 'Search concepts, prints, sets, series, and artists.', icon: 'search', to: '/search' },
-    { title: 'Advanced cards', caption: 'Filter by language, print, variant, artist, release date, and more.', icon: 'tune', to: '/cards' },
-    { title: 'Sets', caption: 'Browse language-specific sets and relationships.', icon: 'folder', to: '/sets' },
-    { title: 'Languages', caption: 'Check coverage across official print languages.', icon: 'translate', to: '/languages' },
-    { title: 'Artists', caption: 'Explore artists and their illustrated cards.', icon: 'brush', to: '/artists' },
-    { title: 'Pokemon', caption: 'Browse Pokemon by concept names in the catalog.', icon: 'catching_pokemon', to: '/pokemon' }
-  ];
-</script>
-
 <template>
   <q-page class="bg-dark text-white q-pa-md q-pa-lg-md">
     <div class="column q-gutter-lg">
@@ -33,3 +18,18 @@
     </div>
   </q-page>
 </template>
+
+<script setup>
+  import { useStore } from 'vuex';
+
+  const store = useStore();
+
+  const sections = [
+    { title: 'Global search', caption: 'Search concepts, prints, sets, series, and artists.', icon: 'search', to: '/search' },
+    { title: 'Advanced cards', caption: 'Filter by language, print, variant, artist, release date, and more.', icon: 'tune', to: '/cards' },
+    { title: 'Sets', caption: 'Browse language-specific sets and relationships.', icon: 'folder', to: '/sets' },
+    { title: 'Languages', caption: 'Check coverage across official print languages.', icon: 'translate', to: '/languages' },
+    { title: 'Artists', caption: 'Explore artists and their illustrated cards.', icon: 'brush', to: '/artists' },
+    { title: 'Pokemon', caption: 'Browse Pokemon by concept names in the catalog.', icon: 'catching_pokemon', to: '/pokemon' }
+  ];
+</script>

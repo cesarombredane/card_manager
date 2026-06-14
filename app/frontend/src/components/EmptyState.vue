@@ -9,14 +9,14 @@
 </template>
 
 <script setup>
-defineProps({
-  title: {
-    type: String,
-    default: 'No results'
-  },
-  message: {
-    type: String,
-    default: 'Try another search or add data to the database context.'
-  }
-});
+  defineProps({
+    title: {
+      type: String,
+      default: 'No results'
+    },
+    message: {
+      type: String,
+      default: 'Try another search or add data to the database context.'
+    }
+  });
 </script>

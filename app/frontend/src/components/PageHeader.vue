@@ -10,12 +10,12 @@
 </template>
 
 <script setup>
-defineProps({
-  eyebrow: String,
-  title: {
-    type: String,
-    required: true
-  },
-  description: String
-});
+  defineProps({
+    eyebrow: String,
+    title: {
+      type: String,
+      required: true
+    },
+    description: String
+  });
 </script>

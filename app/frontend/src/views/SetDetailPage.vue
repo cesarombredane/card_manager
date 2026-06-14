@@ -1,16 +1,3 @@
-<script setup>
-import { computed } from 'vue';
-import { useRoute } from 'vue-router';
-import { apiGet } from '../api/client';
-import PageHeader from '../components/PageHeader.vue';
-import ResultList from '../components/ResultList.vue';
-import { useApiResource } from '../composables/useApiResource';
-
-const route = useRoute();
-const { data, loading, error } = useApiResource(() => apiGet(`/api/sets/${route.params.id}`));
-const cards = computed(() => data.value?.cards ?? []);
-</script>
-
 <template>
   <q-page class="bg-dark text-white q-pa-md q-pa-lg-md">
     <q-inner-loading :showing="loading" />
@@ -27,3 +14,16 @@ const cards = computed(() => data.value?.cards ?? []);
     </div>
   </q-page>
 </template>
+
+<script setup>
+  import { computed } from 'vue';
+  import { useRoute } from 'vue-router';
+  import { apiGet } from '../api/client';
+  import PageHeader from '../components/PageHeader.vue';
+  import ResultList from '../components/ResultList.vue';
+  import { useApiResource } from '../composables/useApiResource';
+
+  const route = useRoute();
+  const { data, loading, error } = useApiResource(() => apiGet(`/api/sets/${route.params.id}`));
+  const cards = computed(() => data.value?.cards ?? []);
+</script>

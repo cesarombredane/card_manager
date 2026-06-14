@@ -10,20 +10,20 @@
 </template>
 
 <script setup>
-import EmptyState from './EmptyState.vue';
+  import EmptyState from './EmptyState.vue';
 
-defineProps({
-  items: {
-    type: Array,
-    default: () => []
-  },
-  emptyTitle: {
-    type: String,
-    default: 'Nothing found'
-  },
-  emptyMessage: {
-    type: String,
-    default: 'The API returned no rows for this view.'
-  }
-});
+  defineProps({
+    items: {
+      type: Array,
+      default: () => []
+    },
+    emptyTitle: {
+      type: String,
+      default: 'Nothing found'
+    },
+    emptyMessage: {
+      type: String,
+      default: 'The API returned no rows for this view.'
+    }
+  });
 </script>

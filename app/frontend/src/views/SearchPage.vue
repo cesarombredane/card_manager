@@ -1,30 +1,3 @@
-<script setup>
-import { ref } from 'vue';
-
-import { apiGet } from '../api/client';
-import PageHeader from '../components/PageHeader.vue';
-import ResultList from '../components/ResultList.vue';
-
-const query = ref('');
-const type = ref('all');
-const loading = ref(false);
-const error = ref('');
-const results = ref(null);
-const types = ['all', 'cards', 'concepts', 'prints', 'sets', 'series', 'artists'];
-
-async function search() {
-  loading.value = true;
-  error.value = '';
-  try {
-    results.value = await apiGet('/api/search', { q: query.value, type: type.value, limit: 20 });
-  } catch (requestError) {
-    error.value = requestError.message;
-  } finally {
-    loading.value = false;
-  }
-}
-</script>
-
 <template>
   <q-page class="bg-dark text-white q-pa-md q-pa-lg-md">
     <div class="column q-gutter-lg">
@@ -59,3 +32,30 @@ async function search() {
     </div>
   </q-page>
 </template>
+
+<script setup>
+  import { ref } from 'vue';
+
+  import { apiGet } from '../api/client';
+  import PageHeader from '../components/PageHeader.vue';
+  import ResultList from '../components/ResultList.vue';
+
+  const query = ref('');
+  const type = ref('all');
+  const loading = ref(false);
+  const error = ref('');
+  const results = ref(null);
+  const types = ['all', 'cards', 'concepts', 'prints', 'sets', 'series', 'artists'];
+
+  async function search() {
+    loading.value = true;
+    error.value = '';
+    try {
+      results.value = await apiGet('/api/search', { q: query.value, type: type.value, limit: 20 });
+    } catch (requestError) {
+      error.value = requestError.message;
+    } finally {
+      loading.value = false;
+    }
+  }
+</script>
