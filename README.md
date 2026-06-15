@@ -3,7 +3,7 @@
 From the project root:
 
 ```sh
-minikube start
+minikube start --profile card-manager
 devspace dev
 ```
 

@@ -79,7 +79,6 @@ spec:
               exec:
                 command:
                   - /bin/sh
-                  - /app/context/scripts/ensure_database.sh
           volumeMounts:
             - name: postgres-data
               mountPath: /var/lib/postgresql/data

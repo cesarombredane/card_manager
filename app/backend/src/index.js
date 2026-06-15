@@ -9,6 +9,7 @@ import { cardsRouter } from './routes/cards.js';
 import { cardConceptsRouter } from './routes/cardConcepts.js';
 import { cardPrintsRouter } from './routes/cardPrints.js';
 import { compareRouter } from './routes/compare.js';
+import { healthRouter } from './routes/health.js';
 import { languagesRouter } from './routes/languages.js';
 import { pokemonRouter } from './routes/pokemon.js';
 import { printVariantsRouter } from './routes/printVariants.js';
@@ -23,6 +24,7 @@ const frontendDistPath = path.resolve(__dirname, '../../frontend/dist');
 app.use(cors());
 app.use(express.json());
 
+app.use('/api/health', healthRouter);
 app.use('/api/search', searchRouter);
 app.use('/api/cards', cardsRouter);
 app.use('/api/card-concepts', cardConceptsRouter);
