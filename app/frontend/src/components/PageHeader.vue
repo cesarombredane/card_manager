@@ -9,7 +9,8 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
+  // props //
   defineProps({
     eyebrow: String,
     title: {

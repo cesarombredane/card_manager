@@ -12,9 +12,9 @@ searchRouter.get(
     const { limit, offset } = parseLimitOffset(request.query);
     const pattern = likePattern(q);
     const languageFilter = language ? String(language) : null;
-    const wants = (name) => type === 'all' || type === name;
+    const wants = (name: string): boolean => type === 'all' || type === name;
 
-    const results = {
+    const results: Record<string, unknown[]> = {
       cards: [],
       concepts: [],
       prints: [],

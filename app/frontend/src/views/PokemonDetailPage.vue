@@ -12,7 +12,7 @@
   </q-page>
 </template>
 
-<script setup>
+<script setup lang="ts">
   import { computed } from 'vue';
   import { useRoute } from 'vue-router';
   import { apiGet } from '../api/client';
@@ -20,7 +20,7 @@
   import ResultList from '../components/ResultList.vue';
   import { useApiResource } from '../composables/useApiResource';
   const route = useRoute();
-  const pokemonName = computed(() => route.params.name);
+  const pokemonName = computed(() => String(route.params.name ?? ''));
   const { data, loading, error } = useApiResource(() => apiGet(`/api/pokemon/${encodeURIComponent(pokemonName.value)}`));
   const concepts = computed(() => data.value?.concepts ?? []);
 </script>

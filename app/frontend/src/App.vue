@@ -22,8 +22,9 @@
   </q-layout>
 </template>
 
-<script setup>
-  const links = [
+<script setup lang="ts">
+  // const vars //
+  const links: { label: string; to: string; }[] = [
     { label: 'Search', to: '/search' },
     { label: 'Cards', to: '/cards' },
     { label: 'Sets', to: '/sets' },

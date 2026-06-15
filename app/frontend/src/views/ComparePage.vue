@@ -12,7 +12,7 @@
   </q-page>
 </template>
 
-<script setup>
+<script setup lang="ts">
   import { ref } from 'vue';
   import { apiGet } from '../api/client';
   import PageHeader from '../components/PageHeader.vue';

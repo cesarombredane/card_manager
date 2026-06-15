@@ -33,7 +33,7 @@
   </q-page>
 </template>
 
-<script setup>
+<script setup lang="ts">
   import { ref } from 'vue';
 
   import { apiGet } from '../api/client';
@@ -44,16 +44,20 @@
   const type = ref('all');
   const loading = ref(false);
   const error = ref('');
-  const results = ref(null);
+  const results = ref<Record<string, Record<string, unknown>[]> | null>(null);
   const types = ['all', 'cards', 'concepts', 'prints', 'sets', 'series', 'artists'];
+
+  function getErrorMessage(error: unknown): string {
+    return error instanceof Error ? error.message : String(error);
+  }
 
   async function search() {
     loading.value = true;
     error.value = '';
     try {
-      results.value = await apiGet('/api/search', { q: query.value, type: type.value, limit: 20 });
-    } catch (requestError) {
-      error.value = requestError.message;
+      results.value = await apiGet<Record<string, Record<string, unknown>[]>>('/api/search', { q: query.value, type: type.value, limit: 20 });
+    } catch (requestError: unknown) {
+      error.value = getErrorMessage(requestError);
     } finally {
       loading.value = false;
     }

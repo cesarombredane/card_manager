@@ -1,21 +1,21 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
-import ArtistDetailPage from '../views/ArtistDetailPage.vue';
-import ArtistsPage from '../views/ArtistsPage.vue';
+import PrintVariantDetailPage from '../views/PrintVariantDetailPage.vue';
 import CardConceptDetailPage from '../views/CardConceptDetailPage.vue';
 import CardPrintDetailPage from '../views/CardPrintDetailPage.vue';
-import CardsPage from '../views/CardsPage.vue';
-import ComparePage from '../views/ComparePage.vue';
-import HomePage from '../views/HomePage.vue';
 import LanguageDetailPage from '../views/LanguageDetailPage.vue';
-import LanguagesPage from '../views/LanguagesPage.vue';
 import PokemonDetailPage from '../views/PokemonDetailPage.vue';
-import PokemonPage from '../views/PokemonPage.vue';
-import PrintVariantDetailPage from '../views/PrintVariantDetailPage.vue';
-import SearchPage from '../views/SearchPage.vue';
+import ArtistDetailPage from '../views/ArtistDetailPage.vue';
 import SeriesDetailPage from '../views/SeriesDetailPage.vue';
-import SeriesPage from '../views/SeriesPage.vue';
+import LanguagesPage from '../views/LanguagesPage.vue';
 import SetDetailPage from '../views/SetDetailPage.vue';
+import ArtistsPage from '../views/ArtistsPage.vue';
+import ComparePage from '../views/ComparePage.vue';
+import PokemonPage from '../views/PokemonPage.vue';
+import SearchPage from '../views/SearchPage.vue';
+import SeriesPage from '../views/SeriesPage.vue';
+import CardsPage from '../views/CardsPage.vue';
+import HomePage from '../views/HomePage.vue';
 import SetsPage from '../views/SetsPage.vue';
 
 export const router = createRouter({

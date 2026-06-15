@@ -15,7 +15,7 @@
   </q-page>
 </template>
 
-<script setup>
+<script setup lang="ts">
   import { onMounted, ref } from 'vue';
   import { apiGet } from '../api/client';
   import PageHeader from '../components/PageHeader.vue';

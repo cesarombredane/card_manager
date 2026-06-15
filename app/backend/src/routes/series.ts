@@ -1,7 +1,7 @@
 import { Router } from 'express';
 
 import { query, queryOne } from '../db.js';
-import { asyncHandler, likePattern, parseLimitOffset, sendNotFound } from '../http.js';
+import { asyncHandler, likePattern, parseLimitOffset, parseRequiredUuid, sendNotFound } from '../http.js';
 
 export const seriesRouter = Router();
 
@@ -30,11 +30,12 @@ seriesRouter.get('/', asyncHandler(async (req, res) => {
 }));
 
 seriesRouter.get('/:id', asyncHandler(async (req, res) => {
-  const series = await queryOne('SELECT series.*, row_to_json(l) AS language, row_to_json(r) AS region FROM series JOIN languages l ON l.id = series.language_id JOIN regions r ON r.id = series.region_id WHERE series.id = $1', [req.params.id]);
+  const id = parseRequiredUuid(req.params.id, 'series id');
+  const series = await queryOne('SELECT series.*, row_to_json(l) AS language, row_to_json(r) AS region FROM series JOIN languages l ON l.id = series.language_id JOIN regions r ON r.id = series.region_id WHERE series.id = $1', [id]);
   if (!series) return sendNotFound(res, 'Series');
   const [sets, stats] = await Promise.all([
-    query('SELECT * FROM sets WHERE series_id = $1 ORDER BY release_date NULLS LAST', [req.params.id]),
-    queryOne('SELECT COUNT(DISTINCT sets.id)::int AS set_count, COUNT(DISTINCT cp.id)::int AS print_count FROM sets LEFT JOIN card_prints cp ON cp.set_id = sets.id WHERE sets.series_id = $1', [req.params.id])
+    query('SELECT * FROM sets WHERE series_id = $1 ORDER BY release_date NULLS LAST', [id]),
+    queryOne('SELECT COUNT(DISTINCT sets.id)::int AS set_count, COUNT(DISTINCT cp.id)::int AS print_count FROM sets LEFT JOIN card_prints cp ON cp.set_id = sets.id WHERE sets.series_id = $1', [id])
   ]);
   res.json({ series, sets, stats, relatedSeries: [] });
 }));

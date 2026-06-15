@@ -1,7 +1,7 @@
 import { Router } from 'express';
 
 import { query } from '../db.js';
-import { asyncHandler } from '../http.js';
+import { asyncHandler, parseRequiredUuid } from '../http.js';
 
 export const compareRouter = Router();
 
@@ -9,7 +9,8 @@ compareRouter.get('/concepts', asyncHandler(async (req, res) => {
   const ids = String(req.query.ids ?? '')
     .split(',')
     .map((id) => id.trim())
-    .filter(Boolean);
+    .filter(Boolean)
+    .map((id) => parseRequiredUuid(id, 'concept id'));
 
   if (ids.length === 0) {
     return res.json({ concepts: [] });

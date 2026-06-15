@@ -9,21 +9,33 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
+  // imports //
   import EmptyState from './EmptyState.vue';
 
-  defineProps({
-    items: {
-      type: Array,
-      default: () => []
-    },
-    emptyTitle: {
-      type: String,
-      default: 'Nothing found'
-    },
-    emptyMessage: {
-      type: String,
-      default: 'The API returned no rows for this view.'
-    }
+
+  // types //
+  export type ResultItem = Record<string, any> & {
+    id?: string | number;
+    name?: string;
+    code?: string;
+  };
+
+
+  // props //
+  withDefaults(defineProps<{
+    items?: ResultItem[];
+    emptyTitle?: string;
+    emptyMessage?: string;
+  }>(), {
+    items: () => [],
+    emptyTitle: 'Nothing found',
+    emptyMessage: 'The API returned no rows for this view.'
   });
+
+
+  // slots //
+  defineSlots<{
+    default(props: { item: ResultItem; }): unknown;
+  }>();
 </script>

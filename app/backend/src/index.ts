@@ -1,9 +1,10 @@
 import cors from 'cors';
-import express from 'express';
+import express, { type ErrorRequestHandler } from 'express';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { config } from './config.js';
+import { HttpError } from './http.js';
 import { artistsRouter } from './routes/artists.js';
 import { cardsRouter } from './routes/cards.js';
 import { cardConceptsRouter } from './routes/cardConcepts.js';
@@ -49,12 +50,21 @@ app.get('*', (_request, response) => {
   });
 });
 
-app.use((error, _request, response, _next) => {
+const errorHandler: ErrorRequestHandler = (error, _request, response, _next) => {
+  if (error instanceof HttpError) {
+    response.status(error.statusCode).json({
+      error: error.message
+    });
+    return;
+  }
+
   console.error(error);
   response.status(500).json({
     error: 'Internal server error'
   });
-});
+};
+
+app.use(errorHandler);
 
 app.listen(config.port, () => {
   console.log(`API listening on port ${config.port}`);

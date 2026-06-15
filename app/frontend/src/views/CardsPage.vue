@@ -39,15 +39,15 @@
   </q-page>
 </template>
 
-<script setup>
+<script setup lang="ts">
   import { onMounted, ref } from 'vue';
 
-  import { apiGet } from '../api/client';
+  import { apiGet, type ApiRecord } from '../api/client';
   import PageHeader from '../components/PageHeader.vue';
   import ResultList from '../components/ResultList.vue';
 
   const filters = ref({ q: '', language: '', artist: '', cardCategory: '', variantType: '' });
-  const results = ref([]);
+  const results = ref<ApiRecord[]>([]);
   const loading = ref(false);
   const error = ref('');
 
@@ -55,10 +55,10 @@
     loading.value = true;
     error.value = '';
     try {
-      const payload = await apiGet('/api/cards/search', { ...filters.value, limit: 10 });
+      const payload = await apiGet<{ results: ApiRecord[] }>('/api/cards/search', { ...filters.value, limit: 10 });
       results.value = payload.results ?? [];
-    } catch (requestError) {
-      error.value = requestError.message;
+    } catch (requestError: unknown) {
+      error.value = requestError instanceof Error ? requestError.message : String(requestError);
     } finally {
       loading.value = false;
     }

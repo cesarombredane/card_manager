@@ -1,11 +1,11 @@
 import { Router } from 'express';
 
 import { query, queryOne } from '../db.js';
-import { asyncHandler, sendNotFound } from '../http.js';
+import { asyncHandler, parseRequiredUuid, sendNotFound } from '../http.js';
 
 export const cardConceptsRouter = Router();
 
-async function getConceptPayload(id) {
+async function getConceptPayload(id: string) {
   const concept = await queryOne(
     `
       SELECT
@@ -87,14 +87,30 @@ async function getConceptPayload(id) {
 cardConceptsRouter.get(
   '/:id',
   asyncHandler(async (request, response) => {
-    const payload = await getConceptPayload(request.params.id);
+    const id = parseRequiredUuid(request.params.id, 'card concept id');
+    const payload = await getConceptPayload(id);
     if (!payload) return sendNotFound(response, 'Card concept');
     response.json(payload);
   })
 );
 
-cardConceptsRouter.get('/:id/prints', asyncHandler(async (req, res) => res.json(await query('SELECT * FROM card_prints WHERE card_concept_id = $1 ORDER BY release_date NULLS LAST', [req.params.id]))));
-cardConceptsRouter.get('/:id/languages', asyncHandler(async (req, res) => res.json(await query('SELECT DISTINCT l.* FROM languages l JOIN card_texts ct ON ct.language_id = l.id WHERE ct.card_concept_id = $1 ORDER BY l.code', [req.params.id]))));
-cardConceptsRouter.get('/:id/variants', asyncHandler(async (req, res) => res.json(await query('SELECT pv.* FROM print_variants pv JOIN card_prints cp ON cp.id = pv.card_print_id WHERE cp.card_concept_id = $1 ORDER BY pv.variant_type', [req.params.id]))));
-cardConceptsRouter.get('/:id/timeline', asyncHandler(async (req, res) => res.json(await query('SELECT cp.id, cp.printed_name, cp.release_date, l.code AS language, s.name AS set_name FROM card_prints cp JOIN languages l ON l.id = cp.language_id JOIN sets s ON s.id = cp.set_id WHERE cp.card_concept_id = $1 ORDER BY cp.release_date NULLS LAST', [req.params.id]))));
-cardConceptsRouter.get('/:id/sources', asyncHandler(async (req, res) => res.json(await query("SELECT sm.*, src.name AS source_name FROM source_mappings sm JOIN sources src ON src.id = sm.source_id WHERE sm.entity_type = 'card_concept' AND sm.entity_id = $1", [req.params.id]))));
+cardConceptsRouter.get('/:id/prints', asyncHandler(async (req, res) => {
+  const id = parseRequiredUuid(req.params.id, 'card concept id');
+  res.json(await query('SELECT * FROM card_prints WHERE card_concept_id = $1 ORDER BY release_date NULLS LAST', [id]));
+}));
+cardConceptsRouter.get('/:id/languages', asyncHandler(async (req, res) => {
+  const id = parseRequiredUuid(req.params.id, 'card concept id');
+  res.json(await query('SELECT DISTINCT l.* FROM languages l JOIN card_texts ct ON ct.language_id = l.id WHERE ct.card_concept_id = $1 ORDER BY l.code', [id]));
+}));
+cardConceptsRouter.get('/:id/variants', asyncHandler(async (req, res) => {
+  const id = parseRequiredUuid(req.params.id, 'card concept id');
+  res.json(await query('SELECT pv.* FROM print_variants pv JOIN card_prints cp ON cp.id = pv.card_print_id WHERE cp.card_concept_id = $1 ORDER BY pv.variant_type', [id]));
+}));
+cardConceptsRouter.get('/:id/timeline', asyncHandler(async (req, res) => {
+  const id = parseRequiredUuid(req.params.id, 'card concept id');
+  res.json(await query('SELECT cp.id, cp.printed_name, cp.release_date, l.code AS language, s.name AS set_name FROM card_prints cp JOIN languages l ON l.id = cp.language_id JOIN sets s ON s.id = cp.set_id WHERE cp.card_concept_id = $1 ORDER BY cp.release_date NULLS LAST', [id]));
+}));
+cardConceptsRouter.get('/:id/sources', asyncHandler(async (req, res) => {
+  const id = parseRequiredUuid(req.params.id, 'card concept id');
+  res.json(await query("SELECT sm.*, src.name AS source_name FROM source_mappings sm JOIN sources src ON src.id = sm.source_id WHERE sm.entity_type = 'card_concept' AND sm.entity_id = $1", [id]));
+}));

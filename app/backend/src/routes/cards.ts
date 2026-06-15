@@ -1,7 +1,7 @@
 import { Router } from 'express';
 
 import { query } from '../db.js';
-import { asyncHandler, likePattern, parseBoolean, parseLimitOffset } from '../http.js';
+import { asyncHandler, likePattern, parseBoolean, parseLimitOffset, parseOptionalUuid } from '../http.js';
 
 export const cardsRouter = Router();
 
@@ -37,13 +37,16 @@ cardsRouter.get(
     const isPromo = parseBoolean(request.query.isPromo);
     const isJumbo = parseBoolean(request.query.isJumbo);
     const isDeckExclusive = parseBoolean(request.query.isDeckExclusive);
+    const setUuid = parseOptionalUuid(setId, 'setId');
+    const seriesUuid = parseOptionalUuid(seriesId, 'seriesId');
 
-    const orderBy = {
+    const orderByMap: Record<string, string> = {
       name: 'cc.canonical_name ASC NULLS LAST',
       releaseDate: 'MAX(cp.release_date) DESC NULLS LAST',
       printCount: 'COUNT(DISTINCT cp.id) DESC',
       languageCount: 'COUNT(DISTINCT cp.language_id) DESC'
-    }[sort] ?? 'cc.canonical_name ASC NULLS LAST';
+    };
+    const orderBy = orderByMap[String(sort)] ?? 'cc.canonical_name ASC NULLS LAST';
 
     const rows = await query(
       `
@@ -133,8 +136,8 @@ cardsRouter.get(
         likePattern(q),
         language || null,
         region || null,
-        setId || null,
-        seriesId || null,
+        setUuid,
+        seriesUuid,
         artist ? likePattern(artist) : null,
         cardCategory || null,
         rarity ? likePattern(rarity) : null,
