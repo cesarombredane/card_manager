@@ -3,10 +3,10 @@
     <q-inner-loading :showing="loading" />
     <q-banner v-if="error" class="bg-negative text-white">{{ error }}</q-banner>
     <div class="column q-gutter-lg">
-      <page-header title="Languages" eyebrow="Coverage" description="Official active and former Pokémon TCG print languages." />
-      <result-list :items="languages"><template #default="{ item }"><router-link class="text-primary text-subtitle1" :to="`/languages/${item.code}`">{{ item.name
+      <page-header title="Languages" eyebrow="Coverage" description="Languages used by the current fake print regions." />
+      <result-list :items="languages"><template #default="{ item }"><router-link class="text-primary text-subtitle1" :to="`/languages/${item.id}`">{{ item.name
       }}</router-link>
-          <div class="text-caption text-grey-5">{{ item.code }} · {{ item.status }} · {{ item.set_count }} sets · {{ item.print_count }} prints</div>
+          <div class="text-caption text-grey-5">{{ item.id }} · {{ item.region_codes.join(', ') }} · {{ item.set_count }} sets</div>
         </template></result-list>
     </div>
   </q-page>

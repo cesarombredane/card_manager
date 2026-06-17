@@ -3,9 +3,9 @@
     <q-inner-loading :showing="loading" />
     <q-banner v-if="error" class="bg-negative text-white">{{ error }}</q-banner>
     <div v-if="data" class="column q-gutter-lg">
-      <page-header :title="data.series.name" eyebrow="Series" :description="`${data.series.language.code} · ${data.series.region.code}`" />
+      <page-header :title="data.series.name" eyebrow="Series" :description="data.series.region.name" />
       <result-list :items="sets"><template #default="{ item }"><router-link class="text-primary" :to="`/sets/${item.id}`">{{ item.name }}</router-link>
-          <div class="text-caption text-grey-5">{{ item.set_code }} · {{ item.release_date }}</div>
+          <div class="text-caption text-grey-5">{{ item.id }} · {{ item.language_codes.join(', ') }} · {{ item.release_date }}</div>
         </template></result-list>
     </div>
   </q-page>

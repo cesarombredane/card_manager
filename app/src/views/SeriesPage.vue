@@ -1,12 +1,12 @@
 <template>
   <q-page class="bg-dark text-white q-pa-md q-pa-lg-md">
     <div class="column q-gutter-lg">
-      <page-header title="Series" eyebrow="Browse" description="Language and region specific series." />
+      <page-header title="Series" eyebrow="Browse" description="Region-specific series." />
       <q-input v-model="q" dark outlined label="Search series" @keyup.enter="load"><template #append><q-btn flat dense round icon="search" :loading="loading"
             @click="load" /></template></q-input>
       <result-list :items="results"><template #default="{ item }"><router-link class="text-primary text-subtitle1" :to="`/series/${item.id}`">{{ item.name
       }}</router-link>
-          <div class="text-caption text-grey-5">{{ item.language_code }} · {{ item.region_code }} · {{ item.set_count }} sets</div>
+          <div class="text-caption text-grey-5">{{ item.region_code }} · {{ item.set_count }} sets</div>
         </template></result-list>
     </div>
   </q-page>

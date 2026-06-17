@@ -1,10 +1,22 @@
-del some unused features and adapt features to humans
-all real data with scalping
-improve interface and UI/UX
-test all and finish the base features
+database:
+- find a way to order cards by sets and sets by series in their own folder to prevent too large files
 
+app:
+- del all app
+- create home page and define style
+- create a page listing the sets and series for one region (switch region with a button)
+- create a page for all the cards in a set with a search bar and filters
+- create a detail card page to see a specific card detail (and it's variants)
+- create a page for search of cards (can be per pokemon, artist)
+- smooth transition between pages
 
-before working on the feature of the app, i need real data and now i know where to get that from. 
-I want to fetch the entire dataset of tcgdex. to prevent spamming the api, i recommand fetching all the json files from the github repository : [tcgdex/cards-database](https://github.com/tcgdex/cards-database)
+scalping:
+- scalp data from tcgdex to start with
+- see if using tcgdex image is apropriate or if we need to host our own images
 
-it contain info about cards in international language and asian languages. 
+testing:
+- test the app and fix bugs and incoherences
+
+other features:
+- add a collectrion feature where i can add cards to my collection and see my collection stats
+- add a binder creation feature where i can create a binder with my collection and see it in a nice way
