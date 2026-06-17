@@ -1,22 +1,27 @@
+# Card Manager
+
+Static Vue app for browsing the local Pokemon card JSON catalog.
+
 ## Run
 
 From the project root:
 
 ```sh
-minikube start --profile card-manager
-devspace dev
+cd app
+npm i
+npm run dev
 ```
 
 ## Access
 
-Site:
-
 ```text
-http://localhost:5174
+http://localhost:5173
 ```
 
-DevSpace dashboard:
+## Data
+
+The app reads JSON files directly from:
 
 ```text
-http://localhost:8090
+app/data
 ```
