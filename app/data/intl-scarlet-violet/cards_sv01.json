@@ -35,7 +35,7 @@
           "pt-BR": "Arranhar"
         },
         "cost": [
-          "colorless"
+          "normal"
         ],
         "damage": "10",
         "text": {
@@ -82,6 +82,214 @@
     ]
   },
   {
+    "id": "sv01-032",
+    "set_id": "sv01",
+    "number": "032",
+    "category": "pokemon",
+    "name": {
+      "en": "Fuecoco",
+      "fr": "Chochodile",
+      "de": "Krokel",
+      "it": "Fuecoco",
+      "es": "Fuecoco",
+      "pt-BR": "Fuecoco"
+    },
+    "pokemon": [
+      "Fuecoco"
+    ],
+    "illustrator": "Rafa Flame",
+    "rarity": "common",
+    "regulation_mark": "G",
+    "hp": 70,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "evolves_from": null,
+    "attacks": [
+      {
+        "name": {
+          "en": "Gnaw",
+          "fr": "Rongement",
+          "de": "Nagen",
+          "it": "Rodere",
+          "es": "Roer",
+          "pt-BR": "Roer"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": null,
+          "fr": null,
+          "de": null,
+          "it": null,
+          "es": null,
+          "pt-BR": null
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "resistances": [],
+    "retreat_cost": 2,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "images/sv01/en/032-normal.png",
+          "fr": "images/sv01/fr/032-normal.png",
+          "de": "images/sv01/de/032-normal.png",
+          "it": "images/sv01/it/032-normal.png",
+          "es": "images/sv01/es/032-normal.png",
+          "pt-BR": "images/sv01/pt-BR/032-normal.png"
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "en": "images/sv01/en/032-reverse-holo.png",
+          "fr": "images/sv01/fr/032-reverse-holo.png",
+          "de": "images/sv01/de/032-reverse-holo.png",
+          "it": "images/sv01/it/032-reverse-holo.png",
+          "es": "images/sv01/es/032-reverse-holo.png",
+          "pt-BR": "images/sv01/pt-BR/032-reverse-holo.png"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sv01-055",
+    "set_id": "sv01",
+    "number": "055",
+    "category": "pokemon",
+    "name": {
+      "en": "Quaxly",
+      "fr": "Coiffeton",
+      "de": "Kwaks",
+      "it": "Quaxly",
+      "es": "Quaxly",
+      "pt-BR": "Quaxly"
+    },
+    "pokemon": [
+      "Quaxly"
+    ],
+    "illustrator": "Lina Current",
+    "rarity": "common",
+    "regulation_mark": "G",
+    "hp": 60,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "evolves_from": null,
+    "attacks": [
+      {
+        "name": {
+          "en": "Water Gun",
+          "fr": "Pistolet a O",
+          "de": "Aquaknarre",
+          "it": "Pistolacqua",
+          "es": "Pistola Agua",
+          "pt-BR": "Jato de Agua"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "20",
+        "text": {
+          "en": null,
+          "fr": null,
+          "de": null,
+          "it": null,
+          "es": null,
+          "pt-BR": null
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "resistances": [],
+    "retreat_cost": 1,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "images/sv01/en/055-normal.png",
+          "fr": "images/sv01/fr/055-normal.png",
+          "de": "images/sv01/de/055-normal.png",
+          "it": "images/sv01/it/055-normal.png",
+          "es": "images/sv01/es/055-normal.png",
+          "pt-BR": "images/sv01/pt-BR/055-normal.png"
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "en": "images/sv01/en/055-reverse-holo.png",
+          "fr": "images/sv01/fr/055-reverse-holo.png",
+          "de": "images/sv01/de/055-reverse-holo.png",
+          "it": "images/sv01/it/055-reverse-holo.png",
+          "es": "images/sv01/es/055-reverse-holo.png",
+          "pt-BR": "images/sv01/pt-BR/055-reverse-holo.png"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sv01-090",
+    "set_id": "sv01",
+    "number": "090",
+    "category": "energy",
+    "name": {
+      "en": "Basic Grass Energy",
+      "fr": "Energie Plante de base",
+      "de": "Basis-Pflanzen-Energie",
+      "it": "Energia Erba Base",
+      "es": "Energia Basica Planta",
+      "pt-BR": "Energia Basica de Grama"
+    },
+    "rarity": "common",
+    "regulation_mark": "G",
+    "types": [
+      "grass"
+    ],
+    "illustrator": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "images/sv01/en/090-normal.png",
+          "fr": "images/sv01/fr/090-normal.png",
+          "de": "images/sv01/de/090-normal.png",
+          "it": "images/sv01/it/090-normal.png",
+          "es": "images/sv01/es/090-normal.png",
+          "pt-BR": "images/sv01/pt-BR/090-normal.png"
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "en": "images/sv01/en/090-reverse-holo.png",
+          "fr": "images/sv01/fr/090-reverse-holo.png",
+          "de": "images/sv01/de/090-reverse-holo.png",
+          "it": "images/sv01/it/090-reverse-holo.png",
+          "es": "images/sv01/es/090-reverse-holo.png",
+          "pt-BR": "images/sv01/pt-BR/090-reverse-holo.png"
+        }
+      }
+    ]
+  },
+  {
     "id": "sv01-125",
     "set_id": "sv01",
     "number": "125",
@@ -120,7 +328,7 @@
         "cost": [
           "fighting",
           "fighting",
-          "colorless"
+          "normal"
         ],
         "damage": "220",
         "text": {
@@ -162,6 +370,56 @@
           "it": "images/sv01/it/125-full-art.png",
           "es": "images/sv01/es/125-full-art.png",
           "pt-BR": "images/sv01/pt-BR/125-full-art.png"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sv01-150",
+    "set_id": "sv01",
+    "number": "150",
+    "category": "trainer",
+    "name": {
+      "en": "Nest Ball",
+      "fr": "Faiblo Ball",
+      "de": "Nestball",
+      "it": "Minor Ball",
+      "es": "Nido Ball",
+      "pt-BR": "Bola Ninho"
+    },
+    "trainer_type": "item",
+    "illustrator": "Nora Desk",
+    "rarity": "uncommon",
+    "regulation_mark": "G",
+    "rules_text": {
+      "en": "Search your deck for a Basic Pokemon and put it onto your Bench. Then shuffle your deck.",
+      "fr": "Cherchez dans votre deck un Pokemon de base et placez-le sur votre Banc. Melangez ensuite votre deck.",
+      "de": "Durchsuche dein Deck nach einem Basis-Pokemon und lege es auf deine Bank. Mische anschliessend dein Deck.",
+      "it": "Cerca nel tuo mazzo un Pokemon Base e mettilo nella tua panchina. Poi rimischia le carte del tuo mazzo.",
+      "es": "Busca en tu baraja 1 Pokemon Basico y ponlo en tu Banca. Luego, baraja las cartas de tu baraja.",
+      "pt-BR": "Procure no seu baralho por 1 Pokemon Basico e coloque-o no seu Banco. Depois, embaralhe o seu baralho."
+    },
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "images/sv01/en/150-normal.png",
+          "fr": "images/sv01/fr/150-normal.png",
+          "de": "images/sv01/de/150-normal.png",
+          "it": "images/sv01/it/150-normal.png",
+          "es": "images/sv01/es/150-normal.png",
+          "pt-BR": "images/sv01/pt-BR/150-normal.png"
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "en": "images/sv01/en/150-reverse-holo.png",
+          "fr": "images/sv01/fr/150-reverse-holo.png",
+          "de": "images/sv01/de/150-reverse-holo.png",
+          "it": "images/sv01/it/150-reverse-holo.png",
+          "es": "images/sv01/es/150-reverse-holo.png",
+          "pt-BR": "images/sv01/pt-BR/150-reverse-holo.png"
         }
       }
     ]

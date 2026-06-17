@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 // import views
 import SeriesListingPage from '../views/SeriesListingPage.vue';
+import SetDetailPage from '../views/SetDetailPage.vue';
 import HomePage from '../views/HomePage.vue';
 
 
@@ -19,6 +20,11 @@ export const router = createRouter({
       path: '/series',
       name: 'series',
       component: SeriesListingPage
+    },
+    {
+      path: '/set/:setId',
+      name: 'set-detail',
+      component: SetDetailPage
     }
   ]
 });

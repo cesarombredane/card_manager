@@ -62,7 +62,9 @@
 
             <q-item-section>
               <q-item-label class="text-subtitle2 text-weight-bold">
-                {{ set.name }}
+                <router-link :to="`/set/${set.id}`" class="text-white">
+                  {{ set.name }}
+                </router-link>
               </q-item-label>
               <q-item-label v-if="set.local_name" caption class="text-grey-5">
                 {{ set.local_name }}
@@ -90,11 +92,13 @@
 <script setup lang="ts">
   // import hooks
   import { computed, ref } from 'vue';
+  import { useStore } from 'vuex';
 
   // import utils
   import { getRegions, getSeries, getSets } from '../utils/dataManagement';
   import type { Region, Series, Set } from '../utils/types';
   import type { ComputedRef, Ref } from 'vue';
+  import type { AppState } from '../store';
 
 
   /* types */
@@ -122,10 +126,16 @@
   // All sets loaded from per-series JSON files.
   const sets: Set[] = getSets();
 
+  // Shared application state.
+  const store = useStore<AppState>();
+
 
   /* reactive vars */
   // Currently selected printing region. International is the default view.
-  const selectedRegionId: Ref<string> = ref('INTL');
+  const selectedRegionId = computed({
+    get: (): string => store.state.selectedRegionId,
+    set: (regionId: string): void => store.commit('setSelectedRegionId', regionId)
+  });
 
   // Search text used to filter set names and local names.
   const search: Ref<string> = ref('');
