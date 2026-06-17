@@ -1,35 +1,32 @@
 <template>
-  <q-page class="bg-dark text-white q-pa-md q-pa-lg-md">
-    <div class="column q-gutter-lg">
-      <section class="row q-col-gutter-md">
-        <div v-for="section in sections" :key="section.to" class="col-12 col-md-6 col-lg-4">
-          <q-card flat bordered class="bg-grey-10 text-white">
-            <q-card-section>
-              <div class="row items-center q-gutter-sm">
-                <q-icon :name="section.icon" color="primary" size="md" />
-                <div class="text-h6">{{ section.title }}</div>
-              </div>
-              <p class="text-grey-4">{{ section.caption }}</p>
-              <q-btn color="primary" flat no-caps :to="section.to" label="Open" />
-            </q-card-section>
-          </q-card>
-        </div>
-      </section>
-    </div>
+  <q-page class="bg-dark text-white">
+    <section class="q-pa-md q-pa-lg-xl">
+      <div class="home-shell column justify-center">
+        <div class="text-overline text-primary">Pokemon Card Manager</div>
+        <h1 class="text-h3 text-weight-bold q-my-md">Manage your Pokemon card collection</h1>
+        <p class="text-body1 text-grey-4 description">
+          A personal web app designed to organize Pokemon TCG data, browse sets and cards, and help track a collection in a clear, rebuildable way.
+        </p>
+        <p class="text-body2 text-grey-5 q-mt-lg">
+          Created by Cesar Ombredane.
+        </p>
+      </div>
+    </section>
   </q-page>
 </template>
 
 <script setup lang="ts">
-  import { useStore } from 'vuex';
 
-  const store = useStore();
-
-  const sections = [
-    { title: 'Global search', caption: 'Search concepts, prints, sets, series, and artists.', icon: 'search', to: '/search' },
-    { title: 'Advanced cards', caption: 'Filter by language, print, variant, artist, release date, and more.', icon: 'tune', to: '/cards' },
-    { title: 'Sets', caption: 'Browse language-specific sets and relationships.', icon: 'folder', to: '/sets' },
-    { title: 'Languages', caption: 'Check coverage across official print languages.', icon: 'translate', to: '/languages' },
-    { title: 'Artists', caption: 'Explore artists and their illustrated cards.', icon: 'brush', to: '/artists' },
-    { title: 'Pokemon', caption: 'Browse Pokemon by concept names in your data.', icon: 'catching_pokemon', to: '/pokemon' }
-  ];
 </script>
+
+<style scoped>
+  .home-shell {
+    min-height: calc(100vh - 98px);
+    max-width: 760px;
+  }
+
+  .description {
+    max-width: 620px;
+    line-height: 1.7;
+  }
+</style>
