@@ -1,0 +1,219 @@
+[
+  {
+    "id": "sv01-001",
+    "set_id": "sv01",
+    "number": "001",
+    "category": "pokemon",
+    "name": {
+      "en": "Sprigatito",
+      "fr": "Poussacha",
+      "de": "Felori",
+      "it": "Sprigatito",
+      "es": "Sprigatito",
+      "pt-BR": "Sprigatito"
+    },
+    "pokemon": [
+      "Sprigatito"
+    ],
+    "illustrator": "Mika Meadow",
+    "rarity": "common",
+    "regulation_mark": "G",
+    "hp": 60,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "evolves_from": null,
+    "attacks": [
+      {
+        "name": {
+          "en": "Scratch",
+          "fr": "Griffe",
+          "de": "Kratzer",
+          "it": "Graffio",
+          "es": "Arañazo",
+          "pt-BR": "Arranhar"
+        },
+        "cost": [
+          "colorless"
+        ],
+        "damage": "10",
+        "text": {
+          "en": null,
+          "fr": null,
+          "de": null,
+          "it": null,
+          "es": null,
+          "pt-BR": null
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [],
+    "retreat_cost": 1,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "images/sv01/en/001-normal.png",
+          "fr": "images/sv01/fr/001-normal.png",
+          "de": "images/sv01/de/001-normal.png",
+          "it": "images/sv01/it/001-normal.png",
+          "es": "images/sv01/es/001-normal.png",
+          "pt-BR": "images/sv01/pt-BR/001-normal.png"
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "en": "images/sv01/en/001-reverse-holo.png",
+          "fr": "images/sv01/fr/001-reverse-holo.png",
+          "de": "images/sv01/de/001-reverse-holo.png",
+          "it": "images/sv01/it/001-reverse-holo.png",
+          "es": "images/sv01/es/001-reverse-holo.png",
+          "pt-BR": "images/sv01/pt-BR/001-reverse-holo.png"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sv01-125",
+    "set_id": "sv01",
+    "number": "125",
+    "category": "pokemon",
+    "name": {
+      "en": "Koraidon ex",
+      "fr": "Koraidon-ex",
+      "de": "Koraidon-ex",
+      "it": "Koraidon-ex",
+      "es": "Koraidon ex",
+      "pt-BR": "Koraidon ex"
+    },
+    "pokemon": [
+      "Koraidon"
+    ],
+    "illustrator": "Ryo Ember",
+    "rarity": "double_rare",
+    "regulation_mark": "G",
+    "hp": 230,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "evolves_from": null,
+    "rule_box": "ex",
+    "attacks": [
+      {
+        "name": {
+          "en": "Wild Impact",
+          "fr": "Impact Sauvage",
+          "de": "Wilder Einschlag",
+          "it": "Impatto Selvaggio",
+          "es": "Impacto Salvaje",
+          "pt-BR": "Impacto Selvagem"
+        },
+        "cost": [
+          "fighting",
+          "fighting",
+          "colorless"
+        ],
+        "damage": "220",
+        "text": {
+          "en": "During your next turn, this Pokemon cannot use Wild Impact.",
+          "fr": "Pendant votre prochain tour, ce Pokemon ne peut pas utiliser Impact Sauvage.",
+          "de": "Dieses Pokemon kann in deinem nachsten Zug Wilder Einschlag nicht einsetzen.",
+          "it": "Durante il tuo prossimo turno, questo Pokemon non puo usare Impatto Selvaggio.",
+          "es": "Durante tu proximo turno, este Pokemon no puede usar Impacto Salvaje.",
+          "pt-BR": "Durante seu proximo turno, este Pokemon nao pode usar Impacto Selvagem."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "resistances": [],
+    "retreat_cost": 2,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "en": "images/sv01/en/125-holo.png",
+          "fr": "images/sv01/fr/125-holo.png",
+          "de": "images/sv01/de/125-holo.png",
+          "it": "images/sv01/it/125-holo.png",
+          "es": "images/sv01/es/125-holo.png",
+          "pt-BR": "images/sv01/pt-BR/125-holo.png"
+        }
+      },
+      {
+        "id": "full_art",
+        "images": {
+          "en": "images/sv01/en/125-full-art.png",
+          "fr": "images/sv01/fr/125-full-art.png",
+          "de": "images/sv01/de/125-full-art.png",
+          "it": "images/sv01/it/125-full-art.png",
+          "es": "images/sv01/es/125-full-art.png",
+          "pt-BR": "images/sv01/pt-BR/125-full-art.png"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sv01-198",
+    "set_id": "sv01",
+    "number": "198",
+    "category": "trainer",
+    "name": {
+      "en": "Professor's Research",
+      "fr": "Recherches Professorales",
+      "de": "Forschung des Professors",
+      "it": "Ricerca Accademica",
+      "es": "Investigacion de Profesores",
+      "pt-BR": "Pesquisa de Professores"
+    },
+    "trainer_type": "supporter",
+    "illustrator": "Nora Desk",
+    "rarity": "rare",
+    "regulation_mark": "G",
+    "rules_text": {
+      "en": "Discard your hand and draw 7 cards.",
+      "fr": "Defaussez votre main et piochez 7 cartes.",
+      "de": "Lege deine Handkarten auf deinen Ablagestapel und ziehe 7 Karten.",
+      "it": "Scarta le carte che hai in mano e pesca 7 carte.",
+      "es": "Descarta las cartas de tu mano y roba 7 cartas.",
+      "pt-BR": "Descarte sua mao e compre 7 cartas."
+    },
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "images/sv01/en/198-normal.png",
+          "fr": "images/sv01/fr/198-normal.png",
+          "de": "images/sv01/de/198-normal.png",
+          "it": "images/sv01/it/198-normal.png",
+          "es": "images/sv01/es/198-normal.png",
+          "pt-BR": "images/sv01/pt-BR/198-normal.png"
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "en": "images/sv01/en/198-reverse-holo.png",
+          "fr": "images/sv01/fr/198-reverse-holo.png",
+          "de": "images/sv01/de/198-reverse-holo.png",
+          "it": "images/sv01/it/198-reverse-holo.png",
+          "es": "images/sv01/es/198-reverse-holo.png",
+          "pt-BR": "images/sv01/pt-BR/198-reverse-holo.png"
+        }
+      }
+    ]
+  }
+]

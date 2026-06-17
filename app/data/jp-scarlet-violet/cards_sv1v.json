@@ -1,0 +1,125 @@
+[
+  {
+    "id": "sv1v-001",
+    "set_id": "sv1v",
+    "number": "001",
+    "category": "pokemon",
+    "name": {
+      "ja": "クワッス"
+    },
+    "pokemon": [
+      "Quaxly"
+    ],
+    "illustrator": "Lina Current",
+    "rarity": "common",
+    "regulation_mark": "G",
+    "hp": 60,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "evolves_from": null,
+    "attacks": [
+      {
+        "name": {
+          "ja": "みずでっぽう"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "20",
+        "text": {
+          "ja": null
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "resistances": [],
+    "retreat_cost": 1,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "images/sv1v/ja/001-normal.png"
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "ja": "images/sv1v/ja/001-reverse-holo.png"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sv1v-011",
+    "set_id": "sv1v",
+    "number": "011",
+    "category": "pokemon",
+    "name": {
+      "ja": "ミライドンex"
+    },
+    "pokemon": [
+      "Miraidon"
+    ],
+    "illustrator": "Taro Voltage",
+    "rarity": "double_rare",
+    "regulation_mark": "G",
+    "hp": 220,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "evolves_from": null,
+    "rule_box": "ex",
+    "attacks": [
+      {
+        "name": {
+          "ja": "フォトンブラスター"
+        },
+        "cost": [
+          "lightning",
+          "lightning",
+          "colorless"
+        ],
+        "damage": "220",
+        "text": {
+          "ja": "次の自分の番、このポケモンはフォトンブラスターが使えない。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [],
+    "retreat_cost": 1,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": "images/sv1v/ja/011-holo.png"
+        }
+      },
+      {
+        "id": "special_art_rare",
+        "images": {
+          "ja": "images/sv1v/ja/011-special-art-rare.png"
+        }
+      },
+      {
+        "id": "master_ball",
+        "images": {
+          "ja": "images/sv1v/ja/011-master-ball.png"
+        }
+      }
+    ]
+  }
+]

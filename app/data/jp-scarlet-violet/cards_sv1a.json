@@ -1,0 +1,129 @@
+[
+  {
+    "id": "sv1a-004",
+    "set_id": "sv1a",
+    "number": "004",
+    "category": "pokemon",
+    "name": {
+      "ja": "ニャローテ"
+    },
+    "pokemon": [
+      "Floragato"
+    ],
+    "illustrator": "Mika Meadow",
+    "rarity": "uncommon",
+    "regulation_mark": "G",
+    "hp": 90,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage_1",
+    "evolves_from": {
+      "ja": "ニャオハ"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "リーフステップ"
+        },
+        "cost": [
+          "grass",
+          "colorless"
+        ],
+        "damage": "50",
+        "text": {
+          "ja": null
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [],
+    "retreat_cost": 1,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "images/sv1a/ja/004-normal.png"
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "ja": "images/sv1a/ja/004-reverse-holo.png"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sv1a-086",
+    "set_id": "sv1a",
+    "number": "086",
+    "category": "pokemon",
+    "name": {
+      "ja": "マスカーニャex"
+    },
+    "pokemon": [
+      "Meowscarada"
+    ],
+    "illustrator": "Iris Bloom",
+    "rarity": "special_art_rare",
+    "regulation_mark": "G",
+    "hp": 310,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage_2",
+    "evolves_from": {
+      "ja": "ニャローテ"
+    },
+    "rule_box": "ex",
+    "attacks": [
+      {
+        "name": {
+          "ja": "スクラッチネイル"
+        },
+        "cost": [
+          "grass",
+          "colorless"
+        ],
+        "damage": "100+",
+        "text": {
+          "ja": "相手のバトルポケモンにダメカンがのっているなら、120ダメージ追加。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [],
+    "retreat_cost": 2,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": "images/sv1a/ja/086-holo.png"
+        }
+      },
+      {
+        "id": "special_art_rare",
+        "images": {
+          "ja": "images/sv1a/ja/086-special-art-rare.png"
+        }
+      },
+      {
+        "id": "master_ball",
+        "images": {
+          "ja": "images/sv1a/ja/086-master-ball.png"
+        }
+      }
+    ]
+  }
+]

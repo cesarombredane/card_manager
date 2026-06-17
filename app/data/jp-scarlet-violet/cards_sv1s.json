@@ -1,0 +1,125 @@
+[
+  {
+    "id": "sv1s-001",
+    "set_id": "sv1s",
+    "number": "001",
+    "category": "pokemon",
+    "name": {
+      "ja": "ニャオハ"
+    },
+    "pokemon": [
+      "Sprigatito"
+    ],
+    "illustrator": "Mika Meadow",
+    "rarity": "common",
+    "regulation_mark": "G",
+    "hp": 60,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "evolves_from": null,
+    "attacks": [
+      {
+        "name": {
+          "ja": "ひっかく"
+        },
+        "cost": [
+          "colorless"
+        ],
+        "damage": "10",
+        "text": {
+          "ja": null
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [],
+    "retreat_cost": 1,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "images/sv1s/ja/001-normal.png"
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "ja": "images/sv1s/ja/001-reverse-holo.png"
+        }
+      },
+      {
+        "id": "poke_ball",
+        "images": {
+          "ja": "images/sv1s/ja/001-poke-ball.png"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sv1s-010",
+    "set_id": "sv1s",
+    "number": "010",
+    "category": "pokemon",
+    "name": {
+      "ja": "コライドンex"
+    },
+    "pokemon": [
+      "Koraidon"
+    ],
+    "illustrator": "Ryo Ember",
+    "rarity": "double_rare",
+    "regulation_mark": "G",
+    "hp": 230,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "evolves_from": null,
+    "rule_box": "ex",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ワイルドインパクト"
+        },
+        "cost": [
+          "fighting",
+          "fighting",
+          "colorless"
+        ],
+        "damage": "220",
+        "text": {
+          "ja": "次の自分の番、このポケモンはワイルドインパクトが使えない。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "resistances": [],
+    "retreat_cost": 2,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": "images/sv1s/ja/010-holo.png"
+        }
+      },
+      {
+        "id": "special_art_rare",
+        "images": {
+          "ja": "images/sv1s/ja/010-special-art-rare.png"
+        }
+      }
+    ]
+  }
+]
