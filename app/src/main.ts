@@ -12,7 +12,13 @@ Dark.set(true);
 createApp(App)
   .use(Quasar, {
     config: {
-      dark: true
+      dark: true,
+      brand: {
+        primary: '#f2c94c',
+        secondary: '#c9a227',
+        accent: '#ffe082',
+        dark: '#050505'
+      }
     }
   })
   .use(router)
