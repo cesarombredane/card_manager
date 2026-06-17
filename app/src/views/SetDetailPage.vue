@@ -45,7 +45,7 @@
 
       <div class="row q-col-gutter-md items-stretch">
         <div v-for="card in displayedCards" :key="card.id" class="col-6 col-sm-4 col-md-3 col-lg-2">
-          <q-card flat bordered class="bg-grey-10 text-white full-height column no-wrap">
+          <q-card flat bordered class="bg-grey-10 text-white full-height column no-wrap cursor-pointer" @click="goToCard(card.card_id)">
             <q-responsive :ratio="5 / 6" class="bg-grey-9">
               <div class="column items-center justify-center full-height text-grey-5">
                 <q-icon name="image" size="28px" />
@@ -253,5 +253,10 @@
   const goBackToSeries = (): void => {
     if (currentSeries) store.commit('setSelectedRegionId', currentSeries.region_id);
     router.push('/series');
+  };
+
+  // Opens the detail page for a card from this set.
+  const goToCard = (cardId: string): void => {
+    router.push(`/set/${setId}/card/${cardId}`);
   };
 </script>

@@ -4,6 +4,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 // import views
 import SeriesListingPage from '../views/SeriesListingPage.vue';
 import SetDetailPage from '../views/SetDetailPage.vue';
+import CardDetailPage from '../views/CardDetailPage.vue';
 import HomePage from '../views/HomePage.vue';
 
 
@@ -25,6 +26,11 @@ export const router = createRouter({
       path: '/set/:setId',
       name: 'set-detail',
       component: SetDetailPage
+    },
+    {
+      path: '/set/:setId/card/:cardId',
+      name: 'card-detail',
+      component: CardDetailPage
     }
   ]
 });

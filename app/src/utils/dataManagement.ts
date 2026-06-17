@@ -36,6 +36,11 @@ export const getCardsBySetId = (setId: string): Card[] => {
   return cardModules[modulePath] ?? [];
 };
 
+// Returns one card from the single JSON file that belongs to its set.
+export const getCardById = (setId: string, cardId: string): Card | null => {
+  return getCardsBySetId(setId).find((card) => card.id === cardId) ?? null;
+};
+
 // Returns one set by id if it exists.
 export const getSetById = (setId: string): Set | null => {
   return getSets().find((set) => set.id === setId) ?? null;
