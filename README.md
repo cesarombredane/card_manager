@@ -1,6 +1,6 @@
 # Card Manager
 
-Static Vue app for browsing the local Pokemon card JSON catalog.
+Static Vue app for browsing local Pokemon card JSON data.
 
 ## Run
 

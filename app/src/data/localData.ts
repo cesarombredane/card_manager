@@ -41,7 +41,7 @@ const tableNames: TableName[] = [
   'sources'
 ];
 
-const tableModules = import.meta.glob<ApiRecord[]>('../../data/tables/*.json', {
+const tableModules = import.meta.glob<ApiRecord[]>('../../data/*.json', {
   eager: true,
   import: 'default'
 });
@@ -101,7 +101,7 @@ function groupBy(rows: ApiRecord[], key: string): Map<string, ApiRecord[]> {
 async function loadTables(): Promise<Tables> {
   if (!tablesPromise) {
     tablesPromise = Promise.resolve(Object.fromEntries(tableNames.map((tableName) => {
-      const modulePath = `../../data/tables/${tableName}.json`;
+      const modulePath = `../../data/${tableName}.json`;
       const rows = tableModules[modulePath];
 
       if (!rows) {

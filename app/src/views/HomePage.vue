@@ -30,6 +30,6 @@
     { title: 'Sets', caption: 'Browse language-specific sets and relationships.', icon: 'folder', to: '/sets' },
     { title: 'Languages', caption: 'Check coverage across official print languages.', icon: 'translate', to: '/languages' },
     { title: 'Artists', caption: 'Explore artists and their illustrated cards.', icon: 'brush', to: '/artists' },
-    { title: 'Pokemon', caption: 'Browse Pokemon by concept names in the catalog.', icon: 'catching_pokemon', to: '/pokemon' }
+    { title: 'Pokemon', caption: 'Browse Pokemon by concept names in your data.', icon: 'catching_pokemon', to: '/pokemon' }
   ];
 </script>
