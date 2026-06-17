@@ -46,16 +46,7 @@
           <div class="column q-gutter-md">
             <div class="row q-col-gutter-md items-center">
               <div class="col-12 col-lg-auto">
-                <q-btn-toggle
-                  v-model="selectedLanguageId"
-                  :options="languageOptions"
-                  color="grey-9"
-                  padding="sm md"
-                  text-color="grey-4"
-                  toggle-color="grey-7"
-                  toggle-text-color="white"
-                  unelevated
-                />
+                <language-selector v-model="selectedLanguageId" :language-ids="currentSet?.language_ids ?? []" />
               </div>
               <div class="col-12 col-sm-8 col-md-5 col-lg-4">
                 <q-select v-model="selectedVariantId" :options="variantOptions" dark dense outlined label="Variant" />
@@ -88,14 +79,31 @@
               <q-item>
                 <q-item-section>
                   <q-item-label caption class="text-grey-5">Artist</q-item-label>
-                  <q-item-label>{{ currentCard?.illustrator ?? 'Unknown illustrator' }}</q-item-label>
+                  <q-item-label>
+                    <router-link v-if="currentCard?.illustrator" :to="{ path: '/cards/search', query: { artist: currentCard.illustrator } }" class="text-white">
+                      {{ currentCard.illustrator }}
+                    </router-link>
+                    <span v-else>Unknown illustrator</span>
+                  </q-item-label>
                 </q-item-section>
               </q-item>
 
               <q-item>
                 <q-item-section>
                   <q-item-label caption class="text-grey-5">Pokemon</q-item-label>
-                  <q-item-label>{{ currentCard?.pokemon?.join(', ') || 'No linked Pokemon' }}</q-item-label>
+                  <q-item-label>
+                    <template v-if="currentCard?.pokemon?.length">
+                      <router-link
+                        v-for="(pokemon, index) in currentCard.pokemon"
+                        :key="pokemon"
+                        :to="{ path: '/cards/search', query: { pokemon } }"
+                        class="text-white"
+                      >
+                        {{ pokemon }}<span v-if="index < currentCard.pokemon.length - 1" class="text-white">, </span>
+                      </router-link>
+                    </template>
+                    <span v-else>No linked Pokemon</span>
+                  </q-item-label>
                 </q-item-section>
               </q-item>
 
@@ -152,20 +160,14 @@
   import { useRoute, useRouter } from 'vue-router';
   import { useStore } from 'vuex';
 
+  // import components
+  import LanguageSelector from '../components/LanguageSelector.vue';
+
   // import utils
   import { getCardById, getSetById } from '../utils/dataManagement';
   import type { Card, CardModifier, CardVariant, Set } from '../utils/types';
   import type { ComputedRef } from 'vue';
   import type { AppState } from '../store';
-
-
-  /* types */
-  // A language selector option formatted for q-btn-toggle.
-  type LanguageOption = {
-    label: string;
-    value: string;
-  };
-
 
   /* constant vars */
   // Current route used to identify the selected card.
@@ -205,12 +207,6 @@
 
 
   /* computed vars */
-  // Language options rendered by the q-btn-toggle.
-  const languageOptions: ComputedRef<LanguageOption[]> = computed(() => (currentSet?.language_ids ?? []).map((languageId) => ({
-    label: languageId,
-    value: languageId
-  })));
-
   // Variant options rendered by the q-select.
   const variantOptions: ComputedRef<string[]> = computed(() => currentCard?.variants.map((variant) => variant.id) ?? []);
 

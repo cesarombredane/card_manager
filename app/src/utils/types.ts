@@ -4,6 +4,12 @@ export type Region = {
   name: string;
 };
 
+// A display language available in at least one set.
+export type Language = {
+  id: string;
+  name: string;
+};
+
 // A region-specific era of releases.
 export type Series = {
   id: string;

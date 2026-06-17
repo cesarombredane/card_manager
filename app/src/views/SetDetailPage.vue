@@ -16,8 +16,7 @@
 
       <div class="row q-col-gutter-md items-center">
         <div class="col-12 col-md-auto">
-          <q-btn-toggle v-model="selectedLanguageId" :options="languageOptions" color="grey-9" padding="sm md" text-color="grey-4" toggle-color="grey-7"
-            toggle-text-color="white" unelevated />
+          <language-selector v-model="selectedLanguageId" :language-ids="currentSet?.language_ids ?? []" />
         </div>
         <div class="col-12 col-sm-8 col-md-5 col-lg-4">
           <q-input v-model="search" dark dense outlined clearable debounce="150" label="Search a card by name or number">
@@ -98,19 +97,14 @@
   import { useRoute, useRouter } from 'vue-router';
   import { useStore } from 'vuex';
 
+  // import components
+  import LanguageSelector from '../components/LanguageSelector.vue';
+
   // import utils
   import { getCardsBySetId, getSetById, getSeriesById } from '../utils/dataManagement';
   import type { Card, CardVariant, Series, Set } from '../utils/types';
   import type { ComputedRef, Ref } from 'vue';
   import type { AppState } from '../store';
-
-
-  /* types */
-  // A language selector option formatted for q-btn-toggle.
-  type LanguageOption = {
-    label: string;
-    value: string;
-  };
 
   // A flattened card variant row ready for display and filtering.
   type DisplayCard = {
@@ -178,12 +172,6 @@
 
 
   /* computed vars */
-  // Language options rendered by the q-btn-toggle.
-  const languageOptions: ComputedRef<LanguageOption[]> = computed(() => (currentSet?.language_ids ?? []).map((languageId) => ({
-    label: languageId,
-    value: languageId
-  })));
-
   // Every card variant in this set as an individual display row.
   const allCards: ComputedRef<DisplayCard[]> = computed(() => cards.flatMap((card) => card.variants.map((variant) => buildDisplayCard(card, variant))));
 

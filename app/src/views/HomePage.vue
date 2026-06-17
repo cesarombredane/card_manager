@@ -14,8 +14,13 @@
         <p class="text-body2 text-grey-5 q-mt-lg">
           Created by Cesar Ombredane.
         </p>
-        <div class="q-mt-xl">
-          <q-btn color="yellow-7" icon-right="arrow_forward" label="Get started" size="lg" text-color="black" unelevated to="/series" />
+        <div class="row q-col-gutter-md q-mt-xl">
+          <div class="col-12 col-sm-auto">
+            <q-btn color="yellow-7" icon-right="arrow_forward" label="Browse series" size="lg" text-color="black" unelevated to="/series" />
+          </div>
+          <div class="col-12 col-sm-auto">
+            <q-btn color="grey-9" icon-right="search" label="Search cards" size="lg" text-color="white" unelevated to="/cards/search" />
+          </div>
         </div>
       </div>
     </section>

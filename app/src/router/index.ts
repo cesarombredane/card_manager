@@ -5,6 +5,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import SeriesListingPage from '../views/SeriesListingPage.vue';
 import SetDetailPage from '../views/SetDetailPage.vue';
 import CardDetailPage from '../views/CardDetailPage.vue';
+import CardSearchPage from '../views/CardSearchPage.vue';
 import HomePage from '../views/HomePage.vue';
 
 
@@ -21,6 +22,11 @@ export const router = createRouter({
       path: '/series',
       name: 'series',
       component: SeriesListingPage
+    },
+    {
+      path: '/cards/search',
+      name: 'card-search',
+      component: CardSearchPage
     },
     {
       path: '/set/:setId',

@@ -1,4 +1,7 @@
-import type { Card, Region, Series, Set } from './types';
+import type { Card, Language, Region, Series, Set } from './types';
+
+// Eagerly loads every configured language from the local JSON catalog.
+const languageModules = import.meta.glob<Language[]>('../../data/languages.json', { eager: true, import: 'default' });
 
 // Eagerly loads every configured region from the local JSON catalog.
 const regionModules = import.meta.glob<Region[]>('../../data/regions.json', { eager: true, import: 'default' });
@@ -11,6 +14,11 @@ const setModules = import.meta.glob<Set[]>('../../data/*/sets.json', { eager: tr
 
 // Eagerly loads each per-set card file from the local JSON catalog.
 const cardModules = import.meta.glob<Card[]>('../../data/*/cards_*.json', { eager: true, import: 'default' });
+
+// Returns all known languages.
+export const getLanguages = (): Language[] => {
+  return Object.values(languageModules)[0] ?? [];
+};
 
 // Returns all known regions.
 export const getRegions = (): Region[] => {
@@ -25,6 +33,11 @@ export const getSeries = (): Series[] => {
 // Returns all known sets across every series folder.
 export const getSets = (): Set[] => {
   return Object.values(setModules).flat();
+};
+
+// Returns every card from every set, used by global search views.
+export const getCards = (): Card[] => {
+  return Object.values(cardModules).flat();
 };
 
 // Returns cards from the single JSON file that belongs to a specific set.
