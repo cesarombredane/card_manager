@@ -1,0 +1,888 @@
+[
+  {
+    "id": "asia-svln-001",
+    "set_id": "asia-svln",
+    "number": "001",
+    "category": "pokemon",
+    "name": {
+      "ja": "マンタイン"
+    },
+    "pokemon": [
+      "マンタイン"
+    ],
+    "illustrator": "satoma",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 110,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "スプラッシュ"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "30",
+        "text": {}
+      },
+      {
+        "name": {
+          "ja": "ウォーターダイブ"
+        },
+        "cost": [
+          "water",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "相手のポケモン1匹に、50ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-svln-002",
+    "set_id": "asia-svln",
+    "number": "002",
+    "category": "pokemon",
+    "name": {
+      "ja": "サンダー"
+    },
+    "pokemon": [
+      "サンダー"
+    ],
+    "illustrator": "Nisota Niso",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 110,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ついげきボルト"
+        },
+        "cost": [
+          "lightning",
+          "normal"
+        ],
+        "damage": "20＋",
+        "text": {
+          "ja": "相手のバトルポケモンにのっているダメカンの数×10ダメージ追加。"
+        }
+      },
+      {
+        "name": {
+          "ja": "ドリルくちばし"
+        },
+        "cost": [
+          "lightning",
+          "normal",
+          "normal"
+        ],
+        "damage": "80",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "－30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-svln-003",
+    "set_id": "asia-svln",
+    "number": "003",
+    "category": "pokemon",
+    "name": {
+      "ja": "マリル"
+    },
+    "pokemon": [
+      "マリル"
+    ],
+    "illustrator": "Shimaris Yukichi",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ころがりタックル"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-svln-004",
+    "set_id": "asia-svln",
+    "number": "004",
+    "category": "pokemon",
+    "name": {
+      "ja": "マリルリ"
+    },
+    "pokemon": [
+      "マリルリ"
+    ],
+    "illustrator": "Orca",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 120,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "ja": "すてみタックル"
+        },
+        "cost": [
+          "psychic",
+          "psychic",
+          "psychic",
+          "psychic"
+        ],
+        "damage": "230",
+        "text": {
+          "ja": "このポケモンにも50ダメージ。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-svln-005",
+    "set_id": "asia-svln",
+    "number": "005",
+    "category": "pokemon",
+    "name": {
+      "ja": "ニンフィアex"
+    },
+    "pokemon": [
+      "ニンフィアex"
+    ],
+    "illustrator": "5ban Graphics",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 270,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage1",
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "ja": "マジカルチャーム"
+        },
+        "cost": [
+          "psychic",
+          "normal",
+          "normal"
+        ],
+        "damage": "160",
+        "text": {
+          "ja": "次の相手の番、このワザを受けたポケモンが使うワザのダメージは「-100」される。"
+        }
+      },
+      {
+        "name": {
+          "ja": "エンジェライト"
+        },
+        "cost": [
+          "water",
+          "lightning",
+          "psychic"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "相手のベンチポケモンを2匹選び、そのポケモンと、ついているすべてのカードを、山札にもどして切る。前の自分の番に、自分のポケモンが「エンジェライト」を使っていたなら、このワザは使えない。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-svln-006",
+    "set_id": "asia-svln",
+    "number": "006",
+    "category": "pokemon",
+    "name": {
+      "ja": "ゼルネアス"
+    },
+    "pokemon": [
+      "ゼルネアス"
+    ],
+    "illustrator": "Ryuta Fuse",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "オーロラゲイン"
+        },
+        "cost": [
+          "psychic",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "ja": "このポケモンのHPを「30」回復する。"
+        }
+      },
+      {
+        "name": {
+          "ja": "ギガインパクト"
+        },
+        "cost": [
+          "psychic",
+          "psychic",
+          "normal"
+        ],
+        "damage": "130",
+        "text": {
+          "ja": "次の自分の番、このポケモンはワザが使えない。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-svln-007",
+    "set_id": "asia-svln",
+    "number": "007",
+    "category": "pokemon",
+    "name": {
+      "ja": "オドリドリ"
+    },
+    "pokemon": [
+      "オドリドリ"
+    ],
+    "illustrator": "saino misaki",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "エネアシスト"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "自分のトラッシュから基本エネルギーを2枚まで選び、ベンチポケモン1匹につける。"
+        }
+      },
+      {
+        "name": {
+          "ja": "げんわくダンス"
+        },
+        "cost": [
+          "psychic",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "ja": "相手のバトルポケモンをこんらんにする。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "－30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-svln-008",
+    "set_id": "asia-svln",
+    "number": "008",
+    "category": "pokemon",
+    "name": {
+      "ja": "ミミッキュ"
+    },
+    "pokemon": [
+      "ミミッキュ"
+    ],
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ゴーストアイ"
+        },
+        "cost": [
+          "psychic",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "相手のバトルポケモンに、ダメカンを7個のせる。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-svln-009",
+    "set_id": "asia-svln",
+    "number": "009",
+    "category": "pokemon",
+    "name": {
+      "ja": "イーブイ"
+    },
+    "pokemon": [
+      "イーブイ"
+    ],
+    "illustrator": "Naoyo Kimura",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "とつげき"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "ja": "このポケモンにも10ダメージ。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-svln-010",
+    "set_id": "asia-svln",
+    "number": "010",
+    "category": "pokemon",
+    "name": {
+      "ja": "カビゴン"
+    },
+    "pokemon": [
+      "カビゴン"
+    ],
+    "illustrator": "Ounishi",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 150,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "スパイクドロー"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "ja": "自分の山札を1枚引く。"
+        }
+      },
+      {
+        "name": {
+          "ja": "メガトンパンチ"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "100",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "asia-svln-011",
+    "set_id": "asia-svln",
+    "number": "011",
+    "category": "trainer",
+    "name": {
+      "ja": "すごいつりざお"
+    },
+    "pokemon": [],
+    "illustrator": "Toyste Beach",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "ja": "自分のトラッシュからポケモンと基本エネルギーを合計3枚まで選び、相手に見せて、山札にもどして切る。"
+    }
+  },
+  {
+    "id": "asia-svln-012",
+    "set_id": "asia-svln",
+    "number": "012",
+    "category": "trainer",
+    "name": {
+      "ja": "テラスタルオーブ"
+    },
+    "pokemon": [],
+    "illustrator": "Ayaka Yoshida",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "ja": "自分の山札から「テラスタル」のポケモンを1枚選び、相手に見せて、手札に加える。そして山札を切る。"
+    }
+  },
+  {
+    "id": "asia-svln-013",
+    "set_id": "asia-svln",
+    "number": "013",
+    "category": "trainer",
+    "name": {
+      "ja": "ネストボール"
+    },
+    "pokemon": [],
+    "illustrator": "Toyste Beach",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "ja": "自分の山札からたねポケモンを1枚選び、ベンチに出す。そして山札を切る。"
+    }
+  },
+  {
+    "id": "asia-svln-014",
+    "set_id": "asia-svln",
+    "number": "014",
+    "category": "trainer",
+    "name": {
+      "ja": "ハイパーボール"
+    },
+    "pokemon": [],
+    "illustrator": "Ayaka Yoshida",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "ja": "このカードは、自分の手札を2枚トラッシュしなければ使えない。\n\n自分の山札からポケモンを1枚選び、相手に見せて、手札に加える。そして山札を切る。"
+    }
+  },
+  {
+    "id": "asia-svln-015",
+    "set_id": "asia-svln",
+    "number": "015",
+    "category": "trainer",
+    "name": {
+      "ja": "プレシャスキャリー"
+    },
+    "pokemon": [],
+    "illustrator": "inose yukie",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "ja": "自分の山札からたねポケモンを好きなだけ選び、ベンチに出す。そして山札を切る。"
+    }
+  },
+  {
+    "id": "asia-svln-016",
+    "set_id": "asia-svln",
+    "number": "016",
+    "category": "trainer",
+    "name": {
+      "ja": "ポケギア3.0"
+    },
+    "pokemon": [],
+    "illustrator": "Toyste Beach",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "ja": "自分の山札を上から7枚見て、その中からサポートを1枚選び、相手に見せて、手札に加える。残りのカードは山札にもどして切る。"
+    }
+  },
+  {
+    "id": "asia-svln-017",
+    "set_id": "asia-svln",
+    "number": "017",
+    "category": "trainer",
+    "name": {
+      "ja": "ポケモンいれかえ"
+    },
+    "pokemon": [],
+    "illustrator": "Studio Bora Inc.",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "ja": "自分のバトルポケモンをベンチポケモンと入れ替える。"
+    }
+  },
+  {
+    "id": "asia-svln-018",
+    "set_id": "asia-svln",
+    "number": "018",
+    "category": "trainer",
+    "name": {
+      "ja": "アカマツ"
+    },
+    "pokemon": [],
+    "illustrator": "GIDORA",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "ja": "自分の山札から、それぞれちがうタイプの基本エネルギーを2枚まで選び、相手に見せて、どちらか1枚を手札に加え、残りのエネルギーを自分のポケモンにつける。そして山札を切る。"
+    }
+  },
+  {
+    "id": "asia-svln-019",
+    "set_id": "asia-svln",
+    "number": "019",
+    "category": "trainer",
+    "name": {
+      "ja": "ナンジャモ"
+    },
+    "pokemon": [],
+    "illustrator": "Sanosuke Sakuma",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "ja": "おたがいのプレイヤーは、それぞれ自分の手札をすべてウラにして切り、山札の下にもどす。その後、それぞれ自分のサイドの残り枚数ぶん、山札を引く。"
+    }
+  },
+  {
+    "id": "asia-svln-020",
+    "set_id": "asia-svln",
+    "number": "020",
+    "category": "trainer",
+    "name": {
+      "ja": "ネモ"
+    },
+    "pokemon": [],
+    "illustrator": "Sanosuke Sakuma",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "ja": "自分の山札を3枚引く。"
+    }
+  },
+  {
+    "id": "asia-svln-021",
+    "set_id": "asia-svln",
+    "number": "021",
+    "category": "trainer",
+    "name": {
+      "ja": "博士の研究"
+    },
+    "pokemon": [],
+    "illustrator": "kirisAki",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "ja": "自分の手札をすべてトラッシュし、山札を7枚引く。"
+    }
+  },
+  {
+    "id": "asia-svln-022",
+    "set_id": "asia-svln",
+    "number": "022",
+    "category": "trainer",
+    "name": {
+      "ja": "ボスの指令"
+    },
+    "pokemon": [],
+    "illustrator": "NC Empire",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "ja": "相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。"
+    }
+  }
+]

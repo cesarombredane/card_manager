@@ -1,0 +1,630 @@
+[
+  {
+    "id": "intl-tk-ex-m-1",
+    "set_id": "intl-tk-ex-m",
+    "number": "1",
+    "category": "pokemon",
+    "name": {
+      "en": "Arcanine",
+      "fr": "Arcanin"
+    },
+    "pokemon": [
+      "Arcanine"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "fire"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Growlithe",
+      "fr": "Caninos"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Flare",
+          "fr": "Intimidation"
+        },
+        "cost": [
+          "fire"
+        ],
+        "damage": "20",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Heat Tackle",
+          "fr": "Charge énergétique"
+        },
+        "cost": [
+          "fire",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "70",
+        "text": {
+          "en": "Arcanine does 10 damage to itself.",
+          "fr": "Arcanin s'inflige 10 dégâts."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "2x"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-tk-ex-m-10",
+    "set_id": "intl-tk-ex-m",
+    "number": "10",
+    "category": "trainer",
+    "name": {
+      "en": "Potion",
+      "fr": "Potion"
+    },
+    "pokemon": [],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Remove 2 damage counters from 1 of your Pokémon (remove 1 damage counter if that Pokémon has only 1).",
+      "fr": "Soignez 30 dégâts à 1 de vos Pokémon."
+    }
+  },
+  {
+    "id": "intl-tk-ex-m-11",
+    "set_id": "intl-tk-ex-m",
+    "number": "11",
+    "category": "energy",
+    "name": {
+      "en": "Fire Energy",
+      "fr": "Énergie Feu"
+    },
+    "pokemon": [],
+    "illustrator": "",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "stage": "basic"
+  },
+  {
+    "id": "intl-tk-ex-m-12",
+    "set_id": "intl-tk-ex-m",
+    "number": "12",
+    "category": "energy",
+    "name": {
+      "en": "Lightning Energy",
+      "fr": "Énergie Électrique"
+    },
+    "pokemon": [],
+    "illustrator": "",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "stage": "basic"
+  },
+  {
+    "id": "intl-tk-ex-m-2",
+    "set_id": "intl-tk-ex-m",
+    "number": "2",
+    "category": "pokemon",
+    "name": {
+      "en": "Charmander",
+      "fr": "Salamèche"
+    },
+    "pokemon": [
+      "Charmander"
+    ],
+    "illustrator": "Midori Harada",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Headbutt",
+          "fr": "Coup d'boule"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Slash",
+          "fr": "Tranche"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "2x"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-tk-ex-m-3",
+    "set_id": "intl-tk-ex-m",
+    "number": "3",
+    "category": "pokemon",
+    "name": {
+      "en": "Charmeleon",
+      "fr": "Reptincel"
+    },
+    "pokemon": [
+      "Charmeleon"
+    ],
+    "illustrator": "Kouki Saitou",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "fire"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Charmander",
+      "fr": "Salamèche"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Flare",
+          "fr": "Intimidation"
+        },
+        "cost": [
+          "fire",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Damage Burn",
+          "fr": "Brûlure"
+        },
+        "cost": [
+          "fire",
+          "normal",
+          "normal"
+        ],
+        "damage": "40+",
+        "text": {
+          "en": "If the Defending Pokémon already has any damage counters on it, this attack does 40 damage plus 20 more damage.",
+          "fr": "Si le Pokémon Défenseur possède déjà des marqueurs de dégât, cette attaque inflige 40 dégâts plus 20 dégâts supplémentaires."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "2x"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-tk-ex-m-4",
+    "set_id": "intl-tk-ex-m",
+    "number": "4",
+    "category": "pokemon",
+    "name": {
+      "en": "Growlithe",
+      "fr": "Caninos"
+    },
+    "pokemon": [
+      "Growlithe"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Bite",
+          "fr": "Morsure"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Flame Tail",
+          "fr": "Queue de flammes"
+        },
+        "cost": [
+          "fire",
+          "normal",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "2x"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-tk-ex-m-5",
+    "set_id": "intl-tk-ex-m",
+    "number": "5",
+    "category": "pokemon",
+    "name": {
+      "en": "Mareep",
+      "fr": "Wattouat"
+    },
+    "pokemon": [
+      "Mareep"
+    ],
+    "illustrator": "Naoyo Kimura",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Minor Errand-Running",
+          "fr": "Rendez-vous mineur"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Search your deck for a basic Energy card, show it to your opponent, and put it into your hand. Shuffle your deck afterward.",
+          "fr": "Choisissez dans votre deck une carte Énergie de base, montrez-la à votre adversaire et placez-la dans votre main. Ensuite, mélangez votre deck."
+        }
+      },
+      {
+        "name": {
+          "en": "Quick Attack",
+          "fr": "Vive-attaque"
+        },
+        "cost": [
+          "lightning",
+          "normal"
+        ],
+        "damage": "10+",
+        "text": {
+          "en": "Flip a coin. If heads, this attack does 10 damage plus 10 more damage.",
+          "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 10 dégâts plus 10 dégâts supplémentaires."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "2x"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-tk-ex-m-6",
+    "set_id": "intl-tk-ex-m",
+    "number": "6",
+    "category": "pokemon",
+    "name": {
+      "en": "Minun",
+      "fr": "Negapi"
+    },
+    "pokemon": [
+      "Minun"
+    ],
+    "illustrator": "Katsura Tabata",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Drawup Power",
+          "fr": "Pouvoir bloquant"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Search your deck for an Energy card, show it to your opponent, and put into your hand. Shuffle your deck afterward.",
+          "fr": "Choisissez une carte Énergie dans votre deck, montrez-la à votre adversaire et placez-la dans votre main. Ensuite, mélangez votre deck."
+        }
+      },
+      {
+        "name": {
+          "en": "Front Spark",
+          "fr": "Étincelle avant"
+        },
+        "cost": [
+          "lightning",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Does 10 damage to 1 of your opponent’s Benched Pokémon. (Don’t apply Weakness and Resistance for Benched Pokémon.)",
+          "fr": "Inflige 10 dégâts à 1 des Pokémon de Banc de votre adversaire. (Vous ne pouvez pas appliquer la Faiblesse et la Résistance aux Pokémon de Banc.)"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "2x"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "metal",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-tk-ex-m-7",
+    "set_id": "intl-tk-ex-m",
+    "number": "7",
+    "category": "pokemon",
+    "name": {
+      "en": "Vulpix",
+      "fr": "Goupix"
+    },
+    "pokemon": [
+      "Vulpix"
+    ],
+    "illustrator": "Midori Harada",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Bite",
+          "fr": "Morsure"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Firebreathing",
+          "fr": "Souffle-feu"
+        },
+        "cost": [
+          "fire",
+          "normal"
+        ],
+        "damage": "20+",
+        "text": {
+          "en": "Flip a coin. If heads, this attack does 20 damage plus 10 more damage.",
+          "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 20 dégâts plus 10 dégâts supplémentaires."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "2x"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-tk-ex-m-8",
+    "set_id": "intl-tk-ex-m",
+    "number": "8",
+    "category": "trainer",
+    "name": {
+      "en": "Celio's Network",
+      "fr": "Le réseau de Cileo"
+    },
+    "pokemon": [],
+    "illustrator": "Ken Sugimori",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "en": "Search your deck for a Basic Pokémon or Evolution card (excluding Pokémon-ex), show it to your opponent, and put it into your hand. Shuffle your deck afterward.",
+      "fr": "Vous ne pouvez jouer qu'une seule carte Supporter par tour. Lorsque vous jouez cette carte, placez-la à côté de votre Pokémon Actif. À la fin de votre tour, défaussez-la."
+    }
+  },
+  {
+    "id": "intl-tk-ex-m-9",
+    "set_id": "intl-tk-ex-m",
+    "number": "9",
+    "category": "trainer",
+    "name": {
+      "en": "Energy Search",
+      "fr": "Recherche d'énergie"
+    },
+    "pokemon": [],
+    "illustrator": "Kai Ishikawa",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Search your deck for a basic Energy card, show it to your opponent, and put it into your hand. Shuffle your deck afterward.",
+      "fr": "Choisissez dans votre deck une carte Énergie de base, montrez-la à votre adversaire et placez-la dans votre main. Mélangez ensuite votre deck."
+    }
+  }
+]

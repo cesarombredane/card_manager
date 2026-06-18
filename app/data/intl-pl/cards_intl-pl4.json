@@ -1,0 +1,8104 @@
+[
+  {
+    "id": "intl-pl4-1",
+    "set_id": "intl-pl4",
+    "number": "1",
+    "category": "pokemon",
+    "name": {
+      "en": "Charizard",
+      "de": "Glurak"
+    },
+    "pokemon": [
+      "Charizard"
+    ],
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 140,
+    "types": [
+      "fire"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Charmeleon"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Fire Wing",
+          "de": "Feuerflügel"
+        },
+        "cost": [
+          "fire"
+        ],
+        "damage": "30",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Burning Tail",
+          "de": "Brennender Schweif"
+        },
+        "cost": [
+          "fire",
+          "fire",
+          "normal"
+        ],
+        "damage": "80",
+        "text": {
+          "en": "Discard a Fire Energy attached to Charizard.",
+          "de": "Lege 1 -Energie, die an Glurak angelegt ist, auf deinen Ablagestapel."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "+30"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-pl4-10",
+    "set_id": "intl-pl4",
+    "number": "10",
+    "category": "pokemon",
+    "name": {
+      "en": "Tangrowth",
+      "de": "Tangoloss"
+    },
+    "pokemon": [
+      "Tangrowth"
+    ],
+    "illustrator": "Masakazu Fukuda",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 110,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Tangela"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Leaf Guard",
+          "de": "Floraschild"
+        },
+        "cost": [
+          "grass",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "During your opponent's next turn, any damage done to Tangrowth by attacks is reduced by 20 (after applying Weakness and Resistance).",
+          "de": "Während des nächsten Zuges deines Gegners wird Schaden, der Tangoloss durch Angriffe zugefügt wird, um 20 Schadenspunkte reduziert (nachdem Schwäche und Resistenz verrechnet wurden)."
+        }
+      },
+      {
+        "name": {
+          "en": "Swallow Up",
+          "de": "Runterschlucken"
+        },
+        "cost": [
+          "grass",
+          "grass",
+          "normal",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "en": "Before doing damage, count the remaining HP of the Defending Pokémon and Tangrowth. If the Defending Pokémon has fewer remaining HP than Tangrowth's, this attack does 120 damage instead.",
+          "de": "Bevor der Schaden zugefügt wird, vergleiche die verbliebenen KP des Verteidigenden Pokémon und Tangoloss. Wenn das Verteidigende Pokémon weniger verbliebene KP hat als Tangoloss, fügt dieser Angriff 120 Schadenspunkte zu."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+30"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "water",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-pl4-11",
+    "set_id": "intl-pl4",
+    "number": "11",
+    "category": "pokemon",
+    "name": {
+      "en": "Toxicroak",
+      "de": "Toxiquak"
+    },
+    "pokemon": [
+      "Toxicroak"
+    ],
+    "illustrator": "Kouki Saitou",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Croagunk"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Corner",
+          "de": "Bedrängen"
+        },
+        "cost": [
+          "fighting"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "The Defending Pokémon can't retreat during your opponent's next turn.",
+          "de": "Das Verteidigende Pokémon kann sich im nächsten Zug deines Gegners nicht zurückziehen."
+        }
+      },
+      {
+        "name": {
+          "en": "Convert Blow",
+          "de": "Umwandlungsschlag"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "30+",
+        "text": {
+          "en": "If Toxicroak has any Psychic Energy attached to it, the Defending Pokémon is now Poisoned. If Toxicroak has any Fighting Energy attached to it, this attack does 30 damage plus 30 more damage.",
+          "de": "Wenn an Toxiquak mindestens 1 -Energie angelegt ist, ist das Verteidigende Pokémon jetzt vergiftet. Wenn an Toxiquak mindestens 1 -Energie angelegt ist, fügt dieser Angriff 30 Schadenspunkte plus 30 weitere Schadenspunkte zu."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-12",
+    "set_id": "intl-pl4",
+    "number": "12",
+    "category": "pokemon",
+    "name": {
+      "en": "Zapdos",
+      "de": "Zapdos G"
+    },
+    "pokemon": [
+      "Zapdos"
+    ],
+    "illustrator": "Ryota Saito",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Charge Beam",
+          "de": "Ladestrahl"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip a coin. If heads, search your discard pile for an Energy card and attach it to Zapdos .",
+          "de": "Wirf 1 Münze. Bei \"Kopf\" durchsuche deinen Ablagestapel nach 1 Energiekarte und lege sie an Zapdos G an."
+        }
+      },
+      {
+        "name": {
+          "en": "Lightning Strike",
+          "de": "Blitzschlag"
+        },
+        "cost": [
+          "lightning",
+          "lightning",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {
+          "en": "You may discard all Lightning Energy attached to Zapdos . If you do, this attack's base damage is 80 instead of 40.",
+          "de": "Du kannst alle -Energien von Zapdos G entfernen und auf deinen Ablagestapel legen. Wenn du das machst, beträgt der Grundschaden dieses Angriffs 80 Schadenspunkte anstelle von 40 Schadenspunkten."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-pl4-13",
+    "set_id": "intl-pl4",
+    "number": "13",
+    "category": "pokemon",
+    "name": {
+      "en": "Aerodactyl",
+      "de": "Aerodactyl"
+    },
+    "pokemon": [
+      "Aerodactyl"
+    ],
+    "illustrator": "Masakazu Fukuda",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Old Amber"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Hyper Beam",
+          "de": "Hyperstrahl"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Flip a coin. If heads, discard an Energy card attached to the Defending Pokémon.",
+          "de": "Wirf 1 Münze. Bei \"Kopf\" lege 1 Energiekarte, die am Verteidigenden Pokémon angelegt ist, auf den Ablagestapel deines Gegners."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "+20"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-14",
+    "set_id": "intl-pl4",
+    "number": "14",
+    "category": "pokemon",
+    "name": {
+      "en": "Bronzong",
+      "de": "Bronzong"
+    },
+    "pokemon": [
+      "Bronzong"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "metal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Bronzor"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Oracle Arrow",
+          "de": "Orakelpfeil"
+        },
+        "cost": [
+          "metal",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Choose 1 of your opponent's Pokémon that has any damage counters on it. This attack does 40 damage to that Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "de": "Wähle 1 Pokémon deines Gegners, auf den bereits mindestens 1 Schadensmarke liegt. Dieser Angriff fügt dem gewählten Pokémon 40 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
+        }
+      },
+      {
+        "name": {
+          "en": "Antigravity",
+          "de": "Anti-Schwerkraft"
+        },
+        "cost": [
+          "metal",
+          "normal",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {
+          "en": "The Retreat Cost for Bronzong is 0 until the end of your next turn.",
+          "de": "Bronzong hat Rückzugskosten 0 bis zum Ende deines nächsten Zuges."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+20"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-pl4-15",
+    "set_id": "intl-pl4",
+    "number": "15",
+    "category": "pokemon",
+    "name": {
+      "en": "Cherrim",
+      "de": "Kinoso"
+    },
+    "pokemon": [
+      "Cherrim"
+    ],
+    "illustrator": "Midori Harada",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Cherubi"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Worry Seed",
+          "de": "Sorgensamen"
+        },
+        "cost": [
+          "grass",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Confused.",
+          "de": "Wirf eine Münze. Bei \"Kopf\" ist das Verteidigende Pokémon jetzt verwirrt."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+20"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "water",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-16",
+    "set_id": "intl-pl4",
+    "number": "16",
+    "category": "pokemon",
+    "name": {
+      "en": "Gengar",
+      "de": "Gengar"
+    },
+    "pokemon": [
+      "Gengar"
+    ],
+    "illustrator": "Midori Harada",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 110,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Haunter"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Shadow Skip",
+          "de": "Schattensprung"
+        },
+        "cost": [
+          "psychic",
+          "psychic",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {
+          "en": "Does 10 damage to 1 of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.) You may switch Gengar with 1 of your Benched Pokémon.",
+          "de": "Dieser Angriff fügt 1 Pokémon auf der Bank deines Gegners 10 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.) Du kannst Gengar gegen 1 Pokémon auf deiner Bank austauschen."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "+30"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "normal",
+        "value": "-20"
+      }
+    ]
+  },
+  {
+    "id": "intl-pl4-17",
+    "set_id": "intl-pl4",
+    "number": "17",
+    "category": "pokemon",
+    "name": {
+      "en": "Gengar",
+      "de": "Gengar"
+    },
+    "pokemon": [
+      "Gengar"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 120,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Haunter"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Sharpshooting",
+          "de": "Scharfschuss"
+        },
+        "cost": [
+          "psychic",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Choose 1 of your opponent's Pokémon. This attack does 40 damage to that Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "de": "Wähle 1 Pokémon deines Gegners. Dieser Angriff fügt dem gewählten Pokémon 40 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
+        }
+      },
+      {
+        "name": {
+          "en": "Poison Jab",
+          "de": "Gifthieb"
+        },
+        "cost": [
+          "psychic",
+          "normal",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {
+          "en": "The Defending Pokémon is now Poisoned.",
+          "de": "Das Verteidigende Pokémon ist jetzt vergiftet."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "+30"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "normal",
+        "value": "-20"
+      }
+    ]
+  },
+  {
+    "id": "intl-pl4-18",
+    "set_id": "intl-pl4",
+    "number": "18",
+    "category": "pokemon",
+    "name": {
+      "en": "Glalie",
+      "de": "Firnontor"
+    },
+    "pokemon": [
+      "Glalie"
+    ],
+    "illustrator": "Hiroki Fuchino",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "water"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Snorunt"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Wreck",
+          "de": "Abreißen"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20+",
+        "text": {
+          "en": "If there is any Stadium card in play, this attack does 20 damage plus 50 more damage. Discard that Stadium card.",
+          "de": "Wenn sich eine Stadion-Karte im Spiel befindet, fügt dieser Angriff 20 Schadenspunkte plus 50 weitere Schadenspunkte zu. Lege danach die Stadion-Karte auf den Ablagestapel."
+        }
+      },
+      {
+        "name": {
+          "en": "Avalanche",
+          "de": "Lawine"
+        },
+        "cost": [
+          "water",
+          "water",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "en": "Flip a coin. If heads, this attack does 10 damage to each of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "de": "Wirf 1 Münze. Bei \"Kopf\" fügt dieser Angriff jedem Pokémon auf der Bank deines Gegners 10 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-19",
+    "set_id": "intl-pl4",
+    "number": "19",
+    "category": "pokemon",
+    "name": {
+      "en": "Golem",
+      "de": "Geowaz"
+    },
+    "pokemon": [
+      "Golem"
+    ],
+    "illustrator": "Masakazu Fukuda",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 140,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Graveler"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Lunge Out",
+          "de": "Sprungangriff"
+        },
+        "cost": [
+          "fighting",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Tumble Down",
+          "de": "Hinabstürzen"
+        },
+        "cost": [
+          "fighting",
+          "normal",
+          "normal"
+        ],
+        "damage": "30x",
+        "text": {
+          "en": "Discard as many Fighting Energy cards as you like from your hand. This attack does 30 damage times the number of Fighting Energy cards you discarded.",
+          "de": "Lege beliebig viele -Energiekarten von deiner Hand auf den Ablagestapel. Dieser Angriff fügt für jede auf dieser Weise auf den Ablagestapel gelegte -Energiekarte 30 Schadenspunkte zu."
+        }
+      },
+      {
+        "name": {
+          "en": "Rock Tumble",
+          "de": "Rollende Felsen"
+        },
+        "cost": [
+          "fighting",
+          "fighting",
+          "normal",
+          "normal"
+        ],
+        "damage": "80",
+        "text": {
+          "en": "This attack's damage isn't affected by Resistance.",
+          "de": "Der Schaden dieses Angriffs wird durch Resistenz nicht verändert."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "+30"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "lightning",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 4
+  },
+  {
+    "id": "intl-pl4-2",
+    "set_id": "intl-pl4",
+    "number": "2",
+    "category": "pokemon",
+    "name": {
+      "en": "Froslass",
+      "de": "Frosdedje"
+    },
+    "pokemon": [
+      "Froslass"
+    ],
+    "illustrator": "TOKIYA",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "water"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Snorunt"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Ground Frost",
+          "de": "Bodenfrost"
+        },
+        "cost": [
+          "water",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "en": "If there is any Stadium card in play, this attack does nothing.",
+          "de": "Wenn sich eine Stadion-Karte im Spiel befindet, hat dieser Angriff keine Auswirkungen."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-20",
+    "set_id": "intl-pl4",
+    "number": "20",
+    "category": "pokemon",
+    "name": {
+      "en": "Hariyama",
+      "de": "Hariyama"
+    },
+    "pokemon": [
+      "Hariyama"
+    ],
+    "illustrator": "Midori Harada",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 110,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Makuhita"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Push Out",
+          "de": "Verdrängen"
+        },
+        "cost": [
+          "fighting",
+          "normal",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "en": "Your opponent switches the Defending Pokémon with 1 of his or her Benched Pokémon.",
+          "de": "Dein Gegner tauscht das Verteidigende Pokémon gegen 1 Pokémon auf seiner Bank aus."
+        }
+      },
+      {
+        "name": {
+          "en": "Vortex Chop",
+          "de": "Wirbelsturm-Schlag"
+        },
+        "cost": [
+          "fighting",
+          "fighting",
+          "normal",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {
+          "en": "If the Defending Pokémon has any Resistance, this attack's base damage is 120 instead of 60.",
+          "de": "Wenn das Verteidigende Pokémon mindestens eine Resistenz hat, beträgt der Grundschaden dieses Angriffs 120 Schadenspunkte anstelle von 60 Schadenspunkten."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "+30"
+      }
+    ],
+    "retreat_cost": 4
+  },
+  {
+    "id": "intl-pl4-21",
+    "set_id": "intl-pl4",
+    "number": "21",
+    "category": "pokemon",
+    "name": {
+      "en": "Lopunny",
+      "de": "Schlapor"
+    },
+    "pokemon": [
+      "Lopunny"
+    ],
+    "illustrator": "Kyoko Umemoto",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "normal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Buneary"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Hover Heal",
+          "de": "Heilgleiten"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {
+          "en": "Remove all Special Conditions from Lopunny.",
+          "de": "Entferne alle Speziellen Zustände von Schlapor."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-22",
+    "set_id": "intl-pl4",
+    "number": "22",
+    "category": "pokemon",
+    "name": {
+      "en": "Manectric",
+      "de": "Voltenso"
+    },
+    "pokemon": [
+      "Manectric"
+    ],
+    "illustrator": "Mana Ibe",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "lightning"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Electrike"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Second Bite",
+          "de": "Wunde Stelle"
+        },
+        "cost": [
+          "lightning",
+          "normal"
+        ],
+        "damage": "20+",
+        "text": {
+          "en": "Does 20 damage plus 10 more damage for each damage counter on the Defending Pokémon.",
+          "de": "Dieser Angriff fügt 20 Schadenspunkte plus 10 weitere Schadenspunkte für jede Schadensmarke auf dem Verteidigenden Pokémon zu."
+        }
+      },
+      {
+        "name": {
+          "en": "Swift",
+          "de": "Sternschauer"
+        },
+        "cost": [
+          "lightning",
+          "normal",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "en": "This attack's damage isn't affected by Weakness, Resistance, Poké-Powers, Poké-Bodies, or any other effects on the Defending Pokémon.",
+          "de": "Schwäche, Resistenz, Poké-Power, Poké-Body und alle anderen Effekte auf dem Verteidigenden Pokémon haben keine Auswirkungen auf die Schadenspunkte dieses Angriffs."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+20"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "metal",
+        "value": "-20"
+      }
+    ]
+  },
+  {
+    "id": "intl-pl4-23",
+    "set_id": "intl-pl4",
+    "number": "23",
+    "category": "pokemon",
+    "name": {
+      "en": "Omastar",
+      "de": "Amoroso"
+    },
+    "pokemon": [
+      "Omastar"
+    ],
+    "illustrator": "Hajime Kusajima",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 120,
+    "types": [
+      "water"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Omanyte"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Time Spiral",
+          "de": "Zeitspirale"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Choose 1 of your opponent's Evolved Pokémon. Remove the highest Stage Evolution card from that Pokémon and have your opponent shuffle that card into his or her deck.",
+          "de": "Wähle 1 Pokémon deines Gegners. Entferne die höchste Evolutionskarte vom gewählten Pokémon, dein Gegner mischt diese Karte in sein Deck zurück."
+        }
+      },
+      {
+        "name": {
+          "en": "Primal Tentacles",
+          "de": "Urzeitliche Tentakel"
+        },
+        "cost": [
+          "water",
+          "normal"
+        ],
+        "damage": "30+",
+        "text": {
+          "en": "Does 30 damage plus 10 more damage for each Helix Fossil, Dome Fossil, and Old Amber in your discard pile.",
+          "de": "Dieser Angriff fügt 30 Schadenspunkte plus 10 weitere Schadenspunkte für jede Helixfossil-, Domfossil- und Altbernstein-Karte in deinem Ablagestapel zu."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "+30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-24",
+    "set_id": "intl-pl4",
+    "number": "24",
+    "category": "pokemon",
+    "name": {
+      "en": "Pelipper",
+      "de": "Pelipper"
+    },
+    "pokemon": [
+      "Pelipper"
+    ],
+    "illustrator": "Miki Tanaka",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "water"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Wingull"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Water Pulse",
+          "de": "Aquawelle"
+        },
+        "cost": [
+          "water",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "The Defending Pokémon is now Asleep.",
+          "de": "Das Verteidigende Pokémon schläft jetzt."
+        }
+      },
+      {
+        "name": {
+          "en": "Continuous Crush",
+          "de": "Dauerzermalmer"
+        },
+        "cost": [
+          "water",
+          "water",
+          "normal",
+          "normal"
+        ],
+        "damage": "70",
+        "text": {
+          "en": "Flip a coin until you get tails. For each heads, discard an Energy card attached to the Defending Pokémon.",
+          "de": "Wirf solange 1 Münze bis zum ersten Mal das Ergebnis \"Zahl\" kommt. Lege pro \"Kopf\" eine an das Verteidigende Pokémon angelegt Energiekarte auf den Ablagestapel deines Gegners."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "+20"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-pl4-25",
+    "set_id": "intl-pl4",
+    "number": "25",
+    "category": "pokemon",
+    "name": {
+      "en": "Pichu",
+      "de": "Pichu"
+    },
+    "pokemon": [
+      "Pichu"
+    ],
+    "illustrator": "Kanako Eo",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Baby Steps",
+          "de": "Babyschritte"
+        },
+        "cost": [],
+        "damage": "",
+        "text": {
+          "en": "Look at the top 5 cards of your deck, choose 1 of them, and put it into your hand. Shuffle the other cards back into your deck.",
+          "de": "Schau dir die obersten 5 Karten deines Decks an, wähle 1 von ihnen und nimm sie auf die Hand. Mische die anderen Karten in dein Deck zurück."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+10"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "metal",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-26",
+    "set_id": "intl-pl4",
+    "number": "26",
+    "category": "pokemon",
+    "name": {
+      "en": "Porygon-Z",
+      "de": "Porygon-Z G"
+    },
+    "pokemon": [
+      "Porygon-Z"
+    ],
+    "illustrator": "Nobuyuki Fujimoto",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Ambush",
+          "de": "Hinterhalt"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "20+",
+        "text": {
+          "en": "Flip a coin. If heads, this attack does 20 damage plus 40 more damage.",
+          "de": "Wirf 1 Münze. Bei \"Kopf\" fügt dieser Angriff 20 Schadenspunkte plus 40 weitere Schadenspunkte zu."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-27",
+    "set_id": "intl-pl4",
+    "number": "27",
+    "category": "pokemon",
+    "name": {
+      "en": "Raichu",
+      "de": "Raichu"
+    },
+    "pokemon": [
+      "Raichu"
+    ],
+    "illustrator": "Suwama Chiaki",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "lightning"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Pikachu"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Boosted Voltage",
+          "de": "Erhöhte Spannung"
+        },
+        "cost": [
+          "lightning"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "If Raichu has a Pokémon Tool card attached to it, this attack does 20 damage to each of your opponent's Benched Pokémon that isn't an Evolved Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "de": "Wenn an Raichu mindestens 1 Pokémon-Ausrüstung angelegt ist, fügt dieser Angriff jedem Pokémon auf der Bank deines Gegners, das kein entwickeltes Pokémon ist, 20 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
+        }
+      },
+      {
+        "name": {
+          "en": "Thunder Blast",
+          "de": "Donnerkeil"
+        },
+        "cost": [
+          "lightning",
+          "normal",
+          "normal"
+        ],
+        "damage": "70",
+        "text": {
+          "en": "Discard a Lightning Energy card attached to Raichu.",
+          "de": "Entferne 1 -Energiekarte, die an Raichu angelegt ist, und lege sie auf den Ablagestapel."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+20"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "metal",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-28",
+    "set_id": "intl-pl4",
+    "number": "28",
+    "category": "pokemon",
+    "name": {
+      "en": "Rapidash",
+      "de": "Gallopa"
+    },
+    "pokemon": [
+      "Rapidash"
+    ],
+    "illustrator": "Lee HyunJung",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "fire"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Ponyta"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Fire Mane",
+          "de": "Flammenmähne"
+        },
+        "cost": [
+          "fire"
+        ],
+        "damage": "20",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Rising Lunge",
+          "de": "Aufwärtsstoß"
+        },
+        "cost": [
+          "fire",
+          "normal",
+          "normal"
+        ],
+        "damage": "50+",
+        "text": {
+          "en": "Flip a coin. If heads, this attack does 50 damage plus 20 more damage.",
+          "de": "Wirf 1 Münze. Bei \"Kopf\" fügt dieser Angriff 50 Schadenspunkte plus 20 weitere Schadenspunkte zu."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "+20"
+      }
+    ]
+  },
+  {
+    "id": "intl-pl4-29",
+    "set_id": "intl-pl4",
+    "number": "29",
+    "category": "pokemon",
+    "name": {
+      "en": "Raticate",
+      "de": "Rattikarl"
+    },
+    "pokemon": [
+      "Raticate"
+    ],
+    "illustrator": "Masakazu Fukuda",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "normal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Rattata"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Recruit",
+          "de": "Rekrutieren"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Look at your opponent's hand, choose a Supporter card you find there, and discard it. Then, use the effect of that card as the effect of this attack.",
+          "de": "Schau dir die Handkarten deines Gegners an, wähle 1 Unterstüzerkarte, die du dort gefunden hast, und lege sie auf den Ablagestapel deines Gegners. Danach nutze den Effekt der gewählten Karte als Effekt dieses Angriffs."
+        }
+      },
+      {
+        "name": {
+          "en": "Extend Fang",
+          "de": "Fänge ausfahren"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "20+",
+        "text": {
+          "en": "If Raticate has a Pokémon Tool card attached to it, this attack does 20 damage plus 40 more damage.",
+          "de": "Wenn an Rattikarl eine Pokémon-Ausrüstung angelegt ist, fügt dieser Angriff 20 Schadenspunkte plus 40 weitere Schadenspunkte zu."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+20"
+      }
+    ]
+  },
+  {
+    "id": "intl-pl4-3",
+    "set_id": "intl-pl4",
+    "number": "3",
+    "category": "pokemon",
+    "name": {
+      "en": "Heatran",
+      "de": "Heatran"
+    },
+    "pokemon": [
+      "Heatran"
+    ],
+    "illustrator": "Keiko Moritsugu",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Fire Fang",
+          "de": "Feuerzahn"
+        },
+        "cost": [
+          "fire",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "The Defending Pokémon is now Burned.",
+          "de": "Das Verteidigende Pokémon ist jetzt verbrannt."
+        }
+      },
+      {
+        "name": {
+          "en": "Magma Mantle",
+          "de": "Magmahülle"
+        },
+        "cost": [
+          "fire",
+          "fire",
+          "normal",
+          "normal"
+        ],
+        "damage": "60+",
+        "text": {
+          "en": "Discard the top 3 cards of your deck. This attack does 60 damage plus 20 more damage for each Fire or Metal Energy card you discarded.",
+          "de": "Lege die obersten 3 Karten deines Decks auf deinen Ablagestapel. Dieser Angriff fügt 60 Schadenspunkte plus 20 weitere Schadenspunkte für jede auf diese Weise auf den Ablagestapel gelegte - oder -Energiekarte zu."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-pl4-30",
+    "set_id": "intl-pl4",
+    "number": "30",
+    "category": "pokemon",
+    "name": {
+      "en": "Sceptile",
+      "de": "Gewaldro"
+    },
+    "pokemon": [
+      "Sceptile"
+    ],
+    "illustrator": "Reiko Tanoue",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 120,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Grovyle"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Leaf Blast",
+          "de": "Blätterkanonade"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "20x",
+        "text": {
+          "en": "Does 20 damage times the amount of Grass Energy attached to Sceptile.",
+          "de": "Dieser Angriff fügt 20 Schadenspunkte mal der Anzahl der an Gewaldro angelegten -Energien zu."
+        }
+      },
+      {
+        "name": {
+          "en": "Poison Claws",
+          "de": "Giftkrallen"
+        },
+        "cost": [
+          "grass",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {
+          "en": "The Defending Pokémon is now Poisoned.",
+          "de": "Das Verteidigende Pokémon ist jetzt vergiftet."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+30"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "water",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-pl4-31",
+    "set_id": "intl-pl4",
+    "number": "31",
+    "category": "pokemon",
+    "name": {
+      "en": "Sceptile",
+      "de": "Gewaldro"
+    },
+    "pokemon": [
+      "Sceptile"
+    ],
+    "illustrator": "Kouki Saitou",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Grovyle"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Leaf Supply",
+          "de": "Blättervorrat"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "You may attach a basic Energy card from your hand to 1 of your Pokémon.",
+          "de": "Du kannst 1 Basis-Energiekarte von deiner Hand an 1 deiner Pokémon anlegen."
+        }
+      },
+      {
+        "name": {
+          "en": "Dual Cut",
+          "de": "Doppel-Zerschneider"
+        },
+        "cost": [
+          "grass",
+          "normal",
+          "normal"
+        ],
+        "damage": "70x",
+        "text": {
+          "en": "Flip 2 coins. This attack does 70 damage times the number of heads.",
+          "de": "Wirf 2 Münzen. Dieser Angriff fügt 70 Schadenspunkte mal der Anzahl \"Kopf\" zu."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+30"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "water",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-32",
+    "set_id": "intl-pl4",
+    "number": "32",
+    "category": "pokemon",
+    "name": {
+      "en": "Spiritomb",
+      "de": "Kryppuk"
+    },
+    "pokemon": [
+      "Spiritomb"
+    ],
+    "illustrator": "Aya Kusube",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "dark"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Darkness Grace",
+          "de": "Gnade der Finsternis"
+        },
+        "cost": [],
+        "damage": "",
+        "text": {
+          "en": "Search your deck for a card that evolves from 1 of your Pokémon and put it onto that Pokémon. (This counts as evolving that Pokémon.) If you do, put 1 damage counter on Spiritomb. Shuffle your deck afterward.",
+          "de": "Durchsuche dein Deck nach 1 Karte, die sich aus 1 deiner Pokémon entwickelt, und lege sie auf dieses Pokémon. (Dies zählt als Entwickeln von diesem Pokémon.) Wenn du das machst, lege 1 Schadensmarke auf Kryppuk. Mische dein Deck danach."
+        }
+      },
+      {
+        "name": {
+          "en": "Will-o'-the-wisp",
+          "de": "Irrlicht"
+        },
+        "cost": [
+          "dark"
+        ],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "resistances": [
+      {
+        "type": "normal",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-33",
+    "set_id": "intl-pl4",
+    "number": "33",
+    "category": "pokemon",
+    "name": {
+      "en": "Bronzong",
+      "de": "Bronzong"
+    },
+    "pokemon": [
+      "Bronzong"
+    ],
+    "illustrator": "Masakazu Fukuda",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "metal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Bronzor"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Wide Laser",
+          "de": "Streulaser"
+        },
+        "cost": [
+          "metal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "This attack does 10 damage to each of your opponent's Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "de": "Dieser Angriff fügt jedem Pokémon deines Gegners 10 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
+        }
+      },
+      {
+        "name": {
+          "en": "Hyper Beam",
+          "de": "Hyperstrahl"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "en": "Flip a coin. If heads, discard an Energy card attached to the Defending Pokémon.",
+          "de": "Wirf 1 Münze. Bei \"Kopf\" lege 1 Energiekarte, die am Verteidigenden Pokémon angelegt ist, auf den Ablagestapel deines Gegners."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+20"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-pl4-34",
+    "set_id": "intl-pl4",
+    "number": "34",
+    "category": "pokemon",
+    "name": {
+      "en": "Bronzor",
+      "de": "Bronzel"
+    },
+    "pokemon": [
+      "Bronzor"
+    ],
+    "illustrator": "kawayoo",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "metal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Speed Dive",
+          "de": "Tempohechtsprung"
+        },
+        "cost": [
+          "metal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Extrasensory",
+          "de": "Sondersensor"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "30+",
+        "text": {
+          "en": "If you have the same number of cards in your hand as your opponent, this attack does 30 damage plus 30 more damage.",
+          "de": "Wenn du die gleiche Anzahl Karten auf der Hand hast wie dein Gegner, fügt dieser Angriff 30 Schadenspunkte plus 30 weitere Schadenspunkte zu."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+10"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-pl4-35",
+    "set_id": "intl-pl4",
+    "number": "35",
+    "category": "pokemon",
+    "name": {
+      "en": "Charmeleon",
+      "de": "Glutexo"
+    },
+    "pokemon": [
+      "Charmeleon"
+    ],
+    "illustrator": "Sumiyoshi Kizuki",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "fire"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Charmander"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Slam",
+          "de": "Slam"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "30x",
+        "text": {
+          "en": "Flip 2 coins. This attack does 30 damage times the number of heads.",
+          "de": "Wirf 2 Münzen. Dieser Angriff fügt 30 Schadenspunkte mal der Anzahl \"Kopf\" zu."
+        }
+      },
+      {
+        "name": {
+          "en": "Fire Punch",
+          "de": "Feuerschlag"
+        },
+        "cost": [
+          "fire",
+          "normal",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-36",
+    "set_id": "intl-pl4",
+    "number": "36",
+    "category": "pokemon",
+    "name": {
+      "en": "Gastly",
+      "de": "Nebulak"
+    },
+    "pokemon": [
+      "Gastly"
+    ],
+    "illustrator": "kawayoo",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Lick",
+          "de": "Schlecker"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+          "de": "Wirf 1 Münze. Bei \"Kopf\" ist das Verteidigende Pokémon jetzt gelähmt."
+        }
+      },
+      {
+        "name": {
+          "en": "Night Shade",
+          "de": "Nachtnebel"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Does 10 damage to 1 of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "de": "Dieser Angriff fügt 1 Pokémon auf der Bank deines Gegners 10 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "+10"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "normal",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-37",
+    "set_id": "intl-pl4",
+    "number": "37",
+    "category": "pokemon",
+    "name": {
+      "en": "Graveler",
+      "de": "Georok"
+    },
+    "pokemon": [
+      "Graveler"
+    ],
+    "illustrator": "Sachiko Adachi",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Geodude"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Tackle",
+          "de": "Tackle"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Double-edge",
+          "de": "Risikotackle"
+        },
+        "cost": [
+          "fighting",
+          "fighting",
+          "normal"
+        ],
+        "damage": "70",
+        "text": {
+          "en": "Graveler does 10 damage to itself.",
+          "de": "Georok fügt sich selbst 10 Schadenspunkte zu."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "+20"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "lightning",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-pl4-38",
+    "set_id": "intl-pl4",
+    "number": "38",
+    "category": "pokemon",
+    "name": {
+      "en": "Grovyle",
+      "de": "Reptain"
+    },
+    "pokemon": [
+      "Grovyle"
+    ],
+    "illustrator": "Tomoaki Imakuni",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Treecko"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Detect",
+          "de": "Scanner"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, prevent all effects of an attack, including damage, done to Grovyle during your opponent's next turn.",
+          "de": "Wirf 1 Münze. Bei \"Kopf\" verhindere während des nächsten Zuges deines Gegners alle Effekte eines Angriffs, einschließlich Schaden, die Reptain zugefügt würden."
+        }
+      },
+      {
+        "name": {
+          "en": "Blade Arms",
+          "de": "Klingenarme"
+        },
+        "cost": [
+          "grass",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+20"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "water",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-39",
+    "set_id": "intl-pl4",
+    "number": "39",
+    "category": "pokemon",
+    "name": {
+      "en": "Grovyle",
+      "de": "Reptain"
+    },
+    "pokemon": [
+      "Grovyle"
+    ],
+    "illustrator": "Kouki Saitou",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Treecko"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Quick Attack",
+          "de": "Ruckzuckhieb"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20+",
+        "text": {
+          "en": "Flip a coin. If heads, this attack does 20 damage plus 10 more damage.",
+          "de": "Wirf 1 Münze. Bei \"Kopf\" fügt dieser Angriff 20 Schadenspunkte plus 10 weitere Schadenspunkte zu."
+        }
+      },
+      {
+        "name": {
+          "en": "Cut",
+          "de": "Zerschneider"
+        },
+        "cost": [
+          "grass",
+          "normal",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+20"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "water",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-4",
+    "set_id": "intl-pl4",
+    "number": "4",
+    "category": "pokemon",
+    "name": {
+      "en": "Kabutops",
+      "de": "Kabutops"
+    },
+    "pokemon": [
+      "Kabutops"
+    ],
+    "illustrator": "Hajime Kusajima",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Kabuto"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Primal Scythe",
+          "de": "Urzeitsense"
+        },
+        "cost": [
+          "fighting"
+        ],
+        "damage": "20+",
+        "text": {
+          "en": "You may discard Helix Fossil, Dome Fossil, or Old Amber from your hand. If you do, this attack does 20 damage plus 50 more damage.",
+          "de": "Du kannst 1 Helixfossil-, Domfossil- oder Altbernstein-Karte von deiner Hand auf deinen Ablagestapel legen. Wenn du das machst, fügt dieser Angriff 20 Schadenspunkte plus 50 weitere Schadenspunkte zu."
+        }
+      },
+      {
+        "name": {
+          "en": "Rock Slide",
+          "de": "Steinhagel"
+        },
+        "cost": [
+          "fighting",
+          "normal",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {
+          "en": "Does 10 damage to 2 of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "de": "Dieser Angriff fügt 2 Pokémon auf der Bank deines Gegners 10 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "+30"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-pl4-40",
+    "set_id": "intl-pl4",
+    "number": "40",
+    "category": "pokemon",
+    "name": {
+      "en": "Gulpin",
+      "de": "Schluppuck"
+    },
+    "pokemon": [
+      "Gulpin"
+    ],
+    "illustrator": "Sachiko Adachi",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Endure",
+          "de": "Ausdauer"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, during your opponent's next turn, if Gulpin would be Knocked Out by damage from an attack, Gulpin is not Knocked Out and its remaining HP becomes 10 instead.",
+          "de": "Wirf 1 Münze. Bei \"Kopf\" wird Schluppuck, wenn es im nächsten Zug deines Gegners durch Schaden eines Angriffs kampfunfähig würde, nicht kampfunfähig und hat stattdessen 10 verbliebene KP."
+        }
+      },
+      {
+        "name": {
+          "en": "Pound",
+          "de": "Pfund"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "+10"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-pl4-41",
+    "set_id": "intl-pl4",
+    "number": "41",
+    "category": "pokemon",
+    "name": {
+      "en": "Haunter",
+      "de": "Alpollo"
+    },
+    "pokemon": [
+      "Haunter"
+    ],
+    "illustrator": "Tomokazu Komiya",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Gastly"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Tongue Spring",
+          "de": "Schnappzunge"
+        },
+        "cost": [
+          "psychic",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Choose 1 of your opponent's Pokémon. This attack does 20 damage to that Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "de": "Wähle 1 Pokémon deines Gegners. Dieser Angriff fügt dem gewählten Pokémon 20 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "+20"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "normal",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-42",
+    "set_id": "intl-pl4",
+    "number": "42",
+    "category": "pokemon",
+    "name": {
+      "en": "Haunter",
+      "de": "Alpollo"
+    },
+    "pokemon": [
+      "Haunter"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Gastly"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Psyshot",
+          "de": "Psychoschuss"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "20",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Shadow Bind",
+          "de": "Schattenbindung"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "The Defending Pokémon can't retreat during your opponent's next turn.",
+          "de": "Das Verteidigende Pokémon kann sich im nächsten Zug deines Gegners nicht zurückziehen."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "+20"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "normal",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-43",
+    "set_id": "intl-pl4",
+    "number": "43",
+    "category": "pokemon",
+    "name": {
+      "en": "Luxio",
+      "de": "Luxio"
+    },
+    "pokemon": [
+      "Luxio"
+    ],
+    "illustrator": "Suwama Chiaki",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "lightning"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Shinx"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Kick",
+          "de": "Tritt"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Discharge",
+          "de": "Ladungsstoß"
+        },
+        "cost": [
+          "lightning",
+          "normal",
+          "normal"
+        ],
+        "damage": "40x",
+        "text": {
+          "en": "Discard all Lightning Energy attached to Luxio. Flip a coin for each Energy card you discarded. This attack does 40 damage times the number of heads.",
+          "de": "Entferne alle -Energien von Luxio und lege sie auf deinen Ablagestapel. Wirf für jede auf diese Weise auf deinen Ablagestapel gelegte Energiekarte 1 Münze. Dieser Angriff fügt 40 Schadenspunkte mal der Anzahl \"Kopf\" zu."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+20"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "metal",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-44",
+    "set_id": "intl-pl4",
+    "number": "44",
+    "category": "pokemon",
+    "name": {
+      "en": "Manectric",
+      "de": "Voltenso"
+    },
+    "pokemon": [
+      "Manectric"
+    ],
+    "illustrator": "Shin Nagasawa",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "lightning"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Electrike"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Tackle",
+          "de": "Tackle"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Head Bolt",
+          "de": "Kopf-Blitz"
+        },
+        "cost": [
+          "lightning",
+          "normal",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+20"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "metal",
+        "value": "-20"
+      }
+    ]
+  },
+  {
+    "id": "intl-pl4-45",
+    "set_id": "intl-pl4",
+    "number": "45",
+    "category": "pokemon",
+    "name": {
+      "en": "Pelipper",
+      "de": "Pelipper"
+    },
+    "pokemon": [
+      "Pelipper"
+    ],
+    "illustrator": "Naoyo Kimura",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "water"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Wingull"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Water Ball",
+          "de": "Wasserball"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "20+",
+        "text": {
+          "en": "Does 20 damage plus 10 more damage for each Water Energy attached to Pelipper.",
+          "de": "Dieser Angriff fügt 20 Schadenspunkte plus 10 weitere Schadenspunkte für jede an Pelipper angelegte -Energie zu."
+        }
+      },
+      {
+        "name": {
+          "en": "Wing Attack",
+          "de": "Flügelschlag"
+        },
+        "cost": [
+          "water",
+          "normal",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "+20"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-pl4-46",
+    "set_id": "intl-pl4",
+    "number": "46",
+    "category": "pokemon",
+    "name": {
+      "en": "Ponyta",
+      "de": "Ponita"
+    },
+    "pokemon": [
+      "Ponyta"
+    ],
+    "illustrator": "Kanako Eo",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Ascension",
+          "de": "Aufstieg"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Search your deck for a card that evolves from Ponyta and put it onto Ponyta. (This counts as evolving Ponyta.) Shuffle your deck afterward.",
+          "de": "Durchsuche dein Deck nach einer Karte, die sich aus Ponita entwickelt, und lege diese auf Ponita. (Dies zählt als Entwickeln von Ponita.) Mische dein Deck danach."
+        }
+      },
+      {
+        "name": {
+          "en": "Combustion",
+          "de": "Glühen"
+        },
+        "cost": [
+          "fire",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "+10"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-47",
+    "set_id": "intl-pl4",
+    "number": "47",
+    "category": "pokemon",
+    "name": {
+      "en": "Rapidash",
+      "de": "Gallopa"
+    },
+    "pokemon": [
+      "Rapidash"
+    ],
+    "illustrator": "Midori Harada",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "fire"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Ponyta"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Searing Flame",
+          "de": "Sengende Flammen"
+        },
+        "cost": [
+          "fire"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "The Defending Pokémon is now Burned.",
+          "de": "Das Verteidigende Pokémon ist jetzt verbrannt."
+        }
+      },
+      {
+        "name": {
+          "en": "Flare",
+          "de": "Flackern"
+        },
+        "cost": [
+          "fire",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "+20"
+      }
+    ]
+  },
+  {
+    "id": "intl-pl4-48",
+    "set_id": "intl-pl4",
+    "number": "48",
+    "category": "pokemon",
+    "name": {
+      "en": "Shelgon",
+      "de": "Draschel"
+    },
+    "pokemon": [
+      "Shelgon"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "normal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Bagon"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Scrunch",
+          "de": "Zähneknirschen"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, prevent all damage done to Shelgon by attacks during your opponent's next turn.",
+          "de": "Wirf 1 Münze. Bei \"Kopf\" verhindere allen Schaden, der Draschel im nächsten Zug deines Gegners durch Angriffe zugefügt würde."
+        }
+      },
+      {
+        "name": {
+          "en": "Dragon Bump",
+          "de": "Drachenrempler"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "40+",
+        "text": {
+          "en": "If Shelgon has any basic Fire Energy and any basic Water Energy attached to it, this attack does 40 damage plus 20 more damage.",
+          "de": "Wenn mindestens 1 -Basis-Energiekarte und 1 -Basis-Energiekarte an Draschel angelegt sind, fügt dieser Angriff 40 Schadenspunkte plus 20 weitere Schadenspunkte zu."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "normal",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-49",
+    "set_id": "intl-pl4",
+    "number": "49",
+    "category": "pokemon",
+    "name": {
+      "en": "Wormadam Plant Cloak",
+      "de": "Burmadame Pflanzenumhang"
+    },
+    "pokemon": [
+      "Wormadam Plant Cloak"
+    ],
+    "illustrator": "Kouki Saitou",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Burmy Plant Cloak"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Magical Needle",
+          "de": "Zaubernadel"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Remove 2 damage counters from 1 of your Benched Pokémon.",
+          "de": "Entferne 2 Schadensmarken von 1 Pokémon auf deiner Bank."
+        }
+      },
+      {
+        "name": {
+          "en": "Cloak Scale",
+          "de": "Umhang-Schuppe"
+        },
+        "cost": [
+          "grass",
+          "normal",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "en": "If you have Wormadam Sandy Cloak in play, the Defending Pokémon is now Burned, Confused, and Poisoned.",
+          "de": "Wenn du Burmadame Sandumhang im Spiel hast, ist das Verteidigende Pokémon jetzt verbrannt, verwirrt und vergiftet."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-5",
+    "set_id": "intl-pl4",
+    "number": "5",
+    "category": "pokemon",
+    "name": {
+      "en": "Luxray",
+      "de": "Luxtra"
+    },
+    "pokemon": [
+      "Luxray"
+    ],
+    "illustrator": "kawayoo",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 120,
+    "types": [
+      "lightning"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Luxio"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Flash",
+          "de": "Blitz"
+        },
+        "cost": [
+          "lightning"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing.",
+          "de": "Falls das Verteidigende Pokémon während des nächsten Zuges deines Gegners angreift, wirft dein Gegner 1 Münze. Bei \"Zahl\" hat dieser Angriff keine Auswirkungen."
+        }
+      },
+      {
+        "name": {
+          "en": "Gadget Bolt",
+          "de": "Zubehörschuss"
+        },
+        "cost": [
+          "lightning",
+          "normal",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {
+          "en": "If Luxray has a Pokémon Tool card attached to it, you may do 100 damage instead of 60 to the Defending Pokémon. If you do, discard that Pokémon Tool card.",
+          "de": "Wenn an Luxtra 1 Pokémon-Ausrüstung angelegt ist, kannst du diesen Angiff dem Verteidigenden Pokémon 100 Schadenspunkte anstelle von 60 Schadenspunkten zufügen lassen. Wenn du das machst, lege die Pokémon-Ausrüstung auf deinen Ablagestapel."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+30"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "metal",
+        "value": "-20"
+      }
+    ]
+  },
+  {
+    "id": "intl-pl4-50",
+    "set_id": "intl-pl4",
+    "number": "50",
+    "category": "pokemon",
+    "name": {
+      "en": "Wormadam Sandy Cloak",
+      "de": "Burmadame Sandumhang"
+    },
+    "pokemon": [
+      "Wormadam Sandy Cloak"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Burmy Sandy Cloak"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Hang Down",
+          "de": "Herunterhängen"
+        },
+        "cost": [
+          "fighting"
+        ],
+        "damage": "30",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Cloak Headbutt",
+          "de": "Umhang-Kopfnuss"
+        },
+        "cost": [
+          "fighting",
+          "normal",
+          "normal"
+        ],
+        "damage": "60+",
+        "text": {
+          "en": "If you have Wormadam Trash Cloak in play, this attack does 60 damage plus 30 more damage.",
+          "de": "Wenn du Burmadame Lumpenumhang im Spiel hast, fügt dieser Angriff 60 Schadenspunkte plus 30 weitere Schadenspunkte zu."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+20"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "lightning",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-51",
+    "set_id": "intl-pl4",
+    "number": "51",
+    "category": "pokemon",
+    "name": {
+      "en": "Wormadam Trash Cloak",
+      "de": "Burmadame Lumpenumhang"
+    },
+    "pokemon": [
+      "Wormadam Trash Cloak"
+    ],
+    "illustrator": "Miki Tanaka",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "metal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Burmy Trash Cloak"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Cloak Shard",
+          "de": "Umhang-Scherbe"
+        },
+        "cost": [
+          "metal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Choose 1 of your opponent's Pokémon. This attack does 10 damage to that Pokémon. If you have Wormadam Plant Cloak in play, this attack does 40 damage to that Pokémon instead. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "de": "Wähle 1 Pokémon deines Gegners. Dieser Angriff fügt dem gewählten Pokémon 10 Schadenspunkte zu. Wenn du Burmadame Pflanzenumhang im Spiel hast, fügt dieser Angriff stattdessen dem gewählten Pokémon 40 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
+        }
+      },
+      {
+        "name": {
+          "en": "Serve Trash",
+          "de": "Müll servieren"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "You may search your opponent's discard pile for any 1 card, show it to your opponent, and put it on top of his or her deck.",
+          "de": "Du kannst den Ablagestapel deines Gegners nach 1 beliebigen Karte durchsuchen, sie deinem Gegner zeigen und oben auf sein Deck legen."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+20"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-52",
+    "set_id": "intl-pl4",
+    "number": "52",
+    "category": "pokemon",
+    "name": {
+      "en": "Bagon",
+      "de": "Kindwurm"
+    },
+    "pokemon": [
+      "Bagon"
+    ],
+    "illustrator": "Naoyo Kimura",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Smash Kick",
+          "de": "Schmetterkick"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Super Singe",
+          "de": "Super-Versengung"
+        },
+        "cost": [
+          "fire",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Burned.",
+          "de": "Wirf 1 Münze. Bei \"Kopf\" ist das Verteidigende Pokémon jetzt verbrannt."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "normal",
+        "value": "+10"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-53",
+    "set_id": "intl-pl4",
+    "number": "53",
+    "category": "pokemon",
+    "name": {
+      "en": "Beedrill",
+      "de": "Bibor G"
+    },
+    "pokemon": [
+      "Beedrill"
+    ],
+    "illustrator": "Wataru Kawahara",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Raid",
+          "de": "Überfall"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "If you played Beedrill from your hand during this turn, this attack's base damage is 40 instead of 10.",
+          "de": "Wenn du Bibor G in diesem Zug aus deiner Hand gespielt hast, beträgt der Grundschaden dieses Angriffs 40 Schadenspunkte anstelle von 10 Schadenspunkten."
+        }
+      },
+      {
+        "name": {
+          "en": "Fury Attack",
+          "de": "Furienschlag"
+        },
+        "cost": [
+          "grass",
+          "normal",
+          "normal"
+        ],
+        "damage": "30x",
+        "text": {
+          "en": "Flip 3 coins. This attack does 30 damage times the number of heads.",
+          "de": "Wirf 3 Münzen. Dieser Angriff fügt 30 Schadenspunkte mal der Anzahl \"Kopf\" zu."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-54",
+    "set_id": "intl-pl4",
+    "number": "54",
+    "category": "pokemon",
+    "name": {
+      "en": "Bronzor",
+      "de": "Bronzel"
+    },
+    "pokemon": [
+      "Bronzor"
+    ],
+    "illustrator": "Masakazu Fukuda",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "metal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Hypnosis",
+          "de": "Hypnose"
+        },
+        "cost": [
+          "metal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Asleep.",
+          "de": "Wirf 1 Münze. Bei \"Kopf\" schläft das Verteidigende Pokémon jetzt."
+        }
+      },
+      {
+        "name": {
+          "en": "Spinning Attack",
+          "de": "Rundumangriff"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+10"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-pl4-55",
+    "set_id": "intl-pl4",
+    "number": "55",
+    "category": "pokemon",
+    "name": {
+      "en": "Buneary",
+      "de": "Haspiror"
+    },
+    "pokemon": [
+      "Buneary"
+    ],
+    "illustrator": "sui",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Bunny Hop",
+          "de": "Häschenhüpfer"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Choose 1 of your opponent's Pokémon that doesn't have any damage counters on it. This attack does 20 damage to that Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "de": "Wähle 1 Pokémon deines Gegners, auf dem keine Schadensmarken liegen. Dieser Angriff fügt dem gewählten Pokémon 20 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+10"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-56",
+    "set_id": "intl-pl4",
+    "number": "56",
+    "category": "pokemon",
+    "name": {
+      "en": "Burmy Plant Cloak",
+      "de": "Burmy Pflanzenumhang"
+    },
+    "pokemon": [
+      "Burmy Plant Cloak"
+    ],
+    "illustrator": "Kyoko Umemoto",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Tackle",
+          "de": "Tackle"
+        },
+        "cost": [
+          "grass",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+10"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-57",
+    "set_id": "intl-pl4",
+    "number": "57",
+    "category": "pokemon",
+    "name": {
+      "en": "Burmy Sandy Cloak",
+      "de": "Burmy Sandumhang"
+    },
+    "pokemon": [
+      "Burmy Sandy Cloak"
+    ],
+    "illustrator": "Tomokazu Komiya",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Tackle",
+          "de": "Tackle"
+        },
+        "cost": [
+          "fighting",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+10"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-58",
+    "set_id": "intl-pl4",
+    "number": "58",
+    "category": "pokemon",
+    "name": {
+      "en": "Burmy Trash Cloak",
+      "de": "Burmy Lumpenumhang"
+    },
+    "pokemon": [
+      "Burmy Trash Cloak"
+    ],
+    "illustrator": "Yukiko Baba",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Tackle",
+          "de": "Tackle"
+        },
+        "cost": [
+          "metal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+10"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-59",
+    "set_id": "intl-pl4",
+    "number": "59",
+    "category": "pokemon",
+    "name": {
+      "en": "Charmander",
+      "de": "Glumanda"
+    },
+    "pokemon": [
+      "Charmander"
+    ],
+    "illustrator": "Suwama Chiaki",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Call for Friends",
+          "de": "Freundesruf"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Search your deck for a Fire Basic Pokémon, show it to your opponent, and put it into your hand. Shuffle your deck afterward.",
+          "de": "Durchsuche dein Deck nach 1 -Basis-Pokémon-Karte, zeige sie deinem Gegner und nimm sie auf die Hand. Mische dein Deck danach."
+        }
+      },
+      {
+        "name": {
+          "en": "Steady Firebreathing",
+          "de": "Stetiger Feuerhauch"
+        },
+        "cost": [
+          "fire",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "+10"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-6",
+    "set_id": "intl-pl4",
+    "number": "6",
+    "category": "pokemon",
+    "name": {
+      "en": "Mothim",
+      "de": "Moterpel"
+    },
+    "pokemon": [
+      "Mothim"
+    ],
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Burmy"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Cloak Party",
+          "de": "Umhangteam"
+        },
+        "cost": [],
+        "damage": "",
+        "text": {
+          "en": "Search your deck for up to 3 in any combination of Burmy and Wormadam, show them to your opponent, and put them into your hand. Shuffle your deck afterward.",
+          "de": "Durchsuche dein Deck nach bis zu 3 Karten in beliebiger Kombination aus Burmy- und Burmadame-Karten, zeige sie deinem Gegner und nimm sie auf die Hand. Mische dein Deck danach."
+        }
+      },
+      {
+        "name": {
+          "en": "Energy Assist",
+          "de": "Energieförderung"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Search your discard pile for a basic Energy card and attach it to 1 of your Benched Pokémon.",
+          "de": "Durchsuche deinen Ablagestapel nach 1 Basis-Energiekarte und lege sie an 1 Pokémon auf deiner Bank an."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+20"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-20"
+      }
+    ]
+  },
+  {
+    "id": "intl-pl4-60",
+    "set_id": "intl-pl4",
+    "number": "60",
+    "category": "pokemon",
+    "name": {
+      "en": "Cherubi",
+      "de": "Kikugi"
+    },
+    "pokemon": [
+      "Cherubi"
+    ],
+    "illustrator": "Yuka Morii",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Ram",
+          "de": "Ramme"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Solarbeam",
+          "de": "Solarstrahl"
+        },
+        "cost": [
+          "grass",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+10"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "water",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-61",
+    "set_id": "intl-pl4",
+    "number": "61",
+    "category": "pokemon",
+    "name": {
+      "en": "Croagunk",
+      "de": "Glibunkel"
+    },
+    "pokemon": [
+      "Croagunk"
+    ],
+    "illustrator": "Tomokazu Komiya",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Astonish",
+          "de": "Erstauner"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Choose 1 card from your opponent's hand without looking. Look at that card you chose, then have your opponent shuffle that card into his or her deck.",
+          "de": "Wähle 1 Karte von der Hand deines Gegners (ohne sie vorher anzusehen). Schau dir die Karte an, danach mischt dein Gegner sie in sein Deck."
+        }
+      },
+      {
+        "name": {
+          "en": "Punch",
+          "de": "Boxhieb"
+        },
+        "cost": [
+          "fighting",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "+10"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-62",
+    "set_id": "intl-pl4",
+    "number": "62",
+    "category": "pokemon",
+    "name": {
+      "en": "Electrike",
+      "de": "Frizelbliz"
+    },
+    "pokemon": [
+      "Electrike"
+    ],
+    "illustrator": "Yukiko Baba",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Zap Kick",
+          "de": "Stromtritt"
+        },
+        "cost": [
+          "lightning"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Thunder Jolt",
+          "de": "Donnerrüttler"
+        },
+        "cost": [
+          "lightning",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Flip a coin. If tails, Electrike does 10 damage to itself.",
+          "de": "Wirf 1 Münze. Bei \"Zahl\" fügt Frizelbliz sich selbst 10 Schadenspunkte zu."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+10"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "metal",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-63",
+    "set_id": "intl-pl4",
+    "number": "63",
+    "category": "pokemon",
+    "name": {
+      "en": "Electrike",
+      "de": "Frizelbliz"
+    },
+    "pokemon": [
+      "Electrike"
+    ],
+    "illustrator": "Shin Nagasawa",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Bite",
+          "de": "Biss"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+10"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "metal",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-64",
+    "set_id": "intl-pl4",
+    "number": "64",
+    "category": "pokemon",
+    "name": {
+      "en": "Gastly",
+      "de": "Nebulak"
+    },
+    "pokemon": [
+      "Gastly"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Gnaw",
+          "de": "Nagen"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Suffocating Gas",
+          "de": "Würgegas"
+        },
+        "cost": [
+          "psychic",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "+10"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "normal",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-65",
+    "set_id": "intl-pl4",
+    "number": "65",
+    "category": "pokemon",
+    "name": {
+      "en": "Geodude",
+      "de": "Kleinstein"
+    },
+    "pokemon": [
+      "Geodude"
+    ],
+    "illustrator": "Motofumi Fujiwara",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Stone Barrage",
+          "de": "Fels-Stakkato"
+        },
+        "cost": [
+          "fighting"
+        ],
+        "damage": "10x",
+        "text": {
+          "en": "Flip a coin until you get tails. This attack does 10 damage times the number of heads.",
+          "de": "Wirf so lange 1 Münze, bis zum ersten Mal das Ergebnis \"Zahl\" kommt. Dieser Angriff fügt 10 Schadenspunkte mal der Anzahl \"Kopf\" zu."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "+10"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "lightning",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-pl4-66",
+    "set_id": "intl-pl4",
+    "number": "66",
+    "category": "pokemon",
+    "name": {
+      "en": "Gulpin",
+      "de": "Schluppuck"
+    },
+    "pokemon": [
+      "Gulpin"
+    ],
+    "illustrator": "Sumiyoshi Kizuki",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Collect",
+          "de": "Sammeln"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Draw a card.",
+          "de": "Ziehe 1 Karte."
+        }
+      },
+      {
+        "name": {
+          "en": "Drool",
+          "de": "Sabbern"
+        },
+        "cost": [
+          "psychic",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "+10"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-67",
+    "set_id": "intl-pl4",
+    "number": "67",
+    "category": "pokemon",
+    "name": {
+      "en": "Kabuto",
+      "de": "Kabuto"
+    },
+    "pokemon": [
+      "Kabuto"
+    ],
+    "illustrator": "Hironobu Yoshida",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Dome Fossil"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Fast Evolution",
+          "de": "Schnelle Evolution"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Search your deck for up to 2 Evolution cards, show them to your opponent, and put them into your hand. Shuffle your deck afterward.",
+          "de": "Durchsuche dein Deck nach bis zu 2 Evolutionskarten, zeige sie deinem Gegner und nimm sie auf die Hand. Mische dein Deck danach."
+        }
+      },
+      {
+        "name": {
+          "en": "Speed Attack",
+          "de": "Tempoangriff"
+        },
+        "cost": [
+          "fighting",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-68",
+    "set_id": "intl-pl4",
+    "number": "68",
+    "category": "pokemon",
+    "name": {
+      "en": "Makuhita",
+      "de": "Makuhita"
+    },
+    "pokemon": [
+      "Makuhita"
+    ],
+    "illustrator": "sui",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Sand Attack",
+          "de": "Sandwirbel"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing.",
+          "de": "Falls das Verteidigende Pokémon während des nächsten Zuges deines Gegners angreift, wirft dein Gegner 1 Münze. Bei \"Zahl\" hat dieser Angriff keine Auswirkungen."
+        }
+      },
+      {
+        "name": {
+          "en": "Magnum Punch",
+          "de": "Magnum-Schlag"
+        },
+        "cost": [
+          "fighting",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "+10"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-pl4-69",
+    "set_id": "intl-pl4",
+    "number": "69",
+    "category": "pokemon",
+    "name": {
+      "en": "Nosepass",
+      "de": "Nasgnet"
+    },
+    "pokemon": [
+      "Nosepass"
+    ],
+    "illustrator": "Midori Harada",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Harden",
+          "de": "Härtner"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "During your opponent's next turn, if Nosepass would be damaged by an attack, prevent that attack's damage done to Nosepass if that damage is 30 or less.",
+          "de": "Wenn Nasgnet während des nächsten Zuges deines Gegners durch einen Angriff 30 oder weniger Schadenspunkte zugefügt wurden, verhindere diesen Schaden."
+        }
+      },
+      {
+        "name": {
+          "en": "Knock Away",
+          "de": "Zurückschlagen"
+        },
+        "cost": [
+          "fighting",
+          "normal"
+        ],
+        "damage": "20+",
+        "text": {
+          "en": "Flip a coin. If heads, this attack does 20 damage plus 10 more damage.",
+          "de": "Wirf 1 Münze. Bei \"Kopf\" fügt dieser Angriff 20 Schadenspunkte plus 10 weitere Schadenspunkte zu."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "+10"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-7",
+    "set_id": "intl-pl4",
+    "number": "7",
+    "category": "pokemon",
+    "name": {
+      "en": "Probopass",
+      "de": "Voluminas"
+    },
+    "pokemon": [
+      "Probopass"
+    ],
+    "illustrator": "Kouki Saitou",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "metal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Nosepass"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Top Chop",
+          "de": "Ziehschlag"
+        },
+        "cost": [
+          "metal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Draw a card.",
+          "de": "Ziehe 1 Karte."
+        }
+      },
+      {
+        "name": {
+          "en": "Tumbling Attack",
+          "de": "Sturzangriff"
+        },
+        "cost": [
+          "metal",
+          "normal",
+          "normal"
+        ],
+        "damage": "50+",
+        "text": {
+          "en": "Flip a coin. If heads, this attack does 50 damage plus 30 more damage.",
+          "de": "Wirf 1 Münze. Bei \"Kopf\" fügt dieser Angriff 50 Schadenspunkte plus 30 weitere Schadenspunkte zu."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+20"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-pl4-70",
+    "set_id": "intl-pl4",
+    "number": "70",
+    "category": "pokemon",
+    "name": {
+      "en": "Omanyte",
+      "de": "Amonitas"
+    },
+    "pokemon": [
+      "Omanyte"
+    ],
+    "illustrator": "Aya Kusube",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "water"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Helix Fossil"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Collect",
+          "de": "Sammeln"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Draw 3 cards.",
+          "de": "Ziehe 3 Karten"
+        }
+      },
+      {
+        "name": {
+          "en": "Tickle",
+          "de": "Spaßkanone"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+          "de": "Wirf 1 Münze. Bei \"Kopf\" ist das Verteidigende Pokémon jetzt gelähmt."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-71",
+    "set_id": "intl-pl4",
+    "number": "71",
+    "category": "pokemon",
+    "name": {
+      "en": "Pikachu",
+      "de": "Pikachu"
+    },
+    "pokemon": [
+      "Pikachu"
+    ],
+    "illustrator": "sui",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Pika Ball",
+          "de": "Pikaball"
+        },
+        "cost": [
+          "lightning"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Mega Shot",
+          "de": "Megaschuss"
+        },
+        "cost": [
+          "lightning",
+          "normal",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Discard all Lightning Energy attached to Pikachu and then choose 1 of your opponent's Pokémon. This attack does 40 damage to that Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "de": "Entferne alle -Energien von Pikachu und lege sie auf deinen Ablagestapel; wähle danach 1 Pokémon deines Gegners. Dieser Angriff fügt dem gewählten Pokémon 40 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+10"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "metal",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-72",
+    "set_id": "intl-pl4",
+    "number": "72",
+    "category": "pokemon",
+    "name": {
+      "en": "Ponyta",
+      "de": "Ponita"
+    },
+    "pokemon": [
+      "Ponyta"
+    ],
+    "illustrator": "Midori Harada",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Tackle",
+          "de": "Tackle"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Stomp",
+          "de": "Stampfer"
+        },
+        "cost": [
+          "fire",
+          "normal"
+        ],
+        "damage": "10+",
+        "text": {
+          "en": "Flip a coin. If heads, this attack does 10 damage plus 20 more damage.",
+          "de": "Wirf 1 Münze. Bei \"Kopf\" fügt dieser Angriff 10 Schadenspunkte plus 20 weitere Schadenspunkte zu."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "+10"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-73",
+    "set_id": "intl-pl4",
+    "number": "73",
+    "category": "pokemon",
+    "name": {
+      "en": "Rattata",
+      "de": "Rattfratz"
+    },
+    "pokemon": [
+      "Rattata"
+    ],
+    "illustrator": "Miki Tanaka",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 30,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Lunge",
+          "de": "Ausfall"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Flip a coin. If tails, this attack does nothing.",
+          "de": "Wirf 1 Münze. Bei \"Zahl\" hat dieser Angriff keine Auswirkungen."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+10"
+      }
+    ]
+  },
+  {
+    "id": "intl-pl4-74",
+    "set_id": "intl-pl4",
+    "number": "74",
+    "category": "pokemon",
+    "name": {
+      "en": "Shinx",
+      "de": "Sheinux"
+    },
+    "pokemon": [
+      "Shinx"
+    ],
+    "illustrator": "sui",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Gnaw",
+          "de": "Nagen"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Swagger",
+          "de": "Angeberei"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip a coin. If heads, discard an Energy card attached to the Defending Pokémon.",
+          "de": "Wirf 1 Münze. Bei \"Kopf\" lege 1 Energiekarte, die am Verteidigenden Pokémon angelegt ist, auf den Ablagestapel deines Gegners."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+10"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "metal",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-75",
+    "set_id": "intl-pl4",
+    "number": "75",
+    "category": "pokemon",
+    "name": {
+      "en": "Snorunt",
+      "de": "Schneppke"
+    },
+    "pokemon": [
+      "Snorunt"
+    ],
+    "illustrator": "Yuka Morii",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Ice Breath",
+          "de": "Eishauch"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+          "de": "Wirf 1 Münze. Bei \"Kopf\" ist das Verteidigende Pokémon jetzt gelähmt."
+        }
+      },
+      {
+        "name": {
+          "en": "Double Headbutt",
+          "de": "Doppelte Kopfnuss"
+        },
+        "cost": [
+          "water",
+          "normal"
+        ],
+        "damage": "20x",
+        "text": {
+          "en": "Flip 2 coins. This attack does 20 damage times the number of heads.",
+          "de": "Wirf 2 Münzen. Dieser Angriff fügt 20 Schadenspunkte mal der Anzahl \"Kopf\" zu."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "+10"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-76",
+    "set_id": "intl-pl4",
+    "number": "76",
+    "category": "pokemon",
+    "name": {
+      "en": "Tangela",
+      "de": "Tangela"
+    },
+    "pokemon": [
+      "Tangela"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Absorb",
+          "de": "Absorber"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Remove 1 damage counter from Tangela.",
+          "de": "Entferne 1 Schadensmarke von Tangela."
+        }
+      },
+      {
+        "name": {
+          "en": "Sleep Powder",
+          "de": "Schlafpuder"
+        },
+        "cost": [
+          "grass",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "The Defending Pokémon is now Asleep.",
+          "de": "Das Verteidigende Pokémon schläft jetzt."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+10"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "water",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-pl4-77",
+    "set_id": "intl-pl4",
+    "number": "77",
+    "category": "pokemon",
+    "name": {
+      "en": "Tangela",
+      "de": "Tangela"
+    },
+    "pokemon": [
+      "Tangela"
+    ],
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Collect",
+          "de": "Sammeln"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Draw a card.",
+          "de": "Ziehe 1 Karte."
+        }
+      },
+      {
+        "name": {
+          "en": "Stun Spore",
+          "de": "Stachelspore"
+        },
+        "cost": [
+          "grass",
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+          "de": "Wirf 1 Münze. Bei \"Kopf\" ist das Verteidigende Pokémon jetzt gelähmt."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+10"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "water",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-78",
+    "set_id": "intl-pl4",
+    "number": "78",
+    "category": "pokemon",
+    "name": {
+      "en": "Treecko",
+      "de": "Geckarbor"
+    },
+    "pokemon": [
+      "Treecko"
+    ],
+    "illustrator": "TOKIYA",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Tail Crush",
+          "de": "Zerquetschender Schweif"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20+",
+        "text": {
+          "en": "Flip a coin. If heads, this attack does 20 damage plus 10 more damage.",
+          "de": "Wirf 1 Münze. Bei \"Kopf\" fügt dieser Angriff 20 Schadenspunkte plus 10 weitere Schadenspunkte zu."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+10"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "water",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-79",
+    "set_id": "intl-pl4",
+    "number": "79",
+    "category": "pokemon",
+    "name": {
+      "en": "Treecko",
+      "de": "Geckarbor"
+    },
+    "pokemon": [
+      "Treecko"
+    ],
+    "illustrator": "Kouki Saitou",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Pound",
+          "de": "Pfund"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Slash",
+          "de": "Schlitzer"
+        },
+        "cost": [
+          "grass",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+10"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "water",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-8",
+    "set_id": "intl-pl4",
+    "number": "8",
+    "category": "pokemon",
+    "name": {
+      "en": "Salamence",
+      "de": "Brutalanda"
+    },
+    "pokemon": [
+      "Salamence"
+    ],
+    "illustrator": "Shin Nagasawa",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 140,
+    "types": [
+      "normal"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Shelgon"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Shoot Through",
+          "de": "Durchschießen"
+        },
+        "cost": [
+          "fire",
+          "water",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "en": "Does 20 damage to 1 of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "de": "Dieser Angriff fügt 1 Pokémon auf der Bank deines Gegners 20 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
+        }
+      },
+      {
+        "name": {
+          "en": "Dragon Claw",
+          "de": "Drachenklaue"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "70",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "normal",
+        "value": "+30"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-pl4-80",
+    "set_id": "intl-pl4",
+    "number": "80",
+    "category": "pokemon",
+    "name": {
+      "en": "Wingull",
+      "de": "Wingull"
+    },
+    "pokemon": [
+      "Wingull"
+    ],
+    "illustrator": "Kyoko Umemoto",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Glide",
+          "de": "Gleiten"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Slashing Strike",
+          "de": "Schlitzender Schlag"
+        },
+        "cost": [
+          "water",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "During your next turn, Wingull can't use Slashing Strike.",
+          "de": "Wingull kann Schlitzender Schlag in deinem nächsten Zug nicht einsetzen."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "+10"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-81",
+    "set_id": "intl-pl4",
+    "number": "81",
+    "category": "pokemon",
+    "name": {
+      "en": "Wingull",
+      "de": "Wingull"
+    },
+    "pokemon": [
+      "Wingull"
+    ],
+    "illustrator": "Naoyo Kimura",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Rain Splash",
+          "de": "Regenplatscher"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "+10"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-82",
+    "set_id": "intl-pl4",
+    "number": "82",
+    "category": "trainer",
+    "name": {
+      "en": "Beginning Door",
+      "fr": "Porte de départ",
+      "de": "Tor des Ursprungs"
+    },
+    "pokemon": [],
+    "illustrator": "Ryo Ueda",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "en": "Search your deck for Arceus, show it to your opponent, and put it into your hand. Shuffle your deck afterward.",
+      "de": "Durchsuche dein Deck nach 1 Arceus-Karte, zeige sie deinem Gegner und nimm sie auf die Hand. Mische dein Deck danach."
+    }
+  },
+  {
+    "id": "intl-pl4-83",
+    "set_id": "intl-pl4",
+    "number": "83",
+    "category": "trainer",
+    "name": {
+      "en": "Bench Shield",
+      "de": "Bank-Schutzschild"
+    },
+    "pokemon": [],
+    "illustrator": "Wataru Kawahara",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "trainer_type": "tool",
+    "rules_text": {
+      "en": "Attach Bench Shield to 1 of your Pokémon that doesn't already have a Pokémon Tool attached to it.\nIf that Pokémon is Knocked Out, discard this card.",
+      "de": "Solange sich das Pokémon, an das diese Karte angelegt ist, auf deiner Bank befindet, verhindere allen Schaden, der diesem Pokémon durch Angriffe (deine und die deines Gegners) zugefügt würde."
+    }
+  },
+  {
+    "id": "intl-pl4-84",
+    "set_id": "intl-pl4",
+    "number": "84",
+    "category": "trainer",
+    "name": {
+      "en": "Buffer Piece",
+      "de": "Dämpfender Talisman"
+    },
+    "pokemon": [],
+    "illustrator": "Ryo Ueda",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "trainer_type": "tool",
+    "rules_text": {
+      "en": "Attach Buffer Piece to 1 of your Pokémon that doesn't already have a Pokémon Tool attached to it.\nIf that Pokémon is Knocked Out, discard this card.",
+      "de": "Schaden, der dem Pokémon, an das Dämpfender Talisman angelegt ist, durch einen gegnerischen Angriff zugefügt wird, wird um 20 Schadenspunkte reduziert (nachdem Schwäche und Resistenz verrechnet wurden). Nachdem du Dämpfender Talisman ausgespielt hast, lege Dämpfender Talisman am Ende des nächsten Zuges deines Gegners auf den Ablagestapel."
+    }
+  },
+  {
+    "id": "intl-pl4-85",
+    "set_id": "intl-pl4",
+    "number": "85",
+    "category": "trainer",
+    "name": {
+      "en": "Department Store Girl",
+      "de": "Kaufhausmädchen"
+    },
+    "pokemon": [],
+    "illustrator": "Kanako Eo",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "en": "You can play only one Supporter card each turn. When you play this card, put it next to your Active Pokémon. When your turn ends, discard this card.",
+      "de": "Durchsuche dein Deck nach bis zu 3 Pokémon-Ausrüstungs-Karten, zeige sie deinem Gegner und nimm sie auf die Hand. Mische dein Deck danach."
+    }
+  },
+  {
+    "id": "intl-pl4-86",
+    "set_id": "intl-pl4",
+    "number": "86",
+    "category": "trainer",
+    "name": {
+      "en": "Energy Restore",
+      "de": "Energiewiederherstellung"
+    },
+    "pokemon": [],
+    "illustrator": "Ryo Ueda",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "en": "Flip 3 coins. For each heads, put a basic Energy card from your discard pile into your hand. If you don't have that many basic Energy cards in your discard pile, put all of them into your hand.",
+      "de": "Wirf 3 Münzen. Nimm für jedes Mal, wenn die Münze \"Kopf\" gezeigt hat, eine Basis-Energiekarte von deinem Ablagestapel auf deine Hand. Falls du nicht genug Basis-Energiekarten in deinem Ablagestapel hast, nimm so viele wie möglich auf deine Hand."
+    }
+  },
+  {
+    "id": "intl-pl4-87",
+    "set_id": "intl-pl4",
+    "number": "87",
+    "category": "trainer",
+    "name": {
+      "en": "Expert Belt",
+      "de": "Expertengurt"
+    },
+    "pokemon": [],
+    "illustrator": "Wataru Kawahara",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "trainer_type": "tool",
+    "rules_text": {
+      "en": "Attach Expert Belt to 1 of your Pokémon that doesn't already have a Pokémon Tool attached to it. If\nthat Pokémon is Knocked Out, discard this card.",
+      "de": "Das Pokémon, an das diese Karte angelegt ist, erhält +20 KP und die Angriffe dieses Pokémon fügen den Aktiven Pokémon deines Gegners 20 zusätzliche Schadenspunkte zu (bevor Schwäche und Resistenz verrechnet werden). Wenn das Pokémon, an das diese Karte angelegt ist, kampfunfähig wird, nimmt dein Gegner 1 zusätzlichen Preis."
+    }
+  },
+  {
+    "id": "intl-pl4-88",
+    "set_id": "intl-pl4",
+    "number": "88",
+    "category": "trainer",
+    "name": {
+      "en": "Lucky Egg",
+      "de": "Glücks-Ei"
+    },
+    "pokemon": [],
+    "illustrator": "Nobuyuki Fujimoto",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "trainer_type": "tool",
+    "rules_text": {
+      "en": "Attach Lucky Egg to 1 of your Pokémon that doesn't already have a Pokémon Tool attached to it. If\nthat Pokémon is Knocked Out, discard this card.",
+      "de": "Wenn das Pokémon, an das diese Karte angelegt ist, durch Schaden eines gegnerischen Angriffs kampfunfähig wird, ziehe so viele Karten, bis du 7 Karten auf deiner Hand hast."
+    }
+  },
+  {
+    "id": "intl-pl4-89",
+    "set_id": "intl-pl4",
+    "number": "89",
+    "category": "trainer",
+    "name": {
+      "en": "Old Amber",
+      "de": "Altbernstein"
+    },
+    "pokemon": [],
+    "illustrator": "Ryo Ueda",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "trainer_type": "item",
+    "rules_text": {
+      "en": "Play Old Amber as if it were a Colorless Basic Pokémon. (Old Amber counts as a Trainer card as well, but if Old Amber is Knocked Out, this counts as a Knocked Out Pokémon.) Old Amber can't be affected by any Special Conditions and can't retreat. At any time during your turn before your attack, you may discard Old Amber from play. (This doesn't count as a Knocked Out Pokémon.)",
+      "de": "Spiele Altbernstein wie ein -Basis-Pokémon. (Altbernstein zählt gleichzeitig als Trainerkarte, aber wenn Altbernstein kampfunfähig wird, zählt es als kampfunfähiges Pokémon.) Altbernstein kann nicht von Speziellen Zuständen betroffen werden und sich nicht zurückziehen. In deinem Zug (vor deinem Angriff) kannst du Altbernstein auf deinen Ablagestapel legen. (Dies zählt nicht als kampfunfähig gemachtes Pokémon.)"
+    }
+  },
+  {
+    "id": "intl-pl4-9",
+    "set_id": "intl-pl4",
+    "number": "9",
+    "category": "pokemon",
+    "name": {
+      "en": "Swalot",
+      "de": "Schlukwech"
+    },
+    "pokemon": [
+      "Swalot"
+    ],
+    "illustrator": "Aya Kusube",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Gulpin"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Damage Roller",
+          "de": "Schadenswalze"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Put damage counters on the Defending Pokémon until the Defending Pokémon has the same remaining HP as Swalot. (If the Defending Pokémon has the same or less remaining HP as Swalot, this attack does nothing.)",
+          "de": "Lege so viele Schadensmarken auf das Verteidigende Pokémon, bis das Verteidigende Pokémon gleich viel verbliebene KP hat wie Schlukwech. (Wenn das Verteidigende Pokémon nicht mehr verbliebene KP hat als Schlukwech, hat dieser Angriff keine Auswirkungen.)"
+        }
+      },
+      {
+        "name": {
+          "en": "Entangle Tackle",
+          "de": "Einschnürtackle"
+        },
+        "cost": [
+          "psychic",
+          "psychic",
+          "normal"
+        ],
+        "damage": "50+",
+        "text": {
+          "en": "You may do 50 damage plus 30 more damage. If you do, this attack does 30 damage to 1 of your Pokémon, and don't apply Weakness and Resistance to this damage.",
+          "de": "Du kannst mit diesem Angriff 50 Schadenspunkte plus 30 weitere Schadenspunkte zufügen. Wenn du das machst, fügt dieser Angriff 1 deiner Pokémon 30 Schadenspunkte zu, wende dabei Schwäche und Resistenz nicht an."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-pl4-90",
+    "set_id": "intl-pl4",
+    "number": "90",
+    "category": "trainer",
+    "name": {
+      "en": "Professor Oak's Visit",
+      "de": "Professor Eichs Besuch"
+    },
+    "pokemon": [],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "en": "You can play only one Supporter card each turn. When you play this card, put it next to your Active Pokémon. When your turn ends, discard this card.",
+      "de": "Ziehe 3 Karten. Danach wähle 1 Karte von deiner Hand und lege sie unter dein Deck."
+    }
+  },
+  {
+    "id": "intl-pl4-91",
+    "set_id": "intl-pl4",
+    "number": "91",
+    "category": "trainer",
+    "name": {
+      "en": "Ultimate Zone",
+      "fr": "Zone ultime",
+      "de": "Ultimativ-Zone"
+    },
+    "pokemon": [],
+    "illustrator": "Yusuke Ishikawa",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "trainer_type": "stadium",
+    "rules_text": {
+      "en": "This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card.",
+      "de": "Beliebig oft während seines Zuges kann jeder Spieler 1 Energiekarte von 1 Pokémon auf seiner Bank entfernen und an sein Aktives Arceus anlegen."
+    }
+  },
+  {
+    "id": "intl-pl4-92",
+    "set_id": "intl-pl4",
+    "number": "92",
+    "category": "trainer",
+    "name": {
+      "en": "Dome Fossil",
+      "de": "Domfossil"
+    },
+    "pokemon": [],
+    "illustrator": "Ryo Ueda",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "trainer_type": "item",
+    "rules_text": {
+      "en": "Play Dome Fossil as if it were a Colorless Basic Pokémon. (Dome Fossil counts as a Trainer card as well, but if Dome Fossil is Knocked Out, this counts as a Knocked Out Pokémon.) Dome Fossil can't be affected by any Special Conditions and can't retreat. At any time during your turn before your attack, you may discard Dome Fossil from play. (This doesn't count as a Knocked Out Pokémon.)",
+      "de": "Spiele Domfossil wie ein -Basis-Pokémon. (Domfossil zählt gleichzeitig als Trainerkarte, aber wenn Domfossil kampfunfähig wird, zählt es als kampfunfähiges Pokémon.) Domfossil kann nicht von Speziellen Zuständen betroffen werden und sich nicht zurückziehen. In deinem Zug (vor deinem Angriff) kannst du Domfossil auf deinen Ablagestapel legen. (Dies zählt nicht als kampfunfähig gemachtes Pokémon.)"
+    }
+  },
+  {
+    "id": "intl-pl4-93",
+    "set_id": "intl-pl4",
+    "number": "93",
+    "category": "trainer",
+    "name": {
+      "en": "Helix Fossil",
+      "de": "Helixfossil"
+    },
+    "pokemon": [],
+    "illustrator": "Ryo Ueda",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "trainer_type": "item",
+    "rules_text": {
+      "en": "Play Helix Fossil as if it were a Colorless Basic Pokémon. (Helix Fossil counts as a Trainer card as well, but if Helix Fossil is Knocked Out, this counts as a Knocked Out Pokémon.) Helix Fossil can't be affected by any Special Conditions and can't retreat. At any time during your turn before your attack, you may discard Helix Fossil from play. (This doesn't count as a Knocked Out Pokémon.)",
+      "de": "Spiele Helixfossil wie ein -Basis-Pokémon. (Helixfossil zählt gleichzeitig als Trainerkarte, aber wenn Helixfossil kampfunfähig wird, zählt es als kampfunfähiges Pokémon.) Helixfossil kann nicht von Speziellen Zuständen betroffen werden und sich nicht zurückziehen. In deinem Zug (vor deinem Angriff) kannst du Helixfossil auf deinen Ablagestapel legen. (Dies zählt nicht als kampfunfähig gemachtes Pokémon.)"
+    }
+  },
+  {
+    "id": "intl-pl4-94",
+    "set_id": "intl-pl4",
+    "number": "94",
+    "category": "pokemon",
+    "name": {
+      "en": "Arceus LV. X",
+      "fr": "Arceus",
+      "de": "Arceus"
+    },
+    "pokemon": [
+      "Arceus LV. X"
+    ],
+    "illustrator": "Shizurow",
+    "rarity": "rare_holo_lv.x",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 120,
+    "types": [
+      "normal"
+    ],
+    "stage": "level_up",
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-95",
+    "set_id": "intl-pl4",
+    "number": "95",
+    "category": "pokemon",
+    "name": {
+      "en": "Arceus LV. X",
+      "fr": "Arceus",
+      "de": "Arceus"
+    },
+    "pokemon": [
+      "Arceus LV. X"
+    ],
+    "illustrator": "Ryo Ueda",
+    "rarity": "rare_holo_lv.x",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 120,
+    "types": [
+      "normal"
+    ],
+    "stage": "level_up",
+    "attacks": [
+      {
+        "name": {
+          "en": "Meteor Blast",
+          "fr": "Explosion de météores",
+          "de": "Meteorexplosion"
+        },
+        "cost": [
+          "grass",
+          "fire",
+          "normal"
+        ],
+        "damage": "100",
+        "text": {
+          "en": "Flip a coin. If tails, this attack's base damage is 50 instead of 100.",
+          "fr": "Lancez une pièce. Si c'est pile, les dégâts de base de cette attaque sont de 50 au lieu de 100.",
+          "de": "Wirf 1 Münze. Bei \"Zahl\" beträgt der Grundschaden dieses Angriffs 50 Schadenspunkte anstelle von 100 Schadenspunkten."
+        }
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-96",
+    "set_id": "intl-pl4",
+    "number": "96",
+    "category": "pokemon",
+    "name": {
+      "en": "Arceus LV. X",
+      "fr": "Arceus",
+      "de": "Arceus"
+    },
+    "pokemon": [
+      "Arceus LV. X"
+    ],
+    "illustrator": "Ryo Ueda",
+    "rarity": "rare_holo_lv.x",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 120,
+    "types": [
+      "normal"
+    ],
+    "stage": "level_up",
+    "attacks": [
+      {
+        "name": {
+          "en": "Psychic Bolt",
+          "fr": "Éclair psy",
+          "de": "Psychoschlag"
+        },
+        "cost": [
+          "lightning",
+          "psychic",
+          "normal"
+        ],
+        "damage": "100",
+        "text": {
+          "en": "Discard a Lightning Energy and a Psychic Energy attached to Arceus.",
+          "fr": "Défaussez une Énergie Lightning et une Énergie Psychic attachée à Arceus.",
+          "de": "Lege 1 -Energie und 1 -Energie, die an Arceus angelegt sind, auf deinen Ablagestapel."
+        }
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-97",
+    "set_id": "intl-pl4",
+    "number": "97",
+    "category": "pokemon",
+    "name": {
+      "en": "Gengar LV. X",
+      "de": "Gengar"
+    },
+    "pokemon": [
+      "Gengar LV. X"
+    ],
+    "illustrator": "Shizurow",
+    "rarity": "rare_holo_lv.x",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 140,
+    "types": [
+      "psychic"
+    ],
+    "stage": "level_up",
+    "attacks": [
+      {
+        "name": {
+          "en": "Compound Pain",
+          "de": "Schmerzverbund"
+        },
+        "cost": [
+          "psychic",
+          "psychic",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "This attack does 30 damage to each of your opponent's Pokémon that already has any damage counters on it. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "de": "Dieser Angriff fügt jedem Pokémon deines Gegners, auf dem bereits mindestens 1 Schadensmarke liegt, 30 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "normal",
+        "value": "-20"
+      }
+    ]
+  },
+  {
+    "id": "intl-pl4-98",
+    "set_id": "intl-pl4",
+    "number": "98",
+    "category": "pokemon",
+    "name": {
+      "en": "Salamence LV. X",
+      "de": "Brutalanda"
+    },
+    "pokemon": [
+      "Salamence LV. X"
+    ],
+    "illustrator": "Ryo Ueda",
+    "rarity": "rare_holo_lv.x",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 160,
+    "types": [
+      "normal"
+    ],
+    "stage": "level_up",
+    "attacks": [
+      {
+        "name": {
+          "en": "Steam Blast",
+          "de": "Dampfstrahl"
+        },
+        "cost": [
+          "fire",
+          "water",
+          "normal",
+          "normal"
+        ],
+        "damage": "100",
+        "text": {
+          "en": "Discard an Energy card attached to Salamence.",
+          "de": "Entferne 1 an Brutalanda angelegte Energiekarte und lege sie auf deinen Ablagestapel."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "normal",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-pl4-99",
+    "set_id": "intl-pl4",
+    "number": "99",
+    "category": "pokemon",
+    "name": {
+      "en": "Tangrowth LV. X",
+      "de": "Tangoloss"
+    },
+    "pokemon": [
+      "Tangrowth LV. X"
+    ],
+    "illustrator": "Ryo Ueda",
+    "rarity": "rare_holo_lv.x",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "grass"
+    ],
+    "stage": "level_up",
+    "attacks": [
+      {
+        "name": {
+          "en": "Big Growth",
+          "de": "Großes Wachstum"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Search your discard pile for as many Grass Energy cards as you like and attach them to your Pokémon in any way you like.",
+          "de": "Durchsuche deinen Ablagestapel nach beliebig vielen -Energiekarten und lege sie in beliebiger Verteilung an deine Pokémon an."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "water",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-pl4-ar1",
+    "set_id": "intl-pl4",
+    "number": "AR1",
+    "category": "pokemon",
+    "name": {
+      "en": "Arceus",
+      "fr": "Arceus",
+      "de": "Arceus"
+    },
+    "pokemon": [
+      "Arceus"
+    ],
+    "illustrator": "kawayoo",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "dark"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Prize Count",
+          "fr": "Compteur de Récompense",
+          "de": "Preiszähler"
+        },
+        "cost": [
+          "dark",
+          "normal"
+        ],
+        "damage": "20+",
+        "text": {
+          "en": "If you have more Prize cards left than your opponent, this attack does 20 damage plus 60 more damage.",
+          "fr": "S'il vous reste plus de cartes Récompense qu'à votre adversaire, cette attaque inflige 20 dégâts plus 60 dégâts supplémentaires.",
+          "de": "Wenn du mehr Preise übrig hast als dein Gegner, fügt dieser Angriff 20 Schadenspunkte plus 60 weitere Schadenspunkte zu."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-ar2",
+    "set_id": "intl-pl4",
+    "number": "AR2",
+    "category": "pokemon",
+    "name": {
+      "en": "Arceus",
+      "fr": "Arceus",
+      "de": "Arceus"
+    },
+    "pokemon": [
+      "Arceus"
+    ],
+    "illustrator": "Shin Nagasawa",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Leaf Refresh",
+          "fr": "Feuille revigorante",
+          "de": "Blätterheilung"
+        },
+        "cost": [
+          "grass",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Remove 3 damage counters from each of your Benched Pokémon.",
+          "fr": "Retirez 3 marqueurs de dégât à chacun des Pokémon de votre Banc.",
+          "de": "Entferne 3 Schadensmarken von jedem Pokémon auf deiner Bank."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "water",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-pl4-ar3",
+    "set_id": "intl-pl4",
+    "number": "AR3",
+    "category": "pokemon",
+    "name": {
+      "en": "Arceus",
+      "fr": "Arceus",
+      "de": "Arceus"
+    },
+    "pokemon": [
+      "Arceus"
+    ],
+    "illustrator": "Wataru Kawahara",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Bright Flame",
+          "fr": "Flamme éclatante",
+          "de": "Helle Flamme"
+        },
+        "cost": [
+          "fire",
+          "normal",
+          "normal"
+        ],
+        "damage": "80",
+        "text": {
+          "en": "Flip a coin. If tails, discard 2 Energy attached to Arceus.",
+          "fr": "Lancez une pièce. Si c'est pile, défaussez 2 Énergies attachées à Arceus.",
+          "de": "Wirf 1 Münze. Bei \"Zahl\" entferne 2 Energien, die an Arceus angelegt sind, und lege sie auf deinen Ablagestapel."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-ar4",
+    "set_id": "intl-pl4",
+    "number": "AR4",
+    "category": "pokemon",
+    "name": {
+      "en": "Arceus",
+      "fr": "Arceus",
+      "de": "Arceus"
+    },
+    "pokemon": [
+      "Arceus"
+    ],
+    "illustrator": "Kouki Saitou",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Fastwave",
+          "fr": "Lame de fond",
+          "de": "Rasende Schallwelle"
+        },
+        "cost": [
+          "water",
+          "normal",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "en": "This attack's damage isn't affected by Resistance, Poké-Powers, Poké-Bodies, or any other effects on the Defending Pokémon.",
+          "fr": "Les dégâts de cette attaque ne sont pas affectés par la Résistance, les Poké-Powers, les Poké-Bodies ou tout autre effet sur le Pokémon Défenseur.",
+          "de": "Resistenz, Poké-Power, Poké-Body und alle anderen Effekte auf den Verteidigenden Pokémon haben keine Auswirkungen auf die Schadenspunkte dieses Angriffs."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-pl4-ar5",
+    "set_id": "intl-pl4",
+    "number": "AR5",
+    "category": "pokemon",
+    "name": {
+      "en": "Arceus",
+      "fr": "Arceus",
+      "de": "Arceus"
+    },
+    "pokemon": [
+      "Arceus"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Ripple Swell",
+          "fr": "Vague menaçante",
+          "de": "Wellenschwall"
+        },
+        "cost": [],
+        "damage": "",
+        "text": {
+          "en": "If you have 6 Arceus in play and each of them is a different type, search your deck for up to 6 basic Energy cards. Attach each of those Energy cards to a different Pokémon you have in play. Shuffle your deck afterward.",
+          "fr": "Si vous avez 6 Arceus en jeu et que chacun de ces Arceus est de type différent, choisissez jusqu'à 6 cartes Énergie de base dans votre deck. Attachez chacune de ces cartes Énergie à un autre Pokémon que vous avez en jeu. Ensuite, mélangez votre deck.",
+          "de": "Wenn du 6 Arceus jeweils unterschiedlichen Typs im Spiel hast, durchsuche dein Deck nach bis zu 6 Basis-Energiekarten. Lege jeder dieser Energiekarten an ein anderes deiner Pokémon im Spiel an. Mische dein Deck danach."
+        }
+      },
+      {
+        "name": {
+          "en": "Sky Spear",
+          "fr": "Lance céleste",
+          "de": "Himmelsspeer"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Choose 1 of your opponent's Pokémon. This attack does 80 damage to that Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.) Remove all Energy cards attached to Arceus and put them in the Lost Zone.",
+          "fr": "Choisissez 1 des Pokémon de votre adversaire. Cette attaque lui inflige 80 dégâts. (Vous ne pouvez pas appliquer la Faiblesse et la Résistance aux Pokémon de Banc.) Retirez à Arceus toutes ses cartes Énergie et placez-les dans la Zone Perdue.",
+          "de": "Wähle 1 Pokémon deines Gegners. Dieser Angriff fügt dem gewählten Pokémon 80 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.) Entferne alle Energiekarten, die an Arceus angelegt sind, und lege sie ins Nirgendwo."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-ar6",
+    "set_id": "intl-pl4",
+    "number": "AR6",
+    "category": "pokemon",
+    "name": {
+      "en": "Arceus",
+      "fr": "Arceus",
+      "de": "Arceus"
+    },
+    "pokemon": [
+      "Arceus"
+    ],
+    "illustrator": "Wataru Kawahara",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Lightning Turn",
+          "fr": "Tour éclair",
+          "de": "Blitzartige Drehung"
+        },
+        "cost": [
+          "lightning",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Switch Arceus with 1 of your Benched Pokémon.",
+          "fr": "Échangez Arceus avec 1 des Pokémon de votre Banc.",
+          "de": "Tausche Arceus gegen 1 Pokémon auf deiner Bank aus."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "metal",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-ar7",
+    "set_id": "intl-pl4",
+    "number": "AR7",
+    "category": "pokemon",
+    "name": {
+      "en": "Arceus",
+      "fr": "Arceus",
+      "de": "Arceus"
+    },
+    "pokemon": [
+      "Arceus"
+    ],
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Mind Bend",
+          "fr": "Contrôleur d'esprit",
+          "de": "Gedankenverbiegung"
+        },
+        "cost": [
+          "psychic",
+          "normal",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {
+          "en": "The Defending Pokémon is now Confused.",
+          "fr": "Le Pokémon Défenseur est maintenant Confus.",
+          "de": "Das Verteidigende Pokémon ist jetzt verwirrt."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-ar8",
+    "set_id": "intl-pl4",
+    "number": "AR8",
+    "category": "pokemon",
+    "name": {
+      "en": "Arceus",
+      "fr": "Arceus",
+      "de": "Arceus"
+    },
+    "pokemon": [
+      "Arceus"
+    ],
+    "illustrator": "Hajime Kusajima",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Break Ground",
+          "fr": "Casseur de sol",
+          "de": "Boden gewinnen"
+        },
+        "cost": [
+          "fighting",
+          "normal",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {
+          "en": "Does 10 damage to each of your Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "fr": "Inflige 10 dégâts à chacun de vos Pokémon de Banc. (Vous ne pouvez pas appliquer la Faiblesse et la Résistance aux Pokémon de Banc.)",
+          "de": "Dieser Angriff fügt jeden Pokémon auf deiner Bank 10 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "lightning",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-pl4-ar9",
+    "set_id": "intl-pl4",
+    "number": "AR9",
+    "category": "pokemon",
+    "name": {
+      "en": "Arceus",
+      "fr": "Arceus",
+      "de": "Arceus"
+    },
+    "pokemon": [
+      "Arceus"
+    ],
+    "illustrator": "TOKIYA",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "metal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Metal Barrier",
+          "fr": "Barrière métallique",
+          "de": "Metallbarriere"
+        },
+        "cost": [
+          "metal",
+          "normal",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {
+          "en": "Prevent all effects of attacks, including damage, done to Arceus by Pokémon LV.X during your opponent's next turn.",
+          "fr": "Prévenez tous les effets d'attaques, dégâts inclus, infligés à Arceus par des Pokémon NIV.X lors du prochain tour de votre adversaire.",
+          "de": "Verhindere während des nächsten Zuges deines Gegners alle Effekte von Angriffen, einschließlich Schaden, die Arceus von gegnerischen Pokémon LV.X zugefügt würden."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-pl4-sh10",
+    "set_id": "intl-pl4",
+    "number": "SH10",
+    "category": "pokemon",
+    "name": {
+      "en": "Bagon",
+      "de": "Kindwurm"
+    },
+    "pokemon": [
+      "Bagon"
+    ],
+    "illustrator": "Naoyo Kimura",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Dragon Rage",
+          "de": "Drachenwut"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "40",
+        "text": {
+          "en": "Flip 2 coins. If either of them is tails, this attack does nothing.",
+          "de": "Wirf 2 Münzen. Wenn mindestens eine Münze \"Zahl\" gezeigt hat, hat dieser Angriff keine Auswirkungen."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "normal",
+        "value": "+10"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-sh11",
+    "set_id": "intl-pl4",
+    "number": "SH11",
+    "category": "pokemon",
+    "name": {
+      "en": "Ponyta",
+      "de": "Ponita"
+    },
+    "pokemon": [
+      "Ponyta"
+    ],
+    "illustrator": "Kanako Eo",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Blue Fire",
+          "de": "Blaufeuer"
+        },
+        "cost": [
+          "fire",
+          "fire"
+        ],
+        "damage": "50",
+        "text": {
+          "en": "Discard all Fire Energy attached to Ponyta.",
+          "de": "Entferne alle -Energien von Ponita und lege sie auf deinen Ablagestapel."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "+10"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pl4-sh12",
+    "set_id": "intl-pl4",
+    "number": "SH12",
+    "category": "pokemon",
+    "name": {
+      "en": "Shinx",
+      "de": "Sheinux"
+    },
+    "pokemon": [
+      "Shinx"
+    ],
+    "illustrator": "sui",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Payback",
+          "de": "Gegenstoß"
+        },
+        "cost": [
+          "lightning"
+        ],
+        "damage": "10+",
+        "text": {
+          "en": "If your opponent has only 1 Prize card left, this attack does 10 damage plus 30 more damage.",
+          "de": "Wenn dein Gegner nur 1 Preis übrig hat, fügt dieser Angriff 10 Schadenspunkte plus 30 weitere Schadenspunkte zu."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+10"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "metal",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  }
+]

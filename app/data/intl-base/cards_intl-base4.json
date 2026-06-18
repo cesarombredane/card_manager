@@ -1,0 +1,6936 @@
+[
+  {
+    "id": "intl-base4-1",
+    "set_id": "intl-base4",
+    "number": "1",
+    "category": "pokemon",
+    "name": {
+      "en": "Alakazam"
+    },
+    "pokemon": [
+      "Alakazam"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Kadabra"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Confuse Ray"
+        },
+        "cost": [
+          "psychic",
+          "psychic",
+          "psychic"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Confused."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-base4-10",
+    "set_id": "intl-base4",
+    "number": "10",
+    "category": "pokemon",
+    "name": {
+      "en": "Mewtwo"
+    },
+    "pokemon": [
+      "Mewtwo"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Psychic"
+        },
+        "cost": [
+          "psychic",
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Does 10 damage plus 10 more damage for each Energy card attached to the Defending Pokémon."
+        }
+      },
+      {
+        "name": {
+          "en": "Barrier"
+        },
+        "cost": [
+          "psychic",
+          "psychic"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Discard 1 Energy card attached to Mewtwo in order to use this attack. During your opponent's next turn, prevent all effects of attacks, including damage, done to Mewtwo."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-base4-100",
+    "set_id": "intl-base4",
+    "number": "100",
+    "category": "pokemon",
+    "name": {
+      "en": "Weedle"
+    },
+    "pokemon": [
+      "Weedle"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Poison Sting"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip a coin. If heads, Defending Pokémon is now Poisoned."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-101",
+    "set_id": "intl-base4",
+    "number": "101",
+    "category": "trainer",
+    "name": {
+      "en": "Computer Search"
+    },
+    "pokemon": [],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Discard 2 of the other cards from your hand in order to search your deck for any card and put it into your hand. Shuffle your deck afterward."
+    }
+  },
+  {
+    "id": "intl-base4-102",
+    "set_id": "intl-base4",
+    "number": "102",
+    "category": "trainer",
+    "name": {
+      "en": "Impostor Professor Oak"
+    },
+    "pokemon": [],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Your opponent shuffles his or her hand into his or her deck, then draws 7 cards."
+    }
+  },
+  {
+    "id": "intl-base4-103",
+    "set_id": "intl-base4",
+    "number": "103",
+    "category": "trainer",
+    "name": {
+      "en": "Item Finder"
+    },
+    "pokemon": [],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Discard 2 of the other cards from your hand in order to put a Trainer card from your discard pile into your hand."
+    }
+  },
+  {
+    "id": "intl-base4-104",
+    "set_id": "intl-base4",
+    "number": "104",
+    "category": "trainer",
+    "name": {
+      "en": "Lass"
+    },
+    "pokemon": [],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "You and your opponent show each other your hands, then shuffle all the Trainer cards from your hands into your decks."
+    }
+  },
+  {
+    "id": "intl-base4-105",
+    "set_id": "intl-base4",
+    "number": "105",
+    "category": "trainer",
+    "name": {
+      "en": "Pokémon Breeder"
+    },
+    "pokemon": [],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Put a Stage 2 Evolution card from your hand on the matching Basic Pokémon. You can only play this card when you would be allowed to evolve that Pokémon anyway."
+    }
+  },
+  {
+    "id": "intl-base4-106",
+    "set_id": "intl-base4",
+    "number": "106",
+    "category": "trainer",
+    "name": {
+      "en": "Pokémon Trader"
+    },
+    "pokemon": [],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Trade 1 of the Basic Pokémon or Evolution cards in your hand for 1 of the Basic Pokémon or Evolution cards from your deck. Show both cards to your opponent. Shuffle your deck afterward."
+    }
+  },
+  {
+    "id": "intl-base4-107",
+    "set_id": "intl-base4",
+    "number": "107",
+    "category": "trainer",
+    "name": {
+      "en": "Scoop Up"
+    },
+    "pokemon": [],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Choose 1 of your Pokémon in play and return its Basic Pokémon card to your hand. (Discard all cards attached to that card.)"
+    }
+  },
+  {
+    "id": "intl-base4-108",
+    "set_id": "intl-base4",
+    "number": "108",
+    "category": "trainer",
+    "name": {
+      "en": "Super Energy Removal"
+    },
+    "pokemon": [],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Discard 1 Energy card attached to 1 of your own Pokémon in order to choose 1 of your opponent's Pokémon and up to 2 Energy cards attached to it. Discard those Energy cards."
+    }
+  },
+  {
+    "id": "intl-base4-109",
+    "set_id": "intl-base4",
+    "number": "109",
+    "category": "trainer",
+    "name": {
+      "en": "Defender"
+    },
+    "pokemon": [],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Attach Defender to 1 of your Pokémon. At the end of your opponent's next turn, discard Defender. Damage done to that Pokémon by attacks is reduced by 20 (after applying Weakness and Resistance)."
+    }
+  },
+  {
+    "id": "intl-base4-11",
+    "set_id": "intl-base4",
+    "number": "11",
+    "category": "pokemon",
+    "name": {
+      "en": "Nidoking"
+    },
+    "pokemon": [
+      "Nidoking"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Nidorino"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Thrash"
+        },
+        "cost": [
+          "grass",
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Flip a coin. If heads, this attack does 30 damage plus 10 more damage; if tails, this attack does 30 damage and Nidoking does 10 damage to itself."
+        }
+      },
+      {
+        "name": {
+          "en": "Toxic"
+        },
+        "cost": [
+          "grass",
+          "grass",
+          "grass"
+        ],
+        "damage": "40",
+        "text": {
+          "en": "The Defending Pokémon is now Poisoned. It now takes 20 Poison damage instead of 10 after each player's turn (even if it was already Poisoned)."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-base4-110",
+    "set_id": "intl-base4",
+    "number": "110",
+    "category": "trainer",
+    "name": {
+      "en": "Energy Retrieval"
+    },
+    "pokemon": [],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Trade 1 of the other cards in your hand for up to 2 basic Energy cards from your discard pile."
+    }
+  },
+  {
+    "id": "intl-base4-111",
+    "set_id": "intl-base4",
+    "number": "111",
+    "category": "trainer",
+    "name": {
+      "en": "Full Heal"
+    },
+    "pokemon": [],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Your Active Pokémon is no longer Asleep, Confused, Paralyzed, or Poisoned."
+    }
+  },
+  {
+    "id": "intl-base4-112",
+    "set_id": "intl-base4",
+    "number": "112",
+    "category": "trainer",
+    "name": {
+      "en": "Maintenance"
+    },
+    "pokemon": [],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Shuffle 2 of the other cards from your hand into your deck in order to draw a card."
+    }
+  },
+  {
+    "id": "intl-base4-113",
+    "set_id": "intl-base4",
+    "number": "113",
+    "category": "trainer",
+    "name": {
+      "en": "PlusPower"
+    },
+    "pokemon": [],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Attach PlusPower to your Active Pokémon. At the end of your turn, discard PlusPower. If this Pokémon's attack does damage to the Defending Pokémon (after applying Weakness and Resistance), the attack does 10 more damage to the Defending Pokémon."
+    }
+  },
+  {
+    "id": "intl-base4-114",
+    "set_id": "intl-base4",
+    "number": "114",
+    "category": "trainer",
+    "name": {
+      "en": "Pokémon Center"
+    },
+    "pokemon": [],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Remove all damage counters from all of your own Pokémon with damage counters on them, then discard all Energy cards attached to those Pokémon."
+    }
+  },
+  {
+    "id": "intl-base4-115",
+    "set_id": "intl-base4",
+    "number": "115",
+    "category": "trainer",
+    "name": {
+      "en": "Pokédex"
+    },
+    "pokemon": [],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Look at up to 5 cards from the top of your deck and rearrange them as you like."
+    }
+  },
+  {
+    "id": "intl-base4-116",
+    "set_id": "intl-base4",
+    "number": "116",
+    "category": "trainer",
+    "name": {
+      "en": "Professor Oak"
+    },
+    "pokemon": [],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Discard your hand, then draw 7 cards."
+    }
+  },
+  {
+    "id": "intl-base4-117",
+    "set_id": "intl-base4",
+    "number": "117",
+    "category": "trainer",
+    "name": {
+      "en": "Super Potion"
+    },
+    "pokemon": [],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Discard 1 Energy card attached to 1 of your own Pokémon in order to remove up to 4 damage counters from that Pokémon."
+    }
+  },
+  {
+    "id": "intl-base4-118",
+    "set_id": "intl-base4",
+    "number": "118",
+    "category": "trainer",
+    "name": {
+      "en": "Bill"
+    },
+    "pokemon": [],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Draw 2 cards."
+    }
+  },
+  {
+    "id": "intl-base4-119",
+    "set_id": "intl-base4",
+    "number": "119",
+    "category": "trainer",
+    "name": {
+      "en": "Energy Removal"
+    },
+    "pokemon": [],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Choose 1 Energy card attached to 1 of your opponent's Pokémon and discard it."
+    }
+  },
+  {
+    "id": "intl-base4-12",
+    "set_id": "intl-base4",
+    "number": "12",
+    "category": "pokemon",
+    "name": {
+      "en": "Nidoqueen"
+    },
+    "pokemon": [
+      "Nidoqueen"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Nidorina"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Boyfriends"
+        },
+        "cost": [
+          "grass",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Does 20 damage plus 20 more damage for each Nidoking you have in play."
+        }
+      },
+      {
+        "name": {
+          "en": "Mega Punch"
+        },
+        "cost": [
+          "grass",
+          "grass",
+          "normal",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-base4-120",
+    "set_id": "intl-base4",
+    "number": "120",
+    "category": "trainer",
+    "name": {
+      "en": "Gust of Wind"
+    },
+    "pokemon": [],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Choose 1 of your opponent's Benched Pokémon and switch it with his or her Active Pokémon."
+    }
+  },
+  {
+    "id": "intl-base4-121",
+    "set_id": "intl-base4",
+    "number": "121",
+    "category": "trainer",
+    "name": {
+      "en": "Poké Ball"
+    },
+    "pokemon": [],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Flip a coin. If heads, you may search your deck for any Basic Pokémon or Evolution card. Show that card to your opponent, then put it into your hand. Shuffle your deck afterward."
+    }
+  },
+  {
+    "id": "intl-base4-122",
+    "set_id": "intl-base4",
+    "number": "122",
+    "category": "trainer",
+    "name": {
+      "en": "Potion"
+    },
+    "pokemon": [],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Remove up to 2 damage counters from 1 of your Pokémon."
+    }
+  },
+  {
+    "id": "intl-base4-123",
+    "set_id": "intl-base4",
+    "number": "123",
+    "category": "trainer",
+    "name": {
+      "en": "Switch"
+    },
+    "pokemon": [],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Switch 1 of your Benched Pokémon with your Active Pokémon."
+    }
+  },
+  {
+    "id": "intl-base4-124",
+    "set_id": "intl-base4",
+    "number": "124",
+    "category": "energy",
+    "name": {
+      "en": "Double Colorless Energy"
+    },
+    "pokemon": [],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Provides {C}{C} energy. Doesn't count as a basic Energy card."
+    }
+  },
+  {
+    "id": "intl-base4-125",
+    "set_id": "intl-base4",
+    "number": "125",
+    "category": "energy",
+    "name": {
+      "en": "Fighting Energy"
+    },
+    "pokemon": [],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "stage": "basic"
+  },
+  {
+    "id": "intl-base4-126",
+    "set_id": "intl-base4",
+    "number": "126",
+    "category": "energy",
+    "name": {
+      "en": "Fire Energy"
+    },
+    "pokemon": [],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "stage": "basic"
+  },
+  {
+    "id": "intl-base4-127",
+    "set_id": "intl-base4",
+    "number": "127",
+    "category": "energy",
+    "name": {
+      "en": "Grass Energy"
+    },
+    "pokemon": [],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "stage": "basic"
+  },
+  {
+    "id": "intl-base4-128",
+    "set_id": "intl-base4",
+    "number": "128",
+    "category": "energy",
+    "name": {
+      "en": "Lightning Energy"
+    },
+    "pokemon": [],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "stage": "basic"
+  },
+  {
+    "id": "intl-base4-129",
+    "set_id": "intl-base4",
+    "number": "129",
+    "category": "energy",
+    "name": {
+      "en": "Psychic Energy"
+    },
+    "pokemon": [],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "stage": "basic"
+  },
+  {
+    "id": "intl-base4-13",
+    "set_id": "intl-base4",
+    "number": "13",
+    "category": "pokemon",
+    "name": {
+      "en": "Ninetales"
+    },
+    "pokemon": [
+      "Ninetales"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "fire"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Vulpix"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Lure"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "If your opponent has any Benched Pokémon, choose 1 of them and switch it with the Defending Pokémon."
+        }
+      },
+      {
+        "name": {
+          "en": "Fire Blast"
+        },
+        "cost": [
+          "fire",
+          "fire",
+          "fire",
+          "fire"
+        ],
+        "damage": "80",
+        "text": {
+          "en": "Discard 1 Energy card attached to Ninetales in order to use this attack."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-130",
+    "set_id": "intl-base4",
+    "number": "130",
+    "category": "energy",
+    "name": {
+      "en": "Water Energy"
+    },
+    "pokemon": [],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "stage": "basic"
+  },
+  {
+    "id": "intl-base4-14",
+    "set_id": "intl-base4",
+    "number": "14",
+    "category": "pokemon",
+    "name": {
+      "en": "Pidgeot"
+    },
+    "pokemon": [
+      "Pidgeot"
+    ],
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "normal"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Pidgeotto"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Wing Attack"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Hurricane"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Unless this attack Knocks Out the Defending Pokémon, return the Defending Pokémon and all cards attached to it to your opponent's hand."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ]
+  },
+  {
+    "id": "intl-base4-15",
+    "set_id": "intl-base4",
+    "number": "15",
+    "category": "pokemon",
+    "name": {
+      "en": "Poliwrath"
+    },
+    "pokemon": [
+      "Poliwrath"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "water"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Poliwhirl"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Water Gun"
+        },
+        "cost": [
+          "water",
+          "water",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Does 30 damage plus 10 more damage for each Water Energy attached to Poliwrath but not used to pay for this attack's Energy cost. Extra Energy after the 2nd doesn't count."
+        }
+      },
+      {
+        "name": {
+          "en": "Whirlpool"
+        },
+        "cost": [
+          "water",
+          "water",
+          "normal",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {
+          "en": "If the Defending Pokémon has any Energy cards attached to it, choose 1 and discard it."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-base4-16",
+    "set_id": "intl-base4",
+    "number": "16",
+    "category": "pokemon",
+    "name": {
+      "en": "Raichu"
+    },
+    "pokemon": [
+      "Raichu"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "lightning"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Pikachu"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Agility"
+        },
+        "cost": [
+          "lightning",
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip a coin. If heads, during your opponent's next turn, prevent all effects of attacks, including damage, done to Raichu."
+        }
+      },
+      {
+        "name": {
+          "en": "Thunder"
+        },
+        "cost": [
+          "lightning",
+          "lightning",
+          "lightning",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {
+          "en": "Flip a coin. If tails, Raichu does 30 damage to itself."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-17",
+    "set_id": "intl-base4",
+    "number": "17",
+    "category": "pokemon",
+    "name": {
+      "en": "Scyther"
+    },
+    "pokemon": [
+      "Scyther"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Swords Dance"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "",
+        "text": {
+          "en": "During your next turn, Scyther's Slash attack's base damage is 60 instead of 30."
+        }
+      },
+      {
+        "name": {
+          "en": "Slash"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ]
+  },
+  {
+    "id": "intl-base4-18",
+    "set_id": "intl-base4",
+    "number": "18",
+    "category": "pokemon",
+    "name": {
+      "en": "Venusaur"
+    },
+    "pokemon": [
+      "Venusaur"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Ivysaur"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Solarbeam"
+        },
+        "cost": [
+          "grass",
+          "grass",
+          "grass",
+          "grass"
+        ],
+        "damage": "60",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-base4-19",
+    "set_id": "intl-base4",
+    "number": "19",
+    "category": "pokemon",
+    "name": {
+      "en": "Wigglytuff"
+    },
+    "pokemon": [
+      "Wigglytuff"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "normal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Jigglypuff"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Lullaby"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "The Defending Pokémon is now Asleep."
+        }
+      },
+      {
+        "name": {
+          "en": "Do the Wave"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Does 10 damage plus 10 more damage for each of your Benched Pokémon."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-base4-2",
+    "set_id": "intl-base4",
+    "number": "2",
+    "category": "pokemon",
+    "name": {
+      "en": "Blastoise"
+    },
+    "pokemon": [
+      "Blastoise"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "water"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Wartortle"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Hydro Pump"
+        },
+        "cost": [
+          "water",
+          "water",
+          "water"
+        ],
+        "damage": "40+",
+        "text": {
+          "en": "Does 40 damage plus 10 more damage for each Water Energy attached to Blastoise but not used to pay for this attack's Energy cost. You can't add more than 20 damage in this way."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-base4-20",
+    "set_id": "intl-base4",
+    "number": "20",
+    "category": "pokemon",
+    "name": {
+      "en": "Zapdos"
+    },
+    "pokemon": [
+      "Zapdos"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Thunder"
+        },
+        "cost": [
+          "lightning",
+          "lightning",
+          "lightning",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {
+          "en": "Flip a coin. If tails, Zapdos does 30 damage to itself."
+        }
+      },
+      {
+        "name": {
+          "en": "Thunderbolt"
+        },
+        "cost": [
+          "lightning",
+          "lightning",
+          "lightning",
+          "lightning"
+        ],
+        "damage": "100",
+        "text": {
+          "en": "Discard all Energy cards attached to Zapdos in order to use this attack."
+        }
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-base4-21",
+    "set_id": "intl-base4",
+    "number": "21",
+    "category": "pokemon",
+    "name": {
+      "en": "Beedrill"
+    },
+    "pokemon": [
+      "Beedrill"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Kakuna"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Twineedle"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Flip 2 coins. This attack does 30 damage times the number of heads."
+        }
+      },
+      {
+        "name": {
+          "en": "Poison Sting"
+        },
+        "cost": [
+          "grass",
+          "grass",
+          "grass"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Poisoned."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ]
+  },
+  {
+    "id": "intl-base4-22",
+    "set_id": "intl-base4",
+    "number": "22",
+    "category": "pokemon",
+    "name": {
+      "en": "Dragonair"
+    },
+    "pokemon": [
+      "Dragonair"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "normal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Dratini"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Slam"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip 2 coins. This attack does 30 damage times the number of heads."
+        }
+      },
+      {
+        "name": {
+          "en": "Hyper Beam"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "If the Defending Pokémon has any Energy cards attached to it, choose 1 of them and discard it."
+        }
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-base4-23",
+    "set_id": "intl-base4",
+    "number": "23",
+    "category": "pokemon",
+    "name": {
+      "en": "Dugtrio"
+    },
+    "pokemon": [
+      "Dugtrio"
+    ],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Diglett"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Slash"
+        },
+        "cost": [
+          "fighting",
+          "fighting",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Earthquake"
+        },
+        "cost": [
+          "fighting",
+          "fighting",
+          "fighting",
+          "fighting"
+        ],
+        "damage": "70",
+        "text": {
+          "en": "Does 10 damage to each of your own Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "lightning",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-base4-24",
+    "set_id": "intl-base4",
+    "number": "24",
+    "category": "pokemon",
+    "name": {
+      "en": "Electabuzz"
+    },
+    "pokemon": [
+      "Electabuzz"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Thundershock"
+        },
+        "cost": [
+          "lightning"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+        }
+      },
+      {
+        "name": {
+          "en": "Thunderpunch"
+        },
+        "cost": [
+          "lightning",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Flip a coin. If heads, this attack does 30 damage plus 10 more damage; if tails, this attack does 30 damage and Electabuzz does 10 damage to itself."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-base4-25",
+    "set_id": "intl-base4",
+    "number": "25",
+    "category": "pokemon",
+    "name": {
+      "en": "Electrode"
+    },
+    "pokemon": [
+      "Electrode"
+    ],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "lightning"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Voltorb"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Electric Shock"
+        },
+        "cost": [
+          "lightning",
+          "lightning",
+          "lightning"
+        ],
+        "damage": "50",
+        "text": {
+          "en": "Flip a coin. If tails, Electrode does 10 damage to itself."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-26",
+    "set_id": "intl-base4",
+    "number": "26",
+    "category": "pokemon",
+    "name": {
+      "en": "Kangaskhan"
+    },
+    "pokemon": [
+      "Kangaskhan"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Fetch"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Draw a card."
+        }
+      },
+      {
+        "name": {
+          "en": "Comet Punch"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip 4 coins. This attack does 20 damage times the number of heads."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-base4-27",
+    "set_id": "intl-base4",
+    "number": "27",
+    "category": "pokemon",
+    "name": {
+      "en": "Mr. Mime"
+    },
+    "pokemon": [
+      "Mr. Mime"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "evolves_from": {
+      "en": "Mime Jr."
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Meditate"
+        },
+        "cost": [
+          "psychic",
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Does 10 damage plus 10 more damage for each damage counter on the Defending Pokémon."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-28",
+    "set_id": "intl-base4",
+    "number": "28",
+    "category": "pokemon",
+    "name": {
+      "en": "Pidgeotto"
+    },
+    "pokemon": [
+      "Pidgeotto"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "normal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Pidgey"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Whirlwind"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "If your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with the Defending Pokémon. (Do the damage before switching the Pokémon.)"
+        }
+      },
+      {
+        "name": {
+          "en": "Mirror Move"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "If Pidgeotto was attacked last turn, do the final result of that attack on Pidgeotto to the Defending Pokémon."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-29",
+    "set_id": "intl-base4",
+    "number": "29",
+    "category": "pokemon",
+    "name": {
+      "en": "Pinsir"
+    },
+    "pokemon": [
+      "Pinsir"
+    ],
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Irongrip"
+        },
+        "cost": [
+          "grass",
+          "grass"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+        }
+      },
+      {
+        "name": {
+          "en": "Guillotine"
+        },
+        "cost": [
+          "grass",
+          "grass",
+          "normal",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-3",
+    "set_id": "intl-base4",
+    "number": "3",
+    "category": "pokemon",
+    "name": {
+      "en": "Chansey"
+    },
+    "pokemon": [
+      "Chansey"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 120,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Scrunch"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, prevent all damage done to Chansey during your opponent's next turn. (Any other effects of attacks still happen.)"
+        }
+      },
+      {
+        "name": {
+          "en": "Double-edge"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "80",
+        "text": {
+          "en": "Chansey does 80 damage to itself."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-30",
+    "set_id": "intl-base4",
+    "number": "30",
+    "category": "pokemon",
+    "name": {
+      "en": "Snorlax"
+    },
+    "pokemon": [
+      "Snorlax"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "evolves_from": {
+      "en": "Munchlax"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Body Slam"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 4
+  },
+  {
+    "id": "intl-base4-31",
+    "set_id": "intl-base4",
+    "number": "31",
+    "category": "pokemon",
+    "name": {
+      "en": "Venomoth"
+    },
+    "pokemon": [
+      "Venomoth"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Venonat"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Venom Powder"
+        },
+        "cost": [
+          "grass",
+          "grass"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Confused and Poisoned."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ]
+  },
+  {
+    "id": "intl-base4-32",
+    "set_id": "intl-base4",
+    "number": "32",
+    "category": "pokemon",
+    "name": {
+      "en": "Victreebel"
+    },
+    "pokemon": [
+      "Victreebel"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Weepinbell"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Lure"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "",
+        "text": {
+          "en": "If your opponent has any Benched Pokémon, choose 1 of them and switch it with his or her Active Pokémon."
+        }
+      },
+      {
+        "name": {
+          "en": "Acid"
+        },
+        "cost": [
+          "grass",
+          "grass"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon can't retreat during your opponent's next turn."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-base4-33",
+    "set_id": "intl-base4",
+    "number": "33",
+    "category": "pokemon",
+    "name": {
+      "en": "Arcanine"
+    },
+    "pokemon": [
+      "Arcanine"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "fire"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Growlithe"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Flamethrower"
+        },
+        "cost": [
+          "fire",
+          "fire",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "en": "Discard 1 Energy card attached to Arcanine in order to use this attack."
+        }
+      },
+      {
+        "name": {
+          "en": "Take Down"
+        },
+        "cost": [
+          "fire",
+          "fire",
+          "normal",
+          "normal"
+        ],
+        "damage": "80",
+        "text": {
+          "en": "Arcanine does 30 damage to itself."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-base4-34",
+    "set_id": "intl-base4",
+    "number": "34",
+    "category": "pokemon",
+    "name": {
+      "en": "Butterfree"
+    },
+    "pokemon": [
+      "Butterfree"
+    ],
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Metapod"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Whirlwind"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "If your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with the Defending Pokémon. (Do the damage before switching the Pokémon.)"
+        }
+      },
+      {
+        "name": {
+          "en": "Mega Drain"
+        },
+        "cost": [
+          "grass",
+          "grass",
+          "grass",
+          "grass"
+        ],
+        "damage": "40",
+        "text": {
+          "en": "Remove a number of damage counters from Butterfree equal to half the damage done to the Defending Pokémon (after applying Weakness and Resistance) (rounded up to the nearest 10)."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ]
+  },
+  {
+    "id": "intl-base4-35",
+    "set_id": "intl-base4",
+    "number": "35",
+    "category": "pokemon",
+    "name": {
+      "en": "Charmeleon"
+    },
+    "pokemon": [
+      "Charmeleon"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "fire"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Charmander"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Slash"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Flamethrower"
+        },
+        "cost": [
+          "fire",
+          "fire",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "en": "Discard 1 Energy card attached to Charmeleon in order to use this attack."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-36",
+    "set_id": "intl-base4",
+    "number": "36",
+    "category": "pokemon",
+    "name": {
+      "en": "Dewgong"
+    },
+    "pokemon": [
+      "Dewgong"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "water"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Seel"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Aurora Beam"
+        },
+        "cost": [
+          "water",
+          "water",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Ice Beam"
+        },
+        "cost": [
+          "water",
+          "water",
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-base4-37",
+    "set_id": "intl-base4",
+    "number": "37",
+    "category": "pokemon",
+    "name": {
+      "en": "Dodrio"
+    },
+    "pokemon": [
+      "Dodrio"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "normal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Doduo"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Rage"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Does 10 damage plus 10 more damage for each damage counter on Dodrio."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ]
+  },
+  {
+    "id": "intl-base4-38",
+    "set_id": "intl-base4",
+    "number": "38",
+    "category": "pokemon",
+    "name": {
+      "en": "Dratini"
+    },
+    "pokemon": [
+      "Dratini"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Pound"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-39",
+    "set_id": "intl-base4",
+    "number": "39",
+    "category": "pokemon",
+    "name": {
+      "en": "Exeggutor"
+    },
+    "pokemon": [
+      "Exeggutor"
+    ],
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Exeggcute"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Teleport"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Switch Exeggutor with 1 of your Benched Pokémon."
+        }
+      },
+      {
+        "name": {
+          "en": "Big Eggsplosion"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip a number of coins equal to the number of Energy attached to Exeggutor. This attack does 20 damage times the number of heads."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-base4-4",
+    "set_id": "intl-base4",
+    "number": "4",
+    "category": "pokemon",
+    "name": {
+      "en": "Charizard"
+    },
+    "pokemon": [
+      "Charizard"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 120,
+    "types": [
+      "fire"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Charmeleon"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Fire Spin"
+        },
+        "cost": [
+          "fire",
+          "fire",
+          "fire",
+          "fire"
+        ],
+        "damage": "100",
+        "text": {
+          "en": "Discard 2 Energy cards attached to Charizard in order to use this attack."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-base4-40",
+    "set_id": "intl-base4",
+    "number": "40",
+    "category": "pokemon",
+    "name": {
+      "en": "Farfetch'd"
+    },
+    "pokemon": [
+      "Farfetch'd"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Leek Slap"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If tails, this attack does nothing. Either way, you can't use this attack again as long as Farfetch'd stays in play (even putting Farfetch'd on the Bench won't let you use it again.)"
+        }
+      },
+      {
+        "name": {
+          "en": "Pot Smash"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-41",
+    "set_id": "intl-base4",
+    "number": "41",
+    "category": "pokemon",
+    "name": {
+      "en": "Fearow"
+    },
+    "pokemon": [
+      "Fearow"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "normal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Spearow"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Agility"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip a coin. If heads, during your opponent's next turn, prevent all effects of attacks, including damage, done to Fearow."
+        }
+      },
+      {
+        "name": {
+          "en": "Drill Peck"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ]
+  },
+  {
+    "id": "intl-base4-42",
+    "set_id": "intl-base4",
+    "number": "42",
+    "category": "pokemon",
+    "name": {
+      "en": "Growlithe"
+    },
+    "pokemon": [
+      "Growlithe"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Flare"
+        },
+        "cost": [
+          "fire",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-43",
+    "set_id": "intl-base4",
+    "number": "43",
+    "category": "pokemon",
+    "name": {
+      "en": "Haunter"
+    },
+    "pokemon": [
+      "Haunter"
+    ],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Gastly"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Hypnosis"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "",
+        "text": {
+          "en": "The Defending Pokémon is now Asleep."
+        }
+      },
+      {
+        "name": {
+          "en": "Dream Eater"
+        },
+        "cost": [
+          "psychic",
+          "psychic"
+        ],
+        "damage": "",
+        "text": {
+          "en": "You can't this attack unless the Defending Pokémon is Asleep."
+        }
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-44",
+    "set_id": "intl-base4",
+    "number": "44",
+    "category": "pokemon",
+    "name": {
+      "en": "Ivysaur"
+    },
+    "pokemon": [
+      "Ivysaur"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Barboach"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Vine Whip"
+        },
+        "cost": [
+          "grass",
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Poisonpowder"
+        },
+        "cost": [
+          "grass",
+          "grass",
+          "grass"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "The Defending Pokémon is now Poisoned."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-45",
+    "set_id": "intl-base4",
+    "number": "45",
+    "category": "pokemon",
+    "name": {
+      "en": "Jynx"
+    },
+    "pokemon": [
+      "Jynx"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Doubleslap"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip 2 coins. This attack does 10 damage times the number of heads."
+        }
+      },
+      {
+        "name": {
+          "en": "Meditate"
+        },
+        "cost": [
+          "psychic",
+          "psychic",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Does 20 damage plus 10 more damage for each damage counter on the Defending Pokémon."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-base4-46",
+    "set_id": "intl-base4",
+    "number": "46",
+    "category": "pokemon",
+    "name": {
+      "en": "Kadabra"
+    },
+    "pokemon": [
+      "Kadabra"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Abra"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Recover"
+        },
+        "cost": [
+          "psychic",
+          "psychic"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Discard 1 Energy card attached to Kadabra in order use this attack. Remove all damage counters from Kadabra."
+        }
+      },
+      {
+        "name": {
+          "en": "Super Psy"
+        },
+        "cost": [
+          "psychic",
+          "psychic",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-base4-47",
+    "set_id": "intl-base4",
+    "number": "47",
+    "category": "pokemon",
+    "name": {
+      "en": "Kakuna"
+    },
+    "pokemon": [
+      "Kakuna"
+    ],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Weedle"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Stiffen"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, prevent all damage done to Kakuna during your opponent's next turn. (Any other effects of attacks still happen.)"
+        }
+      },
+      {
+        "name": {
+          "en": "Poisonpowder"
+        },
+        "cost": [
+          "grass",
+          "grass"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Poisoned."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-base4-48",
+    "set_id": "intl-base4",
+    "number": "48",
+    "category": "pokemon",
+    "name": {
+      "en": "Lickitung"
+    },
+    "pokemon": [
+      "Lickitung"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Tongue Wrap"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+        }
+      },
+      {
+        "name": {
+          "en": "Supersonic"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Confused."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-base4-49",
+    "set_id": "intl-base4",
+    "number": "49",
+    "category": "pokemon",
+    "name": {
+      "en": "Machoke"
+    },
+    "pokemon": [
+      "Machoke"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Machop"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Karate Chop"
+        },
+        "cost": [
+          "fighting",
+          "fighting",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Does 50 damage minus 10 for each damage counter on Machoke."
+        }
+      },
+      {
+        "name": {
+          "en": "Submission"
+        },
+        "cost": [
+          "fighting",
+          "fighting",
+          "normal",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {
+          "en": "Machoke does 20 damage to itself."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-base4-5",
+    "set_id": "intl-base4",
+    "number": "5",
+    "category": "pokemon",
+    "name": {
+      "en": "Clefable"
+    },
+    "pokemon": [
+      "Clefable"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "normal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Clefairy"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Metronome"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Choose 1 of the Defending Pokémon's attacks. Metronome copies that attack except for its Energy costs and anything else required in order to use that attack, such as discarding Energy cards. (No matter what type the Defending Pokémon is, Clefable's type is still Colorless.)"
+        }
+      },
+      {
+        "name": {
+          "en": "Minimize"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "All damage done by attacks to Clefable during your opponent's next turn is reduce by 20 (after applying Weakness and Resistance)."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-base4-50",
+    "set_id": "intl-base4",
+    "number": "50",
+    "category": "pokemon",
+    "name": {
+      "en": "Magikarp"
+    },
+    "pokemon": [
+      "Magikarp"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 30,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Tackle"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Flail"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Does 10 damage times number of damage counters on Magikarp."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-51",
+    "set_id": "intl-base4",
+    "number": "51",
+    "category": "pokemon",
+    "name": {
+      "en": "Magmar"
+    },
+    "pokemon": [
+      "Magmar"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Fire Punch"
+        },
+        "cost": [
+          "fire",
+          "fire"
+        ],
+        "damage": "30",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Flamethrower"
+        },
+        "cost": [
+          "fire",
+          "fire",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "en": "Discard 1 Energy card attached to Magmar in order to use this attack."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-base4-52",
+    "set_id": "intl-base4",
+    "number": "52",
+    "category": "pokemon",
+    "name": {
+      "en": "Marowak"
+    },
+    "pokemon": [
+      "Marowak"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Cubone"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Bonemerang"
+        },
+        "cost": [
+          "fighting",
+          "fighting"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Flip 2 coins. This attack does 30 damage times the number of heads."
+        }
+      },
+      {
+        "name": {
+          "en": "Call for Friend"
+        },
+        "cost": [
+          "fighting",
+          "fighting",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Search your deck for a Fighting Basic Pokémon card and put it onto your Bench. Shuffle your deck afterward. (You can't use this attack if your Bench is full.)"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "lightning",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-53",
+    "set_id": "intl-base4",
+    "number": "53",
+    "category": "pokemon",
+    "name": {
+      "en": "Nidorina"
+    },
+    "pokemon": [
+      "Nidorina"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Nidoran♀"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Supersonic"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Confused."
+        }
+      },
+      {
+        "name": {
+          "en": "Double Kick"
+        },
+        "cost": [
+          "grass",
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Flip 2 coins. This attack does 30 damage times the number of heads."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-54",
+    "set_id": "intl-base4",
+    "number": "54",
+    "category": "pokemon",
+    "name": {
+      "en": "Nidorino"
+    },
+    "pokemon": [
+      "Nidorino"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Nidoran♂"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Double Kick"
+        },
+        "cost": [
+          "grass",
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Flip 2 coins. This attack does 30 damage times the number of heads."
+        }
+      },
+      {
+        "name": {
+          "en": "Horn Drill"
+        },
+        "cost": [
+          "grass",
+          "grass",
+          "normal",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-55",
+    "set_id": "intl-base4",
+    "number": "55",
+    "category": "pokemon",
+    "name": {
+      "en": "Parasect"
+    },
+    "pokemon": [
+      "Parasect"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Paras"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Spore"
+        },
+        "cost": [
+          "grass",
+          "grass"
+        ],
+        "damage": "",
+        "text": {
+          "en": "The Defending Pokémon is now Asleep."
+        }
+      },
+      {
+        "name": {
+          "en": "Slash"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-56",
+    "set_id": "intl-base4",
+    "number": "56",
+    "category": "pokemon",
+    "name": {
+      "en": "Persian"
+    },
+    "pokemon": [
+      "Persian"
+    ],
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "normal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Meowth"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Scratch"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Pounce"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "If the Defending Pokémon attacks Persian during your opponent's next turn, any damage done by the attack is reduce by 10 (after applying Weakness and Resistance). (Benching either Pokémon ends this effect.)"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-30"
+      }
+    ]
+  },
+  {
+    "id": "intl-base4-57",
+    "set_id": "intl-base4",
+    "number": "57",
+    "category": "pokemon",
+    "name": {
+      "en": "Poliwhirl"
+    },
+    "pokemon": [
+      "Poliwhirl"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "water"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Poliwag"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Amnesia"
+        },
+        "cost": [
+          "water",
+          "water"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Choose 1 of defenders attacks. Defender cannot use that attack next turn."
+        }
+      },
+      {
+        "name": {
+          "en": "Doubleslap"
+        },
+        "cost": [
+          "water",
+          "water",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Flip 2 coins. This attack does 30 damage times number of heads."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-58",
+    "set_id": "intl-base4",
+    "number": "58",
+    "category": "pokemon",
+    "name": {
+      "en": "Raticate"
+    },
+    "pokemon": [
+      "Raticate"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "normal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Poochyena"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Bite"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Super Fang"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Does damage to the Defending Pokémon equal to half the Defending Pokémon's remaining HP (rounded up to the nearest 10)."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-59",
+    "set_id": "intl-base4",
+    "number": "59",
+    "category": "pokemon",
+    "name": {
+      "en": "Rhydon"
+    },
+    "pokemon": [
+      "Rhydon"
+    ],
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Rhyhorn"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Horn Attack"
+        },
+        "cost": [
+          "fighting",
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Ram"
+        },
+        "cost": [
+          "fighting",
+          "fighting",
+          "fighting",
+          "fighting"
+        ],
+        "damage": "50",
+        "text": {
+          "en": "Rhydon does 20 damage to itself. If your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with the Defending Pokémon. (Do the damage before switching the Pokémon. Switch the Pokémon even if Rhydon is knocked out.)"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "lightning",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-base4-6",
+    "set_id": "intl-base4",
+    "number": "6",
+    "category": "pokemon",
+    "name": {
+      "en": "Clefairy"
+    },
+    "pokemon": [
+      "Clefairy"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Sing"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Asleep."
+        }
+      },
+      {
+        "name": {
+          "en": "Metronome"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Choose 1 of Defending Pokémon's attacks. Metronome copies that attack except for its Energy costs and anything else required in order to use that attack, such as discarding energy cards. (No matter what type the defender is, Clefairy's type is still Colorless.)"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-60",
+    "set_id": "intl-base4",
+    "number": "60",
+    "category": "pokemon",
+    "name": {
+      "en": "Seaking"
+    },
+    "pokemon": [
+      "Seaking"
+    ],
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "water"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Goldeen"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Horn Attack"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Waterfall"
+        },
+        "cost": [
+          "water",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-61",
+    "set_id": "intl-base4",
+    "number": "61",
+    "category": "pokemon",
+    "name": {
+      "en": "Seel"
+    },
+    "pokemon": [
+      "Seel"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Headbutt"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-62",
+    "set_id": "intl-base4",
+    "number": "62",
+    "category": "pokemon",
+    "name": {
+      "en": "Tauros"
+    },
+    "pokemon": [
+      "Tauros"
+    ],
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Stomp"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip a coin. If heads, this attack does 20 damage plus 10 more damage; if tails, this attack does 20 damage."
+        }
+      },
+      {
+        "name": {
+          "en": "Rampage"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Does 20 damage plus 10 more damage for each damage counter on Tauros. Flip a coin. If tails, Tauros is now Confused (after doing damage)."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-base4-63",
+    "set_id": "intl-base4",
+    "number": "63",
+    "category": "pokemon",
+    "name": {
+      "en": "Wartortle"
+    },
+    "pokemon": [
+      "Wartortle"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "water"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Squirtle"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Withdraw"
+        },
+        "cost": [
+          "water",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, prevent all damage done to Wartortle during your opponent's next turn. (Any other effects of attacks still happen.)"
+        }
+      },
+      {
+        "name": {
+          "en": "Bite"
+        },
+        "cost": [
+          "water",
+          "normal",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-64",
+    "set_id": "intl-base4",
+    "number": "64",
+    "category": "pokemon",
+    "name": {
+      "en": "Weepinbell"
+    },
+    "pokemon": [
+      "Weepinbell"
+    ],
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Bellsprout"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Poisonpowder"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Poisoned."
+        }
+      },
+      {
+        "name": {
+          "en": "Razor Leaf"
+        },
+        "cost": [
+          "grass",
+          "grass"
+        ],
+        "damage": "30",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-65",
+    "set_id": "intl-base4",
+    "number": "65",
+    "category": "pokemon",
+    "name": {
+      "en": "Abra"
+    },
+    "pokemon": [
+      "Abra"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 30,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Psyshock"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ]
+  },
+  {
+    "id": "intl-base4-66",
+    "set_id": "intl-base4",
+    "number": "66",
+    "category": "pokemon",
+    "name": {
+      "en": "Bellsprout"
+    },
+    "pokemon": [
+      "Bellsprout"
+    ],
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Vine Whip"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Call for Family"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Search your deck for a Basic Pokémon named Bellsprout and put it onto your Bench. Shuffle your deck afterward. (You can't use this attack if your Bench is full.)"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-67",
+    "set_id": "intl-base4",
+    "number": "67",
+    "category": "pokemon",
+    "name": {
+      "en": "Bulbasaur"
+    },
+    "pokemon": [
+      "Bulbasaur"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Leech Seed"
+        },
+        "cost": [
+          "grass",
+          "grass"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Unless all damage from this attack is prevented, you may remove 1 damage counter from Bulbasaur."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-68",
+    "set_id": "intl-base4",
+    "number": "68",
+    "category": "pokemon",
+    "name": {
+      "en": "Caterpie"
+    },
+    "pokemon": [
+      "Caterpie"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "String Shot"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-69",
+    "set_id": "intl-base4",
+    "number": "69",
+    "category": "pokemon",
+    "name": {
+      "en": "Charmander"
+    },
+    "pokemon": [
+      "Charmander"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Scratch"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Ember"
+        },
+        "cost": [
+          "fire",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Discard 1 Energy card attached to Charmander in order to use this attack."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-7",
+    "set_id": "intl-base4",
+    "number": "7",
+    "category": "pokemon",
+    "name": {
+      "en": "Gyarados"
+    },
+    "pokemon": [
+      "Gyarados"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "water"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Magikarp"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Dragon Rage"
+        },
+        "cost": [
+          "water",
+          "water",
+          "water"
+        ],
+        "damage": "50",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Bubblebeam"
+        },
+        "cost": [
+          "water",
+          "water",
+          "water",
+          "water"
+        ],
+        "damage": "40",
+        "text": {
+          "en": "Flip a coin. If heads, Defending Pokémon is now Paralyzed."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-base4-70",
+    "set_id": "intl-base4",
+    "number": "70",
+    "category": "pokemon",
+    "name": {
+      "en": "Cubone"
+    },
+    "pokemon": [
+      "Cubone"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Snivel"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "If the Defending Pokémon attacks Cubone during your opponent's next turn, any damage done by the attack is reduced by 20 (after applying Weakness and Resistance). (Benching either Pokémon ends this effect.)"
+        }
+      },
+      {
+        "name": {
+          "en": "Rage"
+        },
+        "cost": [
+          "fighting",
+          "fighting"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Does 10 damage plus 10 more damage for each damage counter on Cubone."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "lightning",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-71",
+    "set_id": "intl-base4",
+    "number": "71",
+    "category": "pokemon",
+    "name": {
+      "en": "Diglett"
+    },
+    "pokemon": [
+      "Diglett"
+    ],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 30,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Dig"
+        },
+        "cost": [
+          "fighting"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Mud Slap"
+        },
+        "cost": [
+          "fighting",
+          "fighting"
+        ],
+        "damage": "30",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "lightning",
+        "value": "-30"
+      }
+    ]
+  },
+  {
+    "id": "intl-base4-72",
+    "set_id": "intl-base4",
+    "number": "72",
+    "category": "pokemon",
+    "name": {
+      "en": "Doduo"
+    },
+    "pokemon": [
+      "Doduo"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Fury Attack"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip 2 coins. This attack does 10 damage times the number of heads."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ]
+  },
+  {
+    "id": "intl-base4-73",
+    "set_id": "intl-base4",
+    "number": "73",
+    "category": "pokemon",
+    "name": {
+      "en": "Drowzee"
+    },
+    "pokemon": [
+      "Drowzee"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Pound"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Confuse Ray"
+        },
+        "cost": [
+          "psychic",
+          "psychic"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Confused."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-74",
+    "set_id": "intl-base4",
+    "number": "74",
+    "category": "pokemon",
+    "name": {
+      "en": "Exeggcute"
+    },
+    "pokemon": [
+      "Exeggcute"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Hypnosis"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "",
+        "text": {
+          "en": "The Defending Pokémon is now Asleep."
+        }
+      },
+      {
+        "name": {
+          "en": "Leech Seed"
+        },
+        "cost": [
+          "grass",
+          "grass"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Unless all damage from this attack is prevented, you may remove 1 damage counter from Exeggcute."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-75",
+    "set_id": "intl-base4",
+    "number": "75",
+    "category": "pokemon",
+    "name": {
+      "en": "Gastly"
+    },
+    "pokemon": [
+      "Gastly"
+    ],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 30,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Sleeping Gas"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Asleep."
+        }
+      },
+      {
+        "name": {
+          "en": "Destiny Bond"
+        },
+        "cost": [
+          "psychic",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Discard 1 Energy card attached to Gastly in order to use this attack. If a Pokémon Knocks Out Gastly during your opponent's next turn, Knock Out that Pokémon."
+        }
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ]
+  },
+  {
+    "id": "intl-base4-76",
+    "set_id": "intl-base4",
+    "number": "76",
+    "category": "pokemon",
+    "name": {
+      "en": "Goldeen"
+    },
+    "pokemon": [
+      "Goldeen"
+    ],
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Horn Attack"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ]
+  },
+  {
+    "id": "intl-base4-77",
+    "set_id": "intl-base4",
+    "number": "77",
+    "category": "pokemon",
+    "name": {
+      "en": "Jigglypuff"
+    },
+    "pokemon": [
+      "Jigglypuff"
+    ],
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Lullaby"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "The Defending Pokémon is now Asleep."
+        }
+      },
+      {
+        "name": {
+          "en": "Pound"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-78",
+    "set_id": "intl-base4",
+    "number": "78",
+    "category": "pokemon",
+    "name": {
+      "en": "Machop"
+    },
+    "pokemon": [
+      "Machop"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Low Kick"
+        },
+        "cost": [
+          "fighting"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-79",
+    "set_id": "intl-base4",
+    "number": "79",
+    "category": "pokemon",
+    "name": {
+      "en": "Magnemite"
+    },
+    "pokemon": [
+      "Magnemite"
+    ],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Thunder Wave"
+        },
+        "cost": [
+          "lightning"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+        }
+      },
+      {
+        "name": {
+          "en": "Selfdestruct"
+        },
+        "cost": [
+          "lightning",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {
+          "en": "Does 10 damage to each Pokémon on each player's Bench. (Don't apply Weakness and Resistance for Benched Pokémon.) Magnemite does 40 damage to itself."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-8",
+    "set_id": "intl-base4",
+    "number": "8",
+    "category": "pokemon",
+    "name": {
+      "en": "Hitmonchan"
+    },
+    "pokemon": [
+      "Hitmonchan"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Jab"
+        },
+        "cost": [
+          "fighting"
+        ],
+        "damage": "20",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Special Punch"
+        },
+        "cost": [
+          "fighting",
+          "fighting",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-base4-80",
+    "set_id": "intl-base4",
+    "number": "80",
+    "category": "pokemon",
+    "name": {
+      "en": "Meowth"
+    },
+    "pokemon": [
+      "Meowth"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Pay Day"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip a coin. If heads, draw a card."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-81",
+    "set_id": "intl-base4",
+    "number": "81",
+    "category": "pokemon",
+    "name": {
+      "en": "Metapod"
+    },
+    "pokemon": [
+      "Metapod"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Caterpie"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Stiffen"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, prevent all damage done to Metapod during your opponent's next turn. (Any other effects of attacks still happen.)"
+        }
+      },
+      {
+        "name": {
+          "en": "Stun Spore"
+        },
+        "cost": [
+          "grass",
+          "grass"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-base4-82",
+    "set_id": "intl-base4",
+    "number": "82",
+    "category": "pokemon",
+    "name": {
+      "en": "Nidoran♀"
+    },
+    "pokemon": [
+      "Nidoran♀"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Fury Swipes"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip 3 coins. This attack does 10 damage times the number of heads."
+        }
+      },
+      {
+        "name": {
+          "en": "Call for Family"
+        },
+        "cost": [
+          "grass",
+          "grass"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Search your deck for a Basic Pokémon named Nidoran M or Nidoran F and put it onto your Bench. Shuffle your deck afterward. (You can't use this attack if your Bench is full.)"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-83",
+    "set_id": "intl-base4",
+    "number": "83",
+    "category": "pokemon",
+    "name": {
+      "en": "Nidoran♂"
+    },
+    "pokemon": [
+      "Nidoran♂"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Horn Hazard"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If tails, this attack does nothing."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-84",
+    "set_id": "intl-base4",
+    "number": "84",
+    "category": "pokemon",
+    "name": {
+      "en": "Onix"
+    },
+    "pokemon": [
+      "Onix"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Rock Throw"
+        },
+        "cost": [
+          "fighting"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Harden"
+        },
+        "cost": [
+          "fighting",
+          "fighting"
+        ],
+        "damage": "",
+        "text": {
+          "en": "During opponent's next turn, whenever 30 or less damage is done to Onix (after applying Weakness and Resistance), prevent that damage. (Any other effects of attacks still happen.)"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-base4-85",
+    "set_id": "intl-base4",
+    "number": "85",
+    "category": "pokemon",
+    "name": {
+      "en": "Paras"
+    },
+    "pokemon": [
+      "Paras"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Scratch"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Spore"
+        },
+        "cost": [
+          "grass",
+          "grass"
+        ],
+        "damage": "",
+        "text": {
+          "en": "The Defending Pokémon is now Asleep."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-86",
+    "set_id": "intl-base4",
+    "number": "86",
+    "category": "pokemon",
+    "name": {
+      "en": "Pidgey"
+    },
+    "pokemon": [
+      "Pidgey"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Whirlwind"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "If your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with the Defending Pokémon. (Do the damage before switching the Pokémon.)"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-87",
+    "set_id": "intl-base4",
+    "number": "87",
+    "category": "pokemon",
+    "name": {
+      "en": "Pikachu"
+    },
+    "pokemon": [
+      "Pikachu"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Gnaw"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Thunder Jolt"
+        },
+        "cost": [
+          "lightning",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Flip a coin. If tails, Pikachu does 10 damage to itself."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-88",
+    "set_id": "intl-base4",
+    "number": "88",
+    "category": "pokemon",
+    "name": {
+      "en": "Poliwag"
+    },
+    "pokemon": [
+      "Poliwag"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Water Gun"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Does 10 damage plus 10 damage for each Energy attached to Poliwag but not used to pay for this attack's Energy cost. Extra Energy after the end don't count."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-89",
+    "set_id": "intl-base4",
+    "number": "89",
+    "category": "pokemon",
+    "name": {
+      "en": "Rattata"
+    },
+    "pokemon": [
+      "Rattata"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 30,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Bite"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-30"
+      }
+    ]
+  },
+  {
+    "id": "intl-base4-9",
+    "set_id": "intl-base4",
+    "number": "9",
+    "category": "pokemon",
+    "name": {
+      "en": "Magneton"
+    },
+    "pokemon": [
+      "Magneton"
+    ],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "lightning"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Magnemite"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Thunder Wave"
+        },
+        "cost": [
+          "lightning",
+          "lightning",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+        }
+      },
+      {
+        "name": {
+          "en": "Selfdestruct"
+        },
+        "cost": [
+          "lightning",
+          "lightning",
+          "normal",
+          "normal"
+        ],
+        "damage": "80",
+        "text": {
+          "en": "Does 20 damage to each Pokémon on each player's Bench. (Don't apply Weakness and Resistance for Benched Pokémon.) Magneton does 80 damage to itself."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-90",
+    "set_id": "intl-base4",
+    "number": "90",
+    "category": "pokemon",
+    "name": {
+      "en": "Rhyhorn"
+    },
+    "pokemon": [
+      "Rhyhorn"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Leer"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon can't attack Rhyhorn during your opponent's next turn. (Benching either Pokémon ends this effect.)"
+        }
+      },
+      {
+        "name": {
+          "en": "Horn Attack"
+        },
+        "cost": [
+          "fighting",
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "lightning",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-base4-91",
+    "set_id": "intl-base4",
+    "number": "91",
+    "category": "pokemon",
+    "name": {
+      "en": "Sandshrew"
+    },
+    "pokemon": [
+      "Sandshrew"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Sand-attack"
+        },
+        "cost": [
+          "fighting"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "lightning",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-92",
+    "set_id": "intl-base4",
+    "number": "92",
+    "category": "pokemon",
+    "name": {
+      "en": "Spearow"
+    },
+    "pokemon": [
+      "Spearow"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Peck"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Mirror Move"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "If Spearow was attacked last turn, do the final result of that attack on Spearow to the Defending Pokémon."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ]
+  },
+  {
+    "id": "intl-base4-93",
+    "set_id": "intl-base4",
+    "number": "93",
+    "category": "pokemon",
+    "name": {
+      "en": "Squirtle"
+    },
+    "pokemon": [
+      "Squirtle"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Bubble"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+        }
+      },
+      {
+        "name": {
+          "en": "Withdraw"
+        },
+        "cost": [
+          "water",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, prevent all damage done to Squirtle during your opponent's next turn. (Any other effects of attacks still happen.)"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-94",
+    "set_id": "intl-base4",
+    "number": "94",
+    "category": "pokemon",
+    "name": {
+      "en": "Starmie"
+    },
+    "pokemon": [
+      "Starmie"
+    ],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "water"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Staryu"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Recover"
+        },
+        "cost": [
+          "water",
+          "water"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Discard 1 Energy card to Starmie in order to use this attack. Remove all damage counters from Starmie."
+        }
+      },
+      {
+        "name": {
+          "en": "Star Freeze"
+        },
+        "cost": [
+          "water",
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-95",
+    "set_id": "intl-base4",
+    "number": "95",
+    "category": "pokemon",
+    "name": {
+      "en": "Staryu"
+    },
+    "pokemon": [
+      "Staryu"
+    ],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Slap"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-96",
+    "set_id": "intl-base4",
+    "number": "96",
+    "category": "pokemon",
+    "name": {
+      "en": "Tangela"
+    },
+    "pokemon": [
+      "Tangela"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Bind"
+        },
+        "cost": [
+          "grass",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+        }
+      },
+      {
+        "name": {
+          "en": "Poisonpowder"
+        },
+        "cost": [
+          "grass",
+          "grass",
+          "grass"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "The Defending Pokémon is now Poisoned."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-base4-97",
+    "set_id": "intl-base4",
+    "number": "97",
+    "category": "pokemon",
+    "name": {
+      "en": "Venonat"
+    },
+    "pokemon": [
+      "Venonat"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Stun Spore"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+        }
+      },
+      {
+        "name": {
+          "en": "Leech Life"
+        },
+        "cost": [
+          "grass",
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Remove a number of damage counters from Venonat equal to the damage done to the Defending Pokémon (after applying Weakness and Resistance)."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-98",
+    "set_id": "intl-base4",
+    "number": "98",
+    "category": "pokemon",
+    "name": {
+      "en": "Voltorb"
+    },
+    "pokemon": [
+      "Voltorb"
+    ],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Tackle"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-base4-99",
+    "set_id": "intl-base4",
+    "number": "99",
+    "category": "pokemon",
+    "name": {
+      "en": "Vulpix"
+    },
+    "pokemon": [
+      "Vulpix"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Confuse Ray"
+        },
+        "cost": [
+          "fire",
+          "fire"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Confused."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  }
+]

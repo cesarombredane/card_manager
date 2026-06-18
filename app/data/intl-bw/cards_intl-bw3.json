@@ -1,0 +1,7156 @@
+[
+  {
+    "id": "intl-bw3-1",
+    "set_id": "intl-bw3",
+    "number": "1",
+    "category": "pokemon",
+    "name": {
+      "en": "Sewaddle",
+      "fr": "Larveyette",
+      "es": "Sewaddle",
+      "it": "Sewaddle",
+      "pt-BR": "Sewaddle",
+      "de": "Strawickl"
+    },
+    "pokemon": [
+      "Sewaddle"
+    ],
+    "illustrator": "Mizue",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Leaf Boomerang",
+          "fr": "Feuille-Boomerang"
+        },
+        "cost": [
+          "grass",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip 2 coins. This attack does 20 damage times the number of heads.",
+          "fr": "Lancez 2 pièces. Cette attaque inflige 20 dégâts multipliés par le nombre de côtés face."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-bw3-10",
+    "set_id": "intl-bw3",
+    "number": "10",
+    "category": "pokemon",
+    "name": {
+      "en": "Amoonguss",
+      "fr": "Gaulet",
+      "es": "Amoonguss",
+      "it": "Amoonguss",
+      "pt-BR": "Amoonguss",
+      "de": "Hutsassa"
+    },
+    "pokemon": [
+      "Amoonguss"
+    ],
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Foongus",
+      "fr": "Trompignon"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Toxic",
+          "fr": "Toxik"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "",
+        "text": {
+          "en": "The Defending Pokémon is now Poisoned. Put 2 damage counters instead of 1 on that Pokémon between turns.",
+          "fr": "Le Pokémon Défenseur est maintenant Empoisonné. Placez 2 marqueurs de dégâts au lieu d'un sur le Pokémon ciblé entre chaque tour."
+        }
+      },
+      {
+        "name": {
+          "en": "Body Slam",
+          "fr": "Plaquage"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+          "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Paralysé."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "water",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-bw3-100",
+    "set_id": "intl-bw3",
+    "number": "100",
+    "category": "pokemon",
+    "name": {
+      "en": "Cobalion",
+      "fr": "Cobaltium",
+      "es": "Cobalion",
+      "it": "Cobalion",
+      "pt-BR": "Cobalion",
+      "de": "Kobalium"
+    },
+    "pokemon": [
+      "Cobalion"
+    ],
+    "illustrator": "5ban Graphics",
+    "rarity": "ultra_rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 120,
+    "types": [
+      "metal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Energy Press",
+          "fr": "Pression Énergétique"
+        },
+        "cost": [
+          "metal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Does 20 more damage for each Energy attached to the Defending Pokémon.",
+          "fr": "Inflige 20 dégâts supplémentaires pour chaque Énergie attachée au Pokémon Défenseur."
+        }
+      },
+      {
+        "name": {
+          "en": "Iron Breaker",
+          "fr": "Brise-Fer"
+        },
+        "cost": [
+          "metal",
+          "metal",
+          "normal"
+        ],
+        "damage": "80",
+        "text": {
+          "en": "The Defending Pokémon can't attack during your opponent's next turn.",
+          "fr": "Le Pokémon Défenseur ne peut pas attaquer pendant le prochain tour de votre adversaire."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-bw3-101",
+    "set_id": "intl-bw3",
+    "number": "101",
+    "category": "trainer",
+    "name": {
+      "en": "N",
+      "fr": "N",
+      "es": "N",
+      "it": "N",
+      "pt-BR": "N",
+      "de": "N"
+    },
+    "pokemon": [],
+    "illustrator": "Ken Sugimori",
+    "rarity": "ultra_rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "fr": "Chaque joueur mélange sa main avec son deck. Ensuite, chaque joueur pioche une carte pour chacune des cartes Récompense qu’il lui reste.",
+      "en": "Each player shuffles his or her hand into his or her deck. Then, each player draws a card for each of his or her remaining Prize cards.",
+      "es": "Cada jugador baraja las cartas de su mano en su baraja. Luego, cada jugador roba una carta por cada una de las cartas de Premio que le queden.",
+      "it": "Ogni giocatore rimischia le carte che ha in mano nel proprio mazzo. Quindi, ogni giocatore pesca una carta per ogni carta Premio che gli resta.",
+      "pt-BR": "Cada jogador embaralha sua mão em seu próprio baralho. Cada jogador então compra um card para cada um de seus cards de Prêmio restantes.",
+      "de": "Jeder Spieler mischt seine Hand zurück in sein Deck. Anschließend zieht jeder Spieler eine Karte für jede seiner noch übrigen Preiskarten."
+    }
+  },
+  {
+    "id": "intl-bw3-102",
+    "set_id": "intl-bw3",
+    "number": "102",
+    "category": "pokemon",
+    "name": {
+      "en": "Meowth",
+      "fr": "Miaouss",
+      "es": "Meowth",
+      "it": "Meowth",
+      "pt-BR": "Meowth",
+      "de": "Mauzi"
+    },
+    "pokemon": [
+      "Meowth"
+    ],
+    "illustrator": "Kouki Saitou",
+    "rarity": "secret_rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Fury Swipes",
+          "fr": "Combo-Griffe"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip 3 coins. This attack does 10 damage times the number of heads.",
+          "fr": "Lancez 3 pièces. Cette attaque inflige 10 dégâts multipliés par le nombre de côtés face."
+        }
+      },
+      {
+        "name": {
+          "en": "Pay Day",
+          "fr": "Jackpot"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Draw a card.",
+          "fr": "Piochez une carte."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-bw3-11",
+    "set_id": "intl-bw3",
+    "number": "11",
+    "category": "pokemon",
+    "name": {
+      "en": "Shelmet",
+      "fr": "Escargaume",
+      "es": "Shelmet",
+      "it": "Shelmet",
+      "pt-BR": "Shelmet",
+      "de": "Schnuthelm"
+    },
+    "pokemon": [
+      "Shelmet"
+    ],
+    "illustrator": "Midori Harada",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Mysterious Evolution",
+          "fr": "Évolution Mystérieuse"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "If Karrablast is in play, search your deck for a card that evolves from this Pokémon and put it onto this Pokémon. (This counts as evolving this Pokémon.) Shuffle your deck afterward.",
+          "fr": "Si Carabing est en jeu, cherchez dans votre deck une carte Évolution de ce Pokémon et placez-la sur ce Pokémon. (Cela équivaut à faire évoluer ce Pokémon.) Mélangez ensuite votre deck."
+        }
+      },
+      {
+        "name": {
+          "en": "Ram",
+          "fr": "Collision"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-bw3-12",
+    "set_id": "intl-bw3",
+    "number": "12",
+    "category": "pokemon",
+    "name": {
+      "en": "Accelgor",
+      "fr": "Limaspeed",
+      "es": "Accelgor",
+      "it": "Accelgor",
+      "pt-BR": "Accelgor",
+      "de": "Hydragil"
+    },
+    "pokemon": [
+      "Accelgor"
+    ],
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Shelmet",
+      "fr": "Escargaume"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Acid Spray",
+          "fr": "Bombe Acide"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip a coin. If heads, discard an Energy attached to the Defending Pokémon.",
+          "fr": "Lancez une pièce. Si c'est face, défaussez une Énergie attachée au Pokémon Défenseur."
+        }
+      },
+      {
+        "name": {
+          "en": "Slashing Strike",
+          "fr": "Coup Déchirant"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "60",
+        "text": {
+          "en": "This Pokémon can't use Slashing Strike during your next turn.",
+          "fr": "Ce Pokémon ne peut pas utiliser Coup Déchirant pendant votre prochain tour."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 0
+  },
+  {
+    "id": "intl-bw3-13",
+    "set_id": "intl-bw3",
+    "number": "13",
+    "category": "pokemon",
+    "name": {
+      "en": "Virizion",
+      "fr": "Viridium",
+      "es": "Virizion",
+      "it": "Virizion",
+      "pt-BR": "Virizion",
+      "de": "Viridium"
+    },
+    "pokemon": [
+      "Virizion"
+    ],
+    "illustrator": "5ban Graphics",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 110,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Double Draw",
+          "fr": "Double Pioche"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Draw 2 cards.",
+          "fr": "Piochez 2 cartes."
+        }
+      },
+      {
+        "name": {
+          "en": "Leaf Wallop",
+          "fr": "Rafale de Feuilles"
+        },
+        "cost": [
+          "grass",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {
+          "en": "During your next turn, this Pokémon's Leaf Wallop attack does 40 more damage (before applying Weakness and Resistance).",
+          "fr": "Pendant votre prochain tour, l'attaque Rafale de Feuilles de ce Pokémon inflige 40 dégâts supplémentaires (avant application de la Faiblesse et de la Résistance)."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "water",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-bw3-14",
+    "set_id": "intl-bw3",
+    "number": "14",
+    "category": "pokemon",
+    "name": {
+      "en": "Victini",
+      "fr": "Victini",
+      "es": "Victini",
+      "it": "Victini",
+      "pt-BR": "Victini",
+      "de": "Victini"
+    },
+    "pokemon": [
+      "Victini"
+    ],
+    "illustrator": "5ban Graphics",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Stored Power",
+          "fr": "Force Ajoutée"
+        },
+        "cost": [
+          "fire",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Move all Energy attached to this Pokémon to 1 of your Benched Pokémon.",
+          "fr": "Déplacez toutes les Énergies attachées à ce Pokémon vers 1 de vos Pokémon de Banc."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-bw3-15",
+    "set_id": "intl-bw3",
+    "number": "15",
+    "category": "pokemon",
+    "name": {
+      "en": "Victini",
+      "fr": "Victini",
+      "es": "Victini",
+      "it": "Victini",
+      "pt-BR": "Victini",
+      "de": "Victini"
+    },
+    "pokemon": [
+      "Victini"
+    ],
+    "illustrator": "Naoki Saito",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "V-create",
+          "fr": "Coup Victoire"
+        },
+        "cost": [
+          "fire",
+          "normal"
+        ],
+        "damage": "100",
+        "text": {
+          "en": "If you have 4 or fewer Benched Pokémon, this attack does nothing.",
+          "fr": "Si vous avez 4 Pokémon de Banc ou moins, cette attaque ne fait rien."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-bw3-16",
+    "set_id": "intl-bw3",
+    "number": "16",
+    "category": "pokemon",
+    "name": {
+      "en": "Pansear",
+      "fr": "Flamajou",
+      "es": "Pansear",
+      "it": "Pansear",
+      "pt-BR": "Pansear",
+      "de": "Grillmak"
+    },
+    "pokemon": [
+      "Pansear"
+    ],
+    "illustrator": "Shin Nagasawa",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Beat",
+          "fr": "Bataille"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Lunge",
+          "fr": "Coup Rapide"
+        },
+        "cost": [
+          "fire",
+          "normal",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {
+          "en": "Flip a coin. If tails, this attack does nothing.",
+          "fr": "Lancez une pièce. Si c'est pile, cette attaque ne fait rien."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-bw3-17",
+    "set_id": "intl-bw3",
+    "number": "17",
+    "category": "pokemon",
+    "name": {
+      "en": "Simisear",
+      "fr": "Flamoutan",
+      "es": "Simisear",
+      "it": "Simisear",
+      "pt-BR": "Simisear",
+      "de": "Grillchita"
+    },
+    "pokemon": [
+      "Simisear"
+    ],
+    "illustrator": "Shin Nagasawa",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "fire"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Pansear",
+      "fr": "Flamajou"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Scratch",
+          "fr": "Griffe"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Double Fire",
+          "fr": "Double Feu"
+        },
+        "cost": [
+          "fire",
+          "fire",
+          "normal"
+        ],
+        "damage": "80",
+        "text": {
+          "en": "Flip 2 coins. This attack does 80 damage times the number of heads.",
+          "fr": "Lancez 2 pièces. Cette attaque inflige 80 dégâts multipliés par le nombre de côtés face."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-bw3-18",
+    "set_id": "intl-bw3",
+    "number": "18",
+    "category": "pokemon",
+    "name": {
+      "en": "Heatmor",
+      "fr": "Aflamanoir",
+      "es": "Heatmor",
+      "it": "Heatmor",
+      "pt-BR": "Heatmor",
+      "de": "Furnifraß"
+    },
+    "pokemon": [
+      "Heatmor"
+    ],
+    "illustrator": "Kouki Saitou",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Singe",
+          "fr": "Roussi"
+        },
+        "cost": [
+          "fire"
+        ],
+        "damage": "",
+        "text": {
+          "en": "The Defending Pokémon is now Burned.",
+          "fr": "Le Pokémon Défenseur est maintenant Brûlé."
+        }
+      },
+      {
+        "name": {
+          "en": "Incinerate",
+          "fr": "Calcination"
+        },
+        "cost": [
+          "fire",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Before doing damage, discard a Pokémon Tool card attached to the Defending Pokémon.",
+          "fr": "Avant d'infliger des dégâts, défaussez une carte Outil Pokémon attachée au Pokémon Défenseur."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-bw3-19",
+    "set_id": "intl-bw3",
+    "number": "19",
+    "category": "pokemon",
+    "name": {
+      "en": "Larvesta",
+      "fr": "Pyronille",
+      "es": "Larvesta",
+      "it": "Larvesta",
+      "pt-BR": "Larvesta",
+      "de": "Ignivor"
+    },
+    "pokemon": [
+      "Larvesta"
+    ],
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Ember",
+          "fr": "Flammèche"
+        },
+        "cost": [
+          "fire"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip a coin. If tails, discard an Energy attached to this Pokémon.",
+          "fr": "Lancez une pièce. Si c'est pile, défaussez une Énergie attachée à ce Pokémon."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-bw3-2",
+    "set_id": "intl-bw3",
+    "number": "2",
+    "category": "pokemon",
+    "name": {
+      "en": "Swadloon",
+      "fr": "Couverdure",
+      "es": "Swadloon",
+      "it": "Swadloon",
+      "pt-BR": "Swadloon",
+      "de": "Folikon"
+    },
+    "pokemon": [
+      "Swadloon"
+    ],
+    "illustrator": "Midori Harada",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Sewaddle",
+      "fr": "Larveyette"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Tackle",
+          "fr": "Charge"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "20",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "String Shot",
+          "fr": "Sécrétion"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+          "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Paralysé."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-bw3-20",
+    "set_id": "intl-bw3",
+    "number": "20",
+    "category": "pokemon",
+    "name": {
+      "en": "Larvesta",
+      "fr": "Pyronille",
+      "es": "Larvesta",
+      "it": "Larvesta",
+      "pt-BR": "Larvesta",
+      "de": "Ignivor"
+    },
+    "pokemon": [
+      "Larvesta"
+    ],
+    "illustrator": "Naoki Saito",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Take Down",
+          "fr": "Bélier"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "This Pokémon does 10 damage to itself.",
+          "fr": "Ce Pokémon s'inflige 10 dégâts."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-bw3-21",
+    "set_id": "intl-bw3",
+    "number": "21",
+    "category": "pokemon",
+    "name": {
+      "en": "Volcarona",
+      "fr": "Pyrax",
+      "es": "Volcarona",
+      "it": "Volcarona",
+      "pt-BR": "Volcarona",
+      "de": "Ramoth"
+    },
+    "pokemon": [
+      "Volcarona"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 110,
+    "types": [
+      "fire"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Larvesta",
+      "fr": "Pyronille"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Fiery Dance",
+          "fr": "Danse du Feu"
+        },
+        "cost": [
+          "fire"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Attach a basic Energy card from your discard pile to 1 of your Pokémon.",
+          "fr": "Attachez une carte Énergie de base de votre pile de défausse à 1 de vos Pokémon."
+        }
+      },
+      {
+        "name": {
+          "en": "Heat Wave",
+          "fr": "Canicule"
+        },
+        "cost": [
+          "fire",
+          "normal",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {
+          "en": "The Defending Pokémon is now Burned.",
+          "fr": "Le Pokémon Défenseur est maintenant Brûlé."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-bw3-22",
+    "set_id": "intl-bw3",
+    "number": "22",
+    "category": "pokemon",
+    "name": {
+      "en": "Tympole",
+      "fr": "Tritonde",
+      "es": "Tympole",
+      "it": "Tympole",
+      "pt-BR": "Tympole",
+      "de": "Schallquap"
+    },
+    "pokemon": [
+      "Tympole"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Vibration",
+          "fr": "Vibration"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Mud Shot",
+          "fr": "Tir de Boue"
+        },
+        "cost": [
+          "water",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-bw3-23",
+    "set_id": "intl-bw3",
+    "number": "23",
+    "category": "pokemon",
+    "name": {
+      "en": "Palpitoad",
+      "fr": "Batracné",
+      "es": "Palpitoad",
+      "it": "Palpitoad",
+      "pt-BR": "Palpitoad",
+      "de": "Mebrana"
+    },
+    "pokemon": [
+      "Palpitoad"
+    ],
+    "illustrator": "sui",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "water"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Tympole",
+      "fr": "Tritonde"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Mud Shot",
+          "fr": "Tir de Boue"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "20",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Round",
+          "fr": "Chant Canon"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Does 20 damage times the number of your Pokémon that have the Round attack.",
+          "fr": "Inflige 20 dégâts multipliés par le nombre de vos Pokémon possédant l'attaque Chant Canon."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-bw3-24",
+    "set_id": "intl-bw3",
+    "number": "24",
+    "category": "pokemon",
+    "name": {
+      "en": "Seismitoad",
+      "fr": "Crapustule",
+      "es": "Seismitoad",
+      "it": "Seismitoad",
+      "pt-BR": "Seismitoad",
+      "de": "Branawarz"
+    },
+    "pokemon": [
+      "Seismitoad"
+    ],
+    "illustrator": "Masakazu Fukuda",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 140,
+    "types": [
+      "water"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Palpitoad",
+      "fr": "Batracné"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Round",
+          "fr": "Chant Canon"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Does 30 damage times the number of your Pokémon that have the Round attack.",
+          "fr": "Inflige 30 dégâts multipliés par le nombre de vos Pokémon possédant l'attaque Chant Canon."
+        }
+      },
+      {
+        "name": {
+          "en": "Hyper Voice",
+          "fr": "Mégaphone"
+        },
+        "cost": [
+          "water",
+          "water",
+          "normal"
+        ],
+        "damage": "70",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-bw3-25",
+    "set_id": "intl-bw3",
+    "number": "25",
+    "category": "pokemon",
+    "name": {
+      "en": "Tirtouga",
+      "fr": "Carapagos",
+      "es": "Tirtouga",
+      "it": "Tirtouga",
+      "pt-BR": "Tirtouga",
+      "de": "Galapaflos"
+    },
+    "pokemon": [
+      "Tirtouga"
+    ],
+    "illustrator": "Naoyo Kimura",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "water"
+    ],
+    "stage": "restored",
+    "attacks": [
+      {
+        "name": {
+          "en": "Water Gun",
+          "fr": "Pistolet à O"
+        },
+        "cost": [
+          "water",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Surf",
+          "fr": "Surf"
+        },
+        "cost": [
+          "water",
+          "normal",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-bw3-26",
+    "set_id": "intl-bw3",
+    "number": "26",
+    "category": "pokemon",
+    "name": {
+      "en": "Carracosta",
+      "fr": "Mégapagos",
+      "es": "Carracosta",
+      "it": "Carracosta",
+      "pt-BR": "Carracosta",
+      "de": "Karippas"
+    },
+    "pokemon": [
+      "Carracosta"
+    ],
+    "illustrator": "match",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 140,
+    "types": [
+      "water"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Tirtouga",
+      "fr": "Carapagos"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Crunch",
+          "fr": "Mâchouille"
+        },
+        "cost": [
+          "water",
+          "water",
+          "normal",
+          "normal"
+        ],
+        "damage": "80",
+        "text": {
+          "en": "Discard an Energy attached to the Defending Pokémon.",
+          "fr": "Défaussez une Énergie attachée au Pokémon Défenseur."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 4
+  },
+  {
+    "id": "intl-bw3-27",
+    "set_id": "intl-bw3",
+    "number": "27",
+    "category": "pokemon",
+    "name": {
+      "en": "Vanillite",
+      "fr": "Sorbébé",
+      "es": "Vanillite",
+      "it": "Vanillite",
+      "pt-BR": "Vanillite",
+      "de": "Gelatini"
+    },
+    "pokemon": [
+      "Vanillite"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Icicle Barb",
+          "fr": "Barbelé de Glace"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip a coin. If heads, this attack does 10 more damage.",
+          "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 10 dégâts supplémentaires."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-bw3-28",
+    "set_id": "intl-bw3",
+    "number": "28",
+    "category": "pokemon",
+    "name": {
+      "en": "Vanillish",
+      "fr": "Sorboul",
+      "es": "Vanillish",
+      "it": "Vanillish",
+      "pt-BR": "Vanillish",
+      "de": "Gelatroppo"
+    },
+    "pokemon": [
+      "Vanillish"
+    ],
+    "illustrator": "match",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "water"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Vanillite",
+      "fr": "Sorbébé"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Ice Beam",
+          "fr": "Laser Glace"
+        },
+        "cost": [
+          "water",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+          "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Paralysé."
+        }
+      },
+      {
+        "name": {
+          "en": "Frost Breath",
+          "fr": "Souffle Glacé"
+        },
+        "cost": [
+          "water",
+          "water"
+        ],
+        "damage": "40",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-bw3-29",
+    "set_id": "intl-bw3",
+    "number": "29",
+    "category": "pokemon",
+    "name": {
+      "en": "Vanilluxe",
+      "fr": "Sorbouboul",
+      "es": "Vanilluxe",
+      "it": "Vanilluxe",
+      "pt-BR": "Vanilluxe",
+      "de": "Gelatwino"
+    },
+    "pokemon": [
+      "Vanilluxe"
+    ],
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "water"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Vanillish",
+      "fr": "Sorboul"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Double Freeze",
+          "fr": "Double Gelure"
+        },
+        "cost": [
+          "water",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {
+          "en": "Flip 2 coins. This attack does 40 damage times the number of heads. If either of them is heads, the Defending Pokémon is now Paralyzed.",
+          "fr": "Lancez 2 pièces. Cette attaque inflige 40 dégâts multipliés par le nombre de côtés face. Si vous obtenez au moins un côté face, le Pokémon Défenseur est maintenant Paralysé."
+        }
+      },
+      {
+        "name": {
+          "en": "Frost Breath",
+          "fr": "Souffle Glacé"
+        },
+        "cost": [
+          "water",
+          "water"
+        ],
+        "damage": "60",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-bw3-3",
+    "set_id": "intl-bw3",
+    "number": "3",
+    "category": "pokemon",
+    "name": {
+      "en": "Leavanny",
+      "fr": "Manternel",
+      "es": "Leavanny",
+      "it": "Leavanny",
+      "pt-BR": "Leavanny",
+      "de": "Matrifol"
+    },
+    "pokemon": [
+      "Leavanny"
+    ],
+    "illustrator": "5ban Graphics",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Swadloon",
+      "fr": "Couverdure"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Cutting Arm",
+          "fr": "Bras Coupant"
+        },
+        "cost": [
+          "grass",
+          "normal",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {
+          "en": "Flip 2 coins. This attack does 20 more damage for each heads.",
+          "fr": "Lancez 2 pièces. Cette attaque inflige 20 dégâts supplémentaires pour chaque côté face."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-bw3-30",
+    "set_id": "intl-bw3",
+    "number": "30",
+    "category": "pokemon",
+    "name": {
+      "en": "Frillish",
+      "fr": "Viskuse",
+      "es": "Frillish",
+      "it": "Frillish",
+      "pt-BR": "Frillish",
+      "de": "Quabbel"
+    },
+    "pokemon": [
+      "Frillish"
+    ],
+    "illustrator": "Naoyo Kimura",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Rain Splash",
+          "fr": "Pluie Éclaboussante"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-bw3-31",
+    "set_id": "intl-bw3",
+    "number": "31",
+    "category": "pokemon",
+    "name": {
+      "en": "Jellicent",
+      "fr": "Moyade",
+      "es": "Jellicent",
+      "it": "Jellicent",
+      "pt-BR": "Jellicent",
+      "de": "Apoquallyp"
+    },
+    "pokemon": [
+      "Jellicent"
+    ],
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 110,
+    "types": [
+      "water"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Frillish",
+      "fr": "Viskuse"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Hydro Pump",
+          "fr": "Hydrocanon"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Does 20 more damage for each Water Energy attached to this Pokémon.",
+          "fr": "Inflige 20 dégâts supplémentaires pour chaque Énergie Water attachée à ce Pokémon."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-bw3-32",
+    "set_id": "intl-bw3",
+    "number": "32",
+    "category": "pokemon",
+    "name": {
+      "en": "Cryogonal",
+      "fr": "Hexagel",
+      "es": "Cryogonal",
+      "it": "Cryogonal",
+      "pt-BR": "Cryogonal",
+      "de": "Frigometri"
+    },
+    "pokemon": [
+      "Cryogonal"
+    ],
+    "illustrator": "Masakazu Fukuda",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Icy Wind",
+          "fr": "Vent Glace"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "",
+        "text": {
+          "en": "The Defending Pokémon is now Asleep.",
+          "fr": "Le Pokémon Défenseur est maintenant Endormi."
+        }
+      },
+      {
+        "name": {
+          "en": "Ice Shard",
+          "fr": "Éclats Glace"
+        },
+        "cost": [
+          "water",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "If the Defending Pokémon is a Fighting Pokémon, this attack does 40 more damage.",
+          "fr": "Si le Pokémon Défenseur est un Pokémon Fighting, cette attaque inflige 40 dégâts supplémentaires."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-bw3-33",
+    "set_id": "intl-bw3",
+    "number": "33",
+    "category": "pokemon",
+    "name": {
+      "en": "Cryogonal",
+      "fr": "Hexagel",
+      "es": "Cryogonal",
+      "it": "Cryogonal",
+      "pt-BR": "Cryogonal",
+      "de": "Frigometri"
+    },
+    "pokemon": [
+      "Cryogonal"
+    ],
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Ice Chain",
+          "fr": "Chaîne de Glace"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Switch the Defending Pokémon with 1 of your opponent's Benched Pokémon.",
+          "fr": "Échangez le Pokémon Défenseur avec 1 des Pokémon de Banc de votre adversaire."
+        }
+      },
+      {
+        "name": {
+          "en": "Frost Vanish",
+          "fr": "Poudreuse d'Escampette"
+        },
+        "cost": [
+          "water",
+          "water"
+        ],
+        "damage": "40",
+        "text": {
+          "en": "You may return this Pokémon and all cards attached to it to your hand.",
+          "fr": "Vous pouvez reprendre ce Pokémon et toutes les cartes qui lui sont attachées dans votre main."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-bw3-34",
+    "set_id": "intl-bw3",
+    "number": "34",
+    "category": "pokemon",
+    "name": {
+      "en": "Kyurem",
+      "fr": "Kyurem",
+      "es": "Kyurem",
+      "it": "Kyurem",
+      "pt-BR": "Kyurem",
+      "de": "Kyurem"
+    },
+    "pokemon": [
+      "Kyurem"
+    ],
+    "illustrator": "5ban Graphics",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Outrage",
+          "fr": "Colère"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Does 10 more damage for each damage counter on this Pokémon.",
+          "fr": "Inflige 10 dégâts supplémentaires pour chaque marqueur de dégâts placé sur ce Pokémon."
+        }
+      },
+      {
+        "name": {
+          "en": "Glaciate",
+          "fr": "Ère Glaciaire"
+        },
+        "cost": [
+          "water",
+          "water",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "This attack does 30 damage to each of your opponent's Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "fr": "Cette attaque inflige 30 dégâts à chacun des Pokémon de votre adversaire. (N'appliquez ni la Faiblesse ni la Résistance aux Pokémon de Banc.)"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-bw3-35",
+    "set_id": "intl-bw3",
+    "number": "35",
+    "category": "pokemon",
+    "name": {
+      "en": "Blitzle",
+      "fr": "Zébibron",
+      "es": "Blitzle",
+      "it": "Blitzle",
+      "pt-BR": "Blitzle",
+      "de": "Elezeba"
+    },
+    "pokemon": [
+      "Blitzle"
+    ],
+    "illustrator": "Shin Nagasawa",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Agility",
+          "fr": "Hâte"
+        },
+        "cost": [
+          "lightning"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip a coin. If heads, prevent all effects of attacks, including damage, done to this Pokémon during your opponent's next turn.",
+          "fr": "Lancez une pièce. Si c'est face, évitez tous les effets d'attaques (y compris les dégâts) infligés à ce Pokémon pendant le prochain tour de votre adversaire."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-bw3-36",
+    "set_id": "intl-bw3",
+    "number": "36",
+    "category": "pokemon",
+    "name": {
+      "en": "Zebstrika",
+      "fr": "Zéblitz",
+      "es": "Zebstrika",
+      "it": "Zebstrika",
+      "pt-BR": "Zebstrika",
+      "de": "Zebritz"
+    },
+    "pokemon": [
+      "Zebstrika"
+    ],
+    "illustrator": "match",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "lightning"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Blitzle",
+      "fr": "Zébibron"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Quick Attack",
+          "fr": "Vive-Attaque"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip a coin. If heads, this attack does 20 more damage.",
+          "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 20 dégâts supplémentaires."
+        }
+      },
+      {
+        "name": {
+          "en": "Shock Bolt",
+          "fr": "Choc'Éclair"
+        },
+        "cost": [
+          "lightning",
+          "lightning",
+          "normal"
+        ],
+        "damage": "90",
+        "text": {
+          "en": "Flip a coin. If tails, discard all Lightning Energy attached to this Pokémon.",
+          "fr": "Lancez une pièce. Si c'est pile, défaussez toutes les Énergies Lightning attachées à ce Pokémon."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-bw3-37",
+    "set_id": "intl-bw3",
+    "number": "37",
+    "category": "pokemon",
+    "name": {
+      "en": "Emolga",
+      "fr": "Emolga",
+      "es": "Emolga",
+      "it": "Emolga",
+      "pt-BR": "Emolga",
+      "de": "Emolga"
+    },
+    "pokemon": [
+      "Emolga"
+    ],
+    "illustrator": "Naoki Saito",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Electrichain",
+          "fr": "Électrichaîne"
+        },
+        "cost": [
+          "lightning"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Does 20 more damage if you have any Lightning Pokémon on your Bench.",
+          "fr": "Inflige 20 dégâts supplémentaires si vous avez un Pokémon Lightning sur votre Banc."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-bw3-38",
+    "set_id": "intl-bw3",
+    "number": "38",
+    "category": "pokemon",
+    "name": {
+      "en": "Tynamo",
+      "fr": "Anchwatt",
+      "es": "Tynamo",
+      "it": "Tynamo",
+      "pt-BR": "Tynamo",
+      "de": "Zapplardin"
+    },
+    "pokemon": [
+      "Tynamo"
+    ],
+    "illustrator": "sui",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Thunder Wave",
+          "fr": "Cage-Éclair"
+        },
+        "cost": [
+          "lightning"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+          "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Paralysé."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-bw3-39",
+    "set_id": "intl-bw3",
+    "number": "39",
+    "category": "pokemon",
+    "name": {
+      "en": "Tynamo",
+      "fr": "Anchwatt",
+      "es": "Tynamo",
+      "it": "Tynamo",
+      "pt-BR": "Tynamo",
+      "de": "Zapplardin"
+    },
+    "pokemon": [
+      "Tynamo"
+    ],
+    "illustrator": "Naoki Saito",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 30,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Tackle",
+          "fr": "Charge"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 0
+  },
+  {
+    "id": "intl-bw3-4",
+    "set_id": "intl-bw3",
+    "number": "4",
+    "category": "pokemon",
+    "name": {
+      "en": "Petilil",
+      "fr": "Chlorobule",
+      "es": "Petilil",
+      "it": "Petilil",
+      "pt-BR": "Petilil",
+      "de": "Lilminip"
+    },
+    "pokemon": [
+      "Petilil"
+    ],
+    "illustrator": "Shigenori Negishi",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Ram",
+          "fr": "Collision"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Absorb",
+          "fr": "Vol-Vie"
+        },
+        "cost": [
+          "grass",
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Heal 10 damage from this Pokémon.",
+          "fr": "Soignez 10 dégâts à ce Pokémon."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "water",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-bw3-40",
+    "set_id": "intl-bw3",
+    "number": "40",
+    "category": "pokemon",
+    "name": {
+      "en": "Eelektrik",
+      "fr": "Lampéroie",
+      "es": "Eelektrik",
+      "it": "Eelektrik",
+      "pt-BR": "Eelektrik",
+      "de": "Zapplalek"
+    },
+    "pokemon": [
+      "Eelektrik"
+    ],
+    "illustrator": "MAHOU",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "lightning"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Tynamo",
+      "fr": "Anchwatt"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Electric Ball",
+          "fr": "Boule de Foudre"
+        },
+        "cost": [
+          "lightning",
+          "lightning",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-bw3-41",
+    "set_id": "intl-bw3",
+    "number": "41",
+    "category": "pokemon",
+    "name": {
+      "en": "Eelektross",
+      "fr": "Ohmassacre",
+      "es": "Eelektross",
+      "it": "Eelektross",
+      "pt-BR": "Eelektross",
+      "de": "Zapplarang"
+    },
+    "pokemon": [
+      "Eelektross"
+    ],
+    "illustrator": "Masakazu Fukuda",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 140,
+    "types": [
+      "lightning"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Eelektrik",
+      "fr": "Lampéroie"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Acid",
+          "fr": "Acide"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "The Defending Pokémon can't retreat during your opponent's next turn.",
+          "fr": "Le Pokémon Défenseur ne peut pas battre en retraite pendant le prochain tour de votre adversaire."
+        }
+      },
+      {
+        "name": {
+          "en": "Wild Charge",
+          "fr": "Éclair Fou"
+        },
+        "cost": [
+          "lightning",
+          "lightning",
+          "normal"
+        ],
+        "damage": "90",
+        "text": {
+          "en": "This Pokémon does 10 damage to itself.",
+          "fr": "Ce Pokémon s'inflige 10 dégâts."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-bw3-42",
+    "set_id": "intl-bw3",
+    "number": "42",
+    "category": "pokemon",
+    "name": {
+      "en": "Stunfisk",
+      "fr": "Limonde",
+      "es": "Stunfisk",
+      "it": "Stunfisk",
+      "pt-BR": "Stunfisk",
+      "de": "Flunschlik"
+    },
+    "pokemon": [
+      "Stunfisk"
+    ],
+    "illustrator": "Shin Nagasawa",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Mud Shot",
+          "fr": "Tir de Boue"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Thunder",
+          "fr": "Fatal-Foudre"
+        },
+        "cost": [
+          "lightning",
+          "normal",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {
+          "en": "Flip a coin. If tails, this Pokémon does 30 damage to itself.",
+          "fr": "Lancez une pièce. Si c'est pile, ce Pokémon s'inflige 30 dégâts."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-bw3-43",
+    "set_id": "intl-bw3",
+    "number": "43",
+    "category": "pokemon",
+    "name": {
+      "en": "Victini",
+      "fr": "Victini",
+      "es": "Victini",
+      "it": "Victini",
+      "pt-BR": "Victini",
+      "de": "Victini"
+    },
+    "pokemon": [
+      "Victini"
+    ],
+    "illustrator": "Shin Nagasawa",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "V-blast",
+          "fr": "Explo-Victoire"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "120",
+        "text": {
+          "en": "Flip 2 coins. If either of them is tails, this attack does nothing.",
+          "fr": "Lancez 2 pièces. Si vous obtenez au moins un côté pile, cette attaque ne fait rien."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-bw3-44",
+    "set_id": "intl-bw3",
+    "number": "44",
+    "category": "pokemon",
+    "name": {
+      "en": "Yamask",
+      "fr": "Tutafeh",
+      "es": "Yamask",
+      "it": "Yamask",
+      "pt-BR": "Yamask",
+      "de": "Makabaja"
+    },
+    "pokemon": [
+      "Yamask"
+    ],
+    "illustrator": "Midori Harada",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Perplex",
+          "fr": "Affolement"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Confused.",
+          "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Confus."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-bw3-45",
+    "set_id": "intl-bw3",
+    "number": "45",
+    "category": "pokemon",
+    "name": {
+      "en": "Yamask",
+      "fr": "Tutafeh",
+      "es": "Yamask",
+      "it": "Yamask",
+      "pt-BR": "Yamask",
+      "de": "Makabaja"
+    },
+    "pokemon": [
+      "Yamask"
+    ],
+    "illustrator": "Shin Nagasawa",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Ambush",
+          "fr": "Embuscade"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip a coin. If heads, this attack does 10 more damage.",
+          "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 10 dégâts supplémentaires."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-bw3-46",
+    "set_id": "intl-bw3",
+    "number": "46",
+    "category": "pokemon",
+    "name": {
+      "en": "Cofagrigus",
+      "fr": "Tutankafer",
+      "es": "Cofagrigus",
+      "it": "Cofagrigus",
+      "pt-BR": "Cofagrigus",
+      "de": "Echnatoll"
+    },
+    "pokemon": [
+      "Cofagrigus"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Yamask",
+      "fr": "Tutafeh"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Damagriiigus",
+          "fr": "Tutankarnage"
+        },
+        "cost": [
+          "psychic",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Move all damage counters from 1 of your Benched Pokémon to the Defending Pokémon.",
+          "fr": "Déplacez tous les marqueurs de dégâts de l'un de vos Pokémon de Banc vers le Pokémon Défenseur."
+        }
+      },
+      {
+        "name": {
+          "en": "Perplex",
+          "fr": "Affolement"
+        },
+        "cost": [
+          "psychic",
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "The Defending Pokémon is now Confused.",
+          "fr": "Le Pokémon Défenseur est maintenant Confus."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-bw3-47",
+    "set_id": "intl-bw3",
+    "number": "47",
+    "category": "pokemon",
+    "name": {
+      "en": "Cofagrigus",
+      "fr": "Tutankafer",
+      "es": "Cofagrigus",
+      "it": "Cofagrigus",
+      "pt-BR": "Cofagrigus",
+      "de": "Echnatoll"
+    },
+    "pokemon": [
+      "Cofagrigus"
+    ],
+    "illustrator": "Shin Nagasawa",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Yamask",
+      "fr": "Tutafeh"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Ambush",
+          "fr": "Embuscade"
+        },
+        "cost": [
+          "psychic",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {
+          "en": "Flip a coin. If heads, this attack does 20 more damage.",
+          "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 20 dégâts supplémentaires."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-bw3-48",
+    "set_id": "intl-bw3",
+    "number": "48",
+    "category": "pokemon",
+    "name": {
+      "en": "Trubbish",
+      "fr": "Miamiasme",
+      "es": "Trubbish",
+      "it": "Trubbish",
+      "pt-BR": "Trubbish",
+      "de": "Unratütox"
+    },
+    "pokemon": [
+      "Trubbish"
+    ],
+    "illustrator": "MAHOU",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Garbage Collection",
+          "fr": "Fouille Poubelle"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Put a card from your discard pile on top of your deck.",
+          "fr": "Mettez n'importe quelle carte de votre pile de défausse sur le dessus de votre deck."
+        }
+      },
+      {
+        "name": {
+          "en": "Sludge Bomb",
+          "fr": "Bomb-Beurk"
+        },
+        "cost": [
+          "psychic",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-bw3-49",
+    "set_id": "intl-bw3",
+    "number": "49",
+    "category": "pokemon",
+    "name": {
+      "en": "Garbodor",
+      "fr": "Miasmax",
+      "es": "Garbodor",
+      "it": "Garbodor",
+      "pt-BR": "Garbodor",
+      "de": "Deponitox"
+    },
+    "pokemon": [
+      "Garbodor"
+    ],
+    "illustrator": "match",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Trubbish",
+      "fr": "Miamiasme"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Gentle Wrap",
+          "fr": "Enveloppe Douce"
+        },
+        "cost": [
+          "psychic",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "The Defending Pokémon can't retreat during your opponent's next turn.",
+          "fr": "Le Pokémon Défenseur ne peut pas battre en retraite pendant le prochain tour de votre adversaire."
+        }
+      },
+      {
+        "name": {
+          "en": "Gunk Shot",
+          "fr": "Détricanon"
+        },
+        "cost": [
+          "psychic",
+          "psychic",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {
+          "en": "The Defending Pokémon is now Poisoned.",
+          "fr": "Le Pokémon Défenseur est maintenant Empoisonné."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-bw3-5",
+    "set_id": "intl-bw3",
+    "number": "5",
+    "category": "pokemon",
+    "name": {
+      "en": "Lilligant",
+      "fr": "Fragilady",
+      "es": "Lilligant",
+      "it": "Lilligant",
+      "pt-BR": "Lilligant",
+      "de": "Dressella"
+    },
+    "pokemon": [
+      "Lilligant"
+    ],
+    "illustrator": "Akira Komayama",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Petilil",
+      "fr": "Chlorobule"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Aromax",
+          "fr": "Parfum Régénérant"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Heal all damage from 1 of your Benched Pokémon.",
+          "fr": "Soignez tous les dégâts de l'un de vos Pokémon de Banc."
+        }
+      },
+      {
+        "name": {
+          "en": "Windmill",
+          "fr": "Moulin à Vent"
+        },
+        "cost": [
+          "grass",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Switch this Pokémon with 1 of your Benched Pokémon.",
+          "fr": "Échangez ce Pokémon avec 1 de vos Pokémon de Banc."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "water",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-bw3-50",
+    "set_id": "intl-bw3",
+    "number": "50",
+    "category": "pokemon",
+    "name": {
+      "en": "Solosis",
+      "fr": "Nucléos",
+      "es": "Solosis",
+      "it": "Solosis",
+      "pt-BR": "Solosis",
+      "de": "Monozyto"
+    },
+    "pokemon": [
+      "Solosis"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 30,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Rollout",
+          "fr": "Roulade"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-bw3-51",
+    "set_id": "intl-bw3",
+    "number": "51",
+    "category": "pokemon",
+    "name": {
+      "en": "Duosion",
+      "fr": "Méios",
+      "es": "Duosion",
+      "it": "Duosion",
+      "pt-BR": "Duosion",
+      "de": "Mitodos"
+    },
+    "pokemon": [
+      "Duosion"
+    ],
+    "illustrator": "sui",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Solosis",
+      "fr": "Nucléos"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Rollout",
+          "fr": "Roulade"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-bw3-52",
+    "set_id": "intl-bw3",
+    "number": "52",
+    "category": "pokemon",
+    "name": {
+      "en": "Reuniclus",
+      "fr": "Symbios",
+      "es": "Reuniclus",
+      "it": "Reuniclus",
+      "pt-BR": "Reuniclus",
+      "de": "Zytomega"
+    },
+    "pokemon": [
+      "Reuniclus"
+    ],
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Duosion",
+      "fr": "Méios"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Future Sight",
+          "fr": "Prescience"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Look at the top 5 cards of your deck and put them back on top of your deck in any order.",
+          "fr": "Regardez les 5 cartes du dessus de votre deck et replacez-les sur le dessus de votre deck dans l'ordre de votre choix."
+        }
+      },
+      {
+        "name": {
+          "en": "Net Force",
+          "fr": "Force Accrue"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "40",
+        "text": {
+          "en": "Does 40 damage times the number of Reuniclus you have in play.",
+          "fr": "Inflige 40 dégâts multipliés par le nombre de Symbios que vous avez en jeu."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-bw3-53",
+    "set_id": "intl-bw3",
+    "number": "53",
+    "category": "pokemon",
+    "name": {
+      "en": "Reuniclus",
+      "fr": "Symbios",
+      "es": "Reuniclus",
+      "it": "Reuniclus",
+      "pt-BR": "Reuniclus",
+      "de": "Zytomega"
+    },
+    "pokemon": [
+      "Reuniclus"
+    ],
+    "illustrator": "Mizue",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Duosion",
+      "fr": "Méios"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Dizzy Punch",
+          "fr": "Uppercut"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Flip 2 coins. This attack does 30 damage times the number of heads.",
+          "fr": "Lancez 2 pièces. Cette attaque inflige 30 dégâts multipliés par le nombre de côtés face."
+        }
+      },
+      {
+        "name": {
+          "en": "Mind Bend",
+          "fr": "Contrôleur d'Esprit"
+        },
+        "cost": [
+          "psychic",
+          "normal",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {
+          "en": "The Defending Pokémon is now Confused.",
+          "fr": "Le Pokémon Défenseur est maintenant Confus."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-bw3-54",
+    "set_id": "intl-bw3",
+    "number": "54",
+    "category": "pokemon",
+    "name": {
+      "en": "Elgyem",
+      "fr": "Lewsor",
+      "es": "Elgyem",
+      "it": "Elgyem",
+      "pt-BR": "Elgyem",
+      "de": "Pygraulon"
+    },
+    "pokemon": [
+      "Elgyem"
+    ],
+    "illustrator": "sui",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Headbutt",
+          "fr": "Coup d'Boule"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Calm Mind",
+          "fr": "Plénitude"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Heal 30 damage from this Pokémon.",
+          "fr": "Soignez 30 dégâts à ce Pokémon."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-bw3-55",
+    "set_id": "intl-bw3",
+    "number": "55",
+    "category": "pokemon",
+    "name": {
+      "en": "Elgyem",
+      "fr": "Lewsor",
+      "es": "Elgyem",
+      "it": "Elgyem",
+      "pt-BR": "Elgyem",
+      "de": "Pygraulon"
+    },
+    "pokemon": [
+      "Elgyem"
+    ],
+    "illustrator": "Naoki Saito",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "First Contact",
+          "fr": "Premier Contact"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Search your deck for 2 Basic Pokémon and put them onto your Bench. Shuffle your deck afterward.",
+          "fr": "Cherchez 2 Pokémon de base dans votre deck et placez-les sur votre Banc. Mélangez ensuite votre deck."
+        }
+      },
+      {
+        "name": {
+          "en": "Headbutt",
+          "fr": "Coup d'Boule"
+        },
+        "cost": [
+          "psychic",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-bw3-56",
+    "set_id": "intl-bw3",
+    "number": "56",
+    "category": "pokemon",
+    "name": {
+      "en": "Beheeyem",
+      "fr": "Neitram",
+      "es": "Beheeyem",
+      "it": "Beheeyem",
+      "pt-BR": "Beheeyem",
+      "de": "Megalon"
+    },
+    "pokemon": [
+      "Beheeyem"
+    ],
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Elgyem",
+      "fr": "Lewsor"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Synchronoise",
+          "fr": "Synchropeine"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Does 20 damage to each of your opponent's Benched Pokémon that shares a type with the Defending Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "fr": "Inflige 20 dégâts à chacun des Pokémon de Banc de votre adversaire ayant un type en commun avec le Pokémon Défenseur.  (N'appliquez ni la Faiblesse ni la Résistance aux Pokémon de Banc.)"
+        }
+      },
+      {
+        "name": {
+          "en": "Psyshot",
+          "fr": "Piqûre Psy"
+        },
+        "cost": [
+          "psychic",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-bw3-57",
+    "set_id": "intl-bw3",
+    "number": "57",
+    "category": "pokemon",
+    "name": {
+      "en": "Litwick",
+      "fr": "Funécire",
+      "es": "Litwick",
+      "it": "Litwick",
+      "pt-BR": "Litwick",
+      "de": "Lichtel"
+    },
+    "pokemon": [
+      "Litwick"
+    ],
+    "illustrator": "Masakazu Fukuda",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Searing Flame",
+          "fr": "Flammes Calcinantes"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Burned.",
+          "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Brûlé."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-bw3-58",
+    "set_id": "intl-bw3",
+    "number": "58",
+    "category": "pokemon",
+    "name": {
+      "en": "Litwick",
+      "fr": "Funécire",
+      "es": "Litwick",
+      "it": "Litwick",
+      "pt-BR": "Litwick",
+      "de": "Lichtel"
+    },
+    "pokemon": [
+      "Litwick"
+    ],
+    "illustrator": "Naoki Saito",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Teleportation Burst",
+          "fr": "Téléportation Explosive"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Switch this Pokémon with 1 of your Benched Pokémon.",
+          "fr": "Échangez ce Pokémon avec 1 de vos Pokémon de Banc."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-bw3-59",
+    "set_id": "intl-bw3",
+    "number": "59",
+    "category": "pokemon",
+    "name": {
+      "en": "Lampent",
+      "fr": "Mélancolux",
+      "es": "Lampent",
+      "it": "Lampent",
+      "pt-BR": "Lampent",
+      "de": "Laternecto"
+    },
+    "pokemon": [
+      "Lampent"
+    ],
+    "illustrator": "MAHOU",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Litwick",
+      "fr": "Funécire"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Luring Light",
+          "fr": "Appât Lumineux"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Switch the Defending Pokémon with 1 of your opponent's Benched Pokémon.",
+          "fr": "Échangez le Pokémon Défenseur avec 1 des Pokémon de Banc de votre adversaire."
+        }
+      },
+      {
+        "name": {
+          "en": "Will-O-Wisp",
+          "fr": "Feu Follet"
+        },
+        "cost": [
+          "psychic",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-bw3-6",
+    "set_id": "intl-bw3",
+    "number": "6",
+    "category": "pokemon",
+    "name": {
+      "en": "Dwebble",
+      "fr": "Crabicoque",
+      "es": "Dwebble",
+      "it": "Dwebble",
+      "pt-BR": "Dwebble",
+      "de": "Lithomith"
+    },
+    "pokemon": [
+      "Dwebble"
+    ],
+    "illustrator": "MAHOU",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Withdraw",
+          "fr": "Repli"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, prevent all damage done to this Pokémon by attacks during your opponent's next turn.",
+          "fr": "Lancez une pièce. Si c'est face, évitez tous les dégâts infligés à ce Pokémon par des attaques pendant le prochain tour de votre adversaire."
+        }
+      },
+      {
+        "name": {
+          "en": "Slash",
+          "fr": "Tranche"
+        },
+        "cost": [
+          "grass",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-bw3-60",
+    "set_id": "intl-bw3",
+    "number": "60",
+    "category": "pokemon",
+    "name": {
+      "en": "Chandelure",
+      "fr": "Lugulabre",
+      "es": "Chandelure",
+      "it": "Chandelure",
+      "pt-BR": "Chandelure",
+      "de": "Skelabra"
+    },
+    "pokemon": [
+      "Chandelure"
+    ],
+    "illustrator": "Naoyo Kimura",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Lampent",
+      "fr": "Mélancolux"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Eerie Glow",
+          "fr": "Lueur Sinistre"
+        },
+        "cost": [
+          "psychic",
+          "psychic",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "en": "The Defending Pokémon is now Burned and Confused.",
+          "fr": "Le Pokémon Défenseur est maintenant Brûlé et Confus."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-bw3-61",
+    "set_id": "intl-bw3",
+    "number": "61",
+    "category": "pokemon",
+    "name": {
+      "en": "Gigalith",
+      "fr": "Gigalithe",
+      "es": "Gigalith",
+      "it": "Gigalith",
+      "pt-BR": "Gigalith",
+      "de": "Brockoloss"
+    },
+    "pokemon": [
+      "Gigalith"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 150,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Boldore",
+      "fr": "Géolithe"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Core Cannon",
+          "fr": "Super Canon"
+        },
+        "cost": [
+          "fighting"
+        ],
+        "damage": "",
+        "text": {
+          "en": "This attack does 20 damage to 1 of your opponent's Pokémon for each Fighting Energy attached to this Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "fr": "Cette attaque inflige 20 dégâts à 1 des Pokémon de votre adversaire pour chaque Énergie Fighting attachée à ce Pokémon. (N'appliquez ni la Faiblesse ni la Résistance aux Pokémon de Banc.)"
+        }
+      },
+      {
+        "name": {
+          "en": "Power Gem",
+          "fr": "Rayon Gemme"
+        },
+        "cost": [
+          "fighting",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "90",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 4
+  },
+  {
+    "id": "intl-bw3-62",
+    "set_id": "intl-bw3",
+    "number": "62",
+    "category": "pokemon",
+    "name": {
+      "en": "Timburr",
+      "fr": "Charpenti",
+      "es": "Timburr",
+      "it": "Timburr",
+      "pt-BR": "Timburr",
+      "de": "Praktibalk"
+    },
+    "pokemon": [
+      "Timburr"
+    ],
+    "illustrator": "Tomokazu Komiya",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Pummel",
+          "fr": "Martelage"
+        },
+        "cost": [
+          "fighting"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip a coin. If heads, this attack does 10 more damage.",
+          "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 10 dégâts supplémentaires."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-bw3-63",
+    "set_id": "intl-bw3",
+    "number": "63",
+    "category": "pokemon",
+    "name": {
+      "en": "Gurdurr",
+      "fr": "Ouvrifier",
+      "es": "Gurdurr",
+      "it": "Gurdurr",
+      "pt-BR": "Gurdurr",
+      "de": "Strepoli"
+    },
+    "pokemon": [
+      "Gurdurr"
+    ],
+    "illustrator": "Sumiyoshi Kizuki",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Timburr",
+      "fr": "Charpenti"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Strength",
+          "fr": "Force"
+        },
+        "cost": [
+          "fighting",
+          "fighting"
+        ],
+        "damage": "30",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Pummel",
+          "fr": "Martelage"
+        },
+        "cost": [
+          "fighting",
+          "normal",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {
+          "en": "Flip a coin. If heads, this attack does 20 more damage.",
+          "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 20 dégâts supplémentaires."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-bw3-64",
+    "set_id": "intl-bw3",
+    "number": "64",
+    "category": "pokemon",
+    "name": {
+      "en": "Conkeldurr",
+      "fr": "Bétochef",
+      "es": "Conkeldurr",
+      "it": "Conkeldurr",
+      "pt-BR": "Conkeldurr",
+      "de": "Meistagrif"
+    },
+    "pokemon": [
+      "Conkeldurr"
+    ],
+    "illustrator": "kawayoo",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 140,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Gurdurr",
+      "fr": "Ouvrifier"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Top Down",
+          "fr": "Écras'Montagne"
+        },
+        "cost": [
+          "fighting",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "80",
+        "text": {
+          "en": "Flip a coin until you get tails. For each heads, discard the top card of your opponent's deck.",
+          "fr": "Lancez une pièce jusqu'à ce que vous obteniez un côté pile. Pour chaque côté face, défaussez la carte du dessus du deck de votre adversaire."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 4
+  },
+  {
+    "id": "intl-bw3-65",
+    "set_id": "intl-bw3",
+    "number": "65",
+    "category": "pokemon",
+    "name": {
+      "en": "Conkeldurr",
+      "fr": "Bétochef",
+      "es": "Conkeldurr",
+      "it": "Conkeldurr",
+      "pt-BR": "Conkeldurr",
+      "de": "Meistagrif"
+    },
+    "pokemon": [
+      "Conkeldurr"
+    ],
+    "illustrator": "Kouki Saitou",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 140,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Gurdurr",
+      "fr": "Ouvrifier"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Chip Away",
+          "fr": "Attrition"
+        },
+        "cost": [
+          "fighting"
+        ],
+        "damage": "40",
+        "text": {
+          "en": "This attack's damage isn't affected by any effects on the Defending Pokémon.",
+          "fr": "Les dégâts de cette attaque ne sont affectés par aucun effet en action sur le Pokémon Défenseur."
+        }
+      },
+      {
+        "name": {
+          "en": "Swing Around",
+          "fr": "Balançoire"
+        },
+        "cost": [
+          "fighting",
+          "fighting",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {
+          "en": "Flip 2 coins. This attack does 30 more damage for each heads.",
+          "fr": "Lancez 2 pièces. Cette attaque inflige 30 dégâts supplémentaires pour chaque côté face."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-bw3-66",
+    "set_id": "intl-bw3",
+    "number": "66",
+    "category": "pokemon",
+    "name": {
+      "en": "Archen",
+      "fr": "Arkéapti",
+      "es": "Archen",
+      "it": "Archen",
+      "pt-BR": "Archen",
+      "de": "Flapteryx"
+    },
+    "pokemon": [
+      "Archen"
+    ],
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "fighting"
+    ],
+    "stage": "restored",
+    "attacks": [
+      {
+        "name": {
+          "en": "Rock Throw",
+          "fr": "Jet-Pierres"
+        },
+        "cost": [
+          "fighting"
+        ],
+        "damage": "20",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Acrobatics",
+          "fr": "Acrobatie"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip 2 coins. This attack does 20 more damage for each heads.",
+          "fr": "Lancez 2 pièces. Cette attaque inflige 20 dégâts supplémentaires pour chaque côté face."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-bw3-67",
+    "set_id": "intl-bw3",
+    "number": "67",
+    "category": "pokemon",
+    "name": {
+      "en": "Archeops",
+      "fr": "Aéroptéryx",
+      "es": "Archeops",
+      "it": "Archeops",
+      "pt-BR": "Archeops",
+      "de": "Aeropteryx"
+    },
+    "pokemon": [
+      "Archeops"
+    ],
+    "illustrator": "Kouki Saitou",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Archen",
+      "fr": "Arkéapti"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Rock Slide",
+          "fr": "Éboulement"
+        },
+        "cost": [
+          "fighting",
+          "fighting",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {
+          "en": "Does 10 damage to 2 of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "fr": "Inflige 10 dégâts à 2 des Pokémon de Banc de votre adversaire. (N'appliquez ni la Faiblesse ni la Résistance aux Pokémon de Banc.)"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-bw3-68",
+    "set_id": "intl-bw3",
+    "number": "68",
+    "category": "pokemon",
+    "name": {
+      "en": "Stunfisk",
+      "fr": "Limonde",
+      "es": "Stunfisk",
+      "it": "Stunfisk",
+      "pt-BR": "Stunfisk",
+      "de": "Flunschlik"
+    },
+    "pokemon": [
+      "Stunfisk"
+    ],
+    "illustrator": "Midori Harada",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Trickle",
+          "fr": "Goutte à Goutte"
+        },
+        "cost": [
+          "lightning",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Flip 2 coins. This attack does 30 damage times the number of heads.",
+          "fr": "Lancez 2 pièces. Cette attaque inflige 30 dégâts multipliés par le nombre de côtés face."
+        }
+      },
+      {
+        "name": {
+          "en": "Thundershock",
+          "fr": "Éclair"
+        },
+        "cost": [
+          "lightning",
+          "lightning",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+          "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Paralysé."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "lightning",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-bw3-69",
+    "set_id": "intl-bw3",
+    "number": "69",
+    "category": "pokemon",
+    "name": {
+      "en": "Mienfoo",
+      "fr": "Kungfouine",
+      "es": "Mienfoo",
+      "it": "Mienfoo",
+      "pt-BR": "Mienfoo",
+      "de": "Lin-Fu"
+    },
+    "pokemon": [
+      "Mienfoo"
+    ],
+    "illustrator": "match",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Pound",
+          "fr": "Écras'Face"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "High Jump Kick",
+          "fr": "Pied Voltige"
+        },
+        "cost": [
+          "fighting",
+          "fighting"
+        ],
+        "damage": "30",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-bw3-7",
+    "set_id": "intl-bw3",
+    "number": "7",
+    "category": "pokemon",
+    "name": {
+      "en": "Crustle",
+      "fr": "Crabaraque",
+      "es": "Crustle",
+      "it": "Crustle",
+      "pt-BR": "Crustle",
+      "de": "Castellith"
+    },
+    "pokemon": [
+      "Crustle"
+    ],
+    "illustrator": "Naoyo Kimura",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Dwebble",
+      "fr": "Crabicoque"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "X-Scissor",
+          "fr": "Plaie-Croix"
+        },
+        "cost": [
+          "grass",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip a coin. If heads, this attack does 50 more damage.",
+          "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 50 dégâts supplémentaires."
+        }
+      },
+      {
+        "name": {
+          "en": "Reckless Charge",
+          "fr": "Attaque Imprudente"
+        },
+        "cost": [
+          "grass",
+          "normal",
+          "normal"
+        ],
+        "damage": "80",
+        "text": {
+          "en": "This Pokémon does 10 damage to itself.",
+          "fr": "Ce Pokémon s'inflige 10 dégâts."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-bw3-70",
+    "set_id": "intl-bw3",
+    "number": "70",
+    "category": "pokemon",
+    "name": {
+      "en": "Mienshao",
+      "fr": "Shaofouine",
+      "es": "Mienshao",
+      "it": "Mienshao",
+      "pt-BR": "Mienshao",
+      "de": "Wie-Shu"
+    },
+    "pokemon": [
+      "Mienshao"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Mienfoo",
+      "fr": "Kungfouine"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Feint",
+          "fr": "Ruse"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "This attack's damage isn't affected by Resistance.",
+          "fr": "Les dégâts de cette attaque ne sont pas affectés par la Résistance."
+        }
+      },
+      {
+        "name": {
+          "en": "High Jump Kick",
+          "fr": "Pied Voltige"
+        },
+        "cost": [
+          "fighting",
+          "fighting"
+        ],
+        "damage": "50",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-bw3-71",
+    "set_id": "intl-bw3",
+    "number": "71",
+    "category": "pokemon",
+    "name": {
+      "en": "Golett",
+      "fr": "Gringolem",
+      "es": "Golett",
+      "it": "Golett",
+      "pt-BR": "Golett",
+      "de": "Golbit"
+    },
+    "pokemon": [
+      "Golett"
+    ],
+    "illustrator": "Masakazu Fukuda",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Dynamic Punch",
+          "fr": "Dynamopoing"
+        },
+        "cost": [
+          "fighting",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip a coin. If heads, this attack does 20 more damage and the Defending Pokémon is now Confused.",
+          "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 20 dégâts supplémentaires et le Pokémon Défenseur est maintenant Confus."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "lightning",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-bw3-72",
+    "set_id": "intl-bw3",
+    "number": "72",
+    "category": "pokemon",
+    "name": {
+      "en": "Golurk",
+      "fr": "Golemastoc",
+      "es": "Golurk",
+      "it": "Golurk",
+      "pt-BR": "Golurk",
+      "de": "Golgantes"
+    },
+    "pokemon": [
+      "Golurk"
+    ],
+    "illustrator": "Kouki Saitou",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Golett",
+      "fr": "Gringolem"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Hammer Arm",
+          "fr": "Marto-Poing"
+        },
+        "cost": [
+          "fighting",
+          "fighting",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {
+          "en": "Discard the top card of your opponent's deck.",
+          "fr": "Défaussez la carte du dessus du deck de votre adversaire."
+        }
+      },
+      {
+        "name": {
+          "en": "Hurricane Punch",
+          "fr": "Poing Ouragan"
+        },
+        "cost": [
+          "fighting",
+          "fighting",
+          "normal",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "en": "Flip 4 coins. This attack does 50 damage times the number of heads.",
+          "fr": "Lancez 4 pièces. Cette attaque inflige 50 dégâts multipliés par le nombre de côtés face."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "lightning",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 4
+  },
+  {
+    "id": "intl-bw3-73",
+    "set_id": "intl-bw3",
+    "number": "73",
+    "category": "pokemon",
+    "name": {
+      "en": "Terrakion",
+      "fr": "Terrakium",
+      "es": "Terrakion",
+      "it": "Terrakion",
+      "pt-BR": "Terrakion",
+      "de": "Terrakium"
+    },
+    "pokemon": [
+      "Terrakion"
+    ],
+    "illustrator": "5ban Graphics",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Retaliate",
+          "fr": "Vengeance"
+        },
+        "cost": [
+          "fighting",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "If any of your Pokémon were Knocked Out by damage from an opponent's attack during his or her last turn, this attack does 60 more damage.",
+          "fr": "Si l'un de vos Pokémon a été mis K.O. par les dégâts d'une attaque de votre adversaire pendant son dernier tour, cette attaque inflige 60 dégâts supplémentaires."
+        }
+      },
+      {
+        "name": {
+          "en": "Land Crush",
+          "fr": "Écras'Terre"
+        },
+        "cost": [
+          "fighting",
+          "fighting",
+          "normal"
+        ],
+        "damage": "90",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 4
+  },
+  {
+    "id": "intl-bw3-74",
+    "set_id": "intl-bw3",
+    "number": "74",
+    "category": "pokemon",
+    "name": {
+      "en": "Landorus",
+      "fr": "Démétéros",
+      "es": "Landorus",
+      "it": "Landorus",
+      "pt-BR": "Landorus",
+      "de": "Demeteros"
+    },
+    "pokemon": [
+      "Landorus"
+    ],
+    "illustrator": "5ban Graphics",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 110,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Abundant Harvest",
+          "fr": "Récolte Abondante"
+        },
+        "cost": [
+          "fighting"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Attach a basic Energy card from your discard pile to this Pokémon.",
+          "fr": "Attachez une carte Énergie de base de votre pile de défausse à ce Pokémon."
+        }
+      },
+      {
+        "name": {
+          "en": "Gaia Hammer",
+          "fr": "Marteau de Gaïa"
+        },
+        "cost": [
+          "fighting",
+          "fighting",
+          "normal"
+        ],
+        "damage": "80",
+        "text": {
+          "en": "Does 10 damage to each Benched Pokémon (both yours and your opponent's). (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "fr": "Inflige 10 dégâts à chaque Pokémon de Banc (les vôtres et ceux de votre adversaire). (N'appliquez ni la Faiblesse ni la Résistance aux Pokémon de Banc.)"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "lightning",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-bw3-75",
+    "set_id": "intl-bw3",
+    "number": "75",
+    "category": "pokemon",
+    "name": {
+      "en": "Pawniard",
+      "fr": "Scalpion",
+      "es": "Pawniard",
+      "it": "Pawniard",
+      "pt-BR": "Pawniard",
+      "de": "Gladiantri"
+    },
+    "pokemon": [
+      "Pawniard"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "dark"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Iron Head",
+          "fr": "Tête de Fer"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip a coin until you get tails. This attack does 10 damage times the number of heads.",
+          "fr": "Lancez une pièce jusqu'à ce que vous obteniez un côté pile. Cette attaque inflige 10 dégâts multipliés par le nombre de côtés face."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-bw3-76",
+    "set_id": "intl-bw3",
+    "number": "76",
+    "category": "pokemon",
+    "name": {
+      "en": "Bisharp",
+      "fr": "Scalproie",
+      "es": "Bisharp",
+      "it": "Bisharp",
+      "pt-BR": "Bisharp",
+      "de": "Caesurio"
+    },
+    "pokemon": [
+      "Bisharp"
+    ],
+    "illustrator": "Kouki Saitou",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "dark"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Pawniard",
+      "fr": "Scalpion"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Finishing Blow",
+          "fr": "Coup de Grâce"
+        },
+        "cost": [
+          "dark"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "If the Defending Pokémon already has any damage counters on it, this attack does 50 more damage.",
+          "fr": "Si le Pokémon Défenseur a déjà des marqueurs de dégâts, cette attaque inflige 50 dégâts supplémentaires."
+        }
+      },
+      {
+        "name": {
+          "en": "Night Slash",
+          "fr": "Tranche-Nuit"
+        },
+        "cost": [
+          "dark",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Switch this Pokémon with 1 of your Benched Pokémon.",
+          "fr": "Échangez ce Pokémon avec 1 de vos Pokémon de Banc."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-bw3-77",
+    "set_id": "intl-bw3",
+    "number": "77",
+    "category": "pokemon",
+    "name": {
+      "en": "Deino",
+      "fr": "Solochi",
+      "es": "Deino",
+      "it": "Deino",
+      "pt-BR": "Deino",
+      "de": "Kapuno"
+    },
+    "pokemon": [
+      "Deino"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "dark"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Headbutt",
+          "fr": "Coup d'Boule"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Bite",
+          "fr": "Morsure"
+        },
+        "cost": [
+          "dark",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-bw3-78",
+    "set_id": "intl-bw3",
+    "number": "78",
+    "category": "pokemon",
+    "name": {
+      "en": "Zweilous",
+      "fr": "Diamat",
+      "es": "Zweilous",
+      "it": "Zweilous",
+      "pt-BR": "Zweilous",
+      "de": "Duodino"
+    },
+    "pokemon": [
+      "Zweilous"
+    ],
+    "illustrator": "Masakazu Fukuda",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "dark"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Deino",
+      "fr": "Solochi"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Double Hit",
+          "fr": "Coup Double"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip 2 coins. This attack does 20 damage times the number of heads.",
+          "fr": "Lancez 2 pièces. Cette attaque inflige 20 dégâts multipliés par le nombre de côtés face."
+        }
+      },
+      {
+        "name": {
+          "en": "Strength",
+          "fr": "Force"
+        },
+        "cost": [
+          "dark",
+          "normal",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-bw3-79",
+    "set_id": "intl-bw3",
+    "number": "79",
+    "category": "pokemon",
+    "name": {
+      "en": "Hydreigon",
+      "fr": "Trioxhydre",
+      "es": "Hydreigon",
+      "it": "Hydreigon",
+      "pt-BR": "Hydreigon",
+      "de": "Trikephalo"
+    },
+    "pokemon": [
+      "Hydreigon"
+    ],
+    "illustrator": "5ban Graphics",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 150,
+    "types": [
+      "dark"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Zweilous",
+      "fr": "Diamat"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Berserker Blade",
+          "fr": "Lame Folle"
+        },
+        "cost": [
+          "dark",
+          "dark",
+          "dark",
+          "dark"
+        ],
+        "damage": "60",
+        "text": {
+          "en": "Does 40 damage to 2 of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "fr": "Inflige 40 dégâts à 2 des Pokémon de Banc de votre adversaire. (N'appliquez ni la Faiblesse ni la Résistance aux Pokémon de Banc.)"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-bw3-8",
+    "set_id": "intl-bw3",
+    "number": "8",
+    "category": "pokemon",
+    "name": {
+      "en": "Karrablast",
+      "fr": "Carabing",
+      "es": "Karrablast",
+      "it": "Karrablast",
+      "pt-BR": "Karrablast",
+      "de": "Laukaps"
+    },
+    "pokemon": [
+      "Karrablast"
+    ],
+    "illustrator": "sui",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Mysterious Evolution",
+          "fr": "Évolution Mystérieuse"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "If Shelmet is in play, search your deck for a card that evolves from this Pokémon and put it onto this Pokémon. (This counts as evolving this Pokémon.) Shuffle your deck afterward.",
+          "fr": "Si Escargaume est en jeu, cherchez dans votre deck une carte Évolution de ce Pokémon et placez-la sur ce Pokémon. (Cela équivaut à faire évoluer ce Pokémon.) Mélangez ensuite votre deck."
+        }
+      },
+      {
+        "name": {
+          "en": "Fury Attack",
+          "fr": "Furie"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip 3 coins. This attack does 10 damage times the number of heads.",
+          "fr": "Lancez 3 pièces. Cette attaque inflige 10 dégâts multipliés par le nombre de côtés face."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-bw3-80",
+    "set_id": "intl-bw3",
+    "number": "80",
+    "category": "pokemon",
+    "name": {
+      "en": "Escavalier",
+      "fr": "Lançargot",
+      "es": "Escavalier",
+      "it": "Escavalier",
+      "pt-BR": "Escavalier",
+      "de": "Cavalanzas"
+    },
+    "pokemon": [
+      "Escavalier"
+    ],
+    "illustrator": "Kouki Saitou",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "metal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Karrablast",
+      "fr": "Carabing"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Guard Press",
+          "fr": "Pression de Garde"
+        },
+        "cost": [
+          "metal",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {
+          "en": "During your opponent's next turn, any damage done to this Pokémon by attacks is reduced by 20 (after applying Weakness and Resistance).",
+          "fr": "Pendant le prochain tour de votre adversaire, tous les dégâts infligés à ce Pokémon par des attaques sont réduits de 20 (après application de la Faiblesse et de la Résistance)."
+        }
+      },
+      {
+        "name": {
+          "en": "Twineedle",
+          "fr": "Double-Dard"
+        },
+        "cost": [
+          "metal",
+          "normal",
+          "normal"
+        ],
+        "damage": "70",
+        "text": {
+          "en": "Flip 2 coins. This attack does 70 damage times the number of heads.",
+          "fr": "Lancez 2 pièces. Cette attaque inflige 70 dégâts multipliés par le nombre de côtés face."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-bw3-81",
+    "set_id": "intl-bw3",
+    "number": "81",
+    "category": "pokemon",
+    "name": {
+      "en": "Pawniard",
+      "fr": "Scalpion",
+      "es": "Pawniard",
+      "it": "Pawniard",
+      "pt-BR": "Pawniard",
+      "de": "Gladiantri"
+    },
+    "pokemon": [
+      "Pawniard"
+    ],
+    "illustrator": "Tomokazu Komiya",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "metal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Pierce",
+          "fr": "Transpercement"
+        },
+        "cost": [
+          "metal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Cut",
+          "fr": "Coupe"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-bw3-82",
+    "set_id": "intl-bw3",
+    "number": "82",
+    "category": "pokemon",
+    "name": {
+      "en": "Bisharp",
+      "fr": "Scalproie",
+      "es": "Bisharp",
+      "it": "Bisharp",
+      "pt-BR": "Bisharp",
+      "de": "Caesurio"
+    },
+    "pokemon": [
+      "Bisharp"
+    ],
+    "illustrator": "5ban Graphics",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "metal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Pawniard",
+      "fr": "Scalpion"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Energy Stream",
+          "fr": "Courant d'Énergie"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Attach a Metal Energy card from your discard pile to this Pokémon.",
+          "fr": "Attachez une carte Énergie Metal de votre pile de défausse à ce Pokémon."
+        }
+      },
+      {
+        "name": {
+          "en": "Metal Scissors",
+          "fr": "Ciseaux d'Acier"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {
+          "en": "Does 20 more damage for each Metal Energy attached to this Pokémon.",
+          "fr": "Inflige 20 dégâts supplémentaires pour chaque Énergie Metal attachée à ce Pokémon."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-bw3-83",
+    "set_id": "intl-bw3",
+    "number": "83",
+    "category": "pokemon",
+    "name": {
+      "en": "Durant",
+      "fr": "Fermite",
+      "es": "Durant",
+      "it": "Durant",
+      "pt-BR": "Durant",
+      "de": "Fermicula"
+    },
+    "pokemon": [
+      "Durant"
+    ],
+    "illustrator": "Masakazu Fukuda",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "metal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Devour",
+          "fr": "Voracité"
+        },
+        "cost": [
+          "metal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "For each of your Durant in play, discard the top card of your opponent's deck.",
+          "fr": "Pour chacun de vos Fermite en jeu, défaussez la carte du dessus du deck de votre adversaire."
+        }
+      },
+      {
+        "name": {
+          "en": "Vice Grip",
+          "fr": "Force Poigne"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-bw3-84",
+    "set_id": "intl-bw3",
+    "number": "84",
+    "category": "pokemon",
+    "name": {
+      "en": "Cobalion",
+      "fr": "Cobaltium",
+      "es": "Cobalion",
+      "it": "Cobalion",
+      "pt-BR": "Cobalion",
+      "de": "Kobalium"
+    },
+    "pokemon": [
+      "Cobalion"
+    ],
+    "illustrator": "5ban Graphics",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 120,
+    "types": [
+      "metal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Energy Press",
+          "fr": "Pression Énergétique"
+        },
+        "cost": [
+          "metal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Does 20 more damage for each Energy attached to the Defending Pokémon.",
+          "fr": "Inflige 20 dégâts supplémentaires pour chaque Énergie attachée au Pokémon Défenseur."
+        }
+      },
+      {
+        "name": {
+          "en": "Iron Breaker",
+          "fr": "Brise-Fer"
+        },
+        "cost": [
+          "metal",
+          "metal",
+          "normal"
+        ],
+        "damage": "80",
+        "text": {
+          "en": "The Defending Pokémon can't attack during your opponent's next turn.",
+          "fr": "Le Pokémon Défenseur ne peut pas attaquer pendant le prochain tour de votre adversaire."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-bw3-85",
+    "set_id": "intl-bw3",
+    "number": "85",
+    "category": "pokemon",
+    "name": {
+      "en": "Audino",
+      "fr": "Nanméouïe",
+      "es": "Audino",
+      "it": "Audino",
+      "pt-BR": "Audino",
+      "de": "Ohrdoch"
+    },
+    "pokemon": [
+      "Audino"
+    ],
+    "illustrator": "Naoki Saito",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Do the Wave",
+          "fr": "Faites la Vague"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Does 10 damage times the number of your Benched Pokémon.",
+          "fr": "Inflige 10 dégâts multipliés par le nombre de vos Pokémon de Banc."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-bw3-86",
+    "set_id": "intl-bw3",
+    "number": "86",
+    "category": "pokemon",
+    "name": {
+      "en": "Axew",
+      "fr": "Coupenotte",
+      "es": "Axew",
+      "it": "Axew",
+      "pt-BR": "Axew",
+      "de": "Milza"
+    },
+    "pokemon": [
+      "Axew"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Dual Chop",
+          "fr": "Double Baffe"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip 2 coins. This attack does 10 damage times the number of heads.",
+          "fr": "Lancez 2 pièces. Cette attaque inflige 10 dégâts multipliés par le nombre de côtés face."
+        }
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-bw3-87",
+    "set_id": "intl-bw3",
+    "number": "87",
+    "category": "pokemon",
+    "name": {
+      "en": "Fraxure",
+      "fr": "Incisache",
+      "es": "Fraxure",
+      "it": "Fraxure",
+      "pt-BR": "Fraxure",
+      "de": "Sharfax"
+    },
+    "pokemon": [
+      "Fraxure"
+    ],
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "normal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Axew",
+      "fr": "Coupenotte"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Scratch",
+          "fr": "Griffe"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Dual Chop",
+          "fr": "Double Baffe"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Flip 2 coins. This attack does 30 damage times the number of heads.",
+          "fr": "Lancez 2 pièces. Cette attaque inflige 30 dégâts multipliés par le nombre de côtés face."
+        }
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-bw3-88",
+    "set_id": "intl-bw3",
+    "number": "88",
+    "category": "pokemon",
+    "name": {
+      "en": "Haxorus",
+      "fr": "Tranchodon",
+      "es": "Haxorus",
+      "it": "Haxorus",
+      "pt-BR": "Haxorus",
+      "de": "Maxax"
+    },
+    "pokemon": [
+      "Haxorus"
+    ],
+    "illustrator": "Kouki Saitou",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 140,
+    "types": [
+      "normal"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Fraxure",
+      "fr": "Incisache"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Dual Chop",
+          "fr": "Double Baffe"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "en": "Flip 2 coins. This attack does 50 damage times the number of heads.",
+          "fr": "Lancez 2 pièces. Cette attaque inflige 50 dégâts multipliés par le nombre de côtés face."
+        }
+      },
+      {
+        "name": {
+          "en": "Giga Impact",
+          "fr": "Giga Impact"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "120",
+        "text": {
+          "en": "This Pokémon can't attack during your next turn.",
+          "fr": "Ce Pokémon ne peut pas attaquer pendant votre prochain tour."
+        }
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-bw3-89",
+    "set_id": "intl-bw3",
+    "number": "89",
+    "category": "pokemon",
+    "name": {
+      "en": "Druddigon",
+      "fr": "Drakkarmin",
+      "es": "Druddigon",
+      "it": "Druddigon",
+      "pt-BR": "Druddigon",
+      "de": "Shardrago"
+    },
+    "pokemon": [
+      "Druddigon"
+    ],
+    "illustrator": "Masakazu Fukuda",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Clutch",
+          "fr": "Serre"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {
+          "en": "The Defending Pokémon can't retreat during your opponent's next turn.",
+          "fr": "Le Pokémon Défenseur ne peut pas battre en retraite pendant le prochain tour de votre adversaire."
+        }
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-bw3-9",
+    "set_id": "intl-bw3",
+    "number": "9",
+    "category": "pokemon",
+    "name": {
+      "en": "Foongus",
+      "fr": "Trompignon",
+      "es": "Foongus",
+      "it": "Foongus",
+      "pt-BR": "Foongus",
+      "de": "Tarnpignon"
+    },
+    "pokemon": [
+      "Foongus"
+    ],
+    "illustrator": "match",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Rollout",
+          "fr": "Roulade"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "water",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-bw3-90",
+    "set_id": "intl-bw3",
+    "number": "90",
+    "category": "trainer",
+    "name": {
+      "en": "Cover Fossil",
+      "fr": "Fossile Plaque",
+      "es": "Fósil Tapa",
+      "it": "Fossiltappo",
+      "pt-BR": "Fóssil Casca",
+      "de": "Schildfossil"
+    },
+    "pokemon": [],
+    "illustrator": "Ryo Ueda",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "fr": "Regardez les 7 cartes du dessous de votre deck. Vous pouvez montrer un Carapagos que vous y trouvez et le placer sur votre Banc. Mélangez les autres cartes avec votre deck.",
+      "en": "Look at the bottom 7 cards of your deck. You may reveal a Tirtouga you find there and put it onto your Bench. Shuffle the other cards back into your deck.",
+      "es": "Mira las 7 últimas cartas de tu baraja. Puedes enseñar a un Tirtouga que encuentres entre ellas y ponerlo en tu Banca. Pon el resto de cartas de nuevo en tu baraja y barájalas todas.",
+      "it": "Guarda le ultime sette carte del tuo mazzo. Puoi mostrare un Tirtouga che hai trovato e metterlo nella tua panchina. Poi rimischia le altre carte nel tuo mazzo.",
+      "pt-BR": "Olhe os 7 cards de baixo do seu baralho. Você poderá revelar um Tirtouga que encontrar lá e colocá-lo em seu Banco. Embaralhe os demais cards de volta.",
+      "de": "Schau dir die untersten 7 Karten deines Decks an. Falls du dort ein Galapaflos findest, kannst du es deinem Gegner zeigen und auf deine Bank legen. Mische die anderen Karten anschließend in dein Deck."
+    }
+  },
+  {
+    "id": "intl-bw3-91",
+    "set_id": "intl-bw3",
+    "number": "91",
+    "category": "trainer",
+    "name": {
+      "en": "Eviolite",
+      "fr": "Évoluroc",
+      "es": "Mineral Evol",
+      "it": "Evolcondensa",
+      "pt-BR": "Eviolite",
+      "de": "Evolith"
+    },
+    "pokemon": [],
+    "illustrator": "5ban Graphics",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "trainer_type": "tool",
+    "rules_text": {
+      "fr": "Si le Pokémon auquel cette carte est attachée est un Pokémon de base, tous les dégâts infligés à ce Pokémon par des attaques sont réduits de 20 (après application de la Faiblesse et de la Résistance).",
+      "en": "If the Pokémon this card is attached to is a Basic Pokémon, any damage done to this Pokémon by attacks is reduced by 20 (after applying Weakness and Resistance).",
+      "es": "Si el Pokémon al que está unida esta carta es un Pokémon Básico, cualquier daño hecho a este Pokémon por ataques se reduce en 20 (después de aplicar Debilidad y Resistencia).",
+      "it": "Se il Pokémon a cui è assegnata questa carta è un Pokémon Base, i danni inflitti a questo Pokémon da attacchi sono ridotti di 20, dopo aver applicato debolezza e resistenza.",
+      "pt-BR": "Se este card estiver ligado a um Pokémon Básico, qualquer dano causado a este Pokémon por ataques será reduzido em 20 (após a aplicação de Fraqueza e Resistência).",
+      "de": "Wenn das Pokémon, an das diese Karte angelegt ist, ein Basis-Pokémon ist, wird der diesem Pokémon durch Angriffe zugefügte Schaden um 20 Schadenspunkte reduziert (nachdem Schwäche und Resistenz verrechnet wurden)."
+    }
+  },
+  {
+    "id": "intl-bw3-92",
+    "set_id": "intl-bw3",
+    "number": "92",
+    "category": "trainer",
+    "name": {
+      "en": "N",
+      "fr": "N",
+      "es": "N",
+      "it": "N",
+      "pt-BR": "N",
+      "de": "N"
+    },
+    "pokemon": [],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "fr": "Chaque joueur mélange sa main avec son deck. Ensuite, chaque joueur pioche une carte pour chacune des cartes Récompense qu’il lui reste.",
+      "en": "Each player shuffles his or her hand into his or her deck. Then, each player draws a card for each of his or her remaining Prize cards.",
+      "es": "Cada jugador baraja las cartas de su mano en su baraja. Luego, cada jugador roba una carta por cada una de las cartas de Premio que le queden.",
+      "it": "Ogni giocatore rimischia le carte che ha in mano nel proprio mazzo. Quindi, ogni giocatore pesca una carta per ogni carta Premio che gli resta.",
+      "pt-BR": "Cada jogador embaralha sua mão em seu próprio baralho. Cada jogador então compra um card para cada um de seus cards de Prêmio restantes.",
+      "de": "Jeder Spieler mischt seine Hand zurück in sein Deck. Anschließend zieht jeder Spieler eine Karte für jede seiner noch übrigen Preiskarten."
+    }
+  },
+  {
+    "id": "intl-bw3-93",
+    "set_id": "intl-bw3",
+    "number": "93",
+    "category": "trainer",
+    "name": {
+      "en": "Plume Fossil",
+      "fr": "Fossile Plume",
+      "es": "Fósil Pluma",
+      "it": "Fossilpiuma",
+      "pt-BR": "Fóssil Pluma",
+      "de": "Federfossil"
+    },
+    "pokemon": [],
+    "illustrator": "Ryo Ueda",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "fr": "Regardez les 7 cartes du dessous de votre deck. Vous pouvez montrer un Arkéapti que vous y trouvez et le placer sur votre Banc. Mélangez les autres cartes avec votre deck.",
+      "en": "Look at the bottom 7 cards of your deck. You may reveal an Archen you find there and put it onto your Bench. Shuffle the other cards back into your deck.",
+      "es": "Mira las 7 últimas cartas de tu baraja. Puedes enseñar a un Archen que encuentres entre ellas y ponerlo en tu Banca. Pon el resto de cartas de nuevo en tu baraja y barájalas todas.",
+      "it": "Guarda le ultime sette carte del tuo mazzo. Puoi mostrare un Archen che hai trovato e aggiungerlo alla tua panchina. Poi rimischia le altre carte nel tuo mazzo.",
+      "pt-BR": "Olhe os 7 cards de baixo do seu baralho. Você poderá revelar um Archen que encontrar lá e colocá-lo em seu Banco. Embaralhe os demais cards de volta.",
+      "de": "Schau dir die untersten 7 Karten deines Decks an. Falls du dort ein Flapteryx findest, kannst du es deinem Gegner zeigen und auf deine Bank legen. Mische die anderen Karten anschließend in dein Deck."
+    }
+  },
+  {
+    "id": "intl-bw3-94",
+    "set_id": "intl-bw3",
+    "number": "94",
+    "category": "trainer",
+    "name": {
+      "en": "Rocky Helmet",
+      "fr": "Casque Brut",
+      "es": "Casco Dentado",
+      "it": "Bitorzolelmo",
+      "pt-BR": "Capacete de Pedra",
+      "de": "Beulenhelm"
+    },
+    "pokemon": [],
+    "illustrator": "Ryo Ueda",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "trainer_type": "tool",
+    "rules_text": {
+      "fr": "Si le Pokémon auquel cette carte est attachée est votre Pokémon Actif et qu’il subit les dégâts d’une attaque de votre adversaire (même si le Pokémon est mis K.O.), placez 2 marqueurs de dégâts sur le Pokémon Attaquant.",
+      "en": "If the Pokémon this card is attached to is your Active Pokémon and is damaged by an opponent’s attack (even if that Pokémon is Knocked Out), put 2 damage counters on the Attacking Pokémon.",
+      "es": "Si el Pokémon al que está unida esta carta es tu Pokémon Básico y resulta dañado por el ataque de un rival (incluso si ese Pokémon queda Fuera de Combate), pon 2 contadores de daño en el Pokémon Atacante.",
+      "it": "Se il Pokémon a cui è stata assegnata questa carta è il tuo Pokémon attivo e viene danneggiato da un attacco del tuo avversario, anche se viene messo K.O., metti due segnalini danno sul Pokémon attaccante.",
+      "pt-BR": "Se este card estiver ligado a seu Pokémon Ativo e ele for danificado pelo ataque de um oponente (mesmo se esse Pokémon for Nocauteado), coloque 2 marcadores de danos no Pokémon Atacante.",
+      "de": "Wenn das Pokémon, an dem diese Karte angelegt ist, dein Aktives Pokémon ist und durch einen gegnerischen Angriff Schaden erhält (auch wenn dieses Pokémon dadurch kampfunfähig wird), lege 2 Schadensmarken auf das Angreifende Pokémon."
+    }
+  },
+  {
+    "id": "intl-bw3-95",
+    "set_id": "intl-bw3",
+    "number": "95",
+    "category": "trainer",
+    "name": {
+      "en": "Super Rod",
+      "fr": "Méga Canne",
+      "es": "Supercaña",
+      "it": "Super Amo",
+      "pt-BR": "Super Bastão",
+      "de": "Superangel"
+    },
+    "pokemon": [],
+    "illustrator": "5ban Graphics",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "fr": "Choisissez une combinaison de 3 cartes de Pokémon et d’Énergies de base dans votre pile de défausse et mélangez-les avec votre deck.",
+      "en": "Shuffle 3 in any combination of Pokémon and basic Energy cards from your discard pile back into your deck.",
+      "es": "Pon, en cualquier combinación, 3 cartas de Pokémon y de Energía Básica de tu pila de descartes de nuevo en tu baraja y barájalas todas.",
+      "it": "Rimischia tre carte Pokémon e Energia base, in qualsiasi combinazione, dalla tua pila degli scarti nel tuo mazzo.",
+      "pt-BR": "Embaralhe qualquer combinação de 3 cards entre Pokémon e Energia básica de sua pilha de descarte em seu baralho.",
+      "de": "Mische eine Kombination aus insgesamt 3 Pokémon- und Basis-Energiekarten von deinem Ablagestapel zurück in dein Deck."
+    }
+  },
+  {
+    "id": "intl-bw3-96",
+    "set_id": "intl-bw3",
+    "number": "96",
+    "category": "trainer",
+    "name": {
+      "en": "Xtransceiver",
+      "fr": "Vokit",
+      "es": "Videomisor",
+      "it": "Interpoké",
+      "pt-BR": "Tranceptor X",
+      "de": "Viso-Caster"
+    },
+    "pokemon": [],
+    "illustrator": "Ryo Ueda",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "fr": "Lancez une pièce. Si c’est face, cherchez une carte Supporter dans votre deck, montrez-la, puis ajoutez-la à votre main. Mélangez ensuite votre deck.",
+      "en": "Flip a coin. If heads, search your deck for a Supporter card, reveal it, and put it into your hand. Shuffle your deck afterward.",
+      "es": "Lanza una moneda. Si sale cara, busca en tu baraja una carta de Partidario, enséñala y ponla en tu mano. Baraja las cartas de tu baraja después.",
+      "it": "Lancia una moneta. Se esce testa, cerca nel tuo mazzo una carta Aiuto, mostrala e aggiungila alle carte che hai in mano. Poi rimischia le carte del tuo mazzo.",
+      "pt-BR": "Jogue uma moeda. Se sair cara, procure um card de Apoiador em seu baralho, revele-o e coloque-o na sua mão. Em seguida, embaralhe seus cards.",
+      "de": "Wirf 1 Münze. Durchsuche bei „Kopf“ dein Deck nach 1 Unterstützerkarte, zeige sie deinem Gegner und nimm sie auf deine Hand. Mische anschließend dein Deck."
+    }
+  },
+  {
+    "id": "intl-bw3-97",
+    "set_id": "intl-bw3",
+    "number": "97",
+    "category": "pokemon",
+    "name": {
+      "en": "Virizion",
+      "fr": "Viridium",
+      "es": "Virizion",
+      "it": "Virizion",
+      "pt-BR": "Virizion",
+      "de": "Viridium"
+    },
+    "pokemon": [
+      "Virizion"
+    ],
+    "illustrator": "5ban Graphics",
+    "rarity": "ultra_rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 110,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Double Draw",
+          "fr": "Double Pioche"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Draw 2 cards.",
+          "fr": "Piochez 2 cartes."
+        }
+      },
+      {
+        "name": {
+          "en": "Leaf Wallop",
+          "fr": "Rafale de Feuilles"
+        },
+        "cost": [
+          "grass",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {
+          "en": "During your next turn, this Pokémon's Leaf Wallop attack does 40 more damage (before applying Weakness and Resistance).",
+          "fr": "Pendant votre prochain tour, l'attaque Rafale de Feuilles de ce Pokémon inflige 40 dégâts supplémentaires (avant application de la Faiblesse et de la Résistance)."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "water",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-bw3-98",
+    "set_id": "intl-bw3",
+    "number": "98",
+    "category": "pokemon",
+    "name": {
+      "en": "Victini",
+      "fr": "Victini",
+      "es": "Victini",
+      "it": "Victini",
+      "pt-BR": "Victini",
+      "de": "Victini"
+    },
+    "pokemon": [
+      "Victini"
+    ],
+    "illustrator": "5ban Graphics",
+    "rarity": "ultra_rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Stored Power",
+          "fr": "Force Ajoutée"
+        },
+        "cost": [
+          "fire",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Move all Energy attached to this Pokémon to 1 of your Benched Pokémon.",
+          "fr": "Déplacez toutes les Énergies attachées à ce Pokémon vers 1 de vos Pokémon de Banc."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-bw3-99",
+    "set_id": "intl-bw3",
+    "number": "99",
+    "category": "pokemon",
+    "name": {
+      "en": "Terrakion",
+      "fr": "Terrakium",
+      "es": "Terrakion",
+      "it": "Terrakion",
+      "pt-BR": "Terrakion",
+      "de": "Terrakium"
+    },
+    "pokemon": [
+      "Terrakion"
+    ],
+    "illustrator": "5ban Graphics",
+    "rarity": "ultra_rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Retaliate",
+          "fr": "Vengeance"
+        },
+        "cost": [
+          "fighting",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "If any of your Pokémon were Knocked Out by damage from an opponent's attack during his or her last turn, this attack does 60 more damage.",
+          "fr": "Si l'un de vos Pokémon a été mis K.O. par les dégâts d'une attaque de votre adversaire pendant son dernier tour, cette attaque inflige 60 dégâts supplémentaires."
+        }
+      },
+      {
+        "name": {
+          "en": "Land Crush",
+          "fr": "Écras'Terre"
+        },
+        "cost": [
+          "fighting",
+          "fighting",
+          "normal"
+        ],
+        "damage": "90",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 4
+  }
+]

@@ -1,0 +1,952 @@
+[
+  {
+    "id": "intl-pop5-1",
+    "set_id": "intl-pop5",
+    "number": "1",
+    "category": "pokemon",
+    "name": {
+      "en": "Ho-Oh",
+      "fr": "Ho-Oh"
+    },
+    "pokemon": [
+      "Ho-Oh"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Fire Wing",
+          "fr": "Aile de feu"
+        },
+        "cost": [
+          "fire",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Fire Blast",
+          "fr": "Déflagration"
+        },
+        "cost": [
+          "fire",
+          "fire",
+          "fire",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {
+          "en": "Discard a Fire Energy attached to Ho-Oh.",
+          "fr": "Défaussez une Énergie  attachée à ce Pokémon."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": ""
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-pop5-10",
+    "set_id": "intl-pop5",
+    "number": "10",
+    "category": "pokemon",
+    "name": {
+      "en": "Charmander δ",
+      "fr": "Charmander δ"
+    },
+    "pokemon": [
+      "Charmander δ"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Scratch",
+          "fr": "Griffe"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Bite",
+          "fr": "Morsure"
+        },
+        "cost": [
+          "lightning",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": ""
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pop5-11",
+    "set_id": "intl-pop5",
+    "number": "11",
+    "category": "pokemon",
+    "name": {
+      "en": "Meowth δ",
+      "fr": "Meowth δ"
+    },
+    "pokemon": [
+      "Meowth δ"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "dark"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Feint Attack",
+          "fr": "Feinte"
+        },
+        "cost": [
+          "dark"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Choose 1 of your opponent’s Pokémon. This attack does 10 damage to that Pokémon. This attack’s damage isn’t affected by Weakness, Resistance, Poké-Powers, Poké-Bodies, or any other effects on that Pokémon.",
+          "fr": "Choisissez 1 des Pokémon de votre adversaire. Cette attaque lui inflige 10 dégâts. Les dégâts de cette attaque ne sont pas affectés par la Faiblesse, la Résistance, les Poké-Powers, les Poké-Bodies ou tout autre effet sur ce Pokémon."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": ""
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pop5-12",
+    "set_id": "intl-pop5",
+    "number": "12",
+    "category": "pokemon",
+    "name": {
+      "en": "Pikachu",
+      "fr": "Pikachu"
+    },
+    "pokemon": [
+      "Pikachu"
+    ],
+    "illustrator": "Naoyo Kimura",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Lightning Ball",
+          "fr": "Boule éclair"
+        },
+        "cost": [
+          "lightning"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Thunderbolt",
+          "fr": "Tonnerre"
+        },
+        "cost": [
+          "lightning",
+          "normal",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "en": "Discard all Energy cards attached to Pikachu.",
+          "fr": "Défaussez toutes les cartes Énergie attachées à Pikachu."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": ""
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pop5-13",
+    "set_id": "intl-pop5",
+    "number": "13",
+    "category": "pokemon",
+    "name": {
+      "en": "Pikachu δ",
+      "fr": "Pikachu δ"
+    },
+    "pokemon": [
+      "Pikachu δ"
+    ],
+    "illustrator": "Ryo Ueda",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "metal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Electric Punch",
+          "fr": "Poing électrique"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Heavy Metal",
+          "fr": "Heavy Métal"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "10+",
+        "text": {
+          "en": "Flip a coin for each Metal Energy attached to Pikachu. This attack does 10 damage plus 20 more damage for each heads.",
+          "fr": "Lancez un nombre de pièces équivalent au nombre d'Énergie  attachées à Pikachu. Cette attaque inflige 10 dégâts plus 20 dégâts supplémentaires pour chaque face."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": ""
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pop5-14",
+    "set_id": "intl-pop5",
+    "number": "14",
+    "category": "pokemon",
+    "name": {
+      "en": "Pelipper δ",
+      "fr": "Pelipper δ"
+    },
+    "pokemon": [
+      "Pelipper δ"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "lightning"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Wingull",
+      "fr": "Goélise"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Lightning Wing",
+          "fr": "Aile éclair"
+        },
+        "cost": [
+          "lightning",
+          "normal",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "en": "Does 10 damage to 1 of your Benched Pokémon. (Don’t apply Weakness and Resistance for Benched Pokémon.)",
+          "fr": "Inflige 10 dégâts à 1 des Pokémon de votre Banc. (Vous ne pouvez pas appliquer la Faiblesse et la Résistance aux Pokémon de Banc.)"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": ""
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 0
+  },
+  {
+    "id": "intl-pop5-15",
+    "set_id": "intl-pop5",
+    "number": "15",
+    "category": "pokemon",
+    "name": {
+      "en": "Zangoose δ",
+      "fr": "Zangoose δ"
+    },
+    "pokemon": [
+      "Zangoose δ"
+    ],
+    "illustrator": "Kouki Saitou",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "metal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Detect",
+          "fr": "Détection"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, prevent all effects of an attack, including damage, done to Zangoose during your opponent’s next turn.",
+          "fr": "Lancez une pièce. Si c'est face, prévenez tous les effets d'une attaque, dégâts inclus, infligés à Mangriff lors du prochain tour de votre adversaire."
+        }
+      },
+      {
+        "name": {
+          "en": "Metal Claw",
+          "fr": "Griffe acier"
+        },
+        "cost": [
+          "metal",
+          "normal",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": ""
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pop5-16",
+    "set_id": "intl-pop5",
+    "number": "16",
+    "category": "pokemon",
+    "name": {
+      "en": "Espeon ☆",
+      "fr": "Mentali ☆"
+    },
+    "pokemon": [
+      "Espeon ☆"
+    ],
+    "illustrator": "Masakazu Fukuda",
+    "rarity": "ultra_rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Psychic Boom",
+          "fr": "Psycho-boom"
+        },
+        "cost": [
+          "psychic",
+          "psychic",
+          "normal"
+        ],
+        "damage": "30+",
+        "text": {
+          "en": "Does 30 damage plus 10 more damage for each Energy attached to the Defending Pokémon.",
+          "fr": "Inflige 30 dégâts plus 10 dégâts supplémentaires pour chaque Énergie attachée au Pokémon Défenseur."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": ""
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pop5-17",
+    "set_id": "intl-pop5",
+    "number": "17",
+    "category": "pokemon",
+    "name": {
+      "en": "Umbreon ☆",
+      "fr": "Noctali ☆"
+    },
+    "pokemon": [
+      "Umbreon ☆"
+    ],
+    "illustrator": "Masakazu Fukuda",
+    "rarity": "ultra_rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "dark"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Feint Attack",
+          "fr": "Feinte"
+        },
+        "cost": [
+          "dark",
+          "dark"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Choose 1 of your opponent’s Pokémon. This attack does 30 damage to that Pokémon. This attack’s damage isn’t affected by Weakness, Resistance, Poké-Powers, Poké-Bodies, or any other effects on that Pokémon.",
+          "fr": "Choisissez 1 des Pokémon de votre adversaire. Cette attaque inflige 30 dégâts à ce Pokémon-là. Les dégâts de cette attaque ne sont pas affectés par la Faiblesse, Résistance, Poké-Powers, Poké-Bodies ou tout autre effet sur ce Pokémon-là."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": ""
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pop5-2",
+    "set_id": "intl-pop5",
+    "number": "2",
+    "category": "pokemon",
+    "name": {
+      "en": "Lugia",
+      "fr": "Lugia"
+    },
+    "pokemon": [
+      "Lugia"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Super Psy Bolt",
+          "fr": "Super psy"
+        },
+        "cost": [
+          "psychic",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Aerowing",
+          "fr": "Aéroaile"
+        },
+        "cost": [
+          "psychic",
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Before doing damage, you may flip a coin. If tails, this attack does nothing. If heads, this attack does 60 damage instead.",
+          "fr": "Avant d'infliger des dégâts, vous pouvez lancer une pièce. Si c'est face, cette attaque inflige 60 dégâts. Si c'est pile, cette attaque ne fait rien."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": ""
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-pop5-3",
+    "set_id": "intl-pop5",
+    "number": "3",
+    "category": "pokemon",
+    "name": {
+      "en": "Mew δ",
+      "fr": "Mew δ"
+    },
+    "pokemon": [
+      "Mew δ"
+    ],
+    "illustrator": "Masakazu Fukuda",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Copy",
+          "fr": "Copiage"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Choose 1 of the Defending Pokémon’s attacks. Copy copies that attack. This attack does nothing if Mew doesn’t have the Energy necessary to use that attack. (You must still do anything else required for that attack.) Mew performs that attack.",
+          "fr": "Choisissez 1 des attaques du Pokémon Défenseur. Copiage copie cette attaque. Cette attaque est sans effet si Mew ne possède pas suffisamment d'Énergie pour utiliser cette attaque. (Vous devez toujours faire ce que l'attaque indique.) Mew utilise cette attaque."
+        }
+      },
+      {
+        "name": {
+          "en": "Extra Draw",
+          "fr": "Pioche supplémentaire"
+        },
+        "cost": [
+          "fire"
+        ],
+        "damage": "",
+        "text": {
+          "en": "If your opponent has any Pokémon-ex in play, search your deck for up to 2 basic Energy cards and attach them to Mew. Shuffle your deck afterward.",
+          "fr": "Si votre adversaire a des Pokémon-ex en jeu, cherchez dans votre deck jusqu'à 2 cartes Énergie de base et attachez-les à Mew. Ensuite, mélangez votre deck."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": ""
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pop5-4",
+    "set_id": "intl-pop5",
+    "number": "4",
+    "category": "energy",
+    "name": {
+      "en": "Double Rainbow Energy",
+      "fr": "Double Rainbow Energy"
+    },
+    "pokemon": [],
+    "illustrator": "Takumi Akabane",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "it": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Double Rainbow Energy can be attached only to an Evolved Pokémon (excluding Pokémon-ex). While in play, Double Rainbow Energy provides every type of Energy but provides 2 Energy at a time. (Has no effect other than providing Energy.) Damage done to your opponent’s Pokémon by the Pokémon Double Rainbow Energy is attached to is reduced by 10 (before applying Weakness and Resistance). When the Pokémon Double Rainbow Energy is attached to is no longer an Evolved Pokémon, discard Double Rainbow Energy."
+    }
+  },
+  {
+    "id": "intl-pop5-5",
+    "set_id": "intl-pop5",
+    "number": "5",
+    "category": "pokemon",
+    "name": {
+      "en": "Charmeleon δ",
+      "fr": "Charmeleon δ"
+    },
+    "pokemon": [
+      "Charmeleon δ"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "lightning"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Charmander",
+      "fr": "Salamèche"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Slash",
+          "fr": "Tranche"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Thunder Jolt",
+          "fr": "Secousse tonnerre"
+        },
+        "cost": [
+          "lightning",
+          "normal",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "en": "Flip a coin. If tails, Charmeleon does 10 damage to itself.",
+          "fr": "Lancez une pièce. Si c'est pile, Reptincel s'inflige 10 dégâts."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": ""
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pop5-6",
+    "set_id": "intl-pop5",
+    "number": "6",
+    "category": "trainer",
+    "name": {
+      "en": "Bill’s Maintenance",
+      "fr": "Bill's Maintenance"
+    },
+    "pokemon": [],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "it": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "en": "If you have any cards in your hand, shuffle 1 of them into your deck, then draw 3 cards.",
+      "fr": "Vous ne pouvez jouer qu'une seule carte Supporter par tour. Lorsque vous jouez cette carte, placez-la à côté de votre Pokémon Actif. À la fin de votre tour, défaussez-la."
+    }
+  },
+  {
+    "id": "intl-pop5-7",
+    "set_id": "intl-pop5",
+    "number": "7",
+    "category": "trainer",
+    "name": {
+      "en": "Rare Candy",
+      "fr": "Rare Candy"
+    },
+    "pokemon": [],
+    "illustrator": "Ryo Ueda",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "it": ""
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "en": "Choose 1 of your Basic Pokémon in play. If you have a Stage 1 or Stage 2 card that evolves from that Pokémon in your hand, put that card on the Basic Pokémon. (This counts as evolving that Pokémon.)",
+      "fr": "Choisisez l'un de vos Pokémon de base en jeu. Si vous avez dans votre main une carte de Niveau 2 étant une évolution de ce Pokémon, placez-la sur ce dernier (cela équivaut à faire évoluer ce Pokémon). Vous ne pouvez pas utiliser cette carte au premier tour ou sur un Pokémon de base qui a été mis en jeu lors de ce tour."
+    }
+  },
+  {
+    "id": "intl-pop5-8",
+    "set_id": "intl-pop5",
+    "number": "8",
+    "category": "energy",
+    "name": {
+      "en": "Boost Energy",
+      "fr": "Boost Energy"
+    },
+    "pokemon": [],
+    "illustrator": "Shin-ichi Yoshikawa",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "it": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Boost Energy can be attached only to an Evolved Pokémon. Discard Boost Energy at the end of the turn it was attached. Boost Energy provides ColorlessColorlessColorless Energy. The Pokémon Boost Energy is attached to can’t retreat. If the Pokémon Boost Energy is attached to isn’t an Evolved Pokémon, discard Boost Energy.",
+      "fr": "Énergie super ne peut être attachée qu'à un Pokémon Évolué. Défaussez-la à la fin du tour au cours duquel elle a été attachée. Énergie super fournit une Énergie . Le Pokémon auquel Énergie super est attachée ne peut pas battre en retraite. Si le Pokémon auquel Énergie super est attachée n'est pas un Pokémon Évolué, défaussez-la."
+    }
+  },
+  {
+    "id": "intl-pop5-9",
+    "set_id": "intl-pop5",
+    "number": "9",
+    "category": "energy",
+    "name": {
+      "en": "δ Rainbow Energy",
+      "fr": "δ Rainbow Energy"
+    },
+    "pokemon": [],
+    "illustrator": "Takumi Akabane",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "it": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "δ Rainbow Energy provides Colorless Energy. While attached to a Pokémon that has δ on its card, δ Rainbow Energy provides every type of Energy but provides only 1 Energy at a time. (Has no effect other than providing Energy.)",
+      "fr": "Énergie Multicolore δ fournit de l'Énergie . Lorsqu'elle est attachée à un Pokémon possédant le symbole δ, elle fournit tous les types d'Énergie mais seulement 1 Énergie à la fois. (Elle n'a pas d'autre effet que de fournir de l'Énergie.)"
+    }
+  }
+]

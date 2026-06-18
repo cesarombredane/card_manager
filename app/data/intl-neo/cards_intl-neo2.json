@@ -1,0 +1,5729 @@
+[
+  {
+    "id": "intl-neo2-1",
+    "set_id": "intl-neo2",
+    "number": "1",
+    "category": "pokemon",
+    "name": {
+      "en": "Espeon",
+      "fr": "Mentali",
+      "de": "Psiana"
+    },
+    "pokemon": [
+      "Espeon"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Dodrio",
+      "fr": "Évoli"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Bite",
+          "fr": "Morsure",
+          "de": "Bite"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Psychic",
+          "fr": "Psyko",
+          "de": "Psychic"
+        },
+        "cost": [
+          "psychic",
+          "psychic",
+          "normal"
+        ],
+        "damage": "30+",
+        "text": {
+          "en": "Does 30 damage plus 10 more for each Energy Card attached to the Defending Pokémon.",
+          "fr": "Inflige 30 dégâts plus 10 dégâts supplémentaires pour chaque carte Énergie attachée au Pokémon Défenseur.",
+          "de": "Doaes 30 damage plus 10 more damage for each Energy card attached to the Defending Pokémon."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ]
+  },
+  {
+    "id": "intl-neo2-10",
+    "set_id": "intl-neo2",
+    "number": "10",
+    "category": "pokemon",
+    "name": {
+      "en": "Scizor",
+      "fr": "Cizayox",
+      "de": "Scherox"
+    },
+    "pokemon": [
+      "Scizor"
+    ],
+    "illustrator": "Kimiya Masago",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "metal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Scyther",
+      "fr": "Insécateur"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "False Swipe",
+          "fr": "Faux-Chage",
+          "de": "False Swipe"
+        },
+        "cost": [
+          "metal"
+        ],
+        "damage": "?",
+        "text": {
+          "en": "Does damage equal to half the Defending Pokémon's remaining HP (rounded down to the nearest 10).",
+          "fr": "Inflige des dégâts équivalents à la moitié des PV restants au Pokémon Défenseur (arrondis à la dizaine la plus proche.)",
+          "de": "Does damage equal to half the Defending Pokémon's remaining HP (rounded down to the nearest 10)."
+        }
+      },
+      {
+        "name": {
+          "en": "Double Claw",
+          "fr": "Combo-griffe",
+          "de": "Double Claw"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "20+",
+        "text": {
+          "en": "Flip 2 coins. This attack does 20 times the number of heads.",
+          "fr": "Lancez 2 pièces. Cette attaque inflige 20 dégâts multipliés par le nombre de faces.",
+          "de": "Flip 2 coins. This attack does 20 damage times the number of heads."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "grass",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-neo2-11",
+    "set_id": "intl-neo2",
+    "number": "11",
+    "category": "pokemon",
+    "name": {
+      "en": "Smeargle",
+      "fr": "Queulorior",
+      "de": "Farbeagle"
+    },
+    "pokemon": [
+      "Smeargle"
+    ],
+    "illustrator": "Hironobu Yoshida",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Sketch",
+          "fr": "Gribouille",
+          "de": "Sketch"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "If the Defending Pokémon attacked last turn, and Smeargle was in play during that attack, Smeargle copies that attack except for its Energy costs and anything else required in order to use that attack.",
+          "fr": "Si le Pokémon Défenseur a attaqué au tour précédent et si Queulorior était en jeu pendant cette attaque, Queulorior peut copier cette attaque excepté son coût en Énergie et les autres éléments nécessaires à cette attaque.",
+          "de": "If the Defending Pokémon attack last turn, and Smeargle was in play during that attack, Smeargle copies that attack execpt fpr its Energy costs and anything else reguired in order to use that attack."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-neo2-12",
+    "set_id": "intl-neo2",
+    "number": "12",
+    "category": "pokemon",
+    "name": {
+      "en": "Tyranitar",
+      "fr": "Tyranocif",
+      "de": "Despotar"
+    },
+    "pokemon": [
+      "Tyranitar"
+    ],
+    "illustrator": "Hironobu Yoshida",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "dark"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Piloswine",
+      "fr": "Ymphect"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Slam",
+          "fr": "Souplesse",
+          "de": "Slam"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "30x",
+        "text": {
+          "en": "Flip 2 coins. This attack does 30 times the number of heads.",
+          "fr": "Lancez 2 pièces. Cette attaque inflige 30 dégâts multipliés par le nombre de faces.",
+          "de": "Flip 2 coins. This attack does 30 damage times the number of heads."
+        }
+      },
+      {
+        "name": {
+          "en": "Trample",
+          "fr": "Bousculade",
+          "de": "Trample"
+        },
+        "cost": [
+          "dark",
+          "dark",
+          "normal",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "en": "For each Benched Pokémon in play (yours and your opponent's), flip a coin. If heads, this attack does 30 damage to that Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "fr": "Pour chaque Pokémon sur le Banc (celui de votre adversaire et le vôtre), lancez une pièce. Si c'est face, cette attaque fait 30 dégâts à ce Pokémon. (N'appliquez ni la Faiblesse ni la Résistance aux Pokémon de Banc.)",
+          "de": "For each Benched Pokémon in play (yours and your opponent's), flip a coin. If heads, this attack does 30 damage to that Pokémon. (Don't apply Weakness and Resistance for benched Pokémon.)"
+        }
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-neo2-13",
+    "set_id": "intl-neo2",
+    "number": "13",
+    "category": "pokemon",
+    "name": {
+      "en": "Umbreon",
+      "fr": "Noctali",
+      "de": "Nachtara"
+    },
+    "pokemon": [
+      "Umbreon"
+    ],
+    "illustrator": "Kimiya Masago",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "dark"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Eevee",
+      "fr": "Évoli"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Bite",
+          "fr": "Morsure",
+          "de": "Bite"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Feint Attack",
+          "fr": "Feinte",
+          "de": "Feint Attack"
+        },
+        "cost": [
+          "dark",
+          "dark",
+          "normal"
+        ],
+        "damage": "30+",
+        "text": {
+          "en": "Choose 1 of your opponent's Pokémon. This attack does 30 damage to that Pokémon. This attack's damage isn't affected by Weakness, Resistance, Pokémon Powers or any other effects on the Defending Pokémon.",
+          "fr": "Choisissez 1 des Pokémon de votre adversaire. Cette attaque lui inflige 30 dégâts. Les dégâts de l'attaque ne sont pas affectés par la Faiblesse, la Résistance, les Pouvoirs Pokémon ou tout autre effet en action sur le Pokémon Défenseur.",
+          "de": "Choose 1 of your opponent's Pokémon. This attack doeas 30 damage to that Pokémon. This attack's damage isn't affected by Weakness, Resistance, Pokémon Powers, or any other effects on the Defending Pokémon."
+        }
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-neo2-14",
+    "set_id": "intl-neo2",
+    "number": "14",
+    "category": "pokemon",
+    "name": {
+      "en": "Unown [A]",
+      "fr": "Zarbi A",
+      "de": "Icognito A"
+    },
+    "pokemon": [
+      "Unown [A]"
+    ],
+    "illustrator": "CR CG gangs",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Hidden Power",
+          "fr": "Puissance cachée",
+          "de": "Kraftreserve"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-neo2-15",
+    "set_id": "intl-neo2",
+    "number": "15",
+    "category": "pokemon",
+    "name": {
+      "en": "Ursaring",
+      "fr": "Ursaring",
+      "de": "Ursaring"
+    },
+    "pokemon": [
+      "Ursaring"
+    ],
+    "illustrator": "Naoyo Kimura",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "normal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Teddiursa",
+      "fr": "Teddiursa"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Headpress",
+          "fr": "Press'tête",
+          "de": "Headpress"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed. If tails, this attack does nothing (not even damage).",
+          "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est Paralysé. Si c'est pile, cette attaque ne fait rien (pas même de dégâts).",
+          "de": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed. If tails, this attack dois nothing (not even damage)."
+        }
+      },
+      {
+        "name": {
+          "en": "Double Lariat",
+          "fr": "Double lasso",
+          "de": "Double Lariat"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "40x",
+        "text": {
+          "en": "Flip 2 coins. This attack does 40 times the number of heads.",
+          "fr": "Lancez 2 pièces. Cette attaque inflige 40 dégâts multipliés par le nombre de faces.",
+          "de": "Flip 2 coins. This attack does 40 damage times the number of heads."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-neo2-16",
+    "set_id": "intl-neo2",
+    "number": "16",
+    "category": "pokemon",
+    "name": {
+      "en": "Wobbuffet",
+      "fr": "Qulbutoke",
+      "de": "Woingenau"
+    },
+    "pokemon": [
+      "Wobbuffet"
+    ],
+    "illustrator": "Hironobu Yoshida",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Counter",
+          "fr": "Riposte",
+          "de": "Counter"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "",
+        "text": {
+          "en": "If an attack damages Wobbuffet during your opponent's next turn (even if Wobbuffet is knocked out), flip a coin. If heads, Wobbuffet attacks the Defending Pokémon for an equal amount of damage.",
+          "fr": "Si une attaque inflige des dégâts à Qulbutoke pendant le prochain tour de votre adversaire (même si Qulbutoke est K.O.), lancez 1 pièce. Si c'est face, Qulbutoke attaque le Pokémon Défenseur et lui inflige le même nombre de dégâts.",
+          "de": "If an attack damages Wobbuffet during your opponent's next turn (even if Wobbuffet is Knocked Out), flip a coin. If heads, Wobbuffet attacks the Defending Pokémon for an equal amount of damage."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-neo2-17",
+    "set_id": "intl-neo2",
+    "number": "17",
+    "category": "pokemon",
+    "name": {
+      "en": "Yanma",
+      "fr": "Yanma",
+      "de": "Yanma"
+    },
+    "pokemon": [
+      "Yanma"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Shockwave",
+          "fr": "Onde de choc",
+          "de": "Shockwave"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, this attack does 10 damage to each of your opponent's Pokémon. Don't apply Weakness and Resistance. Then, if your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with the Defending Pokémon.",
+          "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 10 dégâts à chacun des Pokémon de votre adversaire. N'appliquez pas la Faiblesse et la Résistance. Puis, si votre adversaire a des Pokémon sur son Banc, il choisit l'un d'eux et l'échange contre le Pokémon Défenseur.",
+          "de": "Flip a coin. If heads, this attack does 10 damage to each of your opponent's Pokémon. Don't apply Weakness and Resistance. Then, if your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with the Defending Pokémon."
+        }
+      },
+      {
+        "name": {
+          "en": "Swift",
+          "fr": "Météores",
+          "de": "Swift"
+        },
+        "cost": [
+          "grass",
+          "grass",
+          "grass"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "This attack's damage isn't affected by Weakness, Resistance, Pokémon Powers, or any other effects on the Defending Pokémon.",
+          "fr": "Les dégâts de cette attaque ne sont pas affectés par la Faiblesse, la Résistance, les Pouvoirs Pokémon ou tout autre effet en action sur le Pokémon Défenseur.",
+          "de": "This attack's damage isn't affected by Weakness, Resistance, Pokémon Powers, or any other effects on the Defending Pokémon."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ]
+  },
+  {
+    "id": "intl-neo2-18",
+    "set_id": "intl-neo2",
+    "number": "18",
+    "category": "pokemon",
+    "name": {
+      "en": "Beedrill",
+      "fr": "Dardargnan",
+      "de": "Bibor"
+    },
+    "pokemon": [
+      "Beedrill"
+    ],
+    "illustrator": "Aya Kusube",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Kakuna",
+      "fr": "Coconfort"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Triple Poison",
+          "fr": "Triple poison",
+          "de": "Dreifachgift"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Poisoned. Your opponent now puts 3 damage counters instead of 1 after each player's turn (even if it was already Poisoned).",
+          "fr": "Lancez 1 pièce. Si c'est face, le Pokémon Défenseur est Empoisonné. Votre adversaire ajoute 3 marqueurs de dégâts au lieu de 1 après chaque tour (même s'il était déjà Empoisonné).",
+          "de": "Wirf eine Münze. Bei \"Kopf\" ist das verteidigende Pokémon jetzt vergiftet. Dein gegner legt jetzt nach dem Zug jedes Spielers drei Schadensmarken (statt einer) auf es (selbst wenn es vorher bereits vergiftet war)."
+        }
+      },
+      {
+        "name": {
+          "en": "Pin Missile",
+          "fr": "Dard-nuée",
+          "de": "Nadelrakete"
+        },
+        "cost": [
+          "grass",
+          "grass",
+          "normal"
+        ],
+        "damage": "20x",
+        "text": {
+          "en": "Flip 4 coins. This attack does 20 times the number of heads.",
+          "fr": "Lancez 4 pièces. Cette attaque inflige 20 dégâts multipliés par le nombre de faces.",
+          "de": "Wirf vier Münzen. Dieser Angriff fügt 20 schadenspunkte mal der Anzahl \"Kopf\" zu."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ]
+  },
+  {
+    "id": "intl-neo2-19",
+    "set_id": "intl-neo2",
+    "number": "19",
+    "category": "pokemon",
+    "name": {
+      "en": "Butterfree",
+      "fr": "Papilusion",
+      "de": "Smettbo"
+    },
+    "pokemon": [
+      "Butterfree"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Metapod",
+      "fr": "Chrysacier"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Magic Dust",
+          "fr": "Poussière magique",
+          "de": "Zauberstaub"
+        },
+        "cost": [
+          "grass",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now either Asleep, Confused, Paralyzed, or Poisoned (your choice).",
+          "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est Endormi, Confus, Paralysé ou Empoisonné (selon votre choix).",
+          "de": "Wirf eine Münze. Bei \"Kopf\" ist schläft das verteidigende Pokémon jetzt oder ist verwirrt, gelähmt oder vergiftet (such es dir aus)."
+        }
+      },
+      {
+        "name": {
+          "en": "Hyper Reverse",
+          "fr": "Hyper Inversion",
+          "de": "Hyperumkehr"
+        },
+        "cost": [
+          "grass",
+          "grass",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Does 10 damage times the number of Energy cards attached to the Defending Pokémon. After doing damage, remove a number of damage counters from Butterfree equal to the amount of damage done to the Defending Pokémon (after applying Weakness and Resistance).",
+          "fr": "Infligez 10 dégâts multipliés par le nombre de cartes Énergie attachées au Pokémon Défenseur. Après avoir appliqué les dégâts, retirez autant de marqueurs de dégâts à Papilusion que le Pokémon Défenseur en a reçu (après application de la Faiblesse et de la Résistance).",
+          "de": "Fügt 10 Schadenspunkte mal der Anzahl an Energie, die an das verteidigende Pokémon angelegt ist, zu. Entferne, nachdem der Schaden zugefügt ist, soviel Schaden von Smettbo, wie dem verteidigenden Pokémon Schadenspunkte zugefügt wurden (nachdem Schwäche und Resistenz verrechnet wurden)."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ]
+  },
+  {
+    "id": "intl-neo2-2",
+    "set_id": "intl-neo2",
+    "number": "2",
+    "category": "pokemon",
+    "name": {
+      "en": "Forretress",
+      "fr": "Foretress",
+      "de": "Forstellka"
+    },
+    "pokemon": [
+      "Forretress"
+    ],
+    "illustrator": "CR CG gangs",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "metal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Pineco",
+      "fr": "Pomdepik"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Rapid Spin",
+          "fr": "Tour rapide",
+          "de": "Rapid Spin"
+        },
+        "cost": [
+          "metal",
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "If your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with their Active Pokémon; then, if you have any Benched Pokémon, you switch 1 of them with your Active Pokémon. (Do the damage before switching the Pokémon.)",
+          "fr": "Si votre adversaire a des Pokémon sur son Banc, il en choisit un qu'il échange contre son Pokémon Actif. Puis, si vous avez des Pokémon sur votre Banc, vous échangez l'un d'eux contre votre Pokémon Actif. (Infligez les dégâts avant d'échanger les Pokémon.)",
+          "de": "If your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with his or her Active Pokémon, then, if you have any Benched Pokémon, you switch 1 of them with your Active Pokémon. (Do the damage before switching the Pokémon.)"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "grass",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-neo2-20",
+    "set_id": "intl-neo2",
+    "number": "20",
+    "category": "pokemon",
+    "name": {
+      "en": "Espeon",
+      "fr": "Mentali",
+      "de": "Psiana"
+    },
+    "pokemon": [
+      "Espeon"
+    ],
+    "illustrator": "Naoyo Kimura",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Eevee",
+      "fr": "Évoli"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Quick Attack",
+          "fr": "Vive-attaque",
+          "de": "Quick Attack"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "10+",
+        "text": {
+          "en": "Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage.",
+          "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 10 dégâts plus 20 dégâts supplémentaires. Si c'est pile, cette attaque inflige 10 dégâts.",
+          "de": "Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage."
+        }
+      },
+      {
+        "name": {
+          "en": "Psybeam",
+          "fr": "Rafale psy",
+          "de": "Psybeam"
+        },
+        "cost": [
+          "psychic",
+          "psychic",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Confused.",
+          "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Confus.",
+          "de": "Flip a coin. If heads, the Defending Pokémon is now Confused."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-neo2-21",
+    "set_id": "intl-neo2",
+    "number": "21",
+    "category": "pokemon",
+    "name": {
+      "en": "Forretress",
+      "fr": "Foretress",
+      "de": "Forstellka"
+    },
+    "pokemon": [
+      "Forretress"
+    ],
+    "illustrator": "CR CG gangs",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "metal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Pineco",
+      "fr": "Pomdepik"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Rapid Spin",
+          "fr": "Tour rapide",
+          "de": "Rapid Spin"
+        },
+        "cost": [
+          "metal",
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "If your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with their Active Pokémon; then, if you have any Benched Pokémon, you switch 1 of them with your Active Pokémon. (Do the damage before switching the Pokémon.)",
+          "fr": "Si votre adversaire a des Pokémon sur son Banc, il en choisit un qu'il échange contre son Pokémon Actif. Puis, si vous avez des Pokémon sur votre Banc, vous échangez l'un d'eux contre votre Pokémon Actif. (Infligez les dégâts avant d'échanger les Pokémon.)",
+          "de": "If your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with his or her Active Pokémon, then, if you have any Benched Pokémon, you switch 1 of them with your Active Pokémon. (Do the damage before switching the Pokémon.)"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "grass",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-neo2-22",
+    "set_id": "intl-neo2",
+    "number": "22",
+    "category": "pokemon",
+    "name": {
+      "en": "Hitmontop",
+      "fr": "Kapoera",
+      "de": "Kapoera"
+    },
+    "pokemon": [
+      "Hitmontop"
+    ],
+    "illustrator": "Sumiyoshi Kizuki",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Detect",
+          "fr": "Détection",
+          "de": "Scanner"
+        },
+        "cost": [
+          "fighting"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, during your opponent's next turn, prevent all effects of attacks, including damage, done to Hitmontop.",
+          "fr": "Lancez une pièce. Si c'est face, pendant le prochain tour de votre adversaire, tous les effets des attaques contre Kapoera, y compris les dégâts, sont annulés.",
+          "de": "Wirf eine Münze. Verhindere bei \"Kopf\" während des nächsten gegenerischen Zugs alle Aus-wirkungen von Angriffen auf kapoera (einschließlich der Schadenspunkte)."
+        }
+      },
+      {
+        "name": {
+          "en": "Triple Kick",
+          "fr": "Triple pied",
+          "de": "Dreifachkick"
+        },
+        "cost": [
+          "fighting",
+          "fighting",
+          "fighting"
+        ],
+        "damage": "30x",
+        "text": {
+          "en": "Flip 3 coins. This attack does 30 times the number of heads.",
+          "fr": "Lancez 3 pièces. Cette attaque inflige 30 dégâts multipliés par le nombre de faces.",
+          "de": "Wirf drei Münzen. Dieser Angriff fügt 30 Schadenspunkte mal der Anzahl \"Kopf\" zu."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-neo2-23",
+    "set_id": "intl-neo2",
+    "number": "23",
+    "category": "pokemon",
+    "name": {
+      "en": "Houndoom",
+      "fr": "Démolosse",
+      "de": "Hundemon"
+    },
+    "pokemon": [
+      "Houndoom"
+    ],
+    "illustrator": "Shin-ichi Yoshida",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "dark"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Houndour",
+      "fr": "Malosse"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Crunch",
+          "fr": "Mâchouille",
+          "de": "Crunch"
+        },
+        "cost": [
+          "dark",
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Until the end of your next turn, if an attack damages the Defending Pokémon (after applying Weakness and Resistance), that attack does 20 more damage to the Defending Pokémon.",
+          "fr": "Jusqu'à la fin de votre prochain tour, si une attaque inflige des dégâts au Pokémon Défenseur (après application de la Faiblesse et de la Résistance), elle lui inflige 20 dégâts de plus.",
+          "de": "Until end of your next turn, if an attack damages the Defending Pokémon (after applying Weakness and Resistance), that attack does 20 more damage to the Defending Pokémon."
+        }
+      },
+      {
+        "name": {
+          "en": "Flamethrower",
+          "fr": "Lance-flammes",
+          "de": "Flamethrower"
+        },
+        "cost": [
+          "fire",
+          "fire",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "en": "Discard 1 Energy card attached to Houndoom or this attack does nothing.",
+          "fr": "Défaussez 1 carte Énergie  attachée à Démolosse pour pouvoir utiliser cette attaque.",
+          "de": "Discard 1  Energy card attached to Houndoom or this attack does nothing."
+        }
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-neo2-24",
+    "set_id": "intl-neo2",
+    "number": "24",
+    "category": "pokemon",
+    "name": {
+      "en": "Houndour",
+      "fr": "Malosse",
+      "de": "Hunduster"
+    },
+    "pokemon": [
+      "Houndour"
+    ],
+    "illustrator": "Aya Kusube",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Smog",
+          "fr": "Purédpois",
+          "de": "Smog"
+        },
+        "cost": [
+          "fire"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Poisoned.",
+          "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Empoisonné.",
+          "de": "Wirf eine Münze. Bei \"Kopf\" ist das verteidigende Pokémon jetzt vergiftet."
+        }
+      },
+      {
+        "name": {
+          "en": "Collect Fire",
+          "fr": "Quête du feu",
+          "de": "Feuersammeln"
+        },
+        "cost": [
+          "fire",
+          "fire"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "If there are any Energy in your discard pile, choose 1 of them and attach it to Houndour.",
+          "fr": "S'il y a des cartes Énergie  dans votre pile de défausse, choisissez l'une d'entre elles et attachez-la à Malosse.",
+          "de": "Wenn mindestens eine -Energiekarte in deinem Ablagestapel ist, wähle eine davon und lege sie an Hunduster an."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-neo2-25",
+    "set_id": "intl-neo2",
+    "number": "25",
+    "category": "pokemon",
+    "name": {
+      "en": "Kabutops",
+      "fr": "Kabutops",
+      "de": "Kabutops"
+    },
+    "pokemon": [
+      "Kabutops"
+    ],
+    "illustrator": "Kimiya Masago",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "water"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Kabuto",
+      "fr": "Kabuto"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Slash",
+          "fr": "Tranche",
+          "de": "Slash"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Hydrocutter",
+          "fr": "Hydro-lame",
+          "de": "Hydrocutter"
+        },
+        "cost": [
+          "fighting"
+        ],
+        "damage": "40x",
+        "text": {
+          "en": "Flip a number of coins equal to the number of Energy cards attached to Kabutops. This attack does 40 times the number of heads. You can't flips more than 3 coins in this way.",
+          "fr": "Lancez un nombre de pièces égal au nombre de cartes Énergie attachées à Kabutops. Cette attaque inflige 40 dégâts, multipliés par le nombre de faces. Vous ne pouvez pas lancer plus de 3 pièces.",
+          "de": "Flip a number of coins equal to the number of Energy cards attached to Kabutops. This attack does 40 damage times the number of heads. You can't flip more than 3 coins in this way."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-neo2-26",
+    "set_id": "intl-neo2",
+    "number": "26",
+    "category": "pokemon",
+    "name": {
+      "en": "Magnemite",
+      "fr": "Magneti",
+      "de": "Magnetilo"
+    },
+    "pokemon": [
+      "Magnemite"
+    ],
+    "illustrator": "undefined",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "metal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Lock-on",
+          "fr": "Verrouillage",
+          "de": "Lock-on"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "During your next turn, treat any tails flipped when using Magnemite's Electric Bolt attack on the Defending Pokémon as if they were heads. (Benching or evolving either Pokémon ends this effect.)",
+          "fr": "Pendant votre prochain tour, considérez que les pièces tombées sur pile lors de l'attaque Élécanon de Magneti sur le Pokémon Défenseur sont en fait tombées sur face. (Faire évoluer ou renvoyer l'un ou l'autre Pokémon sur son Banc annule cet effet.)",
+          "de": "During your next turn, treat any tails flipped when using Magnemite's Electric Bolt attack on the Defending Pokémon as if they were heads. (Benching or evolving either Pokémon ends this effect.)"
+        }
+      },
+      {
+        "name": {
+          "en": "Electric Bolt",
+          "fr": "Élécanon",
+          "de": "Electric Bolt"
+        },
+        "cost": [
+          "lightning",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "en": "Flip 2 coins. If both are heads, the Defending Pokémon is now Paralyzed. If either of them is tails, this attack does nothing (not even damage).",
+          "fr": "Lancez 2 pièces. Si c'est face dans les deux cas, le Pokémon Défenseur est Paralysé. Si c'est pile (même pour une pièce seulement), cette attaque ne fait rien (pas même de dégâts).",
+          "de": "Flip 2 coins. If both are heads, the Defending Pokémon is now Paralyzed. If either of them is tails, this attack does nothing (not even damage)."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "grass",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-neo2-27",
+    "set_id": "intl-neo2",
+    "number": "27",
+    "category": "pokemon",
+    "name": {
+      "en": "Politoed",
+      "fr": "Tarpaud",
+      "de": "Quaxo"
+    },
+    "pokemon": [
+      "Politoed"
+    ],
+    "illustrator": "Tomokazu Komiya",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "water"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Poliwhirl",
+      "fr": "Têtarte"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Doubleslap",
+          "fr": "Torgnoles",
+          "de": "Duplexhieb"
+        },
+        "cost": [
+          "water",
+          "water",
+          "normal",
+          "normal"
+        ],
+        "damage": "40x",
+        "text": {
+          "en": "Flip 2 coins. This attack does 40 times the number of heads.",
+          "fr": "Lancez 2 pièces. Cette attaque inflige 40 dégâts multipliés par le nombre de faces.",
+          "de": "Wirf zwei Münzen. Dieser Angriff fügt 40 Schadenspunkte mal der Anzahl \"Kopf\" zu."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-neo2-28",
+    "set_id": "intl-neo2",
+    "number": "28",
+    "category": "pokemon",
+    "name": {
+      "en": "Poliwrath",
+      "fr": "Tartard",
+      "de": "Quappo"
+    },
+    "pokemon": [
+      "Poliwrath"
+    ],
+    "illustrator": "Shin-ichi Yoshida",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Poliwhirl",
+      "fr": "Têtarte"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Corkscrew Punch",
+          "fr": "Poing tire-bouchon",
+          "de": "Corkscrew Punch"
+        },
+        "cost": [
+          "fighting",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Submission",
+          "fr": "Sacrifice",
+          "de": "Submission"
+        },
+        "cost": [
+          "fighting",
+          "fighting",
+          "normal",
+          "normal"
+        ],
+        "damage": "70",
+        "text": {
+          "en": "Poliwrath does 20 damage to itself.",
+          "fr": "Tartard s'inflige 20 dégâts.",
+          "de": "Poliwrath does 20 damage to itself"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-neo2-29",
+    "set_id": "intl-neo2",
+    "number": "29",
+    "category": "pokemon",
+    "name": {
+      "en": "Scizor",
+      "fr": "Cizayox",
+      "de": "Scherox"
+    },
+    "pokemon": [
+      "Scizor"
+    ],
+    "illustrator": "Kimiya Masago",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "metal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Scyther",
+      "fr": "Insécateur"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "False Swipe",
+          "fr": "Faux-Chage",
+          "de": "False Swipe"
+        },
+        "cost": [
+          "metal"
+        ],
+        "damage": "?",
+        "text": {
+          "en": "Does damage equal to half the Defending Pokémon's remaining HP (rounded down to the nearest 10).",
+          "fr": "Inflige des dégâts équivalents à la moitié des PV restants au Pokémon Défenseur (arrondis à la dizaine la plus proche.)",
+          "de": "Does damage equal to half the Defending Pokémon's remaining HP (rounded down to the nearest 10)."
+        }
+      },
+      {
+        "name": {
+          "en": "Double Claw",
+          "fr": "Combo-griffe",
+          "de": "Double Claw"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "20+",
+        "text": {
+          "en": "Flip 2 coins. This attack does 20 times the number of heads.",
+          "fr": "Lancez 2 pièces. Cette attaque inflige 20 dégâts multipliés par le nombre de faces.",
+          "de": "Flip 2 coins. This attack does 20 damage times the number of heads."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "grass",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-neo2-3",
+    "set_id": "intl-neo2",
+    "number": "3",
+    "category": "pokemon",
+    "name": {
+      "en": "Hitmontop",
+      "fr": "Kapoera",
+      "de": "Kapoera"
+    },
+    "pokemon": [
+      "Hitmontop"
+    ],
+    "illustrator": "Sumiyoshi Kizuki",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Detect",
+          "fr": "Détection",
+          "de": "Scanner"
+        },
+        "cost": [
+          "fighting"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, during your opponent's next turn, prevent all effects of attacks, including damage, done to Hitmontop.",
+          "fr": "Lancez une pièce. Si c'est face, pendant le prochain tour de votre adversaire, tous les effets des attaques contre Kapoera, y compris les dégâts, sont annulés.",
+          "de": "Wirf eine Münze. Verhindere bei \"Kopf\" während des nächsten gegenerischen Zugs alle Aus-wirkungen von Angriffen auf kapoera (einschließlich der Schadenspunkte)."
+        }
+      },
+      {
+        "name": {
+          "en": "Triple Kick",
+          "fr": "Triple pied",
+          "de": "Dreifachkick"
+        },
+        "cost": [
+          "fighting",
+          "fighting",
+          "fighting"
+        ],
+        "damage": "30x",
+        "text": {
+          "en": "Flip 3 coins. This attack does 30 times the number of heads.",
+          "fr": "Lancez 3 pièces. Cette attaque inflige 30 dégâts multipliés par le nombre de faces.",
+          "de": "Wirf drei Münzen. Dieser Angriff fügt 30 Schadenspunkte mal der Anzahl \"Kopf\" zu."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-neo2-30",
+    "set_id": "intl-neo2",
+    "number": "30",
+    "category": "pokemon",
+    "name": {
+      "en": "Smeargle",
+      "fr": "Queulorior",
+      "de": "Farbeagle"
+    },
+    "pokemon": [
+      "Smeargle"
+    ],
+    "illustrator": "Hironobu Yoshida",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Sketch",
+          "fr": "Gribouille",
+          "de": "Sketch"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "If the Defending Pokémon attacked last turn, and Smeargle was in play during that attack, Smeargle copies that attack except for its Energy costs and anything else required in order to use that attack.",
+          "fr": "Si le Pokémon Défenseur a attaqué au tour précédent et si Queulorior était en jeu pendant cette attaque, Queulorior peut copier cette attaque excepté son coût en Énergie et les autres éléments nécessaires à cette attaque.",
+          "de": "If the Defending Pokémon attack last turn, and Smeargle was in play during that attack, Smeargle copies that attack execpt fpr its Energy costs and anything else reguired in order to use that attack."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-neo2-31",
+    "set_id": "intl-neo2",
+    "number": "31",
+    "category": "pokemon",
+    "name": {
+      "en": "Tyranitar",
+      "fr": "Tyranocif",
+      "de": "Despotar"
+    },
+    "pokemon": [
+      "Tyranitar"
+    ],
+    "illustrator": "Hironobu Yoshida",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "dark"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Pupitar",
+      "fr": "Ymphect"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Slam",
+          "fr": "Souplesse",
+          "de": "Slam"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "30x",
+        "text": {
+          "en": "Flip 2 coins. This attack does 30 times the number of heads.",
+          "fr": "Lancez 2 pièces. Cette attaque inflige 30 dégâts multipliés par le nombre de faces.",
+          "de": "Flip 2 coins. This attack does 30 damage times the number of heads."
+        }
+      },
+      {
+        "name": {
+          "en": "Trample",
+          "fr": "Bousculade",
+          "de": "Trample"
+        },
+        "cost": [
+          "dark",
+          "dark",
+          "normal",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "en": "For each Benched Pokémon in play (yours and your opponent's), flip a coin. If heads, this attack does 30 damage to that Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "fr": "Pour chaque Pokémon sur le Banc (celui de votre adversaire et le vôtre), lancez une pièce. Si c'est face, cette attaque fait 30 dégâts à ce Pokémon. (N'appliquez ni la Faiblesse ni la Résistance aux Pokémon de Banc.)",
+          "de": "For each Benched Pokémon in play (yours and your opponent's), flip a coin. If heads, this attack does 30 damage to that Pokémon. (Don't apply Weakness and Resistance for benched Pokémon.)"
+        }
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-neo2-32",
+    "set_id": "intl-neo2",
+    "number": "32",
+    "category": "pokemon",
+    "name": {
+      "en": "Umbreon",
+      "fr": "Noctali",
+      "de": "Nachtara"
+    },
+    "pokemon": [
+      "Umbreon"
+    ],
+    "illustrator": "Naoyo Kimura",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "dark"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Eevee",
+      "fr": "Évoli"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Quick Attack",
+          "fr": "Vive-attaque",
+          "de": "Quick Attack"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "10+",
+        "text": {
+          "en": "Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage.",
+          "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 10 dégâts plus 20 dégâts supplémentaires ; si c'est pile, cette attaque inflige 10 dégâts.",
+          "de": "Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage."
+        }
+      },
+      {
+        "name": {
+          "en": "Pursuit",
+          "fr": "Poursuite",
+          "de": "Pursuit"
+        },
+        "cost": [
+          "metal",
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "During your opponent's next turn, if the Defending Pokémon tries to retreat, do 10 damage to it. (Don't apply Weakness and Resistance.)",
+          "fr": "Pendant le prochain tour de votre adversaire, si le Pokémon Défenseur essaie de battre en retraite, infligez-lui 10 dégâts. (N'appliquez pas la Faiblesse et la Résistance.)",
+          "de": "During your opponent's next turn, if the Defending Pokémon tries to retreat, do 10 damage to it. (Don't apply Weakness and Resistance.)"
+        }
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-neo2-33",
+    "set_id": "intl-neo2",
+    "number": "33",
+    "category": "pokemon",
+    "name": {
+      "en": "Unown [A]",
+      "fr": "Zarbi A",
+      "de": "Icognito A"
+    },
+    "pokemon": [
+      "Unown [A]"
+    ],
+    "illustrator": "CR CG gangs",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Hidden Power",
+          "fr": "Puissance cachée",
+          "de": "Kraftreserve"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-neo2-34",
+    "set_id": "intl-neo2",
+    "number": "34",
+    "category": "pokemon",
+    "name": {
+      "en": "Ursaring",
+      "fr": "Ursaring",
+      "de": "Ursaring"
+    },
+    "pokemon": [
+      "Ursaring"
+    ],
+    "illustrator": "Naoyo Kimura",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "normal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Teddiursa",
+      "fr": "Teddiursa"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Headpress",
+          "fr": "Press'tête",
+          "de": "Headpress"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed. If tails, this attack does nothing (not even damage).",
+          "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est Paralysé. Si c'est pile, cette attaque ne fait rien (pas même de dégâts).",
+          "de": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed. If tails, this attack dois nothing (not even damage)."
+        }
+      },
+      {
+        "name": {
+          "en": "Double Lariat",
+          "fr": "Double lasso",
+          "de": "Double Lariat"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "40x",
+        "text": {
+          "en": "Flip 2 coins. This attack does 40 times the number of heads.",
+          "fr": "Lancez 2 pièces. Cette attaque inflige 40 dégâts multipliés par le nombre de faces.",
+          "de": "Flip 2 coins. This attack does 40 damage times the number of heads."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-neo2-35",
+    "set_id": "intl-neo2",
+    "number": "35",
+    "category": "pokemon",
+    "name": {
+      "en": "Wobbuffet",
+      "fr": "Qulbutoke",
+      "de": "Woingenau"
+    },
+    "pokemon": [
+      "Wobbuffet"
+    ],
+    "illustrator": "Hironobu Yoshida",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Counter",
+          "fr": "Riposte",
+          "de": "Counter"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "",
+        "text": {
+          "en": "If an attack damages Wobbuffet during your opponent's next turn (even if Wobbuffet is knocked out), flip a coin. If heads, Wobbuffet attacks the Defending Pokémon for an equal amount of damage.",
+          "fr": "Si une attaque inflige des dégâts à Qulbutoke pendant le prochain tour de votre adversaire (même si Qulbutoke est K.O.), lancez 1 pièce. Si c'est face, Qulbutoke attaque le Pokémon Défenseur et lui inflige le même nombre de dégâts.",
+          "de": "If an attack damages Wobbuffet during your opponent's next turn (even if Wobbuffet is Knocked Out), flip a coin. If heads, Wobbuffet attacks the Defending Pokémon for an equal amount of damage."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-neo2-36",
+    "set_id": "intl-neo2",
+    "number": "36",
+    "category": "pokemon",
+    "name": {
+      "en": "Yanma",
+      "fr": "Yanma",
+      "de": "Yanma"
+    },
+    "pokemon": [
+      "Yanma"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Shockwave",
+          "fr": "Onde de choc",
+          "de": "Shockwave"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, this attack does 10 damage to each of your opponent's Pokémon. Don't apply Weakness and Resistance. Then, if your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with the Defending Pokémon.",
+          "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 10 dégâts à chacun des Pokémon de votre adversaire. N'appliquez pas la Faiblesse et la Résistance. Puis, si votre adversaire a des Pokémon sur son Banc, il choisit l'un d'eux et l'échange contre le Pokémon Défenseur.",
+          "de": "Flip a coin. If heads, this attack does 10 damage to each of your opponent's Pokémon. Don't apply Weakness and Resistance. Then, if your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with the Defending Pokémon."
+        }
+      },
+      {
+        "name": {
+          "en": "Swift",
+          "fr": "Météores",
+          "de": "Swift"
+        },
+        "cost": [
+          "grass",
+          "grass",
+          "grass"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "This attack's damage isn't affected by Weakness, Resistance, Pokémon Powers, or any other effects on the Defending Pokémon.",
+          "fr": "Les dégâts de cette attaque ne sont pas affectés par la Faiblesse, la Résistance, les Pouvoirs Pokémon ou tout autre effet en action sur le Pokémon Défenseur.",
+          "de": "This attack's damage isn't affected by Weakness, Resistance, Pokémon Powers, or any other effects on the Defending Pokémon."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ]
+  },
+  {
+    "id": "intl-neo2-37",
+    "set_id": "intl-neo2",
+    "number": "37",
+    "category": "pokemon",
+    "name": {
+      "en": "Corsola",
+      "fr": "Corayon",
+      "de": "Corasonn"
+    },
+    "pokemon": [
+      "Corsola"
+    ],
+    "illustrator": "Yuka Morii",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Recover",
+          "fr": "Soin",
+          "de": "Erholung"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Discard 1 Energy attached to Corsola or this attack does nothing. Remove all damage counters from Corsola.",
+          "fr": "Défaussez 1 carte Énergie  attachée à Corayon pour pouvoir utiliser cette attaque. Retirez tous les marqueurs de dégâts sur Corayon.",
+          "de": "Lege 1 an Corasonn angelegte -Energiekarte auf deinen Ablagestapel, oder dieser Angriff hat keine Auswirkungen. Entferne alle Schadensmarken von Corasonn."
+        }
+      },
+      {
+        "name": {
+          "en": "Spike Cannon",
+          "fr": "Picanon",
+          "de": "Dornkanone"
+        },
+        "cost": [
+          "fighting",
+          "fighting"
+        ],
+        "damage": "30x",
+        "text": {
+          "en": "Flip 2 coins. This attack does 30 times the number of heads.",
+          "fr": "Lancez 2 pièces. Cette attaque inflige 30 dégâts multipliés par le nombre de faces.",
+          "de": "Wirf zwei Münzen. Dieser Angriff fügt 30 Schadenspunkte mal der Anzahl \"Kopf\" zu."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-neo2-38",
+    "set_id": "intl-neo2",
+    "number": "38",
+    "category": "pokemon",
+    "name": {
+      "en": "Eevee",
+      "fr": "Évoli",
+      "de": "Evoli"
+    },
+    "pokemon": [
+      "Eevee"
+    ],
+    "illustrator": "Aya Kusube",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Smash Kick",
+          "fr": "Ruade",
+          "de": "Smash Kick"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-neo2-39",
+    "set_id": "intl-neo2",
+    "number": "39",
+    "category": "pokemon",
+    "name": {
+      "en": "Houndour",
+      "fr": "Malosse",
+      "de": "Hunduster"
+    },
+    "pokemon": [
+      "Houndour"
+    ],
+    "illustrator": "Shin-ichi Yoshida",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "dark"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Bite",
+          "fr": "Morsure",
+          "de": "Biss"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Plunder",
+          "fr": "Pillage",
+          "de": "Plündern"
+        },
+        "cost": [
+          "dark",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Before doing damage, discard all Trainer cards attached to the Defending Pokémon.",
+          "fr": "Avant d'infliger les dégâts, défaussez toutes les cartes Dresseur attachées au Pokémon Défenseur (avant qu'elles agissent sur les dégâts).",
+          "de": "Lege alle Trainerkarten, die an das verteidigende Pokémon angelegt sind, auf den Ablagestapel deines gegners, bevor der Schaden zugefügt wird (bevor sie den Schaden beeinflussen können)."
+        }
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-neo2-4",
+    "set_id": "intl-neo2",
+    "number": "4",
+    "category": "pokemon",
+    "name": {
+      "en": "Houndoom",
+      "fr": "Démolosse",
+      "de": "Hundemon"
+    },
+    "pokemon": [
+      "Houndoom"
+    ],
+    "illustrator": "Shin-ichi Yoshida",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "dark"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Houndour",
+      "fr": "Malosse"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Crunch",
+          "fr": "Mâchouille",
+          "de": "Crunch"
+        },
+        "cost": [
+          "dark",
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Until the end of your next turn, if an attack damages the Defending Pokémon (after applying Weakness and Resistance), that attack does 20 more damage to the Defending Pokémon.",
+          "fr": "Jusqu'à la fin de votre prochain tour, si une attaque inflige des dégâts au Pokémon Défenseur (après application de la Faiblesse et de la Résistance), elle lui inflige 20 dégâts de plus.",
+          "de": "Until end of your next turn, if an attack damages the Defending Pokémon (after applying Weakness and Resistance), that attack does 20 more damage to the Defending Pokémon."
+        }
+      },
+      {
+        "name": {
+          "en": "Flamethrower",
+          "fr": "Lance-flammes",
+          "de": "Flamethrower"
+        },
+        "cost": [
+          "fire",
+          "fire",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "en": "Discard 1 Energy card attached to Houndoom or this attack does nothing.",
+          "fr": "Défaussez 1 carte Énergie  attachée à Démolosse pour pouvoir utiliser cette attaque.",
+          "de": "Discard 1  Energy card attached to Houndoom or this attack does nothing."
+        }
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-neo2-40",
+    "set_id": "intl-neo2",
+    "number": "40",
+    "category": "pokemon",
+    "name": {
+      "en": "Igglybuff",
+      "fr": "Toudoudou",
+      "de": "Fluffeluff"
+    },
+    "pokemon": [
+      "Igglybuff"
+    ],
+    "illustrator": "Miki Tanaka",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 30,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic"
+  },
+  {
+    "id": "intl-neo2-41",
+    "set_id": "intl-neo2",
+    "number": "41",
+    "category": "pokemon",
+    "name": {
+      "en": "Kakuna",
+      "fr": "Coconfort",
+      "de": "Kokuna"
+    },
+    "pokemon": [
+      "Kakuna"
+    ],
+    "illustrator": "Yukiko Baba",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Weedle",
+      "fr": "Aspicot"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Secrete Poison",
+          "fr": "Sécrétion de poison",
+          "de": "Giftsekret"
+        },
+        "cost": [
+          "grass",
+          "grass"
+        ],
+        "damage": "",
+        "text": {
+          "en": "During your opponent's next turn, whenever your opponent's attack damages Kakuna (even if Kakuna is knocked out), your opponent's Active Pokémon is now Poisoned and Kakuna does 10 damage to each of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "fr": "Pendant le prochain tour de votre adversaire, quand son attaque fait des dégâts à Coconfort (même si Coconfort est K.O.), le Pokémon Actif de votre adversaire est Empoisonné et Coconfort inflige 10 dégâts à chaque Pokémon du Banc de votre adversaire. (N'appliquez pas la Faiblesse et la Résistance pour les Pokémon du Banc.)",
+          "de": "Immer wenn während des nächsten Zugs deines gegners der Angriff deines gegners Kokuna Schaden zufügt (selbst wenn Kokuna kampfunfähig ist), ist das verteidigende Pokémon deines Gegners dann vergiftet und Kokuna fügt jedem Pokémon auf der Bank deines Gegners 10 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-neo2-42",
+    "set_id": "intl-neo2",
+    "number": "42",
+    "category": "pokemon",
+    "name": {
+      "en": "Metapod",
+      "fr": "Chrysacier",
+      "de": "Safcon"
+    },
+    "pokemon": [
+      "Metapod"
+    ],
+    "illustrator": "Sumiyoshi Kizuki",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Caterpie",
+      "fr": "Chenipan"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Harden",
+          "fr": "Armure",
+          "de": "Härtner"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "During your opponent's next turn, whenever 20 or less damage is done to Metapod (after applying Weakness and Resistance), prevent that damage. (Any other effects of attacks still happen.)",
+          "fr": "Pendant le prochain tour de votre adversaire, à chaque fois que 20 dégâts ou moins sont infligés à Chrysacier (après application de la Faiblesse et de la Résistance), prévenez ces dégâts. (Tout autre effet ou attaque est toujours valide.)",
+          "de": "Immer wenn Safcon während des nächsten Zuges deines Gegners 20 oder weniger Schadenspunkte zugefügt werden (nachdem Schäwche und Resistenz verrechnet wurden), verhindere diesen Schaden. (Alle anderen Auswirkungen von Angriffen finden immer noch statt.)"
+        }
+      },
+      {
+        "name": {
+          "en": "Hatch",
+          "fr": "Éclosion",
+          "de": "Schlüpfen"
+        },
+        "cost": [
+          "grass",
+          "grass"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, remove all damage counters from Metapod. Then, search your deck for a card that evolves from Metapod and attach that card to Metapod. This counts as evolving Metapod. Shuffle your deck afterward.",
+          "fr": "Lancez une pièce. Si c'est face, retirez tous les marqueurs de dégâts sur Chrysacier. Puis, cherchez dans votre deck une carte Évolution de Chrysacier et attachez-la à Chrysacier. Cela revient à le faire évoluer. Mélangez ensuite votre deck.",
+          "de": "Wirf eine Münze. Entferne bei \"Kopf\" alle Schadensmarken von Safcon. Durchsuche dann dein Deck nach einer Karte, die aus Safcon entsteht, und lege sie auf Safcon. Dies zählt als Entwicklung von Safcon. Mische danach dein Deck."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-neo2-43",
+    "set_id": "intl-neo2",
+    "number": "43",
+    "category": "pokemon",
+    "name": {
+      "en": "Omastar",
+      "fr": "Amonistar",
+      "de": "Amoroso"
+    },
+    "pokemon": [
+      "Omastar"
+    ],
+    "illustrator": "Shin-ichi Yoshida",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Omanyte",
+      "fr": "Amonita"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Squeeze",
+          "fr": "Compression",
+          "de": "Quetschen"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "10+",
+        "text": {
+          "en": "Flip a coin. If heads, this attack does 10 damage plus 20 more damage and the Defending Pokémon is now Paralyzed. If tails, this attack does 10 damage.",
+          "fr": "Lancez une pièce. Si c'est face, cette attaque fait 10 dégâts plus 20 dégâts supplémentaires et le Pokémon Défenseur est Paralysé. Si c'est pile, l'attaque ne fait que 10 dégâts.",
+          "de": "Wirf eine Münze. Bei \"Kopf\" fügt dieser Angriff 10 Schadenspunkte plus 20 weitere Schadenspunkte zu und das verteidigende Pokémon ist jetzt gelähmt. Bei \"Zahl\" fügt dieser Angriff 10 Schadenspunkte zu."
+        }
+      },
+      {
+        "name": {
+          "en": "Spike Barrage",
+          "fr": "Barrage de pics",
+          "de": "Stachel-Stakkato"
+        },
+        "cost": [
+          "water",
+          "water",
+          "water"
+        ],
+        "damage": "20+",
+        "text": {
+          "en": "Flip a number of coins equal to the number of Energy attached to Omastar. This attack does 20 damage plus 20 more for each heads.",
+          "fr": "Lancez un nombre de pièces équivalent au nombre d'Énergies  attachées à Amonistar. Cette attaque fait 20 dégâts plus 20 dégâts par face.",
+          "de": "Wirf so viele Münzen, wie -Energie an Amoroso angelegt ist. Dieser Anrgiff fügt 20 Schadenspunkte pro geworfenem \"Kopf\" zu."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-neo2-44",
+    "set_id": "intl-neo2",
+    "number": "44",
+    "category": "pokemon",
+    "name": {
+      "en": "Poliwhirl",
+      "fr": "Têtarte",
+      "de": "Quaputzi"
+    },
+    "pokemon": [
+      "Poliwhirl"
+    ],
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "water"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Poliwag",
+      "fr": "Ptitard"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Belly Drum",
+          "fr": "Cognobidon",
+          "de": "Bauchtrommel"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Put 3 damage counters on Poliwhirl. If this doesn't knock out Poliwhirl, search your deck for up to 2 Basic Energy cards and attach them to Poliwhirl. Shuffle your deck afterward.",
+          "fr": "Placez 3 marqueurs de dégâts sur Têtarte. S'il n'est pas K.O., cherchez dans votre deck 2 cartes Énergie de base et attachez-les à Têtarte. Mélangez ensuite votre deck.",
+          "de": "Lege 3 Schadensmarken auf Quaputzi. Wenn dadurch Quaputzi nicht kampfunfähig wird, durchsuche dein Deck nach bis zu 2 Basis-Energiekarten und lege sie an Quaputzi an. Mische danach dein Deck."
+        }
+      },
+      {
+        "name": {
+          "en": "Water Gun",
+          "fr": "Pistolet à O",
+          "de": "Aquaknarre"
+        },
+        "cost": [
+          "water",
+          "water",
+          "normal"
+        ],
+        "damage": "30+",
+        "text": {
+          "en": "Does 30 damage plus 10 more damage for each W Energy attached to Poliwhirl but not used to pay for this attack's Energy cost. You can't add more than 20 damage in this way.",
+          "fr": "Inflige 30 dégâts plus 10 dégâts supplémentaires pour chaque Énergie  attachée à Têtarte en plus du coût en Énergie de cette attaque. Vous ne pouvez pas ajouter plus de 20 dégâts de cette façon.",
+          "de": "Fügt 30 Schadenspunkte plus 10 weitere Schadenspunkte für jede an Quaputzi angelegte -Energie, die nicht zum Zahlen der Energiekosten für diesen Angriff verwendet wird, zu. Du kannst auf diese Weise höchstens 20 weitere Schadenspunkte zufügen."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-neo2-45",
+    "set_id": "intl-neo2",
+    "number": "45",
+    "category": "pokemon",
+    "name": {
+      "en": "Pupitar",
+      "fr": "Ymphect",
+      "de": "Pupitar"
+    },
+    "pokemon": [
+      "Pupitar"
+    ],
+    "illustrator": "Hironobu Yoshida",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Larvitar",
+      "fr": "Embrylex"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Skull Bash",
+          "fr": "Coud'krane",
+          "de": "Schädelwumme"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Dust Devil",
+          "fr": "Tempête de sable",
+          "de": "Sandteufel"
+        },
+        "cost": [
+          "fighting",
+          "fighting"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Does 10 damage to each non- Pokémon in play. Don't apply Weakness and Resistance.",
+          "fr": "Inflige 10 dégâts à chaque Pokémon non- en jeu. N'appliquez pas la Faiblesse et la Résistance.",
+          "de": "Fügt jedem Pokémon im Spiel, das nicht vom Typ  ist, 10 Schadenspunkte zu. Wende Schwäche und Resistenz nicht an."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "lightning",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-neo2-46",
+    "set_id": "intl-neo2",
+    "number": "46",
+    "category": "pokemon",
+    "name": {
+      "en": "Scyther",
+      "fr": "Insécateur",
+      "de": "Sichlor"
+    },
+    "pokemon": [
+      "Scyther"
+    ],
+    "illustrator": "Kimiya Masago",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Fury Cutter",
+          "fr": "Taillade",
+          "de": "Fury Cutter"
+        },
+        "cost": [
+          "grass",
+          "grass"
+        ],
+        "damage": "10+",
+        "text": {
+          "en": "Flip 4 coins. This attack does 10 damage plus 10 more damage if exactly 1 is heads, or 20 more damage if exactly 2 are heads, or 40 more damage if exactly 3 are heads, or 80 more damage if all 4 are heads.",
+          "fr": "Lancez 4 pièces. Cette attaque inflige 10 dégâts plus 10 dégâts supplémentaires si c'est 1 face, ou 20 dégâts supplémentaires si c'est 2 faces, ou 40 dégâts supplémentaires si c'est 3 faces, ou 80 dégâts supplémentaires si c'est 4 faces.",
+          "de": "Flip 4 coins. This attack does 10 damage plus 10 more damage if exactly 1 are heads, or 20 more damage if exactly 2 are heads, or 40 more damage if exactly 3 are heads, or 80 more damage if all 4 are heads."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-neo2-47",
+    "set_id": "intl-neo2",
+    "number": "47",
+    "category": "pokemon",
+    "name": {
+      "en": "Unown [D]",
+      "fr": "Zarbi D",
+      "de": "Icognito D"
+    },
+    "pokemon": [
+      "Unown [D]"
+    ],
+    "illustrator": "CR CG gangs",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Hidden Power",
+          "fr": "Puissance cachée",
+          "de": "Kraftreserve"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-neo2-48",
+    "set_id": "intl-neo2",
+    "number": "48",
+    "category": "pokemon",
+    "name": {
+      "en": "Unown [F]",
+      "fr": "Zarbi F",
+      "de": "Icognito F"
+    },
+    "pokemon": [
+      "Unown [F]"
+    ],
+    "illustrator": "CR CG gangs",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Hidden Power",
+          "fr": "Puissance cachée",
+          "de": "Kraftreserve"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-neo2-49",
+    "set_id": "intl-neo2",
+    "number": "49",
+    "category": "pokemon",
+    "name": {
+      "en": "Unown [M]",
+      "fr": "Zarbi M",
+      "de": "Icognito M"
+    },
+    "pokemon": [
+      "Unown [M]"
+    ],
+    "illustrator": "CR CG gangs",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Hidden Power",
+          "fr": "Puissance cachée",
+          "de": "Kraftreserve"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-neo2-5",
+    "set_id": "intl-neo2",
+    "number": "5",
+    "category": "pokemon",
+    "name": {
+      "en": "Houndour",
+      "fr": "Malosse",
+      "de": "Hunduster"
+    },
+    "pokemon": [
+      "Houndour"
+    ],
+    "illustrator": "Aya Kusube",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Smog",
+          "fr": "Purédpois",
+          "de": "Smog"
+        },
+        "cost": [
+          "fire"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Poisoned.",
+          "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Empoisonné.",
+          "de": "Wirf eine Münze. Bei \"Kopf\" ist das verteidigende Pokémon jetzt vergiftet."
+        }
+      },
+      {
+        "name": {
+          "en": "Collect Fire",
+          "fr": "Quête du feu",
+          "de": "Feuersammeln"
+        },
+        "cost": [
+          "fire",
+          "fire"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "If there are any Energy in your discard pile, choose 1 of them and attach it to Houndour.",
+          "fr": "S'il y a des cartes Énergie  dans votre pile de défausse, choisissez l'une d'entre elles et attachez-la à Malosse.",
+          "de": "Wenn mindestens eine -Energiekarte in deinem Ablagestapel ist, wähle eine davon und lege sie an Hunduster an."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-neo2-50",
+    "set_id": "intl-neo2",
+    "number": "50",
+    "category": "pokemon",
+    "name": {
+      "en": "Unown [N]",
+      "fr": "Zarbi N",
+      "de": "Icognito N"
+    },
+    "pokemon": [
+      "Unown [N]"
+    ],
+    "illustrator": "CR CG gangs",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Hidden Power",
+          "fr": "Puissance cachée",
+          "de": "Kraftreserve"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-neo2-51",
+    "set_id": "intl-neo2",
+    "number": "51",
+    "category": "pokemon",
+    "name": {
+      "en": "Unown [U]",
+      "fr": "Zarbi U",
+      "de": "Icognito U"
+    },
+    "pokemon": [
+      "Unown [U]"
+    ],
+    "illustrator": "CR CG gangs",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Hidden Power",
+          "fr": "Puissance cachée",
+          "de": "Kraftreserve"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-neo2-52",
+    "set_id": "intl-neo2",
+    "number": "52",
+    "category": "pokemon",
+    "name": {
+      "en": "Xatu",
+      "fr": "Xatu",
+      "de": "Xatu"
+    },
+    "pokemon": [
+      "Xatu"
+    ],
+    "illustrator": "Sumiyoshi Kizuki",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Natu",
+      "fr": "Natu"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Energy Cycle",
+          "fr": "Cycle énergétique",
+          "de": "Energy Cycle"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip a coin. If heads, choose 1 Energy card attached to the Defending Pokémon and 1 of your opponent's Benched Pokémon. Attach that Energy card to that Pokémon.",
+          "fr": "Lancez une pièce. Si c'est face, choisissez une carte Énergie attachée au Pokémon Défenseur et 1 Pokémon du Banc de votre adversaire. Attachez-lui cette carte Énergie.",
+          "de": "Flip a coin. If heads, choose 1 Energy card attached to the Defending Pokémon and 1 of your opponent's Benched Pokémon. Attach that Energy card to that Pokémon."
+        }
+      },
+      {
+        "name": {
+          "en": "Super Psy",
+          "fr": "Super psy",
+          "de": "Super Psy"
+        },
+        "cost": [
+          "psychic",
+          "psychic",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-neo2-53",
+    "set_id": "intl-neo2",
+    "number": "53",
+    "category": "pokemon",
+    "name": {
+      "en": "Caterpie",
+      "fr": "Chenipan",
+      "de": "Raupy"
+    },
+    "pokemon": [
+      "Caterpie"
+    ],
+    "illustrator": "Yuka Morii",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Spin Tackle",
+          "fr": "Charge vrille",
+          "de": "Drehtackle"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Caterpie does 10 damage to itself.",
+          "fr": "Chenipan s'inflige 10 dégâts.",
+          "de": "Raupy fügt sich selbst 10 Schadenspunkte zu."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-neo2-54",
+    "set_id": "intl-neo2",
+    "number": "54",
+    "category": "pokemon",
+    "name": {
+      "en": "Dunsparce",
+      "fr": "Insolourdo",
+      "de": "Dummisel"
+    },
+    "pokemon": [
+      "Dunsparce"
+    ],
+    "illustrator": "Yukiko Baba",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 30,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Glare",
+          "fr": "Intimidation",
+          "de": "Giftblick"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+          "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est Paralysé.",
+          "de": "Wird eine Münze. Bei \"Kopf\" ist das verteidigende Pokémon jetzt gelähmt."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-30"
+      }
+    ]
+  },
+  {
+    "id": "intl-neo2-55",
+    "set_id": "intl-neo2",
+    "number": "55",
+    "category": "pokemon",
+    "name": {
+      "en": "Hoppip",
+      "fr": "Granivol",
+      "de": "Hoppspross"
+    },
+    "pokemon": [
+      "Hoppip"
+    ],
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 30,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Rolling Tackle",
+          "fr": "Roulé-boulé",
+          "de": "Rolltackle"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ]
+  },
+  {
+    "id": "intl-neo2-56",
+    "set_id": "intl-neo2",
+    "number": "56",
+    "category": "pokemon",
+    "name": {
+      "en": "Kabuto",
+      "fr": "Kabuto",
+      "de": "Kabuto"
+    },
+    "pokemon": [
+      "Kabuto"
+    ],
+    "illustrator": "Yuka Morii",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "water"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "en": "Work Together",
+          "fr": "Synergie",
+          "de": "Work Together"
+        },
+        "cost": [
+          "fighting",
+          "normal"
+        ],
+        "damage": "10+",
+        "text": {
+          "en": "Flip a coin. If heads, this attack does 10 damage plus 10 more damage for each Omanyte, Omastar, Kabuto, and Kabutops on your Bench.",
+          "fr": "Lancez une pièce. Si c'est face, cette attaque fait 10 dégâts plus 10 dégâts supplémentaires pour chaque Amonita, Amonistar, Kabuto et Kabutops sur votre Banc.",
+          "de": "Flip a coin. If heads, this attack does 10 damage plus 10 more damage for each Omanyte, Omastar, Kabuto, and Kabutops on your Bench."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-neo2-57",
+    "set_id": "intl-neo2",
+    "number": "57",
+    "category": "pokemon",
+    "name": {
+      "en": "Larvitar",
+      "fr": "Embrylex",
+      "de": "Larvitar"
+    },
+    "pokemon": [
+      "Larvitar"
+    ],
+    "illustrator": "Hironobu Yoshida",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Bite",
+          "fr": "Morsure",
+          "de": "Biss"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "lightning",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-neo2-58",
+    "set_id": "intl-neo2",
+    "number": "58",
+    "category": "pokemon",
+    "name": {
+      "en": "Mareep",
+      "fr": "Wattouat",
+      "de": "Voltilamm"
+    },
+    "pokemon": [
+      "Mareep"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Thunder Jolt",
+          "fr": "Secousse Tonnerre",
+          "de": "Donnerrüttler"
+        },
+        "cost": [
+          "lightning",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Flip a coin. If tails, Mareep does 10 damage to itself.",
+          "fr": "Lancez une pièce. Si c'est face, Wattouat s'inflige 10 dégâts.",
+          "de": "Wirf eine Münze. Bei \"Zahl\" fügt sich Voltilamm selber 10 Schadenspunkte zu."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-neo2-59",
+    "set_id": "intl-neo2",
+    "number": "59",
+    "category": "pokemon",
+    "name": {
+      "en": "Natu",
+      "fr": "Natu",
+      "de": "Natu"
+    },
+    "pokemon": [
+      "Natu"
+    ],
+    "illustrator": "Sumiyoshi Kizuki",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Confuse Ray",
+          "fr": "Onde folie",
+          "de": "Konfustrahl"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Confused.",
+          "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Confus.",
+          "de": "Wirf eine Münze. Bei \"Kopf\" ist das verteidigende Pokémon jetzt verwirrt."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-neo2-6",
+    "set_id": "intl-neo2",
+    "number": "6",
+    "category": "pokemon",
+    "name": {
+      "en": "Kabutops",
+      "fr": "Kabutops",
+      "de": "Kabutops"
+    },
+    "pokemon": [
+      "Kabutops"
+    ],
+    "illustrator": "Kimiya Masago",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "water"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Kabuto",
+      "fr": "Kabuto"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Slash",
+          "fr": "Tranche",
+          "de": "Slash"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Hydrocutter",
+          "fr": "Hydro-lame",
+          "de": "Hydrocutter"
+        },
+        "cost": [
+          "fighting"
+        ],
+        "damage": "40x",
+        "text": {
+          "en": "Flip a number of coins equal to the number of Energy cards attached to Kabutops. This attack does 40 times the number of heads. You can't flips more than 3 coins in this way.",
+          "fr": "Lancez un nombre de pièces égal au nombre de cartes Énergie attachées à Kabutops. Cette attaque inflige 40 dégâts, multipliés par le nombre de faces. Vous ne pouvez pas lancer plus de 3 pièces.",
+          "de": "Flip a number of coins equal to the number of Energy cards attached to Kabutops. This attack does 40 damage times the number of heads. You can't flip more than 3 coins in this way."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-neo2-60",
+    "set_id": "intl-neo2",
+    "number": "60",
+    "category": "pokemon",
+    "name": {
+      "en": "Omanyte",
+      "fr": "Amonita",
+      "de": "Amonitas"
+    },
+    "pokemon": [
+      "Omanyte"
+    ],
+    "illustrator": "Yuka Morii",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "en": "Bind",
+          "fr": "Étreinte",
+          "de": "Klammergriff"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+          "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Paralysé.",
+          "de": "Wirf eine Münze. Bei \"Kopf\" ist das verteidigende Pokémon jetzt gelähmt."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-neo2-61",
+    "set_id": "intl-neo2",
+    "number": "61",
+    "category": "pokemon",
+    "name": {
+      "en": "Pineco",
+      "fr": "Pomdepik",
+      "de": "Tannza"
+    },
+    "pokemon": [
+      "Pineco"
+    ],
+    "illustrator": "Tomokazu Komiya",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Burst",
+          "fr": "Explosion",
+          "de": "Burst"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "40",
+        "text": {
+          "en": "Flip a coin. If heads, Pineco does 40 damage to itself and 10 damage to each Pokémon on each player's Bench. (Don't apply Weakness and Resistance for Benched Pokémon.) Flip a coin. If tails, this attack does nothing (not even damage).",
+          "fr": "Lancez une pièce. Si c'est face, Pomdepik s'inflige 40 dégâts et inflige 10 dégâts à chaque Pokémon du Banc de chaque joueur. (N'appliquez pas la Faiblesse et la Résistance pour les Pokémon du Banc.) Lancez une pièce. Si c'est face, cette attaque ne fait rien (pas même de dégâts).",
+          "de": "Flip a coin. If heads, Pineco does 40 damage to itself and 10 damage to each Pokémon on each player's Bench. (Don't apply Weakness and Resistance for Benched Pokémon.) Flip a coin. If tails, this attack does nothing (not even damage)."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-neo2-62",
+    "set_id": "intl-neo2",
+    "number": "62",
+    "category": "pokemon",
+    "name": {
+      "en": "Poliwag",
+      "fr": "Ptitard",
+      "de": "Quapsel"
+    },
+    "pokemon": [
+      "Poliwag"
+    ],
+    "illustrator": "Aya Kusube",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Rollout",
+          "fr": "Roulade",
+          "de": "Walzer"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Hypnosis",
+          "fr": "Hypnose",
+          "de": "Hypnose"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "",
+        "text": {
+          "en": "The Defending Pokémon is now Asleep.",
+          "fr": "Le Pokémon Défenseur est maintenant Endormi.",
+          "de": "Das verteidigende Pokémon schläft jetzt."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-neo2-63",
+    "set_id": "intl-neo2",
+    "number": "63",
+    "category": "pokemon",
+    "name": {
+      "en": "Sentret",
+      "fr": "Fouinette",
+      "de": "Wiesor"
+    },
+    "pokemon": [
+      "Sentret"
+    ],
+    "illustrator": "Sumiyoshi Kizuki",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Scout",
+          "fr": "Espion",
+          "de": "Späher"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Look at your opponent's hand.",
+          "fr": "Regardez la main de votre adversaire.",
+          "de": "Schau dir die Karten auf der Hand deines gegners an."
+        }
+      },
+      {
+        "name": {
+          "en": "Tackle",
+          "fr": "Charge",
+          "de": "Tackle"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-neo2-64",
+    "set_id": "intl-neo2",
+    "number": "64",
+    "category": "pokemon",
+    "name": {
+      "en": "Spinarak",
+      "fr": "Mimigal",
+      "de": "Weberak"
+    },
+    "pokemon": [
+      "Spinarak"
+    ],
+    "illustrator": "Yukiko Baba",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Poison Sting",
+          "fr": "Dard-venin",
+          "de": "Giftstachel"
+        },
+        "cost": [
+          "grass",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Poisoned.",
+          "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Empoisonné.",
+          "de": "Wirf eine Münze. Bei \"Kopf\" ist das verteidigende Pokémon jetzt vergiftet."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-neo2-65",
+    "set_id": "intl-neo2",
+    "number": "65",
+    "category": "pokemon",
+    "name": {
+      "en": "Teddiursa",
+      "fr": "Teddiursa",
+      "de": "Teddiursa"
+    },
+    "pokemon": [
+      "Teddiursa"
+    ],
+    "illustrator": "Miki Tanaka",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Scratch",
+          "fr": "Griffe",
+          "de": "Kratzer"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Nap Time",
+          "fr": "Sieste",
+          "de": "Mittagsschlaf"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Remove all damage counters from Teddiursa. Teddiursa is now Asleep.",
+          "fr": "Retirez tous les marqueurs de dégâts de Teddiursa. Teddiursa est maintenant Endormi.",
+          "de": "Entferne alle Schadensmarken von Teddiursa. Teddiursa schläft jetzt."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-neo2-66",
+    "set_id": "intl-neo2",
+    "number": "66",
+    "category": "pokemon",
+    "name": {
+      "en": "Tyrogue",
+      "fr": "Débugant",
+      "de": "Rabauz"
+    },
+    "pokemon": [
+      "Tyrogue"
+    ],
+    "illustrator": "Miki Tanaka",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 30,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Smash Punch",
+          "fr": "Boxe",
+          "de": "Schmetterschlag"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Flip a coin. If tails, this attack does nothing.",
+          "fr": "Lancez une pièce. Si c'est pile, cette attaque ne fait rien.",
+          "de": "Wirf eine Münze. Bei \"Zahl\" hat dieser Angriff keine Auswirkungen."
+        }
+      }
+    ]
+  },
+  {
+    "id": "intl-neo2-67",
+    "set_id": "intl-neo2",
+    "number": "67",
+    "category": "pokemon",
+    "name": {
+      "en": "Unown [E]",
+      "fr": "Zarbi E",
+      "de": "Icognito E"
+    },
+    "pokemon": [
+      "Unown [E]"
+    ],
+    "illustrator": "CR CG gangs",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Hidden Power",
+          "fr": "Puissance cachée",
+          "de": "Kraftreserve"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-neo2-68",
+    "set_id": "intl-neo2",
+    "number": "68",
+    "category": "pokemon",
+    "name": {
+      "en": "Unown [I]",
+      "fr": "Zarbi I",
+      "de": "Icognito I"
+    },
+    "pokemon": [
+      "Unown [I]"
+    ],
+    "illustrator": "CR CG gangs",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Hidden Power",
+          "fr": "Puissance cachée",
+          "de": "Kraftreserve"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-neo2-69",
+    "set_id": "intl-neo2",
+    "number": "69",
+    "category": "pokemon",
+    "name": {
+      "en": "Unown [O]",
+      "fr": "Zarbi O",
+      "de": "Icognito O"
+    },
+    "pokemon": [
+      "Unown [O]"
+    ],
+    "illustrator": "CR CG gangs",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Hidden Power",
+          "fr": "Puissance cachée",
+          "de": "Kraftreserve"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-neo2-7",
+    "set_id": "intl-neo2",
+    "number": "7",
+    "category": "pokemon",
+    "name": {
+      "en": "Magnemite",
+      "fr": "Magneti",
+      "de": "Magnetilo"
+    },
+    "pokemon": [
+      "Magnemite"
+    ],
+    "illustrator": "undefined",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "metal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Lock-on",
+          "fr": "Verrouillage",
+          "de": "Lock-on"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "During your next turn, treat any tails flipped when using Magnemite's Electric Bolt attack on the Defending Pokémon as if they were heads. (Benching or evolving either Pokémon ends this effect.)",
+          "fr": "Pendant votre prochain tour, considérez que les pièces tombées sur pile lors de l'attaque Élécanon de Magneti sur le Pokémon Défenseur sont en fait tombées sur face. (Faire évoluer ou renvoyer l'un ou l'autre Pokémon sur son Banc annule cet effet.)",
+          "de": "During your next turn, treat any tails flipped when using Magnemite's Electric Bolt attack on the Defending Pokémon as if they were heads. (Benching or evolving either Pokémon ends this effect.)"
+        }
+      },
+      {
+        "name": {
+          "en": "Electric Bolt",
+          "fr": "Élécanon",
+          "de": "Electric Bolt"
+        },
+        "cost": [
+          "lightning",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "en": "Flip 2 coins. If both are heads, the Defending Pokémon is now Paralyzed. If either of them is tails, this attack does nothing (not even damage).",
+          "fr": "Lancez 2 pièces. Si c'est face dans les deux cas, le Pokémon Défenseur est Paralysé. Si c'est pile (même pour une pièce seulement), cette attaque ne fait rien (pas même de dégâts).",
+          "de": "Flip 2 coins. If both are heads, the Defending Pokémon is now Paralyzed. If either of them is tails, this attack does nothing (not even damage)."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "grass",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-neo2-70",
+    "set_id": "intl-neo2",
+    "number": "70",
+    "category": "pokemon",
+    "name": {
+      "en": "Weedle",
+      "fr": "Aspicot",
+      "de": "Hornliu"
+    },
+    "pokemon": [
+      "Weedle"
+    ],
+    "illustrator": "Miki Tanaka",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Spike Stab",
+          "fr": "Koud'pic",
+          "de": "Stachelstich"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Poisoned. If tails, this attack does nothing (not even damage).",
+          "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Empoisonné. Si c'est pile, cette attaque ne fait rien (pas même de dégâts).",
+          "de": "Wirf eine Münze. Bei \"Kopf\" ist der verteidigende Pokémon jetzt vergiftet. Bei \"Zahl\" hat dieser Angriff keine Auswirkungen (nicht einmal Schadenspunkte)."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-neo2-71",
+    "set_id": "intl-neo2",
+    "number": "71",
+    "category": "pokemon",
+    "name": {
+      "en": "Wooper",
+      "fr": "Axoloto",
+      "de": "Felino"
+    },
+    "pokemon": [
+      "Wooper"
+    ],
+    "illustrator": "Yukiko Baba",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Slime",
+          "fr": "Bave",
+          "de": "Schleim"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "",
+        "text": {
+          "en": "If an attack would do damage to Wooper during your opponent's next turn, your opponent flips a coin. If tails, prevent all damage done to Wooper from that attack. (Any other effects of that attack happen.)",
+          "fr": "Si une attaque va infliger des dégâts à Axoloto pendant le prochain tour de votre adversaire, il doit lancer une pièce. Si c'est pile, retirez tous les dégâts infligés à Axoloto pendant l'attaque. (Tous les autres effets de l'attaque sont appliqués.)",
+          "de": "Wenn während des nächsten Zuges deines Gegners ein Angriff Felino Schadenspunkte zufügen wurde, wirft dein Gegner eine Münze. Verhindere bei \"Zahl\" alle Schadenspunkte, die dieser Angriff Felino zufügen würde. (Alle anderen Auswirkungen von Angriffen finden immer noch statt.)"
+        }
+      },
+      {
+        "name": {
+          "en": "Tail Slap",
+          "fr": "Coud'keu",
+          "de": "Schweifschlag"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "lightning",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-neo2-72",
+    "set_id": "intl-neo2",
+    "number": "72",
+    "category": "trainer",
+    "name": {
+      "en": "Fossil Egg",
+      "fr": "Oeuf fossile",
+      "de": "Fossil-Ei"
+    },
+    "pokemon": [],
+    "illustrator": "undefined",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Flip a coin. If heads, search your deck for a card that evolves from Mysterious Fossil and put it onto your Bench or put a card that evolves from Mysterious Fossil from your hand onto your Bench. Either way, treat the new card as a Basic Pokémon. If you searched your deck, shuffle it. (You can't play this card if your Bench is full.)",
+      "fr": "Lancez une pièce. Si c'est face, cherchez dans votre deck ou prenez dans votre main une carte Évolution de Mystérieux Fossile et placez-la sur votre Banc. Dans un cas ou l'autre, utilisez la nouvelle carte comme un Pokémon de base. Si vous avez cherché dans votre deck, mélangez-le. (Vous ne pouvez pas jouer cette carte si votre Banc est plein.)",
+      "de": "Flip a coin. If heads, either search your deck for a card that evolves from Mysterious Fossil and put it onto your Bench or put a card that evolves from Mysterious Fossil from your hand onto your Bench. Either way, treat the new card as a Basic Pokémon. If you searched your deck, shuffle it. (You can't play this card if your Bench is full.)"
+    }
+  },
+  {
+    "id": "intl-neo2-73",
+    "set_id": "intl-neo2",
+    "number": "73",
+    "category": "trainer",
+    "name": {
+      "en": "Hyper Devolution Spray",
+      "fr": "Vaporisateur hyper rétrograde",
+      "de": "Hyper-Rückentwicklungs-Spray"
+    },
+    "pokemon": [],
+    "illustrator": "undefined",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Choose 1 of your evolved Pokémon. Take the highest Stage Evolution card from that Pokémon and put it into your hand. (You can't evolve a Pokémon the turn you devolve it.)",
+      "fr": "Choisissez 1 de vos Pokémon évolués. Prenez la carte Évolution de niveau le plus élevé de ce Pokémon et replacez-la dans votre main. (Vous ne pouvez pas faire évoluer un Pokémon pendant le tour où il est rétrogradé.)",
+      "de": "Choose 1 of your evolved Pokémon. Take the highest Stage Evolution card from that Pokémon and put it into your hand. (You can't evolve a Pokémon the turn you devolve it.)"
+    }
+  },
+  {
+    "id": "intl-neo2-74",
+    "set_id": "intl-neo2",
+    "number": "74",
+    "category": "trainer",
+    "name": {
+      "en": "Ruin Wall",
+      "fr": "Mur en ruines",
+      "de": "Ruinenwand"
+    },
+    "pokemon": [],
+    "illustrator": "undefined",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Search your deck for a card with Unown in its name and put it onto your Bench. Shuffle your deck afterward. (You can't play this card if your Bench is full.)",
+      "fr": "Cherchez dans votre deck une carte Zarbi et placez-la sur votre Banc. Mélangez ensuite votre deck. (Vous ne pouvez pas jouer cette carte si votre Banc est plein.)",
+      "de": "Search your deck for a card with Unown in its name and put it onto your Bench. Shuffle your deck afterward. (You can't play this card if your Bench is full.)"
+    }
+  },
+  {
+    "id": "intl-neo2-75",
+    "set_id": "intl-neo2",
+    "number": "75",
+    "category": "trainer",
+    "name": {
+      "en": "Energy Ark",
+      "fr": "Arche d'Énergie",
+      "de": "Energy Ark"
+    },
+    "pokemon": [],
+    "illustrator": "undefined",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Flip 2 coins. For each heads, search your deck for a Basic Energy card. Show that card to your opponent, then put it into your hand. Shuffle your deck afterward.",
+      "fr": "Lancez 2 pièces. Pour chaque face, cherchez dans votre deck une carte Énergie de base. Montrez cette carte à votre adversaire, puis placez-la dans votre main. Mélangez ensuite votre deck.",
+      "de": "Flip 2 coins. For each heads, search your deck for a Basic Energy card. Show that card to your opponent, then put it into your hand. Shuffle your deck afterward."
+    }
+  },
+  {
+    "id": "intl-neo2-8",
+    "set_id": "intl-neo2",
+    "number": "8",
+    "category": "pokemon",
+    "name": {
+      "en": "Politoed",
+      "fr": "Tarpaud",
+      "de": "Quaxo"
+    },
+    "pokemon": [
+      "Politoed"
+    ],
+    "illustrator": "Tomokazu Komiya",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "water"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Poliwhirl",
+      "fr": "Têtarte"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Doubleslap",
+          "fr": "Torgnoles",
+          "de": "Duplexhieb"
+        },
+        "cost": [
+          "water",
+          "water",
+          "normal",
+          "normal"
+        ],
+        "damage": "40x",
+        "text": {
+          "en": "Flip 2 coins. This attack does 40 times the number of heads.",
+          "fr": "Lancez 2 pièces. Cette attaque inflige 40 dégâts multipliés par le nombre de faces.",
+          "de": "Wirf zwei Münzen. Dieser Angriff fügt 40 Schadenspunkte mal der Anzahl \"Kopf\" zu."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-neo2-9",
+    "set_id": "intl-neo2",
+    "number": "9",
+    "category": "pokemon",
+    "name": {
+      "en": "Poliwrath",
+      "fr": "Tartard",
+      "de": "Quappo"
+    },
+    "pokemon": [
+      "Poliwrath"
+    ],
+    "illustrator": "Shin-ichi Yoshida",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Poliwhirl",
+      "fr": "Têtarte"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Corkscrew Punch",
+          "fr": "Poing tire-bouchon",
+          "de": "Corkscrew Punch"
+        },
+        "cost": [
+          "fighting",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Submission",
+          "fr": "Sacrifice",
+          "de": "Submission"
+        },
+        "cost": [
+          "fighting",
+          "fighting",
+          "normal",
+          "normal"
+        ],
+        "damage": "70",
+        "text": {
+          "en": "Poliwrath does 20 damage to itself.",
+          "fr": "Tartard s'inflige 20 dégâts.",
+          "de": "Poliwrath does 20 damage to itself"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  }
+]

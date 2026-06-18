@@ -1,0 +1,1042 @@
+[
+  {
+    "id": "intl-pop8-1",
+    "set_id": "intl-pop8",
+    "number": "1",
+    "category": "pokemon",
+    "name": {
+      "en": "Heatran"
+    },
+    "pokemon": [
+      "Heatran"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": ""
+        }
+      },
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Body Slam"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+        }
+      },
+      {
+        "name": {
+          "en": "Fire Spin"
+        },
+        "cost": [
+          "fire",
+          "fire",
+          "fire",
+          "normal"
+        ],
+        "damage": "90",
+        "text": {
+          "en": "Discard 2 basic Energy cards attached to Heatran. (If you can’t discard cards, this attack does nothing.)"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "+30"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-pop8-10",
+    "set_id": "intl-pop8",
+    "number": "10",
+    "category": "trainer",
+    "name": {
+      "en": "Rare Candy"
+    },
+    "pokemon": [],
+    "illustrator": "Ryo Ueda",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": ""
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "en": "Choose 1 of your Basic Pokémon in play. If you have a Stage 1 or Stage 2 card that evolves from that Pokémon in your hand, put that card on the Basic Pokémon. (This counts as evolving that Pokémon.)"
+    }
+  },
+  {
+    "id": "intl-pop8-11",
+    "set_id": "intl-pop8",
+    "number": "11",
+    "category": "trainer",
+    "name": {
+      "en": "Roseanne’s Research"
+    },
+    "pokemon": [],
+    "illustrator": "Kanako Eo",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "en": "Search your deck for up to 2 in any combination of Basic Pokémon and basic Energy cards, show them to your opponent, and put them into your hand. Shuffle your deck afterward."
+    }
+  },
+  {
+    "id": "intl-pop8-12",
+    "set_id": "intl-pop8",
+    "number": "12",
+    "category": "pokemon",
+    "name": {
+      "en": "Chimchar"
+    },
+    "pokemon": [
+      "Chimchar"
+    ],
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": ""
+        }
+      },
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Scratch"
+        },
+        "cost": [],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Ember"
+        },
+        "cost": [
+          "fire",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Flip a coin. If tails, discard a Fire Energy attached to Chimchar."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "+10"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pop8-13",
+    "set_id": "intl-pop8",
+    "number": "13",
+    "category": "pokemon",
+    "name": {
+      "en": "Croagunk"
+    },
+    "pokemon": [
+      "Croagunk"
+    ],
+    "illustrator": "Kouki Saitou",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": ""
+        }
+      },
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Ghastly Sound"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, your opponent can’t play any Supporter cards from his or her hand during his or her next turn."
+        }
+      },
+      {
+        "name": {
+          "en": "Finger Poke"
+        },
+        "cost": [
+          "psychic",
+          "psychic"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Poisoned."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "+10"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pop8-14",
+    "set_id": "intl-pop8",
+    "number": "14",
+    "category": "pokemon",
+    "name": {
+      "en": "Happiny"
+    },
+    "pokemon": [
+      "Happiny"
+    ],
+    "illustrator": "Yuka Morii",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": ""
+        }
+      },
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Lively"
+        },
+        "cost": [],
+        "damage": "",
+        "text": {
+          "en": "Remove 2 damage counters from 1 of your Pokémon."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+10"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pop8-15",
+    "set_id": "intl-pop8",
+    "number": "15",
+    "category": "pokemon",
+    "name": {
+      "en": "Piplup"
+    },
+    "pokemon": [
+      "Piplup"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Peck"
+        },
+        "cost": [],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Water Splash"
+        },
+        "cost": [
+          "water",
+          "normal"
+        ],
+        "damage": "20+",
+        "text": {
+          "en": "Flip a coin. If heads, this attack does 20 damage plus 10 more damage."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "+10"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pop8-16",
+    "set_id": "intl-pop8",
+    "number": "16",
+    "category": "pokemon",
+    "name": {
+      "en": "Riolu"
+    },
+    "pokemon": [
+      "Riolu"
+    ],
+    "illustrator": "Masakazu Fukuda",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": ""
+        }
+      },
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Quick Attack"
+        },
+        "cost": [
+          "fighting"
+        ],
+        "damage": "10+",
+        "text": {
+          "en": "Flip a coin. If heads, this attack does 10 damage plus 10 more damage."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "+10"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pop8-17",
+    "set_id": "intl-pop8",
+    "number": "17",
+    "category": "pokemon",
+    "name": {
+      "en": "Turtwig"
+    },
+    "pokemon": [
+      "Turtwig"
+    ],
+    "illustrator": "Masakazu Fukuda",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Tackle"
+        },
+        "cost": [],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Razor Leaf"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+10"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "water",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-pop8-2",
+    "set_id": "intl-pop8",
+    "number": "2",
+    "category": "pokemon",
+    "name": {
+      "en": "Lucario"
+    },
+    "pokemon": [
+      "Lucario"
+    ],
+    "illustrator": "Kent Kanetsuna",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": ""
+        }
+      },
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Riolu"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Blocking Punch"
+        },
+        "cost": [
+          "metal",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {
+          "en": "During your opponent’s next turn, any damage done to Lucario by attacks is reduced by 20 (after applying Weakness and Resistance)."
+        }
+      },
+      {
+        "name": {
+          "en": "Striking Kick"
+        },
+        "cost": [
+          "fighting",
+          "normal",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {
+          "en": "This attack’s damage isn’t affected by Resistance, Poké-Powers, Poké-Bodies, or any other effects on the Defending Pokémon."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pop8-3",
+    "set_id": "intl-pop8",
+    "number": "3",
+    "category": "pokemon",
+    "name": {
+      "en": "Luxray"
+    },
+    "pokemon": [
+      "Luxray"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": ""
+        }
+      },
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": ""
+        }
+      }
+    ],
+    "hp": 120,
+    "types": [
+      "lightning"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Luxio"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Thunder"
+        },
+        "cost": [
+          "lightning",
+          "lightning",
+          "lightning",
+          "normal"
+        ],
+        "damage": "120",
+        "text": {
+          "en": "Flip a coin. If tails, Luxray does 40 damage to itself."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+30"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "metal",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pop8-4",
+    "set_id": "intl-pop8",
+    "number": "4",
+    "category": "pokemon",
+    "name": {
+      "en": "Probopass"
+    },
+    "pokemon": [
+      "Probopass"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "metal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Nosepass"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Rock Slide"
+        },
+        "cost": [
+          "fighting",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Does 10 damage to 2 of your opponent’s Benched Pokémon. (Don’t apply Weakness and Resistance for Benched Pokémon.)"
+        }
+      },
+      {
+        "name": {
+          "en": "Triple Nose"
+        },
+        "cost": [
+          "metal",
+          "normal",
+          "normal"
+        ],
+        "damage": "50+",
+        "text": {
+          "en": "Flip 3 coins. This attack does 50 damage plus 20 more damage for each heads."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+30"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-pop8-5",
+    "set_id": "intl-pop8",
+    "number": "5",
+    "category": "pokemon",
+    "name": {
+      "en": "Yanmega"
+    },
+    "pokemon": [
+      "Yanmega"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Yanma"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Supersonic"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Confused."
+        }
+      },
+      {
+        "name": {
+          "en": "Air Slash"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "70",
+        "text": {
+          "en": "Flip a coin. If tails, discard an Energy attached to Yanmega."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "+20"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 0
+  },
+  {
+    "id": "intl-pop8-6",
+    "set_id": "intl-pop8",
+    "number": "6",
+    "category": "pokemon",
+    "name": {
+      "en": "Cherrim"
+    },
+    "pokemon": [
+      "Cherrim"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Cherubi"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Worry Seed"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Confused."
+        }
+      },
+      {
+        "name": {
+          "en": "Magical Leaf"
+        },
+        "cost": [
+          "grass",
+          "grass"
+        ],
+        "damage": "20+",
+        "text": {
+          "en": "Flip a coin. If heads, this attack does 20 damage plus 20 more damage and remove 3 damage counters from Cherrim."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+20"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "water",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-pop8-7",
+    "set_id": "intl-pop8",
+    "number": "7",
+    "category": "pokemon",
+    "name": {
+      "en": "Carnivine"
+    },
+    "pokemon": [
+      "Carnivine"
+    ],
+    "illustrator": "Kouki Saitou",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": ""
+        }
+      },
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Swallow Up"
+        },
+        "cost": [
+          "grass",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Before doing damage, count the remaining HP of the Defending Pokémon and Carnivine. If the Defending Pokémon has fewer remaining HP than Carnivine’s, this attack does 60 damage instead."
+        }
+      },
+      {
+        "name": {
+          "en": "Wring Out"
+        },
+        "cost": [
+          "grass",
+          "grass"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed and discard an Energy card attached to the Defending Pokémon."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+20"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "water",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pop8-8",
+    "set_id": "intl-pop8",
+    "number": "8",
+    "category": "pokemon",
+    "name": {
+      "en": "Luxio"
+    },
+    "pokemon": [
+      "Luxio"
+    ],
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": ""
+        }
+      },
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "lightning"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Shinx"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Fasten Claws"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10+",
+        "text": {
+          "en": "Flip a coin. If heads, this attack does 10 damage plus 30 more damage."
+        }
+      },
+      {
+        "name": {
+          "en": "Thunder Fang"
+        },
+        "cost": [
+          "lightning",
+          "lightning"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+20"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "metal",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 0
+  },
+  {
+    "id": "intl-pop8-9",
+    "set_id": "intl-pop8",
+    "number": "9",
+    "category": "trainer",
+    "name": {
+      "en": "Night Maintenance"
+    },
+    "pokemon": [],
+    "illustrator": "Ryo Ueda",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": ""
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "en": "Search your discard pile for up to 3 in any combination of Pokémon and basic Energy cards. Show them to your opponent and shuffle them into your deck."
+    }
+  }
+]

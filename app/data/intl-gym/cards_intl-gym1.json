@@ -1,0 +1,7274 @@
+[
+  {
+    "id": "intl-gym1-1",
+    "set_id": "intl-gym1",
+    "number": "1",
+    "category": "pokemon",
+    "name": {
+      "en": "Blaine's Moltres"
+    },
+    "pokemon": [
+      "Blaine's Moltres"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Phoenix Flame"
+        },
+        "cost": [
+          "fire",
+          "fire",
+          "fire",
+          "fire",
+          "fire"
+        ],
+        "damage": "90",
+        "text": {
+          "en": "Flip a coin. If tails, shuffle Blaine's Moltres and all cards attached to it into your deck (after doing damage)."
+        }
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-gym1-10",
+    "set_id": "intl-gym1",
+    "number": "10",
+    "category": "pokemon",
+    "name": {
+      "en": "Misty's Tentacruel"
+    },
+    "pokemon": [
+      "Misty's Tentacruel"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "water"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Tentacool"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Jellyfish Poison"
+        },
+        "cost": [
+          "water",
+          "water",
+          "normal",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Poisoned. If tails, the Defending Pokémon is now Confused."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ]
+  },
+  {
+    "id": "intl-gym1-100",
+    "set_id": "intl-gym1",
+    "number": "100",
+    "category": "trainer",
+    "name": {
+      "en": "Erika"
+    },
+    "pokemon": [],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "You may draw up to 3 cards, then your opponent may draw up to 3 cards."
+    }
+  },
+  {
+    "id": "intl-gym1-101",
+    "set_id": "intl-gym1",
+    "number": "101",
+    "category": "trainer",
+    "name": {
+      "en": "Lt. Surge"
+    },
+    "pokemon": [],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "You can play this card only if you have at least 1 Basic Pokémon card in your hand. Put a Basic Pokémon card from your hand into play as your Active Pokémon. Put your old Active Pokémon onto your Bench. (You can't play this card if your Bench is full.)"
+    }
+  },
+  {
+    "id": "intl-gym1-102",
+    "set_id": "intl-gym1",
+    "number": "102",
+    "category": "trainer",
+    "name": {
+      "en": "Misty"
+    },
+    "pokemon": [],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Discard 2 of the other cards in your hand in order to play this card. If this turn's attack does damage to the Defending Pokémon (after applying Weakness and Resistance), and if the attacking Pokémon has Misty in its name, the attack does 20 more damage to the Defending Pokémon."
+    }
+  },
+  {
+    "id": "intl-gym1-103",
+    "set_id": "intl-gym1",
+    "number": "103",
+    "category": "trainer",
+    "name": {
+      "en": "No Removal Gym"
+    },
+    "pokemon": [],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "This card stays in play when you play it. Discard this card if another Stadium card comes into play. A player must discard 2 cards from his or her hand in order to play an Energy Removal or Super Energy Removal card."
+    }
+  },
+  {
+    "id": "intl-gym1-104",
+    "set_id": "intl-gym1",
+    "number": "104",
+    "category": "trainer",
+    "name": {
+      "en": "The Rocket's Training Gym"
+    },
+    "pokemon": [],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "This card stays in play when you play it. Discard this card if another Stadium card comes into play. Each player pays Colorless more to retreat his or her Active Pokémon."
+    }
+  },
+  {
+    "id": "intl-gym1-105",
+    "set_id": "intl-gym1",
+    "number": "105",
+    "category": "trainer",
+    "name": {
+      "en": "Blaine's Last Resort"
+    },
+    "pokemon": [],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "You can't play this card if you have any cards in your hand other than Blaine's Last Resort. Show your hand to your opponent, then draw 5 cards."
+    }
+  },
+  {
+    "id": "intl-gym1-106",
+    "set_id": "intl-gym1",
+    "number": "106",
+    "category": "trainer",
+    "name": {
+      "en": "Brock's Training Method"
+    },
+    "pokemon": [],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Search your deck for a Basic Pokémon or Evolution card with Brock in its name. Show that card to your opponent, then put it into your hand. Shuffle your deck afterward."
+    }
+  },
+  {
+    "id": "intl-gym1-107",
+    "set_id": "intl-gym1",
+    "number": "107",
+    "category": "trainer",
+    "name": {
+      "en": "Celadon City Gym"
+    },
+    "pokemon": [],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "This card stays in play when you play it. Discard this card if another Stadium card comes into play. During each player's turn, that player may choose to discard an Energy card attached to 1 of his or her Pokémon with Erika in its name. If that player does so, that Pokémon is no longer Asleep, Confused, Paralyzed, or Poisoned."
+    }
+  },
+  {
+    "id": "intl-gym1-108",
+    "set_id": "intl-gym1",
+    "number": "108",
+    "category": "trainer",
+    "name": {
+      "en": "Cerulean City Gym"
+    },
+    "pokemon": [],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "This card stays in play when you play it. Discard this card if another Stadium card comes into play. Each player pays Colorless less to retreat his or her Pokémon if it has Misty in its name."
+    }
+  },
+  {
+    "id": "intl-gym1-109",
+    "set_id": "intl-gym1",
+    "number": "109",
+    "category": "trainer",
+    "name": {
+      "en": "Erika's Maids"
+    },
+    "pokemon": [],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Trade 2 of the other cards in your hand for up to 2 Basic Pokémon and/or Evolution cards with Erika in their names from your deck. Show those cards to your opponent, then put them into your hand. Shuffle your deck afterward."
+    }
+  },
+  {
+    "id": "intl-gym1-11",
+    "set_id": "intl-gym1",
+    "number": "11",
+    "category": "pokemon",
+    "name": {
+      "en": "Rocket's Hitmonchan"
+    },
+    "pokemon": [
+      "Rocket's Hitmonchan"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "evolves_from": {
+      "en": "Tyrogue"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Crosscounter"
+        },
+        "cost": [
+          "fighting"
+        ],
+        "damage": "",
+        "text": {
+          "en": "If an attack does damage to Rocket's Hitmonchan during your opponent's next turn (even if Rocket's Hitmonchan is Knocked Out), flip a coin. If heads, Rocket's Hitmonchan attacks your opponent's Active Pokémon for double that amount of damage. (If Rocket's Hitmonchan takes 20 damage, it does 40 damage to that Pokémon.)"
+        }
+      },
+      {
+        "name": {
+          "en": "Magnum Punch"
+        },
+        "cost": [
+          "fighting",
+          "fighting",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-gym1-110",
+    "set_id": "intl-gym1",
+    "number": "110",
+    "category": "trainer",
+    "name": {
+      "en": "Erika's Perfume"
+    },
+    "pokemon": [],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Look at your opponent's hand. If he or she has any Basic Pokémon cards there, you may put any number of them onto your opponent's Bench (as long as there's room)."
+    }
+  },
+  {
+    "id": "intl-gym1-111",
+    "set_id": "intl-gym1",
+    "number": "111",
+    "category": "trainer",
+    "name": {
+      "en": "Good Manners"
+    },
+    "pokemon": [],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "In order to play this card, you can't have any Basic Pokémon cards in your hand. Show your hand to your opponent, then search your deck for a Basic Pokémon card, show it to your opponent, and put it into your hand. Shuffle your deck afterward."
+    }
+  },
+  {
+    "id": "intl-gym1-112",
+    "set_id": "intl-gym1",
+    "number": "112",
+    "category": "trainer",
+    "name": {
+      "en": "Lt. Surge's Treaty"
+    },
+    "pokemon": [],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Your opponent chooses 1 of the following: everyone chooses 1 of his or her own Prizes and put it into his or her hand, or you draw a card."
+    }
+  },
+  {
+    "id": "intl-gym1-113",
+    "set_id": "intl-gym1",
+    "number": "113",
+    "category": "trainer",
+    "name": {
+      "en": "Minion of Team Rocket"
+    },
+    "pokemon": [],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Flip 2 coins. If both of them are heads, choose 1 of your opponent's Benched Pokémon and return it and all cards attached to it to his or her hand. If 1 or both of them are tails, your turn ends immediately (you can't attack this turn)."
+    }
+  },
+  {
+    "id": "intl-gym1-114",
+    "set_id": "intl-gym1",
+    "number": "114",
+    "category": "trainer",
+    "name": {
+      "en": "Misty's Wrath"
+    },
+    "pokemon": [],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Look at the top 7 cards of your deck. Choose 2 of those cards and put them into your hand. Discard the rest."
+    }
+  },
+  {
+    "id": "intl-gym1-115",
+    "set_id": "intl-gym1",
+    "number": "115",
+    "category": "trainer",
+    "name": {
+      "en": "Pewter City Gym"
+    },
+    "pokemon": [],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "This card stays in play when you play it. Discard this card if another Stadium card comes into play. Don't apply Resistance to any attacks made by Pokémon with Brock in their names."
+    }
+  },
+  {
+    "id": "intl-gym1-116",
+    "set_id": "intl-gym1",
+    "number": "116",
+    "category": "trainer",
+    "name": {
+      "en": "Recall"
+    },
+    "pokemon": [],
+    "illustrator": "Sumiyoshi Kizuki",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "For your attack this turn, your Active Pokémon can use any attack from its Basic Pokémon card or any Evolution card attached to it. (You still have to pay for that attack's Energy cost.)"
+    }
+  },
+  {
+    "id": "intl-gym1-117",
+    "set_id": "intl-gym1",
+    "number": "117",
+    "category": "trainer",
+    "name": {
+      "en": "Sabrina's ESP"
+    },
+    "pokemon": [],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Attach Sabrina's ESP to 1 of your Pokémon with Sabrina in its name. At the end of your turn, discard Sabrina's ESP. If that Pokémon uses and attack that involves flipping coins, Sabrina's ESP lets you re-flip those coins once. If you do, re-flip all the coins."
+    }
+  },
+  {
+    "id": "intl-gym1-118",
+    "set_id": "intl-gym1",
+    "number": "118",
+    "category": "trainer",
+    "name": {
+      "en": "Secret Mission"
+    },
+    "pokemon": [],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Look at your opponent's hand. Then, you may discard as many other cards as you want from your hand and draw that many cards."
+    }
+  },
+  {
+    "id": "intl-gym1-119",
+    "set_id": "intl-gym1",
+    "number": "119",
+    "category": "trainer",
+    "name": {
+      "en": "Tickling Machine"
+    },
+    "pokemon": [],
+    "illustrator": "Sumiyoshi Kizuki",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Flip a coin. If heads, your opponent sets aside all the cards in his or her hand face down. Nobody may look at those cards. At the end of your opponent's next turn, your opponent puts those cards back into his or her hand. If tails, your turn ends immediately (you can't attack this turn)."
+    }
+  },
+  {
+    "id": "intl-gym1-12",
+    "set_id": "intl-gym1",
+    "number": "12",
+    "category": "pokemon",
+    "name": {
+      "en": "Rocket's Moltres"
+    },
+    "pokemon": [
+      "Rocket's Moltres"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Fire Wall"
+        },
+        "cost": [
+          "fire",
+          "fire",
+          "fire"
+        ],
+        "damage": "40",
+        "text": {
+          "en": "If an attack does damage to Rocket's Moltres during your opponent's next turn (even if Rocket's Moltres is Knocked Out), Rocket's Moltres attacks your opponent's Active Pokémon for 10 damage. (Apply Weakness and Resistance.)"
+        }
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-gym1-120",
+    "set_id": "intl-gym1",
+    "number": "120",
+    "category": "trainer",
+    "name": {
+      "en": "Vermilion City Gym"
+    },
+    "pokemon": [],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "This card stays in play when you play it. Discard this card if another Stadium card comes into play. Whenever a player attacks with a Pokémon with Lt. Surge in its name, he or she may flip a coin. If heads, and if that Pokémon's attack does damage to the Defending Pokémon (after applying Weakness and Resistance), that attack does 10 more damage to the Defending Pokémon. If tails, the attacking Pokémon does 10 damage to itself in addition to whatever its attack usually does."
+    }
+  },
+  {
+    "id": "intl-gym1-121",
+    "set_id": "intl-gym1",
+    "number": "121",
+    "category": "trainer",
+    "name": {
+      "en": "Blaine's Gamble"
+    },
+    "pokemon": [],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Discard any number of other cards from your hand, then flip a coin. If heads, draw twice that many cards."
+    }
+  },
+  {
+    "id": "intl-gym1-122",
+    "set_id": "intl-gym1",
+    "number": "122",
+    "category": "trainer",
+    "name": {
+      "en": "Energy Flow"
+    },
+    "pokemon": [],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "For each of your Pokémon, you may return any number of Energy cards attached to it to your hand."
+    }
+  },
+  {
+    "id": "intl-gym1-123",
+    "set_id": "intl-gym1",
+    "number": "123",
+    "category": "trainer",
+    "name": {
+      "en": "Misty's Duel"
+    },
+    "pokemon": [],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "You and your opponent play a game of Rock-Paper-Scissors. The winner shuffles his or her hand into his or her deck and draws a new hand of 5 cards. (If you don't know how to play Rock-Paper-Scissors, flip a coin to decide who's the winner.)"
+    }
+  },
+  {
+    "id": "intl-gym1-124",
+    "set_id": "intl-gym1",
+    "number": "124",
+    "category": "trainer",
+    "name": {
+      "en": "Narrow Gym"
+    },
+    "pokemon": [],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "This card stays in play when you play it. Discard this card if another Stadium card comes into play. No player may have more than 4 Pokémon on his or her Bench. When this card is played, if a player has 5 Pokémon on his or her Bench, that player chooses 1 of them and returns it and all cards attached to it to his or her hand. (If both players have to return a Pokémon, your opponent returns a Pokémon first.)"
+    }
+  },
+  {
+    "id": "intl-gym1-125",
+    "set_id": "intl-gym1",
+    "number": "125",
+    "category": "trainer",
+    "name": {
+      "en": "Sabrina's Gaze"
+    },
+    "pokemon": [],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Each player shuffles his or her hand into his or her deck and draws a new hand of the same number of cards."
+    }
+  },
+  {
+    "id": "intl-gym1-126",
+    "set_id": "intl-gym1",
+    "number": "126",
+    "category": "trainer",
+    "name": {
+      "en": "Trash Exchange"
+    },
+    "pokemon": [],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Count the number of cards in your discard pile and shuffle them into your deck. Then discard that many cards from the top of your deck."
+    }
+  },
+  {
+    "id": "intl-gym1-127",
+    "set_id": "intl-gym1",
+    "number": "127",
+    "category": "energy",
+    "name": {
+      "en": "Fighting Energy"
+    },
+    "pokemon": [],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "stage": "basic"
+  },
+  {
+    "id": "intl-gym1-128",
+    "set_id": "intl-gym1",
+    "number": "128",
+    "category": "energy",
+    "name": {
+      "en": "Fire Energy"
+    },
+    "pokemon": [],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "stage": "basic"
+  },
+  {
+    "id": "intl-gym1-129",
+    "set_id": "intl-gym1",
+    "number": "129",
+    "category": "energy",
+    "name": {
+      "en": "Grass Energy"
+    },
+    "pokemon": [],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "stage": "basic"
+  },
+  {
+    "id": "intl-gym1-13",
+    "set_id": "intl-gym1",
+    "number": "13",
+    "category": "pokemon",
+    "name": {
+      "en": "Rocket's Scyther"
+    },
+    "pokemon": [
+      "Rocket's Scyther"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Shadow Images"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Whenever Rocket's Scyther is attacked, your opponent flips a coin. If tails, that attack does no damage to Rocket's Scyther. (Any other effects of the attack still happen.) This effect lasts until Rocket's Scyther takes damage (or is Benched or is evolved)."
+        }
+      },
+      {
+        "name": {
+          "en": "Blinding Scythe"
+        },
+        "cost": [
+          "grass",
+          "normal",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-gym1-130",
+    "set_id": "intl-gym1",
+    "number": "130",
+    "category": "energy",
+    "name": {
+      "en": "Lightning Energy"
+    },
+    "pokemon": [],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "stage": "basic"
+  },
+  {
+    "id": "intl-gym1-131",
+    "set_id": "intl-gym1",
+    "number": "131",
+    "category": "energy",
+    "name": {
+      "en": "Psychic Energy"
+    },
+    "pokemon": [],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "stage": "basic"
+  },
+  {
+    "id": "intl-gym1-132",
+    "set_id": "intl-gym1",
+    "number": "132",
+    "category": "energy",
+    "name": {
+      "en": "Water Energy"
+    },
+    "pokemon": [],
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "stage": "basic"
+  },
+  {
+    "id": "intl-gym1-14",
+    "set_id": "intl-gym1",
+    "number": "14",
+    "category": "pokemon",
+    "name": {
+      "en": "Sabrina's Gengar"
+    },
+    "pokemon": [
+      "Sabrina's Gengar"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Haunter"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Pain Amplifier"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Put a damage counter on each of your opponent's Pokémon that already has any damage counters on it."
+        }
+      },
+      {
+        "name": {
+          "en": "Call of the Night"
+        },
+        "cost": [
+          "psychic",
+          "psychic",
+          "psychic"
+        ],
+        "damage": "40",
+        "text": {
+          "en": "Unless this attack Knocks Out the Defending Pokémon, flip 2 coins. If both of them are heads, your opponent shuffles his or her Active Pokémon and all cards attached to it into his or her deck."
+        }
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-gym1-15",
+    "set_id": "intl-gym1",
+    "number": "15",
+    "category": "trainer",
+    "name": {
+      "en": "Brock"
+    },
+    "pokemon": [],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Remove 1 damage counter from each of your Pokémon that has any damage counters on it."
+    }
+  },
+  {
+    "id": "intl-gym1-16",
+    "set_id": "intl-gym1",
+    "number": "16",
+    "category": "trainer",
+    "name": {
+      "en": "Erika"
+    },
+    "pokemon": [],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "You may draw up to 3 cards, then your opponent may draw up to 3 cards."
+    }
+  },
+  {
+    "id": "intl-gym1-17",
+    "set_id": "intl-gym1",
+    "number": "17",
+    "category": "trainer",
+    "name": {
+      "en": "Lt. Surge"
+    },
+    "pokemon": [],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "You can play this card only if you have at least 1 Basic Pokémon card in your hand. Put a Basic Pokémon card from your hand into play as your Active Pokémon. Put your old Active Pokémon onto your Bench. (You can't play this card if your Bench is full.)"
+    }
+  },
+  {
+    "id": "intl-gym1-18",
+    "set_id": "intl-gym1",
+    "number": "18",
+    "category": "trainer",
+    "name": {
+      "en": "Misty"
+    },
+    "pokemon": [],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Discard 2 of the other cards in your hand in order to play this card. If this turn's attack does damage to the Defending Pokémon (after applying Weakness and Resistance), and if the attacking Pokémon has Misty in its name, the attack does 20 more damage to the Defending Pokémon."
+    }
+  },
+  {
+    "id": "intl-gym1-19",
+    "set_id": "intl-gym1",
+    "number": "19",
+    "category": "trainer",
+    "name": {
+      "en": "The Rocket's Trap"
+    },
+    "pokemon": [],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Flip a coin. If heads, choose up to 3 cards at random from your opponent's hand (don't look at them). Your opponent shuffles those cards into his or her deck."
+    }
+  },
+  {
+    "id": "intl-gym1-2",
+    "set_id": "intl-gym1",
+    "number": "2",
+    "category": "pokemon",
+    "name": {
+      "en": "Brock's Rhydon"
+    },
+    "pokemon": [
+      "Brock's Rhydon"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Rhyhorn"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Lariat"
+        },
+        "cost": [
+          "fighting",
+          "fighting",
+          "normal",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If tails, this attack does nothing."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "lightning",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-gym1-20",
+    "set_id": "intl-gym1",
+    "number": "20",
+    "category": "pokemon",
+    "name": {
+      "en": "Brock's Golem"
+    },
+    "pokemon": [
+      "Brock's Golem"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Graveler"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Rock Slide"
+        },
+        "cost": [
+          "fighting",
+          "fighting",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "If your opponent has any Benched Pokémon, choose up to 3 of them. This attack does 10 damage to each of them. (Don't apply Weakness and Resistance for Benched Pokémon.)"
+        }
+      },
+      {
+        "name": {
+          "en": "Fissure"
+        },
+        "cost": [
+          "fighting",
+          "fighting",
+          "normal",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 4
+  },
+  {
+    "id": "intl-gym1-21",
+    "set_id": "intl-gym1",
+    "number": "21",
+    "category": "pokemon",
+    "name": {
+      "en": "Brock's Onix"
+    },
+    "pokemon": [
+      "Brock's Onix"
+    ],
+    "illustrator": "Benimaru Itoh",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Bind"
+        },
+        "cost": [
+          "fighting",
+          "fighting"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+        }
+      },
+      {
+        "name": {
+          "en": "Tunneling"
+        },
+        "cost": [
+          "fighting",
+          "fighting",
+          "fighting"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "If your opponent has any Benched Pokémon, choose up to 2 of them. This attack does 20 damage to each of them. (Don't apply Weakness and Resistance for Benched Pokémon.) Brock's Onix can't attack during your next turn."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-gym1-22",
+    "set_id": "intl-gym1",
+    "number": "22",
+    "category": "pokemon",
+    "name": {
+      "en": "Brock's Rhyhorn"
+    },
+    "pokemon": [
+      "Brock's Rhyhorn"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Horn Toss"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "If your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with the Defending Pokémon. (Do the damage before switching the Pokémon.)"
+        }
+      },
+      {
+        "name": {
+          "en": "Take Down"
+        },
+        "cost": [
+          "fighting",
+          "fighting",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {
+          "en": "Brock's Rhyhorn does 10 damage to itself."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "lightning",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-gym1-23",
+    "set_id": "intl-gym1",
+    "number": "23",
+    "category": "pokemon",
+    "name": {
+      "en": "Brock's Sandslash"
+    },
+    "pokemon": [
+      "Brock's Sandslash"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Sandshrew"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Needles"
+        },
+        "cost": [
+          "fighting",
+          "fighting"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed and Poisoned."
+        }
+      },
+      {
+        "name": {
+          "en": "Sandstorm"
+        },
+        "cost": [
+          "fighting",
+          "fighting"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "lightning",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-gym1-24",
+    "set_id": "intl-gym1",
+    "number": "24",
+    "category": "pokemon",
+    "name": {
+      "en": "Brock's Zubat"
+    },
+    "pokemon": [
+      "Brock's Zubat"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 30,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Alert"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Draw a card. Then, switch Brock's Zubat with 1 of your Benched Pokémon. You can't use this attack if your Bench is empty."
+        }
+      },
+      {
+        "name": {
+          "en": "Wing Attack"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ]
+  },
+  {
+    "id": "intl-gym1-25",
+    "set_id": "intl-gym1",
+    "number": "25",
+    "category": "pokemon",
+    "name": {
+      "en": "Erika's Clefairy"
+    },
+    "pokemon": [
+      "Erika's Clefairy"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "evolves_from": {
+      "en": "Cleffa"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Moonwatching"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Search your deck for a basic Energy card. Show that card to your opponent, then put it into your hand. Shuffle your deck afterward."
+        }
+      },
+      {
+        "name": {
+          "en": "Comet Slap"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip 3 coins. This attack does 10 damage times the number of heads."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-gym1-26",
+    "set_id": "intl-gym1",
+    "number": "26",
+    "category": "pokemon",
+    "name": {
+      "en": "Erika's Victreebel"
+    },
+    "pokemon": [
+      "Erika's Victreebel"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Weepinbell"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Razor Leaf"
+        },
+        "cost": [
+          "grass",
+          "grass",
+          "grass"
+        ],
+        "damage": "50",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-gym1-27",
+    "set_id": "intl-gym1",
+    "number": "27",
+    "category": "pokemon",
+    "name": {
+      "en": "Lt. Surge's Electabuzz"
+    },
+    "pokemon": [
+      "Lt. Surge's Electabuzz"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "evolves_from": {
+      "en": "Elekid"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Charge"
+        },
+        "cost": [
+          "lightning"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Take up to 2 Energy cards from your discard pile and attach them to Lt. Surge's Electabuzz"
+        }
+      },
+      {
+        "name": {
+          "en": "Electric Current"
+        },
+        "cost": [
+          "lightning",
+          "lightning"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Take 1 Energy card attached to Lt. Surge's Electabuzz and attach it to 1 of your Benched Pokémon. If you have no Benched Pokémon, discard that Energy card."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-gym1-28",
+    "set_id": "intl-gym1",
+    "number": "28",
+    "category": "pokemon",
+    "name": {
+      "en": "Lt. Surge's Raichu"
+    },
+    "pokemon": [
+      "Lt. Surge's Raichu"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "lightning"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Pikachu"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Mega Punch"
+        },
+        "cost": [
+          "lightning",
+          "lightning"
+        ],
+        "damage": "30",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Thunderbolt"
+        },
+        "cost": [
+          "lightning",
+          "lightning",
+          "lightning",
+          "lightning"
+        ],
+        "damage": "100",
+        "text": {
+          "en": "Discard all Energy cards attached to Lt. Surge's Raichu in order to use this attack."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-gym1-29",
+    "set_id": "intl-gym1",
+    "number": "29",
+    "category": "pokemon",
+    "name": {
+      "en": "Misty's Cloyster"
+    },
+    "pokemon": [
+      "Misty's Cloyster"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "water"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Shellder"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Triple Cannon"
+        },
+        "cost": [
+          "water",
+          "water",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip 3 coins. This attack does 20 damage times the number of heads."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-gym1-3",
+    "set_id": "intl-gym1",
+    "number": "3",
+    "category": "pokemon",
+    "name": {
+      "en": "Erika's Clefable"
+    },
+    "pokemon": [
+      "Erika's Clefable"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "normal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Clefairy"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Fairy Power"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, you may return any number of your Pokémon in play and all cards attached to them to your hand."
+        }
+      },
+      {
+        "name": {
+          "en": "Moon Impact"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-gym1-30",
+    "set_id": "intl-gym1",
+    "number": "30",
+    "category": "pokemon",
+    "name": {
+      "en": "Misty's Goldeen"
+    },
+    "pokemon": [
+      "Misty's Goldeen"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 30,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Horn Hazard"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If tails, this attack does nothing."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ]
+  },
+  {
+    "id": "intl-gym1-31",
+    "set_id": "intl-gym1",
+    "number": "31",
+    "category": "pokemon",
+    "name": {
+      "en": "Misty's Poliwrath"
+    },
+    "pokemon": [
+      "Misty's Poliwrath"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "water"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Poliwhirl"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Water Ring"
+        },
+        "cost": [
+          "water",
+          "water",
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Does 10 damage to each Pokémon that isn't on each player's Bench. (Don't apply Weakness and Resistance for Benched Pokémon.)"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-gym1-32",
+    "set_id": "intl-gym1",
+    "number": "32",
+    "category": "pokemon",
+    "name": {
+      "en": "Misty's Tentacool"
+    },
+    "pokemon": [
+      "Misty's Tentacool"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Mysterious Light"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Asleep."
+        }
+      },
+      {
+        "name": {
+          "en": "Jellyfish Pod"
+        },
+        "cost": [
+          "water",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Search your deck for any number of Pokémon named Tentacool, Tentacruel, Misty's Tentacool, or Misty's Tentacruel. Show those cards to your opponent, then put them into your hand. Shuffle your deck afterward."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ]
+  },
+  {
+    "id": "intl-gym1-33",
+    "set_id": "intl-gym1",
+    "number": "33",
+    "category": "pokemon",
+    "name": {
+      "en": "Rocket's Snorlax"
+    },
+    "pokemon": [
+      "Rocket's Snorlax"
+    ],
+    "illustrator": "Shin-ichi Yoshida",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "evolves_from": {
+      "en": "Munchlax"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Collapse"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Rocket's Snorlax is now Asleep (after doing damage)."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 4
+  },
+  {
+    "id": "intl-gym1-34",
+    "set_id": "intl-gym1",
+    "number": "34",
+    "category": "pokemon",
+    "name": {
+      "en": "Sabrina's Venomoth"
+    },
+    "pokemon": [
+      "Sabrina's Venomoth"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Venonat"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Healing Pollen"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip 3 coins. For each heads, remove 1 damage counter from each of your Pokémon. If a Pokémon has fewer damage counters than the number of heads, remove all of them."
+        }
+      },
+      {
+        "name": {
+          "en": "Sonic Distortion"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip 2 coins. If 1 or both of them are heads, the Defending Pokémon is now Confused."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ]
+  },
+  {
+    "id": "intl-gym1-35",
+    "set_id": "intl-gym1",
+    "number": "35",
+    "category": "pokemon",
+    "name": {
+      "en": "Blaine's Growlithe"
+    },
+    "pokemon": [
+      "Blaine's Growlithe"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Shake"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "If your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with the Defending Pokémon. (Do the damage before switching the Pokémon.)"
+        }
+      },
+      {
+        "name": {
+          "en": "Fire Tackle"
+        },
+        "cost": [
+          "fire",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Blaine's Growlithe does 10 damage to itself."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-gym1-36",
+    "set_id": "intl-gym1",
+    "number": "36",
+    "category": "pokemon",
+    "name": {
+      "en": "Blaine's Kangaskhan"
+    },
+    "pokemon": [
+      "Blaine's Kangaskhan"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Child's Punch"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If tails, this attack does nothing."
+        }
+      },
+      {
+        "name": {
+          "en": "One-Two Punch"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Flip a coin. If heads, this attack does 30 damage plus 10 more damage; if tails, this attack does 30 damage."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-gym1-37",
+    "set_id": "intl-gym1",
+    "number": "37",
+    "category": "pokemon",
+    "name": {
+      "en": "Blaine's Magmar"
+    },
+    "pokemon": [
+      "Blaine's Magmar"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "evolves_from": {
+      "en": "Magby"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Firebreathing"
+        },
+        "cost": [
+          "fire"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip a coin. If heads, this attack does 10 damage plus 10 more damage; if tails, this attack does 10 damage."
+        }
+      },
+      {
+        "name": {
+          "en": "Lava Burst"
+        },
+        "cost": [
+          "fire",
+          "fire",
+          "fire"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Discard the top 5 cards of your deck. (If there are fewer than 5 cards in your deck, discard all of them.) This attack does 20 damage for each Energy card you discarded in this way."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-gym1-38",
+    "set_id": "intl-gym1",
+    "number": "38",
+    "category": "pokemon",
+    "name": {
+      "en": "Brock's Geodude"
+    },
+    "pokemon": [
+      "Brock's Geodude"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Tackle"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Lucky Shot"
+        },
+        "cost": [
+          "fighting",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Choose 1 of your opponent's Benched Pokémon and flip a coin. If heads, this attack does 30 damage to that Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.) This attack can't be used if your opponent has no Benched Pokémon."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-gym1-39",
+    "set_id": "intl-gym1",
+    "number": "39",
+    "category": "pokemon",
+    "name": {
+      "en": "Brock's Golbat"
+    },
+    "pokemon": [
+      "Brock's Golbat"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Zubat"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Dive"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Spiral Dive"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Does 10 damage to each of your opponent's Pokémon. Don't apply Weakness and Resistance."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-gym1-4",
+    "set_id": "intl-gym1",
+    "number": "4",
+    "category": "pokemon",
+    "name": {
+      "en": "Erika's Dragonair"
+    },
+    "pokemon": [
+      "Erika's Dragonair"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "normal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Dratini"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Blizzard"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Flip a coin. If heads, this attack does 10 damage to each of your opponent's Benched Pokémon. If tails, this attack does 10 damage to each of your own Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)"
+        }
+      },
+      {
+        "name": {
+          "en": "Take Away"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Shuffle Erika's Dragonair and all cards attached to it into your deck. Then, your opponent shuffles his or her Active Pokémon and all cards attached to it into his or her deck."
+        }
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-gym1-40",
+    "set_id": "intl-gym1",
+    "number": "40",
+    "category": "pokemon",
+    "name": {
+      "en": "Brock's Graveler"
+    },
+    "pokemon": [
+      "Brock's Graveler"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Geodude"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Rock Toss"
+        },
+        "cost": [
+          "fighting",
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip 3 coins. This attack does 20 damage times the number of heads."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-gym1-41",
+    "set_id": "intl-gym1",
+    "number": "41",
+    "category": "pokemon",
+    "name": {
+      "en": "Brock's Lickitung"
+    },
+    "pokemon": [
+      "Brock's Lickitung"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Tongue Slap"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Slam"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Flip 2 coins. This attack does 30 damage times the number of heads."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-gym1-42",
+    "set_id": "intl-gym1",
+    "number": "42",
+    "category": "pokemon",
+    "name": {
+      "en": "Erika's Dratini"
+    },
+    "pokemon": [
+      "Erika's Dratini"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Tail Strike"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage."
+        }
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-gym1-43",
+    "set_id": "intl-gym1",
+    "number": "43",
+    "category": "pokemon",
+    "name": {
+      "en": "Erika's Exeggcute"
+    },
+    "pokemon": [
+      "Erika's Exeggcute"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Deflector"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "",
+        "text": {
+          "en": "During your opponent's next turn, whenever Erika's Exeggcute takes damage, divide that damage in half (rounded down to the nearest 10). (Any other effects still happen.)"
+        }
+      },
+      {
+        "name": {
+          "en": "Egg Bomb"
+        },
+        "cost": [
+          "grass",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If tails, this attack does nothing to the Defending Pokémon and Erika's Exeggcute does 20 damage to itself."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-gym1-44",
+    "set_id": "intl-gym1",
+    "number": "44",
+    "category": "pokemon",
+    "name": {
+      "en": "Erika's Exeggutor"
+    },
+    "pokemon": [
+      "Erika's Exeggutor"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Exeggcute"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Psychic Exchange"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Shuffle your hand into your deck, then draw 5 cards."
+        }
+      },
+      {
+        "name": {
+          "en": "Stomp"
+        },
+        "cost": [
+          "grass",
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Flip a coin. If heads, this attack does 30 damage plus 10 more damage; if tails, this attack does 30 damage."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-gym1-45",
+    "set_id": "intl-gym1",
+    "number": "45",
+    "category": "pokemon",
+    "name": {
+      "en": "Erika's Gloom"
+    },
+    "pokemon": [
+      "Erika's Gloom"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Oddish"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Healing Pollen"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, remove 4 damage counters from Erika's Gloom. If Erika's Gloom has fewer damage counters than that, remove all of them."
+        }
+      },
+      {
+        "name": {
+          "en": "Magic Pollen"
+        },
+        "cost": [
+          "grass",
+          "grass",
+          "grass"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Asleep, Confused, Paralyzed, or Poisoned (your choice)."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-gym1-46",
+    "set_id": "intl-gym1",
+    "number": "46",
+    "category": "pokemon",
+    "name": {
+      "en": "Erika's Gloom"
+    },
+    "pokemon": [
+      "Erika's Gloom"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Oddish"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Dream Dance"
+        },
+        "cost": [
+          "grass",
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Both the Defending Pokémon and Erika's Gloom are now Asleep (after dealing damage)."
+        }
+      },
+      {
+        "name": {
+          "en": "Vile Smell"
+        },
+        "cost": [
+          "grass",
+          "grass",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Both the Defending Pokémon and Erika's Gloom are now Confused (after doing damage)."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-gym1-47",
+    "set_id": "intl-gym1",
+    "number": "47",
+    "category": "pokemon",
+    "name": {
+      "en": "Erika's Oddish"
+    },
+    "pokemon": [
+      "Erika's Oddish"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Poisonpowder"
+        },
+        "cost": [
+          "grass",
+          "grass"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Poisoned."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-gym1-48",
+    "set_id": "intl-gym1",
+    "number": "48",
+    "category": "pokemon",
+    "name": {
+      "en": "Erika's Weepinbell"
+    },
+    "pokemon": [
+      "Erika's Weepinbell"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Bellsprout"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Drool"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Flytrap"
+        },
+        "cost": [
+          "grass",
+          "grass"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Before doing damage, choose 1 of your opponent's Benched Pokémon and switch it with his or her Active Pokémon. This attack can't be used if your opponent has no Benched Pokémon."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-gym1-49",
+    "set_id": "intl-gym1",
+    "number": "49",
+    "category": "pokemon",
+    "name": {
+      "en": "Erika's Weepinbell"
+    },
+    "pokemon": [
+      "Erika's Weepinbell"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Bellsprout"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Sleep Poison"
+        },
+        "cost": [
+          "grass",
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "The Defending Pokémon is now Asleep and Poisoned."
+        }
+      },
+      {
+        "name": {
+          "en": "Vine Whip"
+        },
+        "cost": [
+          "grass",
+          "grass",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-gym1-5",
+    "set_id": "intl-gym1",
+    "number": "5",
+    "category": "pokemon",
+    "name": {
+      "en": "Erika's Vileplume"
+    },
+    "pokemon": [
+      "Erika's Vileplume"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Gloom"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Mega Drain"
+        },
+        "cost": [
+          "grass",
+          "grass",
+          "grass"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "If Erika's Vileplume does damage to the Defending Pokémon (after applying Weakness and Resistance), remove a number of damage counters from Erika's Vileplume equal to half the damage done to the Defending Pokémon (rounded up to the nearest 10). If Erika's Vileplume has fewer damage counters than that, remove all of them."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-gym1-50",
+    "set_id": "intl-gym1",
+    "number": "50",
+    "category": "pokemon",
+    "name": {
+      "en": "Lt. Surge's Magnemite"
+    },
+    "pokemon": [
+      "Lt. Surge's Magnemite"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 30,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Removal Pulse"
+        },
+        "cost": [
+          "lightning"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "If the Defending Pokémon has any Energy cards attached to it, flip a coin. If heads, choose 1 of those Energy cards and discard it."
+        }
+      },
+      {
+        "name": {
+          "en": "Confusion Pulse"
+        },
+        "cost": [
+          "lightning",
+          "lightning"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Confused."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ]
+  },
+  {
+    "id": "intl-gym1-51",
+    "set_id": "intl-gym1",
+    "number": "51",
+    "category": "pokemon",
+    "name": {
+      "en": "Lt. Surge's Raticate"
+    },
+    "pokemon": [
+      "Lt. Surge's Raticate"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "normal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Rattata"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Super Fang"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Does damage to the Defending Pokémon equal to half the Defending Pokémon's remaining HP (rounded up to the nearest 10)."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-gym1-52",
+    "set_id": "intl-gym1",
+    "number": "52",
+    "category": "pokemon",
+    "name": {
+      "en": "Lt. Surge's Spearow"
+    },
+    "pokemon": [
+      "Lt. Surge's Spearow"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 30,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Drill Peck"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ]
+  },
+  {
+    "id": "intl-gym1-53",
+    "set_id": "intl-gym1",
+    "number": "53",
+    "category": "pokemon",
+    "name": {
+      "en": "Misty's Poliwhirl"
+    },
+    "pokemon": [
+      "Misty's Poliwhirl"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "water"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Poliwag"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Rapids"
+        },
+        "cost": [
+          "water",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "If the Defending Pokémon has any Energy cards attached to it, flip a coin. If heads, choose 1 of those Energy cards and discard it."
+        }
+      },
+      {
+        "name": {
+          "en": "Water Punch"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Flip a number of coins equal to the number of Energy attached to Misty's Poliwhirl. This attack does 30 damage plus 10 damage for each heads."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-gym1-54",
+    "set_id": "intl-gym1",
+    "number": "54",
+    "category": "pokemon",
+    "name": {
+      "en": "Misty's Psyduck"
+    },
+    "pokemon": [
+      "Misty's Psyduck"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Scratch"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Call for Friend"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, you may search your deck for a Basic Pokémon with Misty in its name and put it onto your Bench. (You can't use this attack if your Bench is full.) Shuffle your deck afterward."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-gym1-55",
+    "set_id": "intl-gym1",
+    "number": "55",
+    "category": "pokemon",
+    "name": {
+      "en": "Misty's Seaking"
+    },
+    "pokemon": [
+      "Misty's Seaking"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "water"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Goldeen"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Horn Attack"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Mud Splash"
+        },
+        "cost": [
+          "water",
+          "water"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "If your opponent has any Benched Pokémon, choose 1 of them and flip a coin. If heads, this attack does 10 damage to that Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-gym1-56",
+    "set_id": "intl-gym1",
+    "number": "56",
+    "category": "pokemon",
+    "name": {
+      "en": "Misty's Starmie"
+    },
+    "pokemon": [
+      "Misty's Starmie"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "water"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Staryu"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Water Gun"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Does 10 damage plus 10 more damage for each W Energy attached to Misty's Starmie but not used to pay for this attack's Energy cost. You can't add more than 20 damage in this way."
+        }
+      },
+      {
+        "name": {
+          "en": "Bubblebeam"
+        },
+        "cost": [
+          "water",
+          "water",
+          "water"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-gym1-57",
+    "set_id": "intl-gym1",
+    "number": "57",
+    "category": "pokemon",
+    "name": {
+      "en": "Misty's Tentacool"
+    },
+    "pokemon": [
+      "Misty's Tentacool"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Crystal Beam"
+        },
+        "cost": [
+          "water",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip a coin. If heads, your opponent can't attach Energy cards to the Defending Pokémon during his or her next turn."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-gym1-58",
+    "set_id": "intl-gym1",
+    "number": "58",
+    "category": "pokemon",
+    "name": {
+      "en": "Sabrina's Haunter"
+    },
+    "pokemon": [
+      "Sabrina's Haunter"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Gastly"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Night Spirits"
+        },
+        "cost": [
+          "psychic",
+          "psychic"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Flip a number of coins equal to the total number of Sabrina's Gastlys, Sabrina's Haunters, and Sabrina's Gengars you have in play. This attack does 30 damage times the number of heads."
+        }
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ]
+  },
+  {
+    "id": "intl-gym1-59",
+    "set_id": "intl-gym1",
+    "number": "59",
+    "category": "pokemon",
+    "name": {
+      "en": "Sabrina's Jynx"
+    },
+    "pokemon": [
+      "Sabrina's Jynx"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "evolves_from": {
+      "en": "Smoochum"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Good Night"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "The Defending Pokémon is now Asleep."
+        }
+      },
+      {
+        "name": {
+          "en": "Good Morning"
+        },
+        "cost": [
+          "psychic",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "If the Defending Pokémon was Asleep, it is no longer Asleep."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-gym1-6",
+    "set_id": "intl-gym1",
+    "number": "6",
+    "category": "pokemon",
+    "name": {
+      "en": "Lt. Surge's Electabuzz"
+    },
+    "pokemon": [
+      "Lt. Surge's Electabuzz"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "evolves_from": {
+      "en": "Elekid"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Charge"
+        },
+        "cost": [
+          "lightning"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Take up to 2 Energy cards from your discard pile and attach them to Lt. Surge's Electabuzz"
+        }
+      },
+      {
+        "name": {
+          "en": "Discharge"
+        },
+        "cost": [
+          "lightning"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Discard all Energy cards attach to Lt. Surge's Electabuzz in order to use this attack. Flip a number of coins equal to the number of Energy cards you discarded. This attack does 30 damage times the number of heads."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-gym1-60",
+    "set_id": "intl-gym1",
+    "number": "60",
+    "category": "pokemon",
+    "name": {
+      "en": "Sabrina's Slowbro"
+    },
+    "pokemon": [
+      "Sabrina's Slowbro"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Slowpoke"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Naptime"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, remove 3 damage counters from Sabrina's Slowbro and Sabrina's Slowbro is now Asleep. If Sabrina's Slowbro has fewer damage counters than that, remove all of them."
+        }
+      },
+      {
+        "name": {
+          "en": "Screaming Headbutt"
+        },
+        "cost": [
+          "psychic",
+          "normal",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {
+          "en": "You can't use this attack during your next turn."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-gym1-61",
+    "set_id": "intl-gym1",
+    "number": "61",
+    "category": "pokemon",
+    "name": {
+      "en": "Blaine's Charmander"
+    },
+    "pokemon": [
+      "Blaine's Charmander"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Kindle"
+        },
+        "cost": [
+          "fire"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Discard 1 Energy card attached to Blaine's Charmander in order to use this attack. If the Defending Pokémon has any Energy cards attached to it, choose 1 of them and discard it."
+        }
+      },
+      {
+        "name": {
+          "en": "Slash"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-gym1-62",
+    "set_id": "intl-gym1",
+    "number": "62",
+    "category": "pokemon",
+    "name": {
+      "en": "Blaine's Growlithe"
+    },
+    "pokemon": [
+      "Blaine's Growlithe"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Blaze"
+        },
+        "cost": [
+          "fire",
+          "fire"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Does 10 damage to each Pokémon on your opponent's Bench. (Don't apply Weakness and Resistance for Benched Pokémon.)"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-gym1-63",
+    "set_id": "intl-gym1",
+    "number": "63",
+    "category": "pokemon",
+    "name": {
+      "en": "Blaine's Ponyta"
+    },
+    "pokemon": [
+      "Blaine's Ponyta"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Agility"
+        },
+        "cost": [
+          "fire",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip a coin. If heads, during your opponent's next turn, prevent all effects of attacks, including damage, done to Blaine's Ponyta."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ]
+  },
+  {
+    "id": "intl-gym1-64",
+    "set_id": "intl-gym1",
+    "number": "64",
+    "category": "pokemon",
+    "name": {
+      "en": "Blaine's Tauros"
+    },
+    "pokemon": [
+      "Blaine's Tauros"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "3-Pronged Tail"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip 3 coins. This attack does 10 damage times the number of heads."
+        }
+      },
+      {
+        "name": {
+          "en": "Full Speed Charge"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip 4 coins. This attack does 20 damage times the number of heads to the Defending Pokémon and 20 damage times the number tails to Blaine's Tauros."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-gym1-65",
+    "set_id": "intl-gym1",
+    "number": "65",
+    "category": "pokemon",
+    "name": {
+      "en": "Blaine's Vulpix"
+    },
+    "pokemon": [
+      "Blaine's Vulpix"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Tail Fan"
+        },
+        "cost": [
+          "fire",
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Confused."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-gym1-66",
+    "set_id": "intl-gym1",
+    "number": "66",
+    "category": "pokemon",
+    "name": {
+      "en": "Brock's Geodude"
+    },
+    "pokemon": [
+      "Brock's Geodude"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Call for Friend"
+        },
+        "cost": [
+          "fighting"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, you may search your deck for a Basic Pokémon card with Brock in its name and put it onto your Bench. Shuffle your deck afterward. (You can't use this attack if your Bench is full.)"
+        }
+      },
+      {
+        "name": {
+          "en": "Hook Shot"
+        },
+        "cost": [
+          "fighting",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Don't apply Resistance for this attack. (Any other effects that would happen after applying Resistance still happen.)"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-gym1-67",
+    "set_id": "intl-gym1",
+    "number": "67",
+    "category": "pokemon",
+    "name": {
+      "en": "Brock's Mankey"
+    },
+    "pokemon": [
+      "Brock's Mankey"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Taunt"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "If your opponent has any Benched Pokémon, choose 1 of them and switch it with the Defending Pokémon."
+        }
+      },
+      {
+        "name": {
+          "en": "Light Kick"
+        },
+        "cost": [
+          "fighting"
+        ],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ]
+  },
+  {
+    "id": "intl-gym1-68",
+    "set_id": "intl-gym1",
+    "number": "68",
+    "category": "pokemon",
+    "name": {
+      "en": "Brock's Mankey"
+    },
+    "pokemon": [
+      "Brock's Mankey"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Fidget"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Shuffle your deck."
+        }
+      },
+      {
+        "name": {
+          "en": "Karate Chop"
+        },
+        "cost": [
+          "fighting",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Does 40 damage minus 10 damage for each damage counter on Brock's Mankey."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ]
+  },
+  {
+    "id": "intl-gym1-69",
+    "set_id": "intl-gym1",
+    "number": "69",
+    "category": "pokemon",
+    "name": {
+      "en": "Brock's Onix"
+    },
+    "pokemon": [
+      "Brock's Onix"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Bellow"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+        }
+      },
+      {
+        "name": {
+          "en": "Rock Throw"
+        },
+        "cost": [
+          "fighting",
+          "fighting",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-gym1-7",
+    "set_id": "intl-gym1",
+    "number": "7",
+    "category": "pokemon",
+    "name": {
+      "en": "Lt. Surge's Fearow"
+    },
+    "pokemon": [
+      "Lt. Surge's Fearow"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "normal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Spearow"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Repeating Drill"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip 5 coins. This attack does 10 damage times the number of heads."
+        }
+      },
+      {
+        "name": {
+          "en": "Clutch"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "The Defending Pokémon can't retreat during your opponent's next turn."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ]
+  },
+  {
+    "id": "intl-gym1-70",
+    "set_id": "intl-gym1",
+    "number": "70",
+    "category": "pokemon",
+    "name": {
+      "en": "Brock's Rhyhorn"
+    },
+    "pokemon": [
+      "Brock's Rhyhorn"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Drill Tackle"
+        },
+        "cost": [
+          "fighting",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip 2 coins. If 1 or both of them are tails, this attack does nothing."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "lightning",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-gym1-71",
+    "set_id": "intl-gym1",
+    "number": "71",
+    "category": "pokemon",
+    "name": {
+      "en": "Brock's Sandshrew"
+    },
+    "pokemon": [
+      "Brock's Sandshrew"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Defense Curl"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, prevent all damage done to Brock's Sandshrew during your opponent's next turn. (Any other effects of attacks still happen.)"
+        }
+      },
+      {
+        "name": {
+          "en": "Rolling Attack"
+        },
+        "cost": [
+          "fighting",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "lightning",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-gym1-72",
+    "set_id": "intl-gym1",
+    "number": "72",
+    "category": "pokemon",
+    "name": {
+      "en": "Brock's Sandshrew"
+    },
+    "pokemon": [
+      "Brock's Sandshrew"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Sand Pit"
+        },
+        "cost": [
+          "fighting",
+          "fighting"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "The Defending Pokémon can't retreat during your opponent's next turn."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "lightning",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-gym1-73",
+    "set_id": "intl-gym1",
+    "number": "73",
+    "category": "pokemon",
+    "name": {
+      "en": "Brock's Vulpix"
+    },
+    "pokemon": [
+      "Brock's Vulpix"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Flame"
+        },
+        "cost": [
+          "fire"
+        ],
+        "damage": "20",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Quick Attack"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-gym1-74",
+    "set_id": "intl-gym1",
+    "number": "74",
+    "category": "pokemon",
+    "name": {
+      "en": "Brock's Zubat"
+    },
+    "pokemon": [
+      "Brock's Zubat"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Wing Attack"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Poison Fang"
+        },
+        "cost": [
+          "grass",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Poisoned."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ]
+  },
+  {
+    "id": "intl-gym1-75",
+    "set_id": "intl-gym1",
+    "number": "75",
+    "category": "pokemon",
+    "name": {
+      "en": "Erika's Bellsprout"
+    },
+    "pokemon": [
+      "Erika's Bellsprout"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Poison Vine"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Poisoned."
+        }
+      },
+      {
+        "name": {
+          "en": "Vine Whip"
+        },
+        "cost": [
+          "grass",
+          "grass"
+        ],
+        "damage": "30",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-gym1-76",
+    "set_id": "intl-gym1",
+    "number": "76",
+    "category": "pokemon",
+    "name": {
+      "en": "Erika's Bellsprout"
+    },
+    "pokemon": [
+      "Erika's Bellsprout"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Careless Tackle"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Erika's Bellsprout does 10 damage to itself."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-gym1-77",
+    "set_id": "intl-gym1",
+    "number": "77",
+    "category": "pokemon",
+    "name": {
+      "en": "Erika's Exeggcute"
+    },
+    "pokemon": [
+      "Erika's Exeggcute"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Eggsplosion"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip a number of coins equal to the number of Energy attached to Erika's Exeggcute. This attack does 10 damage times the number of heads."
+        }
+      },
+      {
+        "name": {
+          "en": "Psychic"
+        },
+        "cost": [
+          "psychic",
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Does 10 damage plus 10 more damage for each Energy card attached to the Defending Pokémon."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-gym1-78",
+    "set_id": "intl-gym1",
+    "number": "78",
+    "category": "pokemon",
+    "name": {
+      "en": "Erika's Oddish"
+    },
+    "pokemon": [
+      "Erika's Oddish"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Blot"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "",
+        "text": {
+          "en": "If there are any damage counters on Erika's Oddish, remove 1 of them."
+        }
+      },
+      {
+        "name": {
+          "en": "Sporadic Sponging"
+        },
+        "cost": [
+          "grass",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "If Erika's Oddish has any damage counters on it, flip a coin. If heads, remove 1 of those damage counters."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-gym1-79",
+    "set_id": "intl-gym1",
+    "number": "79",
+    "category": "pokemon",
+    "name": {
+      "en": "Erika's Tangela"
+    },
+    "pokemon": [
+      "Erika's Tangela"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Vine Slap"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Stretch Vine"
+        },
+        "cost": [
+          "grass",
+          "grass",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "If your opponent has any Benched Pokémon, choose 1 of them and this attack does 20 damage to it. (Don't apply Weakness and Resistance for Benched Pokémon.)"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-gym1-8",
+    "set_id": "intl-gym1",
+    "number": "8",
+    "category": "pokemon",
+    "name": {
+      "en": "Lt. Surge's Magneton"
+    },
+    "pokemon": [
+      "Lt. Surge's Magneton"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "lightning"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "en": "Mega Shock"
+        },
+        "cost": [
+          "lightning",
+          "lightning",
+          "lightning",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "en": "Flip a coin. If tails, Lt. Surge's Magneton does 20 damage to itself."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-gym1-80",
+    "set_id": "intl-gym1",
+    "number": "80",
+    "category": "pokemon",
+    "name": {
+      "en": "Lt. Surge's Magnemite"
+    },
+    "pokemon": [
+      "Lt. Surge's Magnemite"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Thundershock"
+        },
+        "cost": [
+          "lightning"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+        }
+      },
+      {
+        "name": {
+          "en": "Tackle"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-gym1-81",
+    "set_id": "intl-gym1",
+    "number": "81",
+    "category": "pokemon",
+    "name": {
+      "en": "Lt. Surge's Pikachu"
+    },
+    "pokemon": [
+      "Lt. Surge's Pikachu"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "evolves_from": {
+      "en": "Pichu"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Charge"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Take 1 Energy card from your discard pile and attach it to Lt. Surge's Pikachu."
+        }
+      },
+      {
+        "name": {
+          "en": "Lightning Tail"
+        },
+        "cost": [
+          "lightning",
+          "lightning"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-gym1-82",
+    "set_id": "intl-gym1",
+    "number": "82",
+    "category": "pokemon",
+    "name": {
+      "en": "Lt. Surge's Rattata"
+    },
+    "pokemon": [
+      "Lt. Surge's Rattata"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Focus Energy"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "During your next turn, Lt. Surge's Rattata's Gnaw attack's base damage is doubled."
+        }
+      },
+      {
+        "name": {
+          "en": "Gnaw"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-gym1-83",
+    "set_id": "intl-gym1",
+    "number": "83",
+    "category": "pokemon",
+    "name": {
+      "en": "Lt. Surge's Spearow"
+    },
+    "pokemon": [
+      "Lt. Surge's Spearow"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Whirlwind"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "If your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with the Defending Pokémon. (Do the damage before switching the Pokémon.)"
+        }
+      },
+      {
+        "name": {
+          "en": "Razor Wind"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If tails, this attack does nothing."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ]
+  },
+  {
+    "id": "intl-gym1-84",
+    "set_id": "intl-gym1",
+    "number": "84",
+    "category": "pokemon",
+    "name": {
+      "en": "Lt. Surge's Voltorb"
+    },
+    "pokemon": [
+      "Lt. Surge's Voltorb"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Spin Ball"
+        },
+        "cost": [
+          "lightning"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip 1 coin. This attack does 20 damage times the number of heads."
+        }
+      },
+      {
+        "name": {
+          "en": "Double Spin"
+        },
+        "cost": [
+          "lightning",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip 2 coins. This attack does 20 damage times the number of heads."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-gym1-85",
+    "set_id": "intl-gym1",
+    "number": "85",
+    "category": "pokemon",
+    "name": {
+      "en": "Misty's Goldeen"
+    },
+    "pokemon": [
+      "Misty's Goldeen"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Fury Attack"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip 2 coins. This attack does 10 damage times the number of heads."
+        }
+      },
+      {
+        "name": {
+          "en": "Supersonic"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Confused."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-gym1-86",
+    "set_id": "intl-gym1",
+    "number": "86",
+    "category": "pokemon",
+    "name": {
+      "en": "Misty's Horsea"
+    },
+    "pokemon": [
+      "Misty's Horsea"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Tackle"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Smokescreen"
+        },
+        "cost": [
+          "water",
+          "water"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ]
+  },
+  {
+    "id": "intl-gym1-87",
+    "set_id": "intl-gym1",
+    "number": "87",
+    "category": "pokemon",
+    "name": {
+      "en": "Misty's Poliwag"
+    },
+    "pokemon": [
+      "Misty's Poliwag"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Hypnotic Stare"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed. If tails, the Defending Pokémon is now Asleep."
+        }
+      },
+      {
+        "name": {
+          "en": "Tail Rap"
+        },
+        "cost": [
+          "water",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip 2 coins. This attack does 20 damage times the number of heads."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-gym1-88",
+    "set_id": "intl-gym1",
+    "number": "88",
+    "category": "pokemon",
+    "name": {
+      "en": "Misty's Seel"
+    },
+    "pokemon": [
+      "Misty's Seel"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Aurora Beam"
+        },
+        "cost": [
+          "water",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-gym1-89",
+    "set_id": "intl-gym1",
+    "number": "89",
+    "category": "pokemon",
+    "name": {
+      "en": "Misty's Shellder"
+    },
+    "pokemon": [
+      "Misty's Shellder"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Tackle"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Clamp"
+        },
+        "cost": [
+          "water",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed. If tails, this attack does nothing (not even damage)."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-gym1-9",
+    "set_id": "intl-gym1",
+    "number": "9",
+    "category": "pokemon",
+    "name": {
+      "en": "Misty's Seadra"
+    },
+    "pokemon": [
+      "Misty's Seadra"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "rare_holo",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "water"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Horsea"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Tail Snap"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "20",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Knockout Needle"
+        },
+        "cost": [
+          "water",
+          "water",
+          "water"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Flip 2 coins. If both of them are heads, this attack does 30 damage plus 60 more damage. If 1 or both of them are tails, this attack does 30 damage."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-gym1-90",
+    "set_id": "intl-gym1",
+    "number": "90",
+    "category": "pokemon",
+    "name": {
+      "en": "Misty's Staryu"
+    },
+    "pokemon": [
+      "Misty's Staryu"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Swift"
+        },
+        "cost": [
+          "water",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "This attack's damage isn't affected by Weakness, Resistance, Pokémon Powers, or any other effects on the Defending Pokémon."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-gym1-91",
+    "set_id": "intl-gym1",
+    "number": "91",
+    "category": "pokemon",
+    "name": {
+      "en": "Sabrina's Abra"
+    },
+    "pokemon": [
+      "Sabrina's Abra"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Energy Loop"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Return a Energy card attached to Sabrina's Abra to your hand in order to use this attack."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ]
+  },
+  {
+    "id": "intl-gym1-92",
+    "set_id": "intl-gym1",
+    "number": "92",
+    "category": "pokemon",
+    "name": {
+      "en": "Sabrina's Drowzee"
+    },
+    "pokemon": [
+      "Sabrina's Drowzee"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Suggestion"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon can't attack during your opponent's next turn."
+        }
+      },
+      {
+        "name": {
+          "en": "Headbutt"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-gym1-93",
+    "set_id": "intl-gym1",
+    "number": "93",
+    "category": "pokemon",
+    "name": {
+      "en": "Sabrina's Gastly"
+    },
+    "pokemon": [
+      "Sabrina's Gastly"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Spook"
+        },
+        "cost": [
+          "psychic",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "The Defending Pokémon can't retreat during your opponent's next turn."
+        }
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-gym1-94",
+    "set_id": "intl-gym1",
+    "number": "94",
+    "category": "pokemon",
+    "name": {
+      "en": "Sabrina's Mr. Mime"
+    },
+    "pokemon": [
+      "Sabrina's Mr. Mime"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "evolves_from": {
+      "en": "Mime Jr."
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Sleight of Hand"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Choose up to 3 cards from your hand and put them on top of your deck. Then search your deck for that many basic Energy cards. Show those cards to your opponent, then put them into your hand. Shuffle your deck afterward."
+        }
+      },
+      {
+        "name": {
+          "en": "Slap"
+        },
+        "cost": [
+          "psychic",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-gym1-95",
+    "set_id": "intl-gym1",
+    "number": "95",
+    "category": "pokemon",
+    "name": {
+      "en": "Sabrina's Slowpoke"
+    },
+    "pokemon": [
+      "Sabrina's Slowpoke"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Lazy Attack"
+        },
+        "cost": [
+          "psychic",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Sabrina's Slowpoke is now Asleep (after doing damage)."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-gym1-96",
+    "set_id": "intl-gym1",
+    "number": "96",
+    "category": "pokemon",
+    "name": {
+      "en": "Sabrina's Venonat"
+    },
+    "pokemon": [
+      "Sabrina's Venonat"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Poison Antennae"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "The Defending Pokémon is now Poisoned."
+        }
+      },
+      {
+        "name": {
+          "en": "Removal Beam"
+        },
+        "cost": [
+          "psychic",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "If the Defending Pokémon has any Energy cards attached to it, flip a coin. If heads, choose 1 of those Energy cards and discard it."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-gym1-97",
+    "set_id": "intl-gym1",
+    "number": "97",
+    "category": "trainer",
+    "name": {
+      "en": "Blaine's Quiz #1"
+    },
+    "pokemon": [],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Put a Basic Pokémon or Evolution card from your hand face down in front of you and tell your opponent its name. Your opponent guesses the length of that Pokémon. Flip the card over. If your opponent guessed right, he or she draws 2 cards. If your opponent guessed wrong, you draw 2 cards. Either way, return the card to your hand."
+    }
+  },
+  {
+    "id": "intl-gym1-98",
+    "set_id": "intl-gym1",
+    "number": "98",
+    "category": "trainer",
+    "name": {
+      "en": "Brock"
+    },
+    "pokemon": [],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Remove 1 damage counter from each of your Pokémon that has any damage counters on it."
+    }
+  },
+  {
+    "id": "intl-gym1-99",
+    "set_id": "intl-gym1",
+    "number": "99",
+    "category": "trainer",
+    "name": {
+      "en": "Charity"
+    },
+    "pokemon": [],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Attach Charity to your Active Pokémon. Unless that Pokémon gets Knocked Out, return Charity to your hand at the end of your turn. If that Pokémon attacks and does damage to the Defending Pokémon, you may reduce that damage by any amount (rounded to the nearest 10)."
+    }
+  }
+]

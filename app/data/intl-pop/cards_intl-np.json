@@ -1,0 +1,2477 @@
+[
+  {
+    "id": "intl-np-1",
+    "set_id": "intl-np",
+    "number": "1",
+    "category": "pokemon",
+    "name": {
+      "en": "Kyogre ex"
+    },
+    "pokemon": [
+      "Kyogre ex"
+    ],
+    "illustrator": "Hiromichi Sugiyama",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 120,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Major Flood"
+        },
+        "cost": [
+          "water",
+          "water",
+          "water",
+          "water"
+        ],
+        "damage": "60",
+        "text": {
+          "en": "Discard a Water Energy card attached to Kyogre ex. Does 10 damage to each Benched Pokémon (both yours and your opponent's). (Don't apply Weakness and Resistance for Benched Pokémon.)"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ]
+  },
+  {
+    "id": "intl-np-10",
+    "set_id": "intl-np",
+    "number": "10",
+    "category": "pokemon",
+    "name": {
+      "en": "Mudkip",
+      "fr": "Gobou"
+    },
+    "pokemon": [
+      "Mudkip"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Pound",
+          "fr": "Écras'face"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Fury Swipes",
+          "fr": "Combo-griffe"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip 3 coins. This attack does 10 damage times the number of heads.",
+          "fr": "Lancez trois pièces. Cette attaque inflige 10 dégâts multipliés par le nombre de face."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ]
+  },
+  {
+    "id": "intl-np-11",
+    "set_id": "intl-np",
+    "number": "11",
+    "category": "pokemon",
+    "name": {
+      "en": "Marshtomp",
+      "fr": "Flobio"
+    },
+    "pokemon": [
+      "Marshtomp"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "water"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Mudkip",
+      "fr": "Gobou"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Bubble",
+          "fr": "Écume"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+          "fr": "Lancez une pièce. Si c'est face, Le Pokémon Défenseur est maintenant Paralysé."
+        }
+      },
+      {
+        "name": {
+          "en": "Slash",
+          "fr": "Tranche"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ]
+  },
+  {
+    "id": "intl-np-12",
+    "set_id": "intl-np",
+    "number": "12",
+    "category": "pokemon",
+    "name": {
+      "en": "Pikachu"
+    },
+    "pokemon": [
+      "Pikachu"
+    ],
+    "illustrator": "Kouki Saitou",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Agility"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, prevent all effects of an attack, including damage, done to Pikachu during your opponent's next turn."
+        }
+      },
+      {
+        "name": {
+          "en": "Thundershock"
+        },
+        "cost": [
+          "lightning",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-np-13",
+    "set_id": "intl-np",
+    "number": "13",
+    "category": "pokemon",
+    "name": {
+      "en": "Meowth"
+    },
+    "pokemon": [
+      "Meowth"
+    ],
+    "illustrator": "Kouki Saitou",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Plunder"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Before doing damage, discard all Trainer cards attached to the Defending Pokémon (before they affect the damage)."
+        }
+      },
+      {
+        "name": {
+          "en": "Scratch"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ]
+  },
+  {
+    "id": "intl-np-14",
+    "set_id": "intl-np",
+    "number": "14",
+    "category": "pokemon",
+    "name": {
+      "en": "Latias"
+    },
+    "pokemon": [
+      "Latias"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Super Psy"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Searing Flame"
+        },
+        "cost": [
+          "fire",
+          "water"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Burned."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ]
+  },
+  {
+    "id": "intl-np-15",
+    "set_id": "intl-np",
+    "number": "15",
+    "category": "pokemon",
+    "name": {
+      "en": "Latios"
+    },
+    "pokemon": [
+      "Latios"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Super Psy"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Freeze Dry"
+        },
+        "cost": [
+          "water",
+          "psychic",
+          "lightning"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ]
+  },
+  {
+    "id": "intl-np-16",
+    "set_id": "intl-np",
+    "number": "16",
+    "category": "pokemon",
+    "name": {
+      "en": "Treecko"
+    },
+    "pokemon": [
+      "Treecko"
+    ],
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Pound"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Sporadic Sponging"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip a coin. If heads, remove 1 damage counter from Treecko."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "water",
+        "value": "-30"
+      }
+    ]
+  },
+  {
+    "id": "intl-np-17",
+    "set_id": "intl-np",
+    "number": "17",
+    "category": "pokemon",
+    "name": {
+      "en": "Torchic"
+    },
+    "pokemon": [
+      "Torchic"
+    ],
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Ember"
+        },
+        "cost": [
+          "fire",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Discard a Fire Energy card attached to Torchic."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ]
+  },
+  {
+    "id": "intl-np-18",
+    "set_id": "intl-np",
+    "number": "18",
+    "category": "pokemon",
+    "name": {
+      "en": "Mudkip"
+    },
+    "pokemon": [
+      "Mudkip"
+    ],
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Surf"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Whirlpool"
+        },
+        "cost": [
+          "water",
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip a coin. If heads, discard an Energy card attached to the Defending Pokémon."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ]
+  },
+  {
+    "id": "intl-np-19",
+    "set_id": "intl-np",
+    "number": "19",
+    "category": "pokemon",
+    "name": {
+      "en": "Whismur"
+    },
+    "pokemon": [
+      "Whismur"
+    ],
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Supersonic"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Confused."
+        }
+      },
+      {
+        "name": {
+          "en": "Pound"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ]
+  },
+  {
+    "id": "intl-np-2",
+    "set_id": "intl-np",
+    "number": "2",
+    "category": "pokemon",
+    "name": {
+      "en": "Groudon ex"
+    },
+    "pokemon": [
+      "Groudon ex"
+    ],
+    "illustrator": "Kazuo Yazawa",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 120,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Major Earthquake"
+        },
+        "cost": [
+          "fighting",
+          "fighting",
+          "fighting",
+          "fighting"
+        ],
+        "damage": "80",
+        "text": {
+          "en": "Discard a Fighting Energy card attached to Groudon ex. Does 10 damage to your Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ]
+  },
+  {
+    "id": "intl-np-20",
+    "set_id": "intl-np",
+    "number": "20",
+    "category": "pokemon",
+    "name": {
+      "en": "Ludicolo"
+    },
+    "pokemon": [
+      "Ludicolo"
+    ],
+    "illustrator": "Kouki Saitou",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "water"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Lombre"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Fury Swipes"
+        },
+        "cost": [
+          "water",
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Flip 3 coins. This attack does 30 damage times the number of heads."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ]
+  },
+  {
+    "id": "intl-np-21",
+    "set_id": "intl-np",
+    "number": "21",
+    "category": "pokemon",
+    "name": {
+      "en": "Jirachi"
+    },
+    "pokemon": [
+      "Jirachi"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "The Third Eye"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Discard an Energy card attached to Jirachi and draw 3 cards."
+        }
+      },
+      {
+        "name": {
+          "en": "Psywave"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Does 10 damage times the amount of Energy attached to the Defending Pokémon."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ]
+  },
+  {
+    "id": "intl-np-22",
+    "set_id": "intl-np",
+    "number": "22",
+    "category": "pokemon",
+    "name": {
+      "en": "Beldum"
+    },
+    "pokemon": [
+      "Beldum"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "metal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Metal Charge"
+        },
+        "cost": [
+          "metal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Put 1 damage counter on Beldum."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "grass",
+        "value": "-30"
+      }
+    ]
+  },
+  {
+    "id": "intl-np-23",
+    "set_id": "intl-np",
+    "number": "23",
+    "category": "pokemon",
+    "name": {
+      "en": "Metang"
+    },
+    "pokemon": [
+      "Metang"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "metal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Beldum"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Metal Load"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Search your discard pile for a Metal Energy card and attach it to Metang."
+        }
+      },
+      {
+        "name": {
+          "en": "Metal Claw"
+        },
+        "cost": [
+          "metal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "grass",
+        "value": "-30"
+      }
+    ]
+  },
+  {
+    "id": "intl-np-24",
+    "set_id": "intl-np",
+    "number": "24",
+    "category": "pokemon",
+    "name": {
+      "en": "Chimecho"
+    },
+    "pokemon": [
+      "Chimecho"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Resonate"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Your opponent switches each Defending Pokémon with his or her Benched Pokémon. If your opponent has only 1 Benched Pokémon, you choose the Defending Pokémon to switch."
+        }
+      },
+      {
+        "name": {
+          "en": "Healing Sound"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Remove 3 damage counters from each of your Active Pokémon. Each Defending Pokémon is now Asleep."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ]
+  },
+  {
+    "id": "intl-np-25",
+    "set_id": "intl-np",
+    "number": "25",
+    "category": "pokemon",
+    "name": {
+      "en": "Flygon",
+      "fr": "Libegon"
+    },
+    "pokemon": [
+      "Flygon"
+    ],
+    "illustrator": "Kouki Saitou",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 120,
+    "types": [
+      "normal"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Vibrava",
+      "fr": "Vibraninf"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Sand Pit",
+          "fr": "Bac à sable"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "The Defending Pokémon can't retreat until the end of your opponent's next turn.",
+          "fr": "Le Pokémon Défenseur ne peut pas battre en retraite avant la fin du prochain tour de votre adversaire."
+        }
+      },
+      {
+        "name": {
+          "en": "Dragonbreath",
+          "fr": "Dracosouffle"
+        },
+        "cost": [
+          "grass",
+          "lightning",
+          "normal",
+          "normal"
+        ],
+        "damage": "80",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed. If tails, this attack does nothing.",
+          "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Paralysé. Si c'est pile, cette attaque est sans effet."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "normal",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "lightning",
+        "value": "-30"
+      },
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ]
+  },
+  {
+    "id": "intl-np-26",
+    "set_id": "intl-np",
+    "number": "26",
+    "category": "trainer",
+    "name": {
+      "en": "Tropical Wind",
+      "fr": "Vent tropical"
+    },
+    "pokemon": [],
+    "illustrator": "Sumiyoshi Kizuki",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "intl-np-27",
+    "set_id": "intl-np",
+    "number": "27",
+    "category": "trainer",
+    "name": {
+      "en": "Tropical Tidal Wave",
+      "fr": "Raz-de-marée tropical"
+    },
+    "pokemon": [],
+    "illustrator": "undefined",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "trainer_type": "item"
+  },
+  {
+    "id": "intl-np-28",
+    "set_id": "intl-np",
+    "number": "28",
+    "category": "trainer",
+    "name": {
+      "en": "Championship Arena"
+    },
+    "pokemon": [],
+    "illustrator": "Ryo Ueda",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "trainer_type": "stadium"
+  },
+  {
+    "id": "intl-np-29",
+    "set_id": "intl-np",
+    "number": "29",
+    "category": "pokemon",
+    "name": {
+      "en": "Celebi",
+      "fr": "Celebi"
+    },
+    "pokemon": [
+      "Celebi"
+    ],
+    "illustrator": "Hajime Kusajima",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Leaf Slice",
+          "fr": "Tranche feuille"
+        },
+        "cost": [
+          "grass",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip 2 coins. This attack does 20 damage times the number of heads.",
+          "fr": "Lancez 2 pièces. Cette attaque inflige 20 dégâts multipliés par le nombre de faces."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ]
+  },
+  {
+    "id": "intl-np-3",
+    "set_id": "intl-np",
+    "number": "3",
+    "category": "pokemon",
+    "name": {
+      "en": "Treecko",
+      "fr": "Arcko"
+    },
+    "pokemon": [
+      "Treecko"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Tail Slap",
+          "fr": "Coud'keu"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Razor Leaf",
+          "fr": "Tranch'herbe"
+        },
+        "cost": [
+          "grass",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "water",
+        "value": "-30"
+      }
+    ]
+  },
+  {
+    "id": "intl-np-30",
+    "set_id": "intl-np",
+    "number": "30",
+    "category": "pokemon",
+    "name": {
+      "en": "Suicune",
+      "fr": "Suicune"
+    },
+    "pokemon": [
+      "Suicune"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Hypno Wave",
+          "fr": "Hypnovague"
+        },
+        "cost": [
+          "water",
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Flip a coin. If heads, this attack does 30 damage plus 20 more damage. If tails, this attack does 30 damage and the Defending Pokémon is now Asleep.",
+          "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 30 dégâts plus 20 dégâts supplémentaires. Si c'est pile, cette attaque inflige 30 dégâts et le Pokémon Défenseur est maintenant Endormi."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ]
+  },
+  {
+    "id": "intl-np-31",
+    "set_id": "intl-np",
+    "number": "31",
+    "category": "pokemon",
+    "name": {
+      "en": "Moltres ex",
+      "fr": "Sulfura ex"
+    },
+    "pokemon": [
+      "Moltres ex"
+    ],
+    "illustrator": "Ken Ikuji",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Flame Gift",
+          "fr": "Cadeau de feu"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "You may move a Fire Energy card attached to Moltres ex to 1 of your Pokémon.",
+          "fr": "Vous pouvez déplacer 1 carte Énergie  attachée à Sulfura ex vers 1 de vos Pokémon."
+        }
+      },
+      {
+        "name": {
+          "en": "Scorching Wing",
+          "fr": "Aile brûlante"
+        },
+        "cost": [
+          "fire",
+          "fire",
+          "normal"
+        ],
+        "damage": "90",
+        "text": {
+          "en": "Discard all Fire Energy attached to Moltres ex.",
+          "fr": "Défaussez toutes les Énergies  attachées à Sulfura ex."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ]
+  },
+  {
+    "id": "intl-np-32",
+    "set_id": "intl-np",
+    "number": "32",
+    "category": "pokemon",
+    "name": {
+      "en": "Articuno ex",
+      "fr": "Artikodin ex"
+    },
+    "pokemon": [
+      "Articuno ex"
+    ],
+    "illustrator": "Nakaoka",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Ice Gift",
+          "fr": "Cadeau de glace"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "You may move a Water Energy card attached to Articuno ex to 1 of your Pokémon.",
+          "fr": "Vous pouvez déplacer 1 carte Énergie  attachée à Artikodin ex vers 1 de vos Pokémon."
+        }
+      },
+      {
+        "name": {
+          "en": "Freezing Wing",
+          "fr": "Aile gelée"
+        },
+        "cost": [
+          "water",
+          "water",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Asleep.",
+          "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Endormi."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "x2"
+      }
+    ]
+  },
+  {
+    "id": "intl-np-33",
+    "set_id": "intl-np",
+    "number": "33",
+    "category": "pokemon",
+    "name": {
+      "en": "Zapdos ex",
+      "fr": "Electhor ex"
+    },
+    "pokemon": [
+      "Zapdos ex"
+    ],
+    "illustrator": "K. Hoshiba",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Thunder Gift",
+          "fr": "Cadeau de tonnerre"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "You may move a Lightning Energy card attached to Zapdos ex to 1 of your Pokémon.",
+          "fr": "Vous pouvez déplacer 1 carte Énergie  attachée à Electhor ex vers 1 de vos Pokémon."
+        }
+      },
+      {
+        "name": {
+          "en": "Lightning Wing",
+          "fr": "Aile éclair"
+        },
+        "cost": [
+          "lightning",
+          "lightning",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {
+          "en": "Does 10 damage to 1 of your Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "fr": "Inflige 10 dégâts à 1 des Pokémon de votre Banc. (Vous ne pouvez pas appliquer la Faiblesse et la Résistance aux Pokémon de Banc.)"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ]
+  },
+  {
+    "id": "intl-np-34",
+    "set_id": "intl-np",
+    "number": "34",
+    "category": "pokemon",
+    "name": {
+      "en": "Typhlosion"
+    },
+    "pokemon": [
+      "Typhlosion"
+    ],
+    "illustrator": "Hajime Kusajima",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 110,
+    "types": [
+      "fire"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Quilava"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Flickering Flames"
+        },
+        "cost": [
+          "fire"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "The Defending Pokémon is now Asleep."
+        }
+      },
+      {
+        "name": {
+          "en": "Rage"
+        },
+        "cost": [
+          "fire",
+          "normal",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "en": "Does 50 damage plus 10 more damage for each damage counter on Typhlosion."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ]
+  },
+  {
+    "id": "intl-np-35",
+    "set_id": "intl-np",
+    "number": "35",
+    "category": "pokemon",
+    "name": {
+      "en": "Pikachu δ"
+    },
+    "pokemon": [
+      "Pikachu δ"
+    ],
+    "illustrator": "Ryo Ueda",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "metal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Thunder Wave"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+        }
+      },
+      {
+        "name": {
+          "en": "Iron Tail"
+        },
+        "cost": [
+          "metal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip a coin until you get tails. This attack does 20 damage times the number of heads."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ]
+  },
+  {
+    "id": "intl-np-36",
+    "set_id": "intl-np",
+    "number": "36",
+    "category": "trainer",
+    "name": {
+      "en": "Tropical Tidal Wave",
+      "fr": "Raz-de-marée tropical"
+    },
+    "pokemon": [],
+    "illustrator": "undefined",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "trainer_type": "item"
+  },
+  {
+    "id": "intl-np-37",
+    "set_id": "intl-np",
+    "number": "37",
+    "category": "pokemon",
+    "name": {
+      "en": "Kyogre ex",
+      "fr": "Kyogre ex"
+    },
+    "pokemon": [
+      "Kyogre ex"
+    ],
+    "illustrator": "Ryo Ueda",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Aqua Supply",
+          "fr": "Source aqua"
+        },
+        "cost": [
+          "water",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "You may attach a basic Energy card from your hand to 1 of your Pokémon.",
+          "fr": "Vous pouvez attacher une carte Énergie de base de votre main à 1 de vos Pokémon."
+        }
+      },
+      {
+        "name": {
+          "en": "Tsunami",
+          "fr": "Tsunami"
+        },
+        "cost": [
+          "water",
+          "water",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {
+          "en": "Does 10 damage to each of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "fr": "Inflige 10 dégâts à chacun des Pokémon de Banc de votre adversaire. (Vous ne pouvez pas appliquer la Faiblesse et la Résistance aux Pokémon de Banc.)"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ]
+  },
+  {
+    "id": "intl-np-38",
+    "set_id": "intl-np",
+    "number": "38",
+    "category": "pokemon",
+    "name": {
+      "en": "Groudon ex",
+      "fr": "Groudon ex"
+    },
+    "pokemon": [
+      "Groudon ex"
+    ],
+    "illustrator": "Ryo Ueda",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Mix-Up",
+          "fr": "Mélange"
+        },
+        "cost": [
+          "fighting",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Flip a coin. If heads, your opponent discards the top card from his or her deck.",
+          "fr": "Lancez 1 pièce. Si c'est face, votre adversaire doit défausser la première carte de son deck."
+        }
+      },
+      {
+        "name": {
+          "en": "Earthquake",
+          "fr": "Séisme"
+        },
+        "cost": [
+          "fighting",
+          "normal",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {
+          "en": "Does 10 damage to each of your Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "fr": "Inflige 10 dégâts à chacun des Pokémon de votre Banc. (Vous ne pouvez pas appliquer la Faiblesse et la Résistance aux Pokémon de Banc.)"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ]
+  },
+  {
+    "id": "intl-np-39",
+    "set_id": "intl-np",
+    "number": "39",
+    "category": "pokemon",
+    "name": {
+      "en": "Rayquaza ex",
+      "fr": "Rayquaza ex"
+    },
+    "pokemon": [
+      "Rayquaza ex"
+    ],
+    "illustrator": "Ryo Ueda",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Dragon Bind",
+          "fr": "Aveuglement draconique"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+          "fr": "Lancez 1 pièce. Si c'est face, le Pokémon Défenseur est maintenant Paralysé."
+        }
+      },
+      {
+        "name": {
+          "en": "Twister",
+          "fr": "Ouragan"
+        },
+        "cost": [
+          "fire",
+          "lightning",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "en": "Flip 2 coins. If both are tails, this attack does nothing. For each heads, discard an Energy attached to the Defending Pokémon.",
+          "fr": "Lancez 2 pièces. Si ce sont deux piles, cette attaque est sans effet. Pour chaque face, défaussez une Énergie attachée au Pokémon Défenseur."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "normal",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "water",
+        "value": "-30"
+      },
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ]
+  },
+  {
+    "id": "intl-np-4",
+    "set_id": "intl-np",
+    "number": "4",
+    "category": "pokemon",
+    "name": {
+      "en": "Grovyle",
+      "fr": "Massko"
+    },
+    "pokemon": [
+      "Grovyle"
+    ],
+    "illustrator": "Midori Harada",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Treecko",
+      "fr": "Arcko"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Poison Breath",
+          "fr": "Haleine empoisonnée"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "The Defending Pokémon is now Poisoned.",
+          "fr": "Le Pokémon Défenseur est maintenant Empoisonné."
+        }
+      },
+      {
+        "name": {
+          "en": "Swift",
+          "fr": "Météores"
+        },
+        "cost": [
+          "grass",
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "This attack's damage isn't affected by Weakness, Resistance, Poké-Powers, Poké-Bodies, or any other effects on the Defending Pokémon.",
+          "fr": "Les dégâts infligés par cette attaque ne sont pas affectés par la Faiblesse, la Résistance, les Poké-Powers, les Poké-Body ou tout autre effet sur le Pokémon Défenseur."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "water",
+        "value": "-30"
+      }
+    ]
+  },
+  {
+    "id": "intl-np-40",
+    "set_id": "intl-np",
+    "number": "40",
+    "category": "pokemon",
+    "name": {
+      "en": "Mew"
+    },
+    "pokemon": [
+      "Mew"
+    ],
+    "illustrator": "Masakazu Fukuda",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Psywave"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Does 10 damage times the amount of Energy attached to the Defending Pokémon."
+        }
+      },
+      {
+        "name": {
+          "en": "Devolution Beam"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, choose 1 of either player's Evolved Pokémon, remove the highest Stage Evolution card from that Pokémon, and put it into that player's hand."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ]
+  },
+  {
+    "id": "intl-np-5",
+    "set_id": "intl-np",
+    "number": "5",
+    "category": "pokemon",
+    "name": {
+      "en": "Mudkip",
+      "fr": "Gobou"
+    },
+    "pokemon": [
+      "Mudkip"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Pound",
+          "fr": "Écras'face"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Fury Swipes",
+          "fr": "Combo-griffe"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip 3 coins. This attack does 10 damage times the number of heads.",
+          "fr": "Lancez trois pièces. Cette attaque inflige 10 dégâts multipliés par le nombre de face."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ]
+  },
+  {
+    "id": "intl-np-6",
+    "set_id": "intl-np",
+    "number": "6",
+    "category": "pokemon",
+    "name": {
+      "en": "Torchic",
+      "fr": "Poussifeu"
+    },
+    "pokemon": [
+      "Torchic"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Peck",
+          "fr": "Picpic"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Fireworks",
+          "fr": "Feu d'artifice"
+        },
+        "cost": [
+          "fire",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Flip a coin. If tails, discard a Fire Energy card attached to Torchic.",
+          "fr": "Lancez une pièce. Si c'est pile, défaussez une carte Énergie  attachée à Poussifeu."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ]
+  },
+  {
+    "id": "intl-np-7",
+    "set_id": "intl-np",
+    "number": "7",
+    "category": "pokemon",
+    "name": {
+      "en": "Treecko",
+      "fr": "Treecko"
+    },
+    "pokemon": [
+      "Treecko"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Tail Slap",
+          "fr": "Coud'keu"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Razor Leaf",
+          "fr": "Tranch'herbe"
+        },
+        "cost": [
+          "grass",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "water",
+        "value": "-30"
+      }
+    ]
+  },
+  {
+    "id": "intl-np-8",
+    "set_id": "intl-np",
+    "number": "8",
+    "category": "pokemon",
+    "name": {
+      "en": "Torchic",
+      "fr": "Poussifeu"
+    },
+    "pokemon": [
+      "Torchic"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Peck",
+          "fr": "Picpic"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Fireworks",
+          "fr": "Feu d'artifice"
+        },
+        "cost": [
+          "fire",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Flip a coin. If tails, discard a Fire Energy card attached to Torchic.",
+          "fr": "Lancez une pièce. Si c'est pile, défaussez une carte Énergie  attachée à Poussifeu."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ]
+  },
+  {
+    "id": "intl-np-9",
+    "set_id": "intl-np",
+    "number": "9",
+    "category": "trainer",
+    "name": {
+      "en": "Combusken",
+      "fr": "Galifeu"
+    },
+    "pokemon": [],
+    "illustrator": "Kouki Saitou",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "fire"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Torchic",
+      "fr": "Poussifeu"
+    },
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ]
+  }
+]

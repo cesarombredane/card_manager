@@ -1,0 +1,5545 @@
+[
+  {
+    "id": "asia-s9a-001",
+    "set_id": "asia-s9a",
+    "number": "001",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "走路草",
+      "ja": "ナゾノクサ"
+    },
+    "pokemon": [
+      "走路草"
+    ],
+    "illustrator": "Miki Tanaka",
+    "rarity": "common",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "衝撞",
+          "ja": "ぶつかる"
+        },
+        "cost": [
+          "grass",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-s9a-002",
+    "set_id": "asia-s9a",
+    "number": "002",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "臭臭花",
+      "ja": "クサイハナ"
+    },
+    "pokemon": [
+      "臭臭花"
+    ],
+    "illustrator": "Tomokazu Komiya",
+    "rarity": "common",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "吸取",
+          "ja": "すいとる"
+        },
+        "cost": [
+          "grass",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "zh-TW": "將這隻寶可夢恢復「30」HP。",
+          "ja": "このポケモンのHPを「30」回復する。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-s9a-003",
+    "set_id": "asia-s9a",
+    "number": "003",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "霸王花",
+      "ja": "ラフレシア"
+    },
+    "pokemon": [
+      "霸王花"
+    ],
+    "illustrator": "Jiro Sasumo",
+    "rarity": "rare",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 150,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage2",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "超級吸取",
+          "ja": "メガドレイン"
+        },
+        "cost": [
+          "grass",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "zh-TW": "將這隻寶可夢恢復「30」HP。",
+          "ja": "このポケモンのHPを「30」回復する。"
+        }
+      },
+      {
+        "name": {
+          "zh-TW": "過敏性風暴",
+          "ja": "アレルギーストーム"
+        },
+        "cost": [
+          "grass",
+          "normal",
+          "normal"
+        ],
+        "damage": "90",
+        "text": {
+          "zh-TW": "擲1次硬幣若為正面，則在下個對手的回合，對手無法從手牌使出支援者卡。若為反面，則在下個對手的回合，對手無法從手牌使出物品卡。",
+          "ja": "コインを1回投げオモテなら、次の相手の番、相手は手札からサポートを出して使えない。ウラなら、次の相手の番、相手は手札からグッズを出して使えない。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-s9a-004",
+    "set_id": "asia-s9a",
+    "number": "004",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "飛天螳螂",
+      "ja": "ストライク"
+    },
+    "pokemon": [
+      "飛天螳螂"
+    ],
+    "illustrator": "Uta",
+    "rarity": "common",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "快速攻擊",
+          "ja": "クイックアタック"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "30＋",
+        "text": {
+          "zh-TW": "擲1次硬幣若為正面，則增加30點傷害。",
+          "ja": "コインを1回投げオモテなら、30ダメージ追加。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-s9a-005",
+    "set_id": "asia-s9a",
+    "number": "005",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "赫拉克羅斯",
+      "ja": "ヘラクロス"
+    },
+    "pokemon": [
+      "赫拉克羅斯"
+    ],
+    "illustrator": "aoki",
+    "rarity": "common",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 110,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "角撞",
+          "ja": "つのでつく"
+        },
+        "cost": [
+          "grass",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {}
+      },
+      {
+        "name": {
+          "zh-TW": "後投",
+          "ja": "うしろなげ"
+        },
+        "cost": [
+          "grass",
+          "grass",
+          "normal"
+        ],
+        "damage": "120",
+        "text": {
+          "zh-TW": "自己的1隻備戰寶可夢也受到30點傷害。[在備戰區不計算弱點・抵抗力。]",
+          "ja": "自分のベンチポケモン1匹にも、30ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-s9a-006",
+    "set_id": "asia-s9a",
+    "number": "006",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "毒薔薇",
+      "ja": "ロゼリア"
+    },
+    "pokemon": [
+      "毒薔薇"
+    ],
+    "illustrator": "Yukiko Baba",
+    "rarity": "common",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "芳香催眠",
+          "ja": "アロマスリープ"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "",
+        "text": {
+          "zh-TW": "將對手的戰鬥寶可夢【睡眠】。",
+          "ja": "相手のバトルポケモンをねむりにする。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-s9a-007",
+    "set_id": "asia-s9a",
+    "number": "007",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "羅絲雷朵",
+      "ja": "ロズレイド"
+    },
+    "pokemon": [
+      "羅絲雷朵"
+    ],
+    "illustrator": "0313",
+    "rarity": "uncommon",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 120,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "毒之鞭",
+          "ja": "どくのムチ"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "30",
+        "text": {
+          "zh-TW": "將對手的戰鬥寶可夢【中毒】。",
+          "ja": "相手のバトルポケモンをどくにする。"
+        }
+      },
+      {
+        "name": {
+          "zh-TW": "刺殺薔薇",
+          "ja": "アサシンローズ"
+        },
+        "cost": [
+          "grass",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {
+          "zh-TW": "若對手的戰鬥寶可夢處於特殊狀態，則對手的1隻備戰寶可夢也受到60點傷害。[在備戰區不計算弱點・抵抗力。]",
+          "ja": "相手のバトルポケモンが特殊状態なら、相手のベンチポケモン1匹にも、60ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-s9a-008",
+    "set_id": "asia-s9a",
+    "number": "008",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "三蜜蜂",
+      "ja": "ミツハニー"
+    },
+    "pokemon": [
+      "三蜜蜂"
+    ],
+    "illustrator": "sowsow",
+    "rarity": "common",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "蜜之搬運",
+          "ja": "みつはこび"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "",
+        "text": {
+          "zh-TW": "從自己的牌庫選擇1張物品卡，在給對手看過後加入手牌。並且重洗牌庫。",
+          "ja": "自分の山札からグッズを1枚選び、相手に見せて、手札に加える。そして山札を切る。"
+        }
+      },
+      {
+        "name": {
+          "zh-TW": "蟲咬",
+          "ja": "むしくい"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-s9a-009",
+    "set_id": "asia-s9a",
+    "number": "009",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "蜂女王",
+      "ja": "ビークイン"
+    },
+    "pokemon": [
+      "蜂女王"
+    ],
+    "illustrator": "Yuya Oka",
+    "rarity": "uncommon",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 120,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "蜜之猛攻",
+          "ja": "ハニーラッシュ"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "60×",
+        "text": {
+          "zh-TW": "從自己的手牌將任意數量的「甜甜蜜」卡給對手看過後，造成其張數×60點傷害。",
+          "ja": "自分の手札から「あまいミツ」を好きなだけ相手に見せて、その枚数×60ダメージ。"
+        }
+      },
+      {
+        "name": {
+          "zh-TW": "突刺",
+          "ja": "つきさす"
+        },
+        "cost": [
+          "grass",
+          "normal",
+          "normal"
+        ],
+        "damage": "90",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-s9a-010",
+    "set_id": "asia-s9a",
+    "number": "010",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "畢力吉翁V",
+      "ja": "ビリジオンV"
+    },
+    "pokemon": [
+      "畢力吉翁V"
+    ],
+    "illustrator": "Saki Hayashiro",
+    "rarity": "double_rare",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 200,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "rule_box": "V",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "綠寶石利刃",
+          "ja": "エメラルドブレード"
+        },
+        "cost": [
+          "grass",
+          "grass",
+          "normal"
+        ],
+        "damage": "200",
+        "text": {
+          "zh-TW": "在下個自己的回合，這隻寶可夢無法使用招式。",
+          "ja": "次の自分の番、このポケモンはワザが使えない。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-s9a-011",
+    "set_id": "asia-s9a",
+    "number": "011",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "光輝席多藍恩",
+      "ja": "かがやくヒードラン"
+    },
+    "pokemon": [
+      "光輝席多藍恩"
+    ],
+    "illustrator": "Shigenori Negishi",
+    "rarity": "unknown",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 160,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "激狂轟炸",
+          "ja": "レイジングボンバー"
+        },
+        "cost": [
+          "fire",
+          "normal",
+          "normal"
+        ],
+        "damage": "70×",
+        "text": {
+          "zh-TW": "造成這隻寶可夢身上放置的傷害指示物的數量×70點傷害。",
+          "ja": "このポケモンにのっているダメカンの数×70ダメージ。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "asia-s9a-012",
+    "set_id": "asia-s9a",
+    "number": "012",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "燭光靈",
+      "ja": "ヒトモシ"
+    },
+    "pokemon": [
+      "燭光靈"
+    ],
+    "illustrator": "Yuka Morii",
+    "rarity": "common",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "小火災",
+          "ja": "ぼやさわぎ"
+        },
+        "cost": [
+          "fire"
+        ],
+        "damage": "",
+        "text": {
+          "zh-TW": "將對手的牌庫上方1張卡丟棄。",
+          "ja": "相手の山札を上から1枚トラッシュする。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-s9a-013",
+    "set_id": "asia-s9a",
+    "number": "013",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "燈火幽靈",
+      "ja": "ランプラー"
+    },
+    "pokemon": [
+      "燈火幽靈"
+    ],
+    "illustrator": "kurumitsu",
+    "rarity": "common",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "fire"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "搖晃燈火",
+          "ja": "ゆれるともしび"
+        },
+        "cost": [
+          "fire"
+        ],
+        "damage": "20",
+        "text": {
+          "zh-TW": "擲1次硬幣若為正面，則選擇1個對手的戰鬥寶可夢身上附加的能量，將其丟棄。",
+          "ja": "コインを1回投げオモテなら、相手のバトルポケモンについているエネルギーを1個選び、トラッシュする。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-s9a-014",
+    "set_id": "asia-s9a",
+    "number": "014",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "水晶燈火靈",
+      "ja": "シャンデラ"
+    },
+    "pokemon": [
+      "水晶燈火靈"
+    ],
+    "illustrator": "sui",
+    "rarity": "rare",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 150,
+    "types": [
+      "fire"
+    ],
+    "stage": "stage2",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "高溫爆破",
+          "ja": "ヒートブラスト"
+        },
+        "cost": [
+          "fire",
+          "normal"
+        ],
+        "damage": "90",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-s9a-015",
+    "set_id": "asia-s9a",
+    "number": "015",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "小獅獅",
+      "ja": "シシコ"
+    },
+    "pokemon": [
+      "小獅獅"
+    ],
+    "illustrator": "Sekio",
+    "rarity": "common",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "灼熱",
+          "ja": "こがす"
+        },
+        "cost": [
+          "fire"
+        ],
+        "damage": "",
+        "text": {
+          "zh-TW": "將對手的戰鬥寶可夢【灼傷】。",
+          "ja": "相手のバトルポケモンをやけどにする。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-s9a-016",
+    "set_id": "asia-s9a",
+    "number": "016",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "火炎獅",
+      "ja": "カエンジシ"
+    },
+    "pokemon": [
+      "火炎獅"
+    ],
+    "illustrator": "Misa Tsutsui",
+    "rarity": "rare",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 120,
+    "types": [
+      "fire"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "火焰牙",
+          "ja": "ほのおのキバ"
+        },
+        "cost": [
+          "fire",
+          "normal",
+          "normal"
+        ],
+        "damage": "90",
+        "text": {
+          "zh-TW": "擲1次硬幣若為正面，則將對手的戰鬥寶可夢【灼傷】。",
+          "ja": "コインを1回投げオモテなら、相手のバトルポケモンをやけどにする。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-s9a-017",
+    "set_id": "asia-s9a",
+    "number": "017",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "寶石海星V",
+      "ja": "スターミーV"
+    },
+    "pokemon": [
+      "寶石海星V"
+    ],
+    "illustrator": "Eske Yoshinob",
+    "rarity": "double_rare",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 190,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "rule_box": "V",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "高速星星",
+          "ja": "スピードスター"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "zh-TW": "這個招式的傷害不計算弱點・抵抗力、對手的戰鬥寶可夢身上的附加效果。",
+          "ja": "このワザのダメージは、弱点・抵抗力と、相手のバトルポケモンにかかっている効果を計算しない。"
+        }
+      },
+      {
+        "name": {
+          "zh-TW": "能量螺旋",
+          "ja": "エナジースパイラル"
+        },
+        "cost": [
+          "water",
+          "water"
+        ],
+        "damage": "50×",
+        "text": {
+          "zh-TW": "造成對手的場上寶可夢身上附加的能量的數量×50點傷害。",
+          "ja": "相手の場のポケモンについているエネルギーの数×50ダメージ。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 0
+  },
+  {
+    "id": "asia-s9a-018",
+    "set_id": "asia-s9a",
+    "number": "018",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "小山豬",
+      "ja": "ウリムー"
+    },
+    "pokemon": [
+      "小山豬"
+    ],
+    "illustrator": "Kouki Saitou",
+    "rarity": "common",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "踩",
+          "ja": "ふむ"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      },
+      {
+        "name": {
+          "zh-TW": "冰凍之風",
+          "ja": "こごえるかぜ"
+        },
+        "cost": [
+          "water",
+          "normal",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {
+          "zh-TW": "將對手的戰鬥寶可夢【睡眠】。",
+          "ja": "相手のバトルポケモンをねむりにする。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-s9a-019",
+    "set_id": "asia-s9a",
+    "number": "019",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "長毛豬",
+      "ja": "イノムー"
+    },
+    "pokemon": [
+      "長毛豬"
+    ],
+    "illustrator": "yuu",
+    "rarity": "common",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "water"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "踩",
+          "ja": "ふむ"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      },
+      {
+        "name": {
+          "zh-TW": "暴風雪",
+          "ja": "ふぶき"
+        },
+        "cost": [
+          "water",
+          "normal",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "zh-TW": "對手的所有備戰寶可夢也各受到10點傷害。[在備戰區不計算弱點・抵抗力。]",
+          "ja": "相手のベンチポケモン全員にも、それぞれ10ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "asia-s9a-020",
+    "set_id": "asia-s9a",
+    "number": "020",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "象牙豬",
+      "ja": "マンムー"
+    },
+    "pokemon": [
+      "象牙豬"
+    ],
+    "illustrator": "Uta",
+    "rarity": "uncommon",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 180,
+    "types": [
+      "water"
+    ],
+    "stage": "stage2",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "暴風雪",
+          "ja": "ふぶき"
+        },
+        "cost": [
+          "water",
+          "normal",
+          "normal"
+        ],
+        "damage": "80",
+        "text": {
+          "zh-TW": "對手的所有備戰寶可夢也各受到10點傷害。[在備戰區不計算弱點・抵抗力。]",
+          "ja": "相手のベンチポケモン全員にも、それぞれ10ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+        }
+      },
+      {
+        "name": {
+          "zh-TW": "冰山壓制",
+          "ja": "ひょうざんプレス"
+        },
+        "cost": [
+          "water",
+          "water",
+          "normal",
+          "normal"
+        ],
+        "damage": "170",
+        "text": {
+          "zh-TW": "選擇1個這隻寶可夢身上附加的能量，將其丟棄。在下個對手的回合，受到這個招式的寶可夢無法使用招式。",
+          "ja": "このポケモンについているエネルギーを1個選び、トラッシュする。次の相手の番、このワザを受けたポケモンは、ワザが使えない。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 4
+  },
+  {
+    "id": "asia-s9a-021",
+    "set_id": "asia-s9a",
+    "number": "021",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "泥泥鰍",
+      "ja": "ドジョッチ"
+    },
+    "pokemon": [
+      "泥泥鰍"
+    ],
+    "illustrator": "Mizue",
+    "rarity": "common",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "潑水",
+          "ja": "みずかけ"
+        },
+        "cost": [
+          "water",
+          "normal",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-s9a-022",
+    "set_id": "asia-s9a",
+    "number": "022",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "鯰魚王",
+      "ja": "ナマズン"
+    },
+    "pokemon": [
+      "鯰魚王"
+    ],
+    "illustrator": "Shinji Kanda",
+    "rarity": "uncommon",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 120,
+    "types": [
+      "water"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "泥巴射擊",
+          "ja": "マッドショット"
+        },
+        "cost": [
+          "water",
+          "normal",
+          "normal"
+        ],
+        "damage": "80",
+        "text": {}
+      },
+      {
+        "name": {
+          "zh-TW": "大鬧一番",
+          "ja": "あばれる"
+        },
+        "cost": [
+          "water",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "120＋",
+        "text": {
+          "zh-TW": "擲1次硬幣若為正面，則增加60點傷害。若為反面，則這隻寶可夢也受到60點傷害。",
+          "ja": "コインを1回投げオモテなら、60ダメージ追加。ウラなら、このポケモンにも60ダメージ。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "asia-s9a-023",
+    "set_id": "asia-s9a",
+    "number": "023",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "洗翠 野蠻鱸魚",
+      "ja": "ヒスイ バスラオ"
+    },
+    "pokemon": [
+      "洗翠 野蠻鱸魚"
+    ],
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "common",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "群集",
+          "ja": "むれをあつめる"
+        },
+        "cost": [],
+        "damage": "",
+        "text": {
+          "zh-TW": "從自己的牌庫選擇最多2張【基礎】寶可夢卡，放置於備戰區。並且重洗牌庫。",
+          "ja": "自分の山札からたねポケモンを2枚まで選び、ベンチに出す。そして山札を切る。"
+        }
+      },
+      {
+        "name": {
+          "zh-TW": "撞擊",
+          "ja": "たいあたり"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-s9a-024",
+    "set_id": "asia-s9a",
+    "number": "024",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "洗翠 幽尾玄魚",
+      "ja": "ヒスイ イダイトウ"
+    },
+    "pokemon": [
+      "洗翠 幽尾玄魚"
+    ],
+    "illustrator": "Akira Komayama",
+    "rarity": "uncommon",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 120,
+    "types": [
+      "water"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "怨恨奇襲",
+          "ja": "うらみのダイブ"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "30＋",
+        "text": {
+          "zh-TW": "若在上個對手的回合，自己的寶可夢因招式的傷害而【氣絕】了，則增加90點傷害，並將對手的戰鬥寶可夢【混亂】。",
+          "ja": "前の相手の番に、ワザのダメージで、自分のポケモンがきぜつしていたなら、90ダメージ追加し、相手のバトルポケモンをこんらんにする。"
+        }
+      },
+      {
+        "name": {
+          "zh-TW": "噴射頭擊",
+          "ja": "ジェットヘッド"
+        },
+        "cost": [
+          "water",
+          "normal",
+          "normal"
+        ],
+        "damage": "80",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-s9a-025",
+    "set_id": "asia-s9a",
+    "number": "025",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "凱路迪歐",
+      "ja": "ケルディオ"
+    },
+    "pokemon": [
+      "凱路迪歐"
+    ],
+    "illustrator": "Naoyo Kimura",
+    "rarity": "rare",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 110,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "踢飛",
+          "ja": "けとばす"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      },
+      {
+        "name": {
+          "zh-TW": "隊列之力",
+          "ja": "ラインフォース"
+        },
+        "cost": [
+          "water",
+          "normal"
+        ],
+        "damage": "10＋",
+        "text": {
+          "zh-TW": "增加自己的備戰寶可夢的數量×20點傷害。",
+          "ja": "自分のベンチポケモンの数×20ダメージ追加。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-s9a-026",
+    "set_id": "asia-s9a",
+    "number": "026",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "光輝甲賀忍蛙",
+      "ja": "かがやくゲッコウガ"
+    },
+    "pokemon": [
+      "光輝甲賀忍蛙"
+    ],
+    "illustrator": "Souichirou Gunjima",
+    "rarity": "unknown",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "月光手裏劍",
+          "ja": "げっこうしゅりけん"
+        },
+        "cost": [
+          "water",
+          "water",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "zh-TW": "將這隻寶可夢身上附加的2個能量丟棄，對手的2隻寶可夢各受到90點傷害。[在備戰區不計算弱點・抵抗力。]",
+          "ja": "このポケモンについているエネルギーを2個トラッシュし、相手のポケモン2匹に、それぞれ90ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-s9a-027",
+    "set_id": "asia-s9a",
+    "number": "027",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "迷唇姐",
+      "ja": "ルージュラ"
+    },
+    "pokemon": [
+      "迷唇姐"
+    ],
+    "illustrator": "Nagomi Nijo",
+    "rarity": "common",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "召喚舞",
+          "ja": "よびだしダンス"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "zh-TW": "選擇1隻對手的備戰寶可夢，與戰鬥寶可夢互換。然後，將新上場的寶可夢【混亂】。",
+          "ja": "相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。その後、新しく出てきたポケモンをこんらんにする。"
+        }
+      },
+      {
+        "name": {
+          "zh-TW": "超念力",
+          "ja": "ちょうねんりき"
+        },
+        "cost": [
+          "psychic",
+          "normal",
+          "normal"
+        ],
+        "damage": "80",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "－30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-s9a-028",
+    "set_id": "asia-s9a",
+    "number": "028",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "洗翠 火爆獸V",
+      "ja": "ヒスイ バクフーンV"
+    },
+    "pokemon": [
+      "洗翠 火爆獸V"
+    ],
+    "illustrator": "Shin Nagasawa",
+    "rarity": "double_rare",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 210,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "rule_box": "V",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "灼熱",
+          "ja": "こがす"
+        },
+        "cost": [],
+        "damage": "",
+        "text": {
+          "zh-TW": "將對手的戰鬥寶可夢【灼傷】。",
+          "ja": "相手のバトルポケモンをやけどにする。"
+        }
+      },
+      {
+        "name": {
+          "zh-TW": "戰慄火焰",
+          "ja": "せんりつのほのお"
+        },
+        "cost": [
+          "psychic",
+          "psychic",
+          "normal"
+        ],
+        "damage": "120",
+        "text": {
+          "zh-TW": "在不看正面的情況下，從對手的手牌選擇1張，在看過那張卡正面後放回對手的牌庫並重洗。",
+          "ja": "相手の手札からオモテを見ないで1枚選び、そのカードのオモテを見てから、相手の山札にもどして切る。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "－30"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-s9a-029",
+    "set_id": "asia-s9a",
+    "number": "029",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "洗翠 火爆獸VSTAR",
+      "ja": "ヒスイ バクフーンVSTAR"
+    },
+    "pokemon": [
+      "洗翠 火爆獸VSTAR"
+    ],
+    "illustrator": "5ban Graphics",
+    "rarity": "unknown",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 260,
+    "types": [
+      "psychic"
+    ],
+    "stage": "vmax",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "陰森火焰",
+          "ja": "ホロウフレイム"
+        },
+        "cost": [
+          "psychic",
+          "psychic",
+          "normal"
+        ],
+        "damage": "180",
+        "text": {
+          "zh-TW": "將3個傷害指示物以任意方式放置於對手的備戰寶可夢身上。",
+          "ja": "ダメカン3個を、相手のベンチポケモンに好きなようにのせる。"
+        }
+      },
+      {
+        "name": {
+          "zh-TW": "[VSTAR力量]陽炎星星",
+          "ja": "カゲロウスター"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "",
+        "text": {
+          "zh-TW": "若對手的戰鬥寶可夢身上放置的傷害指示物為4個，則將那隻寶可夢【氣絕】。[對戰中，己方只可使用1次【VSTAR】力量。]",
+          "ja": "相手のバトルポケモンにのっているダメカンが4個なら、そのポケモンをきぜつさせる。［対戦中、自分はVSTARパワーを1回しか使えない。］"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "－30"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-s9a-030",
+    "set_id": "asia-s9a",
+    "number": "030",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "夢妖",
+      "ja": "ムウマ"
+    },
+    "pokemon": [
+      "夢妖"
+    ],
+    "illustrator": "AKIRA EGAWA",
+    "rarity": "common",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "囈語",
+          "ja": "つぶやく"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "－30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-s9a-031",
+    "set_id": "asia-s9a",
+    "number": "031",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "夢妖魔",
+      "ja": "ムウマージ"
+    },
+    "pokemon": [
+      "夢妖魔"
+    ],
+    "illustrator": "Ligton",
+    "rarity": "uncommon",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "不祥言靈",
+          "ja": "ふきつなことだま"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "",
+        "text": {
+          "zh-TW": "查看對手的手牌。若對手的手牌有4張以上，則選擇卡直到其張數變為3張為止，將所選的卡放回對手的牌庫並重洗。",
+          "ja": "相手の手札を見る。相手の手札が4枚以上あるなら、その枚数が3枚になるまでカードを選び、選んだカードを相手の山札にもどして切る。"
+        }
+      },
+      {
+        "name": {
+          "zh-TW": "幻象光線",
+          "ja": "サイケこうせん"
+        },
+        "cost": [
+          "psychic",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "zh-TW": "將對手的戰鬥寶可夢【混亂】。",
+          "ja": "相手のバトルポケモンをこんらんにする。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "－30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-s9a-032",
+    "set_id": "asia-s9a",
+    "number": "032",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "拉魯拉絲",
+      "ja": "ラルトス"
+    },
+    "pokemon": [
+      "拉魯拉絲"
+    ],
+    "illustrator": "Hataya",
+    "rarity": "common",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "瞬間移動突擊",
+          "ja": "テレポートブレイク"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "10",
+        "text": {
+          "zh-TW": "將這隻寶可夢與備戰寶可夢互換。",
+          "ja": "このポケモンをベンチポケモンと入れ替える。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "－30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-s9a-033",
+    "set_id": "asia-s9a",
+    "number": "033",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "奇魯莉安",
+      "ja": "キルリア"
+    },
+    "pokemon": [
+      "奇魯莉安"
+    ],
+    "illustrator": "Saya Tsuruta",
+    "rarity": "common",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "瞬間移動突擊",
+          "ja": "テレポートブレイク"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "30",
+        "text": {
+          "zh-TW": "將這隻寶可夢與備戰寶可夢互換。",
+          "ja": "このポケモンをベンチポケモンと入れ替える。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "－30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-s9a-034",
+    "set_id": "asia-s9a",
+    "number": "034",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "艾路雷朵",
+      "ja": "エルレイド"
+    },
+    "pokemon": [
+      "艾路雷朵"
+    ],
+    "illustrator": "Atsushi Furusawa",
+    "rarity": "rare",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 160,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage2",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "螺旋斬",
+          "ja": "らせんぎり"
+        },
+        "cost": [
+          "psychic",
+          "normal",
+          "normal"
+        ],
+        "damage": "160",
+        "text": {
+          "zh-TW": "選擇1個這隻寶可夢身上附加的能量，改附於備戰寶可夢身上。",
+          "ja": "このポケモンについているエネルギーを1個選び、ベンチポケモンにつけ替える。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "－30"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-s9a-035",
+    "set_id": "asia-s9a",
+    "number": "035",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "蒂安希",
+      "ja": "ディアンシー"
+    },
+    "pokemon": [
+      "蒂安希"
+    ],
+    "illustrator": "Yuu Nishida",
+    "rarity": "rare",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "扣殺抽出",
+          "ja": "スパイクドロー"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "zh-TW": "從自己的牌庫抽出2張卡。",
+          "ja": "自分の山札を2枚引く。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-s9a-036",
+    "set_id": "asia-s9a",
+    "number": "036",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "詭角鹿",
+      "ja": "アヤシシ"
+    },
+    "pokemon": [
+      "詭角鹿"
+    ],
+    "illustrator": "Mizue",
+    "rarity": "rare",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 140,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "神通力",
+          "ja": "じんつうりき"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "40＋",
+        "text": {
+          "zh-TW": "若自己的手牌的張數與對手的手牌的張數相同，則增加80點傷害。",
+          "ja": "自分の手札と相手の手札が同じ枚数なら、80ダメージ追加。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "－30"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-s9a-037",
+    "set_id": "asia-s9a",
+    "number": "037",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "獨角犀牛",
+      "ja": "サイホーン"
+    },
+    "pokemon": [
+      "獨角犀牛"
+    ],
+    "illustrator": "Scav",
+    "rarity": "common",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "猛撞",
+          "ja": "とっしん"
+        },
+        "cost": [
+          "fighting",
+          "normal",
+          "normal"
+        ],
+        "damage": "70",
+        "text": {
+          "zh-TW": "這隻寶可夢也受到20點傷害。",
+          "ja": "このポケモンにも20ダメージ。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "asia-s9a-038",
+    "set_id": "asia-s9a",
+    "number": "038",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "鑽角犀獸",
+      "ja": "サイドン"
+    },
+    "pokemon": [
+      "鑽角犀獸"
+    ],
+    "illustrator": "HYOGONOSUKE",
+    "rarity": "common",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 120,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "角鑽",
+          "ja": "つのドリル"
+        },
+        "cost": [
+          "fighting"
+        ],
+        "damage": "30",
+        "text": {}
+      },
+      {
+        "name": {
+          "zh-TW": "猛撞",
+          "ja": "とっしん"
+        },
+        "cost": [
+          "fighting",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "120",
+        "text": {
+          "zh-TW": "這隻寶可夢也受到30點傷害。",
+          "ja": "このポケモンにも30ダメージ。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "asia-s9a-039",
+    "set_id": "asia-s9a",
+    "number": "039",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "超甲狂犀",
+      "ja": "ドサイドン"
+    },
+    "pokemon": [
+      "超甲狂犀"
+    ],
+    "illustrator": "GOSSAN",
+    "rarity": "uncommon",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 190,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage2",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "土石砲",
+          "ja": "どせきほう"
+        },
+        "cost": [
+          "fighting"
+        ],
+        "damage": "50＋",
+        "text": {
+          "zh-TW": "將自己的牌庫上方1張卡丟棄，若那張卡為能量卡，則增加100點傷害。然後，將丟棄的能量卡附於這隻寶可夢身上。",
+          "ja": "自分の山札を上から1枚トラッシュし、そのカードがエネルギーなら、100ダメージ追加。その後、トラッシュしたエネルギーをこのポケモンにつける。"
+        }
+      },
+      {
+        "name": {
+          "zh-TW": "巨岩衝撞",
+          "ja": "がんせきタックル"
+        },
+        "cost": [
+          "fighting",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "180",
+        "text": {
+          "zh-TW": "這隻寶可夢也受到30點傷害。",
+          "ja": "このポケモンにも30ダメージ。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 4
+  },
+  {
+    "id": "asia-s9a-040",
+    "set_id": "asia-s9a",
+    "number": "040",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "古空棘魚",
+      "ja": "ジーランス"
+    },
+    "pokemon": [
+      "古空棘魚"
+    ],
+    "illustrator": "ryoma uratsuka",
+    "rarity": "uncommon",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "深潛",
+          "ja": "ふかもぐり"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "zh-TW": "從自己的棄牌區選擇最多2張基本能量卡，在給對手看過後加入手牌。",
+          "ja": "自分のトラッシュから基本エネルギーを2枚まで選び、相手に見せて、手札に加える。"
+        }
+      },
+      {
+        "name": {
+          "zh-TW": "撞擊",
+          "ja": "たいあたり"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "80",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-s9a-041",
+    "set_id": "asia-s9a",
+    "number": "041",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "沙河馬",
+      "ja": "ヒポポタス"
+    },
+    "pokemon": [
+      "沙河馬"
+    ],
+    "illustrator": "nagimiso",
+    "rarity": "common",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "擲泥",
+          "ja": "どろかけ"
+        },
+        "cost": [
+          "fighting",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      },
+      {
+        "name": {
+          "zh-TW": "滾動衝撞",
+          "ja": "ころがりタックル"
+        },
+        "cost": [
+          "fighting",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "90",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 4
+  },
+  {
+    "id": "asia-s9a-042",
+    "set_id": "asia-s9a",
+    "number": "042",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "河馬獸",
+      "ja": "カバルドン"
+    },
+    "pokemon": [
+      "河馬獸"
+    ],
+    "illustrator": "Kyoko Umemoto",
+    "rarity": "uncommon",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 150,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "咬住",
+          "ja": "かみつく"
+        },
+        "cost": [
+          "fighting",
+          "normal",
+          "normal"
+        ],
+        "damage": "80",
+        "text": {}
+      },
+      {
+        "name": {
+          "zh-TW": "沙之吐息",
+          "ja": "サンドブレス"
+        },
+        "cost": [
+          "fighting",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "180",
+        "text": {
+          "zh-TW": "選擇2個這隻寶可夢身上附加的能量，將其丟棄。",
+          "ja": "このポケモンについているエネルギーを2個選び、トラッシュする。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 4
+  },
+  {
+    "id": "asia-s9a-043",
+    "set_id": "asia-s9a",
+    "number": "043",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "光輝摔角鷹人",
+      "ja": "かがやくルチャブル"
+    },
+    "pokemon": [
+      "光輝摔角鷹人"
+    ],
+    "illustrator": "Masakazu Fukuda",
+    "rarity": "unknown",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "迴轉踢",
+          "ja": "かいてんげり"
+        },
+        "cost": [
+          "fighting",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-s9a-044",
+    "set_id": "asia-s9a",
+    "number": "044",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "洗翠 狙射樹梟V",
+      "ja": "ヒスイ ジュナイパーV"
+    },
+    "pokemon": [
+      "洗翠 狙射樹梟V"
+    ],
+    "illustrator": "Shin Nagasawa",
+    "rarity": "double_rare",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 220,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "rule_box": "V",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "獵山",
+          "ja": "やまがり"
+        },
+        "cost": [
+          "fighting"
+        ],
+        "damage": "",
+        "text": {
+          "zh-TW": "從自己的牌庫任意選擇最多2張卡加入手牌。並且重洗牌庫。",
+          "ja": "自分の山札から好きなカードを2枚まで選び、手札に加える。そして山札を切る。"
+        }
+      },
+      {
+        "name": {
+          "zh-TW": "近身射擊",
+          "ja": "きんせつしゃげき"
+        },
+        "cost": [
+          "fighting",
+          "normal",
+          "normal"
+        ],
+        "damage": "100",
+        "text": {
+          "zh-TW": "這個招式的傷害不計算對手的戰鬥寶可夢身上的附加效果。",
+          "ja": "このワザのダメージは、相手のバトルポケモンにかかっている効果を計算しない。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-s9a-045",
+    "set_id": "asia-s9a",
+    "number": "045",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "洗翠 狙射樹梟VSTAR",
+      "ja": "ヒスイ ジュナイパーVSTAR"
+    },
+    "pokemon": [
+      "洗翠 狙射樹梟VSTAR"
+    ],
+    "illustrator": "5ban Graphics",
+    "rarity": "unknown",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 270,
+    "types": [
+      "fighting"
+    ],
+    "stage": "vmax",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "筋斗羽毛",
+          "ja": "サマーソルトフェザー"
+        },
+        "cost": [
+          "fighting",
+          "normal",
+          "normal"
+        ],
+        "damage": "160＋",
+        "text": {
+          "zh-TW": "若希望，從自己的手牌將最多3張能量卡丟棄，增加其張數×30點傷害。",
+          "ja": "のぞむなら、自分の手札からエネルギーを3枚までトラッシュし、その枚数×30ダメージ追加。"
+        }
+      },
+      {
+        "name": {
+          "ja": "特性"
+        },
+        "cost": [],
+        "damage": "",
+        "text": {}
+      },
+      {
+        "name": {
+          "ja": "フウウンスター"
+        },
+        "cost": [],
+        "damage": "",
+        "text": {
+          "ja": "自分の番に使える。自分の手札が8枚になるように、山札を引く。［対戦中、自分はVSTARパワーを1回しか使えない。］"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-s9a-046",
+    "set_id": "asia-s9a",
+    "number": "046",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "劈斧螳螂",
+      "ja": "バサギリ"
+    },
+    "pokemon": [
+      "劈斧螳螂"
+    ],
+    "illustrator": "Anesaki Dynamic",
+    "rarity": "rare",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 140,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "大樹斬",
+          "ja": "たいぼくぎり"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "zh-TW": "擲2次硬幣，若全部為正面，則將對手的戰鬥寶可夢【氣絕】。",
+          "ja": "コインを2回投げ、すべてオモテなら、相手のバトルポケモンをきぜつさせる。"
+        }
+      },
+      {
+        "name": {
+          "zh-TW": "暴亂衝撞",
+          "ja": "あばれタックル"
+        },
+        "cost": [
+          "fighting",
+          "fighting"
+        ],
+        "damage": "120",
+        "text": {
+          "zh-TW": "這隻寶可夢也受到30點傷害。",
+          "ja": "このポケモンにも30ダメージ。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-s9a-047",
+    "set_id": "asia-s9a",
+    "number": "047",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "洗翠 千針魚",
+      "ja": "ヒスイ ハリーセン"
+    },
+    "pokemon": [
+      "洗翠 千針魚"
+    ],
+    "illustrator": "OKACHEKE",
+    "rarity": "common",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "dark"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "尖刺猛攻",
+          "ja": "とげラッシュ"
+        },
+        "cost": [],
+        "damage": "10×",
+        "text": {
+          "zh-TW": "擲硬幣直到出現反面，造成正面出現的次數×10點傷害。",
+          "ja": "ウラが出るまでコインを投げ、オモテの数×10ダメージ。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-s9a-048",
+    "set_id": "asia-s9a",
+    "number": "048",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "洗翠　萬針魚",
+      "ja": "ヒスイ ハリーマン"
+    },
+    "pokemon": [
+      "洗翠　萬針魚"
+    ],
+    "illustrator": "AKIRA EGAWA",
+    "rarity": "uncommon",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "dark"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "劇痛毒",
+          "ja": "げきつうどく"
+        },
+        "cost": [],
+        "damage": "",
+        "text": {
+          "zh-TW": "將對手的戰鬥寶可夢【中毒】。因這個【中毒】而放置的傷害指示物的數量改為5個。",
+          "ja": "相手のバトルポケモンをどくにする。このどくでのせるダメカンの数は5個になる。"
+        }
+      },
+      {
+        "name": {
+          "zh-TW": "針刺刑",
+          "ja": "ハリつけ"
+        },
+        "cost": [
+          "dark",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "zh-TW": "在下個對手的回合，受到這個招式的寶可夢無法撤退。",
+          "ja": "次の相手の番、このワザを受けたポケモンは、にげられない。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-s9a-049",
+    "set_id": "asia-s9a",
+    "number": "049",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "土狼犬",
+      "ja": "ポチエナ"
+    },
+    "pokemon": [
+      "土狼犬"
+    ],
+    "illustrator": "KIYOTAKA OSHIYAMA",
+    "rarity": "common",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "dark"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "咬",
+          "ja": "かじる"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "zh-TW": "撞一下",
+          "ja": "ちょっとつっこむ"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "zh-TW": "這隻寶可夢也受到10點傷害。",
+          "ja": "このポケモンにも10ダメージ。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-s9a-050",
+    "set_id": "asia-s9a",
+    "number": "050",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "大狼犬",
+      "ja": "グラエナ"
+    },
+    "pokemon": [
+      "大狼犬"
+    ],
+    "illustrator": "otumami",
+    "rarity": "uncommon",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 110,
+    "types": [
+      "dark"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "狂野衝撞",
+          "ja": "ワイルドタックル"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "160",
+        "text": {
+          "zh-TW": "這隻寶可夢也受到50點傷害。",
+          "ja": "このポケモンにも50ダメージ。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-s9a-051",
+    "set_id": "asia-s9a",
+    "number": "051",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "阿勃梭魯",
+      "ja": "アブソル"
+    },
+    "pokemon": [
+      "阿勃梭魯"
+    ],
+    "illustrator": "GIDORA",
+    "rarity": "rare",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "dark"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "漩渦災禍",
+          "ja": "うずまくわざわい"
+        },
+        "cost": [
+          "dark"
+        ],
+        "damage": "",
+        "text": {
+          "zh-TW": "對手的所有寶可夢各受到10點傷害。[在備戰區不計算弱點・抵抗力。]",
+          "ja": "相手のポケモン全員に、それぞれ10ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+        }
+      },
+      {
+        "name": {
+          "zh-TW": "抓裂",
+          "ja": "ツメでえぐる"
+        },
+        "cost": [
+          "dark",
+          "normal"
+        ],
+        "damage": "50＋",
+        "text": {
+          "zh-TW": "若對手的戰鬥寶可夢身上放置有傷害指示物，則增加70點傷害。",
+          "ja": "相手のバトルポケモンにダメカンがのっているなら、70ダメージ追加。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-s9a-052",
+    "set_id": "asia-s9a",
+    "number": "052",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "洗翠 大劍鬼V",
+      "ja": "ヒスイ ダイケンキV"
+    },
+    "pokemon": [
+      "洗翠 大劍鬼V"
+    ],
+    "illustrator": "Shin Nagasawa",
+    "rarity": "double_rare",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 220,
+    "types": [
+      "dark"
+    ],
+    "stage": "basic",
+    "rule_box": "V",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "藤箱擊落",
+          "ja": "つづらおとし"
+        },
+        "cost": [
+          "dark"
+        ],
+        "damage": "",
+        "text": {
+          "zh-TW": "選擇最多2張對手的場上寶可夢身上附加的「寶可夢道具」卡，將其丟棄。",
+          "ja": "相手の場のポケモンについている「ポケモンのどうぐ」を2枚まで選び、トラッシュする。"
+        }
+      },
+      {
+        "name": {
+          "zh-TW": "暗影斬",
+          "ja": "シャドースラッシュ"
+        },
+        "cost": [
+          "dark",
+          "dark",
+          "dark"
+        ],
+        "damage": "180",
+        "text": {
+          "zh-TW": "選擇1個這隻寶可夢身上附加的能量，將其丟棄。",
+          "ja": "このポケモンについているエネルギーを1個選び、トラッシュする。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-s9a-053",
+    "set_id": "asia-s9a",
+    "number": "053",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "洗翠 大劍鬼VSTAR",
+      "ja": "ヒスイ ダイケンキVSTAR"
+    },
+    "pokemon": [
+      "洗翠 大劍鬼VSTAR"
+    ],
+    "illustrator": "5ban Graphics",
+    "rarity": "unknown",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 270,
+    "types": [
+      "dark"
+    ],
+    "stage": "vmax",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "狠心利刃",
+          "ja": "むじひなやいば"
+        },
+        "cost": [
+          "dark",
+          "dark"
+        ],
+        "damage": "110＋",
+        "text": {
+          "zh-TW": "若對手的戰鬥寶可夢身上放置有傷害指示物，則增加110點傷害。",
+          "ja": "相手のバトルポケモンにダメカンがのっているなら、110ダメージ追加。"
+        }
+      },
+      {
+        "name": {
+          "ja": "特性"
+        },
+        "cost": [],
+        "damage": "",
+        "text": {}
+      },
+      {
+        "name": {
+          "ja": "ザンゲツスター"
+        },
+        "cost": [],
+        "damage": "",
+        "text": {
+          "ja": "自分の番に使える。相手のポケモン1匹に、ダメカンを4個のせる。［対戦中、自分はVSTARパワーを1回しか使えない。］"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-s9a-054",
+    "set_id": "asia-s9a",
+    "number": "054",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "烈咬陸鯊V",
+      "ja": "ガブリアスV"
+    },
+    "pokemon": [
+      "烈咬陸鯊V"
+    ],
+    "illustrator": "N-DESIGN Inc.",
+    "rarity": "double_rare",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 200,
+    "types": [
+      "dragon"
+    ],
+    "stage": "basic",
+    "rule_box": "V",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "龍爪",
+          "ja": "ドラゴンクロー"
+        },
+        "cost": [
+          "water",
+          "fighting",
+          "normal"
+        ],
+        "damage": "120",
+        "text": {}
+      },
+      {
+        "name": {
+          "zh-TW": "音波強襲",
+          "ja": "ソニックストライク"
+        },
+        "cost": [
+          "water",
+          "fighting",
+          "fighting",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "zh-TW": "將這隻寶可夢身上附加的3個能量丟棄，對手的1隻寶可夢受到220點傷害。[在備戰區不計算弱點・抵抗力。]",
+          "ja": "このポケモンについているエネルギーを3個トラッシュし、相手のポケモン1匹に、220ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+        }
+      }
+    ],
+    "retreat_cost": 0
+  },
+  {
+    "id": "asia-s9a-055",
+    "set_id": "asia-s9a",
+    "number": "055",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "咕咕",
+      "ja": "ホーホー"
+    },
+    "pokemon": [
+      "咕咕"
+    ],
+    "illustrator": "Pani Kobayashi",
+    "rarity": "common",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "羽擊",
+          "ja": "はばたく"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "－30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-s9a-056",
+    "set_id": "asia-s9a",
+    "number": "056",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "貓頭夜鷹",
+      "ja": "ヨルノズク"
+    },
+    "pokemon": [
+      "貓頭夜鷹"
+    ],
+    "illustrator": "Nisota Niso",
+    "rarity": "uncommon",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "normal"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "靜默之翼",
+          "ja": "サイレントウイング"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "zh-TW": "查看對手的手牌。",
+          "ja": "相手の手札を見る。"
+        }
+      },
+      {
+        "name": {
+          "zh-TW": "空氣斬",
+          "ja": "エアスラッシュ"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "120",
+        "text": {
+          "zh-TW": "選擇1個這隻寶可夢身上附加的能量，將其丟棄。",
+          "ja": "このポケモンについているエネルギーを1個選び、トラッシュする。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "－30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-s9a-057",
+    "set_id": "asia-s9a",
+    "number": "057",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "驚角鹿",
+      "ja": "オドシシ"
+    },
+    "pokemon": [
+      "驚角鹿"
+    ],
+    "illustrator": "Teeziro",
+    "rarity": "common",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "防守壓制",
+          "ja": "ガードプレス"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "zh-TW": "在下個對手的回合，這隻寶可夢受到招式的傷害「-30」點。",
+          "ja": "次の相手の番、このポケモンが受けるワザのダメージは「-30」される。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-s9a-058",
+    "set_id": "asia-s9a",
+    "number": "058",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "大奶罐",
+      "ja": "ミルタンク"
+    },
+    "pokemon": [
+      "大奶罐"
+    ],
+    "illustrator": "saino misaki",
+    "rarity": "rare",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 110,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "踢散",
+          "ja": "けちらす"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "10＋",
+        "text": {
+          "zh-TW": "增加對手的備戰寶可夢的數量×20點傷害。",
+          "ja": "相手のベンチポケモンの数×20ダメージ追加。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-s9a-059",
+    "set_id": "asia-s9a",
+    "number": "059",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "魅力喵",
+      "ja": "ニャルマー"
+    },
+    "pokemon": [
+      "魅力喵"
+    ],
+    "illustrator": "Naoyo Kimura",
+    "rarity": "common",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "擊掌奇襲",
+          "ja": "ねこだまし"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "zh-TW": "擲1次硬幣若為正面，則將對手的戰鬥寶可夢【麻痺】。",
+          "ja": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-s9a-060",
+    "set_id": "asia-s9a",
+    "number": "060",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "東施喵",
+      "ja": "ブニャット"
+    },
+    "pokemon": [
+      "東施喵"
+    ],
+    "illustrator": "Mina Nakai",
+    "rarity": "uncommon",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 110,
+    "types": [
+      "normal"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "泰山壓頂",
+          "ja": "のしかかり"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "zh-TW": "擲1次硬幣若為正面，則將對手的戰鬥寶可夢【麻痺】。",
+          "ja": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。"
+        }
+      },
+      {
+        "name": {
+          "zh-TW": "利爪揮砍",
+          "ja": "スラッシュクロー"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "100",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-s9a-061",
+    "set_id": "asia-s9a",
+    "number": "061",
+    "category": "trainer",
+    "name": {
+      "zh-TW": "慢出渦輪",
+      "ja": "あとだしターボ"
+    },
+    "pokemon": [],
+    "illustrator": "sadaji",
+    "rarity": "uncommon",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "zh-TW": "這張卡只可在後攻玩家的最初回合使用，若使用了，則自己的回合結束。從自己的牌庫選擇1張基本能量卡，附於自己的寶可夢身上。並且重洗牌庫。",
+      "ja": "このカードは、後攻プレイヤーの最初の番しか使えず、使ったら、自分の番は終わる。\n\n自分の山札から基本エネルギーを1枚選び、自分のポケモンにつける。そして山札を切る。"
+    }
+  },
+  {
+    "id": "asia-s9a-062",
+    "set_id": "asia-s9a",
+    "number": "062",
+    "category": "trainer",
+    "name": {
+      "zh-TW": "甜甜蜜",
+      "ja": "あまいミツ"
+    },
+    "pokemon": [],
+    "illustrator": "ORBITALLINK Inc.",
+    "rarity": "uncommon",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "zh-TW": "選擇自己的1隻寶可夢。擲硬幣直到出現反面，將那隻寶可夢恢復正面出現的次數×40點傷害相同數值的HP。",
+      "ja": "自分のポケモンを1匹選ぶ。ウラが出るまでコインを投げ、オモテの数×40ダメージぶん、そのポケモンのHPを回復する。"
+    }
+  },
+  {
+    "id": "asia-s9a-063",
+    "set_id": "asia-s9a",
+    "number": "063",
+    "category": "trainer",
+    "name": {
+      "zh-TW": "消除香水",
+      "ja": "キャンセルコロン"
+    },
+    "pokemon": [],
+    "illustrator": "Studio Bora Inc.",
+    "rarity": "uncommon",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "zh-TW": "在這個回合結束前，對手的戰鬥寶可夢的特性全部消除。（包含新上戰鬥場的寶可夢。）",
+      "ja": "この番の終わりまで、相手のバトルポケモンの特性は、すべてなくなる。（新しくバトル場に出したポケモンもふくむ。）"
+    }
+  },
+  {
+    "id": "asia-s9a-064",
+    "set_id": "asia-s9a",
+    "number": "064",
+    "category": "trainer",
+    "name": {
+      "zh-TW": "星月",
+      "ja": "シマボシ"
+    },
+    "pokemon": [],
+    "illustrator": "nagimiso",
+    "rarity": "uncommon",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "zh-TW": "擲2次硬幣，從自己的棄牌區任意選擇最多與正面出現的次數相同數量的卡，在給對手看過後，以任意順序排列，放回牌庫上方。",
+      "ja": "コインを2回投げ、オモテの数ぶんまで、自分のトラッシュから好きなカードを選び、相手に見せて、好きな順番に入れ替えて、山札の上にもどす。"
+    }
+  },
+  {
+    "id": "asia-s9a-065",
+    "set_id": "asia-s9a",
+    "number": "065",
+    "category": "trainer",
+    "name": {
+      "zh-TW": "杜娟",
+      "ja": "ツツジ"
+    },
+    "pokemon": [],
+    "illustrator": "Megumi Mizutani",
+    "rarity": "uncommon",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "zh-TW": "這張卡只可在對手剩餘獎賞卡的張數為3張以下時使用。雙方玩家各將手牌全部放回牌庫並重洗。然後，從牌庫抽卡，自己抽出6張，對手抽出2張。",
+      "ja": "このカードは、相手のサイドの残り枚数が3枚以下のときにしか使えない。\n\nおたがいのプレイヤーは、それぞれ手札をすべて山札にもどして切る。その後、自分は6枚、相手は2枚、山札を引く。"
+    }
+  },
+  {
+    "id": "asia-s9a-066",
+    "set_id": "asia-s9a",
+    "number": "066",
+    "category": "trainer",
+    "name": {
+      "zh-TW": "馬加木",
+      "ja": "デンボク"
+    },
+    "pokemon": [],
+    "illustrator": "Hitoshi Ariga",
+    "rarity": "uncommon",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "zh-TW": "選擇1張自己的手牌，將剩餘的手牌全部丟棄。然後，從牌庫抽出4張卡。（若自己的手牌只有這1張，則無法使用這張卡。）",
+      "ja": "自分の手札を1枚選び、残りの手札をすべてトラッシュする。その後、山札を4枚引く。（自分の手札がこのカード1枚だけなら、このカードは使えない。）"
+    }
+  },
+  {
+    "id": "asia-s9a-067",
+    "set_id": "asia-s9a",
+    "number": "067",
+    "category": "trainer",
+    "name": {
+      "zh-TW": "祝慶村",
+      "ja": "コトブキムラ"
+    },
+    "pokemon": [],
+    "illustrator": "Oswaldo KATO",
+    "rarity": "uncommon",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "trainer_type": "stadium",
+    "rules_text": {
+      "zh-TW": "雙方玩家在每個自己的回合時，可使用1次，可將自己的手牌全部放回牌庫並重洗。這個情況下，從自己的牌庫抽出5張卡。若使用了這個效果，則自己的回合結束。",
+      "ja": "おたがいのプレイヤーは、自分の番ごとに1回、自分の手札をすべて山札にもどして切ってよい。その場合、自分の山札を5枚引く。この効果を使ったなら、自分の番は終わる。"
+    }
+  },
+  {
+    "id": "asia-s9a-068",
+    "set_id": "asia-s9a",
+    "number": "068",
+    "category": "pokemon",
+    "name": {
+      "ja": "ロズレイド"
+    },
+    "pokemon": [
+      "ロズレイド"
+    ],
+    "illustrator": "saino misaki",
+    "rarity": "unknown",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 120,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "ja": "どくのムチ"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "30",
+        "text": {
+          "ja": "相手のバトルポケモンをどくにする。"
+        }
+      },
+      {
+        "name": {
+          "ja": "アサシンローズ"
+        },
+        "cost": [
+          "grass",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {
+          "ja": "相手のバトルポケモンが特殊状態なら、相手のベンチポケモン1匹にも、60ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-s9a-069",
+    "set_id": "asia-s9a",
+    "number": "069",
+    "category": "pokemon",
+    "name": {
+      "ja": "シャンデラ"
+    },
+    "pokemon": [
+      "シャンデラ"
+    ],
+    "illustrator": "chibi",
+    "rarity": "unknown",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 150,
+    "types": [
+      "fire"
+    ],
+    "stage": "stage2",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ヒートブラスト"
+        },
+        "cost": [
+          "fire",
+          "normal"
+        ],
+        "damage": "90",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-s9a-070",
+    "set_id": "asia-s9a",
+    "number": "070",
+    "category": "pokemon",
+    "name": {
+      "ja": "アヤシシ"
+    },
+    "pokemon": [
+      "アヤシシ"
+    ],
+    "illustrator": "kirisAki",
+    "rarity": "unknown",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 140,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "ja": "じんつうりき"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "40＋",
+        "text": {
+          "ja": "自分の手札と相手の手札が同じ枚数なら、80ダメージ追加。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "－30"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-s9a-071",
+    "set_id": "asia-s9a",
+    "number": "071",
+    "category": "pokemon",
+    "name": {
+      "ja": "バサギリ"
+    },
+    "pokemon": [
+      "バサギリ"
+    ],
+    "illustrator": "Souichirou Gunjima",
+    "rarity": "unknown",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 140,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "ja": "たいぼくぎり"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "コインを2回投げ、すべてオモテなら、相手のバトルポケモンをきぜつさせる。"
+        }
+      },
+      {
+        "name": {
+          "ja": "あばれタックル"
+        },
+        "cost": [
+          "fighting",
+          "fighting"
+        ],
+        "damage": "120",
+        "text": {
+          "ja": "このポケモンにも30ダメージ。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-s9a-072",
+    "set_id": "asia-s9a",
+    "number": "072",
+    "category": "pokemon",
+    "name": {
+      "ja": "グラエナ"
+    },
+    "pokemon": [
+      "グラエナ"
+    ],
+    "illustrator": "GOSSAN",
+    "rarity": "unknown",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 110,
+    "types": [
+      "dark"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ワイルドタックル"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "160",
+        "text": {
+          "ja": "このポケモンにも50ダメージ。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-s9a-073",
+    "set_id": "asia-s9a",
+    "number": "073",
+    "category": "pokemon",
+    "name": {
+      "ja": "ホーホー"
+    },
+    "pokemon": [
+      "ホーホー"
+    ],
+    "illustrator": "HYOGONOSUKE",
+    "rarity": "unknown",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "はばたく"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "－30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-s9a-074",
+    "set_id": "asia-s9a",
+    "number": "074",
+    "category": "pokemon",
+    "name": {
+      "ja": "ビリジオンV"
+    },
+    "pokemon": [
+      "ビリジオンV"
+    ],
+    "illustrator": "Saki Hayashiro",
+    "rarity": "unknown",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 200,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "rule_box": "V",
+    "attacks": [
+      {
+        "name": {
+          "ja": "エメラルドブレード"
+        },
+        "cost": [
+          "grass",
+          "grass",
+          "normal"
+        ],
+        "damage": "200",
+        "text": {
+          "ja": "次の自分の番、このポケモンはワザが使えない。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-s9a-075",
+    "set_id": "asia-s9a",
+    "number": "075",
+    "category": "pokemon",
+    "name": {
+      "ja": "スターミーV"
+    },
+    "pokemon": [
+      "スターミーV"
+    ],
+    "illustrator": "Eske Yoshinob",
+    "rarity": "unknown",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 190,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "rule_box": "V",
+    "attacks": [
+      {
+        "name": {
+          "ja": "スピードスター"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "ja": "このワザのダメージは、弱点・抵抗力と、相手のバトルポケモンにかかっている効果を計算しない。"
+        }
+      },
+      {
+        "name": {
+          "ja": "エナジースパイラル"
+        },
+        "cost": [
+          "water",
+          "water"
+        ],
+        "damage": "50×",
+        "text": {
+          "ja": "相手の場のポケモンについているエネルギーの数×50ダメージ。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 0
+  },
+  {
+    "id": "asia-s9a-076",
+    "set_id": "asia-s9a",
+    "number": "076",
+    "category": "pokemon",
+    "name": {
+      "ja": "ヒスイ バクフーンV"
+    },
+    "pokemon": [
+      "ヒスイ バクフーンV"
+    ],
+    "illustrator": "5ban Graphics",
+    "rarity": "unknown",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 210,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "rule_box": "V",
+    "attacks": [
+      {
+        "name": {
+          "ja": "こがす"
+        },
+        "cost": [],
+        "damage": "",
+        "text": {
+          "ja": "相手のバトルポケモンをやけどにする。"
+        }
+      },
+      {
+        "name": {
+          "ja": "せんりつのほのお"
+        },
+        "cost": [
+          "psychic",
+          "psychic",
+          "normal"
+        ],
+        "damage": "120",
+        "text": {
+          "ja": "相手の手札からオモテを見ないで1枚選び、そのカードのオモテを見てから、相手の山札にもどして切る。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "－30"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-s9a-077",
+    "set_id": "asia-s9a",
+    "number": "077",
+    "category": "pokemon",
+    "name": {
+      "ja": "ヒスイ ジュナイパーV"
+    },
+    "pokemon": [
+      "ヒスイ ジュナイパーV"
+    ],
+    "illustrator": "5ban Graphics",
+    "rarity": "unknown",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 220,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "rule_box": "V",
+    "attacks": [
+      {
+        "name": {
+          "ja": "やまがり"
+        },
+        "cost": [
+          "fighting"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "自分の山札から好きなカードを2枚まで選び、手札に加える。そして山札を切る。"
+        }
+      },
+      {
+        "name": {
+          "ja": "きんせつしゃげき"
+        },
+        "cost": [
+          "fighting",
+          "normal",
+          "normal"
+        ],
+        "damage": "100",
+        "text": {
+          "ja": "このワザのダメージは、相手のバトルポケモンにかかっている効果を計算しない。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-s9a-078",
+    "set_id": "asia-s9a",
+    "number": "078",
+    "category": "pokemon",
+    "name": {
+      "ja": "ヒスイ ダイケンキV"
+    },
+    "pokemon": [
+      "ヒスイ ダイケンキV"
+    ],
+    "illustrator": "5ban Graphics",
+    "rarity": "unknown",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 220,
+    "types": [
+      "dark"
+    ],
+    "stage": "basic",
+    "rule_box": "V",
+    "attacks": [
+      {
+        "name": {
+          "ja": "つづらおとし"
+        },
+        "cost": [
+          "dark"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "相手の場のポケモンについている「ポケモンのどうぐ」を2枚まで選び、トラッシュする。"
+        }
+      },
+      {
+        "name": {
+          "ja": "シャドースラッシュ"
+        },
+        "cost": [
+          "dark",
+          "dark",
+          "dark"
+        ],
+        "damage": "180",
+        "text": {
+          "ja": "このポケモンについているエネルギーを1個選び、トラッシュする。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-s9a-079",
+    "set_id": "asia-s9a",
+    "number": "079",
+    "category": "pokemon",
+    "name": {
+      "ja": "ガブリアスV"
+    },
+    "pokemon": [
+      "ガブリアスV"
+    ],
+    "illustrator": "N-DESIGN Inc.",
+    "rarity": "unknown",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 200,
+    "types": [
+      "dragon"
+    ],
+    "stage": "basic",
+    "rule_box": "V",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ドラゴンクロー"
+        },
+        "cost": [
+          "water",
+          "fighting",
+          "normal"
+        ],
+        "damage": "120",
+        "text": {}
+      },
+      {
+        "name": {
+          "ja": "ソニックストライク"
+        },
+        "cost": [
+          "water",
+          "fighting",
+          "fighting",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "このポケモンについているエネルギーを3個トラッシュし、相手のポケモン1匹に、220ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+        }
+      }
+    ],
+    "retreat_cost": 0
+  },
+  {
+    "id": "asia-s9a-080",
+    "set_id": "asia-s9a",
+    "number": "080",
+    "category": "trainer",
+    "name": {
+      "ja": "シマボシ"
+    },
+    "pokemon": [],
+    "illustrator": "nagimiso",
+    "rarity": "unknown",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "ja": "コインを2回投げ、オモテの数ぶんまで、自分のトラッシュから好きなカードを選び、相手に見せて、好きな順番に入れ替えて、山札の上にもどす。"
+    }
+  },
+  {
+    "id": "asia-s9a-081",
+    "set_id": "asia-s9a",
+    "number": "081",
+    "category": "trainer",
+    "name": {
+      "ja": "ツツジ"
+    },
+    "pokemon": [],
+    "illustrator": "Sanosuke Sakuma",
+    "rarity": "unknown",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "ja": "このカードは、相手のサイドの残り枚数が3枚以下のときにしか使えない。\n\nおたがいのプレイヤーは、それぞれ手札をすべて山札にもどして切る。その後、自分は6枚、相手は2枚、山札を引く。"
+    }
+  },
+  {
+    "id": "asia-s9a-082",
+    "set_id": "asia-s9a",
+    "number": "082",
+    "category": "trainer",
+    "name": {
+      "ja": "デンボク"
+    },
+    "pokemon": [],
+    "illustrator": "Hitoshi Ariga",
+    "rarity": "unknown",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "ja": "自分の手札を1枚選び、残りの手札をすべてトラッシュする。その後、山札を4枚引く。（自分の手札がこのカード1枚だけなら、このカードは使えない。）"
+    }
+  },
+  {
+    "id": "asia-s9a-083",
+    "set_id": "asia-s9a",
+    "number": "083",
+    "category": "pokemon",
+    "name": {
+      "ja": "スターミーV"
+    },
+    "pokemon": [
+      "スターミーV"
+    ],
+    "illustrator": "Akira Komayama",
+    "rarity": "unknown",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 190,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "rule_box": "V",
+    "attacks": [
+      {
+        "name": {
+          "ja": "スピードスター"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "ja": "このワザのダメージは、弱点・抵抗力と、相手のバトルポケモンにかかっている効果を計算しない。"
+        }
+      },
+      {
+        "name": {
+          "ja": "エナジースパイラル"
+        },
+        "cost": [
+          "water",
+          "water"
+        ],
+        "damage": "50×",
+        "text": {
+          "ja": "相手の場のポケモンについているエネルギーの数×50ダメージ。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 0
+  },
+  {
+    "id": "asia-s9a-084",
+    "set_id": "asia-s9a",
+    "number": "084",
+    "category": "pokemon",
+    "name": {
+      "ja": "ガブリアスV"
+    },
+    "pokemon": [
+      "ガブリアスV"
+    ],
+    "illustrator": "Taira Akitsu",
+    "rarity": "unknown",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 200,
+    "types": [
+      "dragon"
+    ],
+    "stage": "basic",
+    "rule_box": "V",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ドラゴンクロー"
+        },
+        "cost": [
+          "water",
+          "fighting",
+          "normal"
+        ],
+        "damage": "120",
+        "text": {}
+      },
+      {
+        "name": {
+          "ja": "ソニックストライク"
+        },
+        "cost": [
+          "water",
+          "fighting",
+          "fighting",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "このポケモンについているエネルギーを3個トラッシュし、相手のポケモン1匹に、220ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+        }
+      }
+    ],
+    "retreat_cost": 0
+  },
+  {
+    "id": "asia-s9a-085",
+    "set_id": "asia-s9a",
+    "number": "085",
+    "category": "pokemon",
+    "name": {
+      "ja": "ヒスイ バクフーンVSTAR"
+    },
+    "pokemon": [
+      "ヒスイ バクフーンVSTAR"
+    ],
+    "illustrator": "5ban Graphics",
+    "rarity": "unknown",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 260,
+    "types": [
+      "psychic"
+    ],
+    "stage": "vmax",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ホロウフレイム"
+        },
+        "cost": [
+          "psychic",
+          "psychic",
+          "normal"
+        ],
+        "damage": "180",
+        "text": {
+          "ja": "ダメカン3個を、相手のベンチポケモンに好きなようにのせる。"
+        }
+      },
+      {
+        "name": {
+          "ja": "カゲロウスター"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "相手のバトルポケモンにのっているダメカンが4個なら、そのポケモンをきぜつさせる。［対戦中、自分はVSTARパワーを1回しか使えない。］"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "－30"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-s9a-086",
+    "set_id": "asia-s9a",
+    "number": "086",
+    "category": "pokemon",
+    "name": {
+      "ja": "ヒスイ ジュナイパーVSTAR"
+    },
+    "pokemon": [
+      "ヒスイ ジュナイパーVSTAR"
+    ],
+    "illustrator": "5ban Graphics",
+    "rarity": "unknown",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 270,
+    "types": [
+      "fighting"
+    ],
+    "stage": "vmax",
+    "attacks": [
+      {
+        "name": {
+          "ja": "サマーソルトフェザー"
+        },
+        "cost": [
+          "fighting",
+          "normal",
+          "normal"
+        ],
+        "damage": "160＋",
+        "text": {
+          "ja": "のぞむなら、自分の手札からエネルギーを3枚までトラッシュし、その枚数×30ダメージ追加。"
+        }
+      },
+      {
+        "name": {
+          "ja": "特性"
+        },
+        "cost": [],
+        "damage": "",
+        "text": {}
+      },
+      {
+        "name": {
+          "ja": "フウウンスター"
+        },
+        "cost": [],
+        "damage": "",
+        "text": {
+          "ja": "自分の番に使える。自分の手札が8枚になるように、山札を引く。［対戦中、自分はVSTARパワーを1回しか使えない。］"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-s9a-087",
+    "set_id": "asia-s9a",
+    "number": "087",
+    "category": "pokemon",
+    "name": {
+      "ja": "ヒスイ ダイケンキVSTAR"
+    },
+    "pokemon": [
+      "ヒスイ ダイケンキVSTAR"
+    ],
+    "illustrator": "5ban Graphics",
+    "rarity": "unknown",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 270,
+    "types": [
+      "dark"
+    ],
+    "stage": "vmax",
+    "attacks": [
+      {
+        "name": {
+          "ja": "むじひなやいば"
+        },
+        "cost": [
+          "dark",
+          "dark"
+        ],
+        "damage": "110＋",
+        "text": {
+          "ja": "相手のバトルポケモンにダメカンがのっているなら、110ダメージ追加。"
+        }
+      },
+      {
+        "name": {
+          "ja": "特性"
+        },
+        "cost": [],
+        "damage": "",
+        "text": {}
+      },
+      {
+        "name": {
+          "ja": "ザンゲツスター"
+        },
+        "cost": [],
+        "damage": "",
+        "text": {
+          "ja": "自分の番に使える。相手のポケモン1匹に、ダメカンを4個のせる。［対戦中、自分はVSTARパワーを1回しか使えない。］"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-s9a-088",
+    "set_id": "asia-s9a",
+    "number": "088",
+    "category": "trainer",
+    "name": {
+      "ja": "シマボシ"
+    },
+    "pokemon": [],
+    "illustrator": "nagimiso",
+    "rarity": "unknown",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "ja": "コインを2回投げ、オモテの数ぶんまで、自分のトラッシュから好きなカードを選び、相手に見せて、好きな順番に入れ替えて、山札の上にもどす。"
+    }
+  },
+  {
+    "id": "asia-s9a-089",
+    "set_id": "asia-s9a",
+    "number": "089",
+    "category": "trainer",
+    "name": {
+      "ja": "ツツジ"
+    },
+    "pokemon": [],
+    "illustrator": "Sanosuke Sakuma",
+    "rarity": "unknown",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "ja": "このカードは、相手のサイドの残り枚数が3枚以下のときにしか使えない。\n\nおたがいのプレイヤーは、それぞれ手札をすべて山札にもどして切る。その後、自分は6枚、相手は2枚、山札を引く。"
+    }
+  },
+  {
+    "id": "asia-s9a-090",
+    "set_id": "asia-s9a",
+    "number": "090",
+    "category": "trainer",
+    "name": {
+      "ja": "デンボク"
+    },
+    "pokemon": [],
+    "illustrator": "Hitoshi Ariga",
+    "rarity": "unknown",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "ja": "自分の手札を1枚選び、残りの手札をすべてトラッシュする。その後、山札を4枚引く。（自分の手札がこのカード1枚だけなら、このカードは使えない。）"
+    }
+  },
+  {
+    "id": "asia-s9a-091",
+    "set_id": "asia-s9a",
+    "number": "091",
+    "category": "pokemon",
+    "name": {
+      "ja": "ヒスイ ダイケンキVSTAR"
+    },
+    "pokemon": [
+      "ヒスイ ダイケンキVSTAR"
+    ],
+    "illustrator": "5ban Graphics",
+    "rarity": "unknown",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 270,
+    "types": [
+      "dark"
+    ],
+    "stage": "vmax",
+    "attacks": [
+      {
+        "name": {
+          "ja": "むじひなやいば"
+        },
+        "cost": [
+          "dark",
+          "dark"
+        ],
+        "damage": "110＋",
+        "text": {
+          "ja": "相手のバトルポケモンにダメカンがのっているなら、110ダメージ追加。"
+        }
+      },
+      {
+        "name": {
+          "ja": "特性"
+        },
+        "cost": [],
+        "damage": "",
+        "text": {}
+      },
+      {
+        "name": {
+          "ja": "ザンゲツスター"
+        },
+        "cost": [],
+        "damage": "",
+        "text": {
+          "ja": "自分の番に使える。相手のポケモン1匹に、ダメカンを4個のせる。［対戦中、自分はVSTARパワーを1回しか使えない。］"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-s9a-092",
+    "set_id": "asia-s9a",
+    "number": "092",
+    "category": "trainer",
+    "name": {
+      "ja": "こだわりベルト"
+    },
+    "pokemon": [],
+    "illustrator": "Studio Bora Inc.",
+    "rarity": "unknown",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "trainer_type": "tool",
+    "rules_text": {
+      "ja": "ポケモンのどうぐは、自分のポケモンにつけて使う。ポケモン1匹につき1枚だけつけられ、つけたままにする。"
+    }
+  },
+  {
+    "id": "asia-s9a-093",
+    "set_id": "asia-s9a",
+    "number": "093",
+    "category": "trainer",
+    "name": {
+      "ja": "コトブキムラ"
+    },
+    "pokemon": [],
+    "illustrator": "Oswaldo KATO",
+    "rarity": "unknown",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "id": "",
+          "ja": "",
+          "ko": "",
+          "th": "",
+          "zh-TW": ""
+        }
+      }
+    ],
+    "trainer_type": "stadium",
+    "rules_text": {
+      "ja": "おたがいのプレイヤーは、自分の番ごとに1回、自分の手札をすべて山札にもどして切ってよい。その場合、自分の山札を5枚引く。この効果を使ったなら、自分の番は終わる。"
+    }
+  }
+]

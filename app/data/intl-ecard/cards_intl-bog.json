@@ -1,0 +1,533 @@
+[
+  {
+    "id": "intl-bog-1",
+    "set_id": "intl-bog",
+    "number": "1",
+    "category": "pokemon",
+    "name": {
+      "en": "Electabuzz"
+    },
+    "pokemon": [
+      "Electabuzz"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "reverse_holo",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Thundershock"
+        },
+        "cost": [
+          "lightning"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+        }
+      },
+      {
+        "name": {
+          "en": "Thunderpunch"
+        },
+        "cost": [
+          "lightning",
+          "normal"
+        ],
+        "damage": "30+",
+        "text": {
+          "en": "Flip a coin. If heads, this attack does 30 damage plus 10 more damage; if tails, the attack does 30 damage and Electabuzz does 10 damage to itself."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-bog-2",
+    "set_id": "intl-bog",
+    "number": "2",
+    "category": "pokemon",
+    "name": {
+      "en": "Hitmonchan"
+    },
+    "pokemon": [
+      "Hitmonchan"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "reverse_holo",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Jab"
+        },
+        "cost": [
+          "fighting"
+        ],
+        "damage": "20",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Special Punch"
+        },
+        "cost": [
+          "fighting",
+          "fighting",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-bog-3",
+    "set_id": "intl-bog",
+    "number": "3",
+    "category": "trainer",
+    "name": {
+      "en": "Professor Elm"
+    },
+    "pokemon": [],
+    "illustrator": "Ken Sugimori",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "reverse_holo",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Shuffle your hand into your deck. Then, draw 7 cards. You can’t play any more Trainer cards this turn."
+    }
+  },
+  {
+    "id": "intl-bog-4",
+    "set_id": "intl-bog",
+    "number": "4",
+    "category": "pokemon",
+    "name": {
+      "en": "Rocket’s Scizor"
+    },
+    "pokemon": [
+      "Rocket’s Scizor"
+    ],
+    "illustrator": "K. Hoshiba",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Focus"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "During your next turn, Rocket’s Scizor’s Agility attack’s damage is doubled."
+        }
+      },
+      {
+        "name": {
+          "en": "Agility"
+        },
+        "cost": [
+          "metal",
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip a coin. If heads, during your opponent’s next turn, prevent all effects of attacks, including damage, done to Rocket’s Scizor."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "grass",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-bog-5",
+    "set_id": "intl-bog",
+    "number": "5",
+    "category": "pokemon",
+    "name": {
+      "en": "Rocket’s Sneasel"
+    },
+    "pokemon": [
+      "Rocket’s Sneasel"
+    ],
+    "illustrator": "Katsura Tabata",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Entrap"
+        },
+        "cost": [
+          "dark"
+        ],
+        "damage": "",
+        "text": {
+          "en": "The Defending Pokémon can’t retreat during your opponent’s next turn."
+        }
+      },
+      {
+        "name": {
+          "en": "Continuous Scratch"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "10×",
+        "text": {
+          "en": "Flip 4 coins. This attack does 10 damage times the number of heads."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-bog-6",
+    "set_id": "intl-bog",
+    "number": "6",
+    "category": "pokemon",
+    "name": {
+      "en": "Dark Ivysaur"
+    },
+    "pokemon": [
+      "Dark Ivysaur"
+    ],
+    "illustrator": "Shin-ichi Yoshida",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "en": "Fury Strikes"
+        },
+        "cost": [
+          "grass",
+          "grass"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Your opponent puts 3 markers onto his or her Pokémon (divided as he or she chooses). (More than 1 marker can be put on the same Pokémon.) Then, this attack does 10 damage to each Pokémon for each marker on it. Don’t apply Weakness and Resistance. Remove the markers at the end of the turn."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-bog-7",
+    "set_id": "intl-bog",
+    "number": "7",
+    "category": "pokemon",
+    "name": {
+      "en": "Dark Venusaur"
+    },
+    "pokemon": [
+      "Dark Venusaur"
+    ],
+    "illustrator": "Shin-ichi Yoshida",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": ""
+        }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "stage": "stage2",
+    "attacks": [
+      {
+        "name": {
+          "en": "Horrid Pollen"
+        },
+        "cost": [
+          "grass",
+          "grass",
+          "grass"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Flip 2 coins. If 1 is heads, the Defending Pokémon is now Asleep and Poisoned. If both are heads, the Defending Pokémon is now Confused and Poisoned. If both are tails, the Defending Pokémon is now Paralyzed and Poisoned."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-bog-8",
+    "set_id": "intl-bog",
+    "number": "8",
+    "category": "pokemon",
+    "name": {
+      "en": "Rocket’s Mewtwo"
+    },
+    "pokemon": [
+      "Rocket’s Mewtwo"
+    ],
+    "illustrator": "Shin-ichi Yoshida",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Juxtapose"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, switch the number of damage counters on Rocket’s Mewtwo with the number of damage counters on the Defending Pokémon (even if it would Knock Out either Pokémon). (It’s okay if 1 of the Pokémon has no damage counters on it.)"
+        }
+      },
+      {
+        "name": {
+          "en": "Hypnoblast"
+        },
+        "cost": [
+          "psychic",
+          "psychic"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Asleep."
+        }
+      },
+      {
+        "name": {
+          "en": "Psyburn"
+        },
+        "cost": [
+          "psychic",
+          "psychic",
+          "psychic",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-bog-9",
+    "set_id": "intl-bog",
+    "number": "9",
+    "category": "pokemon",
+    "name": {
+      "en": "Rocket’s Hitmonchan"
+    },
+    "pokemon": [
+      "Rocket’s Hitmonchan"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "stamped",
+        "images": {
+          "en": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Crosscounter"
+        },
+        "cost": [
+          "fighting"
+        ],
+        "damage": "",
+        "text": {
+          "en": "If an attack does damage to Rocket’s Hitmonchan during your opponent’s next turn (even if Rocket’s Hitmonchan is Knocked Out), flip a coin. If heads, Rocket’s Hitmonchan attacks your opponent’s Active Pokémon for double that amount of damage. (If Rocket’s Hitmonchan takes 20 damage, it does 40 damage to that Pokémon.)"
+        }
+      },
+      {
+        "name": {
+          "en": "Magnum Punch"
+        },
+        "cost": [
+          "fighting",
+          "fighting",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  }
+]

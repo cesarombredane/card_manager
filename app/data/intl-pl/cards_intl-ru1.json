@@ -1,0 +1,909 @@
+[
+  {
+    "id": "intl-ru1-1",
+    "set_id": "intl-ru1",
+    "number": "1",
+    "category": "pokemon",
+    "name": {
+      "en": "Venusaur"
+    },
+    "pokemon": [
+      "Venusaur"
+    ],
+    "illustrator": "undefined",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "es": ""
+        }
+      }
+    ],
+    "hp": 140,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Ivysaur"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Giga Drain"
+        },
+        "cost": [
+          "grass",
+          "grass",
+          "normal",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "en": "Remove from Venusaur the number of damage counters equal to the damage you did to the Defending Pokémon."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 4
+  },
+  {
+    "id": "intl-ru1-10",
+    "set_id": "intl-ru1",
+    "number": "10",
+    "category": "pokemon",
+    "name": {
+      "en": "Mew"
+    },
+    "pokemon": [
+      "Mew"
+    ],
+    "illustrator": "undefined",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "es": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Cut"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Will-o'-the-Wisp"
+        },
+        "cost": [
+          "psychic",
+          "normal",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ]
+  },
+  {
+    "id": "intl-ru1-11",
+    "set_id": "intl-ru1",
+    "number": "11",
+    "category": "pokemon",
+    "name": {
+      "en": "Diglett"
+    },
+    "pokemon": [
+      "Diglett"
+    ],
+    "illustrator": "undefined",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "es": ""
+        }
+      }
+    ],
+    "hp": 30,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Dig"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "lightning",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-ru1-12",
+    "set_id": "intl-ru1",
+    "number": "12",
+    "category": "pokemon",
+    "name": {
+      "en": "Lucario"
+    },
+    "pokemon": [
+      "Lucario"
+    ],
+    "illustrator": "undefined",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "es": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Riolu"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Metal Claw"
+        },
+        "cost": [
+          "fighting",
+          "normal",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Pulse Blast"
+        },
+        "cost": [
+          "fighting",
+          "metal",
+          "normal",
+          "normal"
+        ],
+        "damage": "80",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-ru1-13",
+    "set_id": "intl-ru1",
+    "number": "13",
+    "category": "pokemon",
+    "name": {
+      "en": "Skuntank"
+    },
+    "pokemon": [
+      "Skuntank"
+    ],
+    "illustrator": "undefined",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "es": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "dark"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Stunky"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Rage"
+        },
+        "cost": [
+          "dark",
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Does 20 damage plus 10 more damage for each damage counter on Skuntank."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-ru1-14",
+    "set_id": "intl-ru1",
+    "number": "14",
+    "category": "pokemon",
+    "name": {
+      "en": "Bastiodon"
+    },
+    "pokemon": [
+      "Bastiodon"
+    ],
+    "illustrator": "undefined",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "es": ""
+        }
+      }
+    ],
+    "hp": 120,
+    "types": [
+      "metal"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Shieldon"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Strength"
+        },
+        "cost": [
+          "metal",
+          "normal",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 4
+  },
+  {
+    "id": "intl-ru1-15",
+    "set_id": "intl-ru1",
+    "number": "15",
+    "category": "pokemon",
+    "name": {
+      "en": "Rattata"
+    },
+    "pokemon": [
+      "Rattata"
+    ],
+    "illustrator": "undefined",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "es": ""
+        }
+      }
+    ],
+    "hp": 30,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Bite"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-ru1-16",
+    "set_id": "intl-ru1",
+    "number": "16",
+    "category": "pokemon",
+    "name": {
+      "en": "Bibarel"
+    },
+    "pokemon": [
+      "Bibarel"
+    ],
+    "illustrator": "undefined",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "es": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "normal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Bidoof"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Rollout"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-ru1-2",
+    "set_id": "intl-ru1",
+    "number": "2",
+    "category": "pokemon",
+    "name": {
+      "en": "Cherrim"
+    },
+    "pokemon": [
+      "Cherrim"
+    ],
+    "illustrator": "undefined",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "es": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Cherubi"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Solarbeam"
+        },
+        "cost": [
+          "grass",
+          "normal",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "water",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-ru1-3",
+    "set_id": "intl-ru1",
+    "number": "3",
+    "category": "pokemon",
+    "name": {
+      "en": "Ninetales"
+    },
+    "pokemon": [
+      "Ninetales"
+    ],
+    "illustrator": "undefined",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "es": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "fire"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Vulpix"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Flame Tail"
+        },
+        "cost": [
+          "fire",
+          "normal",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-ru1-4",
+    "set_id": "intl-ru1",
+    "number": "4",
+    "category": "pokemon",
+    "name": {
+      "en": "Heatran"
+    },
+    "pokemon": [
+      "Heatran"
+    ],
+    "illustrator": "undefined",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "es": ""
+        }
+      }
+    ],
+    "hp": 110,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Heat Boiler"
+        },
+        "cost": [
+          "fire",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {
+          "en": "If the Defending Pokémon is a Water Pokémon, this attack does 60 damage plus 40 more damage."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 4
+  },
+  {
+    "id": "intl-ru1-5",
+    "set_id": "intl-ru1",
+    "number": "5",
+    "category": "pokemon",
+    "name": {
+      "en": "Starmie"
+    },
+    "pokemon": [
+      "Starmie"
+    ],
+    "illustrator": "undefined",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "es": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "water"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Staryu"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Spiral Drain"
+        },
+        "cost": [
+          "water",
+          "normal",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "en": "Remove 1 damage counter from Starmie."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-ru1-6",
+    "set_id": "intl-ru1",
+    "number": "6",
+    "category": "pokemon",
+    "name": {
+      "en": "Gyarados"
+    },
+    "pokemon": [
+      "Gyarados"
+    ],
+    "illustrator": "undefined",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "es": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "water"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Magikarp"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Thrash Tackle"
+        },
+        "cost": [
+          "water",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "80",
+        "text": {
+          "en": "Gyarados does 20 damage to itself."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-ru1-7",
+    "set_id": "intl-ru1",
+    "number": "7",
+    "category": "pokemon",
+    "name": {
+      "en": "Pikachu"
+    },
+    "pokemon": [
+      "Pikachu"
+    ],
+    "illustrator": "undefined",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "es": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Volt Tackle"
+        },
+        "cost": [
+          "lightning",
+          "normal",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {
+          "en": "Pikachu does 10 damage to itself."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "metal",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-ru1-8",
+    "set_id": "intl-ru1",
+    "number": "8",
+    "category": "pokemon",
+    "name": {
+      "en": "Zapdos"
+    },
+    "pokemon": [
+      "Zapdos"
+    ],
+    "illustrator": "undefined",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "es": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Drill Peck"
+        },
+        "cost": [
+          "lightning",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "70",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-ru1-9",
+    "set_id": "intl-ru1",
+    "number": "9",
+    "category": "pokemon",
+    "name": {
+      "en": "Mewtwo"
+    },
+    "pokemon": [
+      "Mewtwo"
+    ],
+    "illustrator": "undefined",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "es": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Super Psy Bolt"
+        },
+        "cost": [
+          "psychic",
+          "psychic",
+          "normal"
+        ],
+        "damage": "70",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  }
+]

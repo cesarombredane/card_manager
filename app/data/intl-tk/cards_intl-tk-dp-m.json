@@ -1,0 +1,658 @@
+[
+  {
+    "id": "intl-tk-dp-m-1",
+    "set_id": "intl-tk-dp-m",
+    "number": "1",
+    "category": "pokemon",
+    "name": {
+      "en": "Buizel",
+      "fr": "Mustébouée"
+    },
+    "pokemon": [
+      "Buizel"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Splash About",
+          "fr": "Grosse trempette"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "10+",
+        "text": {
+          "en": "If Buizel has less Energy attached to it than the Defending Pokémon, this attack does 10 damage plus 10 more damage.",
+          "fr": "Si Mustébouée possède moins d'Énergies que le Pokémon Défenseur, cette attaque inflige 10 dégâts plus 10 dégâts supplémentaires."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "10+"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-tk-dp-m-10",
+    "set_id": "intl-tk-dp-m",
+    "number": "10",
+    "category": "trainer",
+    "name": {
+      "en": "Energy Search",
+      "fr": "Recherche d'énergie"
+    },
+    "pokemon": [],
+    "illustrator": "Kai Ishikawa",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Search your deck for a basic Energy card, show it to your opponent, and put it into your hand. Shuffle your deck afterward.",
+      "fr": "Choisissez dans votre deck une carte Énergie de base, montrez-la à votre adversaire et placez-la dans votre main. Ensuite, mélangez votre deck."
+    }
+  },
+  {
+    "id": "intl-tk-dp-m-11",
+    "set_id": "intl-tk-dp-m",
+    "number": "11",
+    "category": "trainer",
+    "name": {
+      "en": "Potion",
+      "fr": "Potion"
+    },
+    "pokemon": [],
+    "illustrator": "Shin-ichi Yoshikawa",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Remove 2 damage counters from 1 of your Pokémon (remove 1 damage counter if that Pokémon has only 1).",
+      "fr": "Soignez 30 dégâts à 1 de vos Pokémon."
+    }
+  },
+  {
+    "id": "intl-tk-dp-m-12",
+    "set_id": "intl-tk-dp-m",
+    "number": "12",
+    "category": "energy",
+    "name": {
+      "en": "Water Energy",
+      "fr": "Énergie Eau"
+    },
+    "pokemon": [],
+    "illustrator": "",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "stage": "basic"
+  },
+  {
+    "id": "intl-tk-dp-m-2",
+    "set_id": "intl-tk-dp-m",
+    "number": "2",
+    "category": "pokemon",
+    "name": {
+      "en": "Floatzel",
+      "fr": "Mustéflott"
+    },
+    "pokemon": [
+      "Floatzel"
+    ],
+    "illustrator": "Masahiko Ishii",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "water"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Buizel",
+      "fr": "Mustébouée"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Screw Tail",
+          "fr": "Queue cloutée"
+        },
+        "cost": [
+          "water",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Flip a coin. If heads, discard an Energy attached to the Defending Pokémon.",
+          "fr": "Lancez une pièce. Si c'est face, défaussez une Énergie attachée au Pokémon Défenseur."
+        }
+      },
+      {
+        "name": {
+          "en": "Water Gun",
+          "fr": "Pistolet à O"
+        },
+        "cost": [
+          "water",
+          "water"
+        ],
+        "damage": "40",
+        "text": {
+          "en": "Does 40 damage plus 20 more damage for each Water Energy attached to Floatzel but not used to pay for this attack's Energy cost. You can't add more than 40 damage in this way.",
+          "fr": "Inflige 40 dégâts plus 20 dégâts supplémentaires pour chaque Énergie  attachée à Mustéflott qui n'a pas été utilisée pour payer le Coût en Énergie de cette attaque. Vous ne pouvez pas ajouter plus de 40 dégâts de cette façon."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "20+"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-tk-dp-m-3",
+    "set_id": "intl-tk-dp-m",
+    "number": "3",
+    "category": "pokemon",
+    "name": {
+      "en": "Goldeen",
+      "fr": "Poissirène"
+    },
+    "pokemon": [
+      "Goldeen"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Horn Attack",
+          "fr": "Koud'korne"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Take Down",
+          "fr": "Bélier"
+        },
+        "cost": [
+          "water",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Goldeen does 10 damage to itself.",
+          "fr": "Poissirène s'inflige 10 dégâts."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "10+"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-tk-dp-m-4",
+    "set_id": "intl-tk-dp-m",
+    "number": "4",
+    "category": "pokemon",
+    "name": {
+      "en": "Manaphy",
+      "fr": "Manaphy"
+    },
+    "pokemon": [
+      "Manaphy"
+    ],
+    "illustrator": "Daisuke Ito",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Call for Family",
+          "fr": "Appel à la famille"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Search your deck for a Basic Pokémon and put it onto your Bench. Shuffle your deck afterward.",
+          "fr": "Choisissez dans votre deck un Pokémon de Base et placez-le sur votre Banc. Ensuite, mélangez votre deck."
+        }
+      },
+      {
+        "name": {
+          "en": "Aqua Ring",
+          "fr": "Anneau Hydro"
+        },
+        "cost": [
+          "water",
+          "water"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Switch Manaphy with 1 of your Benched Pokémon.",
+          "fr": "Échangez Manaphy avec 1 des Pokémon de votre Banc."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "20+"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-tk-dp-m-5",
+    "set_id": "intl-tk-dp-m",
+    "number": "5",
+    "category": "pokemon",
+    "name": {
+      "en": "Piplup",
+      "fr": "Tiplouf"
+    },
+    "pokemon": [
+      "Piplup"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Peck",
+          "fr": "Picpic"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Water Splash",
+          "fr": "Éclaboussure"
+        },
+        "cost": [
+          "water",
+          "normal"
+        ],
+        "damage": "20+",
+        "text": {
+          "en": "Flip a coin. If heads, this attack does 20 more damage plus 10 more damage.",
+          "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 20 dégâts plus 10 dégâts supplémentaires."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "10+"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-tk-dp-m-6",
+    "set_id": "intl-tk-dp-m",
+    "number": "6",
+    "category": "pokemon",
+    "name": {
+      "en": "Prinplup",
+      "fr": "Prinplouf"
+    },
+    "pokemon": [
+      "Prinplup"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "water"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Piplup",
+      "fr": "Tiplouf"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Aqua Shower",
+          "fr": "Aqua-douche"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Does 10 damage to each of your opponent's Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "fr": "Inflige 10 dégâts à chacun des Pokémon de votre adversaire. (Vous ne pouvez pas appliquer la Faiblesse et la Résistance aux Pokémon de Banc.)"
+        }
+      },
+      {
+        "name": {
+          "en": "Brine",
+          "fr": "Saumure"
+        },
+        "cost": [
+          "water",
+          "water"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Choose 1 of your opponent's Pokémon that has any damage counters on it. This attack does 40 damage to that Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "fr": "Choisissez 1 des Pokémon de votre adversaire possédant des marqueurs de dégât. Cette attaque lui inflige 40 dégâts. (Vous ne pouvez pas appliquer la Faiblesse et la Résistance aux Pokémon de Banc.)"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "20+"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-tk-dp-m-7",
+    "set_id": "intl-tk-dp-m",
+    "number": "7",
+    "category": "pokemon",
+    "name": {
+      "en": "Seaking",
+      "fr": "Poissoroy"
+    },
+    "pokemon": [
+      "Seaking"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "water"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Goldeen",
+      "fr": "Poissirène"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Flail",
+          "fr": "Fléau"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "10x",
+        "text": {
+          "en": "Does 10 damage times the number of damage counters on Seaking.",
+          "fr": "Inflige 10 dégâts multipliés par le nombre de marqueurs de dégât sur Poissoroy."
+        }
+      },
+      {
+        "name": {
+          "en": "Horn Drill",
+          "fr": "Empal'korne"
+        },
+        "cost": [
+          "water",
+          "water"
+        ],
+        "damage": "50",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "20+"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-tk-dp-m-8",
+    "set_id": "intl-tk-dp-m",
+    "number": "8",
+    "category": "pokemon",
+    "name": {
+      "en": "Totodile",
+      "fr": "Kaiminus"
+    },
+    "pokemon": [
+      "Totodile"
+    ],
+    "illustrator": "Kouki Saitou",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Bite",
+          "fr": "Morsure"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Shining Fang",
+          "fr": "Croc luisant"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "10+",
+        "text": {
+          "en": "If the Defending Pokémon already has any damage counters on it, this attack does 10 damage plus 10 more damage.",
+          "fr": "Si le Pokémon Défenseur possède déjà des marqueurs de dégât, cette attaque inflige 10 dégâts plus 10 dégâts supplémentaires."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "10+"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-tk-dp-m-9",
+    "set_id": "intl-tk-dp-m",
+    "number": "9",
+    "category": "trainer",
+    "name": {
+      "en": "Dusk Ball",
+      "fr": "Sombre Ball"
+    },
+    "pokemon": [],
+    "illustrator": "Ryo Ueda",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "en": "Look at the 7 cards from the bottom of your deck. Choose 1 Pokémon you find there, show it to your opponent, and put it into your hand. Put the remaining cards back on top of your deck. Shuffle your deck afterward.",
+      "fr": "Regardez les 7 cartes du dessous de votre deck. Choisissez-y 1 Pokémon, montrez-le à votre adversaire et placez-le dans votre main. Replacez les autres cartes au dessus de votre deck. Ensuite, mélangez votre deck."
+    }
+  }
+]

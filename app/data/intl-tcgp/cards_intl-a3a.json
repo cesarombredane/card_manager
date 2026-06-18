@@ -1,0 +1,5430 @@
+[
+  {
+    "id": "intl-a3a-001",
+    "set_id": "intl-a3a",
+    "number": "001",
+    "category": "pokemon",
+    "name": {
+      "en": "Petilil",
+      "fr": "Chlorobule"
+    },
+    "pokemon": [
+      "Petilil"
+    ],
+    "illustrator": "sui",
+    "rarity": "one_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Seed Bomb",
+          "fr": "Canon Graine"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-002",
+    "set_id": "intl-a3a",
+    "number": "002",
+    "category": "pokemon",
+    "name": {
+      "en": "Lilligant",
+      "fr": "Fragilady"
+    },
+    "pokemon": [
+      "Lilligant"
+    ],
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "one_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 110,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Petilil"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Cut",
+          "fr": "Coupe"
+        },
+        "cost": [
+          "grass",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-a3a-003",
+    "set_id": "intl-a3a",
+    "number": "003",
+    "category": "pokemon",
+    "name": {
+      "en": "Rowlet",
+      "fr": "Brindibou"
+    },
+    "pokemon": [
+      "Rowlet"
+    ],
+    "illustrator": "Masakazu Fukuda",
+    "rarity": "one_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Fury Attack",
+          "fr": "Furie"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip 3 coins. This attack does 10 damage for each heads.",
+          "fr": "Lancez 3 pièces. Cette attaque inflige 10 dégâts pour chaque côté face."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-004",
+    "set_id": "intl-a3a",
+    "number": "004",
+    "category": "pokemon",
+    "name": {
+      "en": "Dartrix",
+      "fr": "Efflèche"
+    },
+    "pokemon": [
+      "Dartrix"
+    ],
+    "illustrator": "AKIRA EGAWA",
+    "rarity": "two_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Rowlet"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Skill Dive",
+          "fr": "Plongeon Contrôlé"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "",
+        "text": {
+          "en": "This attack does 20 damage to 1 of your opponent's Pokémon.",
+          "fr": "Cette attaque inflige 20 dégâts à l'un des Pokémon de votre adversaire."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-005",
+    "set_id": "intl-a3a",
+    "number": "005",
+    "category": "pokemon",
+    "name": {
+      "en": "Decidueye",
+      "fr": "Archéduc"
+    },
+    "pokemon": [
+      "Decidueye"
+    ],
+    "illustrator": "Souichirou Gunjima",
+    "rarity": "three_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Dartrix"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Sniping Arrow",
+          "fr": "Flèche de Précision"
+        },
+        "cost": [
+          "grass",
+          "grass"
+        ],
+        "damage": "",
+        "text": {
+          "en": "This attack does 70 damage to 1 of your opponent's Pokémon.",
+          "fr": "Cette attaque inflige 70 dégâts à l'un des Pokémon de votre adversaire."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-a3a-006",
+    "set_id": "intl-a3a",
+    "number": "006",
+    "category": "pokemon",
+    "name": {
+      "en": "Buzzwole ex",
+      "fr": "Mouscoto-ex"
+    },
+    "pokemon": [
+      "Buzzwole ex"
+    ],
+    "illustrator": "PLANETA Mochizuki",
+    "rarity": "four_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 140,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "en": "Punch",
+          "fr": "Koud'Poing"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Big Beat",
+          "fr": "Breakbeat"
+        },
+        "cost": [
+          "grass",
+          "grass",
+          "normal"
+        ],
+        "damage": "120",
+        "text": {
+          "en": "During your next turn, this Pokémon can't use Big Beat.",
+          "fr": "Pendant votre prochain tour, ce Pokémon ne peut pas utiliser Breakbeat."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-a3a-007",
+    "set_id": "intl-a3a",
+    "number": "007",
+    "category": "pokemon",
+    "name": {
+      "en": "Pheromosa",
+      "fr": "Cancrelove"
+    },
+    "pokemon": [
+      "Pheromosa"
+    ],
+    "illustrator": "Shin Nagasawa",
+    "rarity": "two_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Jump Blues",
+          "fr": "Jump Blues"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "This attack also does 20 damage to 1 of your opponent's Benched Pokémon.",
+          "fr": "Cette attaque inflige aussi 20 dégâts à un des Pokémon de Banc de votre adversaire."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-008",
+    "set_id": "intl-a3a",
+    "number": "008",
+    "category": "pokemon",
+    "name": {
+      "en": "Kartana",
+      "fr": "Katagami"
+    },
+    "pokemon": [
+      "Kartana"
+    ],
+    "illustrator": "nagimiso",
+    "rarity": "one_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Thrash Metal",
+          "fr": "Trash Metal"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "40",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-009",
+    "set_id": "intl-a3a",
+    "number": "009",
+    "category": "pokemon",
+    "name": {
+      "en": "Blacephalon",
+      "fr": "Pierroteknik"
+    },
+    "pokemon": [
+      "Blacephalon"
+    ],
+    "illustrator": "Anesaki Dynamic",
+    "rarity": "two_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Beat Punk",
+          "fr": "Punk Pop"
+        },
+        "cost": [
+          "fire",
+          "fire",
+          "normal"
+        ],
+        "damage": "130",
+        "text": {
+          "en": "This Pokémon also does 70 damage to itself.",
+          "fr": "Ce Pokémon s'inflige aussi 70 dégâts."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-a3a-010",
+    "set_id": "intl-a3a",
+    "number": "010",
+    "category": "pokemon",
+    "name": {
+      "en": "Mantine",
+      "fr": "Démanta"
+    },
+    "pokemon": [
+      "Mantine"
+    ],
+    "illustrator": "Sanosuke Sakuma",
+    "rarity": "one_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Surf",
+          "fr": "Surf"
+        },
+        "cost": [
+          "water",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-a3a-011",
+    "set_id": "intl-a3a",
+    "number": "011",
+    "category": "pokemon",
+    "name": {
+      "en": "Carvanha",
+      "fr": "Carvanha"
+    },
+    "pokemon": [
+      "Carvanha"
+    ],
+    "illustrator": "Hideki Ishikawa",
+    "rarity": "one_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Bite",
+          "fr": "Morsure"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-012",
+    "set_id": "intl-a3a",
+    "number": "012",
+    "category": "pokemon",
+    "name": {
+      "en": "Sharpedo",
+      "fr": "Sharpedo"
+    },
+    "pokemon": [
+      "Sharpedo"
+    ],
+    "illustrator": "Yumi",
+    "rarity": "two_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "water"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Carvanha"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Crunch",
+          "fr": "Mâchouille"
+        },
+        "cost": [
+          "water",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "en": "Flip a coin. If heads, discard a random Energy from your opponent's Active Pokémon.",
+          "fr": "Lancez une pièce. Si c'est face, défaussez au hasard une Énergie du Pokémon Actif de votre adversaire."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-013",
+    "set_id": "intl-a3a",
+    "number": "013",
+    "category": "pokemon",
+    "name": {
+      "en": "Shinx",
+      "fr": "Lixy"
+    },
+    "pokemon": [
+      "Shinx"
+    ],
+    "illustrator": "Sanosuke Sakuma",
+    "rarity": "one_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Bite",
+          "fr": "Morsure"
+        },
+        "cost": [
+          "lightning"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-014",
+    "set_id": "intl-a3a",
+    "number": "014",
+    "category": "pokemon",
+    "name": {
+      "en": "Luxio",
+      "fr": "Luxio"
+    },
+    "pokemon": [
+      "Luxio"
+    ],
+    "illustrator": "Kouki Saitou",
+    "rarity": "one_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "lightning"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Shinx"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Head Bolt",
+          "fr": "Éclair Frontal"
+        },
+        "cost": [
+          "lightning",
+          "lightning"
+        ],
+        "damage": "50",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-015",
+    "set_id": "intl-a3a",
+    "number": "015",
+    "category": "pokemon",
+    "name": {
+      "en": "Luxray",
+      "fr": "Luxray"
+    },
+    "pokemon": [
+      "Luxray"
+    ],
+    "illustrator": "Masakazu Fukuda",
+    "rarity": "three_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "lightning"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Luxio"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Electric Ball",
+          "fr": "Boule de Foudre"
+        },
+        "cost": [
+          "lightning",
+          "lightning",
+          "normal"
+        ],
+        "damage": "90",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-016",
+    "set_id": "intl-a3a",
+    "number": "016",
+    "category": "pokemon",
+    "name": {
+      "en": "Blitzle",
+      "fr": "Zébibron"
+    },
+    "pokemon": [
+      "Blitzle"
+    ],
+    "illustrator": "Miki Tanaka",
+    "rarity": "one_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Rear Kick",
+          "fr": "Ruade"
+        },
+        "cost": [
+          "lightning",
+          "lightning"
+        ],
+        "damage": "40",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-017",
+    "set_id": "intl-a3a",
+    "number": "017",
+    "category": "pokemon",
+    "name": {
+      "en": "Zebstrika",
+      "fr": "Zéblitz"
+    },
+    "pokemon": [
+      "Zebstrika"
+    ],
+    "illustrator": "Hajime Kusajima",
+    "rarity": "one_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "lightning"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Blitzle"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Head Bolt",
+          "fr": "Éclair Frontal"
+        },
+        "cost": [
+          "lightning",
+          "lightning"
+        ],
+        "damage": "70",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-018",
+    "set_id": "intl-a3a",
+    "number": "018",
+    "category": "pokemon",
+    "name": {
+      "en": "Emolga",
+      "fr": "Emolga"
+    },
+    "pokemon": [
+      "Emolga"
+    ],
+    "illustrator": "Naoki Saito",
+    "rarity": "one_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Static Shock",
+          "fr": "Choc Statique"
+        },
+        "cost": [
+          "lightning"
+        ],
+        "damage": "30",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-019",
+    "set_id": "intl-a3a",
+    "number": "019",
+    "category": "pokemon",
+    "name": {
+      "en": "Tapu Koko ex",
+      "fr": "Tokorico-ex"
+    },
+    "pokemon": [
+      "Tapu Koko ex"
+    ],
+    "illustrator": "PLANETA Igarashi",
+    "rarity": "four_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "en": "Plasma Hurricane",
+          "fr": "Ouragan Plasma"
+        },
+        "cost": [
+          "lightning"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Take a {L} Energy from your Energy Zone and attach it to this Pokémon.",
+          "fr": "Prenez une Énergie {L} de votre zone Énergie et attachez-la à ce Pokémon."
+        }
+      },
+      {
+        "name": {
+          "en": "Mach Bolt",
+          "fr": "Éclair Fulgurant"
+        },
+        "cost": [
+          "lightning",
+          "lightning",
+          "normal"
+        ],
+        "damage": "90",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-020",
+    "set_id": "intl-a3a",
+    "number": "020",
+    "category": "pokemon",
+    "name": {
+      "en": "Xurkitree",
+      "fr": "Câblifère"
+    },
+    "pokemon": [
+      "Xurkitree"
+    ],
+    "illustrator": "Satoshi Shirai",
+    "rarity": "two_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Electronica",
+          "fr": "Electronica"
+        },
+        "cost": [
+          "lightning",
+          "normal",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {
+          "en": "Your opponent's Active Pokémon is now Confused.",
+          "fr": "Le Pokémon Actif de votre adversaire est maintenant Confus."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-a3a-021",
+    "set_id": "intl-a3a",
+    "number": "021",
+    "category": "pokemon",
+    "name": {
+      "en": "Zeraora",
+      "fr": "Zeraora"
+    },
+    "pokemon": [
+      "Zeraora"
+    ],
+    "illustrator": "kawayoo",
+    "rarity": "three_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Lightning Claw",
+          "fr": "Griffe Éclair"
+        },
+        "cost": [
+          "lightning",
+          "lightning"
+        ],
+        "damage": "50",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-022",
+    "set_id": "intl-a3a",
+    "number": "022",
+    "category": "pokemon",
+    "name": {
+      "en": "Clefairy",
+      "fr": "Mélofée"
+    },
+    "pokemon": [
+      "Clefairy"
+    ],
+    "illustrator": "Sumiyoshi Kizuki",
+    "rarity": "one_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Pound",
+          "fr": "Écras'Face"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-023",
+    "set_id": "intl-a3a",
+    "number": "023",
+    "category": "pokemon",
+    "name": {
+      "en": "Clefable",
+      "fr": "Mélodelfe"
+    },
+    "pokemon": [
+      "Clefable"
+    ],
+    "illustrator": "miki kudo",
+    "rarity": "two_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Clefairy"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Moon Kick",
+          "fr": "Coup d'Pied Lunaire"
+        },
+        "cost": [
+          "psychic",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-024",
+    "set_id": "intl-a3a",
+    "number": "024",
+    "category": "pokemon",
+    "name": {
+      "en": "Phantump",
+      "fr": "Brocélôme"
+    },
+    "pokemon": [
+      "Phantump"
+    ],
+    "illustrator": "sui",
+    "rarity": "one_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Spooky Shot",
+          "fr": "Tir Effrayant"
+        },
+        "cost": [
+          "psychic",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-a3a-025",
+    "set_id": "intl-a3a",
+    "number": "025",
+    "category": "pokemon",
+    "name": {
+      "en": "Trevenant",
+      "fr": "Desséliande"
+    },
+    "pokemon": [
+      "Trevenant"
+    ],
+    "illustrator": "Kouki Saitou",
+    "rarity": "one_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 120,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Phantump"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Wrack Down",
+          "fr": "Réduire en Poussière"
+        },
+        "cost": [
+          "psychic",
+          "normal",
+          "normal"
+        ],
+        "damage": "70",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-a3a-026",
+    "set_id": "intl-a3a",
+    "number": "026",
+    "category": "pokemon",
+    "name": {
+      "en": "Morelull",
+      "fr": "Spododo"
+    },
+    "pokemon": [
+      "Morelull"
+    ],
+    "illustrator": "Midori Harada",
+    "rarity": "one_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Hook",
+          "fr": "Crochet"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-027",
+    "set_id": "intl-a3a",
+    "number": "027",
+    "category": "pokemon",
+    "name": {
+      "en": "Shiinotic",
+      "fr": "Lampignon"
+    },
+    "pokemon": [
+      "Shiinotic"
+    ],
+    "illustrator": "kawayoo",
+    "rarity": "three_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Morelull"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Gentle Slap",
+          "fr": "Gifle Douce"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-a3a-028",
+    "set_id": "intl-a3a",
+    "number": "028",
+    "category": "pokemon",
+    "name": {
+      "en": "Meditite",
+      "fr": "Méditikka"
+    },
+    "pokemon": [
+      "Meditite"
+    ],
+    "illustrator": "Yukiko Baba",
+    "rarity": "one_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Trip Over",
+          "fr": "Croche-Pied"
+        },
+        "cost": [
+          "fighting"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip a coin. If heads, this attack does 20 more damage.",
+          "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 20 dégâts de plus."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-029",
+    "set_id": "intl-a3a",
+    "number": "029",
+    "category": "pokemon",
+    "name": {
+      "en": "Medicham",
+      "fr": "Charmina"
+    },
+    "pokemon": [
+      "Medicham"
+    ],
+    "illustrator": "Misa Tsutsui",
+    "rarity": "two_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Meditite"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "High Jump Kick",
+          "fr": "Pied Voltige"
+        },
+        "cost": [
+          "fighting"
+        ],
+        "damage": "50",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-a3a-030",
+    "set_id": "intl-a3a",
+    "number": "030",
+    "category": "pokemon",
+    "name": {
+      "en": "Baltoy",
+      "fr": "Balbuto"
+    },
+    "pokemon": [
+      "Baltoy"
+    ],
+    "illustrator": "Uta",
+    "rarity": "one_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Spinning Attack",
+          "fr": "Attaque Tournante"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-031",
+    "set_id": "intl-a3a",
+    "number": "031",
+    "category": "pokemon",
+    "name": {
+      "en": "Claydol",
+      "fr": "Kaorine"
+    },
+    "pokemon": [
+      "Claydol"
+    ],
+    "illustrator": "Satoshi Shirai",
+    "rarity": "two_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Baltoy"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Power Beam",
+          "fr": "Puissant Rayon"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-a3a-032",
+    "set_id": "intl-a3a",
+    "number": "032",
+    "category": "pokemon",
+    "name": {
+      "en": "Rockruff",
+      "fr": "Rocabot"
+    },
+    "pokemon": [
+      "Rockruff"
+    ],
+    "illustrator": "match",
+    "rarity": "one_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Rock Throw",
+          "fr": "Jet-Pierres"
+        },
+        "cost": [
+          "fighting",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-033",
+    "set_id": "intl-a3a",
+    "number": "033",
+    "category": "pokemon",
+    "name": {
+      "en": "Lycanroc ex",
+      "fr": "Lougaroc-ex"
+    },
+    "pokemon": [
+      "Lycanroc ex"
+    ],
+    "illustrator": "PLANETA CG Works",
+    "rarity": "four_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 150,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Rockruff"
+    },
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "en": "Lycanfang",
+          "fr": "Lougacroc"
+        },
+        "cost": [
+          "fighting",
+          "fighting",
+          "normal"
+        ],
+        "damage": "130",
+        "text": {
+          "en": "Discard a {F} Energy from this Pokémon.",
+          "fr": "Défaussez une Énergie {F} de ce Pokémon."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-a3a-034",
+    "set_id": "intl-a3a",
+    "number": "034",
+    "category": "pokemon",
+    "name": {
+      "en": "Passimian",
+      "fr": "Quartermac"
+    },
+    "pokemon": [
+      "Passimian"
+    ],
+    "illustrator": "Naoki Saito",
+    "rarity": "one_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Let's Throw",
+          "fr": "Lancez Groupé"
+        },
+        "cost": [
+          "fighting",
+          "fighting"
+        ],
+        "damage": "40",
+        "text": {
+          "en": "If Passimian is on your Bench, this attack does 40 more damage.",
+          "fr": "Si Quartermac est sur votre Banc, cette attaque inflige 40 dégâts supplémentaires."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-035",
+    "set_id": "intl-a3a",
+    "number": "035",
+    "category": "pokemon",
+    "name": {
+      "en": "Sandygast",
+      "fr": "Bacabouh"
+    },
+    "pokemon": [
+      "Sandygast"
+    ],
+    "illustrator": "Yuka Morii",
+    "rarity": "one_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Sandy Shot",
+          "fr": "Tir Sableux"
+        },
+        "cost": [
+          "fighting",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-a3a-036",
+    "set_id": "intl-a3a",
+    "number": "036",
+    "category": "pokemon",
+    "name": {
+      "en": "Palossand",
+      "fr": "Trépassable"
+    },
+    "pokemon": [
+      "Palossand"
+    ],
+    "illustrator": "Hasuno",
+    "rarity": "two_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Sandygast"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Sand Tomb",
+          "fr": "Tourbi-Sable"
+        },
+        "cost": [
+          "fighting",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "90",
+        "text": {
+          "en": "During your opponent's next turn, the Defending Pokémon can't retreat.",
+          "fr": "Pendant le prochain tour de votre adversaire, le Pokémon Défenseur ne peut pas battre en retraite."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-a3a-037",
+    "set_id": "intl-a3a",
+    "number": "037",
+    "category": "pokemon",
+    "name": {
+      "en": "Alolan Meowth",
+      "fr": "Miaouss d'Alola"
+    },
+    "pokemon": [
+      "Alolan Meowth"
+    ],
+    "illustrator": "Sekio",
+    "rarity": "one_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "dark"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Meddle",
+          "fr": "Intrusion"
+        },
+        "cost": [
+          "dark"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Discard a random Pokémon Tool card from your opponent's hand.",
+          "fr": "Défaussez au hasard une carte Outil Pokémon de la main de votre adversaire."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-038",
+    "set_id": "intl-a3a",
+    "number": "038",
+    "category": "pokemon",
+    "name": {
+      "en": "Alolan Persian",
+      "fr": "Persian d'Alola"
+    },
+    "pokemon": [
+      "Alolan Persian"
+    ],
+    "illustrator": "ryoma uratsuka",
+    "rarity": "two_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "dark"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Alolan Meowth"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Fake Out",
+          "fr": "Bluff"
+        },
+        "cost": [
+          "dark",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "en": "Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed.",
+          "fr": "Lancez une pièce. Si c'est face, le Pokémon Actif de votre adversaire est maintenant Paralysé."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-039",
+    "set_id": "intl-a3a",
+    "number": "039",
+    "category": "pokemon",
+    "name": {
+      "en": "Sandile",
+      "fr": "Mascaïman"
+    },
+    "pokemon": [
+      "Sandile"
+    ],
+    "illustrator": "Naoyo Kimura",
+    "rarity": "one_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "dark"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Bite",
+          "fr": "Morsure"
+        },
+        "cost": [
+          "dark"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-a3a-040",
+    "set_id": "intl-a3a",
+    "number": "040",
+    "category": "pokemon",
+    "name": {
+      "en": "Krokorok",
+      "fr": "Escroco"
+    },
+    "pokemon": [
+      "Krokorok"
+    ],
+    "illustrator": "Akira Komayama",
+    "rarity": "one_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "dark"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Sandile"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Light Punch",
+          "fr": "Poing Léger"
+        },
+        "cost": [
+          "dark",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-a3a-041",
+    "set_id": "intl-a3a",
+    "number": "041",
+    "category": "pokemon",
+    "name": {
+      "en": "Krookodile",
+      "fr": "Crocorible"
+    },
+    "pokemon": [
+      "Krookodile"
+    ],
+    "illustrator": "Naoki Saito",
+    "rarity": "two_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 140,
+    "types": [
+      "dark"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Krokorok"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Poaching Fangs",
+          "fr": "Crocs Extirpants"
+        },
+        "cost": [
+          "dark",
+          "dark",
+          "normal"
+        ],
+        "damage": "90",
+        "text": {
+          "en": "Flip 3 coins. For each heads, a card is chosen at random from your opponent's hand. Your opponent reveals that card and shuffles it into their deck.",
+          "fr": "Lancez 3 pièces. Pour chaque côté face, une carte est choisie au hasard dans la main de votre adversaire. Votre adversaire montre la carte choisie et la mélange avec son deck."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-a3a-042",
+    "set_id": "intl-a3a",
+    "number": "042",
+    "category": "pokemon",
+    "name": {
+      "en": "Nihilego",
+      "fr": "Zéroïd"
+    },
+    "pokemon": [
+      "Nihilego"
+    ],
+    "illustrator": "nagimiso",
+    "rarity": "three_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "dark"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "New Wave",
+          "fr": "New Wave"
+        },
+        "cost": [
+          "dark",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Your opponent's Active Pokémon is now Poisoned.",
+          "fr": "Le Pokémon Actif de votre adversaire est maintenant Empoisonné."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-043",
+    "set_id": "intl-a3a",
+    "number": "043",
+    "category": "pokemon",
+    "name": {
+      "en": "Guzzlord ex",
+      "fr": "Engloutyran-ex"
+    },
+    "pokemon": [
+      "Guzzlord ex"
+    ],
+    "illustrator": "PLANETA Yamashita",
+    "rarity": "four_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 170,
+    "types": [
+      "dark"
+    ],
+    "stage": "basic",
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "en": "Grindcore",
+          "fr": "Grindcore"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Flip a coin until you get tails. For each heads, discard a random Energy from your opponent's Active Pokémon.",
+          "fr": "Lancez une pièce jusqu'à ce que vous obteniez pile. Pour chaque côté face, défaussez au hasard une Énergie du Pokémon Actif de votre adversaire."
+        }
+      },
+      {
+        "name": {
+          "en": "Tyrannical Hole",
+          "fr": "Trou Tyrannique"
+        },
+        "cost": [
+          "dark",
+          "dark",
+          "dark",
+          "normal"
+        ],
+        "damage": "120",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 4
+  },
+  {
+    "id": "intl-a3a-044",
+    "set_id": "intl-a3a",
+    "number": "044",
+    "category": "pokemon",
+    "name": {
+      "en": "Poipole",
+      "fr": "Vémini"
+    },
+    "pokemon": [
+      "Poipole"
+    ],
+    "illustrator": "Shin Nagasawa",
+    "rarity": "one_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "dark"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "2-Step",
+          "fr": "Two-Step"
+        },
+        "cost": [
+          "dark"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip 2 coins. This attack does 20 damage for each heads.",
+          "fr": "Lancez 2 pièces. Cette attaque inflige 20 dégâts pour chaque côté face."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-045",
+    "set_id": "intl-a3a",
+    "number": "045",
+    "category": "pokemon",
+    "name": {
+      "en": "Naganadel",
+      "fr": "Mandrillon"
+    },
+    "pokemon": [
+      "Naganadel"
+    ],
+    "illustrator": "Shin Nagasawa",
+    "rarity": "three_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "dark"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Poipole"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Electro House",
+          "fr": "Acid House"
+        },
+        "cost": [
+          "dark"
+        ],
+        "damage": "40",
+        "text": {
+          "en": "Your opponent's Active Pokémon is now Poisoned.",
+          "fr": "Le Pokémon Actif de votre adversaire est maintenant Empoisonné."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-a3a-046",
+    "set_id": "intl-a3a",
+    "number": "046",
+    "category": "pokemon",
+    "name": {
+      "en": "Alolan Diglett",
+      "fr": "Taupiqueur d'Alola"
+    },
+    "pokemon": [
+      "Alolan Diglett"
+    ],
+    "illustrator": "Megumi Mizutani",
+    "rarity": "one_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "metal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Happened to Headbutt",
+          "fr": "Coup d'Boule Surprise"
+        },
+        "cost": [
+          "metal"
+        ],
+        "damage": "40",
+        "text": {
+          "en": "Flip a coin. If tails, this attack does nothing.",
+          "fr": "Lancez une pièce. Si c'est pile, cette attaque ne fait rien."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-047",
+    "set_id": "intl-a3a",
+    "number": "047",
+    "category": "pokemon",
+    "name": {
+      "en": "Alolan Dugtrio ex",
+      "fr": "Triopikeur d'Alola-ex"
+    },
+    "pokemon": [
+      "Alolan Dugtrio ex"
+    ],
+    "illustrator": "PLANETA CG Works",
+    "rarity": "four_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "metal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Alolan Diglett"
+    },
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "en": "Triplet Headbutt",
+          "fr": "Triple Coup d'Boule"
+        },
+        "cost": [
+          "metal",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {
+          "en": "Flip 3 coins. This attack does 60 damage for each heads.",
+          "fr": "Lancez 3 pièces. Cette attaque inflige 60 dégâts pour chaque côté face."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-048",
+    "set_id": "intl-a3a",
+    "number": "048",
+    "category": "pokemon",
+    "name": {
+      "en": "Aron",
+      "fr": "Galekid"
+    },
+    "pokemon": [
+      "Aron"
+    ],
+    "illustrator": "Shigenori Negishi",
+    "rarity": "one_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "metal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Headbutt",
+          "fr": "Coup d'Boule"
+        },
+        "cost": [
+          "metal",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-a3a-049",
+    "set_id": "intl-a3a",
+    "number": "049",
+    "category": "pokemon",
+    "name": {
+      "en": "Lairon",
+      "fr": "Galegon"
+    },
+    "pokemon": [
+      "Lairon"
+    ],
+    "illustrator": "Mizue",
+    "rarity": "one_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "metal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Aron"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Lunge Out",
+          "fr": "Allonger"
+        },
+        "cost": [
+          "metal",
+          "metal",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-a3a-050",
+    "set_id": "intl-a3a",
+    "number": "050",
+    "category": "pokemon",
+    "name": {
+      "en": "Aggron",
+      "fr": "Galeking"
+    },
+    "pokemon": [
+      "Aggron"
+    ],
+    "illustrator": "Satoshi Shirai",
+    "rarity": "two_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 160,
+    "types": [
+      "metal"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Lairon"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Giga Impact",
+          "fr": "Giga Impact"
+        },
+        "cost": [
+          "metal",
+          "metal",
+          "normal",
+          "normal"
+        ],
+        "damage": "150",
+        "text": {
+          "en": "During your next turn, this Pokémon can't attack.",
+          "fr": "Pendant votre prochain tour, ce Pokémon ne peut pas attaquer."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 4
+  },
+  {
+    "id": "intl-a3a-051",
+    "set_id": "intl-a3a",
+    "number": "051",
+    "category": "pokemon",
+    "name": {
+      "en": "Ferroseed",
+      "fr": "Grindur"
+    },
+    "pokemon": [
+      "Ferroseed"
+    ],
+    "illustrator": "Midori Harada",
+    "rarity": "one_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "metal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Spike Sting",
+          "fr": "Pic Piquant"
+        },
+        "cost": [
+          "metal",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-a3a-052",
+    "set_id": "intl-a3a",
+    "number": "052",
+    "category": "pokemon",
+    "name": {
+      "en": "Ferrothorn",
+      "fr": "Noacier"
+    },
+    "pokemon": [
+      "Ferrothorn"
+    ],
+    "illustrator": "Masakazu Fukuda",
+    "rarity": "two_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 110,
+    "types": [
+      "metal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Ferroseed"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Spinning Attack",
+          "fr": "Attaque Tournante"
+        },
+        "cost": [
+          "metal",
+          "metal",
+          "normal"
+        ],
+        "damage": "70",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-a3a-053",
+    "set_id": "intl-a3a",
+    "number": "053",
+    "category": "pokemon",
+    "name": {
+      "en": "Stakataka",
+      "fr": "Ama-Ama"
+    },
+    "pokemon": [
+      "Stakataka"
+    ],
+    "illustrator": "Anesaki Dynamic",
+    "rarity": "two_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 110,
+    "types": [
+      "metal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Brass Rock",
+          "fr": "Brass Rock"
+        },
+        "cost": [
+          "metal",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {
+          "en": "During your opponent's next turn, this Pokémon takes −20 damage from attacks.",
+          "fr": "Pendant le prochain tour de votre adversaire, ce Pokémon subit – 20 dégâts provenant des attaques."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-a3a-054",
+    "set_id": "intl-a3a",
+    "number": "054",
+    "category": "pokemon",
+    "name": {
+      "en": "Lillipup",
+      "fr": "Ponchiot"
+    },
+    "pokemon": [
+      "Lillipup"
+    ],
+    "illustrator": "Mizue",
+    "rarity": "one_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Tackle",
+          "fr": "Charge"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-055",
+    "set_id": "intl-a3a",
+    "number": "055",
+    "category": "pokemon",
+    "name": {
+      "en": "Herdier",
+      "fr": "Ponchien"
+    },
+    "pokemon": [
+      "Herdier"
+    ],
+    "illustrator": "Midori Harada",
+    "rarity": "one_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "normal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Lillipup"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Bite",
+          "fr": "Morsure"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-056",
+    "set_id": "intl-a3a",
+    "number": "056",
+    "category": "pokemon",
+    "name": {
+      "en": "Stoutland",
+      "fr": "Mastouffe"
+    },
+    "pokemon": [
+      "Stoutland"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "two_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 140,
+    "types": [
+      "normal"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Herdier"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Sharp Fang",
+          "fr": "Croc Aiguisé"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "70",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-a3a-057",
+    "set_id": "intl-a3a",
+    "number": "057",
+    "category": "pokemon",
+    "name": {
+      "en": "Stufful",
+      "fr": "Nounourson"
+    },
+    "pokemon": [
+      "Stufful"
+    ],
+    "illustrator": "Sekio",
+    "rarity": "one_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Ram",
+          "fr": "Collision"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-a3a-058",
+    "set_id": "intl-a3a",
+    "number": "058",
+    "category": "pokemon",
+    "name": {
+      "en": "Bewear",
+      "fr": "Chelours"
+    },
+    "pokemon": [
+      "Bewear"
+    ],
+    "illustrator": "Ryuta Fuse",
+    "rarity": "two_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 120,
+    "types": [
+      "normal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Stufful"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Superpowered Hug",
+          "fr": "Câlin Surpuissant"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip 2 coins. If both of them are heads, your opponent's Active Pokémon is Knocked Out.",
+          "fr": "Lancez 2 pièces. Si les deux tombent sur face, le Pokémon Actif de votre adversaire est mis K.O."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-a3a-059",
+    "set_id": "intl-a3a",
+    "number": "059",
+    "category": "pokemon",
+    "name": {
+      "en": "Oranguru",
+      "fr": "Gouroutan"
+    },
+    "pokemon": [
+      "Oranguru"
+    ],
+    "illustrator": "Kouki Saitou",
+    "rarity": "one_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Hammer In",
+          "fr": "Enfoncement"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "70",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-a3a-060",
+    "set_id": "intl-a3a",
+    "number": "060",
+    "category": "pokemon",
+    "name": {
+      "en": "Type: Null",
+      "fr": "Type:0"
+    },
+    "pokemon": [
+      "Type: Null"
+    ],
+    "illustrator": "match",
+    "rarity": "two_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Quick Blow",
+          "fr": "Coup d'Poing Éclair"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip a coin. If heads, this attack does 20 more damage.",
+          "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 20 dégâts de plus."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-a3a-061",
+    "set_id": "intl-a3a",
+    "number": "061",
+    "category": "pokemon",
+    "name": {
+      "en": "Silvally",
+      "fr": "Silvallié"
+    },
+    "pokemon": [
+      "Silvally"
+    ],
+    "illustrator": "Eske Yoshinob",
+    "rarity": "three_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 110,
+    "types": [
+      "normal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Type: Null"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Brave Buddies",
+          "fr": "Copains Courageux"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "en": "If you played a Supporter card from your hand during this turn, this attack does 50 more damage.",
+          "fr": "Si vous avez joué une carte Supporter de votre main pendant ce tour, cette attaque inflige 50 dégâts supplémentaires."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-062",
+    "set_id": "intl-a3a",
+    "number": "062",
+    "category": "pokemon",
+    "name": {
+      "en": "Celesteela",
+      "fr": "Bamboiselle"
+    },
+    "pokemon": [
+      "Celesteela"
+    ],
+    "illustrator": "kawayoo",
+    "rarity": "three_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 120,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Moombahton",
+          "fr": "Moombahton"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "100",
+        "text": {
+          "en": "Flip a coin. If tails, this attack does nothing.",
+          "fr": "Lancez une pièce. Si c'est pile, cette attaque ne fait rien."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 4
+  },
+  {
+    "id": "intl-a3a-063",
+    "set_id": "intl-a3a",
+    "number": "063",
+    "category": "trainer",
+    "name": {
+      "en": "Beast Wall",
+      "fr": "Barrière Chimère"
+    },
+    "pokemon": [],
+    "illustrator": "Toyste Beach",
+    "rarity": "two_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "en": "You can use this card only if your opponent hasn't gotten any points.\n\nDuring your opponent's next turn, all of your Ultra Beasts take −20 damage from attacks from your opponent's Pokémon.",
+      "fr": "Vous ne pouvez utiliser cette carte que si votre adversaire n'a gagné aucun point.\n\nPendant le prochain tour de votre adversaire, toutes vos Ultra-Chimères subissent – 20 dégâts provenant des attaques des Pokémon de votre adversaire."
+    }
+  },
+  {
+    "id": "intl-a3a-064",
+    "set_id": "intl-a3a",
+    "number": "064",
+    "category": "trainer",
+    "name": {
+      "en": "Repel",
+      "fr": "Repousse"
+    },
+    "pokemon": [],
+    "illustrator": "Yoshinobu Saito",
+    "rarity": "two_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "en": "Switch out your opponent's Active Basic Pokémon to the Bench. (Your opponent chooses the new Active Pokémon.)",
+      "fr": "Échangez le Pokémon de base Actif de votre adversaire avec un de ses Pokémon de Banc. (Votre adversaire choisit le nouveau Pokémon Actif)"
+    }
+  },
+  {
+    "id": "intl-a3a-065",
+    "set_id": "intl-a3a",
+    "number": "065",
+    "category": "trainer",
+    "name": {
+      "en": "Electrical Cord",
+      "fr": "Câble Électrique"
+    },
+    "pokemon": [],
+    "illustrator": "Toyste Beach",
+    "rarity": "two_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "trainer_type": "tool",
+    "rules_text": {
+      "en": "If the {L} Pokémon this card is attached to is in the Active Spot and is Knocked Out by damage from an attack from your opponent's Pokémon, move 2 {L} Energy from that Pokémon and attach 1 Energy each to 2 of your Benched Pokémon.",
+      "fr": "Si le Pokémon {L} auquel cette carte est attachée est sur le Poste Actif et qu'il est mis K.O. par les dégâts d'une attaque d'un Pokémon de votre adversaire, déplacez 2 Énergies {L} de ce Pokémon et attachez une Énergie à 2 de vos Pokémon de Banc."
+    }
+  },
+  {
+    "id": "intl-a3a-066",
+    "set_id": "intl-a3a",
+    "number": "066",
+    "category": "trainer",
+    "name": {
+      "en": "Beastite",
+      "fr": "Chimérite"
+    },
+    "pokemon": [],
+    "illustrator": "inose yukie",
+    "rarity": "two_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "trainer_type": "tool",
+    "rules_text": {
+      "en": "Attacks used by the Ultra Beast this card is attached to do +10 damage to your opponent's Active Pokémon for each point you have gotten.",
+      "fr": "Les attaques de l'Ultra-Chimère à laquelle cette carte est attachée infligent + 10 dégâts au Pokémon Actif de votre adversaire pour chaque point que vous avez gagné."
+    }
+  },
+  {
+    "id": "intl-a3a-067",
+    "set_id": "intl-a3a",
+    "number": "067",
+    "category": "trainer",
+    "name": {
+      "en": "Gladion",
+      "fr": "Gladio"
+    },
+    "pokemon": [],
+    "illustrator": "hncl",
+    "rarity": "two_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "en": "Put 1 random Type: Null or Silvally from your deck into your hand.",
+      "fr": "Ajoutez une carte au hasard parmi  et  de votre deck à votre main."
+    }
+  },
+  {
+    "id": "intl-a3a-068",
+    "set_id": "intl-a3a",
+    "number": "068",
+    "category": "trainer",
+    "name": {
+      "en": "Looker",
+      "fr": "Beladonis"
+    },
+    "pokemon": [],
+    "illustrator": "Hideki Ishikawa",
+    "rarity": "two_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "en": "Your opponent reveals all of the Supporter cards in their deck.",
+      "fr": "Votre adversaire dévoile toutes ses cartes Supporter contenues dans son deck."
+    }
+  },
+  {
+    "id": "intl-a3a-069",
+    "set_id": "intl-a3a",
+    "number": "069",
+    "category": "trainer",
+    "name": {
+      "en": "Lusamine",
+      "fr": "Elsa-Mina"
+    },
+    "pokemon": [],
+    "illustrator": "Taira Akitsu",
+    "rarity": "two_diamond",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "en": "You can use this card only if your opponent has gotten at least 1 point.\n\nChoose 1 of your Ultra Beasts. Attach 2 random Energy from your discard pile to that Pokémon.",
+      "fr": "Vous ne pouvez utiliser cette carte que si votre adversaire a gagné au moins un point.\n\nChoisissez une de vos Ultra-Chimères. Attachez 2 Énergies au hasard de votre pile de défausse à ce Pokémon."
+    }
+  },
+  {
+    "id": "intl-a3a-070",
+    "set_id": "intl-a3a",
+    "number": "070",
+    "category": "pokemon",
+    "name": {
+      "en": "Rowlet",
+      "fr": "Brindibou"
+    },
+    "pokemon": [
+      "Rowlet"
+    ],
+    "illustrator": "OKACHEKE",
+    "rarity": "one_star",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Fury Attack",
+          "fr": "Furie"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip 3 coins. This attack does 10 damage for each heads.",
+          "fr": "Lancez 3 pièces. Cette attaque inflige 10 dégâts pour chaque côté face."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-071",
+    "set_id": "intl-a3a",
+    "number": "071",
+    "category": "pokemon",
+    "name": {
+      "en": "Pheromosa",
+      "fr": "Cancrelove"
+    },
+    "pokemon": [
+      "Pheromosa"
+    ],
+    "illustrator": "matazo",
+    "rarity": "one_star",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Jump Blues",
+          "fr": "Jump Blues"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "This attack also does 20 damage to 1 of your opponent's Benched Pokémon.",
+          "fr": "Cette attaque inflige aussi 20 dégâts à un des Pokémon de Banc de votre adversaire."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-072",
+    "set_id": "intl-a3a",
+    "number": "072",
+    "category": "pokemon",
+    "name": {
+      "en": "Blacephalon",
+      "fr": "Pierroteknik"
+    },
+    "pokemon": [
+      "Blacephalon"
+    ],
+    "illustrator": "akagi",
+    "rarity": "one_star",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Beat Punk",
+          "fr": "Punk Pop"
+        },
+        "cost": [
+          "fire",
+          "fire",
+          "normal"
+        ],
+        "damage": "130",
+        "text": {
+          "en": "This Pokémon also does 70 damage to itself.",
+          "fr": "Ce Pokémon s'inflige aussi 70 dégâts."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-a3a-073",
+    "set_id": "intl-a3a",
+    "number": "073",
+    "category": "pokemon",
+    "name": {
+      "en": "Alolan Meowth",
+      "fr": "Miaouss d'Alola"
+    },
+    "pokemon": [
+      "Alolan Meowth"
+    ],
+    "illustrator": "Mina Nakai",
+    "rarity": "one_star",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "dark"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Meddle",
+          "fr": "Intrusion"
+        },
+        "cost": [
+          "dark"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Discard a random Pokémon Tool card from your opponent's hand.",
+          "fr": "Défaussez au hasard une carte Outil Pokémon de la main de votre adversaire."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-074",
+    "set_id": "intl-a3a",
+    "number": "074",
+    "category": "pokemon",
+    "name": {
+      "en": "Silvally",
+      "fr": "Silvallié"
+    },
+    "pokemon": [
+      "Silvally"
+    ],
+    "illustrator": "hncl",
+    "rarity": "one_star",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 110,
+    "types": [
+      "normal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Type: Null"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Brave Buddies",
+          "fr": "Copains Courageux"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "en": "If you played a Supporter card from your hand during this turn, this attack does 50 more damage.",
+          "fr": "Si vous avez joué une carte Supporter de votre main pendant ce tour, cette attaque inflige 50 dégâts supplémentaires."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-075",
+    "set_id": "intl-a3a",
+    "number": "075",
+    "category": "pokemon",
+    "name": {
+      "en": "Celesteela",
+      "fr": "Bamboiselle"
+    },
+    "pokemon": [
+      "Celesteela"
+    ],
+    "illustrator": "REND",
+    "rarity": "one_star",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 120,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Moombahton",
+          "fr": "Moombahton"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "100",
+        "text": {
+          "en": "Flip a coin. If tails, this attack does nothing.",
+          "fr": "Lancez une pièce. Si c'est pile, cette attaque ne fait rien."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 4
+  },
+  {
+    "id": "intl-a3a-076",
+    "set_id": "intl-a3a",
+    "number": "076",
+    "category": "pokemon",
+    "name": {
+      "en": "Buzzwole ex",
+      "fr": "Mouscoto-ex"
+    },
+    "pokemon": [
+      "Buzzwole ex"
+    ],
+    "illustrator": "PLANETA Mochizuki",
+    "rarity": "two_star",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 140,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "en": "Punch",
+          "fr": "Koud'Poing"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Big Beat",
+          "fr": "Breakbeat"
+        },
+        "cost": [
+          "grass",
+          "grass",
+          "normal"
+        ],
+        "damage": "120",
+        "text": {
+          "en": "During your next turn, this Pokémon can't use Big Beat.",
+          "fr": "Pendant votre prochain tour, ce Pokémon ne peut pas utiliser Breakbeat."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-a3a-077",
+    "set_id": "intl-a3a",
+    "number": "077",
+    "category": "pokemon",
+    "name": {
+      "en": "Tapu Koko ex",
+      "fr": "Tokorico-ex"
+    },
+    "pokemon": [
+      "Tapu Koko ex"
+    ],
+    "illustrator": "PLANETA Igarashi",
+    "rarity": "two_star",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "en": "Plasma Hurricane",
+          "fr": "Ouragan Plasma"
+        },
+        "cost": [
+          "lightning"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Take a {L} Energy from your Energy Zone and attach it to this Pokémon.",
+          "fr": "Prenez une Énergie {L} de votre zone Énergie et attachez-la à ce Pokémon."
+        }
+      },
+      {
+        "name": {
+          "en": "Mach Bolt",
+          "fr": "Éclair Fulgurant"
+        },
+        "cost": [
+          "lightning",
+          "lightning",
+          "normal"
+        ],
+        "damage": "90",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-078",
+    "set_id": "intl-a3a",
+    "number": "078",
+    "category": "pokemon",
+    "name": {
+      "en": "Lycanroc ex",
+      "fr": "Lougaroc-ex"
+    },
+    "pokemon": [
+      "Lycanroc ex"
+    ],
+    "illustrator": "PLANETA CG Works",
+    "rarity": "two_star",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 150,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Rockruff"
+    },
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "en": "Lycanfang",
+          "fr": "Lougacroc"
+        },
+        "cost": [
+          "fighting",
+          "fighting",
+          "normal"
+        ],
+        "damage": "130",
+        "text": {
+          "en": "Discard a {F} Energy from this Pokémon.",
+          "fr": "Défaussez une Énergie {F} de ce Pokémon."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-a3a-079",
+    "set_id": "intl-a3a",
+    "number": "079",
+    "category": "pokemon",
+    "name": {
+      "en": "Guzzlord ex",
+      "fr": "Engloutyran-ex"
+    },
+    "pokemon": [
+      "Guzzlord ex"
+    ],
+    "illustrator": "PLANETA Yamashita",
+    "rarity": "two_star",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 170,
+    "types": [
+      "dark"
+    ],
+    "stage": "basic",
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "en": "Grindcore",
+          "fr": "Grindcore"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Flip a coin until you get tails. For each heads, discard a random Energy from your opponent's Active Pokémon.",
+          "fr": "Lancez une pièce jusqu'à ce que vous obteniez pile. Pour chaque côté face, défaussez au hasard une Énergie du Pokémon Actif de votre adversaire."
+        }
+      },
+      {
+        "name": {
+          "en": "Tyrannical Hole",
+          "fr": "Trou Tyrannique"
+        },
+        "cost": [
+          "dark",
+          "dark",
+          "dark",
+          "normal"
+        ],
+        "damage": "120",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 4
+  },
+  {
+    "id": "intl-a3a-080",
+    "set_id": "intl-a3a",
+    "number": "080",
+    "category": "pokemon",
+    "name": {
+      "en": "Alolan Dugtrio ex",
+      "fr": "Triopikeur d'Alola-ex"
+    },
+    "pokemon": [
+      "Alolan Dugtrio ex"
+    ],
+    "illustrator": "PLANETA CG Works",
+    "rarity": "two_star",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "metal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Alolan Diglett"
+    },
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "en": "Triplet Headbutt",
+          "fr": "Triple Coup d'Boule"
+        },
+        "cost": [
+          "metal",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {
+          "en": "Flip 3 coins. This attack does 60 damage for each heads.",
+          "fr": "Lancez 3 pièces. Cette attaque inflige 60 dégâts pour chaque côté face."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-081",
+    "set_id": "intl-a3a",
+    "number": "081",
+    "category": "trainer",
+    "name": {
+      "en": "Gladion",
+      "fr": "Gladio"
+    },
+    "pokemon": [],
+    "illustrator": "hncl",
+    "rarity": "two_star",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "en": "Put 1 random Type: Null or Silvally from your deck into your hand.",
+      "fr": "Ajoutez une carte au hasard parmi  et  de votre deck à votre main."
+    }
+  },
+  {
+    "id": "intl-a3a-082",
+    "set_id": "intl-a3a",
+    "number": "082",
+    "category": "trainer",
+    "name": {
+      "en": "Looker",
+      "fr": "Beladonis"
+    },
+    "pokemon": [],
+    "illustrator": "Hideki Ishikawa",
+    "rarity": "two_star",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "en": "Your opponent reveals all of the Supporter cards in their deck.",
+      "fr": "Votre adversaire dévoile toutes ses cartes Supporter contenues dans son deck."
+    }
+  },
+  {
+    "id": "intl-a3a-083",
+    "set_id": "intl-a3a",
+    "number": "083",
+    "category": "trainer",
+    "name": {
+      "en": "Lusamine",
+      "fr": "Elsa-Mina"
+    },
+    "pokemon": [],
+    "illustrator": "Taira Akitsu",
+    "rarity": "two_star",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "en": "You can use this card only if your opponent has gotten at least 1 point.\n\nChoose 1 of your Ultra Beasts. Attach 2 random Energy from your discard pile to that Pokémon.",
+      "fr": "Vous ne pouvez utiliser cette carte que si votre adversaire a gagné au moins un point.\n\nChoisissez une de vos Ultra-Chimères. Attachez 2 Énergies au hasard de votre pile de défausse à ce Pokémon."
+    }
+  },
+  {
+    "id": "intl-a3a-084",
+    "set_id": "intl-a3a",
+    "number": "084",
+    "category": "pokemon",
+    "name": {
+      "en": "Tapu Koko ex",
+      "fr": "Tokorico-ex"
+    },
+    "pokemon": [
+      "Tapu Koko ex"
+    ],
+    "illustrator": "Dsuke",
+    "rarity": "two_star",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "en": "Plasma Hurricane",
+          "fr": "Ouragan Plasma"
+        },
+        "cost": [
+          "lightning"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Take a {L} Energy from your Energy Zone and attach it to this Pokémon.",
+          "fr": "Prenez une Énergie {L} de votre zone Énergie et attachez-la à ce Pokémon."
+        }
+      },
+      {
+        "name": {
+          "en": "Mach Bolt",
+          "fr": "Éclair Fulgurant"
+        },
+        "cost": [
+          "lightning",
+          "lightning",
+          "normal"
+        ],
+        "damage": "90",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-085",
+    "set_id": "intl-a3a",
+    "number": "085",
+    "category": "pokemon",
+    "name": {
+      "en": "Lycanroc ex",
+      "fr": "Lougaroc-ex"
+    },
+    "pokemon": [
+      "Lycanroc ex"
+    ],
+    "illustrator": "Jiro Sasumo",
+    "rarity": "two_star",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 150,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Rockruff"
+    },
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "en": "Lycanfang",
+          "fr": "Lougacroc"
+        },
+        "cost": [
+          "fighting",
+          "fighting",
+          "normal"
+        ],
+        "damage": "130",
+        "text": {
+          "en": "Discard a {F} Energy from this Pokémon.",
+          "fr": "Défaussez une Énergie {F} de ce Pokémon."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-a3a-086",
+    "set_id": "intl-a3a",
+    "number": "086",
+    "category": "pokemon",
+    "name": {
+      "en": "Guzzlord ex",
+      "fr": "Engloutyran-ex"
+    },
+    "pokemon": [
+      "Guzzlord ex"
+    ],
+    "illustrator": "Nurikabe",
+    "rarity": "two_star",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 170,
+    "types": [
+      "dark"
+    ],
+    "stage": "basic",
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "en": "Grindcore",
+          "fr": "Grindcore"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Flip a coin until you get tails. For each heads, discard a random Energy from your opponent's Active Pokémon.",
+          "fr": "Lancez une pièce jusqu'à ce que vous obteniez pile. Pour chaque côté face, défaussez au hasard une Énergie du Pokémon Actif de votre adversaire."
+        }
+      },
+      {
+        "name": {
+          "en": "Tyrannical Hole",
+          "fr": "Trou Tyrannique"
+        },
+        "cost": [
+          "dark",
+          "dark",
+          "dark",
+          "normal"
+        ],
+        "damage": "120",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 4
+  },
+  {
+    "id": "intl-a3a-087",
+    "set_id": "intl-a3a",
+    "number": "087",
+    "category": "pokemon",
+    "name": {
+      "en": "Alolan Dugtrio ex",
+      "fr": "Triopikeur d'Alola-ex"
+    },
+    "pokemon": [
+      "Alolan Dugtrio ex"
+    ],
+    "illustrator": "KEIICHIRO ITO",
+    "rarity": "two_star",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "metal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Alolan Diglett"
+    },
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "en": "Triplet Headbutt",
+          "fr": "Triple Coup d'Boule"
+        },
+        "cost": [
+          "metal",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {
+          "en": "Flip 3 coins. This attack does 60 damage for each heads.",
+          "fr": "Lancez 3 pièces. Cette attaque inflige 60 dégâts pour chaque côté face."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-088",
+    "set_id": "intl-a3a",
+    "number": "088",
+    "category": "pokemon",
+    "name": {
+      "en": "Buzzwole ex",
+      "fr": "Mouscoto-ex"
+    },
+    "pokemon": [
+      "Buzzwole ex"
+    ],
+    "illustrator": "akagi",
+    "rarity": "three_star",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 140,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "en": "Punch",
+          "fr": "Koud'Poing"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Big Beat",
+          "fr": "Breakbeat"
+        },
+        "cost": [
+          "grass",
+          "grass",
+          "normal"
+        ],
+        "damage": "120",
+        "text": {
+          "en": "During your next turn, this Pokémon can't use Big Beat.",
+          "fr": "Pendant votre prochain tour, ce Pokémon ne peut pas utiliser Breakbeat."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-a3a-089",
+    "set_id": "intl-a3a",
+    "number": "089",
+    "category": "pokemon",
+    "name": {
+      "en": "Growlithe",
+      "fr": "Caninos"
+    },
+    "pokemon": [
+      "Growlithe"
+    ],
+    "illustrator": "Saya Tsuruta",
+    "rarity": "one_shiny",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Bite",
+          "fr": "Morsure"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-090",
+    "set_id": "intl-a3a",
+    "number": "090",
+    "category": "pokemon",
+    "name": {
+      "en": "Arcanine",
+      "fr": "Arcanin"
+    },
+    "pokemon": [
+      "Arcanine"
+    ],
+    "illustrator": "Saya Tsuruta",
+    "rarity": "one_shiny",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "fire"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Growlithe"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Heat Tackle",
+          "fr": "Charge Énergétique"
+        },
+        "cost": [
+          "fire",
+          "fire",
+          "normal"
+        ],
+        "damage": "100",
+        "text": {
+          "en": "This Pokémon also does 20 damage to itself.",
+          "fr": "Ce Pokémon s'inflige aussi 20 dégâts."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-a3a-091",
+    "set_id": "intl-a3a",
+    "number": "091",
+    "category": "pokemon",
+    "name": {
+      "en": "Froakie",
+      "fr": "Grenousse"
+    },
+    "pokemon": [
+      "Froakie"
+    ],
+    "illustrator": "Souichirou Gunjima",
+    "rarity": "one_shiny",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Flop",
+          "fr": "Flop"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-092",
+    "set_id": "intl-a3a",
+    "number": "092",
+    "category": "pokemon",
+    "name": {
+      "en": "Frogadier",
+      "fr": "Croâporal"
+    },
+    "pokemon": [
+      "Frogadier"
+    ],
+    "illustrator": "Souichirou Gunjima",
+    "rarity": "one_shiny",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "water"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Froakie"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Water Drip",
+          "fr": "Goutte à Goutte"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-093",
+    "set_id": "intl-a3a",
+    "number": "093",
+    "category": "pokemon",
+    "name": {
+      "en": "Greninja",
+      "fr": "Amphinobi"
+    },
+    "pokemon": [
+      "Greninja"
+    ],
+    "illustrator": "Souichirou Gunjima",
+    "rarity": "one_shiny",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 120,
+    "types": [
+      "water"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Frogadier"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Mist Slash",
+          "fr": "Tranche-Brume"
+        },
+        "cost": [
+          "water",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-094",
+    "set_id": "intl-a3a",
+    "number": "094",
+    "category": "pokemon",
+    "name": {
+      "en": "Jynx",
+      "fr": "Lippoutou"
+    },
+    "pokemon": [
+      "Jynx"
+    ],
+    "illustrator": "MAHOU",
+    "rarity": "one_shiny",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Psychic",
+          "fr": "Psyko"
+        },
+        "cost": [
+          "psychic",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "This attack does 20 more damage for each Energy attached to your opponent's Active Pokémon.",
+          "fr": "Cette attaque inflige 20 dégâts de plus pour chaque Énergie attachée au Pokémon Actif de votre adversaire."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-095",
+    "set_id": "intl-a3a",
+    "number": "095",
+    "category": "pokemon",
+    "name": {
+      "en": "Pidgey",
+      "fr": "Roucool"
+    },
+    "pokemon": [
+      "Pidgey"
+    ],
+    "illustrator": "Misa Tsutsui",
+    "rarity": "one_shiny",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Gust",
+          "fr": "Tornade"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-096",
+    "set_id": "intl-a3a",
+    "number": "096",
+    "category": "pokemon",
+    "name": {
+      "en": "Pidgeotto",
+      "fr": "Roucoups"
+    },
+    "pokemon": [
+      "Pidgeotto"
+    ],
+    "illustrator": "Misa Tsutsui",
+    "rarity": "one_shiny",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "normal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Pidgey"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Gust",
+          "fr": "Tornade"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-097",
+    "set_id": "intl-a3a",
+    "number": "097",
+    "category": "pokemon",
+    "name": {
+      "en": "Pidgeot",
+      "fr": "Roucarnage"
+    },
+    "pokemon": [
+      "Pidgeot"
+    ],
+    "illustrator": "Misa Tsutsui",
+    "rarity": "one_shiny",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "normal"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Pidgeotto"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Wing Attack",
+          "fr": "Cru-Ailes"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "70",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-098",
+    "set_id": "intl-a3a",
+    "number": "098",
+    "category": "pokemon",
+    "name": {
+      "en": "Aerodactyl",
+      "fr": "Ptéra"
+    },
+    "pokemon": [
+      "Aerodactyl"
+    ],
+    "illustrator": "Masakazu Fukuda",
+    "rarity": "one_shiny",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "normal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Old Amber"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Primal Wingbeat",
+          "fr": "Aile Primitive"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, your opponent shuffles their Active Pokémon into their deck.",
+          "fr": "Lancez une pièce. Si c'est face, votre adversaire mélange son Pokémon Actif avec son deck."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-099",
+    "set_id": "intl-a3a",
+    "number": "099",
+    "category": "pokemon",
+    "name": {
+      "en": "Celebi ex",
+      "fr": "Celebi-ex"
+    },
+    "pokemon": [
+      "Celebi ex"
+    ],
+    "illustrator": "PLANETA CG Works",
+    "rarity": "two_shiny",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "en": "Powerful Bloom",
+          "fr": "Éclosion Éclatante"
+        },
+        "cost": [
+          "grass",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "en": "Flip a coin for each Energy attached to this Pokémon. This attack does 50 damage for each heads.",
+          "fr": "Lancez une pièce pour chaque Énergie attachée à ce Pokémon. Cette attaque inflige 50 dégâts pour chaque côté face."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-100",
+    "set_id": "intl-a3a",
+    "number": "100",
+    "category": "pokemon",
+    "name": {
+      "en": "Arcanine ex",
+      "fr": "Arcanin-ex"
+    },
+    "pokemon": [
+      "Arcanine ex"
+    ],
+    "illustrator": "PLANETA Saito",
+    "rarity": "two_shiny",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 150,
+    "types": [
+      "fire"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Growlithe"
+    },
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "en": "Inferno Onrush",
+          "fr": "Torrent d'Enfer"
+        },
+        "cost": [
+          "fire",
+          "fire",
+          "normal"
+        ],
+        "damage": "120",
+        "text": {
+          "en": "This Pokémon also does 20 damage to itself.",
+          "fr": "Ce Pokémon s'inflige aussi 20 dégâts."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-a3a-101",
+    "set_id": "intl-a3a",
+    "number": "101",
+    "category": "pokemon",
+    "name": {
+      "en": "Aerodactyl ex",
+      "fr": "Ptéra-ex"
+    },
+    "pokemon": [
+      "Aerodactyl ex"
+    ],
+    "illustrator": "PLANETA CG Works",
+    "rarity": "two_shiny",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 140,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Old Amber"
+    },
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "en": "Land Crush",
+          "fr": "Écras'Terre"
+        },
+        "cost": [
+          "fighting",
+          "normal"
+        ],
+        "damage": "80",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-102",
+    "set_id": "intl-a3a",
+    "number": "102",
+    "category": "pokemon",
+    "name": {
+      "en": "Pidgeot ex",
+      "fr": "Roucarnage-ex"
+    },
+    "pokemon": [
+      "Pidgeot ex"
+    ],
+    "illustrator": "PLANETA CG Works",
+    "rarity": "two_shiny",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 170,
+    "types": [
+      "normal"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Pidgeotto"
+    },
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "en": "Scattering Cyclone",
+          "fr": "Cyclone Ravageur"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "80",
+        "text": {
+          "en": "This attack does 20 more damage for each of your opponent's Benched Pokémon.",
+          "fr": "Cette attaque inflige 20 dégâts supplémentaires pour chaque Pokémon de Banc de votre adversaire."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-a3a-103",
+    "set_id": "intl-a3a",
+    "number": "103",
+    "category": "pokemon",
+    "name": {
+      "en": "Nihilego",
+      "fr": "Zéroïd"
+    },
+    "pokemon": [
+      "Nihilego"
+    ],
+    "illustrator": "PLANETA Yamashita",
+    "rarity": "crown",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "dark"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "New Wave",
+          "fr": "New Wave"
+        },
+        "cost": [
+          "dark",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "Your opponent's Active Pokémon is now Poisoned.",
+          "fr": "Le Pokémon Actif de votre adversaire est maintenant Empoisonné."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  }
+]

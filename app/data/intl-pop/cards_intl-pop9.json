@@ -1,0 +1,1238 @@
+[
+  {
+    "id": "intl-pop9-1",
+    "set_id": "intl-pop9",
+    "number": "1",
+    "category": "pokemon",
+    "name": {
+      "en": "Garchomp",
+      "fr": "Carchacrok"
+    },
+    "pokemon": [
+      "Garchomp"
+    ],
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "normal"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Gabite",
+      "fr": "Carmache"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Dragon Rage",
+          "fr": "Draco-Rage"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "80",
+        "text": {
+          "en": "Flip 2 coins. If either of them is tails, this attack does nothing.",
+          "fr": "Lancez 2 pièces. Si vous obtenez au moins un côté pile, cette attaque ne fait rien."
+        }
+      },
+      {
+        "name": {
+          "en": "Jet Sword",
+          "fr": "Jet Sword"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "100",
+        "text": {
+          "en": "Discard 2 Energy attached to Garchomp and this attack does 10 damage to each of your opponent’s Benched Pokémon. (Don’t apply Weakness and Resistance for Benched Pokémon.)",
+          "fr": "Défaussez deux Énergies attachées à Carchacrok. Cette attaque inflige 10 dégâts à chacun des Pokémon de Banc de votre adversaire. (N'appliquez ni la Faiblesse ni la Résistance aux Pokémon de Banc.)"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "normal",
+        "value": "+30"
+      }
+    ],
+    "retreat_cost": 0
+  },
+  {
+    "id": "intl-pop9-10",
+    "set_id": "intl-pop9",
+    "number": "10",
+    "category": "pokemon",
+    "name": {
+      "en": "Pachirisu",
+      "fr": "Pachirisu"
+    },
+    "pokemon": [
+      "Pachirisu"
+    ],
+    "illustrator": "Midori Harada",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Thunder Wave",
+          "fr": "Cage-éclair"
+        },
+        "cost": [
+          "lightning"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+          "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Paralysé."
+        }
+      },
+      {
+        "name": {
+          "en": "Poison Berry",
+          "fr": "Gorgée de poison"
+        },
+        "cost": [
+          "lightning",
+          "normal"
+        ],
+        "damage": "20+",
+        "text": {
+          "en": "If you have Croagunk in play, this attack does 20 damage plus 20 more damage and the Defending Pokémon is now Poisoned.",
+          "fr": "Si vous avez un Cradopaud en jeu, cette attaque inflige 20 dégâts plus 20 dégâts supplémentaires et le Pokémon Défenseur est maintenant Empoisonné."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+20"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "metal",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pop9-11",
+    "set_id": "intl-pop9",
+    "number": "11",
+    "category": "pokemon",
+    "name": {
+      "en": "Pichu",
+      "fr": "Pichu"
+    },
+    "pokemon": [
+      "Pichu"
+    ],
+    "illustrator": "Midori Harada",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Find a Friend",
+          "fr": "Trouver un ami"
+        },
+        "cost": [],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, search your deck for a Pokémon, show it to your opponent, and put it into your hand. Shuffle your deck afterward.",
+          "fr": "Lancez une pièce. Si c'est face, choisissez un Pokémon dans votre deck. Montrez-le à votre adversaire et placez-le dans votre main. Ensuite, mélangez votre deck."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+10"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "metal",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pop9-12",
+    "set_id": "intl-pop9",
+    "number": "12",
+    "category": "pokemon",
+    "name": {
+      "en": "Buneary",
+      "fr": "Laporeille"
+    },
+    "pokemon": [
+      "Buneary"
+    ],
+    "illustrator": "Midori Harada",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Dizzy Punch",
+          "fr": "Uppercut"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10×",
+        "text": {
+          "en": "Flip 2 coins. This attack does 10 damage times the number of heads.",
+          "fr": "Lancez 2 pièces. Cette attaque inflige 10 dégâts multipliés par le nombre de faces."
+        }
+      },
+      {
+        "name": {
+          "en": "Defense Curl",
+          "fr": "Boul'Armure"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, prevent all damage done to Buneary by attacks during your opponent’s next turn.",
+          "fr": "Lancez une pièce. Si c'est face, évitez tous les dégâts infligés à Laporeille lors du prochain tour de votre adversaire."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+10"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pop9-13",
+    "set_id": "intl-pop9",
+    "number": "13",
+    "category": "pokemon",
+    "name": {
+      "en": "Chimchar",
+      "fr": "Ouisticram"
+    },
+    "pokemon": [
+      "Chimchar"
+    ],
+    "illustrator": "Midori Harada",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Serial Swipes",
+          "fr": "Grands coups en série"
+        },
+        "cost": [
+          "fire"
+        ],
+        "damage": "10×",
+        "text": {
+          "en": "Flip 4 coins. This attack does 10 damage times the number of heads.",
+          "fr": "Lancez 4 pièces. Cette attaque inflige 10 dégâts multipliés par le nombre de faces."
+        }
+      },
+      {
+        "name": {
+          "en": "Sleepy",
+          "fr": "Somnolent"
+        },
+        "cost": [
+          "fire",
+          "normal",
+          "normal"
+        ],
+        "damage": "40+",
+        "text": {
+          "en": "If you have Piplup in play, this attack does 40 damage plus 20 more damage and the Defending Pokémon is now Asleep.",
+          "fr": "Si vous avez Tiplouf en jeu, cette attaque inflige 40 dégâts plus 20 dégâts supplémentaires et le Pokémon Défenseur est maintenant Endormi."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "+10"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pop9-14",
+    "set_id": "intl-pop9",
+    "number": "14",
+    "category": "pokemon",
+    "name": {
+      "en": "Gible",
+      "fr": "Griknot"
+    },
+    "pokemon": [
+      "Gible"
+    ],
+    "illustrator": "Hiroki Fuchino",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Push Down",
+          "fr": "Enfoncer"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Your opponent switches the Defending Pokémon with 1 of his or her Benched Pokémon.",
+          "fr": "Votre adversaire échange le Pokémon Défenseur avec 1 de ses Pokémon de Banc."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "normal",
+        "value": "+10"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pop9-15",
+    "set_id": "intl-pop9",
+    "number": "15",
+    "category": "pokemon",
+    "name": {
+      "en": "Pikachu",
+      "fr": "Pikachu"
+    },
+    "pokemon": [
+      "Pikachu"
+    ],
+    "illustrator": "Midori Harada",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Growl",
+          "fr": "Rugissement"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "During your opponent’s next turn, any damage done by attacks from the Defending Pokémon is reduced by 20 (before applying Weakness and Resistance).",
+          "fr": "Lors du prochain tour de votre adversaire, tous dégâts infligés par des attaques au Pokémon Défenseur sont réduits de 20 (avant application de la Faiblesse et de la Résistance)."
+        }
+      },
+      {
+        "name": {
+          "en": "Numb",
+          "fr": "Engourdi"
+        },
+        "cost": [
+          "lightning",
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "If Pikachu evolved from Pichu during this turn, the Defending Pokémon is now Paralyzed.",
+          "fr": "Si Pikachu évolue de Pichu lors de ce tour, le Pokémon Défenseur est maintenant Paralysé."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+10"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "metal",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pop9-16",
+    "set_id": "intl-pop9",
+    "number": "16",
+    "category": "pokemon",
+    "name": {
+      "en": "Piplup",
+      "fr": "Tiplouf"
+    },
+    "pokemon": [
+      "Piplup"
+    ],
+    "illustrator": "Midori Harada",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Water Sport",
+          "fr": "Tourniquet"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "10+",
+        "text": {
+          "en": "If Piplup has less Energy attached to it than the Defending Pokémon, this attack does 10 damage plus 10 more damage.",
+          "fr": "Si Tiplouf possède moins d'Énergies que le Pokémon Défenseur, cette attaque inflige 10 dégâts plus 10 dégâts supplémentaires."
+        }
+      },
+      {
+        "name": {
+          "en": "Wavelet",
+          "fr": "Vaguelette"
+        },
+        "cost": [
+          "water",
+          "normal",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {
+          "en": "If you have Buizel in play, this attack does 10 damage to each of your opponent’s Benched Pokémon. (Don’t apply Weakness and Resistance for Benched Pokémon.)",
+          "fr": "Si vous avez Mustébouée en jeu, cette attaque inflige 10 dégâts à chacun des Pokémon de Banc de votre adversaire. (Vous ne pouvez pas appliquer la Faiblesse et la Résistance aux Pokémon de Banc.)"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "+10"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pop9-17",
+    "set_id": "intl-pop9",
+    "number": "17",
+    "category": "pokemon",
+    "name": {
+      "en": "Turtwig",
+      "fr": "Tortipouss"
+    },
+    "pokemon": [
+      "Turtwig"
+    ],
+    "illustrator": "Midori Harada",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Absorb",
+          "fr": "Vol-Vie"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "10",
+        "text": {
+          "en": "Remove 1 damage counter from Turtwig.",
+          "fr": "Retirez un marqueur de dégât à Tortipouss."
+        }
+      },
+      {
+        "name": {
+          "en": "Parboil",
+          "fr": "Parboil"
+        },
+        "cost": [
+          "grass",
+          "normal",
+          "normal"
+        ],
+        "damage": "40+",
+        "text": {
+          "en": "If you have Chimchar in play, this attack does 40 damage plus 20 more damage and the Defending Pokémon is now Burned.",
+          "fr": "Si vous avez Ouisticram en jeu, cette attaque inflige 40 dégâts plus 20 dégâts. Le Pokémon Défenseur est maintenant Brûlé."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "+10"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "water",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-pop9-2",
+    "set_id": "intl-pop9",
+    "number": "2",
+    "category": "pokemon",
+    "name": {
+      "en": "Manaphy",
+      "fr": "Manaphy"
+    },
+    "pokemon": [
+      "Manaphy"
+    ],
+    "illustrator": "Masakazu Fukuda",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Dive",
+          "fr": "Plongée"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Look at the top 7 cards of your deck, choose 1 of them, and put it into your hand. Put the other cards back on top of your deck. Shuffle your deck afterward.",
+          "fr": "Regardez les 7 cartes du dessus de votre deck. Choisissez-en 1 et placez-la dans votre main. Replacez les autres cartes au dessus de votre deck. Ensuite, mélangez votre deck."
+        }
+      },
+      {
+        "name": {
+          "en": "Water Glow",
+          "fr": "Eau scintillante"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Choose 1 of your opponent’s Pokémon. This attack does 20 damage to that Pokémon. (Don’t apply Weakness and Resistance for Benched Pokémon.) Remove from Manaphy the number of damage counters equal to the damage you did to that Pokémon.",
+          "fr": "Choisissez 1 des Pokémon de votre adversaire. Cette attaque lui inflige 20 dégâts. (Vous ne pouvez pas appliquer la Faiblesse et la Résistance aux Pokémon de Banc.) Ensuite, retirez à Manaphy autant de marqueurs de dégât que vous avez infligé de dégâts à ce Pokémon."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pop9-3",
+    "set_id": "intl-pop9",
+    "number": "3",
+    "category": "pokemon",
+    "name": {
+      "en": "Raichu",
+      "fr": "Raichu"
+    },
+    "pokemon": [
+      "Raichu"
+    ],
+    "illustrator": "Midori Harada",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "lightning"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Pikachu",
+      "fr": "Pikachu"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Slam",
+          "fr": "Souplesse"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "30×",
+        "text": {
+          "en": "Flip 2 coins. This attack does 30 damage times the number of heads.",
+          "fr": "Lancez 2 pièces. Cette attaque inflige 30 dégâts multipliés par le nombre de faces."
+        }
+      },
+      {
+        "name": {
+          "en": "High Volt",
+          "fr": "Voltage puissant"
+        },
+        "cost": [
+          "lightning",
+          "lightning",
+          "lightning"
+        ],
+        "damage": "60",
+        "text": {
+          "en": "If Raichu evolved from Pikachu during this turn, this attack’s base damage is 100 instead of 60.",
+          "fr": "Si Raichu évolue d'un Pokémon lors de ce tour, les dégâts de base de cette attaque sont de 100 au lieu de 60."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+20"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "metal",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pop9-4",
+    "set_id": "intl-pop9",
+    "number": "4",
+    "category": "pokemon",
+    "name": {
+      "en": "Regigigas",
+      "fr": "Regigigas"
+    },
+    "pokemon": [
+      "Regigigas"
+    ],
+    "illustrator": "Kent Kanetsuna",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Body Slam",
+          "fr": "Plaquage"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+          "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Paralysé."
+        }
+      },
+      {
+        "name": {
+          "en": "Double Stomp",
+          "fr": "Double écrasement"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "50+",
+        "text": {
+          "en": "Flip 2 coins. This attack does 50 damage plus 20 more damage for each heads.",
+          "fr": "Lancez 2 pièces. Cette attaque inflige 50 dégâts plus 20 dégâts supplémentaires pour chaque face."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 4
+  },
+  {
+    "id": "intl-pop9-5",
+    "set_id": "intl-pop9",
+    "number": "5",
+    "category": "pokemon",
+    "name": {
+      "en": "Rotom",
+      "fr": "Motisma"
+    },
+    "pokemon": [
+      "Rotom"
+    ],
+    "illustrator": "Masakazu Fukuda",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Poltergeist",
+          "fr": "Poltergeist"
+        },
+        "cost": [
+          "psychic",
+          "normal"
+        ],
+        "damage": "30+",
+        "text": {
+          "en": "Look at your opponent’s hand. This attack does 30 damage plus 10 more damage for each Trainer, Supporter, and Stadium card in your opponent’s hand.",
+          "fr": "Regardez la main de votre adversaire. Cette attaque inflige 30 dégâts plus 10 dégâts supplémentaires pour chaque carte Dresseur, Supporter et Stade dans la main de votre adversaire."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "+20"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "normal",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pop9-6",
+    "set_id": "intl-pop9",
+    "number": "6",
+    "category": "pokemon",
+    "name": {
+      "en": "Buizel",
+      "fr": "Buizel"
+    },
+    "pokemon": [
+      "Buizel"
+    ],
+    "illustrator": "Midori Harada",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Whirlpool",
+          "fr": "Siphon"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, discard an Energy attached to the Defending Pokémon.",
+          "fr": "Lancez une pièce. Si c'est face, défaussez une Énergie attachée au Pokémon Défenseur."
+        }
+      },
+      {
+        "name": {
+          "en": "Super Fast",
+          "fr": "« Super Rapide »"
+        },
+        "cost": [
+          "water",
+          "water"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "If you have Pachirisu in play, flip a coin. If heads, prevent all effects of an attack, including damage, done to Buizel during your opponent’s next turn.",
+          "fr": "Si vous avez un Pachirisu en jeu, lancez une pièce. Si c'est face, prévenez tous les effets d'une attaque, dégâts inclus, infligés à Mustébouée lors du prochain tour de votre adversaire."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "+10"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pop9-7",
+    "set_id": "intl-pop9",
+    "number": "7",
+    "category": "pokemon",
+    "name": {
+      "en": "Croagunk",
+      "fr": "Cradopaud"
+    },
+    "pokemon": [
+      "Croagunk"
+    ],
+    "illustrator": "Midori Harada",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Knock Off",
+          "fr": "Sabotage"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, choose 1 card from your opponent’s hand without looking and discard it.",
+          "fr": "Lancez une pièce. Si c'est face, choisissez sans regarder 1 carte de la main de votre adversaire et défaussez-la."
+        }
+      },
+      {
+        "name": {
+          "en": "Nimble",
+          "fr": "Agilité"
+        },
+        "cost": [
+          "psychic",
+          "psychic"
+        ],
+        "damage": "30",
+        "text": {
+          "en": "If you have Turtwig in play, remove from Croagunk the number of damage counters equal to the damage you did to the Defending Pokémon.",
+          "fr": "Si vous avez un Tortipouss en jeu, retirez à Cradopaud autant de marqueurs de dégât que vous avez infligé de dégâts au Pokémon Défenseur."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "+10"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-pop9-8",
+    "set_id": "intl-pop9",
+    "number": "8",
+    "category": "pokemon",
+    "name": {
+      "en": "Gabite",
+      "fr": "Gabite"
+    },
+    "pokemon": [
+      "Gabite"
+    ],
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "normal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Gible",
+      "fr": "Griknot"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Burrow",
+          "fr": "Terrier"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, prevent all damage done to Gabite by attacks during your opponent’s next turn.",
+          "fr": "Lancez une pièce. Si c'est face, prévenez tous les dégâts infligés à Carmache par des attaques lors du prochain tour de votre adversaire."
+        }
+      },
+      {
+        "name": {
+          "en": "Distorted Wave",
+          "fr": "Vague tordue"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {
+          "en": "Before doing damage, remove 2 damage counters from the Defending Pokémon.",
+          "fr": "Avant d'infliger des dégâts, retirez au Pokémon Défenseur 2 marqueurs de dégât."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "normal",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-pop9-9",
+    "set_id": "intl-pop9",
+    "number": "9",
+    "category": "pokemon",
+    "name": {
+      "en": "Lopunny",
+      "fr": "Lockpin"
+    },
+    "pokemon": [
+      "Lopunny"
+    ],
+    "illustrator": "Midori Harada",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "",
+          "fr": "",
+          "it": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "normal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Bastiodon",
+      "fr": "Laporeille"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Jump Kick",
+          "fr": "Pied Saute"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "en": "Does 20 damage to 1 of your opponent’s Benched Pokémon. (Don’t apply Weakness and Resistance for Benched Pokémon.)",
+          "fr": "Inflige 20 dégâts à 1 des Pokémon de Banc de votre adversaire. (Vous ne pouvez pas appliquer la Faiblesse et la Résistance aux Pokémon de Banc.)"
+        }
+      },
+      {
+        "name": {
+          "en": "Jazzed",
+          "fr": "Plein d'entrain"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "en": "If Lopunny evolved from Buneary during this turn, remove all damage counters from Lopunny.",
+          "fr": "Si Lockpin évolue de Laporeille lors de ce tour, retirez à Lockpin tous ses marqueurs de dégât."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "+20"
+      }
+    ],
+    "retreat_cost": 1
+  }
+]

@@ -25,3 +25,11 @@ The app reads JSON files directly from:
 ```text
 app/data
 ```
+
+## Update data based on tcgdex
+
+```sh
+cd scripts
+python3 pull_tcgdex_data.py
+python3 update_card_data.py
+```
