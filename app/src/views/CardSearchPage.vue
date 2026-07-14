@@ -102,6 +102,7 @@
 
   // import utils
   import { getCards, getSetById, getSets } from '../utils/dataManagement';
+  import { localizedValue } from '../utils/localization';
   import type { Card, CardVariant, Set } from '../utils/types';
   import { uniqueValues } from '../utils/arrayUtils';
   import type { AppState } from '../store';
@@ -231,7 +232,7 @@
       id: `${card.id}-${variant.id}`,
       card_id: card.id,
       set_id: card.set_id,
-      set_name: set?.name ?? 'Unknown set',
+      set_name: set ? localizedValue(set.name, selectedLanguageId.value) ?? set.id : 'Unknown set',
       variant_id: variant.id,
       number: card.number,
       display_name: `${cardName}${variantSuffix}`,
@@ -246,11 +247,6 @@
   // Formats enum-like values for display.
   const formatValue = (value: string): string => {
     return value.replaceAll('_', ' ');
-  };
-
-  // Returns a localized field value for the selected language.
-  const localizedValue = (value: Record<string, string | null>, languageId: string): string | null => {
-    return value[languageId] ?? Object.values(value).find((item) => item) ?? null;
   };
 
   // Increases the number of rendered card results.

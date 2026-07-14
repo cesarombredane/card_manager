@@ -444,6 +444,23 @@ def write_json(path: Path, value: Any) -> None:
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
+def validate_generated_sets(output_root: Path) -> None:
+    """Validate the localized set-name contract before publishing generated data."""
+    for sets_path in output_root.glob("*/sets.json"):
+        sets = json.loads(sets_path.read_text(encoding="utf-8"))
+        for set_row in sets:
+            set_id = str(set_row.get("id") or "unknown")
+            names = set_row.get("name")
+            language_ids = set_row.get("language_ids")
+
+            if not isinstance(names, dict) or not any(isinstance(name, str) and name for name in names.values()):
+                raise ValueError(f"Set {set_id} must have at least one localized name")
+            if "local_name" in set_row:
+                raise ValueError(f"Set {set_id} still contains obsolete local_name data")
+            if not isinstance(language_ids, list) or set(names.keys()) != set(language_ids):
+                raise ValueError(f"Set {set_id} name languages must match language_ids")
+
+
 def convert_source_folder(source_root: Path, source_name: str, output_root: Path) -> tuple[list[dict[str, Any]], list[str]]:
     """Convert one TCGdex source folder into per-series app data."""
     source_config = SOURCE_FOLDERS[source_name]
@@ -470,7 +487,10 @@ def convert_source_folder(source_root: Path, source_name: str, output_root: Path
 
             raw_set = parse_typescript_object(set_file)
             set_id = f"{source_config['series_prefix']}-{slugify(str(raw_set.get('id') or set_file.stem))}"
-            language_ids = sorted(normalize_localized_text(raw_set.get("name")).keys())
+            localized_names = normalize_localized_text(raw_set.get("name"))
+            if not any(localized_names.values()):
+                raise ValueError(f"Set {set_id} has no localized name")
+            language_ids = sorted(localized_names.keys())
             language_ids_seen.update(language_ids)
 
             cards = [
@@ -486,8 +506,7 @@ def convert_source_folder(source_root: Path, source_name: str, output_root: Path
             sets.append({
                 "id": set_id,
                 "series_id": series_id,
-                "name": first_localized_value(raw_set.get("name")) or set_file.stem,
-                "local_name": first_localized_value(raw_set.get("name"), "ja"),
+                "name": localized_names,
                 "title_image_url": None,
                 "symbol_image_url": None,
                 "release_date": release_date,
@@ -553,6 +572,7 @@ def main() -> int:
     write_json(staging_root / "regions.json", regions)
     write_json(staging_root / "languages.json", languages)
     write_json(staging_root / "series.json", sorted(all_series, key=lambda row: (row["region_id"], row["start_date"], row["name"])))
+    validate_generated_sets(staging_root)
 
     if output_root.exists():
         shutil.rmtree(output_root)

@@ -11,7 +11,7 @@
         </div>
         <div class="text-body2 text-grey-4 q-ma-none">
           <router-link v-if="currentSet" :to="`/set/${currentSet.id}`" class="text-grey-4">
-            {{ currentSet.name }}
+            {{ localizedValue(currentSet.name, selectedLanguageId) ?? currentSet.id }}
           </router-link>
           <span v-else>Unknown set</span>
           · #{{ currentCard?.number ?? '??' }}
@@ -59,7 +59,7 @@
                   <q-item-label caption class="text-grey-5">Set</q-item-label>
                   <q-item-label>
                     <router-link v-if="currentSet" :to="`/set/${currentSet.id}`" class="text-white">
-                      {{ currentSet.name }}
+                      {{ localizedValue(currentSet.name, selectedLanguageId) ?? currentSet.id }}
                     </router-link>
                   </q-item-label>
                 </q-item-section>
@@ -120,12 +120,12 @@
                 </q-item-section>
               </q-item>
 
-              <q-item v-for="attack in currentCard?.attacks ?? []" :key="localizedValue(attack.name) ?? attack.damage">
+              <q-item v-for="attack in currentCard?.attacks ?? []" :key="localizedValue(attack.name, selectedLanguageId) ?? attack.damage">
                 <q-item-section>
                   <q-item-label caption class="text-grey-5">Attack</q-item-label>
-                  <q-item-label>{{ localizedValue(attack.name) }} · {{ attack.damage }}</q-item-label>
+                  <q-item-label>{{ localizedValue(attack.name, selectedLanguageId) }} · {{ attack.damage }}</q-item-label>
                   <q-item-label caption class="text-grey-4">
-                    {{ attack.cost.join(', ') }}<span v-if="localizedValue(attack.text)"> · {{ localizedValue(attack.text) }}</span>
+                    {{ attack.cost.join(', ') }}<span v-if="localizedValue(attack.text, selectedLanguageId)"> · {{ localizedValue(attack.text, selectedLanguageId) }}</span>
                   </q-item-label>
                 </q-item-section>
               </q-item>
@@ -160,6 +160,7 @@
 
   // import utils
   import { getCardById, getSetById } from '../utils/dataManagement';
+  import { localizedValue } from '../utils/localization';
   import type { Card, CardModifier, CardVariant, Set } from '../utils/types';
   import type { AppState } from '../store';
 
@@ -216,17 +217,17 @@
 
   // Localized card display name.
   const displayName = computed<string>(() => {
-    return localizedValue(currentCard?.name ?? {}) ?? currentCard?.id ?? 'Unknown card';
+    return localizedValue(currentCard?.name ?? {}, selectedLanguageId.value) ?? currentCard?.id ?? 'Unknown card';
   });
 
   // Localized evolution source.
   const localizedEvolvesFrom = computed<string | null>(() => {
-    return currentCard?.evolves_from ? localizedValue(currentCard.evolves_from) : null;
+    return currentCard?.evolves_from ? localizedValue(currentCard.evolves_from, selectedLanguageId.value) : null;
   });
 
   // Localized trainer rules text.
   const localizedRulesText = computed<string | null>(() => {
-    return currentCard?.rules_text ? localizedValue(currentCard.rules_text) : null;
+    return currentCard?.rules_text ? localizedValue(currentCard.rules_text, selectedLanguageId.value) : null;
   });
 
 
@@ -234,11 +235,6 @@
   // Formats enum-like values for display.
   const formatValue = (value: string): string => {
     return value.replaceAll('_', ' ');
-  };
-
-  // Returns a localized field value for the selected language.
-  const localizedValue = (value: Record<string, string | null>): string | null => {
-    return value[selectedLanguageId.value] ?? Object.values(value).find((item) => item) ?? null;
   };
 
   // Formats modifier values such as weakness and resistance.

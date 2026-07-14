@@ -18,21 +18,20 @@ export type Series = {
   start_date: string;
 };
 
+// Localized text keyed by language code.
+export type LocalizedText = Record<string, string | null>;
+
 // A set inside one series, with language-specific availability.
 export type Set = {
   id: string;
   series_id: string;
-  name: string;
-  local_name: string | null;
+  name: LocalizedText;
   title_image_url: string | null;
   symbol_image_url: string | null;
   release_date: string;
   card_count: number;
   language_ids: string[];
 };
-
-// Localized text keyed by language code.
-export type LocalizedText = Record<string, string | null>;
 
 // A damage modifier attached to a card.
 export type CardModifier = {

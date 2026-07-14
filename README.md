@@ -26,6 +26,22 @@ The app reads JSON files directly from:
 app/data
 ```
 
+Set names are localized objects keyed by the normalized language ids listed in
+`language_ids`:
+
+```json
+{
+  "name": {
+    "de": "Erhabene Helden",
+    "en": "Ascended Heroes"
+  },
+  "language_ids": ["de", "en"]
+}
+```
+
+The UI displays the selected language when available, then falls back to
+English and finally the first non-empty translated name.
+
 ## Update data based on tcgdex
 
 ```sh

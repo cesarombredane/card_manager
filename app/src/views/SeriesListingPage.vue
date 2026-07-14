@@ -63,11 +63,8 @@
           <q-item-section>
             <q-item-label class="text-subtitle2 text-weight-bold">
               <router-link :to="`/set/${set.id}`" class="text-white">
-                {{ set.name }}
+                {{ setDisplayName(set) }}
               </router-link>
-            </q-item-label>
-            <q-item-label v-if="set.local_name" caption class="text-grey-5">
-              {{ set.local_name }}
             </q-item-label>
             <q-item-label caption class="text-grey-4">
               {{ set.card_count }} collectible cards including variants · Released {{ set.release_date }}
@@ -95,6 +92,7 @@
 
   // import utils
   import { getRegions, getSeries, getSets } from '../utils/dataManagement';
+  import { localizedValue } from '../utils/localization';
   import type { Region, Series, Set } from '../utils/types';
   import type { AppState } from '../store';
 
@@ -129,7 +127,7 @@
 
 
   /* reactive vars */
-  // Search text used to filter set names and local names.
+  // Search text used to filter set names in every available language.
   const sets_search_input = ref<string>('');
 
   // Currently selected printing region. International is the default view.
@@ -147,7 +145,7 @@
     const setsBySeries: Map<string, Set[]> = new Map();
 
     for (const set of sets) {
-      const matchesSearch: boolean = query === '' || set.name.toLowerCase().includes(query) || String(set.local_name ?? '').toLowerCase().includes(query);
+      const matchesSearch: boolean = query === '' || Object.values(set.name).some((name) => name?.toLowerCase().includes(query));
       if (!matchesSearch) continue;
       if (!setsBySeries.has(set.series_id)) setsBySeries.set(set.series_id, []);
       setsBySeries.get(set.series_id)?.push(set);
@@ -163,6 +161,13 @@
       .filter((group) => group.sets.length > 0)
       .sort((a, b) => b.series.start_date.localeCompare(a.series.start_date));
   });
+
+
+  /* methods */
+  // Resolves a set name using the shared language preference and stable fallbacks.
+  const setDisplayName = (set: Set): string => {
+    return localizedValue(set.name, store.state.selected_language_id) ?? set.id;
+  };
 
 
   /* watchers */

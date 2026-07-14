@@ -6,7 +6,7 @@
         Set cards
       </div>
       <div class="text-h4 text-weight-bold">
-        {{ currentSet?.name ?? 'Unknown set' }}
+        {{ currentSet ? localizedValue(currentSet.name, selectedLanguageId) ?? currentSet.id : 'Unknown set' }}
       </div>
       <div class="text-body2 text-secondary">
         {{ currentSeries?.name ?? 'Unknown series' }} · {{ allCards.length }} total collectible cards including variants
@@ -102,6 +102,7 @@
 
   // import utils
   import { getCardsBySetId, getSetById, getSeriesById } from '../utils/dataManagement';
+  import { localizedValue } from '../utils/localization';
   import type { Card, CardVariant, Series, Set } from '../utils/types';
   import type { AppState } from '../store';
 
@@ -224,11 +225,6 @@
   // Formats enum-like values for display.
   const formatValue = (value: string): string => {
     return value.replaceAll('_', ' ');
-  };
-
-  // Returns a localized field value for the selected language.
-  const localizedValue = (value: Record<string, string | null>, languageId: string): string | null => {
-    return value[languageId] ?? Object.values(value).find((item) => item) ?? null;
   };
 
   // Returns sorted unique string values.
