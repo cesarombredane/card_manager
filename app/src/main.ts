@@ -14,9 +14,8 @@ createApp(App)
     config: {
       dark: true,
       brand: {
-        primary: '#f2c94c',
-        secondary: '#c9a227',
-        accent: '#ffe082',
+        primary: '#f1c748',
+        secondary: '#9c9c9c',
         dark: '#050505'
       }
     }

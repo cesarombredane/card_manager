@@ -6,16 +6,16 @@
         <div class="text-overline text-yellow-6">
           Card detail
         </div>
-        <h1 class="text-h4 text-weight-bold q-my-sm">
+        <div class="text-h4 text-weight-bold q-my-sm">
           {{ displayName }}
-        </h1>
-        <p class="text-body2 text-grey-4 q-ma-none">
+        </div>
+        <div class="text-body2 text-grey-4 q-ma-none">
           <router-link v-if="currentSet" :to="`/set/${currentSet.id}`" class="text-grey-4">
             {{ currentSet.name }}
           </router-link>
           <span v-else>Unknown set</span>
           · #{{ currentCard?.number ?? '??' }}
-        </p>
+        </div>
       </div>
 
       <div class="row q-col-gutter-lg items-start">
@@ -93,12 +93,7 @@
                   <q-item-label caption class="text-grey-5">Pokemon</q-item-label>
                   <q-item-label>
                     <template v-if="currentCard?.pokemon?.length">
-                      <router-link
-                        v-for="(pokemon, index) in currentCard.pokemon"
-                        :key="pokemon"
-                        :to="{ path: '/cards/search', query: { pokemon } }"
-                        class="text-white"
-                      >
+                      <router-link v-for="(pokemon, index) in currentCard.pokemon" :key="pokemon" :to="{ path: '/cards/search', query: { pokemon } }" class="text-white">
                         {{ pokemon }}<span v-if="index < currentCard.pokemon.length - 1" class="text-white">, </span>
                       </router-link>
                     </template>
@@ -166,7 +161,6 @@
   // import utils
   import { getCardById, getSetById } from '../utils/dataManagement';
   import type { Card, CardModifier, CardVariant, Set } from '../utils/types';
-  import type { ComputedRef } from 'vue';
   import type { AppState } from '../store';
 
   /* constant vars */
@@ -199,39 +193,39 @@
   // Currently selected language for localized card text and image.
   const selectedLanguageId = computed({
     get: (): string => {
-      const preferredLanguageId: string = store.state.selectedLanguageId;
+      const preferredLanguageId: string = store.state.selected_language_id;
       return currentSet?.language_ids.includes(preferredLanguageId) ? preferredLanguageId : currentSet?.language_ids[0] ?? 'en';
     },
-    set: (languageId: string): void => store.commit('setSelectedLanguageId', languageId)
+    set: (languageId: string): void => store.commit('set_sekected_language_id', languageId)
   });
 
 
   /* computed vars */
   // Variant options rendered by the q-select.
-  const variantOptions: ComputedRef<string[]> = computed(() => currentCard?.variants.map((variant) => variant.id) ?? []);
+  const variantOptions = computed<string[]>(() => currentCard?.variants.map((variant) => variant.id) ?? []);
 
   // Currently selected card variant.
-  const selectedVariant: ComputedRef<CardVariant | null> = computed(() => {
+  const selectedVariant = computed<CardVariant | null>(() => {
     return currentCard?.variants.find((variant) => variant.id === selectedVariantId.value) ?? currentCard?.variants[0] ?? null;
   });
 
   // Image URL for the selected variant and selected language.
-  const selectedImageUrl: ComputedRef<string | null> = computed(() => {
+  const selectedImageUrl = computed<string | null>(() => {
     return selectedVariant.value?.images[selectedLanguageId.value] ?? null;
   });
 
   // Localized card display name.
-  const displayName: ComputedRef<string> = computed(() => {
+  const displayName = computed<string>(() => {
     return localizedValue(currentCard?.name ?? {}) ?? currentCard?.id ?? 'Unknown card';
   });
 
   // Localized evolution source.
-  const localizedEvolvesFrom: ComputedRef<string | null> = computed(() => {
+  const localizedEvolvesFrom = computed<string | null>(() => {
     return currentCard?.evolves_from ? localizedValue(currentCard.evolves_from) : null;
   });
 
   // Localized trainer rules text.
-  const localizedRulesText: ComputedRef<string | null> = computed(() => {
+  const localizedRulesText = computed<string | null>(() => {
     return currentCard?.rules_text ? localizedValue(currentCard.rules_text) : null;
   });
 

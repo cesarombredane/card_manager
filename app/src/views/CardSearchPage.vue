@@ -6,12 +6,12 @@
         <div class="text-overline text-yellow-6">
           Card search
         </div>
-        <h1 class="text-h4 text-weight-bold q-my-sm">
+        <div class="text-h4 text-weight-bold q-my-sm">
           Search every card
-        </h1>
-        <p class="text-body2 text-grey-4 q-ma-none">
+        </div>
+        <div class="text-body2 text-grey-4 q-ma-none">
           Showing {{ displayedCards.length }} of {{ filteredCards.length }} collectible cards including variants
-        </p>
+        </div>
       </div>
 
       <div class="row q-col-gutter-md items-center">
@@ -38,7 +38,7 @@
 
       <div class="row q-col-gutter-md items-stretch">
         <div v-for="card in displayedCards" :key="card.id" class="col-6 col-sm-4 col-md-3 col-lg-2">
-          <q-card flat bordered class="bg-grey-10 text-white full-height column no-wrap cursor-pointer" @click="goToCard(card.set_id, card.card_id)">
+          <q-card flat bordered class="bg-grey-10 text-white column no-wrap cursor-pointer" @click="goToCard(card.set_id, card.card_id)">
             <q-responsive :ratio="5 / 6" class="bg-grey-9">
               <q-img v-if="card.image_url" :src="card.image_url" fit="contain" class="full-height full-width">
                 <template #error>
@@ -52,7 +52,7 @@
               </div>
             </q-responsive>
 
-            <q-card-section class="q-pa-xs column col overflow-hidden no-wrap">
+            <q-card-section class="q-pa-xs column overflow-hidden no-wrap">
               <div class="text-caption text-grey-5 ellipsis overflow-hidden text-no-wrap">
                 {{ card.set_name }} · #{{ card.number }}
               </div>
@@ -81,7 +81,7 @@
         </div>
       </div>
 
-      <div v-if="displayedCards.length < filteredCards.length" class="row justify-center">
+      <div v-if="displayedCards.length < filteredCards.length" class="row justify-center q-mt-xl q-pb-md">
         <q-btn color="yellow-7" label="Show more" text-color="black" unelevated @click="showMoreCards" />
       </div>
 
@@ -105,7 +105,6 @@
   import { getCards, getSetById, getSets } from '../utils/dataManagement';
   import type { Card, CardVariant, Set } from '../utils/types';
   import { uniqueValues } from '../utils/arrayUtils';
-  import type { ComputedRef, Ref } from 'vue';
   import type { AppState } from '../store';
 
 
@@ -162,40 +161,40 @@
   // Currently selected language for localized names and images.
   const selectedLanguageId = computed({
     get: (): string => {
-      const preferredLanguageId: string = store.state.selectedLanguageId;
+      const preferredLanguageId: string = store.state.selected_language_id;
       return languageIds.value.includes(preferredLanguageId) ? preferredLanguageId : languageIds.value[0] ?? 'en';
     },
-    set: (languageId: string): void => store.commit('setSelectedLanguageId', languageId)
+    set: (languageId: string): void => store.commit('set_sekected_language_id', languageId)
   });
 
   // Search text used to filter card names.
-  const search: Ref<string> = ref('');
+  const search = ref<string>('');
 
   // Selected artist filter.
-  const selectedArtist: Ref<string | null> = ref(queryValue('artist'));
+  const selectedArtist = ref<string | null>(queryValue('artist'));
 
   // Selected Pokemon filter.
-  const selectedPokemon: Ref<string | null> = ref(queryValue('pokemon'));
+  const selectedPokemon = ref<string | null>(queryValue('pokemon'));
 
   // Number of filtered cards currently visible.
-  const visibleCardCount: Ref<number> = ref(initialVisibleCardCount);
+  const visibleCardCount = ref<number>(initialVisibleCardCount);
 
 
   /* computed vars */
   // Language ids available across every set.
-  const languageIds: ComputedRef<string[]> = computed(() => uniqueValues(sets.flatMap((set) => set.language_ids)));
+  const languageIds = computed<string[]>(() => uniqueValues(sets.flatMap((set) => set.language_ids)));
 
   // Artist filter options found across every card.
-  const artistOptions: ComputedRef<string[]> = computed(() => uniqueValues(cards.map((card) => card.illustrator ?? '')));
+  const artistOptions = computed<string[]>(() => uniqueValues(cards.map((card) => card.illustrator ?? '')));
 
   // Pokemon filter options found across every card.
-  const pokemonOptions: ComputedRef<string[]> = computed(() => uniqueValues(cards.flatMap((card) => card.pokemon ?? [])));
+  const pokemonOptions = computed<string[]>(() => uniqueValues(cards.flatMap((card) => card.pokemon ?? [])));
 
   // Every card variant as an individual display row.
-  const allCards: ComputedRef<DisplayCard[]> = computed(() => cards.flatMap((card) => card.variants.map((variant) => buildDisplayCard(card, variant))));
+  const allCards = computed<DisplayCard[]>(() => cards.flatMap((card) => card.variants.map((variant) => buildDisplayCard(card, variant))));
 
   // Cards matching the search text and selected filters.
-  const filteredCards: ComputedRef<DisplayCard[]> = computed(() => {
+  const filteredCards = computed<DisplayCard[]>(() => {
     const query: string = search.value.trim().toLowerCase();
 
     return allCards.value
@@ -206,7 +205,7 @@
   });
 
   // Cards currently rendered after applying the visible result limit.
-  const displayedCards: ComputedRef<DisplayCard[]> = computed(() => filteredCards.value.slice(0, visibleCardCount.value));
+  const displayedCards = computed<DisplayCard[]>(() => filteredCards.value.slice(0, visibleCardCount.value));
 
 
   /* watchers */

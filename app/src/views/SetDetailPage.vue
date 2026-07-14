@@ -6,12 +6,12 @@
         <div class="text-overline text-yellow-6">
           Set cards
         </div>
-        <h1 class="text-h4 text-weight-bold q-my-sm">
+        <div class="text-h4 text-weight-bold q-my-sm">
           {{ currentSet?.name ?? 'Unknown set' }}
-        </h1>
-        <p class="text-body2 text-grey-4 q-ma-none">
+        </div>
+        <div class="text-body2 text-grey-4 q-ma-none">
           {{ currentSeries?.name ?? 'Unknown series' }} · {{ allCards.length }} total collectible cards including variants
-        </p>
+        </div>
       </div>
 
       <div class="row q-col-gutter-md items-center">
@@ -103,7 +103,6 @@
   // import utils
   import { getCardsBySetId, getSetById, getSeriesById } from '../utils/dataManagement';
   import type { Card, CardVariant, Series, Set } from '../utils/types';
-  import type { ComputedRef, Ref } from 'vue';
   import type { AppState } from '../store';
 
   // A flattened card variant row ready for display and filtering.
@@ -149,46 +148,46 @@
   // Currently selected language for localized card names.
   const selectedLanguageId = computed({
     get: (): string => {
-      const preferredLanguageId: string = store.state.selectedLanguageId;
+      const preferredLanguageId: string = store.state.selected_language_id;
       return currentSet?.language_ids.includes(preferredLanguageId) ? preferredLanguageId : currentSet?.language_ids[0] ?? 'en';
     },
-    set: (languageId: string): void => store.commit('setSelectedLanguageId', languageId)
+    set: (languageId: string): void => store.commit('set_sekected_language_id', languageId)
   });
 
   // Search text used to filter card names and numbers.
-  const search: Ref<string> = ref('');
+  const search = ref<string>('');
 
   // Selected rarity filter.
-  const selectedRarity: Ref<string | null> = ref(null);
+  const selectedRarity = ref<string | null>(null);
 
   // Selected attack energy filter.
-  const selectedEnergy: Ref<string | null> = ref(null);
+  const selectedEnergy = ref<string | null>(null);
 
   // Selected card category filter.
-  const selectedCategory: Ref<string | null> = ref(null);
+  const selectedCategory = ref<string | null>(null);
 
   // Selected variant filter.
-  const selectedVariant: Ref<string | null> = ref(null);
+  const selectedVariant = ref<string | null>(null);
 
 
   /* computed vars */
   // Every card variant in this set as an individual display row.
-  const allCards: ComputedRef<DisplayCard[]> = computed(() => cards.flatMap((card) => card.variants.map((variant) => buildDisplayCard(card, variant))));
+  const allCards = computed<DisplayCard[]>(() => cards.flatMap((card) => card.variants.map((variant) => buildDisplayCard(card, variant))));
 
   // Rarity filter options found in this set.
-  const rarityOptions: ComputedRef<string[]> = computed(() => uniqueValues(allCards.value.map((card) => card.rarity)));
+  const rarityOptions = computed<string[]>(() => uniqueValues(allCards.value.map((card) => card.rarity)));
 
   // Energy filter options found in this set.
-  const energyOptions: ComputedRef<string[]> = computed(() => uniqueValues(allCards.value.flatMap((card) => card.energy_costs)));
+  const energyOptions = computed<string[]>(() => uniqueValues(allCards.value.flatMap((card) => card.energy_costs)));
 
   // Card category filter options found in this set.
-  const categoryOptions: ComputedRef<string[]> = computed(() => uniqueValues(allCards.value.map((card) => card.category)));
+  const categoryOptions = computed<string[]>(() => uniqueValues(allCards.value.map((card) => card.category)));
 
   // Variant filter options found in this set.
-  const variantOptions: ComputedRef<string[]> = computed(() => uniqueValues(allCards.value.map((card) => card.variant_id)));
+  const variantOptions = computed<string[]>(() => uniqueValues(allCards.value.map((card) => card.variant_id)));
 
   // Cards shown after applying search and filters.
-  const displayedCards: ComputedRef<DisplayCard[]> = computed(() => {
+  const displayedCards = computed<DisplayCard[]>(() => {
     const query: string = search.value.trim().toLowerCase();
 
     return allCards.value
@@ -239,7 +238,7 @@
 
   // Stores the current set region and navigates back to the series page.
   const goBackToSeries = (): void => {
-    if (currentSeries) store.commit('setSelectedRegionId', currentSeries.region_id);
+    if (currentSeries) store.commit('set_selected_region_id', currentSeries.region_id);
     router.push('/series');
   };
 

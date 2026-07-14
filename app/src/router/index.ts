@@ -3,9 +3,9 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 // import views
 import SeriesListingPage from '../views/SeriesListingPage.vue';
-import SetDetailPage from '../views/SetDetailPage.vue';
 import CardDetailPage from '../views/CardDetailPage.vue';
 import CardSearchPage from '../views/CardSearchPage.vue';
+import SetDetailPage from '../views/SetDetailPage.vue';
 import HomePage from '../views/HomePage.vue';
 
 

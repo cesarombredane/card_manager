@@ -1,26 +1,24 @@
 <template>
-  <q-page class="bg-dark text-white flex flex-center q-pa-md q-pa-lg-xl">
-    <section class="full-width">
-      <div class="column">
-        <div class="text-overline text-yellow-6">
-          Pokemon Card Manager
+  <q-page class="bg-dark flex flex-center">
+    <section class="full-width q-pl-xl">
+      <div class="text-overline text-primary">
+        Pokemon Card Manager
+      </div>
+      <div class="text-h3 text-weight-bold q-mt-md">
+        Manage your Pokemon card collection
+      </div>
+      <div class="text-body1 q-mt-md">
+        A personal web app designed to organize Pokemon TCG data, browse sets and cards, and help track a collection in a clear, rebuildable way.
+      </div>
+      <div class="text-body2 text-secondary q-mt-md">
+        Created by Cesar Ombredane.
+      </div>
+      <div class="row q-col-gutter-md q-mt-lg">
+        <div class="col-auto">
+          <q-btn color="primary" icon-right="arrow_forward" label="Browse series" size="lg" text-color="black" to="/series" />
         </div>
-        <h1 class="text-h3 text-weight-bold q-my-md">
-          Manage your Pokemon card collection
-        </h1>
-        <p class="text-body1 text-grey-4">
-          A personal web app designed to organize Pokemon TCG data, browse sets and cards, and help track a collection in a clear, rebuildable way.
-        </p>
-        <p class="text-body2 text-grey-5 q-mt-lg">
-          Created by Cesar Ombredane.
-        </p>
-        <div class="row q-col-gutter-md q-mt-xl">
-          <div class="col-12 col-sm-auto">
-            <q-btn color="yellow-7" icon-right="arrow_forward" label="Browse series" size="lg" text-color="black" unelevated to="/series" />
-          </div>
-          <div class="col-12 col-sm-auto">
-            <q-btn color="grey-9" icon-right="search" label="Search cards" size="lg" text-color="white" unelevated to="/cards/search" />
-          </div>
+        <div class="col-auto">
+          <q-btn color="grey-9" icon-right="search" label="Search cards" size="lg" text-color="white" to="/cards/search" />
         </div>
       </div>
     </section>

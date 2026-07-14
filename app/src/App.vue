@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="hHh lpR fFf" class="bg-dark text-white">
+  <q-layout view="hHh lpR fFf">
     <q-header elevated class="bg-grey-10 text-white">
       <q-toolbar>
         <q-toolbar-title>
@@ -13,7 +13,3 @@
     </q-page-container>
   </q-layout>
 </template>
-
-<script setup lang="ts">
-
-</script>

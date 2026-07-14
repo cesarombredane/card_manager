@@ -4,8 +4,8 @@ import { createStore } from 'vuex';
 
 // define the shape of the application state
 export type AppState = {
-  selectedRegionId: string;
-  selectedLanguageId: string;
+  selected_region_id: string;
+  selected_language_id: string;
 };
 
 
@@ -13,19 +13,19 @@ export type AppState = {
 export const store = createStore<AppState>({
   state() {
     return {
-      selectedRegionId: 'INTL',
-      selectedLanguageId: 'en'
+      selected_region_id: 'INTL',
+      selected_language_id: 'en'
     };
   },
   mutations: {
     // Store the current region used on the series listing page.
-    setSelectedRegionId(state: AppState, regionId: string) {
-      state.selectedRegionId = regionId;
+    set_selected_region_id(state: AppState, region_id: string) {
+      state.selected_region_id = region_id;
     },
 
     // Store the preferred language used on set pages.
-    setSelectedLanguageId(state: AppState, languageId: string) {
-      state.selectedLanguageId = languageId;
+    set_sekected_language_id(state: AppState, language_id: string) {
+      state.selected_language_id = language_id;
     }
   },
   actions: {}
