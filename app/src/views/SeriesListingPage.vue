@@ -43,19 +43,15 @@
       <q-list bordered separator class="bg-grey-10 rounded-borders">
         <q-item v-for="set in group.sets" :key="set.id" class="q-py-md">
           <q-item-section class="col-4 col-sm-3 col-md-2">
-            <q-card flat class="bg-grey-9 rounded-borders relative-position">
-              <q-responsive :ratio="16 / 9">
-                <q-img v-if="set.title_image_url" :src="set.title_image_url" fit="contain" class="full-height" />
-                <template v-else>
-                  <div class="column items-center justify-center full-height text-grey-5">
-                    <q-icon name="image" size="30px" />
-                  </div>
-                </template>
-              </q-responsive>
+            <q-card flat class="bg-grey-9 rounded-borders relative-position" style="width: 100%; height: 96px; overflow: hidden;">
+              <div style="display: flex; width: 100%; height: 96px; align-items: center; justify-content: center; overflow: hidden;">
+                <img v-if="set.title_image_url" :src="set.title_image_url" :alt="`${setDisplayName(set)} logo`"
+                  style="display: block; width: 100%; height: 100%; padding: 8px; object-fit: contain;" />
+                <q-icon v-else name="image" size="30px" class="text-grey-5" />
+              </div>
 
-              <q-avatar rounded size="26px" color="grey-10" text-color="grey-5" class="absolute-bottom-right q-ma-xs">
-                <q-img v-if="set.symbol_image_url" :src="set.symbol_image_url" fit="contain" />
-                <q-icon v-else name="auto_awesome" size="16px" />
+              <q-avatar rounded text-color="grey-5" class="absolute-bottom-right q-ma-xs" style="width: 30px; height: 30px; overflow: hidden;">
+                <q-img v-if="set.symbol_image_url" :src="set.symbol_image_url" fit="contain" style="width: 100%; height: 100%; padding: 2px;" />
               </q-avatar>
             </q-card>
           </q-item-section>

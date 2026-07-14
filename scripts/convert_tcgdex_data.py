@@ -450,11 +450,14 @@ def validate_generated_sets(output_root: Path) -> None:
         sets = json.loads(sets_path.read_text(encoding="utf-8"))
         for set_row in sets:
             set_id = str(set_row.get("id") or "unknown")
+            tcgdex_id = set_row.get("tcgdex_id")
             names = set_row.get("name")
             language_ids = set_row.get("language_ids")
 
             if not isinstance(names, dict) or not any(isinstance(name, str) and name for name in names.values()):
                 raise ValueError(f"Set {set_id} must have at least one localized name")
+            if not isinstance(tcgdex_id, str) or not tcgdex_id:
+                raise ValueError(f"Set {set_id} must have a TCGdex id")
             if "local_name" in set_row:
                 raise ValueError(f"Set {set_id} still contains obsolete local_name data")
             if not isinstance(language_ids, list) or set(names.keys()) != set(language_ids):
@@ -505,6 +508,7 @@ def convert_source_folder(source_root: Path, source_name: str, output_root: Path
 
             sets.append({
                 "id": set_id,
+                "tcgdex_id": str(raw_set.get("id") or set_file.stem),
                 "series_id": series_id,
                 "name": localized_names,
                 "title_image_url": None,

@@ -24,6 +24,7 @@ export type LocalizedText = Record<string, string | null>;
 // A set inside one series, with language-specific availability.
 export type Set = {
   id: string;
+  tcgdex_id: string;
   series_id: string;
   name: LocalizedText;
   title_image_url: string | null;
