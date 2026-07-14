@@ -1,93 +1,93 @@
 <template>
-  <q-page class="bg-dark text-white q-pa-md q-pa-lg-xl">
-    <div class="column q-gutter-lg">
-      <div>
-        <q-btn flat dense color="grey-4" icon="arrow_back" label="Back to series" no-caps class="q-mb-sm" @click="goBackToSeries" />
-        <div class="text-overline text-yellow-6">
-          Set cards
-        </div>
-        <div class="text-h4 text-weight-bold q-my-sm">
-          {{ currentSet?.name ?? 'Unknown set' }}
-        </div>
-        <div class="text-body2 text-grey-4 q-ma-none">
-          {{ currentSeries?.name ?? 'Unknown series' }} · {{ allCards.length }} total collectible cards including variants
-        </div>
+  <q-page class="bg-dark q-pa-md">
+    <section class="q-mb-md">
+      <q-btn flat dense color="grey-4" icon="arrow_back" label="Back to series" no-caps class="q-mb-sm" @click="goBackToSeries" />
+      <div class="text-overline text-primary">
+        Set cards
       </div>
-
-      <div class="row q-col-gutter-md items-center">
-        <div class="col-12 col-md-auto">
-          <language-selector v-model="selectedLanguageId" :language-ids="currentSet?.language_ids ?? []" />
-        </div>
-        <div class="col-12 col-sm-8 col-md-5 col-lg-4">
-          <q-input v-model="search" dark dense outlined clearable debounce="150" label="Search a card by name or number">
-            <template #prepend>
-              <q-icon name="search" />
-            </template>
-          </q-input>
-        </div>
+      <div class="text-h4 text-weight-bold">
+        {{ currentSet?.name ?? 'Unknown set' }}
       </div>
-
-      <div class="row q-col-gutter-md">
-        <div class="col-12 col-sm-6 col-md-3">
-          <q-select v-model="selectedRarity" :options="rarityOptions" dark dense outlined clearable label="Rarity" />
-        </div>
-        <div class="col-12 col-sm-6 col-md-3">
-          <q-select v-model="selectedEnergy" :options="energyOptions" dark dense outlined clearable label="Energy" />
-        </div>
-        <div class="col-12 col-sm-6 col-md-3">
-          <q-select v-model="selectedCategory" :options="categoryOptions" dark dense outlined clearable label="Type" />
-        </div>
-        <div class="col-12 col-sm-6 col-md-3">
-          <q-select v-model="selectedVariant" :options="variantOptions" dark dense outlined clearable label="Variant" />
-        </div>
+      <div class="text-body2 text-secondary">
+        {{ currentSeries?.name ?? 'Unknown series' }} · {{ allCards.length }} total collectible cards including variants
       </div>
+    </section>
 
-      <div class="row q-col-gutter-md items-stretch">
-        <div v-for="card in displayedCards" :key="card.id" class="col-6 col-sm-4 col-md-3 col-lg-2">
-          <q-card flat bordered class="bg-grey-10 text-white full-height column no-wrap cursor-pointer" @click="goToCard(card.card_id)">
-            <q-responsive :ratio="5 / 6" class="bg-grey-9">
-              <div class="column items-center justify-center full-height text-grey-5">
-                <q-icon name="image" size="28px" />
-              </div>
-            </q-responsive>
-
-            <q-card-section class="q-pa-xs column col overflow-hidden no-wrap">
-              <div class="text-caption text-grey-5 ellipsis overflow-hidden text-no-wrap">
-                #{{ card.number }}
-              </div>
-              <div class="text-caption text-weight-bold ellipsis overflow-hidden text-no-wrap">
-                {{ card.display_name }}
-              </div>
-              <div class="text-caption text-grey-4 ellipsis overflow-hidden text-no-wrap">
-                {{ formatValue(card.rarity) }}
-              </div>
-              <div class="text-caption text-grey-5 ellipsis overflow-hidden text-no-wrap">
-                <span v-if="card.types.length">{{ card.types.join(', ') }}</span>
-                <span v-else>No energy type</span>
-              </div>
-              <div class="text-caption text-grey-5 ellipsis overflow-hidden text-no-wrap">
-                <span v-if="card.hp">{{ card.hp }} HP · </span>{{ card.illustrator || 'Unknown illustrator' }}
-              </div>
-              <div class="row no-wrap q-gutter-xs q-mt-auto overflow-hidden">
-                <q-badge color="grey-9" text-color="white" class="ellipsis overflow-hidden text-no-wrap">
-                  {{ card.category }}
-                </q-badge>
-                <q-badge v-if="card.variant_id !== 'normal'" color="grey-9" text-color="white" class="ellipsis overflow-hidden text-no-wrap">
-                  {{ formatValue(card.variant_id) }}
-                </q-badge>
-                <q-badge v-for="energy in card.energy_costs" :key="energy" color="grey-9" text-color="white" class="ellipsis overflow-hidden text-no-wrap">
-                  {{ energy }}
-                </q-badge>
-              </div>
-            </q-card-section>
-          </q-card>
-        </div>
+    <section class="row q-col-gutter-md items-center q-mb-md">
+      <div class="col-auto">
+        <language-selector v-model="selectedLanguageId" :language-ids="currentSet?.language_ids ?? []" />
       </div>
+      <div class="col-auto">
+        <q-input v-model="search" dark dense outlined clearable debounce="150" label="Search a card by name or number">
+          <template #prepend>
+            <q-icon name="search" />
+          </template>
+        </q-input>
+      </div>
+    </section>
 
-      <q-banner v-if="displayedCards.length === 0" class="bg-grey-10 text-grey-4">
-        No card found for these filters.
-      </q-banner>
-    </div>
+    <section class="row q-col-gutter-md tems-center q-mb-md">
+      <div class="col-12 col-sm-6 col-md-3">
+        <q-select v-model="selectedRarity" :options="rarityOptions" dark dense outlined clearable label="Rarity" />
+      </div>
+      <div class="col-12 col-sm-6 col-md-3">
+        <q-select v-model="selectedEnergy" :options="energyOptions" dark dense outlined clearable label="Energy" />
+      </div>
+      <div class="col-12 col-sm-6 col-md-3">
+        <q-select v-model="selectedCategory" :options="categoryOptions" dark dense outlined clearable label="Type" />
+      </div>
+      <div class="col-12 col-sm-6 col-md-3">
+        <q-select v-model="selectedVariant" :options="variantOptions" dark dense outlined clearable label="Variant" />
+      </div>
+    </section>
+
+    <q-separator class="q-mb-md" />
+
+    <section class="row q-col-gutter-md">
+      <div v-for="card in displayedCards" :key="card.id" class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <q-card flat bordered class="bg-grey-10 text-white full-height column no-wrap cursor-pointer" @click="goToCard(card.card_id)">
+          <q-responsive :ratio="5 / 6" class="bg-grey-9">
+            <div class="column items-center justify-center full-height text-grey-5">
+              <q-icon name="image" size="28px" />
+            </div>
+          </q-responsive>
+
+          <q-card-section class="q-pa-xs column col overflow-hidden no-wrap">
+            <div class="text-caption text-grey-5 ellipsis overflow-hidden text-no-wrap">
+              #{{ card.number }}
+            </div>
+            <div class="text-caption text-weight-bold ellipsis overflow-hidden text-no-wrap">
+              {{ card.display_name }}
+            </div>
+            <div class="text-caption text-grey-4 ellipsis overflow-hidden text-no-wrap">
+              {{ formatValue(card.rarity) }}
+            </div>
+            <div class="text-caption text-grey-5 ellipsis overflow-hidden text-no-wrap">
+              <span v-if="card.types.length">{{ card.types.join(', ') }}</span>
+              <span v-else>No energy type</span>
+            </div>
+            <div class="text-caption text-grey-5 ellipsis overflow-hidden text-no-wrap">
+              <span v-if="card.hp">{{ card.hp }} HP · </span>{{ card.illustrator || 'Unknown illustrator' }}
+            </div>
+            <div class="row no-wrap q-gutter-xs q-mt-auto overflow-hidden">
+              <q-badge color="grey-9" text-color="white" class="ellipsis overflow-hidden text-no-wrap">
+                {{ card.category }}
+              </q-badge>
+              <q-badge v-if="card.variant_id !== 'normal'" color="grey-9" text-color="white" class="ellipsis overflow-hidden text-no-wrap">
+                {{ formatValue(card.variant_id) }}
+              </q-badge>
+              <q-badge v-for="energy in card.energy_costs" :key="energy" color="grey-9" text-color="white" class="ellipsis overflow-hidden text-no-wrap">
+                {{ energy }}
+              </q-badge>
+            </div>
+          </q-card-section>
+        </q-card>
+      </div>
+    </section>
+
+    <q-banner v-if="displayedCards.length === 0" class="bg-grey-10 text-grey-4">
+      No card found for these filters.
+    </q-banner>
   </q-page>
 </template>
 

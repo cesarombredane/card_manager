@@ -1,94 +1,93 @@
 <template>
-  <q-page class="bg-dark text-white q-pa-md q-pa-lg-xl">
-    <div class="column q-gutter-lg">
-      <div>
-        <q-btn flat dense color="grey-4" icon="arrow_back" label="Back home" no-caps class="q-mb-sm" to="/" />
-        <div class="text-overline text-yellow-6">
-          Card search
-        </div>
-        <div class="text-h4 text-weight-bold q-my-sm">
-          Search every card
-        </div>
-        <div class="text-body2 text-grey-4 q-ma-none">
-          Showing {{ displayedCards.length }} of {{ filteredCards.length }} collectible cards including variants
-        </div>
+  <q-page class="bg-dark q-pa-md">
+    <section class="q-mb-md">
+      <div class="text-overline text-primary">
+        Card search
       </div>
-
-      <div class="row q-col-gutter-md items-center">
-        <div class="col-12 col-md-auto">
-          <language-selector v-model="selectedLanguageId" :language-ids="languageIds" />
-        </div>
-        <div class="col-12 col-sm-8 col-md-5 col-lg-4">
-          <q-input v-model="search" dark dense outlined clearable debounce="150" label="Search a card by name">
-            <template #prepend>
-              <q-icon name="search" />
-            </template>
-          </q-input>
-        </div>
+      <div class="text-h4 text-weight-bold">
+        Search every card
       </div>
-
-      <div class="row q-col-gutter-md">
-        <div class="col-12 col-sm-6 col-md-4">
-          <q-select v-model="selectedArtist" :options="artistOptions" dark dense outlined clearable label="Artist" />
-        </div>
-        <div class="col-12 col-sm-6 col-md-4">
-          <q-select v-model="selectedPokemon" :options="pokemonOptions" dark dense outlined clearable label="Pokemon" />
-        </div>
+      <div class="text-body2 text-secondary">
+        Showing {{ displayedCards.length }} of {{ filteredCards.length }} collectible cards including variants
       </div>
+    </section>
 
-      <div class="row q-col-gutter-md items-stretch">
-        <div v-for="card in displayedCards" :key="card.id" class="col-6 col-sm-4 col-md-3 col-lg-2">
-          <q-card flat bordered class="bg-grey-10 text-white column no-wrap cursor-pointer" @click="goToCard(card.set_id, card.card_id)">
-            <q-responsive :ratio="5 / 6" class="bg-grey-9">
-              <q-img v-if="card.image_url" :src="card.image_url" fit="contain" class="full-height full-width">
-                <template #error>
-                  <div class="column items-center justify-center full-height full-width text-grey-5">
-                    <q-icon name="image" size="28px" />
-                  </div>
-                </template>
-              </q-img>
-              <div v-else class="column items-center justify-center full-height full-width text-grey-5">
-                <q-icon name="image" size="28px" />
-              </div>
-            </q-responsive>
-
-            <q-card-section class="q-pa-xs column overflow-hidden no-wrap">
-              <div class="text-caption text-grey-5 ellipsis overflow-hidden text-no-wrap">
-                {{ card.set_name }} · #{{ card.number }}
-              </div>
-              <div class="text-caption text-weight-bold ellipsis overflow-hidden text-no-wrap">
-                {{ card.display_name }}
-              </div>
-              <div class="text-caption text-grey-4 ellipsis overflow-hidden text-no-wrap">
-                {{ formatValue(card.rarity) }}
-              </div>
-              <div class="text-caption text-grey-5 ellipsis overflow-hidden text-no-wrap">
-                {{ card.artist ?? 'Unknown illustrator' }}
-              </div>
-              <div class="text-caption text-grey-5 ellipsis overflow-hidden text-no-wrap">
-                {{ card.pokemon_names.length ? card.pokemon_names.join(', ') : 'No linked Pokemon' }}
-              </div>
-              <div class="row no-wrap q-gutter-xs q-mt-auto overflow-hidden">
-                <q-badge color="grey-9" text-color="white" class="ellipsis overflow-hidden text-no-wrap">
-                  {{ card.category }}
-                </q-badge>
-                <q-badge v-if="card.variant_id !== 'normal'" color="grey-9" text-color="white" class="ellipsis overflow-hidden text-no-wrap">
-                  {{ formatValue(card.variant_id) }}
-                </q-badge>
-              </div>
-            </q-card-section>
-          </q-card>
-        </div>
+    <section class="row q-col-gutter-md items-center q-mb-md">
+      <div class="col-auto">
+        <language-selector v-model="selectedLanguageId" :language-ids="languageIds" />
       </div>
-
-      <div v-if="displayedCards.length < filteredCards.length" class="row justify-center q-mt-xl q-pb-md">
-        <q-btn color="yellow-7" label="Show more" text-color="black" unelevated @click="showMoreCards" />
+      <div class="col-auto">
+        <q-input v-model="search" dark dense outlined clearable debounce="150" label="Search a card by name">
+          <template #prepend>
+            <q-icon name="search" />
+          </template>
+        </q-input>
       </div>
+    </section>
 
-      <q-banner v-if="filteredCards.length === 0" class="bg-grey-10 text-grey-4">
-        No card found for these filters.
-      </q-banner>
+    <section class="row q-col-gutter-md items-center q-mb-md">
+      <div class="col-12 col-sm-6 col-md-4">
+        <q-select v-model="selectedArtist" :options="artistOptions" dark dense outlined clearable label="Artist" />
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        <q-select v-model="selectedPokemon" :options="pokemonOptions" dark dense outlined clearable label="Pokemon" />
+      </div>
+    </section>
+
+    <q-separator class="q-mb-md" />
+
+    <section class="row q-col-gutter-md">
+      <div v-for="card in displayedCards" :key="card.id" class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <q-card class="bg-grey-10 text-white no-wrap cursor-pointer q-pa-none" flat bordered @click="goToCard(card.set_id, card.card_id)">
+          <q-responsive :ratio="5 / 6" class="bg-grey-9">
+            <q-img v-if="card.image_url" :src="card.image_url">
+              <template #error>
+                <div class="column items-center justify-center">
+                  <q-icon name="image" size="28px" />
+                </div>
+              </template>
+            </q-img>
+            <div v-else class="column items-center justify-center">
+              <q-icon name="image" size="28px" />
+            </div>
+          </q-responsive>
+
+          <q-card-section class="q-pa-xs column overflow-hidden no-wrap">
+            <div class="text-caption text-grey-5 ellipsis overflow-hidden text-no-wrap">
+              {{ card.set_name }} · #{{ card.number }}
+            </div>
+            <div class="text-caption text-weight-bold ellipsis overflow-hidden text-no-wrap">
+              {{ card.display_name }}
+            </div>
+            <div class="text-caption text-grey-4 ellipsis overflow-hidden text-no-wrap">
+              {{ formatValue(card.rarity) }}
+            </div>
+            <div class="text-caption text-grey-5 ellipsis overflow-hidden text-no-wrap">
+              {{ card.artist ?? 'Unknown illustrator' }}
+            </div>
+            <div class="text-caption text-grey-5 ellipsis overflow-hidden text-no-wrap">
+              {{ card.pokemon_names.length ? card.pokemon_names.join(', ') : 'No linked Pokemon' }}
+            </div>
+            <div class="row no-wrap q-gutter-xs q-mt-auto overflow-hidden">
+              <q-badge color="grey-9" text-color="white" class="ellipsis overflow-hidden text-no-wrap">
+                {{ card.category }}
+              </q-badge>
+              <q-badge v-if="card.variant_id !== 'normal'" color="grey-9" text-color="white" class="ellipsis overflow-hidden text-no-wrap">
+                {{ formatValue(card.variant_id) }}
+              </q-badge>
+            </div>
+          </q-card-section>
+        </q-card>
+      </div>
+    </section>
+
+    <div v-if="displayedCards.length < filteredCards.length" class="row justify-center q-mt-xl q-pb-md">
+      <q-btn color="yellow-7" label="Show more" text-color="black" unelevated @click="showMoreCards" />
     </div>
+
+    <q-banner v-if="filteredCards.length === 0" class="bg-grey-10 text-grey-4">
+      No card found for these filters.
+    </q-banner>
   </q-page>
 </template>
 

@@ -28,7 +28,7 @@
 
     <q-separator class="q-mb-md" />
 
-    <section v-for="group in visible_series" :key="group.series.id">
+    <section v-for="group in visible_series" :key="group.series.id" class="q-mb-lg">
       <div class="row items-end justify-between q-mb-md">
         <div>
           <div class="text-h5 text-weight-bold q-ma-none">
