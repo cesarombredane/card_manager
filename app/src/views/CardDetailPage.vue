@@ -160,6 +160,7 @@
 
   // import utils
   import { getCardById, getSetById } from '../utils/dataManagement';
+  import { localizedCardImage } from '../utils/cardImages';
   import { localizedValue } from '../utils/localization';
   import type { Card, CardModifier, CardVariant, Set } from '../utils/types';
   import type { AppState } from '../store';
@@ -212,7 +213,7 @@
 
   // Image URL for the selected variant and selected language.
   const selectedImageUrl = computed<string | null>(() => {
-    return selectedVariant.value?.images[selectedLanguageId.value] ?? null;
+    return selectedVariant.value ? localizedCardImage(selectedVariant.value.images, selectedLanguageId.value) : null;
   });
 
   // Localized card display name.

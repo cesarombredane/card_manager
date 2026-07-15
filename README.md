@@ -35,6 +35,7 @@ English and finally the first non-empty translated name.
 python3 scripts/pull_tcgdex_data.py
 python3 scripts/convert_tcgdex_data.py
 python3 scripts/sync_set_images.py
+python3 scripts/sync_card_images.py
 ```
 
 ## Cache set artwork
@@ -51,3 +52,20 @@ original set assets as WebP, and stores them under
 `app/public/images/sets/<set-id>/`. Generated set metadata points only to files
 that exist locally. Known-missing artwork is remembered to avoid repeated API
 requests; use `--refresh-missing` to check for newly added upstream artwork.
+
+## Cache card artwork
+
+TCGdex card scans can be synchronized into the local, Git-ignored image library
+after regenerating the JSON data:
+
+```sh
+python3 scripts/sync_card_images.py
+```
+
+The command requests each set catalog once per language, downloads high-quality
+WebP scans into `app/public/images/cards/<set-id>/<language-id>/`, and updates
+every card variant to reference only an existing local file. TCGdex currently
+provides one scan per localized card, so variants of that card share the same
+image. Known-missing scans are remembered; use `--refresh-missing` to retry them.
+For a smaller synchronization, repeat `--set <local-set-id>`,
+`--card <local-card-id-or-number>`, and/or `--language <language-id>` as needed.

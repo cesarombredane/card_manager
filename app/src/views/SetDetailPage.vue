@@ -47,7 +47,14 @@
       <div v-for="card in displayedCards" :key="card.id" class="col-6 col-sm-4 col-md-3 col-lg-2">
         <q-card flat bordered class="bg-grey-10 text-white full-height column no-wrap cursor-pointer" @click="goToCard(card.card_id)">
           <q-responsive :ratio="5 / 6" class="bg-grey-9">
-            <div class="column items-center justify-center full-height text-grey-5">
+            <q-img v-if="card.image_url" :src="card.image_url" fit="contain" class="full-height">
+              <template #error>
+                <div class="column items-center justify-center full-height full-width text-grey-5">
+                  <q-icon name="image" size="28px" />
+                </div>
+              </template>
+            </q-img>
+            <div v-else class="column items-center justify-center full-height text-grey-5">
               <q-icon name="image" size="28px" />
             </div>
           </q-responsive>
@@ -102,6 +109,7 @@
 
   // import utils
   import { getCardsBySetId, getSetById, getSeriesById } from '../utils/dataManagement';
+  import { localizedCardImage } from '../utils/cardImages';
   import { localizedValue } from '../utils/localization';
   import type { Card, CardVariant, Series, Set } from '../utils/types';
   import type { AppState } from '../store';
@@ -119,6 +127,7 @@
     illustrator: string | null;
     types: string[];
     energy_costs: string[];
+    image_url: string | null;
   };
 
 
@@ -218,7 +227,8 @@
       hp: card.hp ?? null,
       illustrator: card.illustrator ?? null,
       types: card.types ?? [],
-      energy_costs: uniqueValues((card.attacks ?? []).flatMap((attack) => attack.cost))
+      energy_costs: uniqueValues((card.attacks ?? []).flatMap((attack) => attack.cost)),
+      image_url: localizedCardImage(variant.images, selectedLanguageId.value)
     };
   };
 

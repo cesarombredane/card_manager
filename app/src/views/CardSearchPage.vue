@@ -102,6 +102,7 @@
 
   // import utils
   import { getCards, getSetById, getSets } from '../utils/dataManagement';
+  import { localizedCardImage } from '../utils/cardImages';
   import { localizedValue } from '../utils/localization';
   import type { Card, CardVariant, Set } from '../utils/types';
   import { uniqueValues } from '../utils/arrayUtils';
@@ -240,7 +241,7 @@
       rarity: card.rarity,
       artist: card.illustrator ?? null,
       pokemon_names: card.pokemon ?? [],
-      image_url: variant.images[selectedLanguageId.value] ?? null
+      image_url: localizedCardImage(variant.images, selectedLanguageId.value)
     };
   };
 
