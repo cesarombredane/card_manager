@@ -43,54 +43,7 @@
 
     <q-separator class="q-mb-md" />
 
-    <section class="row q-col-gutter-md">
-      <div v-for="card in displayedCards" :key="card.id" class="col-6 col-sm-4 col-md-3 col-lg-2">
-        <q-card flat bordered class="bg-grey-10 text-white full-height column no-wrap cursor-pointer" @click="goToCard(card.card_id)">
-          <q-responsive :ratio="5 / 6" class="bg-grey-9">
-            <q-img v-if="card.image_url" :src="card.image_url" fit="contain" class="full-height">
-              <template #error>
-                <div class="column items-center justify-center full-height full-width text-grey-5">
-                  <q-icon name="image" size="28px" />
-                </div>
-              </template>
-            </q-img>
-            <div v-else class="column items-center justify-center full-height text-grey-5">
-              <q-icon name="image" size="28px" />
-            </div>
-          </q-responsive>
-
-          <q-card-section class="q-pa-xs column col overflow-hidden no-wrap">
-            <div class="text-caption text-grey-5 ellipsis overflow-hidden text-no-wrap">
-              #{{ card.number }}
-            </div>
-            <div class="text-caption text-weight-bold ellipsis overflow-hidden text-no-wrap">
-              {{ card.display_name }}
-            </div>
-            <div class="text-caption text-grey-4 ellipsis overflow-hidden text-no-wrap">
-              {{ formatValue(card.rarity) }}
-            </div>
-            <div class="text-caption text-grey-5 ellipsis overflow-hidden text-no-wrap">
-              <span v-if="card.types.length">{{ card.types.join(', ') }}</span>
-              <span v-else>No energy type</span>
-            </div>
-            <div class="text-caption text-grey-5 ellipsis overflow-hidden text-no-wrap">
-              <span v-if="card.hp">{{ card.hp }} HP · </span>{{ card.illustrator || 'Unknown illustrator' }}
-            </div>
-            <div class="row no-wrap q-gutter-xs q-mt-auto overflow-hidden">
-              <q-badge color="grey-9" text-color="white" class="ellipsis overflow-hidden text-no-wrap">
-                {{ card.category }}
-              </q-badge>
-              <q-badge v-if="card.variant_id !== 'normal'" color="grey-9" text-color="white" class="ellipsis overflow-hidden text-no-wrap">
-                {{ formatValue(card.variant_id) }}
-              </q-badge>
-              <q-badge v-for="energy in card.energy_costs" :key="energy" color="grey-9" text-color="white" class="ellipsis overflow-hidden text-no-wrap">
-                {{ energy }}
-              </q-badge>
-            </div>
-          </q-card-section>
-        </q-card>
-      </div>
-    </section>
+    <card-list :cards="displayedCards" @card-click="goToCard" />
 
     <q-banner v-if="displayedCards.length === 0" class="bg-grey-10 text-grey-4">
       No card found for these filters.
@@ -106,30 +59,15 @@
 
   // import components
   import LanguageSelector from '../components/LanguageSelector.vue';
+  import CardList from '../components/CardList.vue';
 
   // import utils
   import { getCardsBySetId, getSetById, getSeriesById } from '../utils/dataManagement';
-  import { localizedCardImage } from '../utils/cardImages';
+  import { buildDisplayCard, formatCardValue } from '../utils/cardDisplay';
+  import type { DisplayCard } from '../utils/cardDisplay';
   import { localizedValue } from '../utils/localization';
-  import type { Card, CardVariant, Series, Set } from '../utils/types';
+  import type { Card, Series, Set } from '../utils/types';
   import type { AppState } from '../store';
-
-  // A flattened card variant row ready for display and filtering.
-  type DisplayCard = {
-    id: string;
-    card_id: string;
-    variant_id: string;
-    number: string;
-    display_name: string;
-    category: string;
-    rarity: string;
-    hp: number | null;
-    illustrator: string | null;
-    types: string[];
-    energy_costs: string[];
-    image_url: string | null;
-  };
-
 
   /* constant vars */
   // Current route used to identify the selected set.
@@ -182,7 +120,7 @@
 
   /* computed vars */
   // Every card variant in this set as an individual display row.
-  const allCards = computed<DisplayCard[]>(() => cards.flatMap((card) => card.variants.map((variant) => buildDisplayCard(card, variant))));
+  const allCards = computed<DisplayCard[]>(() => cards.flatMap((card) => card.variants.map((variant) => buildDisplayCard(card, variant, selectedLanguageId.value))));
 
   // Rarity filter options found in this set.
   const rarityOptions = computed<string[]>(() => uniqueValues(allCards.value.map((card) => card.rarity)));
@@ -211,30 +149,9 @@
 
 
   /* methods */
-  // Creates a display row for one physical card variant.
-  const buildDisplayCard = (card: Card, variant: CardVariant): DisplayCard => {
-    const cardName: string = localizedValue(card.name, selectedLanguageId.value) ?? card.id;
-    const variantSuffix: string = variant.id !== 'normal' ? ` (${formatValue(variant.id)})` : '';
-
-    return {
-      id: `${card.id}-${variant.id}`,
-      card_id: card.id,
-      variant_id: variant.id,
-      number: card.number,
-      display_name: `${cardName}${variantSuffix}`,
-      category: card.category,
-      rarity: card.rarity,
-      hp: card.hp ?? null,
-      illustrator: card.illustrator ?? null,
-      types: card.types ?? [],
-      energy_costs: uniqueValues((card.attacks ?? []).flatMap((attack) => attack.cost)),
-      image_url: localizedCardImage(variant.images, selectedLanguageId.value)
-    };
-  };
-
   // Formats enum-like values for display.
   const formatValue = (value: string): string => {
-    return value.replaceAll('_', ' ');
+    return formatCardValue(value);
   };
 
   // Returns sorted unique string values.
@@ -249,7 +166,7 @@
   };
 
   // Opens the detail page for a card from this set.
-  const goToCard = (cardId: string): void => {
-    router.push(`/set/${setId}/card/${cardId}`);
+  const goToCard = (card: DisplayCard): void => {
+    router.push(`/set/${setId}/card/${card.card_id}`);
   };
 </script>

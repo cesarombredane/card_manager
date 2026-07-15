@@ -21,7 +21,7 @@
       <div class="row q-col-gutter-lg items-start">
         <div class="col-12 col-sm-8 col-md-4 col-lg-3">
           <q-card flat bordered class="bg-grey-10 text-white">
-            <q-responsive :ratio="3 / 4" class="bg-grey-9">
+            <q-responsive :ratio="cardImageRatio" class="bg-grey-9">
               <q-img v-if="selectedImageUrl" :src="selectedImageUrl" fit="contain" class="full-height">
                 <template #error>
                   <div class="column items-center justify-center full-height full-width text-grey-5">
@@ -161,6 +161,7 @@
   // import utils
   import { getCardById, getSetById } from '../utils/dataManagement';
   import { localizedCardImage } from '../utils/cardImages';
+  import { cardImageRatio } from '../utils/cardDisplay';
   import { localizedValue } from '../utils/localization';
   import type { Card, CardModifier, CardVariant, Set } from '../utils/types';
   import type { AppState } from '../store';

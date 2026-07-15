@@ -36,50 +36,7 @@
 
     <q-separator class="q-mb-md" />
 
-    <section class="row q-col-gutter-md">
-      <div v-for="card in displayedCards" :key="card.id" class="col-6 col-sm-4 col-md-3 col-lg-2">
-        <q-card class="bg-grey-10 text-white no-wrap cursor-pointer q-pa-none" flat bordered @click="goToCard(card.set_id, card.card_id)">
-          <q-responsive :ratio="5 / 6" class="bg-grey-9">
-            <q-img v-if="card.image_url" :src="card.image_url">
-              <template #error>
-                <div class="column items-center justify-center">
-                  <q-icon name="image" size="28px" />
-                </div>
-              </template>
-            </q-img>
-            <div v-else class="column items-center justify-center">
-              <q-icon name="image" size="28px" />
-            </div>
-          </q-responsive>
-
-          <q-card-section class="q-pa-xs column overflow-hidden no-wrap">
-            <div class="text-caption text-grey-5 ellipsis overflow-hidden text-no-wrap">
-              {{ card.set_name }} · #{{ card.number }}
-            </div>
-            <div class="text-caption text-weight-bold ellipsis overflow-hidden text-no-wrap">
-              {{ card.display_name }}
-            </div>
-            <div class="text-caption text-grey-4 ellipsis overflow-hidden text-no-wrap">
-              {{ formatValue(card.rarity) }}
-            </div>
-            <div class="text-caption text-grey-5 ellipsis overflow-hidden text-no-wrap">
-              {{ card.artist ?? 'Unknown illustrator' }}
-            </div>
-            <div class="text-caption text-grey-5 ellipsis overflow-hidden text-no-wrap">
-              {{ card.pokemon_names.length ? card.pokemon_names.join(', ') : 'No linked Pokemon' }}
-            </div>
-            <div class="row no-wrap q-gutter-xs q-mt-auto overflow-hidden">
-              <q-badge color="grey-9" text-color="white" class="ellipsis overflow-hidden text-no-wrap">
-                {{ card.category }}
-              </q-badge>
-              <q-badge v-if="card.variant_id !== 'normal'" color="grey-9" text-color="white" class="ellipsis overflow-hidden text-no-wrap">
-                {{ formatValue(card.variant_id) }}
-              </q-badge>
-            </div>
-          </q-card-section>
-        </q-card>
-      </div>
-    </section>
+    <card-list :cards="displayedCards" @card-click="goToCard" />
 
     <div v-if="displayedCards.length < filteredCards.length" class="row justify-center q-mt-xl q-pb-md">
       <q-btn color="yellow-7" label="Show more" text-color="black" unelevated @click="showMoreCards" />
@@ -99,32 +56,16 @@
 
   // import components
   import LanguageSelector from '../components/LanguageSelector.vue';
+  import CardList from '../components/CardList.vue';
 
   // import utils
   import { getCards, getSetById, getSets } from '../utils/dataManagement';
-  import { localizedCardImage } from '../utils/cardImages';
+  import { buildDisplayCard } from '../utils/cardDisplay';
+  import type { DisplayCard } from '../utils/cardDisplay';
   import { localizedValue } from '../utils/localization';
-  import type { Card, CardVariant, Set } from '../utils/types';
+  import type { Card, Set } from '../utils/types';
   import { uniqueValues } from '../utils/arrayUtils';
   import type { AppState } from '../store';
-
-
-  /* types */
-  // A flattened card variant row ready for global search results.
-  type DisplayCard = {
-    id: string;
-    card_id: string;
-    set_id: string;
-    set_name: string;
-    variant_id: string;
-    number: string;
-    display_name: string;
-    category: string;
-    rarity: string;
-    artist: string | null;
-    pokemon_names: string[];
-    image_url: string | null;
-  };
 
 
   /* constant vars */
@@ -192,7 +133,11 @@
   const pokemonOptions = computed<string[]>(() => uniqueValues(cards.flatMap((card) => card.pokemon ?? [])));
 
   // Every card variant as an individual display row.
-  const allCards = computed<DisplayCard[]>(() => cards.flatMap((card) => card.variants.map((variant) => buildDisplayCard(card, variant))));
+  const allCards = computed<DisplayCard[]>(() => cards.flatMap((card) => card.variants.map((variant) => {
+    const set: Set | null = getSetById(card.set_id);
+    const setName: string | null = set ? localizedValue(set.name, selectedLanguageId.value) ?? set.id : 'Unknown set';
+    return buildDisplayCard(card, variant, selectedLanguageId.value, setName);
+  })));
 
   // Cards matching the search text and selected filters.
   const filteredCards = computed<DisplayCard[]>(() => {
@@ -200,9 +145,9 @@
 
     return allCards.value
       .filter((card) => query === '' || card.display_name.toLowerCase().includes(query))
-      .filter((card) => !selectedArtist.value || card.artist === selectedArtist.value)
+      .filter((card) => !selectedArtist.value || card.illustrator === selectedArtist.value)
       .filter((card) => !selectedPokemon.value || card.pokemon_names.includes(selectedPokemon.value))
-      .sort((a, b) => a.set_name.localeCompare(b.set_name) || a.number.localeCompare(b.number) || a.variant_id.localeCompare(b.variant_id));
+      .sort((a, b) => (a.set_name ?? '').localeCompare(b.set_name ?? '') || a.number.localeCompare(b.number) || a.variant_id.localeCompare(b.variant_id));
   });
 
   // Cards currently rendered after applying the visible result limit.
@@ -223,40 +168,13 @@
 
 
   /* methods */
-  // Creates a display row for one physical card variant.
-  const buildDisplayCard = (card: Card, variant: CardVariant): DisplayCard => {
-    const set: Set | null = getSetById(card.set_id);
-    const cardName: string = localizedValue(card.name, selectedLanguageId.value) ?? card.id;
-    const variantSuffix: string = variant.id !== 'normal' ? ` (${formatValue(variant.id)})` : '';
-
-    return {
-      id: `${card.id}-${variant.id}`,
-      card_id: card.id,
-      set_id: card.set_id,
-      set_name: set ? localizedValue(set.name, selectedLanguageId.value) ?? set.id : 'Unknown set',
-      variant_id: variant.id,
-      number: card.number,
-      display_name: `${cardName}${variantSuffix}`,
-      category: card.category,
-      rarity: card.rarity,
-      artist: card.illustrator ?? null,
-      pokemon_names: card.pokemon ?? [],
-      image_url: localizedCardImage(variant.images, selectedLanguageId.value)
-    };
-  };
-
-  // Formats enum-like values for display.
-  const formatValue = (value: string): string => {
-    return value.replaceAll('_', ' ');
-  };
-
   // Increases the number of rendered card results.
   const showMoreCards = (): void => {
     visibleCardCount.value += visibleCardStep;
   };
 
   // Opens the detail page for a card from its set.
-  const goToCard = (setId: string, cardId: string): void => {
-    router.push(`/set/${setId}/card/${cardId}`);
+  const goToCard = (card: DisplayCard): void => {
+    router.push(`/set/${card.set_id}/card/${card.card_id}`);
   };
 </script>
