@@ -12,6 +12,12 @@ import HomePage from '../views/HomePage.vue';
 // create router instance
 export const router = createRouter({
   history: createWebHistory(),
+  scrollBehavior(to, _from, savedPosition) {
+    // A set is an entry page: always show its heading and filters first.
+    if (to.name === 'set-detail') return { top: 0, left: 0 };
+
+    return savedPosition ?? { top: 0, left: 0 };
+  },
   routes: [
     {
       path: '/',

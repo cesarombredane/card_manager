@@ -5,6 +5,13 @@ import type { Card, CardVariant } from './types';
 // The source card images are 600 x 825 pixels, which simplifies to 8:11.
 export const cardImageRatio = 8 / 11;
 
+// Sorts card numbers naturally, including values such as 1, 2, 10 and TG01.
+const cardNumberCollator = new Intl.Collator(undefined, { numeric: true, sensitivity: 'base' });
+
+export const compareCardNumbers = (left: string, right: string): number => {
+  return cardNumberCollator.compare(left, right);
+};
+
 // A flattened physical card variant shared by every card grid.
 export type DisplayCard = {
   id: string;

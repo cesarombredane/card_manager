@@ -60,7 +60,7 @@
 
   // import utils
   import { getCards, getSetById, getSets } from '../utils/dataManagement';
-  import { buildDisplayCard } from '../utils/cardDisplay';
+  import { buildDisplayCard, compareCardNumbers } from '../utils/cardDisplay';
   import type { DisplayCard } from '../utils/cardDisplay';
   import { localizedValue } from '../utils/localization';
   import type { Card, Set } from '../utils/types';
@@ -147,7 +147,7 @@
       .filter((card) => query === '' || card.display_name.toLowerCase().includes(query))
       .filter((card) => !selectedArtist.value || card.illustrator === selectedArtist.value)
       .filter((card) => !selectedPokemon.value || card.pokemon_names.includes(selectedPokemon.value))
-      .sort((a, b) => (a.set_name ?? '').localeCompare(b.set_name ?? '') || a.number.localeCompare(b.number) || a.variant_id.localeCompare(b.variant_id));
+      .sort((a, b) => (a.set_name ?? '').localeCompare(b.set_name ?? '') || compareCardNumbers(a.number, b.number) || a.variant_id.localeCompare(b.variant_id));
   });
 
   // Cards currently rendered after applying the visible result limit.

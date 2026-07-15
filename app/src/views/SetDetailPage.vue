@@ -63,7 +63,7 @@
 
   // import utils
   import { getCardsBySetId, getSetById, getSeriesById } from '../utils/dataManagement';
-  import { buildDisplayCard, formatCardValue } from '../utils/cardDisplay';
+  import { buildDisplayCard, compareCardNumbers, formatCardValue } from '../utils/cardDisplay';
   import type { DisplayCard } from '../utils/cardDisplay';
   import { localizedValue } from '../utils/localization';
   import type { Card, Series, Set } from '../utils/types';
@@ -144,7 +144,7 @@
       .filter((card) => !selectedEnergy.value || card.energy_costs.includes(selectedEnergy.value))
       .filter((card) => !selectedCategory.value || card.category === selectedCategory.value)
       .filter((card) => !selectedVariant.value || card.variant_id === selectedVariant.value)
-      .sort((a, b) => a.number.localeCompare(b.number) || a.variant_id.localeCompare(b.variant_id));
+      .sort((a, b) => compareCardNumbers(a.number, b.number) || a.variant_id.localeCompare(b.variant_id));
   });
 
 
