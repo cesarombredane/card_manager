@@ -1,0 +1,6076 @@
+[
+  {
+    "id": "asia-m4-001",
+    "set_id": "asia-m4",
+    "number": "001",
+    "category": "pokemon",
+    "name": {
+      "ja": "ビードル"
+    },
+    "pokemon": [
+      "ビードル"
+    ],
+    "illustrator": "sowsow",
+    "rarity": "common",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ふいをつく"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "30",
+        "text": {
+          "ja": "コインを1回投げウラなら、このワザは失敗。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-m4-002",
+    "set_id": "asia-m4",
+    "number": "002",
+    "category": "pokemon",
+    "name": {
+      "ja": "コクーン"
+    },
+    "pokemon": [
+      "コクーン"
+    ],
+    "illustrator": "Mugi Hamada",
+    "rarity": "common",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "ビードル"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "ぶらさがる"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "asia-m4-003",
+    "set_id": "asia-m4",
+    "number": "003",
+    "category": "pokemon",
+    "name": {
+      "ja": "スピアーex"
+    },
+    "pokemon": [
+      "スピアーex"
+    ],
+    "illustrator": "toriyufu",
+    "rarity": "double_rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 310,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "ja": "コクーン"
+    },
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ビーランブル"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "110×",
+        "text": {
+          "ja": "自分の場の「スピアー（『ポケモンex』をふくむ）」の数×110ダメージ。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-m4-004",
+    "set_id": "asia-m4",
+    "number": "004",
+    "category": "pokemon",
+    "name": {
+      "ja": "マスキッパ"
+    },
+    "pokemon": [
+      "マスキッパ"
+    ],
+    "illustrator": "Heisuke Kitazawa",
+    "rarity": "common",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 110,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "まるかじり"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "80+",
+        "text": {
+          "ja": "相手のバトルポケモンのにげるためのエネルギーがないなら、80ダメージ追加。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-m4-005",
+    "set_id": "asia-m4",
+    "number": "005",
+    "category": "pokemon",
+    "name": {
+      "ja": "ハリマロン"
+    },
+    "pokemon": [
+      "ハリマロン"
+    ],
+    "illustrator": "HACCAN",
+    "rarity": "common",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "たたく"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "ja": "トゲでさす"
+        },
+        "cost": [
+          "grass",
+          "grass"
+        ],
+        "damage": "30",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-m4-006",
+    "set_id": "asia-m4",
+    "number": "006",
+    "category": "pokemon",
+    "name": {
+      "ja": "ハリボーグ"
+    },
+    "pokemon": [
+      "ハリボーグ"
+    ],
+    "illustrator": "Hideki Ishikawa",
+    "rarity": "common",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "ハリマロン"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "リーフチャージ"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "20",
+        "text": {
+          "ja": "自分の山札から「基本[G]エネルギー」を1枚選び、このポケモンにつける。そして山札を切る。"
+        }
+      },
+      {
+        "name": {
+          "ja": "つるのムチ"
+        },
+        "cost": [
+          "grass",
+          "grass",
+          "normal"
+        ],
+        "damage": "80",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "asia-m4-007",
+    "set_id": "asia-m4",
+    "number": "007",
+    "category": "pokemon",
+    "name": {
+      "ja": "ブリガロン"
+    },
+    "pokemon": [
+      "ブリガロン"
+    ],
+    "illustrator": "Uta",
+    "rarity": "rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 180,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "ja": "ハリボーグ"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "かこいこむ"
+        },
+        "cost": [
+          "grass",
+          "grass",
+          "normal"
+        ],
+        "damage": "160",
+        "text": {
+          "ja": "次の相手の番、このワザを受けたポケモンは、にげられない。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 4
+  },
+  {
+    "id": "asia-m4-008",
+    "set_id": "asia-m4",
+    "number": "008",
+    "category": "pokemon",
+    "name": {
+      "ja": "ロコン"
+    },
+    "pokemon": [
+      "ロコン"
+    ],
+    "illustrator": "Yoshimoto Yoshimon",
+    "rarity": "common",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "こがす"
+        },
+        "cost": [
+          "fire"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "相手のバトルポケモンをやけどにする。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-m4-009",
+    "set_id": "asia-m4",
+    "number": "009",
+    "category": "pokemon",
+    "name": {
+      "ja": "キュウコン"
+    },
+    "pokemon": [
+      "キュウコン"
+    ],
+    "illustrator": "Ryuta Fuse",
+    "rarity": "uncommon",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 120,
+    "types": [
+      "fire"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "ロコン"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "きゅうびうつし"
+        },
+        "cost": [
+          "fire"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "自分のベンチポケモンを1匹選び、選んだポケモンにのっているダメカンをすべて、相手のバトルポケモンにのせ替える。"
+        }
+      },
+      {
+        "name": {
+          "ja": "おにび"
+        },
+        "cost": [
+          "fire",
+          "fire"
+        ],
+        "damage": "70",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-m4-010",
+    "set_id": "asia-m4",
+    "number": "010",
+    "category": "pokemon",
+    "name": {
+      "ja": "ホウオウ"
+    },
+    "pokemon": [
+      "ホウオウ"
+    ],
+    "illustrator": "Takumi Wada",
+    "rarity": "uncommon",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "さいきのほのお"
+        },
+        "cost": [
+          "fire"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "自分のトラッシュからたねポケモンを3枚まで選び、ベンチに出す。"
+        }
+      },
+      {
+        "name": {
+          "ja": "ぐれんのつばさ"
+        },
+        "cost": [
+          "fire",
+          "fire",
+          "fire"
+        ],
+        "damage": "130",
+        "text": {
+          "ja": "このポケモンについている[R]エネルギーを1個選び、トラッシュする。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-m4-011",
+    "set_id": "asia-m4",
+    "number": "011",
+    "category": "pokemon",
+    "name": {
+      "ja": "フォッコ"
+    },
+    "pokemon": [
+      "フォッコ"
+    ],
+    "illustrator": "saino misaki",
+    "rarity": "common",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "なかまをよぶ"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "自分の山札からたねポケモンを2枚まで選び、ベンチに出す。そして山札を切る。"
+        }
+      },
+      {
+        "name": {
+          "ja": "ひをはく"
+        },
+        "cost": [
+          "fire"
+        ],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-m4-012",
+    "set_id": "asia-m4",
+    "number": "012",
+    "category": "pokemon",
+    "name": {
+      "ja": "テールナー"
+    },
+    "pokemon": [
+      "テールナー"
+    ],
+    "illustrator": "Taiga Kasai",
+    "rarity": "common",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "fire"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "フォッコ"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "かえんほうしゃ"
+        },
+        "cost": [
+          "fire",
+          "fire"
+        ],
+        "damage": "80",
+        "text": {
+          "ja": "このポケモンについているエネルギーを1個選び、トラッシュする。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-m4-013",
+    "set_id": "asia-m4",
+    "number": "013",
+    "category": "pokemon",
+    "name": {
+      "ja": "マフォクシー"
+    },
+    "pokemon": [
+      "マフォクシー"
+    ],
+    "illustrator": "Gemi",
+    "rarity": "rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 160,
+    "types": [
+      "fire"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "ja": "テールナー"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "エナジーストーム"
+        },
+        "cost": [
+          "fire",
+          "fire"
+        ],
+        "damage": "30×",
+        "text": {
+          "ja": "おたがいのポケモン全員についているエネルギーの数×30ダメージ。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-m4-014",
+    "set_id": "asia-m4",
+    "number": "014",
+    "category": "pokemon",
+    "name": {
+      "ja": "シシコ"
+    },
+    "pokemon": [
+      "シシコ"
+    ],
+    "illustrator": "Mina Nakai",
+    "rarity": "common",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "たいあたり"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-m4-015",
+    "set_id": "asia-m4",
+    "number": "015",
+    "category": "pokemon",
+    "name": {
+      "ja": "メガカエンジシex"
+    },
+    "pokemon": [
+      "メガカエンジシex"
+    ],
+    "illustrator": "Keisuke Azuma",
+    "rarity": "double_rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 340,
+    "types": [
+      "fire"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "シシコ"
+    },
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ほえたてる"
+        },
+        "cost": [
+          "fire",
+          "normal"
+        ],
+        "damage": "80",
+        "text": {
+          "ja": "次の相手の番、このワザを受けたポケモンが使うワザのダメージは「-50」される。"
+        }
+      },
+      {
+        "name": {
+          "ja": "ビッグバンファイヤー 290-"
+        },
+        "cost": [
+          "fire",
+          "fire",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "このポケモンにのっているダメカンの数×10ダメージぶん、このワザのダメージは小さくなる。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-m4-016",
+    "set_id": "asia-m4",
+    "number": "016",
+    "category": "pokemon",
+    "name": {
+      "ja": "テッポウオ"
+    },
+    "pokemon": [
+      "テッポウオ"
+    ],
+    "illustrator": "Mori Yuu",
+    "rarity": "common",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "するどいひれ"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-m4-017",
+    "set_id": "asia-m4",
+    "number": "017",
+    "category": "pokemon",
+    "name": {
+      "ja": "オクタン"
+    },
+    "pokemon": [
+      "オクタン"
+    ],
+    "illustrator": "matazo",
+    "rarity": "common",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 110,
+    "types": [
+      "water"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "テッポウオ"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "すみふんしゃ"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "30",
+        "text": {
+          "ja": "次の相手の番、このワザを受けたポケモンがワザを使うとき、相手はコインを2回投げる。1回でもウラなら、そのワザは失敗。"
+        }
+      },
+      {
+        "name": {
+          "ja": "あばれまわる"
+        },
+        "cost": [
+          "water",
+          "normal"
+        ],
+        "damage": "120",
+        "text": {
+          "ja": "このポケモンをこんらんにする。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-m4-018",
+    "set_id": "asia-m4",
+    "number": "018",
+    "category": "pokemon",
+    "name": {
+      "ja": "デリバード"
+    },
+    "pokemon": [
+      "デリバード"
+    ],
+    "illustrator": "Saboteri",
+    "rarity": "uncommon",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ハッピープレゼント"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "おたがいのプレイヤーは、のぞむなら、それぞれ自分の手札から基本エネルギーを3枚まで選び、自分のポケモンに好きなようにつける。（相手から行う。）"
+        }
+      },
+      {
+        "name": {
+          "ja": "はばたく"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-m4-019",
+    "set_id": "asia-m4",
+    "number": "019",
+    "category": "pokemon",
+    "name": {
+      "ja": "ケルディオ"
+    },
+    "pokemon": [
+      "ケルディオ"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "uncommon",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 110,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "つきぬける"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "20",
+        "text": {
+          "ja": "相手のベンチポケモン1匹にも、20ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+        }
+      },
+      {
+        "name": {
+          "ja": "エネリフレクト"
+        },
+        "cost": [
+          "water",
+          "water"
+        ],
+        "damage": "70",
+        "text": {
+          "ja": "このポケモンについているエネルギーを1個選び、ベンチポケモンにつけ替える。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-m4-020",
+    "set_id": "asia-m4",
+    "number": "020",
+    "category": "pokemon",
+    "name": {
+      "ja": "ケロマツ"
+    },
+    "pokemon": [
+      "ケロマツ"
+    ],
+    "illustrator": "Kariya",
+    "rarity": "common",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "もってくる"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "自分の山札を1枚引く。"
+        }
+      },
+      {
+        "name": {
+          "ja": "みずでっぽう"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-m4-021",
+    "set_id": "asia-m4",
+    "number": "021",
+    "category": "pokemon",
+    "name": {
+      "ja": "ゲコガシラ"
+    },
+    "pokemon": [
+      "ゲコガシラ"
+    ],
+    "illustrator": "Nelnal",
+    "rarity": "common",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "water"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "ケロマツ"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "よびよせのじゅつ"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "自分の山札からポケモンを3枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+        }
+      },
+      {
+        "name": {
+          "ja": "アクアエッジ"
+        },
+        "cost": [
+          "water",
+          "water"
+        ],
+        "damage": "50",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-m4-022",
+    "set_id": "asia-m4",
+    "number": "022",
+    "category": "pokemon",
+    "name": {
+      "ja": "メガゲッコウガex"
+    },
+    "pokemon": [
+      "メガゲッコウガex"
+    ],
+    "illustrator": "takuyoa",
+    "rarity": "double_rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 350,
+    "types": [
+      "water"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "ja": "ゲコガシラ"
+    },
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ニンジャスピナー"
+        },
+        "cost": [
+          "water",
+          "water"
+        ],
+        "damage": "120+",
+        "text": {
+          "ja": "のぞむなら、このポケモンについている[W]エネルギーを1個手札にもどし、80ダメージ追加。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-m4-023",
+    "set_id": "asia-m4",
+    "number": "023",
+    "category": "pokemon",
+    "name": {
+      "ja": "カチコール"
+    },
+    "pokemon": [
+      "カチコール"
+    ],
+    "illustrator": "Anesaki Dynamic",
+    "rarity": "common",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ひんやり"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "ja": "こおりのいぶき"
+        },
+        "cost": [
+          "water",
+          "normal",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-m4-024",
+    "set_id": "asia-m4",
+    "number": "024",
+    "category": "pokemon",
+    "name": {
+      "ja": "クレベース"
+    },
+    "pokemon": [
+      "クレベース"
+    ],
+    "illustrator": "Tomoki Sone",
+    "rarity": "uncommon",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 160,
+    "types": [
+      "water"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "カチコール"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "ひょうざんくずし"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "60×",
+        "text": {
+          "ja": "自分の山札を上から6枚トラッシュし、その中にある「基本[W]エネルギー」の枚数×60ダメージ。"
+        }
+      },
+      {
+        "name": {
+          "ja": "フロストスタンプ"
+        },
+        "cost": [
+          "water",
+          "water",
+          "normal",
+          "normal"
+        ],
+        "damage": "160",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 4
+  },
+  {
+    "id": "asia-m4-025",
+    "set_id": "asia-m4",
+    "number": "025",
+    "category": "pokemon",
+    "name": {
+      "ja": "コソクムシ"
+    },
+    "pokemon": [
+      "コソクムシ"
+    ],
+    "illustrator": "0313",
+    "rarity": "common",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "かじる"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "ja": "どつく"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-m4-026",
+    "set_id": "asia-m4",
+    "number": "026",
+    "category": "pokemon",
+    "name": {
+      "ja": "グソクムシャ"
+    },
+    "pokemon": [
+      "グソクムシャ"
+    ],
+    "illustrator": "Takeshi Nakamura",
+    "rarity": "uncommon",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 140,
+    "types": [
+      "water"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "コソクムシ"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "きゅうしょぎり"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "30",
+        "text": {
+          "ja": "このワザのダメージで、相手のポケモンがきぜつしたなら、次の相手の番、このポケモンはワザのダメージや効果を受けない。"
+        }
+      },
+      {
+        "name": {
+          "ja": "そこぢから"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "150",
+        "text": {
+          "ja": "次の自分の番、このポケモンはワザが使えない。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-m4-027",
+    "set_id": "asia-m4",
+    "number": "027",
+    "category": "pokemon",
+    "name": {
+      "ja": "メリープ"
+    },
+    "pokemon": [
+      "メリープ"
+    ],
+    "illustrator": "UKUMO uiti",
+    "rarity": "common",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "でんじは"
+        },
+        "cost": [
+          "lightning",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "ja": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-m4-028",
+    "set_id": "asia-m4",
+    "number": "028",
+    "category": "pokemon",
+    "name": {
+      "ja": "モココ"
+    },
+    "pokemon": [
+      "モココ"
+    ],
+    "illustrator": "miki kudo",
+    "rarity": "common",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "lightning"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "メリープ"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "でんじしょうがい"
+        },
+        "cost": [
+          "lightning",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {
+          "ja": "次の相手の番、相手は手札からグッズを出して使えない。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-m4-029",
+    "set_id": "asia-m4",
+    "number": "029",
+    "category": "pokemon",
+    "name": {
+      "ja": "デンリュウ"
+    },
+    "pokemon": [
+      "デンリュウ"
+    ],
+    "illustrator": "CHORISO",
+    "rarity": "rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 160,
+    "types": [
+      "lightning"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "ja": "モココ"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "フラッシュボルト"
+        },
+        "cost": [
+          "lightning",
+          "normal"
+        ],
+        "damage": "140",
+        "text": {
+          "ja": "次の自分の番、このポケモンは「フラッシュボルト」が使えない。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-m4-030",
+    "set_id": "asia-m4",
+    "number": "030",
+    "category": "pokemon",
+    "name": {
+      "ja": "エモンガ"
+    },
+    "pokemon": [
+      "エモンガ"
+    ],
+    "illustrator": "Kazumasa Yasukuni",
+    "rarity": "common",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ちいさなおつかい"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "自分の山札から基本エネルギーを2枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+        }
+      },
+      {
+        "name": {
+          "ja": "スカイリターン"
+        },
+        "cost": [
+          "lightning"
+        ],
+        "damage": "30",
+        "text": {
+          "ja": "このポケモンと、ついているすべてのカードを、手札にもどす。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-m4-031",
+    "set_id": "asia-m4",
+    "number": "031",
+    "category": "pokemon",
+    "name": {
+      "ja": "デオキシス"
+    },
+    "pokemon": [
+      "デオキシス"
+    ],
+    "illustrator": "Shiburingaru",
+    "rarity": "uncommon",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 110,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ゲノムチャージ"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "自分の山札から「基本[P]エネルギー」を2枚まで選び、このポケモンにつける。そして山札を切る。"
+        }
+      },
+      {
+        "name": {
+          "ja": "サイコキネシス"
+        },
+        "cost": [
+          "psychic",
+          "psychic",
+          "normal"
+        ],
+        "damage": "80+",
+        "text": {
+          "ja": "相手のバトルポケモンについているエネルギーの数×20ダメージ追加。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-m4-032",
+    "set_id": "asia-m4",
+    "number": "032",
+    "category": "pokemon",
+    "name": {
+      "ja": "デオキシス"
+    },
+    "pokemon": [
+      "デオキシス"
+    ],
+    "illustrator": "nagimiso",
+    "rarity": "uncommon",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 120,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "サイコスピア"
+        },
+        "cost": [
+          "psychic",
+          "psychic",
+          "psychic"
+        ],
+        "damage": "120",
+        "text": {
+          "ja": "このワザを使うためのエネルギーより、2個多くエネルギーがついているなら、相手のベンチポケモン1匹にも、120ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-m4-033",
+    "set_id": "asia-m4",
+    "number": "033",
+    "category": "pokemon",
+    "name": {
+      "ja": "デオキシス"
+    },
+    "pokemon": [
+      "デオキシス"
+    ],
+    "illustrator": "GOSSAN",
+    "rarity": "uncommon",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "サイコプロテクト"
+        },
+        "cost": [
+          "psychic",
+          "psychic",
+          "normal"
+        ],
+        "damage": "80",
+        "text": {
+          "ja": "次の相手の番、このポケモンは特性を持つポケモンからワザのダメージを受けない。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "asia-m4-034",
+    "set_id": "asia-m4",
+    "number": "034",
+    "category": "pokemon",
+    "name": {
+      "ja": "デオキシス"
+    },
+    "pokemon": [
+      "デオキシス"
+    ],
+    "illustrator": "hncl",
+    "rarity": "uncommon",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "サイコスピード"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "30",
+        "text": {
+          "ja": "のぞむなら、自分の手札が5枚になるように、山札を引く。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 0
+  },
+  {
+    "id": "asia-m4-035",
+    "set_id": "asia-m4",
+    "number": "035",
+    "category": "pokemon",
+    "name": {
+      "ja": "メガフラエッテex"
+    },
+    "pokemon": [
+      "メガフラエッテex"
+    ],
+    "illustrator": "aky CG Works",
+    "rarity": "double_rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 250,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "ja": "やさしいひかり"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "おたがいのポケモン全員のHPを、それぞれ「30」回復する。"
+        }
+      },
+      {
+        "name": {
+          "ja": "エタニティブルーム"
+        },
+        "cost": [
+          "psychic",
+          "psychic",
+          "psychic"
+        ],
+        "damage": "200",
+        "text": {
+          "ja": "自分の山札から「基本[P]エネルギー」を4枚まで選び、ベンチポケモンに好きなようにつける。そして山札を切る。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-m4-036",
+    "set_id": "asia-m4",
+    "number": "036",
+    "category": "pokemon",
+    "name": {
+      "ja": "ニャスパー"
+    },
+    "pokemon": [
+      "ニャスパー"
+    ],
+    "illustrator": "sowsow",
+    "rarity": "common",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "バディアタック"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "10+",
+        "text": {
+          "ja": "この番に、手札から「マチエール」を出して使っていたなら、60ダメージ追加。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-m4-037",
+    "set_id": "asia-m4",
+    "number": "037",
+    "category": "pokemon",
+    "name": {
+      "ja": "ニャオニクス"
+    },
+    "pokemon": [
+      "ニャオニクス"
+    ],
+    "illustrator": "mingo",
+    "rarity": "uncommon",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "ニャスパー"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "トリックステップ"
+        },
+        "cost": [
+          "psychic",
+          "normal"
+        ],
+        "damage": "80",
+        "text": {
+          "ja": "のぞむなら、相手のバトルポケモンについているエネルギーを1個選び、相手のベンチポケモンにつけ替える。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-m4-038",
+    "set_id": "asia-m4",
+    "number": "038",
+    "category": "pokemon",
+    "name": {
+      "ja": "ボクレー"
+    },
+    "pokemon": [
+      "ボクレー"
+    ],
+    "illustrator": "Taiga Kasai",
+    "rarity": "common",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "つぶやく"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-m4-039",
+    "set_id": "asia-m4",
+    "number": "039",
+    "category": "pokemon",
+    "name": {
+      "ja": "オーロット"
+    },
+    "pokemon": [
+      "オーロット"
+    ],
+    "illustrator": "Uninori",
+    "rarity": "rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "ボクレー"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "のろいのねっこ"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "30",
+        "text": {
+          "ja": "次の相手の番、このワザを受けたポケモンは、手札から出すエネルギーをつけられない。"
+        }
+      },
+      {
+        "name": {
+          "ja": "オーバーペイン"
+        },
+        "cost": [
+          "psychic",
+          "psychic"
+        ],
+        "damage": "60+",
+        "text": {
+          "ja": "相手のポケモン全員にのっているダメカンの数×10ダメージ追加。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "asia-m4-040",
+    "set_id": "asia-m4",
+    "number": "040",
+    "category": "pokemon",
+    "name": {
+      "ja": "バケッチャ"
+    },
+    "pokemon": [
+      "バケッチャ"
+    ],
+    "illustrator": "Jerky",
+    "rarity": "common",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ふむ"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-m4-041",
+    "set_id": "asia-m4",
+    "number": "041",
+    "category": "pokemon",
+    "name": {
+      "ja": "パンプジンex"
+    },
+    "pokemon": [
+      "パンプジンex"
+    ],
+    "illustrator": "5ban Graphics",
+    "rarity": "double_rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 270,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "バケッチャ"
+    },
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ホラーロンド"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "30+",
+        "text": {
+          "ja": "ダメカンがのっている自分のベンチポケモンの数×50ダメージ追加。"
+        }
+      },
+      {
+        "name": {
+          "ja": "ゴーストタッチ"
+        },
+        "cost": [
+          "psychic",
+          "psychic"
+        ],
+        "damage": "140",
+        "text": {
+          "ja": "相手の手札からオモテを見ないで1枚選び、トラッシュする。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-m4-042",
+    "set_id": "asia-m4",
+    "number": "042",
+    "category": "pokemon",
+    "name": {
+      "ja": "ゼルネアス"
+    },
+    "pokemon": [
+      "ゼルネアス"
+    ],
+    "illustrator": "KEIICHIRO ITO",
+    "rarity": "rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ジオストーム"
+        },
+        "cost": [
+          "psychic",
+          "psychic",
+          "psychic"
+        ],
+        "damage": "30×",
+        "text": {
+          "ja": "自分のポケモン全員についている[P]エネルギーの数×30ダメージ。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-m4-043",
+    "set_id": "asia-m4",
+    "number": "043",
+    "category": "pokemon",
+    "name": {
+      "ja": "ウソッキー"
+    },
+    "pokemon": [
+      "ウソッキー"
+    ],
+    "illustrator": "GOTO minori",
+    "rarity": "uncommon",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 110,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "しれんのたび"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "自分の山札から「変化の書」を2枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+        }
+      },
+      {
+        "name": {
+          "ja": "いわとばし"
+        },
+        "cost": [
+          "fighting"
+        ],
+        "damage": "30",
+        "text": {
+          "ja": "このワザのダメージは抵抗力を計算しない。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-m4-044",
+    "set_id": "asia-m4",
+    "number": "044",
+    "category": "pokemon",
+    "name": {
+      "ja": "ゴマゾウ"
+    },
+    "pokemon": [
+      "ゴマゾウ"
+    ],
+    "illustrator": "Akino Fukuji",
+    "rarity": "common",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "どろかけ"
+        },
+        "cost": [
+          "fighting"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "ja": "ころがる"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-m4-045",
+    "set_id": "asia-m4",
+    "number": "045",
+    "category": "pokemon",
+    "name": {
+      "ja": "ドンファン"
+    },
+    "pokemon": [
+      "ドンファン"
+    ],
+    "illustrator": "Julie Hang",
+    "rarity": "common",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 150,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "ゴマゾウ"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "たたみかける"
+        },
+        "cost": [
+          "fighting"
+        ],
+        "damage": "20",
+        "text": {
+          "ja": "次の自分の番、このポケモンが使うワザの、相手のバトルポケモンへのダメージは「+120」される。"
+        }
+      },
+      {
+        "name": {
+          "ja": "スマッシュヘッド"
+        },
+        "cost": [
+          "fighting",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "180",
+        "text": {
+          "ja": "このポケモンについているエネルギーを2個選び、トラッシュする。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "asia-m4-046",
+    "set_id": "asia-m4",
+    "number": "046",
+    "category": "pokemon",
+    "name": {
+      "ja": "ヤジロン"
+    },
+    "pokemon": [
+      "ヤジロン"
+    ],
+    "illustrator": "Tomomi Ozaki",
+    "rarity": "common",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "れんぞくスピン"
+        },
+        "cost": [
+          "fighting"
+        ],
+        "damage": "30×",
+        "text": {
+          "ja": "ウラが出るまでコインを投げ、オモテの数×30ダメージ。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-m4-047",
+    "set_id": "asia-m4",
+    "number": "047",
+    "category": "pokemon",
+    "name": {
+      "ja": "ネンドール"
+    },
+    "pokemon": [
+      "ネンドール"
+    ],
+    "illustrator": "Oswaldo KATO",
+    "rarity": "uncommon",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 120,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "ヤジロン"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "たいかこうせん"
+        },
+        "cost": [
+          "fighting"
+        ],
+        "damage": "50",
+        "text": {
+          "ja": "相手の進化しているバトルポケモンから、「進化カード」を1枚はがして退化させる。はがしたカードは、相手の手札にもどす。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-m4-048",
+    "set_id": "asia-m4",
+    "number": "048",
+    "category": "pokemon",
+    "name": {
+      "ja": "ズバット"
+    },
+    "pokemon": [
+      "ズバット"
+    ],
+    "illustrator": "Mékayu",
+    "rarity": "common",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "dark"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ちょうおんぱ"
+        },
+        "cost": [
+          "dark"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "相手のバトルポケモンをこんらんにする。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 0
+  },
+  {
+    "id": "asia-m4-049",
+    "set_id": "asia-m4",
+    "number": "049",
+    "category": "pokemon",
+    "name": {
+      "ja": "ゴルバット"
+    },
+    "pokemon": [
+      "ゴルバット"
+    ],
+    "illustrator": "Mousho",
+    "rarity": "common",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "dark"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "ズバット"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "おんみつひこう"
+        },
+        "cost": [
+          "dark"
+        ],
+        "damage": "30",
+        "text": {
+          "ja": "次の相手の番、このポケモンはたねポケモンからワザのダメージを受けない。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-m4-050",
+    "set_id": "asia-m4",
+    "number": "050",
+    "category": "pokemon",
+    "name": {
+      "ja": "クロバット"
+    },
+    "pokemon": [
+      "クロバット"
+    ],
+    "illustrator": "IKEDA Saki",
+    "rarity": "uncommon",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "dark"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "ja": "ゴルバット"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "どくおんぱ"
+        },
+        "cost": [
+          "dark"
+        ],
+        "damage": "80",
+        "text": {
+          "ja": "相手のバトルポケモンをどくとこんらんにする。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-m4-051",
+    "set_id": "asia-m4",
+    "number": "051",
+    "category": "pokemon",
+    "name": {
+      "ja": "ハリーセン"
+    },
+    "pokemon": [
+      "ハリーセン"
+    ],
+    "illustrator": "nisimono",
+    "rarity": "common",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "dark"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ベノムショック"
+        },
+        "cost": [
+          "dark"
+        ],
+        "damage": "30+",
+        "text": {
+          "ja": "相手のバトルポケモンがどくなら、50ダメージ追加。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-m4-052",
+    "set_id": "asia-m4",
+    "number": "052",
+    "category": "pokemon",
+    "name": {
+      "ja": "スカンプー"
+    },
+    "pokemon": [
+      "スカンプー"
+    ],
+    "illustrator": "Nobuhiro Imagawa",
+    "rarity": "common",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "dark"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ひっかく"
+        },
+        "cost": [
+          "dark"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-m4-053",
+    "set_id": "asia-m4",
+    "number": "053",
+    "category": "pokemon",
+    "name": {
+      "ja": "スカタンク"
+    },
+    "pokemon": [
+      "スカタンク"
+    ],
+    "illustrator": "Yuriko Akase",
+    "rarity": "uncommon",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 110,
+    "types": [
+      "dark"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "スカンプー"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "うしろげり"
+        },
+        "cost": [
+          "dark"
+        ],
+        "damage": "40",
+        "text": {}
+      },
+      {
+        "name": {
+          "ja": "スマッシュターン"
+        },
+        "cost": [
+          "dark",
+          "dark",
+          "normal"
+        ],
+        "damage": "100",
+        "text": {
+          "ja": "このポケモンをベンチポケモンと入れ替える。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-m4-054",
+    "set_id": "asia-m4",
+    "number": "054",
+    "category": "pokemon",
+    "name": {
+      "ja": "ヤブクロン"
+    },
+    "pokemon": [
+      "ヤブクロン"
+    ],
+    "illustrator": "Souichirou Gunjima",
+    "rarity": "common",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "dark"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "アシッドボム"
+        },
+        "cost": [
+          "dark"
+        ],
+        "damage": "10",
+        "text": {
+          "ja": "コインを1回投げオモテなら、相手のバトルポケモンについているエネルギーを1個選び、トラッシュする。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-m4-055",
+    "set_id": "asia-m4",
+    "number": "055",
+    "category": "pokemon",
+    "name": {
+      "ja": "ダストダス"
+    },
+    "pokemon": [
+      "ダストダス"
+    ],
+    "illustrator": "HYOGONOSUKE",
+    "rarity": "uncommon",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 140,
+    "types": [
+      "dark"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "ヤブクロン"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "ヘドロばくだん"
+        },
+        "cost": [
+          "dark",
+          "dark",
+          "normal"
+        ],
+        "damage": "100",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "asia-m4-056",
+    "set_id": "asia-m4",
+    "number": "056",
+    "category": "pokemon",
+    "name": {
+      "ja": "クズモー"
+    },
+    "pokemon": [
+      "クズモー"
+    ],
+    "illustrator": "Shimaris Yukichi",
+    "rarity": "common",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "dark"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ひっかける"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-m4-057",
+    "set_id": "asia-m4",
+    "number": "057",
+    "category": "pokemon",
+    "name": {
+      "ja": "ダンバル"
+    },
+    "pokemon": [
+      "ダンバル"
+    ],
+    "illustrator": "toi8",
+    "rarity": "common",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "metal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ずつき"
+        },
+        "cost": [
+          "metal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "ja": "ビーム"
+        },
+        "cost": [
+          "metal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "grass",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-m4-058",
+    "set_id": "asia-m4",
+    "number": "058",
+    "category": "pokemon",
+    "name": {
+      "ja": "メタング"
+    },
+    "pokemon": [
+      "メタング"
+    ],
+    "illustrator": "Kazumasa Yasukuni",
+    "rarity": "common",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "metal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "ダンバル"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "メタルクロー"
+        },
+        "cost": [
+          "metal"
+        ],
+        "damage": "30",
+        "text": {}
+      },
+      {
+        "name": {
+          "ja": "ガードプレス"
+        },
+        "cost": [
+          "metal",
+          "metal",
+          "normal"
+        ],
+        "damage": "70",
+        "text": {
+          "ja": "次の相手の番、このポケモンが受けるワザのダメージは「-30」される。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "grass",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-m4-059",
+    "set_id": "asia-m4",
+    "number": "059",
+    "category": "pokemon",
+    "name": {
+      "ja": "メタグロス"
+    },
+    "pokemon": [
+      "メタグロス"
+    ],
+    "illustrator": "Bun Toujo",
+    "rarity": "uncommon",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 180,
+    "types": [
+      "metal"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "ja": "メタング"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "はねかえす"
+        },
+        "cost": [
+          "metal"
+        ],
+        "damage": "60",
+        "text": {
+          "ja": "相手のバトルポケモンをベンチポケモンと入れ替える。［バトル場に出すポケモンは相手が選ぶ。］"
+        }
+      },
+      {
+        "name": {
+          "ja": "メタリックハンマー"
+        },
+        "cost": [
+          "metal",
+          "metal",
+          "metal",
+          "normal"
+        ],
+        "damage": "150+",
+        "text": {
+          "ja": "のぞむなら、このポケモンについている[M]エネルギーを3個トラッシュし、150ダメージ追加。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "grass",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "asia-m4-060",
+    "set_id": "asia-m4",
+    "number": "060",
+    "category": "pokemon",
+    "name": {
+      "ja": "テッシード"
+    },
+    "pokemon": [
+      "テッシード"
+    ],
+    "illustrator": "OKUBO",
+    "rarity": "common",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "metal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ころがりタックル"
+        },
+        "cost": [
+          "metal",
+          "metal"
+        ],
+        "damage": "40",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "grass",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-m4-061",
+    "set_id": "asia-m4",
+    "number": "061",
+    "category": "pokemon",
+    "name": {
+      "ja": "ナットレイ"
+    },
+    "pokemon": [
+      "ナットレイ"
+    ],
+    "illustrator": "Haru Akasaka",
+    "rarity": "uncommon",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "metal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "テッシード"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "スペシャルウィップ"
+        },
+        "cost": [
+          "metal",
+          "metal"
+        ],
+        "damage": "70+",
+        "text": {
+          "ja": "このポケモンに特殊エネルギーがついているなら、70ダメージ追加。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "grass",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "asia-m4-062",
+    "set_id": "asia-m4",
+    "number": "062",
+    "category": "pokemon",
+    "name": {
+      "ja": "コバルオンex"
+    },
+    "pokemon": [
+      "コバルオンex"
+    ],
+    "illustrator": "5ban Graphics",
+    "rarity": "double_rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 210,
+    "types": [
+      "metal"
+    ],
+    "stage": "basic",
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "ja": "パワータックル"
+        },
+        "cost": [
+          "metal",
+          "metal",
+          "normal"
+        ],
+        "damage": "200",
+        "text": {
+          "ja": "次の自分の番、このポケモンはワザが使えない。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "grass",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-m4-063",
+    "set_id": "asia-m4",
+    "number": "063",
+    "category": "pokemon",
+    "name": {
+      "ja": "メガドラミドロex"
+    },
+    "pokemon": [
+      "メガドラミドロex"
+    ],
+    "illustrator": "5ban Graphics",
+    "rarity": "double_rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 330,
+    "types": [
+      "dragon"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "クズモー"
+    },
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ふしょくえき"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "相手のポケモン全員についている「ポケモンのどうぐ」と「特殊エネルギー」を、すべてトラッシュする。"
+        }
+      },
+      {
+        "name": {
+          "ja": "デッドリーポイズン"
+        },
+        "cost": [
+          "water",
+          "dark"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "相手のバトルポケモンをどくにする。このどくでのせるダメカンの数は16個になる。"
+        }
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-m4-064",
+    "set_id": "asia-m4",
+    "number": "064",
+    "category": "pokemon",
+    "name": {
+      "ja": "ヌメラ"
+    },
+    "pokemon": [
+      "ヌメラ"
+    ],
+    "illustrator": "Anesaki Dynamic",
+    "rarity": "common",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "dragon"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "すいとる"
+        },
+        "cost": [
+          "water",
+          "psychic"
+        ],
+        "damage": "30",
+        "text": {
+          "ja": "このポケモンのHPを「30」回復する。"
+        }
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-m4-065",
+    "set_id": "asia-m4",
+    "number": "065",
+    "category": "pokemon",
+    "name": {
+      "ja": "ヌメイル"
+    },
+    "pokemon": [
+      "ヌメイル"
+    ],
+    "illustrator": "Yoriyuki Ikegami",
+    "rarity": "common",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "dragon"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "ヌメラ"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "ひっぱたく"
+        },
+        "cost": [
+          "water",
+          "psychic"
+        ],
+        "damage": "70",
+        "text": {}
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "asia-m4-066",
+    "set_id": "asia-m4",
+    "number": "066",
+    "category": "pokemon",
+    "name": {
+      "ja": "ヌメルゴン"
+    },
+    "pokemon": [
+      "ヌメルゴン"
+    ],
+    "illustrator": "Tonji Matsuno",
+    "rarity": "uncommon",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 160,
+    "types": [
+      "dragon"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "ja": "ヌメイル"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "りゅうのはどう"
+        },
+        "cost": [
+          "water",
+          "psychic"
+        ],
+        "damage": "160",
+        "text": {
+          "ja": "自分の山札を上から1枚トラッシュする。"
+        }
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "asia-m4-067",
+    "set_id": "asia-m4",
+    "number": "067",
+    "category": "pokemon",
+    "name": {
+      "ja": "ケンタロス"
+    },
+    "pokemon": [
+      "ケンタロス"
+    ],
+    "illustrator": "Satoshi Ito",
+    "rarity": "uncommon",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "むれでねらう"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "相手のポケモンを1匹選び、自分の場の、名前に「ケンタロス」とつくポケモンの数ぶんコインを投げる。選んだポケモンに、オモテの数×50ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-m4-068",
+    "set_id": "asia-m4",
+    "number": "068",
+    "category": "pokemon",
+    "name": {
+      "ja": "ミネズミ"
+    },
+    "pokemon": [
+      "ミネズミ"
+    ],
+    "illustrator": "Souichirou Gunjima",
+    "rarity": "common",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "かみつく"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-m4-069",
+    "set_id": "asia-m4",
+    "number": "069",
+    "category": "pokemon",
+    "name": {
+      "ja": "ミルホッグ"
+    },
+    "pokemon": [
+      "ミルホッグ"
+    ],
+    "illustrator": "Kouki Saitou",
+    "rarity": "common",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "normal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "ミネズミ"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "ぬきうちチェック"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "コインを3回投げる。オモテが出たなら、相手の手札を見て、その中からカードをオモテの数ぶん選び、相手の山札にもどして切る。"
+        }
+      },
+      {
+        "name": {
+          "ja": "けたぐり"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "50",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-m4-070",
+    "set_id": "asia-m4",
+    "number": "070",
+    "category": "pokemon",
+    "name": {
+      "ja": "チラーミィ"
+    },
+    "pokemon": [
+      "チラーミィ"
+    ],
+    "illustrator": "ryoma uratsuka",
+    "rarity": "common",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "とっしん"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "ja": "このポケモンにも10ダメージ。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-m4-071",
+    "set_id": "asia-m4",
+    "number": "071",
+    "category": "pokemon",
+    "name": {
+      "ja": "チラチーノex"
+    },
+    "pokemon": [
+      "チラチーノex"
+    ],
+    "illustrator": "5ban Graphics",
+    "rarity": "double_rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 240,
+    "types": [
+      "normal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "チラーミィ"
+    },
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "ja": "エナジービンタ"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "40×",
+        "text": {
+          "ja": "このポケモンについているエネルギーの数×40ダメージ。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-m4-072",
+    "set_id": "asia-m4",
+    "number": "072",
+    "category": "trainer",
+    "name": {
+      "ja": "スペシャルレッドカード"
+    },
+    "pokemon": [],
+    "illustrator": "Studio Bora Inc.",
+    "rarity": "uncommon",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "ja": "このカードは、相手のサイドの残り枚数が3枚以下のときにしか使えない。相手は相手自身の手札をすべてウラにして切り、山札の下にもどす。その後、相手は山札を3枚引く。"
+    }
+  },
+  {
+    "id": "asia-m4-073",
+    "set_id": "asia-m4",
+    "number": "073",
+    "category": "trainer",
+    "name": {
+      "ja": "大漁ネット"
+    },
+    "pokemon": [],
+    "illustrator": "Toyste Beach",
+    "rarity": "uncommon",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "ja": "自分のトラッシュから[W]ポケモンと「基本[W]エネルギー」をそれぞれ3枚まで選び、相手に見せて、山札にもどして切る。"
+    }
+  },
+  {
+    "id": "asia-m4-074",
+    "set_id": "asia-m4",
+    "number": "074",
+    "category": "trainer",
+    "name": {
+      "ja": "変化の書"
+    },
+    "pokemon": [],
+    "illustrator": "Toyste Beach",
+    "rarity": "uncommon",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "ja": "「変化の書」は、2枚同時にしか使えない。（効果は、2枚で1回はたらく。）自分のトラッシュからたねポケモンを1枚選び、自分の場のたねポケモン1匹と入れ替える（ついているカード・ダメカン・特殊状態・効果などは、すべて引きつぐ）。入れ替えたポケモンはトラッシュする。"
+    }
+  },
+  {
+    "id": "asia-m4-075",
+    "set_id": "asia-m4",
+    "number": "075",
+    "category": "trainer",
+    "name": {
+      "ja": "AZの安らぎ"
+    },
+    "pokemon": [],
+    "illustrator": "GIDORA",
+    "rarity": "uncommon",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "ja": "自分のバトルポケモンをベンチポケモンと入れ替える。「ポケモンex」をベンチに入れ替えた場合、そのポケモンのHPを「80」回復する。"
+    }
+  },
+  {
+    "id": "asia-m4-076",
+    "set_id": "asia-m4",
+    "number": "076",
+    "category": "trainer",
+    "name": {
+      "ja": "ジプソ"
+    },
+    "pokemon": [],
+    "illustrator": "Souichirou Gunjima",
+    "rarity": "uncommon",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "ja": "自分のトラッシュから「基本[M]エネルギー」を2枚まで選び、自分の[M]ポケモン1匹につける。"
+    }
+  },
+  {
+    "id": "asia-m4-077",
+    "set_id": "asia-m4",
+    "number": "077",
+    "category": "trainer",
+    "name": {
+      "ja": "ホミカの演奏"
+    },
+    "pokemon": [],
+    "illustrator": "Nobusawa/Mochipuyo",
+    "rarity": "uncommon",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "ja": "次の相手の番、相手のどくのポケモンは、にげられない。（新しくどくにしたポケモンもふくむ。）"
+    }
+  },
+  {
+    "id": "asia-m4-078",
+    "set_id": "asia-m4",
+    "number": "078",
+    "category": "trainer",
+    "name": {
+      "ja": "マチエール"
+    },
+    "pokemon": [],
+    "illustrator": "Akira Komayama",
+    "rarity": "uncommon",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "ja": "相手の手札を見て、その中にあるポケモンの枚数ぶん、自分の山札を引く。"
+    }
+  },
+  {
+    "id": "asia-m4-079",
+    "set_id": "asia-m4",
+    "number": "079",
+    "category": "trainer",
+    "name": {
+      "ja": "アンジュフラエッテ"
+    },
+    "pokemon": [],
+    "illustrator": "MARINA Chikazawa",
+    "rarity": "uncommon",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "trainer_type": "stadium",
+    "rules_text": {
+      "ja": "このカードは、場に出ている「プリズムタワー」をトラッシュしなければ場に出せず、「プリズムタワー」を出した番でも場に出せる。おたがいの場の「メガフラエッテex」全員は、それぞれ最大HPが「+150」される。"
+    }
+  },
+  {
+    "id": "asia-m4-080",
+    "set_id": "asia-m4",
+    "number": "080",
+    "category": "trainer",
+    "name": {
+      "ja": "プリズムタワー"
+    },
+    "pokemon": [],
+    "illustrator": "MARINA Chikazawa",
+    "rarity": "uncommon",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "trainer_type": "stadium",
+    "rules_text": {
+      "ja": "おたがいのプレイヤーは、自分の番ごとに1回、自分の手札を2枚トラッシュするなら、自分の山札を1枚引いてよい。"
+    }
+  },
+  {
+    "id": "asia-m4-081",
+    "set_id": "asia-m4",
+    "number": "081",
+    "category": "energy",
+    "name": {
+      "ja": "ニトロ炎エネルギー"
+    },
+    "pokemon": [],
+    "illustrator": "",
+    "rarity": "rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "ja": "このカードは、ポケモンについているかぎり、[R]エネルギー1個ぶんとしてはたらく。このカードをつけている[R]ポケモンが使うワザの効果で、このカードがトラッシュされたなら、ワザのダメージや効果のあとに、手札にもどす。"
+    }
+  },
+  {
+    "id": "asia-m4-082",
+    "set_id": "asia-m4",
+    "number": "082",
+    "category": "energy",
+    "name": {
+      "ja": "バブル水エネルギー"
+    },
+    "pokemon": [],
+    "illustrator": "",
+    "rarity": "rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "ja": "このカードは、ポケモンについているかぎり、[W]エネルギー1個ぶんとしてはたらく。このカードをつけている[W]ポケモンは、特殊状態にならず、受けている特殊状態は、すべて回復する。"
+    }
+  },
+  {
+    "id": "asia-m4-083",
+    "set_id": "asia-m4",
+    "number": "083",
+    "category": "energy",
+    "name": {
+      "ja": "マグネット鋼エネルギー"
+    },
+    "pokemon": [],
+    "illustrator": "",
+    "rarity": "rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "ja": "このカードは、ポケモンについているかぎり、[M]エネルギー1個ぶんとしてはたらく。このカードをつけている[M]ポケモンは、にげるためのエネルギーが、すべてなくなる。"
+    }
+  },
+  {
+    "id": "asia-m4-084",
+    "set_id": "asia-m4",
+    "number": "084",
+    "category": "pokemon",
+    "name": {
+      "ja": "ハリマロン"
+    },
+    "pokemon": [
+      "ハリマロン"
+    ],
+    "illustrator": "Atsushi Furusawa",
+    "rarity": "illustration_rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "たたく"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "ja": "トゲでさす"
+        },
+        "cost": [
+          "grass",
+          "grass"
+        ],
+        "damage": "30",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-m4-085",
+    "set_id": "asia-m4",
+    "number": "085",
+    "category": "pokemon",
+    "name": {
+      "ja": "フォッコ"
+    },
+    "pokemon": [
+      "フォッコ"
+    ],
+    "illustrator": "satoma",
+    "rarity": "illustration_rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "なかまをよぶ"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "自分の山札からたねポケモンを2枚まで選び、ベンチに出す。そして山札を切る。"
+        }
+      },
+      {
+        "name": {
+          "ja": "ひをはく"
+        },
+        "cost": [
+          "fire"
+        ],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-m4-086",
+    "set_id": "asia-m4",
+    "number": "086",
+    "category": "pokemon",
+    "name": {
+      "ja": "ケロマツ"
+    },
+    "pokemon": [
+      "ケロマツ"
+    ],
+    "illustrator": "Susumu Maeya",
+    "rarity": "illustration_rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "もってくる"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "自分の山札を1枚引く。"
+        }
+      },
+      {
+        "name": {
+          "ja": "みずでっぽう"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-m4-087",
+    "set_id": "asia-m4",
+    "number": "087",
+    "category": "pokemon",
+    "name": {
+      "ja": "ゲコガシラ"
+    },
+    "pokemon": [
+      "ゲコガシラ"
+    ],
+    "illustrator": "Susumu Maeya",
+    "rarity": "illustration_rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "water"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "ケロマツ"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "よびよせのじゅつ"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "自分の山札からポケモンを3枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+        }
+      },
+      {
+        "name": {
+          "ja": "アクアエッジ"
+        },
+        "cost": [
+          "water",
+          "water"
+        ],
+        "damage": "50",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-m4-088",
+    "set_id": "asia-m4",
+    "number": "088",
+    "category": "pokemon",
+    "name": {
+      "ja": "デンリュウ"
+    },
+    "pokemon": [
+      "デンリュウ"
+    ],
+    "illustrator": "saino misaki",
+    "rarity": "illustration_rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 160,
+    "types": [
+      "lightning"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "ja": "モココ"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "フラッシュボルト"
+        },
+        "cost": [
+          "lightning",
+          "normal"
+        ],
+        "damage": "140",
+        "text": {
+          "ja": "次の自分の番、このポケモンは「フラッシュボルト」が使えない。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-m4-089",
+    "set_id": "asia-m4",
+    "number": "089",
+    "category": "pokemon",
+    "name": {
+      "ja": "ゼルネアス"
+    },
+    "pokemon": [
+      "ゼルネアス"
+    ],
+    "illustrator": "YASHIRO Nanaco",
+    "rarity": "illustration_rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ジオストーム"
+        },
+        "cost": [
+          "psychic",
+          "psychic",
+          "psychic"
+        ],
+        "damage": "30×",
+        "text": {
+          "ja": "自分のポケモン全員についている[P]エネルギーの数×30ダメージ。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-m4-090",
+    "set_id": "asia-m4",
+    "number": "090",
+    "category": "pokemon",
+    "name": {
+      "ja": "ネンドール"
+    },
+    "pokemon": [
+      "ネンドール"
+    ],
+    "illustrator": "matazo",
+    "rarity": "illustration_rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 120,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "ヤジロン"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "たいかこうせん"
+        },
+        "cost": [
+          "fighting"
+        ],
+        "damage": "50",
+        "text": {
+          "ja": "相手の進化しているバトルポケモンから、「進化カード」を1枚はがして退化させる。はがしたカードは、相手の手札にもどす。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-m4-091",
+    "set_id": "asia-m4",
+    "number": "091",
+    "category": "pokemon",
+    "name": {
+      "ja": "クロバット"
+    },
+    "pokemon": [
+      "クロバット"
+    ],
+    "illustrator": "Kazuhisa Uragami",
+    "rarity": "illustration_rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "dark"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "ja": "ゴルバット"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "どくおんぱ"
+        },
+        "cost": [
+          "dark"
+        ],
+        "damage": "80",
+        "text": {
+          "ja": "相手のバトルポケモンをどくとこんらんにする。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-m4-092",
+    "set_id": "asia-m4",
+    "number": "092",
+    "category": "pokemon",
+    "name": {
+      "ja": "メタング"
+    },
+    "pokemon": [
+      "メタング"
+    ],
+    "illustrator": "Kurata So",
+    "rarity": "illustration_rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "metal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "ダンバル"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "メタルクロー"
+        },
+        "cost": [
+          "metal"
+        ],
+        "damage": "30",
+        "text": {}
+      },
+      {
+        "name": {
+          "ja": "ガードプレス"
+        },
+        "cost": [
+          "metal",
+          "metal",
+          "normal"
+        ],
+        "damage": "70",
+        "text": {
+          "ja": "次の相手の番、このポケモンが受けるワザのダメージは「-30」される。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "grass",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-m4-093",
+    "set_id": "asia-m4",
+    "number": "093",
+    "category": "pokemon",
+    "name": {
+      "ja": "ヌメイル"
+    },
+    "pokemon": [
+      "ヌメイル"
+    ],
+    "illustrator": "aspara",
+    "rarity": "illustration_rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "dragon"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "ヌメラ"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "ひっぱたく"
+        },
+        "cost": [
+          "water",
+          "psychic"
+        ],
+        "damage": "70",
+        "text": {}
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "asia-m4-094",
+    "set_id": "asia-m4",
+    "number": "094",
+    "category": "pokemon",
+    "name": {
+      "ja": "ケンタロス"
+    },
+    "pokemon": [
+      "ケンタロス"
+    ],
+    "illustrator": "Tsuyoshi Nagano",
+    "rarity": "illustration_rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "むれでねらう"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "相手のポケモンを1匹選び、自分の場の、名前に「ケンタロス」とつくポケモンの数ぶんコインを投げる。選んだポケモンに、オモテの数×50ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-m4-095",
+    "set_id": "asia-m4",
+    "number": "095",
+    "category": "pokemon",
+    "name": {
+      "ja": "ミルホッグ"
+    },
+    "pokemon": [
+      "ミルホッグ"
+    ],
+    "illustrator": "MARINA Chikazawa",
+    "rarity": "illustration_rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "normal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "ミネズミ"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "ぬきうちチェック"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "コインを3回投げる。オモテが出たなら、相手の手札を見て、その中からカードをオモテの数ぶん選び、相手の山札にもどして切る。"
+        }
+      },
+      {
+        "name": {
+          "ja": "けたぐり"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "50",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-m4-096",
+    "set_id": "asia-m4",
+    "number": "096",
+    "category": "pokemon",
+    "name": {
+      "ja": "スピアーex"
+    },
+    "pokemon": [
+      "スピアーex"
+    ],
+    "illustrator": "5ban Graphics",
+    "rarity": "ultra_rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 310,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "ja": "コクーン"
+    },
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ビーランブル"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "110×",
+        "text": {
+          "ja": "自分の場の「スピアー（『ポケモンex』をふくむ）」の数×110ダメージ。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-m4-097",
+    "set_id": "asia-m4",
+    "number": "097",
+    "category": "pokemon",
+    "name": {
+      "ja": "メガカエンジシex"
+    },
+    "pokemon": [
+      "メガカエンジシex"
+    ],
+    "illustrator": "Keisuke Azuma",
+    "rarity": "ultra_rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 340,
+    "types": [
+      "fire"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "シシコ"
+    },
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ほえたてる"
+        },
+        "cost": [
+          "fire",
+          "normal"
+        ],
+        "damage": "80",
+        "text": {
+          "ja": "次の相手の番、このワザを受けたポケモンが使うワザのダメージは「-50」される。"
+        }
+      },
+      {
+        "name": {
+          "ja": "ビッグバンファイヤー 290-"
+        },
+        "cost": [
+          "fire",
+          "fire",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "このポケモンにのっているダメカンの数×10ダメージぶん、このワザのダメージは小さくなる。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-m4-098",
+    "set_id": "asia-m4",
+    "number": "098",
+    "category": "pokemon",
+    "name": {
+      "ja": "メガゲッコウガex"
+    },
+    "pokemon": [
+      "メガゲッコウガex"
+    ],
+    "illustrator": "takuyoa",
+    "rarity": "ultra_rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 350,
+    "types": [
+      "water"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "ja": "ゲコガシラ"
+    },
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ニンジャスピナー"
+        },
+        "cost": [
+          "water",
+          "water"
+        ],
+        "damage": "120+",
+        "text": {
+          "ja": "のぞむなら、このポケモンについている[W]エネルギーを1個手札にもどし、80ダメージ追加。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-m4-099",
+    "set_id": "asia-m4",
+    "number": "099",
+    "category": "pokemon",
+    "name": {
+      "ja": "メガフラエッテex"
+    },
+    "pokemon": [
+      "メガフラエッテex"
+    ],
+    "illustrator": "aky CG Works",
+    "rarity": "ultra_rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 250,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "ja": "やさしいひかり"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "おたがいのポケモン全員のHPを、それぞれ「30」回復する。"
+        }
+      },
+      {
+        "name": {
+          "ja": "エタニティブルーム"
+        },
+        "cost": [
+          "psychic",
+          "psychic",
+          "psychic"
+        ],
+        "damage": "200",
+        "text": {
+          "ja": "自分の山札から「基本[P]エネルギー」を4枚まで選び、ベンチポケモンに好きなようにつける。そして山札を切る。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-m4-100",
+    "set_id": "asia-m4",
+    "number": "100",
+    "category": "pokemon",
+    "name": {
+      "ja": "パンプジンex"
+    },
+    "pokemon": [
+      "パンプジンex"
+    ],
+    "illustrator": "5ban Graphics",
+    "rarity": "ultra_rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 270,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "バケッチャ"
+    },
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ホラーロンド"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "30+",
+        "text": {
+          "ja": "ダメカンがのっている自分のベンチポケモンの数×50ダメージ追加。"
+        }
+      },
+      {
+        "name": {
+          "ja": "ゴーストタッチ"
+        },
+        "cost": [
+          "psychic",
+          "psychic"
+        ],
+        "damage": "140",
+        "text": {
+          "ja": "相手の手札からオモテを見ないで1枚選び、トラッシュする。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-m4-101",
+    "set_id": "asia-m4",
+    "number": "101",
+    "category": "pokemon",
+    "name": {
+      "ja": "コバルオンex"
+    },
+    "pokemon": [
+      "コバルオンex"
+    ],
+    "illustrator": "5ban Graphics",
+    "rarity": "ultra_rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 210,
+    "types": [
+      "metal"
+    ],
+    "stage": "basic",
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "ja": "パワータックル"
+        },
+        "cost": [
+          "metal",
+          "metal",
+          "normal"
+        ],
+        "damage": "200",
+        "text": {
+          "ja": "次の自分の番、このポケモンはワザが使えない。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "grass",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-m4-102",
+    "set_id": "asia-m4",
+    "number": "102",
+    "category": "pokemon",
+    "name": {
+      "ja": "メガドラミドロex"
+    },
+    "pokemon": [
+      "メガドラミドロex"
+    ],
+    "illustrator": "5ban Graphics",
+    "rarity": "ultra_rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 330,
+    "types": [
+      "dragon"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "クズモー"
+    },
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ふしょくえき"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "相手のポケモン全員についている「ポケモンのどうぐ」と「特殊エネルギー」を、すべてトラッシュする。"
+        }
+      },
+      {
+        "name": {
+          "ja": "デッドリーポイズン"
+        },
+        "cost": [
+          "water",
+          "dark"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "相手のバトルポケモンをどくにする。このどくでのせるダメカンの数は16個になる。"
+        }
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-m4-103",
+    "set_id": "asia-m4",
+    "number": "103",
+    "category": "pokemon",
+    "name": {
+      "ja": "チラチーノex"
+    },
+    "pokemon": [
+      "チラチーノex"
+    ],
+    "illustrator": "5ban Graphics",
+    "rarity": "ultra_rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 240,
+    "types": [
+      "normal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "チラーミィ"
+    },
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "ja": "エナジービンタ"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "40×",
+        "text": {
+          "ja": "このポケモンについているエネルギーの数×40ダメージ。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-m4-104",
+    "set_id": "asia-m4",
+    "number": "104",
+    "category": "trainer",
+    "name": {
+      "ja": "エネルギー回収"
+    },
+    "pokemon": [],
+    "illustrator": "Studio Bora Inc.",
+    "rarity": "ultra_rare",
+    "regulation_mark": "I",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "ja": "自分のトラッシュから基本エネルギーを2枚選び、相手に見せてから、手札に加える。"
+    }
+  },
+  {
+    "id": "asia-m4-105",
+    "set_id": "asia-m4",
+    "number": "105",
+    "category": "trainer",
+    "name": {
+      "ja": "ジャンボアイス"
+    },
+    "pokemon": [],
+    "illustrator": "AYUMI ODASHIMA",
+    "rarity": "ultra_rare",
+    "regulation_mark": "I",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "ja": "エネルギーが3個以上ついている自分のバトルポケモンのHPを「80」回復する。"
+    }
+  },
+  {
+    "id": "asia-m4-106",
+    "set_id": "asia-m4",
+    "number": "106",
+    "category": "trainer",
+    "name": {
+      "ja": "スペシャルレッドカード"
+    },
+    "pokemon": [],
+    "illustrator": "Studio Bora Inc.",
+    "rarity": "ultra_rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "ja": "このカードは、相手のサイドの残り枚数が3枚以下のときにしか使えない。相手は相手自身の手札をすべてウラにして切り、山札の下にもどす。その後、相手は山札を3枚引く。"
+    }
+  },
+  {
+    "id": "asia-m4-107",
+    "set_id": "asia-m4",
+    "number": "107",
+    "category": "trainer",
+    "name": {
+      "ja": "ツールスクラッパー"
+    },
+    "pokemon": [],
+    "illustrator": "Studio Bora Inc.",
+    "rarity": "ultra_rare",
+    "regulation_mark": "I",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "ja": "おたがいの場のポケモンについている「ポケモンのどうぐ」を2枚まで選び、トラッシュする。"
+    }
+  },
+  {
+    "id": "asia-m4-108",
+    "set_id": "asia-m4",
+    "number": "108",
+    "category": "trainer",
+    "name": {
+      "ja": "AZの安らぎ"
+    },
+    "pokemon": [],
+    "illustrator": "GIDORA",
+    "rarity": "ultra_rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "ja": "自分のバトルポケモンをベンチポケモンと入れ替える。「ポケモンex」をベンチに入れ替えた場合、そのポケモンのHPを「80」回復する。"
+    }
+  },
+  {
+    "id": "asia-m4-109",
+    "set_id": "asia-m4",
+    "number": "109",
+    "category": "trainer",
+    "name": {
+      "ja": "ジプソ"
+    },
+    "pokemon": [],
+    "illustrator": "Souichirou Gunjima",
+    "rarity": "ultra_rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "ja": "自分のトラッシュから「基本[M]エネルギー」を2枚まで選び、自分の[M]ポケモン1匹につける。"
+    }
+  },
+  {
+    "id": "asia-m4-110",
+    "set_id": "asia-m4",
+    "number": "110",
+    "category": "trainer",
+    "name": {
+      "ja": "ホミカの演奏"
+    },
+    "pokemon": [],
+    "illustrator": "Nobusawa/Mochipuyo",
+    "rarity": "ultra_rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "ja": "次の相手の番、相手のどくのポケモンは、にげられない。（新しくどくにしたポケモンもふくむ。）"
+    }
+  },
+  {
+    "id": "asia-m4-111",
+    "set_id": "asia-m4",
+    "number": "111",
+    "category": "trainer",
+    "name": {
+      "ja": "マチエール"
+    },
+    "pokemon": [],
+    "illustrator": "Akira Komayama",
+    "rarity": "ultra_rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "ja": "相手の手札を見て、その中にあるポケモンの枚数ぶん、自分の山札を引く。"
+    }
+  },
+  {
+    "id": "asia-m4-112",
+    "set_id": "asia-m4",
+    "number": "112",
+    "category": "trainer",
+    "name": {
+      "ja": "なみのりビーチ"
+    },
+    "pokemon": [],
+    "illustrator": "AYUMI ODASHIMA",
+    "rarity": "ultra_rare",
+    "regulation_mark": "I",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "trainer_type": "stadium",
+    "rules_text": {
+      "ja": "おたがいのプレイヤーは、自分の番ごとに1回、自分のバトル場の[W]ポケモンを、ベンチの[W]ポケモンと入れ替えてよい。"
+    }
+  },
+  {
+    "id": "asia-m4-113",
+    "set_id": "asia-m4",
+    "number": "113",
+    "category": "trainer",
+    "name": {
+      "ja": "プリズムタワー"
+    },
+    "pokemon": [],
+    "illustrator": "MARINA Chikazawa",
+    "rarity": "ultra_rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "trainer_type": "stadium",
+    "rules_text": {
+      "ja": "おたがいのプレイヤーは、自分の番ごとに1回、自分の手札を2枚トラッシュするなら、自分の山札を1枚引いてよい。"
+    }
+  },
+  {
+    "id": "asia-m4-114",
+    "set_id": "asia-m4",
+    "number": "114",
+    "category": "pokemon",
+    "name": {
+      "ja": "メガゲッコウガex"
+    },
+    "pokemon": [
+      "メガゲッコウガex"
+    ],
+    "illustrator": "Susumu Maeya",
+    "rarity": "special_illustration_rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 350,
+    "types": [
+      "water"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "ja": "ゲコガシラ"
+    },
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ニンジャスピナー"
+        },
+        "cost": [
+          "water",
+          "water"
+        ],
+        "damage": "120+",
+        "text": {
+          "ja": "のぞむなら、このポケモンについている[W]エネルギーを1個手札にもどし、80ダメージ追加。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-m4-115",
+    "set_id": "asia-m4",
+    "number": "115",
+    "category": "pokemon",
+    "name": {
+      "ja": "メガフラエッテex"
+    },
+    "pokemon": [
+      "メガフラエッテex"
+    ],
+    "illustrator": "Teeziro",
+    "rarity": "special_illustration_rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 250,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "ja": "やさしいひかり"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "おたがいのポケモン全員のHPを、それぞれ「30」回復する。"
+        }
+      },
+      {
+        "name": {
+          "ja": "エタニティブルーム"
+        },
+        "cost": [
+          "psychic",
+          "psychic",
+          "psychic"
+        ],
+        "damage": "200",
+        "text": {
+          "ja": "自分の山札から「基本[P]エネルギー」を4枚まで選び、ベンチポケモンに好きなようにつける。そして山札を切る。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-m4-116",
+    "set_id": "asia-m4",
+    "number": "116",
+    "category": "pokemon",
+    "name": {
+      "ja": "メガドラミドロex"
+    },
+    "pokemon": [
+      "メガドラミドロex"
+    ],
+    "illustrator": "Kazumasa Yasukuni",
+    "rarity": "special_illustration_rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 330,
+    "types": [
+      "dragon"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "クズモー"
+    },
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ふしょくえき"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "相手のポケモン全員についている「ポケモンのどうぐ」と「特殊エネルギー」を、すべてトラッシュする。"
+        }
+      },
+      {
+        "name": {
+          "ja": "デッドリーポイズン"
+        },
+        "cost": [
+          "water",
+          "dark"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "相手のバトルポケモンをどくにする。このどくでのせるダメカンの数は16個になる。"
+        }
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-m4-117",
+    "set_id": "asia-m4",
+    "number": "117",
+    "category": "pokemon",
+    "name": {
+      "ja": "チラチーノex"
+    },
+    "pokemon": [
+      "チラチーノex"
+    ],
+    "illustrator": "Keisin",
+    "rarity": "special_illustration_rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 240,
+    "types": [
+      "normal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "チラーミィ"
+    },
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "ja": "エナジービンタ"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "40×",
+        "text": {
+          "ja": "このポケモンについているエネルギーの数×40ダメージ。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-m4-118",
+    "set_id": "asia-m4",
+    "number": "118",
+    "category": "trainer",
+    "name": {
+      "ja": "AZの安らぎ"
+    },
+    "pokemon": [],
+    "illustrator": "OKACHEKE",
+    "rarity": "special_illustration_rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "ja": "自分のバトルポケモンをベンチポケモンと入れ替える。「ポケモンex」をベンチに入れ替えた場合、そのポケモンのHPを「80」回復する。"
+    }
+  },
+  {
+    "id": "asia-m4-119",
+    "set_id": "asia-m4",
+    "number": "119",
+    "category": "trainer",
+    "name": {
+      "ja": "ホミカの演奏"
+    },
+    "pokemon": [],
+    "illustrator": "Tomowaka",
+    "rarity": "special_illustration_rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "ja": "次の相手の番、相手のどくのポケモンは、にげられない。（新しくどくにしたポケモンもふくむ。）"
+    }
+  },
+  {
+    "id": "asia-m4-120",
+    "set_id": "asia-m4",
+    "number": "120",
+    "category": "pokemon",
+    "name": {
+      "ja": "メガゲッコウガex"
+    },
+    "pokemon": [
+      "メガゲッコウガex"
+    ],
+    "illustrator": "takuyoa",
+    "rarity": "mega_hyper_rare",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": ""
+        }
+      }
+    ],
+    "hp": 350,
+    "types": [
+      "water"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "ja": "ゲコガシラ"
+    },
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ニンジャスピナー"
+        },
+        "cost": [
+          "water",
+          "water"
+        ],
+        "damage": "120+",
+        "text": {
+          "ja": "のぞむなら、このポケモンについている[W]エネルギーを1個手札にもどし、80ダメージ追加。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  }
+]

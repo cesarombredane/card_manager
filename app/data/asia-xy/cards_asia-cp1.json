@@ -1,0 +1,1650 @@
+[
+  {
+    "id": "asia-cp1-001",
+    "set_id": "asia-cp1",
+    "number": "001",
+    "category": "pokemon",
+    "name": {
+      "ja": "マグマ団のドンメル"
+    },
+    "pokemon": [
+      "マグマ団のドンメル"
+    ],
+    "illustrator": "Akira Komayama",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ひのこ"
+        },
+        "cost": [
+          "fire",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "ja": "このポケモンについているエネルギーを1個選び、トラッシュする。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-cp1-002",
+    "set_id": "asia-cp1",
+    "number": "002",
+    "category": "pokemon",
+    "name": {
+      "ja": "マグマ団のバクーダ"
+    },
+    "pokemon": [
+      "マグマ団のバクーダ"
+    ],
+    "illustrator": "Shin Nagasawa",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 110,
+    "types": [
+      "fire"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "マグマ団のドンメル"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "かえんだま"
+        },
+        "cost": [
+          "fire",
+          "normal",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {
+          "ja": "このポケモンについている基本エネルギーを1個選び、ベンチポケモンにつけ替える。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "asia-cp1-003",
+    "set_id": "asia-cp1",
+    "number": "003",
+    "category": "pokemon",
+    "name": {
+      "ja": "アクア団のタマザラシ"
+    },
+    "pokemon": [
+      "アクア団のタマザラシ"
+    ],
+    "illustrator": "Sanosuke Sakuma",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "みずでっぽう"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-cp1-004",
+    "set_id": "asia-cp1",
+    "number": "004",
+    "category": "pokemon",
+    "name": {
+      "ja": "アクア団のトドグラー"
+    },
+    "pokemon": [
+      "アクア団のトドグラー"
+    ],
+    "illustrator": "Naoki Saito",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "water"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "アクア団のタマザラシ"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "みずとばし"
+        },
+        "cost": [
+          "water",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "相手のポケモンを1匹選び、20ダメージ。［ベンチは弱点・抵抗力の計算をしない。］"
+        }
+      },
+      {
+        "name": {
+          "ja": "ひょうのかぜ"
+        },
+        "cost": [
+          "water",
+          "normal",
+          "normal"
+        ],
+        "damage": "60+",
+        "text": {
+          "ja": "相手のバトルポケモンが「マグマ団」のポケモンなら、60ダメージを追加。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "asia-cp1-005",
+    "set_id": "asia-cp1",
+    "number": "005",
+    "category": "pokemon",
+    "name": {
+      "ja": "アクア団のトドゼルガ"
+    },
+    "pokemon": [
+      "アクア団のトドゼルガ"
+    ],
+    "illustrator": "Hitoshi Ariga",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 140,
+    "types": [
+      "water"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "ja": "アクア団のトドグラー"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "パワーブロー"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "30×",
+        "text": {
+          "ja": "このポケモンについているエネルギーの数x30ダメージ。"
+        }
+      },
+      {
+        "name": {
+          "ja": "デュアルブリザード"
+        },
+        "cost": [
+          "water",
+          "water",
+          "water",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "このポケモンについている[水]エネルギーを2個トラッシュし、相手のポケモンを2匹選び、それぞれに80ダメージ。［ベンチは弱点・抵抗力の計算をしない。］"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 4
+  },
+  {
+    "id": "asia-cp1-006",
+    "set_id": "asia-cp1",
+    "number": "006",
+    "category": "pokemon",
+    "name": {
+      "ja": "アクア団のカイオーガEX"
+    },
+    "pokemon": [
+      "アクア団のカイオーガEX"
+    ],
+    "illustrator": "nagimiso",
+    "rarity": "double_rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 190,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "ja": "アクアインパクト"
+        },
+        "cost": [
+          "water",
+          "water",
+          "water",
+          "normal"
+        ],
+        "damage": "80+",
+        "text": {
+          "ja": "相手のバトルポケモンのにげるために必要なエネルギーの数x20ダメージを追加。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 4
+  },
+  {
+    "id": "asia-cp1-007",
+    "set_id": "asia-cp1",
+    "number": "007",
+    "category": "pokemon",
+    "name": {
+      "ja": "アクア団のベトベター"
+    },
+    "pokemon": [
+      "アクア団のベトベター"
+    ],
+    "illustrator": "kawayoo",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "はたく"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "ja": "どろかけ"
+        },
+        "cost": [
+          "psychic",
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-cp1-008",
+    "set_id": "asia-cp1",
+    "number": "008",
+    "category": "pokemon",
+    "name": {
+      "ja": "アクア団のベトベトン"
+    },
+    "pokemon": [
+      "アクア団のベトベトン"
+    ],
+    "illustrator": "Kouki Saitou",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 110,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "アクア団のベトベター"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "ついげき"
+        },
+        "cost": [
+          "psychic",
+          "normal",
+          "normal"
+        ],
+        "damage": "60+",
+        "text": {
+          "ja": "相手のバトルポケモンが特殊状態なら、60ダメージを追加。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "asia-cp1-009",
+    "set_id": "asia-cp1",
+    "number": "009",
+    "category": "pokemon",
+    "name": {
+      "ja": "アクア団のハブネーク"
+    },
+    "pokemon": [
+      "アクア団のハブネーク"
+    ],
+    "illustrator": "Naoki Saito",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "どくのキバ"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "10",
+        "text": {
+          "ja": "コインを1回投げオモテなら、相手のバトルポケモンをどくにする。"
+        }
+      },
+      {
+        "name": {
+          "ja": "ベノムテール"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "ja": "相手のバトルポケモンが特殊状態なら、そのバトルポケモンについているエネルギーを1個選び、トラッシュする。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-cp1-010",
+    "set_id": "asia-cp1",
+    "number": "010",
+    "category": "pokemon",
+    "name": {
+      "ja": "マグマ団のヤジロン"
+    },
+    "pokemon": [
+      "マグマ団のヤジロン"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "テレキネシス"
+        },
+        "cost": [
+          "psychic",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "相手のポケモンを1匹選び、20ダメージ。このワザのダメージは弱点・抵抗力の計算をしない。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-cp1-011",
+    "set_id": "asia-cp1",
+    "number": "011",
+    "category": "pokemon",
+    "name": {
+      "ja": "マグマ団のネンドール"
+    },
+    "pokemon": [
+      "マグマ団のネンドール"
+    ],
+    "illustrator": "Masakazu Fukuda",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "マグマ団のヤジロン"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "パワービーム"
+        },
+        "cost": [
+          "psychic",
+          "normal",
+          "normal"
+        ],
+        "damage": "70",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-cp1-012",
+    "set_id": "asia-cp1",
+    "number": "012",
+    "category": "pokemon",
+    "name": {
+      "ja": "マグマ団のココドラ"
+    },
+    "pokemon": [
+      "マグマ団のココドラ"
+    ],
+    "illustrator": "Akira Komayama",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "かじる"
+        },
+        "cost": [
+          "fighting"
+        ],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-cp1-013",
+    "set_id": "asia-cp1",
+    "number": "013",
+    "category": "pokemon",
+    "name": {
+      "ja": "マグマ団のコドラ"
+    },
+    "pokemon": [
+      "マグマ団のコドラ"
+    ],
+    "illustrator": "Masakazu Fukuda",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "マグマ団のココドラ"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "かじる"
+        },
+        "cost": [
+          "fighting",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      },
+      {
+        "name": {
+          "ja": "とっしん"
+        },
+        "cost": [
+          "fighting",
+          "normal",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {
+          "ja": "このポケモンにも10ダメージ。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "asia-cp1-014",
+    "set_id": "asia-cp1",
+    "number": "014",
+    "category": "pokemon",
+    "name": {
+      "ja": "マグマ団のボスゴドラ"
+    },
+    "pokemon": [
+      "マグマ団のボスゴドラ"
+    ],
+    "illustrator": "TOKIYA",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 140,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "ja": "マグマ団のコドラ"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "ロックスタンプ"
+        },
+        "cost": [
+          "fighting",
+          "normal"
+        ],
+        "damage": "40×",
+        "text": {
+          "ja": "自分の場のポケモンについている[闘]エネルギーを好きなだけトラッシュし、トラッシュした[闘]エネルギーの数x40ダメージ。"
+        }
+      },
+      {
+        "name": {
+          "ja": "がんせきあらし"
+        },
+        "cost": [
+          "fighting",
+          "fighting",
+          "fighting",
+          "normal"
+        ],
+        "damage": "120",
+        "text": {
+          "ja": "ダメカンがのっている相手のベンチポケモン全員にも、それぞれ20ダメージ。［ベンチは弱点・抵抗力の計算をしない。］"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 4
+  },
+  {
+    "id": "asia-cp1-015",
+    "set_id": "asia-cp1",
+    "number": "015",
+    "category": "pokemon",
+    "name": {
+      "ja": "マグマ団のグラードンEX"
+    },
+    "pokemon": [
+      "マグマ団のグラードンEX"
+    ],
+    "illustrator": "nagimiso",
+    "rarity": "double_rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 190,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "ja": "マグマクエイク"
+        },
+        "cost": [
+          "fighting",
+          "fighting",
+          "fighting",
+          "normal"
+        ],
+        "damage": "80+",
+        "text": {
+          "ja": "ダメージを与えるとき、すでに相手のバトルポケモンにダメカンがのっているなら、80ダメージを追加。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 4
+  },
+  {
+    "id": "asia-cp1-016",
+    "set_id": "asia-cp1",
+    "number": "016",
+    "category": "pokemon",
+    "name": {
+      "ja": "アクア団のポチエナ"
+    },
+    "pokemon": [
+      "アクア団のポチエナ"
+    ],
+    "illustrator": "Kouki Saitou",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "dark"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ほえる"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "相手のバトルポケモンをベンチポケモンと入れ替える。［バトル場に出すポケモンは相手が選ぶ。］"
+        }
+      },
+      {
+        "name": {
+          "ja": "かみつく"
+        },
+        "cost": [
+          "water",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-cp1-017",
+    "set_id": "asia-cp1",
+    "number": "017",
+    "category": "pokemon",
+    "name": {
+      "ja": "マグマ団のポチエナ"
+    },
+    "pokemon": [
+      "マグマ団のポチエナ"
+    ],
+    "illustrator": "TOKIYA",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "dark"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "せんにゅう"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "相手の手札を見る。"
+        }
+      },
+      {
+        "name": {
+          "ja": "かみつく"
+        },
+        "cost": [
+          "fighting",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-cp1-018",
+    "set_id": "asia-cp1",
+    "number": "018",
+    "category": "pokemon",
+    "name": {
+      "ja": "アクア団のグラエナ"
+    },
+    "pokemon": [
+      "アクア団のグラエナ"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "dark"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "アクア団のポチエナ"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "チームインパクト"
+        },
+        "cost": [
+          "water",
+          "normal"
+        ],
+        "damage": "30×",
+        "text": {
+          "ja": "自分の場の「アクア団」のポケモンの数ぶんコインを投げ、オモテの数x30ダメージ。"
+        }
+      },
+      {
+        "name": {
+          "ja": "かみくだく"
+        },
+        "cost": [
+          "water",
+          "water",
+          "normal"
+        ],
+        "damage": "80",
+        "text": {
+          "ja": "コインを1回投げオモテなら、相手のバトルポケモンについているエネルギーを1個選び、トラッシュする。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-cp1-019",
+    "set_id": "asia-cp1",
+    "number": "019",
+    "category": "pokemon",
+    "name": {
+      "ja": "マグマ団のグラエナ"
+    },
+    "pokemon": [
+      "マグマ団のグラエナ"
+    ],
+    "illustrator": "Hitoshi Ariga",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "dark"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "マグマ団のポチエナ"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "かみつく"
+        },
+        "cost": [
+          "fighting",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      },
+      {
+        "name": {
+          "ja": "てきいのキバ"
+        },
+        "cost": [
+          "fighting",
+          "fighting",
+          "normal"
+        ],
+        "damage": "80+",
+        "text": {
+          "ja": "相手のバトルポケモンが「アクア団」のポケモンなら、40ダメージを追加。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-cp1-020",
+    "set_id": "asia-cp1",
+    "number": "020",
+    "category": "pokemon",
+    "name": {
+      "ja": "アクア団のキバニア"
+    },
+    "pokemon": [
+      "アクア団のキバニア"
+    ],
+    "illustrator": "Sanosuke Sakuma",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "dark"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ひれビンタ"
+        },
+        "cost": [
+          "dark"
+        ],
+        "damage": "10×",
+        "text": {
+          "ja": "コインを2回投げ、オモテの数x10ダメージ。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-cp1-021",
+    "set_id": "asia-cp1",
+    "number": "021",
+    "category": "pokemon",
+    "name": {
+      "ja": "アクア団のサメハダー"
+    },
+    "pokemon": [
+      "アクア団のサメハダー"
+    ],
+    "illustrator": "kawayoo",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "dark"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "アクア団のキバニア"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "するどいキバ"
+        },
+        "cost": [
+          "dark",
+          "normal",
+          "normal"
+        ],
+        "damage": "70",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 0
+  },
+  {
+    "id": "asia-cp1-022",
+    "set_id": "asia-cp1",
+    "number": "022",
+    "category": "pokemon",
+    "name": {
+      "ja": "マグマ団のザングース"
+    },
+    "pokemon": [
+      "マグマ団のザングース"
+    ],
+    "illustrator": "Shin Nagasawa",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "なかまをよぶ"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "自分の山札から「マグマ団」のたねポケモンを2枚まで選び、ベンチに出す。そして山札を切る。"
+        }
+      },
+      {
+        "name": {
+          "ja": "チームプレイ"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "20×",
+        "text": {
+          "ja": "自分のベンチの「マグマ団」のポケモンの数x20ダメージ。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-cp1-023",
+    "set_id": "asia-cp1",
+    "number": "023",
+    "category": "trainer",
+    "name": {
+      "ja": "アクア団のスーパーボール"
+    },
+    "pokemon": [],
+    "illustrator": "Toyste Beach",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "ja": "自分の山札から「アクア団」のたねポケモンと基本[水]エネルギーをそれぞれ1枚ずつ選び、相手に見せてから、手札に加える。そして山札を切る。"
+    }
+  },
+  {
+    "id": "asia-cp1-024",
+    "set_id": "asia-cp1",
+    "number": "024",
+    "category": "trainer",
+    "name": {
+      "ja": "マグマ団のスーパーボール"
+    },
+    "pokemon": [],
+    "illustrator": "Toyste Beach",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "ja": "自分の山札から「マグマ団」のたねポケモンと基本[闘]エネルギーをそれぞれ1枚ずつ選び、相手に見せてから、手札に加える。そして山札を切る。"
+    }
+  },
+  {
+    "id": "asia-cp1-025",
+    "set_id": "asia-cp1",
+    "number": "025",
+    "category": "trainer",
+    "name": {
+      "ja": "アクアディフューザー"
+    },
+    "pokemon": [],
+    "illustrator": "Toyste Beach",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "attacks": [
+      {
+        "name": {
+          "ja": "アクアディフューザー"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "相手のバトルポケモンをどくとこんらんにする。"
+        }
+      }
+    ],
+    "trainer_type": "tool",
+    "rules_text": {
+      "ja": "このカードをつけている「アクア団」のポケモンは、このカードに書かれているワザを使える。［ワザを使うためのエネルギーは必要。］"
+    }
+  },
+  {
+    "id": "asia-cp1-026",
+    "set_id": "asia-cp1",
+    "number": "026",
+    "category": "trainer",
+    "name": {
+      "ja": "マグマポインター"
+    },
+    "pokemon": [],
+    "illustrator": "Toyste Beach",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "attacks": [
+      {
+        "name": {
+          "ja": "マグマポインター"
+        },
+        "cost": [
+          "fighting"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "相手のポケモンを1匹選び、20ダメージ。［ベンチは弱点・抵抗力の計算をしない。］"
+        }
+      }
+    ],
+    "trainer_type": "tool",
+    "rules_text": {
+      "ja": "このカードをつけている「マグマ団」のポケモンは、このカードに書かれているワザを使える。［ワザを使うためのエネルギーは必要。］"
+    }
+  },
+  {
+    "id": "asia-cp1-027",
+    "set_id": "asia-cp1",
+    "number": "027",
+    "category": "trainer",
+    "name": {
+      "ja": "アクア団の幹部"
+    },
+    "pokemon": [],
+    "illustrator": "GAME FREAK inc.",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "ja": "自分のトラッシュから基本エネルギーを1枚選び、自分のバトル場にいる「アクア団」のポケモンにつける。"
+    }
+  },
+  {
+    "id": "asia-cp1-028",
+    "set_id": "asia-cp1",
+    "number": "028",
+    "category": "trainer",
+    "name": {
+      "ja": "アクア団のしたっぱ"
+    },
+    "pokemon": [],
+    "illustrator": "GAME FREAK inc.",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "ja": "自分の手札を1枚選び、トラッシュする。その後、自分の山札を3枚引く。トラッシュしたカードが「アクア団」のポケモンなら、さらに1枚引く。"
+    }
+  },
+  {
+    "id": "asia-cp1-029",
+    "set_id": "asia-cp1",
+    "number": "029",
+    "category": "trainer",
+    "name": {
+      "ja": "マグマ団の幹部"
+    },
+    "pokemon": [],
+    "illustrator": "GAME FREAK inc.",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "ja": "自分のトラッシュから「マグマ団」のポケモンを3枚選び、相手に見せてから、手札に加える。"
+    }
+  },
+  {
+    "id": "asia-cp1-030",
+    "set_id": "asia-cp1",
+    "number": "030",
+    "category": "trainer",
+    "name": {
+      "ja": "マグマ団のしたっぱ"
+    },
+    "pokemon": [],
+    "illustrator": "GAME FREAK inc.",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "ja": "自分の手札を1枚選び、トラッシュする。その後、自分の山札を3枚引く。トラッシュしたカードが「マグマ団」のポケモンなら、さらに1枚引く。"
+    }
+  },
+  {
+    "id": "asia-cp1-031",
+    "set_id": "asia-cp1",
+    "number": "031",
+    "category": "trainer",
+    "name": {
+      "ja": "アクア団の秘密基地"
+    },
+    "pokemon": [],
+    "illustrator": "Ryo Ueda",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "trainer_type": "stadium",
+    "rules_text": {
+      "ja": "おたがいのポケモン全員（「アクア団」をのぞく）のにげるために必要なエネルギーは、それぞれ1個ぶん多くなる。"
+    }
+  },
+  {
+    "id": "asia-cp1-032",
+    "set_id": "asia-cp1",
+    "number": "032",
+    "category": "trainer",
+    "name": {
+      "ja": "マグマ団の秘密基地"
+    },
+    "pokemon": [],
+    "illustrator": "Ryo Ueda",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "trainer_type": "stadium",
+    "rules_text": {
+      "ja": "おたがいのプレイヤーは、それぞれ、手札からたねポケモン（「マグマ団」をのぞく）をベンチに出すたび、そのポケモンにダメカンを2個のせる。"
+    }
+  },
+  {
+    "id": "asia-cp1-033",
+    "set_id": "asia-cp1",
+    "number": "033",
+    "category": "energy",
+    "name": {
+      "ja": "ダブルアクアエネルギー"
+    },
+    "pokemon": [],
+    "illustrator": "5ban Graphics",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "ja": "このカードは「アクア団」のポケモンにしかつけられず、つけた番の終わりにトラッシュする。このカードはポケモンについているかぎり、[水]エネルギー2個ぶんとしてはたらく。（このカードが「アクア団」のポケモン以外についているなら、トラッシュする。）"
+    }
+  },
+  {
+    "id": "asia-cp1-034",
+    "set_id": "asia-cp1",
+    "number": "034",
+    "category": "energy",
+    "name": {
+      "ja": "ダブルマグマエネルギー"
+    },
+    "pokemon": [],
+    "illustrator": "5ban Graphics",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "rules_text": {
+      "ja": "このカードは「マグマ団」のポケモンにしかつけられず、つけた番の終わりにトラッシュする。このカードはポケモンについているかぎり、[闘]エネルギー2個ぶんとしてはたらく。（このカードが「マグマ団」のポケモン以外についているなら、トラッシュする。）"
+    }
+  }
+]
