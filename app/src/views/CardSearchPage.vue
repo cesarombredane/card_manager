@@ -27,10 +27,32 @@
 
     <section class="row q-col-gutter-md items-center q-mb-md">
       <div class="col-12 col-sm-6 col-md-4">
-        <q-select v-model="selectedArtist" :options="artistOptions" dark dense outlined clearable label="Artist" />
+        <q-select
+          v-model="selectedArtist"
+          :options="filteredArtistOptions"
+          dark
+          dense
+          outlined
+          clearable
+          use-input
+          input-debounce="0"
+          label="Artist"
+          @filter="filterArtists"
+        />
       </div>
       <div class="col-12 col-sm-6 col-md-4">
-        <q-select v-model="selectedPokemon" :options="pokemonOptions" dark dense outlined clearable label="Pokemon" />
+        <q-select
+          v-model="selectedPokemon"
+          :options="filteredPokemonOptions"
+          dark
+          dense
+          outlined
+          clearable
+          use-input
+          input-debounce="0"
+          label="Pokemon"
+          @filter="filterPokemon"
+        />
       </div>
     </section>
 
@@ -118,6 +140,12 @@
   // Selected Pokemon filter.
   const selectedPokemon = ref<string | null>(queryValue('pokemon'));
 
+  // Artist options matching the text currently typed in the select.
+  const filteredArtistOptions = ref<string[]>([]);
+
+  // Pokemon options matching the text currently typed in the select.
+  const filteredPokemonOptions = ref<string[]>([]);
+
   // Number of filtered cards currently visible.
   const visibleCardCount = ref<number>(initialVisibleCardCount);
 
@@ -168,6 +196,31 @@
 
 
   /* methods */
+  // Narrows select options using a case-insensitive prefix match.
+  const filterSelectOptions = (
+    inputValue: string,
+    options: string[],
+    filteredOptions: { value: string[] },
+    update: (callback: () => void) => void
+  ): void => {
+    const query: string = inputValue.trim().toLowerCase();
+    update(() => {
+      filteredOptions.value = query === ''
+        ? options
+        : options.filter((option) => option.toLowerCase().startsWith(query));
+    });
+  };
+
+  // Filters artist suggestions as the user types.
+  const filterArtists = (inputValue: string, update: (callback: () => void) => void): void => {
+    filterSelectOptions(inputValue, artistOptions.value, filteredArtistOptions, update);
+  };
+
+  // Filters Pokemon suggestions as the user types.
+  const filterPokemon = (inputValue: string, update: (callback: () => void) => void): void => {
+    filterSelectOptions(inputValue, pokemonOptions.value, filteredPokemonOptions, update);
+  };
+
   // Increases the number of rendered card results.
   const showMoreCards = (): void => {
     visibleCardCount.value += visibleCardStep;

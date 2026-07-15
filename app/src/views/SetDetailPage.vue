@@ -31,10 +31,10 @@
         <q-select v-model="selectedRarity" :options="rarityOptions" dark dense outlined clearable label="Rarity" />
       </div>
       <div class="col-12 col-sm-6 col-md-3">
-        <q-select v-model="selectedEnergy" :options="energyOptions" dark dense outlined clearable label="Energy" />
+        <q-select v-model="selectedType" :options="typeOptions" dark dense outlined clearable label="Type" />
       </div>
       <div class="col-12 col-sm-6 col-md-3">
-        <q-select v-model="selectedCategory" :options="categoryOptions" dark dense outlined clearable label="Type" />
+        <q-select v-model="selectedCategory" :options="categoryOptions" dark dense outlined clearable label="Category" />
       </div>
       <div class="col-12 col-sm-6 col-md-3">
         <q-select v-model="selectedVariant" :options="variantOptions" dark dense outlined clearable label="Variant" />
@@ -108,8 +108,8 @@
   // Selected rarity filter.
   const selectedRarity = ref<string | null>(null);
 
-  // Selected attack energy filter.
-  const selectedEnergy = ref<string | null>(null);
+  // Selected Pokemon type filter.
+  const selectedType = ref<string | null>(null);
 
   // Selected card category filter.
   const selectedCategory = ref<string | null>(null);
@@ -125,8 +125,8 @@
   // Rarity filter options found in this set.
   const rarityOptions = computed<string[]>(() => uniqueValues(allCards.value.map((card) => card.rarity)));
 
-  // Energy filter options found in this set.
-  const energyOptions = computed<string[]>(() => uniqueValues(allCards.value.flatMap((card) => card.energy_costs)));
+  // Pokemon type filter options found in this set.
+  const typeOptions = computed<string[]>(() => uniqueValues(allCards.value.flatMap((card) => card.types)));
 
   // Card category filter options found in this set.
   const categoryOptions = computed<string[]>(() => uniqueValues(allCards.value.map((card) => card.category)));
@@ -141,7 +141,7 @@
     return allCards.value
       .filter((card) => query === '' || card.display_name.toLowerCase().includes(query) || card.number.toLowerCase().includes(query))
       .filter((card) => !selectedRarity.value || card.rarity === selectedRarity.value)
-      .filter((card) => !selectedEnergy.value || card.energy_costs.includes(selectedEnergy.value))
+      .filter((card) => !selectedType.value || card.types.includes(selectedType.value))
       .filter((card) => !selectedCategory.value || card.category === selectedCategory.value)
       .filter((card) => !selectedVariant.value || card.variant_id === selectedVariant.value)
       .sort((a, b) => compareCardNumbers(a.number, b.number) || a.variant_id.localeCompare(b.variant_id));
