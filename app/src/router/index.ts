@@ -7,6 +7,7 @@ import CardDetailPage from '../views/CardDetailPage.vue';
 import CardSearchPage from '../views/CardSearchPage.vue';
 import SetDetailPage from '../views/SetDetailPage.vue';
 import HomePage from '../views/HomePage.vue';
+import CoveragePage from '../views/CoveragePage.vue';
 
 
 // create router instance
@@ -33,6 +34,11 @@ export const router = createRouter({
       path: '/cards/search',
       name: 'card-search',
       component: CardSearchPage
+    },
+    {
+      path: '/coverage',
+      name: 'coverage',
+      component: CoveragePage
     },
     {
       path: '/set/:setId',

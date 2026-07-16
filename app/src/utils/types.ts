@@ -30,6 +30,46 @@ export type Pokemon = {
   form: 'mega' | 'alolan' | 'galarian' | 'hisuian' | 'paldean' | null;
 };
 
+export type CoverageCounts = {
+  slots: number;
+  filled: number;
+  missing: number;
+  percent: number;
+};
+
+export type SetCoverage = {
+  id: string;
+  name: string;
+  series_id: string;
+  series_name: string;
+  region_id: string;
+  release_date: string;
+  languages: string[];
+  has_logo: boolean;
+  has_symbol: boolean;
+  cards: number;
+  variants: number;
+  cards_with_image: number;
+  cards_without_image: number;
+  image_coverage_percent: number;
+  language_coverage: Record<string, CoverageCounts>;
+  missing_card_ids: string[];
+  missing_images: Record<string, string[]>;
+  sources: Record<string, unknown>;
+};
+
+export type CoverageReport = {
+  schema_version: number;
+  generated_at: string;
+  totals: Record<string, number>;
+  sources: { definitions: Record<string, unknown>; matched_sets: number; matched_cards: number; metadata_fields_filled: number };
+  languages: Record<string, CoverageCounts>;
+  missing_metadata: Record<string, string[]>;
+  missing_set_assets: { logo: string[]; symbol: string[] };
+  series: Record<string, { name: string; region_id: string; sets: number; cards: number; cards_with_image: number; cards_without_image: number; percent: number }>;
+  sets: SetCoverage[];
+};
+
 // A set inside one series, with language-specific availability.
 export type Set = {
   id: string;

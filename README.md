@@ -44,8 +44,9 @@ forms distinct. Set `PYTHON_BIN` if Python 3 is available under a different
 executable name.
 
 Source matching evidence and asset candidates are written to
-`app/data/source-map.json`. Coverage and conflict reports are generated under
-the Git-ignored `reports/` directory. TCGdex remains authoritative; fallback
+`app/data/source-map.json`. Detailed coverage is regenerated as
+`app/data/coverage.json` on every update and displayed at `/coverage`; diagnostic
+conflict reports remain under the Git-ignored `reports/` directory. TCGdex remains authoritative; fallback
 providers only fill missing values.
 
 ## Cache set artwork

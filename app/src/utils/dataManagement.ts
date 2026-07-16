@@ -1,4 +1,4 @@
-import type { Card, Language, Pokemon, Region, Series, Set } from './types';
+import type { Card, CoverageReport, Language, Pokemon, Region, Series, Set } from './types';
 
 
 /* language management */
@@ -12,6 +12,11 @@ const pokemonModules = import.meta.glob<Pokemon[]>('../../data/pokemon.json', { 
 
 // Returns the standardized Pokemon catalog used by global search.
 export const getPokemon = (): Pokemon[] => Object.values(pokemonModules)[0] ?? [];
+
+const coverageModules = import.meta.glob<CoverageReport>('../../data/coverage.json', { eager: true, import: 'default' });
+
+// Returns the data and asset coverage generated during the last catalog update.
+export const getCoverage = (): CoverageReport | null => Object.values(coverageModules)[0] ?? null;
 
 // Eagerly loads every configured region from the local JSON catalog.
 const regionModules = import.meta.glob<Region[]>('../../data/regions.json', { eager: true, import: 'default' });

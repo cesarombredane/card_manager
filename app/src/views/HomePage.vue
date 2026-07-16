@@ -20,6 +20,9 @@
         <div class="col-auto">
           <q-btn color="grey-9" icon-right="search" label="Search cards" size="lg" text-color="white" to="/cards/search" />
         </div>
+        <div class="col-auto">
+          <q-btn color="grey-9" icon-right="analytics" label="Data coverage" size="lg" text-color="white" to="/coverage" />
+        </div>
       </div>
     </section>
   </q-page>

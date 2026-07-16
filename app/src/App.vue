@@ -5,6 +5,9 @@
         <q-toolbar-title>
           <router-link to="/" class="text-white">Card Manager</router-link>
         </q-toolbar-title>
+        <q-btn flat round dense icon="analytics" to="/coverage">
+          <q-tooltip>Data coverage</q-tooltip>
+        </q-btn>
       </q-toolbar>
     </q-header>
 
