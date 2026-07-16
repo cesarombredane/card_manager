@@ -21,6 +21,15 @@ export type Series = {
 // Localized text keyed by language code.
 export type LocalizedText = Record<string, string | null>;
 
+// A standardized Pokemon species or requested special form.
+export type Pokemon = {
+  id: string;
+  pokedex_id: number;
+  name: string;
+  names: LocalizedText;
+  form: 'mega' | 'alolan' | 'galarian' | 'hisuian' | 'paldean' | null;
+};
+
 // A set inside one series, with language-specific availability.
 export type Set = {
   id: string;

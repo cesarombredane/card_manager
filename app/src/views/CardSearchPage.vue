@@ -44,6 +44,8 @@
         <q-select
           v-model="selectedPokemon"
           :options="filteredPokemonOptions"
+          emit-value
+          map-options
           dark
           dense
           outlined
@@ -53,6 +55,9 @@
           label="Pokemon"
           @filter="filterPokemon"
         />
+      </div>
+      <div class="col-12 col-sm-auto">
+        <q-checkbox v-model="includeSpecialForms" dark label="Include regional and Mega forms" />
       </div>
     </section>
 
@@ -81,11 +86,11 @@
   import CardList from '../components/CardList.vue';
 
   // import utils
-  import { getCards, getSetById, getSets } from '../utils/dataManagement';
+  import { getCards, getPokemon, getSetById, getSets } from '../utils/dataManagement';
   import { buildDisplayCard, compareCardNumbers } from '../utils/cardDisplay';
   import type { DisplayCard } from '../utils/cardDisplay';
   import { localizedValue } from '../utils/localization';
-  import type { Card, Set } from '../utils/types';
+  import type { Card, Pokemon, Set } from '../utils/types';
   import { uniqueValues } from '../utils/arrayUtils';
   import type { AppState } from '../store';
 
@@ -111,6 +116,9 @@
 
   // Every card in the local data catalog.
   const cards: Card[] = getCards();
+
+  // Standardized Pokemon species and form catalog.
+  const pokemon: Pokemon[] = getPokemon();
 
 
   /* methods */
@@ -140,11 +148,14 @@
   // Selected Pokemon filter.
   const selectedPokemon = ref<string | null>(queryValue('pokemon'));
 
+  // Whether regional and Mega forms are available in Pokemon results.
+  const includeSpecialForms = ref<boolean>(false);
+
   // Artist options matching the text currently typed in the select.
   const filteredArtistOptions = ref<string[]>([]);
 
   // Pokemon options matching the text currently typed in the select.
-  const filteredPokemonOptions = ref<string[]>([]);
+  const filteredPokemonOptions = ref<{ label: string; value: string; searchNames: string[] }[]>([]);
 
   // Number of filtered cards currently visible.
   const visibleCardCount = ref<number>(initialVisibleCardCount);
@@ -158,7 +169,20 @@
   const artistOptions = computed<string[]>(() => uniqueValues(cards.map((card) => card.illustrator ?? '')));
 
   // Pokemon filter options found across every card.
-  const pokemonOptions = computed<string[]>(() => uniqueValues(cards.flatMap((card) => card.pokemon ?? [])));
+  // Base-species options display English canonical names while retaining stable ids.
+  const pokemonOptions = computed<{ label: string; value: string; searchNames: string[] }[]>(() => pokemon.filter((entry) => entry.form === null).map((entry) => ({
+    label: entry.name,
+    value: entry.id,
+    searchNames: uniqueValues(Object.values(entry.names).filter((name): name is string => Boolean(name)))
+  })));
+
+  // Selected catalog ids, broadened to requested forms sharing the same Pokedex number.
+  const selectedPokemonIds = computed<globalThis.Set<string>>(() => {
+    if (!selectedPokemon.value) return new Set();
+    const selectedEntry = pokemon.find((entry) => entry.id === selectedPokemon.value);
+    if (!includeSpecialForms.value || !selectedEntry) return new Set([selectedPokemon.value]);
+    return new Set(pokemon.filter((entry) => entry.pokedex_id === selectedEntry.pokedex_id).map((entry) => entry.id));
+  });
 
   // Every card variant as an individual display row.
   const allCards = computed<DisplayCard[]>(() => cards.flatMap((card) => card.variants.map((variant) => {
@@ -174,7 +198,7 @@
     return allCards.value
       .filter((card) => query === '' || card.display_name.toLowerCase().includes(query))
       .filter((card) => !selectedArtist.value || card.illustrator === selectedArtist.value)
-      .filter((card) => !selectedPokemon.value || card.pokemon_names.includes(selectedPokemon.value))
+      .filter((card) => !selectedPokemon.value || card.pokemon_names.some((pokemonId) => selectedPokemonIds.value.has(pokemonId)))
       .sort((a, b) => (a.set_name ?? '').localeCompare(b.set_name ?? '') || compareCardNumbers(a.number, b.number) || a.variant_id.localeCompare(b.variant_id));
   });
 
@@ -190,7 +214,7 @@
   });
 
   // Resets pagination whenever the visible result set changes.
-  watch([search, selectedLanguageId, selectedArtist, selectedPokemon], (): void => {
+  watch([search, selectedLanguageId, selectedArtist, selectedPokemon, includeSpecialForms], (): void => {
     visibleCardCount.value = initialVisibleCardCount;
   });
 
@@ -218,7 +242,11 @@
 
   // Filters Pokemon suggestions as the user types.
   const filterPokemon = (inputValue: string, update: (callback: () => void) => void): void => {
-    filterSelectOptions(inputValue, pokemonOptions.value, filteredPokemonOptions, update);
+    const query: string = inputValue.trim().toLocaleLowerCase();
+    update(() => {
+      filteredPokemonOptions.value = pokemonOptions.value
+        .filter((option) => query === '' || option.searchNames.some((name) => name.toLocaleLowerCase().startsWith(query)));
+    });
   };
 
   // Increases the number of rendered card results.

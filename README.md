@@ -36,8 +36,10 @@ English and finally the first non-empty translated name.
 ```
 
 This pulls the latest source data, regenerates the app JSON, and synchronizes
-all set and card images. Set `PYTHON_BIN` if Python 3 is available under a
-different executable name.
+all set and card images. The conversion also recreates `app/data/pokemon.json`
+from TCGdex Pokédex ids and localized card names, keeping Mega and regional
+forms distinct. Set `PYTHON_BIN` if Python 3 is available under a different
+executable name.
 
 ## Cache set artwork
 

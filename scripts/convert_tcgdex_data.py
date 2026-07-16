@@ -47,6 +47,7 @@ LANGUAGE_NAMES = {
 
 LANGUAGE_CODE_MAP = {
     "pt": "pt-BR",
+    "pt-br": "pt-BR",
     "zh-cn": "zh-CN",
     "zh-tw": "zh-TW",
 }
@@ -70,6 +71,13 @@ VARIANT_MAP = {
     "standard": "normal",
     "unlimited": "unlimited",
 }
+
+REGIONAL_PREFIXES = ("alolan ", "galarian ", "hisuian ", "paldean ")
+CARD_NAME_SUFFIX_PATTERN = re.compile(
+    r"(?:\s+|-)(?:ex|gx|v|vmax|vstar|break|lv\.?\s*x|star|δ)$",
+    re.IGNORECASE,
+)
+APPENDED_CARD_SUFFIX_PATTERN = re.compile(r"(?:VMAX|VSTAR|GX|EX|V)$")
 
 
 def strip_comments(source: str) -> str:
@@ -310,6 +318,95 @@ def normalize_enum(value: Any) -> str:
     return str(value or "unknown").strip().lower().replace(" ", "_").replace("-", "_")
 
 
+def normalize_pokemon_name(value: str) -> str:
+    """Remove card-mechanic suffixes while preserving named Pokemon forms."""
+    normalized = re.sub(r"\s+", " ", value.strip())
+    normalized = re.sub(r"^(?:Radiant|Shining)\s+", "", normalized, flags=re.IGNORECASE)
+    normalized = APPENDED_CARD_SUFFIX_PATTERN.sub("", normalized).strip()
+    while CARD_NAME_SUFFIX_PATTERN.search(normalized):
+        normalized = CARD_NAME_SUFFIX_PATTERN.sub("", normalized).strip()
+    return normalized
+
+
+def pokemon_form_key(english_name: str) -> str:
+    """Return the requested form distinction for an English Pokemon name."""
+    lowered = english_name.lower()
+    if lowered.startswith("m ") or lowered.startswith("mega "):
+        return "mega-" + slugify(re.sub(r"^(?:m|mega)\s+", "", english_name, flags=re.IGNORECASE))
+    for prefix in REGIONAL_PREFIXES:
+        if lowered.startswith(prefix):
+            return prefix.strip() + "-" + slugify(english_name[len(prefix):])
+    return "base"
+
+
+def pokemon_entry_id(pokedex_id: int, form_key: str) -> str:
+    """Build a stable catalog id from a National Pokedex number and form."""
+    base_id = f"{pokedex_id:04d}"
+    return base_id if form_key == "base" else f"{base_id}-{form_key}"
+
+
+def build_pokemon_catalog(
+    source_root: Path,
+) -> tuple[list[dict[str, Any]], dict[tuple[int, str, str], str], dict[tuple[str, str], set[str]]]:
+    """Build the Pokemon catalog and a localized-name lookup for card conversion."""
+    groups: dict[tuple[int, str], dict[str, set[str]]] = {}
+    parsed_cards: list[dict[str, Any]] = []
+
+    for source_name in SOURCE_FOLDERS:
+        for path in sorted((source_root / source_name).glob("**/*.ts")):
+            if not path.parent.is_dir() or path.parent == source_root / source_name:
+                continue
+            try:
+                card = parse_typescript_object(path)
+            except ValueError:
+                continue
+            if normalize_enum(card.get("category")) != "pokemon":
+                continue
+            dex_ids = card.get("dexId") or []
+            if isinstance(dex_ids, int):
+                dex_ids = [dex_ids]
+            if not dex_ids:
+                continue
+            names = {
+                language_id: normalize_pokemon_name(name)
+                for language_id, name in normalize_localized_text(card.get("name")).items()
+                if name
+            }
+            if not names:
+                continue
+            parsed_cards.append({"dex_ids": dex_ids, "names": names})
+
+            english_name = names.get("en", "")
+            form_key = pokemon_form_key(english_name) if english_name else "base"
+            for dex_id in dex_ids:
+                group = groups.setdefault((int(dex_id), form_key), {})
+                for language_id, name in names.items():
+                    group.setdefault(language_id, set()).add(name)
+
+    alias_lookup: dict[tuple[int, str, str], str] = {}
+    name_alias_lookup: dict[tuple[str, str], set[str]] = {}
+    catalog: list[dict[str, Any]] = []
+    for (dex_id, form_key), names_by_language in sorted(groups.items()):
+        entry_id = pokemon_entry_id(dex_id, form_key)
+        names = {
+            language_id: min(values, key=lambda value: (len(value), value.casefold()))
+            for language_id, values in sorted(names_by_language.items())
+        }
+        for language_id, values in names_by_language.items():
+            for value in values:
+                alias_lookup[(dex_id, language_id, value.casefold())] = entry_id
+                name_alias_lookup.setdefault((language_id, value.casefold()), set()).add(entry_id)
+        catalog.append({
+            "id": entry_id,
+            "pokedex_id": dex_id,
+            "name": names.get("en") or next(iter(names.values())),
+            "names": names,
+            "form": None if form_key == "base" else form_key.split("-", 1)[0],
+        })
+
+    return catalog, alias_lookup, name_alias_lookup
+
+
 def normalize_energy(value: Any) -> str:
     """Normalize upstream energy/type names into app values."""
     normalized = normalize_enum(value)
@@ -383,12 +480,43 @@ def normalize_attack(attack: dict[str, Any]) -> dict[str, Any]:
     }
 
 
-def normalize_card(path: Path, set_id: str, language_ids: list[str]) -> dict[str, Any]:
+def normalize_card(
+    path: Path,
+    set_id: str,
+    language_ids: list[str],
+    pokemon_aliases: dict[tuple[int, str, str], str],
+    pokemon_name_aliases: dict[tuple[str, str], set[str]],
+) -> dict[str, Any]:
     """Convert one upstream card file into the app card shape."""
     raw_card = parse_typescript_object(path)
     category = normalize_enum(raw_card.get("category"))
     number = path.stem
     localized_name = normalize_localized_text(raw_card.get("name"))
+
+    dex_ids = raw_card.get("dexId") or []
+    if isinstance(dex_ids, int):
+        dex_ids = [dex_ids]
+    pokemon_ids: list[str] = []
+    if category == "pokemon":
+        for dex_id in dex_ids:
+            matched_id = next((
+                pokemon_aliases.get((int(dex_id), language_id, normalize_pokemon_name(name).casefold()))
+                for language_id, name in localized_name.items()
+                if name and pokemon_aliases.get((int(dex_id), language_id, normalize_pokemon_name(name).casefold()))
+            ), None)
+            pokemon_ids.append(matched_id or pokemon_entry_id(int(dex_id), "base"))
+        if not dex_ids:
+            matched_ids = {
+                entry_id
+                for language_id, name in localized_name.items()
+                if name
+                for entry_id in pokemon_name_aliases.get(
+                    (language_id, normalize_pokemon_name(name).casefold()),
+                    set(),
+                )
+            }
+            if len(matched_ids) == 1:
+                pokemon_ids.extend(matched_ids)
 
     card: dict[str, Any] = {
         "id": f"{set_id}-{slugify(number)}",
@@ -396,7 +524,7 @@ def normalize_card(path: Path, set_id: str, language_ids: list[str]) -> dict[str
         "number": number,
         "category": category,
         "name": localized_name,
-        "pokemon": [first_localized_value(raw_card.get("name"))] if category == "pokemon" and first_localized_value(raw_card.get("name")) else [],
+        "pokemon": list(dict.fromkeys(pokemon_ids)),
         "illustrator": raw_card.get("illustrator"),
         "rarity": normalize_enum(raw_card.get("rarity")),
         "regulation_mark": raw_card.get("regulationMark"),
@@ -464,7 +592,13 @@ def validate_generated_sets(output_root: Path) -> None:
                 raise ValueError(f"Set {set_id} name languages must match language_ids")
 
 
-def convert_source_folder(source_root: Path, source_name: str, output_root: Path) -> tuple[list[dict[str, Any]], list[str]]:
+def convert_source_folder(
+    source_root: Path,
+    source_name: str,
+    output_root: Path,
+    pokemon_aliases: dict[tuple[int, str, str], str],
+    pokemon_name_aliases: dict[tuple[str, str], set[str]],
+) -> tuple[list[dict[str, Any]], list[str]]:
     """Convert one TCGdex source folder into per-series app data."""
     source_config = SOURCE_FOLDERS[source_name]
     source_path = source_root / source_name
@@ -497,7 +631,7 @@ def convert_source_folder(source_root: Path, source_name: str, output_root: Path
             language_ids_seen.update(language_ids)
 
             cards = [
-                normalize_card(card_file, set_id, language_ids)
+                normalize_card(card_file, set_id, language_ids, pokemon_aliases, pokemon_name_aliases)
                 for card_file in sorted(set_folder.glob("*.ts"), key=lambda path: path.stem)
             ]
 
@@ -556,11 +690,18 @@ def main() -> int:
         shutil.rmtree(staging_root)
     staging_root.mkdir(parents=True)
 
+    pokemon_catalog, pokemon_aliases, pokemon_name_aliases = build_pokemon_catalog(source_root)
     all_series: list[dict[str, Any]] = []
     all_language_ids: set[str] = set()
 
     for source_name in SOURCE_FOLDERS:
-        series_rows, language_ids = convert_source_folder(source_root, source_name, staging_root)
+        series_rows, language_ids = convert_source_folder(
+            source_root,
+            source_name,
+            staging_root,
+            pokemon_aliases,
+            pokemon_name_aliases,
+        )
         all_series.extend(series_rows)
         all_language_ids.update(language_ids)
 
@@ -576,6 +717,7 @@ def main() -> int:
     write_json(staging_root / "regions.json", regions)
     write_json(staging_root / "languages.json", languages)
     write_json(staging_root / "series.json", sorted(all_series, key=lambda row: (row["region_id"], row["start_date"], row["name"])))
+    write_json(staging_root / "pokemon.json", pokemon_catalog)
     validate_generated_sets(staging_root)
 
     if output_root.exists():
@@ -585,6 +727,7 @@ def main() -> int:
     card_file_count = len(list(output_root.glob("*/cards_*.json")))
     print(f"Converted {len(all_series)} series")
     print(f"Converted {card_file_count} set card files")
+    print(f"Generated {len(pokemon_catalog)} Pokemon entries")
     print(f"Wrote app data to {output_root}")
     return 0
 

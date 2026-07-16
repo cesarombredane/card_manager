@@ -94,7 +94,7 @@
                   <q-item-label>
                     <template v-if="currentCard?.pokemon?.length">
                       <router-link v-for="(pokemon, index) in currentCard.pokemon" :key="pokemon" :to="{ path: '/cards/search', query: { pokemon } }" class="text-white">
-                        {{ pokemon }}<span v-if="index < currentCard.pokemon.length - 1" class="text-white">, </span>
+                        {{ pokemonName(pokemon) }}<span v-if="index < currentCard.pokemon.length - 1" class="text-white">, </span>
                       </router-link>
                     </template>
                     <span v-else>No linked Pokemon</span>
@@ -159,11 +159,11 @@
   import LanguageSelector from '../components/LanguageSelector.vue';
 
   // import utils
-  import { getCardById, getSetById } from '../utils/dataManagement';
+  import { getCardById, getPokemon, getSetById } from '../utils/dataManagement';
   import { localizedCardImage } from '../utils/cardImages';
   import { cardImageRatio } from '../utils/cardDisplay';
   import { localizedValue } from '../utils/localization';
-  import type { Card, CardModifier, CardVariant, Set } from '../utils/types';
+  import type { Card, CardModifier, CardVariant, Pokemon, Set } from '../utils/types';
   import type { AppState } from '../store';
 
   /* constant vars */
@@ -187,6 +187,9 @@
 
   // Selected card data.
   const currentCard: Card | null = getCardById(setId, cardId);
+
+  // Standardized Pokemon metadata keyed by the ids stored on cards.
+  const pokemonById = new Map<string, Pokemon>(getPokemon().map((pokemon) => [pokemon.id, pokemon]));
 
 
   /* reactive vars */
@@ -226,6 +229,12 @@
   const localizedEvolvesFrom = computed<string | null>(() => {
     return currentCard?.evolves_from ? localizedValue(currentCard.evolves_from, selectedLanguageId.value) : null;
   });
+
+  // Resolves a standardized Pokemon id for display in the selected language.
+  const pokemonName = (pokemonId: string): string => {
+    const pokemon = pokemonById.get(pokemonId);
+    return pokemon ? localizedValue(pokemon.names, selectedLanguageId.value) ?? pokemon.name : pokemonId;
+  };
 
   // Localized trainer rules text.
   const localizedRulesText = computed<string | null>(() => {
