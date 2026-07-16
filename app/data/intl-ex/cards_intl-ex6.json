@@ -77,7 +77,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 0
+    "retreat_cost": 0,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-10",
@@ -155,7 +158,10 @@
         "value": "-30"
       }
     ],
-    "retreat_cost": 0
+    "retreat_cost": 0,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-100",
@@ -196,6 +202,10 @@
       "en": "Search your discard pile for a Supporter card, show it to your opponent, and put it into your hand.",
       "fr": "Cherchez dans votre pile de défausse une carte Supporter, montrez-la à votre adversaire et placez-la dans votre main.",
       "de": "Search your dicard pile for a Supporter card, show it to your opponent, and put it into your hand."
+    },
+    "legalities": {
+      "unlimited": "legal",
+      "expanded": "legal"
     }
   },
   {
@@ -237,6 +247,11 @@
       "en": "Remove 2 damage counters from 1 of your Pokémon (remove 1 damage counter if that Pokémon has only 1).",
       "fr": "Soignez 30 dégâts à 1 de vos Pokémon .",
       "de": "Entferne 2 Schadensmarken von 1 deiner Pokémon (1 falls dieses nur 1 hat)."
+    },
+    "legalities": {
+      "unlimited": "legal",
+      "standard": "legal",
+      "expanded": "legal"
     }
   },
   {
@@ -278,6 +293,11 @@
       "en": "Switch 1 of your Active Pokémon with 1 of your Benched Pokémon.",
       "fr": "Échangez votre Pokémon Actif avec 1 des Pokémon de votre Banc.",
       "de": "Switch 1 of your Active Pokémon with 1 of your Benched Pokémon."
+    },
+    "legalities": {
+      "unlimited": "legal",
+      "standard": "legal",
+      "expanded": "legal"
     }
   },
   {
@@ -318,6 +338,9 @@
       "en": "Attach Multi Energy to 1 of your Pokémon. While in play, Multi Energy provides every type of Energy but provides only 1 Energy at a time. (Doesn't count as a basic Energy card when not in play.) Multi Energy provides Colorless Energy when attached to a Pokémon that already has Special Energy cards attached to it.",
       "de": "Lege die Multienergiekarte an eines deiner Pokémon an. Die Multienergiekarte liefert jeden Typ von Energie, solange sie im Spiel ist, liefert aber nur eine Energie auf einmal. (Zählt außerhalb des Spiels nicht als Basaisenergiekarte.) Die Multienergiekarte liefert 1 Energie, wenn sie an ein Pokémon angelegt wird, das schon Spezialenergiekarten hat.",
       "fr": "Attachez Énergies multiples à un de vos Pokémon. Lorsqu'elle est en jeu, Énergies multiples fournit tous les types d'énergie (un seul à la fois). (Elle ne compte pas comme carte Énergie de base lorsqu'elle n'est pas en jeu). Énergies multiples fournit une énergie Incolore lorsqu'elle est attachée à un Pokémon qui possède déjà des cartes Énergie Spéciales."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -392,7 +415,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 3
+    "retreat_cost": 3,
+    "rules_text": {
+      "en": "When Pokémon-ex has been Knocked Out, your opponent takes 2 Prize cards."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-105",
@@ -476,7 +505,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "rules_text": {
+      "en": "When Pokémon-ex has been Knocked Out, your opponent takes 2 Prize cards."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-106",
@@ -552,7 +587,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "rules_text": {
+      "en": "When Pokémon-ex has been Knocked Out, your opponent takes 2 Prize cards."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-107",
@@ -615,7 +656,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "rules_text": {
+      "en": "When Pokémon-ex has been Knocked Out, your opponent takes 2 Prize cards."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-108",
@@ -710,7 +757,13 @@
         "value": "-30"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "rules_text": {
+      "en": "When Pokémon-ex has been Knocked Out, your opponent takes 2 Prize cards."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-109",
@@ -789,7 +842,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 3
+    "retreat_cost": 3,
+    "rules_text": {
+      "en": "When Pokémon-ex has been Knocked Out, your opponent takes 2 Prize cards."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-11",
@@ -870,7 +929,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-110",
@@ -923,7 +985,13 @@
         }
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "rules_text": {
+      "en": "When Pokémon-ex has been Knocked Out, your opponent takes 2 Prize cards."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-111",
@@ -976,7 +1044,13 @@
         }
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "rules_text": {
+      "en": "When Pokémon-ex has been Knocked Out, your opponent takes 2 Prize cards."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-112",
@@ -1060,7 +1134,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 3
+    "retreat_cost": 3,
+    "rules_text": {
+      "en": "When Pokémon-ex has been Knocked Out, your opponent takes 2 Prize cards."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-113",
@@ -1131,7 +1211,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-114",
@@ -1192,7 +1275,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "rules_text": {
+      "en": "When Pokémon-ex has been Knocked Out, your opponent takes 2 Prize cards."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-115",
@@ -1253,7 +1342,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "rules_text": {
+      "en": "When Pokémon-ex has been Knocked Out, your opponent takes 2 Prize cards."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-116",
@@ -1314,7 +1409,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "rules_text": {
+      "en": "When Pokémon-ex has been Knocked Out, your opponent takes 2 Prize cards."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-12",
@@ -1394,7 +1495,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-13",
@@ -1471,7 +1575,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-14",
@@ -1534,7 +1641,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-15",
@@ -1610,7 +1720,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 3
+    "retreat_cost": 3,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-16",
@@ -1686,7 +1799,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-17",
@@ -1750,7 +1866,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-18",
@@ -1836,7 +1955,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-19",
@@ -1921,7 +2043,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-2",
@@ -2004,7 +2129,10 @@
         "value": "-30"
       }
     ],
-    "retreat_cost": 0
+    "retreat_cost": 0,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-20",
@@ -2090,7 +2218,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-21",
@@ -2168,7 +2299,10 @@
         "value": "-30"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-22",
@@ -2258,7 +2392,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-23",
@@ -2347,7 +2484,10 @@
         "value": "-30"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-24",
@@ -2439,7 +2579,10 @@
         "value": "-30"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-25",
@@ -2511,7 +2654,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-26",
@@ -2599,7 +2745,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-27",
@@ -2695,7 +2844,10 @@
         "value": "-30"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-28",
@@ -2780,7 +2932,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 0
+    "retreat_cost": 0,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-29",
@@ -2848,7 +3003,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-3",
@@ -2924,7 +3082,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-30",
@@ -3013,7 +3174,10 @@
         "value": "-30"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-31",
@@ -3099,7 +3263,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-32",
@@ -3182,7 +3349,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-33",
@@ -3266,7 +3436,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-34",
@@ -3344,7 +3517,10 @@
         "value": "-30"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-35",
@@ -3429,7 +3605,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-36",
@@ -3496,7 +3675,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-37",
@@ -3580,7 +3762,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-38",
@@ -3660,7 +3845,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-39",
@@ -3728,7 +3916,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-4",
@@ -3786,7 +3977,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-40",
@@ -3879,7 +4073,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-41",
@@ -3968,7 +4165,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-42",
@@ -4048,7 +4248,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 3
+    "retreat_cost": 3,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-43",
@@ -4136,7 +4339,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-44",
@@ -4224,7 +4430,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-45",
@@ -4323,7 +4532,10 @@
         "value": "-30"
       }
     ],
-    "retreat_cost": 0
+    "retreat_cost": 0,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-46",
@@ -4411,7 +4623,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-47",
@@ -4495,7 +4710,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-48",
@@ -4582,7 +4800,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 0
+    "retreat_cost": 0,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-49",
@@ -4670,7 +4891,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 0
+    "retreat_cost": 0,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-5",
@@ -4749,7 +4973,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-50",
@@ -4847,7 +5074,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-51",
@@ -4931,7 +5161,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-52",
@@ -5003,7 +5236,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-53",
@@ -5066,7 +5302,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-54",
@@ -5146,7 +5385,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-55",
@@ -5226,7 +5468,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-56",
@@ -5309,7 +5554,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-57",
@@ -5376,7 +5624,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-58",
@@ -5452,7 +5703,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-59",
@@ -5532,7 +5786,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-6",
@@ -5621,7 +5878,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-60",
@@ -5701,7 +5961,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-61",
@@ -5768,7 +6031,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-62",
@@ -5858,7 +6124,10 @@
         "value": "-30"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-63",
@@ -5931,7 +6200,10 @@
         "value": "-30"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-64",
@@ -6008,7 +6280,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-65",
@@ -6092,7 +6367,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-66",
@@ -6171,7 +6449,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-67",
@@ -6255,7 +6536,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-68",
@@ -6341,7 +6625,10 @@
         "value": "-30"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-69",
@@ -6421,7 +6708,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-7",
@@ -6504,7 +6794,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-70",
@@ -6593,7 +6886,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-71",
@@ -6676,7 +6972,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-72",
@@ -6759,7 +7058,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-73",
@@ -6854,7 +7156,10 @@
         "value": "-30"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-74",
@@ -6921,7 +7226,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-75",
@@ -7001,7 +7309,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-76",
@@ -7069,7 +7380,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-77",
@@ -7148,7 +7462,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-78",
@@ -7215,7 +7532,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-79",
@@ -7294,7 +7614,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-8",
@@ -7376,7 +7699,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 3
+    "retreat_cost": 3,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-80",
@@ -7443,7 +7769,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-81",
@@ -7529,7 +7858,10 @@
         "value": "-30"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-82",
@@ -7596,7 +7928,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-83",
@@ -7689,7 +8024,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-84",
@@ -7768,7 +8106,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-85",
@@ -7836,7 +8177,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-86",
@@ -7919,7 +8263,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-87",
@@ -7969,6 +8316,10 @@
       "en": "You can play only one Supporter card each turn. When you play this card, put it next to your Active Pokémon. When your turn ends, discard this card. If you have any cards in your hand, shuffle 1 of them into your deck, then draw 3 cards.",
       "fr": "Si vous avez des cartes dans votre main, mélangez-en 1 avec votre deck. Ensuite, piochez 3 cartes.",
       "de": "If you have any cards in your hand, shuffel 1 of them into your deck, then draw 3 cards."
+    },
+    "legalities": {
+      "unlimited": "legal",
+      "expanded": "legal"
     }
   },
   {
@@ -8019,6 +8370,9 @@
       "en": "You can play only one Supporter card each turn. When you play this card, put it next to your Active Pokémon. When your turn ends, discard this card. Search your deck for a Basic Pokémon or Evolution card (excluding Pokémon-ex), show it to your opponent, and put it into your hand. Shuffle your deck afterward.",
       "fr": "Cherchez dans votre deck un Pokémon de base ou une carte Évolution (sauf les Pokémon-ex), montrez la carte à votre adversaire et placez-la dans votre main. Ensuite, mélangez votre deck.",
       "de": "Search your deck for a Basic Pokémon or Evolution card (excluding Pokémon-ex ), show it to your opponent, and put it into your hand. Shuffle your deck afterward."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -8069,6 +8423,9 @@
       "en": "Flip a coin. If heads, choose 1 Energy card attached to 1 of your opponent's Pokémon and discard it.",
       "fr": "Lancez une pièce. Si c'est face, choisissez 1 carte Énergie attachée à 1 des Pokémon de votre adversaire et défaussez-la.",
       "de": "Flip a coin. If heads, choose 1 Energy card attached to 1 of your opponent's Pokémon and discard it."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -8158,7 +8515,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-ex6-90",
@@ -8199,6 +8559,11 @@
       "en": "Move a basic Energy card attached to 1 of your Pokémon to another of your Pokémon.",
       "fr": "Déplacez une carte Énergie de base d'1 de vos Pokémon à 1 autre de vos Pokémon.",
       "de": "Move a basic Energy card attached to 1 of your Pokémon to another of your Pokémon."
+    },
+    "legalities": {
+      "unlimited": "legal",
+      "standard": "legal",
+      "expanded": "legal"
     }
   },
   {
@@ -8240,6 +8605,9 @@
       "en": "Attach EXP. ALL to 1 of your Pokémon (excluding Pokémon-ex and Pokémon that has an owner in its name) that doesn't already have a Pokémon Tool attached to it. If that Pokémon is Knocked Out, discard this card. During your opponent's turn, if 1 of your Active Pokémon is Knocked Out by your opponent's attack, you may take 1 basic Energy card attached to that Knocked Out Pokémon and attach it to the Pokémon with EXP.ALL attached to it. If you do, discard EXP.ALL.",
       "fr": "Attachez Multi expéditions à 1 de vos Pokémon (sauf les Pokémon-ex et les Pokémon dont le nom comporte un nom de Dresseur) qui ne possède pas déjà d'Outil Pokémon. Si ce Pokémon est mis K.O, défaussez cette carte.\n\nLors du tour de votre adversaire, si 1 de vos Pokémon Actifs est mis K.O. par une attaque de votre adversaire, vous pouvez prendre 1 carte Énergie de base attachée au Pokémon K.O et la placer sur le Pokémon qui possède Multi expéditions. Dans ce cas, défaussez Multi expéditions.",
       "de": "Wenn im Zug deines Gegners 1 deiner Aktiven Pokémon durch den Anrgiff deines Gegners kampfunfähig wird, kannst du 1 Basis-Energiekarte, die an dem angegriffenen Aktiven Pokémon angelegt ist, an das Pokémon anlegen, an dem EP-Teiler angelegt ist. Wenn du das machst, lege EP-Teiler auf deinen Ablagestapel."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -8290,6 +8658,11 @@
       "en": "Search your deck for a Basic Pokémon (excluding Pokémon-ex) and put it onto your Bench. Shuffle your deck afterward.",
       "fr": "Cherchez dans votre deck un Pokémon de base (sauf les Pokémon-ex) et placez-le sur votre Banc. Ensuite, mélangez votre deck.",
       "de": "Durchsuche dein Deck nach einem Basis-Pokémon (kein Pokémon-ex) und lege es auf deine Bank. Mische dein Deck danach."
+    },
+    "legalities": {
+      "unlimited": "legal",
+      "standard": "legal",
+      "expanded": "legal"
     }
   },
   {
@@ -8331,6 +8704,9 @@
       "en": "Flip a coin. If heads, choose 1 of your Pokémon (excluding Pokémon-ex), and remove all Special Conditions and 6 damage counters from that Pokémon (all if there are less than 6).",
       "fr": "Lancez une pièce. Si c'est face, choisissez 1 de vos Pokémon (sauf les Pokémon-ex) et retirez-lui tout État Spécial ainsi que 6 marqueurs de dégât (ou tous s'il y en a moins que 6.)",
       "de": "Flip a coin. If heads, choose 1 of your Pokémon (excluding Pokémon-ex) , and remove all Spezial Conditions and 6 damage counters from thad Pokémon (all if there are less than 6)."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -8372,6 +8748,9 @@
       "en": "This card stays in play when you play it. Discard this card if another Stadium card comes into play. Any Pokémon (both yours and your opponent's) with maximum HP less than 70 can't use any Poké-Powers.",
       "fr": "Cette carte reste en jeu lorsque vous la jouez. Défaussez -la si une autre Carte Stade est mise en jeu.",
       "de": "Any Pokémon (both yours and your opponent's) with maximum HP less than 70 can't use any Poke-Power"
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -8413,6 +8792,11 @@
       "en": "Flip a coin. If heads, search your deck for a Basic Pokémon or Evolution card, show it to your opponent and put it into your hand. Shuffle your deck afterward.",
       "fr": "Lancez une pièce. Si c'est face, cherchez dans votre deck un Pokémon de base ou une carte Évolution, montrez la carte à votre adversaire et placez-la dans votre main. Ensuite, mélangez votre deck.",
       "de": "Wirf 1 Münze. Bei \"Kopf\" durchsuche dein Deck nach einem basis-Pokémon pder einer Evolutionskarte, zeige sie deinem Gegner und nimm sie auf die Hand. Mische dein Deck danach."
+    },
+    "legalities": {
+      "unlimited": "legal",
+      "standard": "legal",
+      "expanded": "legal"
     }
   },
   {
@@ -8454,6 +8838,9 @@
       "en": "Shuffle your deck. Look at 6 cards from the top of your deck, then put them back on top of your deck in any order.",
       "fr": "Mélangez votre deck. Regardez les 6 cartes du dessus de votre deck puis remettez-les dans votre deck dans n'importe quel ordre.",
       "de": "Shuffle your deck. Look at 6 cards from the top of your deck, then put them back on top of your deck in any order."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -8504,6 +8891,9 @@
       "en": "Flip a coin. If heads, choose 1 of your opponent's Benched Pokémon and switch it with 1 of the Defending Pokémon. Your opponent chooses the Defending Pokémon to switch.",
       "fr": "Lancez une pièce. Si c'est face, choisissez 1 des Pokémon du Banc de votre adversaire et échangez-le avec 1 des Pokémon Défenseurs. Votre adversaire choisit le Pokémon Défenseur à échanger.",
       "de": "Wirf 1 Münze. Bei \"Kopf\" tausche 1 Verteidigendes Pokémon gegen 1 der Pokémon auf der Bank deines Gegners aus. Dein Gegner wählt aus, welches Verteidigende Pokémon getauscht wird."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -8554,6 +8944,9 @@
       "en": "You can play only one Supporter card each turn. When you play this card, put it next to your Active Pokémon. When your turn ends, discard this card. Shuffle your hand into your deck, then draw 5 cards.",
       "fr": "Mélangez votre main avec votre deck. Ensuite, piochez 5 cartes.",
       "de": "Mische deine Hand in dein Deck, und ziehe dann 5 Karten."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -8595,6 +8988,10 @@
       "en": "Flip a coin. If heads, return 1 of your Pokémon and all cards attached to it to your hand.",
       "fr": "Lancez une pièce. Si c'est face, reprenez dans votre main 1 de vos Pokémon ainsi que toutes les cartes qui lui sont attachées.",
       "de": "Wirf 1 Münze. Nimm bei \"Kopf\" 1 deiner Pokémon und alle daran angelegten Karten zurück auf die Hand."
+    },
+    "legalities": {
+      "unlimited": "legal",
+      "expanded": "legal"
     }
   }
 ]

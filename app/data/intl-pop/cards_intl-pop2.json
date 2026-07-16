@@ -78,7 +78,10 @@
         "value": ""
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pop2-10",
@@ -108,6 +111,9 @@
     "rules_text": {
       "en": "Once during each player’s turn, when that player attaches an Energy card from his or her hand to 1 of his or her Benched Pokémon, he or she removes 1 damage counter from that Pokémon.",
       "fr": "Cette carte reste en jeu lorsque vous la jouez. Défaussez-la si une autre carte Stade est mise en jeu.\n\nUne seule fois lors du tour de chaque joueur, lorsqu'un joueur attache une carte Énergie de sa main à 1 des Pokémon de son Banc, il retire à ce Pokémon 1 marqueur de dégât."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -138,6 +144,10 @@
     "rules_text": {
       "en": "Draw 3 cards. Then discard any 1 card from your hand.",
       "fr": "Vous ne pouvez jouer qu'une seule carte Supporter par tour. Lorsque vous la jouez, placez-la à côté de votre Pokémon Actif. À la fin du tour, défaussez-la.\n\nPiochez 3 cartes. Ensuite, défaussez une carte de votre main."
+    },
+    "legalities": {
+      "unlimited": "legal",
+      "expanded": "legal"
     }
   },
   {
@@ -202,7 +212,10 @@
         "value": ""
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pop2-13",
@@ -257,7 +270,10 @@
         "value": ""
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pop2-14",
@@ -327,7 +343,10 @@
         "value": ""
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pop2-15",
@@ -397,7 +416,10 @@
         "value": ""
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pop2-16",
@@ -464,7 +486,10 @@
         "value": ""
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pop2-17",
@@ -521,7 +546,13 @@
         "value": ""
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "rules_text": {
+      "en": "When Pokémon-ex has been Knocked Out, your opponent takes 2 Prize cards."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pop2-2",
@@ -597,7 +628,10 @@
         "value": "-30"
       }
     ],
-    "retreat_cost": 0
+    "retreat_cost": 0,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pop2-3",
@@ -677,7 +711,10 @@
         "value": ""
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pop2-4",
@@ -742,7 +779,10 @@
         "value": ""
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pop2-5",
@@ -814,7 +854,10 @@
         "value": ""
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pop2-6",
@@ -901,7 +944,10 @@
         "value": ""
       }
     ],
-    "retreat_cost": 3
+    "retreat_cost": 3,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pop2-7",
@@ -973,7 +1019,10 @@
         "value": ""
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pop2-8",
@@ -1003,6 +1052,9 @@
     "rules_text": {
       "en": "Choose 1 of your Pokémon in play (excluding Pokémon-ex). Return that Pokémon and all cards attached to it to your hand.",
       "fr": "Vous ne pouvez jouer qu'une seule carte Supporter par tour. Lorsque vous jouez cette carte, placez-la à côté de votre Pokémon Actif. À la fin du tour, défaussez-la.\n\nChoisissez 1 des Pokémon que vous avez en jeu (sauf les Pokémon-ex). Reprenez dans votre main ce Pokémon ainsi que toutes les cartes qui lui sont attachées."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -1049,6 +1101,9 @@
     "rules_text": {
       "en": "Attach this card to 1 of your Pokémon in play. That Pokémon may use this card’s attack instead of its own. At the end of your turn, discard Multi Technical Machine 01.",
       "fr": "Attachez cette carte à 1 des Pokémon que vous avez en jeu. Ce Pokémon peut utiliser l'attaque de cette carte à la place de ses attaques. À la fin de votre tour, défaussez Machine multi-technique 01."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   }
 ]

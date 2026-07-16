@@ -83,7 +83,10 @@
         "value": ""
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pop3-10",
@@ -113,6 +116,9 @@
     "rules_text": {
       "en": "Each player pays Colorless less to retreat his or her Fire and Water Pokémon.",
       "fr": "Cette carte reste en jeu lorsque vous la jouez. Défaussez-la si une autre carte Stade est mise en jeu. Si une autre carte comportant le même nom est en jeu, vous ne pouvez pas jouer cette carte.\n\nChaque joueur ne paye pas de  pour faire battre en retraite ses Pokémon  et ."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -143,6 +149,9 @@
     "rules_text": {
       "en": "Each Grass and Lightning Pokémon in play (both yours and your opponent’s) gets +10 HP.",
       "fr": "Cette carte reste en jeu lorsque vous la jouez. Défaussez-la si une autre carte Stade est mise en jeu. Si une autre carte comportant le même nom est en jeu, vous ne pouvez pas jouer cette carte.\n\nChaque Pokémon  et  en jeu (les vôtres et ceux de votre adversaire) obtient 10 PV de plus."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -199,7 +208,10 @@
         "value": ""
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pop3-13",
@@ -266,7 +278,10 @@
         "value": ""
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pop3-14",
@@ -337,7 +352,13 @@
         "value": ""
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "evolves_from": {
+      "en": "Bulbasaur"
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pop3-15",
@@ -409,7 +430,10 @@
         "value": ""
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pop3-16",
@@ -465,7 +489,10 @@
         "value": ""
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pop3-17",
@@ -523,7 +550,13 @@
         "value": ""
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "rules_text": {
+      "en": "When Pokémon-ex has been Knocked Out, your opponent takes 2 Prize cards."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pop3-2",
@@ -599,7 +632,10 @@
         "value": ""
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pop3-3",
@@ -681,7 +717,10 @@
         "value": "-30"
       }
     ],
-    "retreat_cost": 0
+    "retreat_cost": 0,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pop3-4",
@@ -772,7 +811,10 @@
         "value": "-30"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pop3-5",
@@ -872,7 +914,10 @@
         "value": "-30"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pop3-6",
@@ -952,7 +997,10 @@
         "value": ""
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pop3-7",
@@ -1020,7 +1068,13 @@
         "value": ""
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "evolves_from": {
+      "en": "Torchic"
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pop3-8",
@@ -1091,7 +1145,13 @@
         "value": ""
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "evolves_from": {
+      "en": "Phanpy"
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pop3-9",
@@ -1160,6 +1220,12 @@
         "value": ""
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "evolves_from": {
+      "en": "Pineco"
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   }
 ]

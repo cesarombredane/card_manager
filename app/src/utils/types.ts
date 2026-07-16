@@ -86,5 +86,7 @@ export type Card = {
   retreat_cost?: number;
   trainer_type?: string;
   rules_text?: LocalizedText;
+  flavor_text?: LocalizedText;
+  legalities?: Record<string, string>;
   variants: CardVariant[];
 };

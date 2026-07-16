@@ -13,16 +13,33 @@ fi
 
 cd "$PROJECT_ROOT"
 
-echo "[1/4] Pulling the latest TCGdex data..."
+NEXT_DATA="app/data.next"
+
+echo "[1/9] Pulling the latest TCGdex data..."
 "$PYTHON_BIN" scripts/pull_tcgdex_data.py
 
-echo "[2/4] Converting TCGdex data to application JSON..."
-"$PYTHON_BIN" scripts/convert_tcgdex_data.py
+echo "[2/9] Pulling the latest Pokemon TCG API data..."
+"$PYTHON_BIN" scripts/pull_pokemontcg_data.py
 
-echo "[3/4] Synchronizing set images..."
-"$PYTHON_BIN" scripts/sync_set_images.py
+echo "[3/9] Converting primary TCGdex data..."
+"$PYTHON_BIN" scripts/convert_tcgdex_data.py --output "$NEXT_DATA"
 
-echo "[4/4] Synchronizing card images..."
-"$PYTHON_BIN" scripts/sync_card_images.py
+echo "[4/9] Merging approved fallback metadata..."
+"$PYTHON_BIN" scripts/merge_source_data.py --data "$NEXT_DATA"
+
+echo "[5/9] Synchronizing primary set images..."
+"$PYTHON_BIN" scripts/sync_set_images.py --data "$NEXT_DATA"
+
+echo "[6/9] Synchronizing primary card images..."
+"$PYTHON_BIN" scripts/sync_card_images.py --data "$NEXT_DATA"
+
+echo "[7/9] Synchronizing fallback images..."
+"$PYTHON_BIN" scripts/sync_fallback_assets.py --data "$NEXT_DATA"
+
+echo "[8/9] Writing coverage report..."
+"$PYTHON_BIN" scripts/report_coverage.py --data "$NEXT_DATA"
+
+echo "[9/9] Publishing generated data..."
+"$PYTHON_BIN" scripts/publish_data.py "$NEXT_DATA" app/data
 
 echo "Data and images are up to date."

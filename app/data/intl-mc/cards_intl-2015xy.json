@@ -44,7 +44,21 @@
           "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 10 dégâts supplémentaires."
         }
       }
-    ]
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "Small hooks on the bottom of its feet catch on walls and ceilings. That is how it can hang from above."
+    },
+    "legalities": {
+      "unlimited": "legal",
+      "expanded": "legal"
+    }
   },
   {
     "id": "intl-2015xy-10",
@@ -101,7 +115,26 @@
         "text": {}
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "dark",
+        "value": "-20"
+      }
+    ],
+    "flavor_text": {
+      "en": "The tip of its tail is filled with oil that is lighter than water, so it acts as a float."
+    },
+    "legalities": {
+      "unlimited": "legal",
+      "expanded": "legal"
+    }
   },
   {
     "id": "intl-2015xy-11",
@@ -161,7 +194,20 @@
         "text": {}
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "flavor_text": {
+      "en": "A Pokémon with abundant curiosity. It shows an interest in everything, so it always zigzags."
+    },
+    "legalities": {
+      "unlimited": "legal",
+      "expanded": "legal"
+    }
   },
   {
     "id": "intl-2015xy-12",
@@ -221,7 +267,20 @@
         "text": {}
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "flavor_text": {
+      "en": "It shows its cute side by chasing its own tail until it gets dizzy."
+    },
+    "legalities": {
+      "unlimited": "legal",
+      "expanded": "legal"
+    }
   },
   {
     "id": "intl-2015xy-2",
@@ -266,7 +325,21 @@
         "damage": "20",
         "text": {}
       }
-    ]
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It searches about for clean water. If it does not drink water for too long, the leaf on its head wilts."
+    },
+    "legalities": {
+      "unlimited": "legal",
+      "expanded": "legal"
+    }
   },
   {
     "id": "intl-2015xy-3",
@@ -313,7 +386,21 @@
           "fr": "Lancez une pièce. Si c'est pile, défaussez une Énergie  attachée à ce Pokémon."
         }
       }
-    ]
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "A fire burns inside, so it feels very warm to hug. It launches fireballs of 1,800 degrees Fahrenheit."
+    },
+    "legalities": {
+      "unlimited": "legal",
+      "expanded": "legal"
+    }
   },
   {
     "id": "intl-2015xy-4",
@@ -360,7 +447,21 @@
           "fr": "Lancez une pièce. Si c'est pile, cette attaque ne fait rien."
         }
       }
-    ]
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It appears in large numbers by seashores. At night, its central core flashes with a red light."
+    },
+    "legalities": {
+      "unlimited": "legal",
+      "expanded": "legal"
+    }
   },
   {
     "id": "intl-2015xy-5",
@@ -416,7 +517,21 @@
         "damage": "20",
         "text": {}
       }
-    ]
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "To alert it, the fin on its head senses the flow of water. It has the strength to heft boulders."
+    },
+    "legalities": {
+      "unlimited": "legal",
+      "expanded": "legal"
+    }
   },
   {
     "id": "intl-2015xy-6",
@@ -475,7 +590,27 @@
         "damage": "30",
         "text": {}
       }
-    ]
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "metal",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It raises its tail to check its surroundings. The tail is sometimes struck by lightning in this pose."
+    },
+    "legalities": {
+      "unlimited": "legal",
+      "expanded": "legal"
+    }
   },
   {
     "id": "intl-2015xy-7",
@@ -534,7 +669,27 @@
         "damage": "20",
         "text": {}
       }
-    ]
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "metal",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It stores static electricity in its fur for discharging. It gives off sparks if a storm approaches."
+    },
+    "legalities": {
+      "unlimited": "legal",
+      "expanded": "legal"
+    }
   },
   {
     "id": "intl-2015xy-8",
@@ -582,7 +737,21 @@
           "fr": "Ce Pokémon s'inflige 10 dégâts."
         }
       }
-    ]
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3,
+    "flavor_text": {
+      "en": "It is inept at turning because of its four short legs. It can only charge and run in one direction."
+    },
+    "legalities": {
+      "unlimited": "legal",
+      "expanded": "legal"
+    }
   },
   {
     "id": "intl-2015xy-9",
@@ -626,6 +795,20 @@
         "damage": "20",
         "text": {}
       }
-    ]
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It eats just one berry a day. By enduring hunger, its spirit is tempered and made sharper."
+    },
+    "legalities": {
+      "unlimited": "legal",
+      "expanded": "legal"
+    }
   }
 ]

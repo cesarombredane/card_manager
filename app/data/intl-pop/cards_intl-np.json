@@ -52,7 +52,14 @@
         "type": "lightning",
         "value": "x2"
       }
-    ]
+    ],
+    "retreat_cost": 3,
+    "rules_text": {
+      "en": "When Pokémon-ex has been Knocked Out, your opponent takes 2 Prize cards."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-np-10",
@@ -119,7 +126,11 @@
         "type": "lightning",
         "value": "x2"
       }
-    ]
+    ],
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-np-11",
@@ -191,7 +202,11 @@
         "type": "lightning",
         "value": "x2"
       }
-    ]
+    ],
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-np-12",
@@ -257,7 +272,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-np-13",
@@ -320,7 +338,11 @@
         "type": "fighting",
         "value": "x2"
       }
-    ]
+    ],
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-np-14",
@@ -383,7 +405,11 @@
         "type": "psychic",
         "value": "x2"
       }
-    ]
+    ],
+    "retreat_cost": 2,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-np-15",
@@ -447,7 +473,11 @@
         "type": "psychic",
         "value": "x2"
       }
-    ]
+    ],
+    "retreat_cost": 3,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-np-16",
@@ -515,7 +545,11 @@
         "type": "water",
         "value": "-30"
       }
-    ]
+    ],
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-np-17",
@@ -568,7 +602,11 @@
         "type": "water",
         "value": "x2"
       }
-    ]
+    ],
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-np-18",
@@ -631,7 +669,11 @@
         "type": "lightning",
         "value": "x2"
       }
-    ]
+    ],
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-np-19",
@@ -693,7 +735,11 @@
         "type": "fighting",
         "value": "x2"
       }
-    ]
+    ],
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-np-2",
@@ -748,7 +794,14 @@
         "type": "grass",
         "value": "x2"
       }
-    ]
+    ],
+    "retreat_cost": 3,
+    "rules_text": {
+      "en": "When Pokémon-ex has been Knocked Out, your opponent takes 2 Prize cards."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-np-20",
@@ -805,7 +858,11 @@
         "type": "lightning",
         "value": "x2"
       }
-    ]
+    ],
+    "retreat_cost": 2,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-np-21",
@@ -869,7 +926,11 @@
         "type": "psychic",
         "value": "x2"
       }
-    ]
+    ],
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-np-22",
@@ -928,7 +989,11 @@
         "type": "grass",
         "value": "-30"
       }
-    ]
+    ],
+    "retreat_cost": 2,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-np-23",
@@ -1000,7 +1065,11 @@
         "type": "grass",
         "value": "-30"
       }
-    ]
+    ],
+    "retreat_cost": 2,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-np-24",
@@ -1065,7 +1134,11 @@
         "type": "psychic",
         "value": "x2"
       }
-    ]
+    ],
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-np-25",
@@ -1152,7 +1225,11 @@
         "type": "fighting",
         "value": "-30"
       }
-    ]
+    ],
+    "retreat_cost": 2,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-np-26",
@@ -1178,7 +1255,13 @@
           "it": ""
         }
       }
-    ]
+    ],
+    "rules_text": {
+      "en": "Flip a coin. If heads, remove 2 damage counters from each Active Pokémon (remove 1 damage counter if a Pokémon has only 1). If tails, each Active Pokémon is now Asleep."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-np-27",
@@ -1205,7 +1288,13 @@
         }
       }
     ],
-    "trainer_type": "item"
+    "trainer_type": "item",
+    "rules_text": {
+      "en": "Flip a coin. If heads, discard all Trainer cards your opponent has in play. If tails, discard all Trainer (excluding Supporter cards) you have in play."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-np-28",
@@ -1231,7 +1320,13 @@
         }
       }
     ],
-    "trainer_type": "stadium"
+    "trainer_type": "stadium",
+    "rules_text": {
+      "en": "This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card.\nAt the end of each player's turn, if that player has 8 or more cards in his or her hand, that player discards a number of cards until that player has 7 cards left in his or her hand."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-np-29",
@@ -1287,7 +1382,11 @@
         "type": "fire",
         "value": "x2"
       }
-    ]
+    ],
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-np-3",
@@ -1357,7 +1456,11 @@
         "type": "water",
         "value": "-30"
       }
-    ]
+    ],
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-np-30",
@@ -1414,7 +1517,11 @@
         "type": "lightning",
         "value": "x2"
       }
-    ]
+    ],
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-np-31",
@@ -1485,7 +1592,14 @@
         "type": "water",
         "value": "x2"
       }
-    ]
+    ],
+    "retreat_cost": 2,
+    "rules_text": {
+      "en": "When Pokémon-ex has been Knocked Out, your opponent takes 2 Prize cards."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-np-32",
@@ -1556,7 +1670,14 @@
         "type": "metal",
         "value": "x2"
       }
-    ]
+    ],
+    "retreat_cost": 2,
+    "rules_text": {
+      "en": "When Pokémon-ex has been Knocked Out, your opponent takes 2 Prize cards."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-np-33",
@@ -1627,7 +1748,14 @@
         "type": "lightning",
         "value": "x2"
       }
-    ]
+    ],
+    "retreat_cost": 2,
+    "rules_text": {
+      "en": "When Pokémon-ex has been Knocked Out, your opponent takes 2 Prize cards."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-np-34",
@@ -1696,7 +1824,11 @@
         "type": "water",
         "value": "x2"
       }
-    ]
+    ],
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-np-35",
@@ -1761,7 +1893,11 @@
         "type": "fighting",
         "value": "x2"
       }
-    ]
+    ],
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-np-36",
@@ -1788,7 +1924,13 @@
         }
       }
     ],
-    "trainer_type": "item"
+    "trainer_type": "item",
+    "rules_text": {
+      "en": "Flip a coin. If heads, discard all Trainer cards your opponent has in play. If tails, discard all Trainer cards (excluding Supporter cards) you have in play."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-np-37",
@@ -1860,7 +2002,14 @@
         "type": "lightning",
         "value": "x2"
       }
-    ]
+    ],
+    "retreat_cost": 2,
+    "rules_text": {
+      "en": "When Pokémon-ex has been Knocked Out, your opponent takes 2 Prize cards."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-np-38",
@@ -1932,7 +2081,14 @@
         "type": "water",
         "value": "x2"
       }
-    ]
+    ],
+    "retreat_cost": 2,
+    "rules_text": {
+      "en": "When Pokémon-ex has been Knocked Out, your opponent takes 2 Prize cards."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-np-39",
@@ -2014,7 +2170,14 @@
         "type": "fighting",
         "value": "-30"
       }
-    ]
+    ],
+    "retreat_cost": 1,
+    "rules_text": {
+      "en": "When Pokémon-ex has been Knocked Out, your opponent takes 2 Prize cards."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-np-4",
@@ -2096,7 +2259,11 @@
         "type": "water",
         "value": "-30"
       }
-    ]
+    ],
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-np-40",
@@ -2160,7 +2327,11 @@
         "type": "psychic",
         "value": "x2"
       }
-    ]
+    ],
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-np-5",
@@ -2227,7 +2398,11 @@
         "type": "lightning",
         "value": "x2"
       }
-    ]
+    ],
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-np-6",
@@ -2294,7 +2469,11 @@
         "type": "water",
         "value": "x2"
       }
-    ]
+    ],
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-np-7",
@@ -2364,7 +2543,11 @@
         "type": "water",
         "value": "-30"
       }
-    ]
+    ],
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-np-8",
@@ -2431,7 +2614,11 @@
         "type": "water",
         "value": "x2"
       }
-    ]
+    ],
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-np-9",
@@ -2472,6 +2659,38 @@
         "type": "water",
         "value": "x2"
       }
-    ]
+    ],
+    "attacks": [
+      {
+        "name": {
+          "en": "Flare"
+        },
+        "cost": [
+          "fire"
+        ],
+        "damage": "20",
+        "text": {
+          "en": ""
+        }
+      },
+      {
+        "name": {
+          "en": "Double Kick"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "40×",
+        "text": {
+          "en": "Flip 2 coins. This attack does 40 damage times the number of heads."
+        }
+      }
+    ],
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   }
 ]

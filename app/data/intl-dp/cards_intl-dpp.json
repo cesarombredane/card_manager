@@ -68,7 +68,13 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "Made from soil, the shell on its back hardens when it drinks water. It lives along lakes."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp02",
@@ -138,7 +144,13 @@
         "value": "+10"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It agilely scales sheer cliffs to live atop craggy mountains. Its fire is put out when it sleeps."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp03",
@@ -215,7 +227,13 @@
         "value": "+10"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "Because it is very proud, it hates accepting food from people. Its thick down guards it from cold."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp04",
@@ -291,7 +309,13 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It makes fur balls that crackle with static electricity. It stores them with berries in tree holes."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp05",
@@ -323,6 +347,9 @@
       "en": "Flip a coin. If heads, remove 2 damage counters from each Active Pokémon (remove 1 damage counter if a Pokémon has only 1). If tails, each Active Pokémon is now Asleep.",
       "fr": "Lancez une pièce. Si c'est face, retirez 2 marqueurs de dégât à chaque Pokémon Actif (ou un si un Pokémon n'en possède qu'un). Si c'est pile, chaque Pokémon Actif est maintenant Endormi.",
       "de": "Wirf 1 Münze. Entferne bei 'Kopf' 2 Schadensmarken von allen Aktiven Pokémon (1, falls nur 1 vorhanden). Bei 'Zahl' schlafen alle Aktiven Pokémon jetzt."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -391,7 +418,13 @@
         "value": "+10"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It slams foes by sharply uncoiling its rolled ears. It stings enough to make a grown-up cry in pain."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp07",
@@ -467,7 +500,13 @@
         "value": "+20"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It lived in jungles around 100 million years ago. Its skull is as hard as iron."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp08",
@@ -555,7 +594,13 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "A Pokémon that lived in jungles around 100 million years ago. Its facial hide is extremely hard."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp09",
@@ -617,7 +662,16 @@
         "value": "+30"
       }
     ],
-    "retreat_cost": 4
+    "retreat_cost": 4,
+    "evolves_from": {
+      "en": "Torterra"
+    },
+    "rules_text": {
+      "en": "Put this card onto your Active Torterra. Torterra LV.X can use any attack, Poké-Power, or Poké-Body from its previous level."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp10",
@@ -676,7 +730,16 @@
         "type": "water",
         "value": "+30"
       }
-    ]
+    ],
+    "evolves_from": {
+      "en": "Infernape"
+    },
+    "rules_text": {
+      "en": "Put this card onto your Active Infernape. Infernape LV.X can use any attack, Poké-Power, or Poké-Body from its previous level."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp11",
@@ -737,7 +800,16 @@
         "value": "+30"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "evolves_from": {
+      "en": "Empoleon"
+    },
+    "rules_text": {
+      "en": "Put this card onto your Active Empoleon. Empoleon LV.X can use any attack, Poké-Power, or Poké-Body from its previous level."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp12",
@@ -798,7 +870,16 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "evolves_from": {
+      "en": "Lucario"
+    },
+    "rules_text": {
+      "en": "Put this card onto your Active Lucario. Lucario LV.X can use any attack, Poké-Power, or Poké-Body from its previous level."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp13",
@@ -853,6 +934,12 @@
     "retreat_cost": 1,
     "rules_text": {
       "en": "If Buizel has less Energy attached to it than the Defending Pokémon, this attack does 10 damage plus 10 more damage."
+    },
+    "flavor_text": {
+      "en": "It has a flotation sac that is like an inflatable collar. It floats on water with its head out."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -929,7 +1016,13 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It can learn and speak human words. If they gather, they all learn the same saying."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp15",
@@ -991,7 +1084,13 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "All of its fur dazzles if danger is sensed. It flees while the foe is momentarily blinded."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp16",
@@ -1067,7 +1166,13 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It lives in forests with others. It stores electricity in the pouches on its cheeks."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp17",
@@ -1135,7 +1240,16 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "evolves_from": {
+      "en": "Dialga"
+    },
+    "rules_text": {
+      "en": "Put this card onto your Active Dialga. Dialga LV.X can use any attack, Poké-Power, or Poké-Body from its previous level."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp18",
@@ -1206,7 +1320,16 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 3
+    "retreat_cost": 3,
+    "evolves_from": {
+      "en": "Palkia"
+    },
+    "rules_text": {
+      "en": "Put this card onto your Active Palkia. Palkia LV.X can use any attack, Poké-Power, or Poké-Body from its previous level."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp19",
@@ -1273,7 +1396,16 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "evolves_from": {
+      "en": "Darkrai"
+    },
+    "rules_text": {
+      "en": "Put this card onto your Active Darkrai. Darkrai LV.X can use any attack, Poké-Power, or Poké-Body from its previous level."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp20",
@@ -1355,7 +1487,13 @@
         "value": "+30"
       }
     ],
-    "retreat_cost": 3
+    "retreat_cost": 3,
+    "flavor_text": {
+      "en": "It blasts fireballs of over 3,600 degrees F from the ends of its arms. It lives in volcanic craters."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp21",
@@ -1439,7 +1577,13 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It turns aggressive if it has too much electricity in its body. It discharges power through its tail."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp22",
@@ -1498,7 +1642,13 @@
         "value": "+10"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It habitually mimics foes. Once mimicked, the foe cannot take its eyes off this Pokémon."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp23",
@@ -1574,7 +1724,13 @@
         "value": "+10"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It claws if displeased and purrs when affectionate. Its fickleness if very popular among some."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp24",
@@ -1667,7 +1823,13 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "rules_text": {
+      "en": "Enigma Berry: If Darkrai is damaged by an attack from your opponent's Fighting Pokémon, remove 4 damage counters at the end of that turn."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp25",
@@ -1699,6 +1861,9 @@
       "en": "Flip a coin. If heads, remove 2 damage counters from each Active Pokémon (remove 1 damage counter if a Pokémon has only 1). If tails, each Active Pokémon is now Asleep.",
       "fr": "Lancez une pièce. Si c'est face, retirez 2 marqueurs de dégât à chaque Pokémon Actif (ou un si un Pokémon n'en possède qu'un). Si c'est pile, chaque Pokémon Actif est maintenant Endormi.",
       "de": "Wirf 1 Münze. Entferne bei 'Kopf' 2 Schadensmarken von allen Aktiven Pokémon (1, falls nur 1 vorhanden). Bei 'Zahl' schlafen alle Aktiven Pokémon jetzt."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -1782,7 +1947,13 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "It has the power to control time. It appears in Sinnoh-region myths as an ancient deity."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp27",
@@ -1859,7 +2030,13 @@
         "value": "+20"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "It has the ability to distort space. It is described as a deity in Sinnoh-region mythology."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp28",
@@ -1920,7 +2097,16 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "evolves_from": {
+      "en": "Mewtwo"
+    },
+    "rules_text": {
+      "en": "Put this card onto your Active Mewtwo. Mewtwo LV.X can use any attack, Poké-Power, or Poké-Body from its previous level."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp29",
@@ -2001,7 +2187,16 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 4
+    "retreat_cost": 4,
+    "evolves_from": {
+      "en": "Rhyperior"
+    },
+    "rules_text": {
+      "en": "Put this card onto your Active Rhyperior. Rhyperior LV.X can use any attack, Poké-Power, or Poké-Body from its previous level."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp30",
@@ -2063,7 +2258,16 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 4
+    "retreat_cost": 4,
+    "evolves_from": {
+      "en": "Regigigas"
+    },
+    "rules_text": {
+      "en": "Put this card onto your Active Regigigas. Regigigas LV.X can use any attack, Poké-Power, or Poké-Body from its previous level."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp31",
@@ -2104,7 +2308,16 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 4
+    "retreat_cost": 4,
+    "evolves_from": {
+      "en": "Heatran"
+    },
+    "rules_text": {
+      "en": "Put this card onto your Active Heatran. Heatran LV.X can use any attack, Poké-Power, or Poké-Body from its previous level."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp32",
@@ -2193,7 +2406,13 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "It evolved from exposure to a special magnetic field. Three units generate magnetism."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp33",
@@ -2264,7 +2483,13 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "The antenna on its head captures radio waves from the world of spirits that command it to take people there."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp34",
@@ -2350,7 +2575,13 @@
         "type": "normal",
         "value": "-20"
       }
-    ]
+    ],
+    "flavor_text": {
+      "en": "It's drowzy in daytime, but flies off in the evening in big groups. No one knows where they go."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp35",
@@ -2428,7 +2659,10 @@
         "value": "+30"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp36",
@@ -2512,7 +2746,10 @@
         "type": "fighting",
         "value": "-20"
       }
-    ]
+    ],
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp37",
@@ -2580,7 +2817,16 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "evolves_from": {
+      "en": "Dialga"
+    },
+    "rules_text": {
+      "en": "Put this card onto your Active Dialga. Dialga LV.X can use any attack, Poké-Power, or Poké-Body from its previous level."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp38",
@@ -2648,7 +2894,16 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 3
+    "retreat_cost": 3,
+    "evolves_from": {
+      "en": "Giratina"
+    },
+    "rules_text": {
+      "en": "Put this card onto your Active Giratina. Giratina LV.X can use any attack, Poké-Power, or Poké-Body from its previous level."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp39",
@@ -2713,7 +2968,16 @@
         "type": "fighting",
         "value": "-20"
       }
-    ]
+    ],
+    "evolves_from": {
+      "en": "Shaymin"
+    },
+    "rules_text": {
+      "en": "Put this card onto your Active Shaymin. Shaymin LV.X can use any attack, Poké-Power, or Poké-Body from its previous level."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp40",
@@ -2803,7 +3067,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 4
+    "retreat_cost": 4,
+    "flavor_text": {
+      "en": "There is an enduring legend that states this Pokémon towed continents with ropes."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp41",
@@ -2870,7 +3140,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp42",
@@ -2952,7 +3225,10 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp43",
@@ -3031,7 +3307,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 3
+    "retreat_cost": 3,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp44",
@@ -3113,7 +3392,13 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "It evolved from exposure to a special magnetic field. Three units generate magnetism."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp45",
@@ -3179,7 +3464,16 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 3
+    "retreat_cost": 3,
+    "evolves_from": {
+      "en": "Charizard G"
+    },
+    "rules_text": {
+      "en": "Put this card onto your Active Charizard G. Charizard G LV.X can use any attack, Poké-Power, or Poké-Body from its previous level."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp46",
@@ -3236,7 +3530,16 @@
         "type": "normal",
         "value": "x2"
       }
-    ]
+    ],
+    "evolves_from": {
+      "en": "Garchomp C"
+    },
+    "rules_text": {
+      "en": "Put this card onto your Active Garchomp C. Garchomp C LV.X can use any attack, Poké-Power, or Poké-Body from its previous level."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp47",
@@ -3301,7 +3604,16 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 3
+    "retreat_cost": 3,
+    "evolves_from": {
+      "en": "Rayquaza C"
+    },
+    "rules_text": {
+      "en": "Put this card onto your Active Rayquaza C. Rayquaza C LV.X can use any attack, Poké-Power, or Poké-Body from its previous level."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp48",
@@ -3333,6 +3645,9 @@
       "en": "Flip a coin. If heads, remove 2 damage counters from each Active Pokémon (remove 1 damage counter if a Pokémon has only 1). If tails, each Active Pokémon is now Asleep.",
       "fr": "Lancez une pièce. Si c'est face, retirez 2 marqueurs de dégât à chaque Pokémon Actif (ou un si un Pokémon n'en possède qu'un). Si c'est pile, chaque Pokémon Actif est maintenant Endormi.",
       "de": "Wirf 1 Münze. Entferne bei \"Kopf\" 2 Schadensmarken von allen Aktiven Pokémon (1, falls nur 1 vorhanden). Bei \"Zahl\" schlafen alle Aktiven Pokémon jetzt."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -3411,7 +3726,13 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "It has the power to control time. It appears in Sinnoh-region myths as an ancient deity."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp50",
@@ -3473,7 +3794,16 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "rules_text": {
+      "en": "You may have as many of this card in your deck as you like."
+    },
+    "flavor_text": {
+      "en": "It is said to have emerged from an egg in a place where there was nothing, then shaped the world."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp51",
@@ -3531,7 +3861,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "On nights around the quarter moon, the aurora from its tail extends and undulates beautifully."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp52",
@@ -3595,7 +3931,13 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "To protect itself, it afflicts those around it with nightmares. However, it means no harm."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp53",
@@ -3630,7 +3972,16 @@
       "normal"
     ],
     "stage": "level_up",
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "evolves_from": {
+      "en": "Arceus"
+    },
+    "rules_text": {
+      "en": "You may have as many of this card in your deck as you like.\nPut this card onto your Active Arceus. Arceus LV.X can use any attack, Poké-Power, or Poké-Body from its previous level."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-dpp-dp54",
@@ -3662,6 +4013,9 @@
       "en": "Search your deck for Arceus, show it to your opponent, and put it into your hand. Shuffle your deck afterward.",
       "fr": "Cherchez Arceus dans votre deck, montrez-le à votre adversaire et placez-le dans votre main. Ensuite, mélangez votre deck.",
       "de": "Durchsuche dein Deck nach 1 Arceus-Karte, zeige sie deinem Gegner und nimm sie auf die Hand. Mische dein Deck danach."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -3695,6 +4049,9 @@
       "en": "This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card. During each player's turn, the player may move an Energy card attached to 1 of his or her Benched Pokémon to his or her Active Arceus as often as he or she likes.",
       "fr": "Cette carte reste en jeu lorsque vous la jouez. Défaussez-la si une autre carte Stade est mise en jeu. Si une autre carte comportant le même nom est en jeu, vous le pouvez pas jouer cette carte.\n\nLors du tour de chaque joueur, celui-ci peut déplacer une carte Énergie attachée à 1 de ses Pokémon de Banc sur son Arceus Actif autant de fois qu'il ou elle le veut.",
       "de": "Beliebig oft während seines Zuges kann jeder Spieler 1 Energiekarte von 1 Pokémon auf seiner Bank entfernen und an sein Aktives Arceus anlegen."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -3747,6 +4104,15 @@
         }
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "evolves_from": {
+      "en": "Arceus"
+    },
+    "rules_text": {
+      "en": "You may have as many of this card in your deck as you like.\nPut this card onto your Active Arceus. Arceus LV.X can use any attack, Poké-Power, or Poké-Body from its previous level."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   }
 ]

@@ -72,7 +72,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "The tail's tip shines brightly and can be seen from far away. It acts as a beacon for lost people."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-10",
@@ -148,7 +154,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 3
+    "retreat_cost": 3,
+    "flavor_text": {
+      "en": "Meganium's breath has the power to revive dead grass and plants. It can make them healthy again."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-100",
@@ -190,6 +202,9 @@
       "en": "If you have any Benched Pokémon, your opponent chooses 1 of them and switches it with your Active Pokémon. Then, if your opponent has any Benched Pokémon, choose 1 of them and switch it with his or her Active Pokémon.",
       "fr": "Si vous avez un ou plusieurs Pokémon sur votre Banc, votre adversaire choisit l'un d'eux et l'échange avec votre Pokémon Actif. Ensuite, si votre adversaire a un ou plusieurs Pokémon sur son Banc, choisissez l'un d'eux et échangez-le avec son Pokémon Actif.",
       "de": "If you have any Benched Pokémon, your opponent chooses 1 of them and switches it with your Active Pokémon. Then, if your opponent has any Benched Pokémon, choose 1 of them and switch it with his or her Active Pokémon."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -232,6 +247,9 @@
       "en": "Choose 1 of your Pokémon. Flip 2 coins. Remove 2 damage counters times the number of heads from that Pokémon. If the Pokémon has fewer damage counters than that, remove all of them.",
       "fr": "Choisissez 1 de vos Pokémon. Lancez 2 pièces. Retirez de ce Pokémon 2 marqueurs de dégâts multipliés par le nombre de faces. Si le Pokémon a moins de marqueurs de dégâts que cela, retirez-les tous.",
       "de": "Wähle eines deiner Pokémon. Wirf zwei Münzen. Entferne zwei Schadensmarken mal der Anzahl 'Kopf' von diesem Pokémon. Falls das Pokémon weniger Schadensmarken hat, entferne alle."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -274,6 +292,9 @@
       "en": "Your opponent may search his or her deck for 1 Basic Pokémon card and put it onto his or her Bench. Then, you may search your deck for 1 Basic Pokémon card and put it onto your Bench. Then, each player shuffles his or her deck. (A player can't do any of this if his or her Bench is full.)",
       "fr": "Votre adversaire peut chercher 1 carte Pokémon de base dans son deck et la placer sur son Banc. Ensuite, vous pouvez chercher 1 carte Pokémon de base dans votre deck et la placer sur votre Banc. Enfin, chaque joueur mélange son deck. (Un joueur ne peut rien faire de tout cela si son Banc est plein.)",
       "de": "Your opponent may search his or her deck for 1 Basic Pokémon card and put it into his or her Bench. Then, you may search your deck for 1 Basic Pokémon card and put it onto your Bench. Then, each player shuffles his or her deck. (A player can't do any of this if his or her Bench is full.)"
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -316,6 +337,11 @@
       "en": "Flip a coin. If heads, put an Evolution card from your discard pile, if any, into your hand. If tails, put a Basic Pokémon card from your discard pile, if any, into your hand.",
       "fr": "Lancez une pièce. Si c'est face, déplacez une carte Évolution (s'il y en a) de votre pile de défausse vers votre main. Si c'est pile, déplacez une carte Pokémon de base (s'il y en a) de votre pile de défausse vers votre main.",
       "de": "Wirf eine Münze. Bei 'Kopf' nimm eine Evolutionskarte aus deinem Ablagestapel auf deine Hand, wenn dort eine ist. Bei 'Zahl' nimm eine Basis-Pokémonkarte aus deinem Ablagestapel auf deine Hand, wenn dort eine ist."
+    },
+    "legalities": {
+      "standard": "legal",
+      "expanded": "legal",
+      "unlimited": "legal"
     }
   },
   {
@@ -357,6 +383,9 @@
     "rules_text": {
       "en": "If the Pokémon Darkness Energy is attached to damages the Defending Pokémon (after applying Weakness and Resistance), the attack does 10 more damage to the Defending Pokémon. At the end of every turn, put 1 damage counter on the Pokémon Darkness Energy is attached to, unless it's Darkness or has Dark in its name.\nDarkness Energy provides Darkness Energy. (Doesn't count as a basic Energy card.)",
       "de": "If the Pokémon Darkness Energy is attached to damages the Defending Pokémon (after applying Weakness and Resistance), the attack does 10 more damage to the Defending Pokémon. At the end of every turn, put 1 damage counter on the Pokémon Darkness Energy is attached to, unless it´s  or has Dark in its name.Darkness Energy provides  Energy. (Doesn´t count as a Basic Energy card.)"
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -398,6 +427,9 @@
     "rules_text": {
       "en": "Recycle Energy provides Colorless Energy. (Doesn't count as a basic Energy card.) If this card is put into your discard pile from play, return it to your hand.",
       "de": "Recycle-Energie liefert -Energie. (Zählt nicht als Basis-Energiekarte.)Falls diese Karte aus dem Spiel auf deinen Ablagestapel gelegt wird, nimm sie wiede auf deine Hand zurück."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -436,7 +468,12 @@
         }
       }
     ],
-    "stage": "basic"
+    "stage": "basic",
+    "legalities": {
+      "unlimited": "legal",
+      "standard": "legal",
+      "expanded": "legal"
+    }
   },
   {
     "id": "intl-neo1-107",
@@ -474,7 +511,12 @@
         }
       }
     ],
-    "stage": "basic"
+    "stage": "basic",
+    "legalities": {
+      "unlimited": "legal",
+      "standard": "legal",
+      "expanded": "legal"
+    }
   },
   {
     "id": "intl-neo1-108",
@@ -512,7 +554,12 @@
         }
       }
     ],
-    "stage": "basic"
+    "stage": "basic",
+    "legalities": {
+      "unlimited": "legal",
+      "standard": "legal",
+      "expanded": "legal"
+    }
   },
   {
     "id": "intl-neo1-109",
@@ -550,7 +597,12 @@
         }
       }
     ],
-    "stage": "basic"
+    "stage": "basic",
+    "legalities": {
+      "unlimited": "legal",
+      "standard": "legal",
+      "expanded": "legal"
+    }
   },
   {
     "id": "intl-neo1-11",
@@ -626,7 +678,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 3
+    "retreat_cost": 3,
+    "flavor_text": {
+      "en": "The aroma that rises from its petals contains a substance that calms aggressive feelings."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-110",
@@ -664,7 +722,12 @@
         }
       }
     ],
-    "stage": "basic"
+    "stage": "basic",
+    "legalities": {
+      "unlimited": "legal",
+      "standard": "legal",
+      "expanded": "legal"
+    }
   },
   {
     "id": "intl-neo1-111",
@@ -702,7 +765,12 @@
         }
       }
     ],
-    "stage": "basic"
+    "stage": "basic",
+    "legalities": {
+      "unlimited": "legal",
+      "standard": "legal",
+      "expanded": "legal"
+    }
   },
   {
     "id": "intl-neo1-12",
@@ -764,7 +832,16 @@
           "de": "Fügt jedem Pokémon im Spiel, das eine Pokémon-Power hat, 20 Schadenspunkte zu. Wende Schwäche und Resistenz nicht an."
         }
       }
-    ]
+    ],
+    "rules_text": {
+      "en": "If this Baby Pokémon is your Active Pokémon and your opponent tries to attack, your opponent flips a coin (before doing anything required in order to use that attack). If tails, your opponent's turn ends without an attack."
+    },
+    "flavor_text": {
+      "en": "Despite its small size, it can zap even adult humans. However, if it does so, it also surprises itself."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-13",
@@ -857,7 +934,13 @@
         "value": "-30"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "Its sturdy wings look heavy, but they are actually hollow and light, allowing it to fly freely in the sky."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-14",
@@ -932,7 +1015,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 3
+    "retreat_cost": 3,
+    "flavor_text": {
+      "en": "When its head was bitten, toxins entered Slowpoke's head and unlocked an extraordinary power."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-15",
@@ -1026,7 +1115,13 @@
         "value": "-30"
       }
     ],
-    "retreat_cost": 4
+    "retreat_cost": 4,
+    "flavor_text": {
+      "en": "Its body has been compressed deep under the ground. As a result, it is even harder than a diamond."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-16",
@@ -1116,7 +1211,13 @@
         "type": "fighting",
         "value": "-30"
       }
-    ]
+    ],
+    "flavor_text": {
+      "en": "They say that it will appear before kindhearted, caring people and shower them with happiness."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-17",
@@ -1192,7 +1293,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "If its rage peaks, it becomes so hot that anything that touches it will instantly go up in flames."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-18",
@@ -1268,7 +1375,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "It has a secret, devastating move. It rubs its blazing fur together to cause huge explosions."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-19",
@@ -1309,6 +1422,9 @@
     "rules_text": {
       "en": "Damage done to the Pokémon Metal Energy is attached to is reduced by 10 (after applying Weakness and Resistance). If the Pokémon Metal Energy is attached to isn't Metal, whenever it damages a Pokémon, reduce that damage by 10 (before applying Weakness and Resistance).\nMetal Energy provides Metal Energy. (Doesn't count as a basic Energy card.)",
       "de": "Damage done to the Pokémon Metal Energy is attached to is reduced by 10 (after applying Weakness and Resistance). If the Pokémon Metal Energy is attached to isn't , whenever it damages a Pokémon, reduce that damage by 10 (before applying Weakness and Resistance).\nMetal Energy provides  Energy. (Doesn't count as a basic Energy card.)"
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -1397,7 +1513,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "By keeping still and listening intently, it can tell what is in even wild, fast-moving rivers."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-20",
@@ -1459,7 +1581,16 @@
           "de": "Mische deine Hand in dein Deck, und ziehe dann 7 Karten."
         }
       }
-    ]
+    ],
+    "rules_text": {
+      "en": "If this Baby Pokémon is your Active Pokémon and your opponent tries to attack, your opponent flips a coin (before doing anything required in order to use that attack). If tails, your opponent's turn ends without an attack."
+    },
+    "flavor_text": {
+      "en": "Because of its unusual, star-like silhouette, people believe that it came here on a meteor."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-21",
@@ -1556,7 +1687,13 @@
         "value": "-30"
       }
     ],
-    "retreat_cost": 3
+    "retreat_cost": 3,
+    "flavor_text": {
+      "en": "It has sharp, hard tusks and a rugged hide. Its tackle is strong enough to knock down a house."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-22",
@@ -1600,7 +1737,16 @@
     "types": [
       "lightning"
     ],
-    "stage": "basic"
+    "stage": "basic",
+    "rules_text": {
+      "en": "If this Baby Pokémon is your Active Pokémon and your opponent tries to attack, your opponent flips a coin (before doing anything required in order to use that attack). If tails, your opponent's turn ends without an attack."
+    },
+    "flavor_text": {
+      "en": "It rotates its arms to generate electricity, but it tires easily, so it charges up only a little bit."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-23",
@@ -1662,7 +1808,16 @@
           "de": "Alle Pokémon-Power funktionieren bis zum Ende deines nächsten Zuges nicht mehr."
         }
       }
-    ]
+    ],
+    "rules_text": {
+      "en": "If this Baby Pokémon is your Active Pokémon and your opponent tries to attack, your opponent flips a coin (before doing anything required in order to use that attack). If tails, your opponent's turn ends without an attack."
+    },
+    "flavor_text": {
+      "en": "Each and every time it inhales and exhales, hot embers dribble out of its mouth and nostrils."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-24",
@@ -1747,7 +1902,13 @@
         "type": "psychic",
         "value": "-30"
       }
-    ]
+    ],
+    "flavor_text": {
+      "en": "It is said that when chased, it lures its attacker onto dark mountain trails where the foe will get lost."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-25",
@@ -1832,7 +1993,13 @@
         "type": "psychic",
         "value": "-30"
       }
-    ]
+    ],
+    "flavor_text": {
+      "en": "Its paws conceal sharp claws. If attacked, it suddenly extends the claws and startles its enemy."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-26",
@@ -1922,7 +2089,13 @@
         "type": "psychic",
         "value": "-30"
       }
-    ]
+    ],
+    "flavor_text": {
+      "en": "Its tail is so powerful that it can use it to grab a tree branch and hold itself up in the air."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-27",
@@ -2013,7 +2186,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It spins string not only from its rear but also from its mouth. It's hard to tell which end is which."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-28",
@@ -2105,7 +2284,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "A spicy aroma emanates from around its neck. The aroma acts as a stimulant to restore health."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-29",
@@ -2196,7 +2381,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "The scent of spices comes from around its neck. Somehow, sniffing it makes you want to fight."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-3",
@@ -2287,7 +2478,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "Plentiful in the tropics. When it dances, its petals rub together and make a pleasant ringing sound."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-30",
@@ -2381,7 +2578,13 @@
         "value": "-30"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "The moonlight that it stores in the wings on its back apparently gives it the ability to float in midair."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-31",
@@ -2472,7 +2675,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "If it loses a fang, a new one grows back in its place. There are always 48 fangs lining its mouth."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-32",
@@ -2560,7 +2769,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "It opens its huge jaws wide when attacking. If it loses any fangs while biting, they grow back in."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-33",
@@ -2644,7 +2859,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "Electricity runs across the surface of its body. In darkness, its entire body glows a whitish-blue."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-34",
@@ -2734,7 +2955,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "As a result of storing too much electricity, it developed patches where even downy wool won't grow."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-35",
@@ -2832,7 +3059,13 @@
         "value": "-30"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It makes a nest to suit its long and skinny body. The nest is impossible for other Pokémon to enter."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-36",
@@ -2924,7 +3157,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "What appears to be drool is actually sweet honey. It is very sticky and clings stubbornly if touched."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-37",
@@ -3018,7 +3257,13 @@
         "value": "-30"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "It is actually timid and easily spooked. If attacked, it flails about to fend off its attacker."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-38",
@@ -3088,7 +3333,16 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "evolves_from": {
+      "en": "Chinchou"
+    },
+    "flavor_text": {
+      "en": "The light it emits is so bright that it can illuminate the sea's surface from a depth of over three miles."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-39",
@@ -3167,7 +3421,13 @@
         "type": "fighting",
         "value": "-30"
       }
-    ]
+    ],
+    "flavor_text": {
+      "en": "When the stars flicker in the night sky, Ledian flutters about, scattering a glowing powder."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-4",
@@ -3243,7 +3503,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 3
+    "retreat_cost": 3,
+    "flavor_text": {
+      "en": "When it bites with its massive and powerful jaws, it shakes its head and savagely tears its victim up."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-40",
@@ -3323,7 +3589,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "It dislikes cold places, so it blows scorching flames to make the environment suitable for itself."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-41",
@@ -3416,7 +3688,13 @@
         "value": "-30"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "Its milk is packed with nutrition, making it the ultimate beverage for the sick or weary."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-42",
@@ -3492,7 +3770,13 @@
         "type": "fighting",
         "value": "-30"
       }
-    ]
+    ],
+    "flavor_text": {
+      "en": "Its eyes are specially adapted. They concentrate even faint light and enable it to see in the dark."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-43",
@@ -3579,7 +3863,13 @@
         "value": "-30"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It swings its long snout around playfully, but, because it is so strong, that can be dangerous."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-44",
@@ -3677,7 +3967,13 @@
         "value": "-30"
       }
     ],
-    "retreat_cost": 3
+    "retreat_cost": 3,
+    "flavor_text": {
+      "en": "Because the long hair all over its body obscures its sight, it just keeps charging repeatedly."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-45",
@@ -3772,7 +4068,13 @@
         "value": "-30"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "Due to its relaxed and carefree attitude, it often bumps its head on boulders and boat hulls as it swims."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-46",
@@ -3863,7 +4165,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "This Pokémon is fully covered by nonflammable fur. It can withstand any kind of fire attack."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-47",
@@ -3955,7 +4263,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "Be careful if it turns its back during battle. It means that it will attack with the fire on its back."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-48",
@@ -4045,7 +4359,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "An examination of its cells revealed the presence of a gene not found in Horsea. It became a hot topic."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-49",
@@ -4139,7 +4459,13 @@
         "type": "fighting",
         "value": "-30"
       }
-    ]
+    ],
+    "flavor_text": {
+      "en": "The bloom on top of its head opens and closes as the temperature fluctuates up and down."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-5",
@@ -4214,7 +4540,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 3
+    "retreat_cost": 3,
+    "flavor_text": {
+      "en": "It is hard for it to support its own weight out of water, so it gets down on all fours. But it moves fast."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-50",
@@ -4289,7 +4621,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It converts sunlight into energy. In the darkness after sunset, it closes its petals and becomes still."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-51",
@@ -4359,7 +4697,13 @@
         "value": "-30"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "A proverb claims that happiness will come to anyone who can make a sleeping Togepi stand up."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-52",
@@ -4456,7 +4800,13 @@
         "value": "-30"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "They say that it stays still and quiet because it is seeing both the past and future at the same time."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-53",
@@ -4537,7 +4887,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "A sweet aroma gently wafts from the leaf on its head. It is docile and loves to soak up the sun's rays."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-54",
@@ -4619,7 +4975,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "Its pleasantly aromatic leaf has the ability to check the humidity and temperature."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-55",
@@ -4704,7 +5066,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It shoots positive and negative electricity between the tips of its two antennae and zaps its enemies."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-56",
@@ -4790,7 +5158,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It usually stays hunched over. If it is angry or surprised, it shoots flames out of its back."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-57",
@@ -4876,7 +5250,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It is timid and always curls itself up in a ball. If attacked, it flares up its back for protection."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-58",
@@ -4957,7 +5337,13 @@
         }
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "Its tail has a small brain of its own. Beware! If you get close, it may react to your scent and bite."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-59",
@@ -5044,7 +5430,13 @@
         "type": "fighting",
         "value": "-30"
       }
-    ]
+    ],
+    "flavor_text": {
+      "en": "It flies straight at its target's face, then clamps down on the startled victim to inject poison."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-6",
@@ -5115,7 +5507,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "This powerful Pokémon thrusts its prized horn under its enemies' bellies, then lifts and throws them."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-60",
@@ -5203,7 +5601,13 @@
         "value": "-30"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It always stands on one foot. It changes feet so fast that the movement can rarely be seen."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-61",
@@ -5289,7 +5693,13 @@
         "type": "fighting",
         "value": "-30"
       }
-    ]
+    ],
+    "flavor_text": {
+      "en": "To keep from being blown away by the wind, they gather in clusters. They do enjoy gentle breezes, though."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-62",
@@ -5358,7 +5768,13 @@
         "type": "lightning",
         "value": "x2"
       }
-    ]
+    ],
+    "flavor_text": {
+      "en": "If attacked by a larger enemy, it quickly swims to safety by adeptly controlling its dorsal fin."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-63",
@@ -5449,7 +5865,13 @@
         "type": "fighting",
         "value": "-30"
       }
-    ]
+    ],
+    "flavor_text": {
+      "en": "It is very timid. It's afraid to move if alone, but it's active if in a group."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-64",
@@ -5525,7 +5947,13 @@
         "value": "-30"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "Swimming freely in open seas, it may fly out of the water and over the waves if it builds up enough speed."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-65",
@@ -5611,7 +6039,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "If static electricity builds in its body, its fleece doubles in volume. Touching it will shock you."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-66",
@@ -5697,7 +6131,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "The end of its tail serves as a buoy that keeps it from drowning, even in a vicious current."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-67",
@@ -5784,7 +6224,13 @@
         "type": "fighting",
         "value": "-30"
       }
-    ]
+    ],
+    "flavor_text": {
+      "en": "Because its wings aren't yet fully grown, it has to hop to get around. It is always staring at something."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-68",
@@ -5870,7 +6316,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "Awakened by moonlight, it roams actively at night. In the day it stays quietly underground."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-69",
@@ -5956,7 +6408,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "It twists and squirms through the ground. The thunderous roar of its tunneling echoes a long way."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-7",
@@ -6050,7 +6508,13 @@
         "type": "fighting",
         "value": "-30"
       }
-    ]
+    ],
+    "flavor_text": {
+      "en": "Once it catches the wind, it deftly controls its cotton-puff spores to float, even around the world."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-70",
@@ -6137,7 +6601,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It raises its tail to check its surroundings. The tail is sometimes struck by lightning in this pose."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-71",
@@ -6212,7 +6682,13 @@
         "value": "-30"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "A very cautious Pokémon, it raises itself up using its tail to get a better view of its surroundings."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-72",
@@ -6298,7 +6774,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "The Berries it stores in its vaselike shell decompose and become a gooey liquid."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-73",
@@ -6383,7 +6865,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It lazes vacantly near water. If something bites its tail, it won't even notice for a whole day."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-74",
@@ -6475,7 +6963,13 @@
         "value": "-30"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "Although it looks frightening, it is actually kind and affectionate. It is very popular."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-75",
@@ -6560,7 +7054,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It lies still in the same pose for days in its web, waiting for its unsuspecting prey to wander close."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-76",
@@ -6654,7 +7154,13 @@
         "value": "-30"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "The curved antlers subtly change the flow of air to create a strange space where reality is distorted."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-77",
@@ -6736,7 +7242,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 3
+    "retreat_cost": 3,
+    "flavor_text": {
+      "en": "Although it always pretends to be a tree, its composition appears to be closer to a rock than a plant."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-78",
@@ -6823,7 +7335,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "It may drop out of the sky suddenly. If attacked by a Spearow, it violently shakes its leaves."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-79",
@@ -6898,7 +7416,13 @@
         "value": "-30"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It rubs its snout on the ground to find and dig up food. It sometimes discovers hot springs."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-8",
@@ -6986,7 +7510,13 @@
         }
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "It is said that it usually hides in underwater caves. It can create whirlpools by yawning."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-80",
@@ -7068,7 +7598,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It is small but rough and tough. It won't hesitate to take a bite out of anything that moves."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-81",
@@ -7153,7 +7689,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "Its well-developed jaws are powerful and capable of crushing anything. Even its trainer must be careful."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-82",
@@ -7245,7 +7787,13 @@
         "value": "-30"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "This Pokémon lives in cold water. It leaves the water to search for food when it gets cold outside."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-83",
@@ -7287,6 +7835,9 @@
       "en": "Shuffle your deck, then reveal the top 3 cards of it. If at least 2 of those cards share the same name, put all the ones with that name into your hand and shuffle the rest into your deck. If none of them do, shuffle all 3 into your deck.",
       "fr": "Mélangez votre deck, et révélez les 3 cartes du dessus. Si au moins 2 de ces cartes ont le même nom, placez toutes celles des 3 qui ont ce nom dans votre main puis mélangez le reste avec votre deck. Si elles ont toutes un nom différent, mélangez les 3 dans votre deck.",
       "de": "Shuffle your deck, then reveal the top 3 cards of it. If at last 2 of those cards share the same name, put all of the ones with that name into your hand and shuffle the rest into your deck. If none of them do, shuffle all 3 into your deck."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -7329,6 +7880,9 @@
       "en": "This card stays in play when you play it. Discard this card if another Stadium card comes into play. Whenever an attack, Pokémon Power, or Trainer card discards another player's non-Colorless Energy card from a Pokémon, return that Energy card to its owner's hand. (Energy cards that are discarded when that Pokémon is Knocked Out don't count.)",
       "fr": "Cette carte reste en jeu lorsque vous la jouez. Défaussez cette carte si une autre carte Stade arrive en jeu.\n\nÀ chaque fois qu'une attaque, un Pouvoir Pokémon ou une carte Dresseur fait défausser une carte Énergie non- d'un autre joueur d'un Pokémon, retournez cette carte Énergie dans la main de son propriétaire. (Les cartes Énergie qui sont défaussées lorsque ce Pokémon est mis K.O. ne comptent pas.)",
       "de": "Whenever an attack, Pokémon Power, or Trainer card discards another player's non- Energy card from a Pokémon, return that Energy card to its owner's hand. (Energy cards that are discarded when that Pokémon is Knocked Out don't count.)"
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -7371,6 +7925,9 @@
       "en": "Flip a coin. If heads, shuffle up to 2 Energy cards from your discard pile into your deck.",
       "fr": "Lancez une pièce. Si c'est face, mélangez jusqu'à 2 cartes Énergie de votre pile de défausse dans votre deck.",
       "de": "Flip a coin. If heads, shuffle up to 2 Energy cards from your discard pile into your deck."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -7413,6 +7970,9 @@
       "en": "Attach Focus Band to 1 of your Pokémon that doesn't have a Pokémon Tool attached to it. If the Pokémon Focus Band is attached to would be Knocked Out by your opponent's attack, flip a coin. If heads, that Pokémon is not Knocked Out and its remaining HP become 10 instead. Then, discard Focus Band.",
       "fr": "Attachez Bandeau de concentration à 1 de vos Pokémon qui n'a pas d'Outil Pokémon attaché sur lui.\n\nSi le Pokémon auquel est attaché Bandeau de concentration est mis K.O. par l'attaque de votre adversaire, lancez une pièce. Si c'est face, ce Pokémon n'est pas K.O. et il lui reste 10 PV. Ensuite, défaussez Bandeau de concentration.",
       "de": "If the Pokémon Focus Band is attached to would be Knocked Out by your opponent's attack, flip a coin. If heads, that Pokémon is now Knocked Out and its remaining HP become 10 instead. Then, discard Focus Band."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -7455,6 +8015,9 @@
       "en": "Draw 2 cards. Then, shuffle 2 cards from your hand into your deck.",
       "fr": "Piochez 2 cartes. Ensuite, mélangez 2 cartes de votre main avec votre deck.",
       "de": "Draw 2 cards. Then, shuffle 2 cards from your hand into your deck."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -7497,6 +8060,9 @@
       "en": "Look at the top 7 cards of your deck. If any of them are Trainer cards, you may show 1 of them to your opponent and put it into your hand. Shuffle your deck afterward. You can't play any more Trainer cards this turn.",
       "fr": "Regardez les 7 cartes du dessus de votre deck. Si une ou plusieurs d'entre elles sont des cartes Dresseur, vous pouvez montrer l'une d'elles à votre adversaire et la placer dans votre main. Mélangez ensuite votre deck. Vous ne pouvez plus jouer de carte Dresseur pendant ce tour.",
       "de": "Look at the top 7 cards of your deck. If any of them are Trainer cards, you may show 1 of them to your opponent and put it into your hand. Shuffle your deck afterward. You can't play any more Trainer cards this turn."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -7539,6 +8105,9 @@
       "en": "Trade 2 of the other cards in your hand for 4 basic Energy cards from your discard pile. If you have fewer than 4 basic Energy cards there, take all of them.",
       "fr": "Échangez 2 des autres cartes de votre main contre 4 Énergie de base de votre pile de défausse. Si vous avez moins de 4 cartes Énergie de base dans votre pile de défausse, prenez-les toutes.",
       "de": "Trade 2 of the other cards in your hand for 4 basic Energy cards from your discard pile. If you have fewer than 4 basic Energy cards there, take all of them."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -7616,7 +8185,13 @@
         "value": "-30"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "It is said that it quietly spends its time deep at the bottom of the sea, because its powers are too strong."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-neo1-90",
@@ -7658,6 +8233,9 @@
       "en": "Your opponent may choose 5 Basic Pokémon, Evolution, and/or basic Energy cards in his or her discard pile. (If your opponent doesn't have that many, he or she chooses all or none of them.) If your opponent chooses any cards, he or she shuffles them into his or her deck. Either way, you may do the same, and you can't play any more Trainer cards this turn.",
       "fr": "Votre adversaire peut choisir 5 cartes Pokémon de base, Évolution et/ou Énergie de sa pile de défausse. (Si votre adversaire n'en a pas autant, il choisit toutes ou aucune.) Si votre adversaire choisit une ou plusieurs cartes, il les mélange dans son deck. Quelle que soit sa décision, vous pouvez faire de même, et vous ne pouvez plus jouer de carte Dresseur pendant ce tour.",
       "de": "Your opponent may choose 5 Basic Pokémon, Evolution, and/or basic Energy cards in his or her discard pile. (If your opponent doesn't have that many, he or she chooses all or none of them.) If your opponent chooses any cards, he or she shuffles them into his or her deck. Either way, you may do the same, and you can't play any more Trainer cards this turn."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -7700,6 +8278,9 @@
       "en": "Flip a coin. If heads, draw 4 cards.",
       "fr": "Lancez une pièce. Si c'est face, piochez 4 cartes.",
       "de": "Flip a coin. If heads, draw 4 cards."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -7742,6 +8323,9 @@
       "en": "Choose 1 of your opponent's face-down Prizes. Guess whether it is an Energy card, a Trainer card, or a Pokémon (Basic or Evolution) card. Flip the card face up (and leave it face up). If you guessed right, draw 2 cards.",
       "fr": "Choisissez 1 des récompenses de votre adversaire qui est face cachée. Devinez si c'est une carte Énergie, une carte Dresseur ou une carte Pokémon (de base ou Évolution). Retournez la carte (et laissez-la découverte). Si vous avez deviné juste, piochez 2 cartes.",
       "de": "Choose 1 of your opponent's face-down Prizes. Guess wheter it is an Energy card, a Trainer card, or a Pokémon (Basic or Evolution) card. Flip the card face up (and leave it face up). If you guessed right, draw 2 cards."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -7784,6 +8368,9 @@
       "en": "Attach Gold Berry to 1 of your Pokémon that doesn't have a Pokémon Tool attached to it. At any time between turns, if there are at least 4 damage counters on the Pokémon Gold Berry is attached to, you may remove 4 of them and discard Gold Berry. At the start of each turn, if there are at least 4 damage counters on the Pokémon Gold Berry is attached to, remove 4 of them and discard Gold Berry.",
       "fr": "Attachez Baie dorée à un de vos Pokémon qui n'a pas d'Outil Pokémon attaché à lui.\n\nN'importe quand entre deux tours, si le Pokémon auquel est attaché Baie dorée a au moins 4 marqueurs de dégâts, vous pouvez retirer 4 de ces marqueurs et défausser Baie dorée. Au début de chaque tour, si le Pokémon auquel est attaché Baie d'or a au moins 4 marqueurs de dégâts, retirez 4 de ces marqueurs et défausser Baie dorée.",
       "de": "At any time between turns, if there are at least 4 damage counters on the Pokémon Gold Berry is attached to, you may remove 4 of them and discard Gold Berry. At the start of each turn, if there are at least 4 damage counters on the Pokémon Gold Berry is attached to, remove 4 of them and discard Gold Berry."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -7826,6 +8413,9 @@
       "en": "Attach Miracle Berry to 1 of your Pokémon that doesn't have a Pokémon Tool attached to it. At any time between turns, if the Pokémon Miracle Berry is attached to is Asleep, Confused, Paralyzed, or Poisoned, you may remove all those effects from that Pokémon and discard Miracle Berry. At the start of each turn, if the Pokémon Miracle Berry is attached to is Asleep, Confused, Paralyzed, or Poisoned, remove all of those effects from that Pokémon and discard Miracle Berry.",
       "fr": "Attachez Baie miracle à un de vos Pokémon qui n'a pas d'Outil Pokémon attaché à lui.\n\nN'importe quand entre deux tours, si le Pokémon auquel est attaché Baie miracle est Endormi, Confus, Paralysé ou Empoisonné, vous pouvez retirer tous ces effets de ce Pokémon et défausser Baie miracle. Au début de chaque tour, si le Pokémon auquel est attaché Baie miracle est Endormi, Confus, Paralysé ou Empoisonné, retirez tous ces effets de ce Pokémon et défaussez Baie miracle.",
       "de": "Lege Wunderbeere an ein Pokémon an, das keine Pokémon-Ausrüstung hat. Wenn zu irgendeinem Zeitpunkt zwischen den Zügen das Pokémon, an das du Wunderbeere angelegt hast, schläft, verwirrt, gelähmt oder vergiftet ist, kannst du alle diese Effekte von diesem Pokémon entfernen. Lege dann Wunderbeere ab. Wenn zu Beginn eines Zugs das Pokémon, an das du Wunderbeere angelegt hast, schläft, verwirrt, gelähmt oder ver´giftet ist, entferne alle diese Auswirkungen von diesem Pokémon und lege Wunderbeere ab."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -7868,6 +8458,9 @@
       "en": "Shuffle your deck. Then, look at up to 5 cards from the top of your deck and rearrange them as you like.",
       "fr": "Mélangez votre deck. Ensuite, regardez jusqu'à 5 cartes du dessus de votre deck et ordonnez-les comme bon vous semble.",
       "de": "Shuffle your deck. Then, look at up to 5 cards from the top of your deck and rearrange them as you like."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -7910,6 +8503,9 @@
       "en": "Shuffle your hand into your deck. Then, draw 7 cards. You can't play any more Trainer cards this turn.",
       "fr": "Mélangez votre main avec votre deck. Ensuite, piochez 7 cartes. Vous ne pouvez plus jouer de cartes Dresseur pendant ce tour.",
       "de": "Mische deine Hand in dein Deck. Ziehe dann sieben Karten. Du kannst in diesem Zug keine weiteren Trainerkarten mehr spielen."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -7952,6 +8548,9 @@
       "en": "This card stays in play when you play it. Discard this card if another Stadium card comes into play. All damage done by Colorless Pokémon's attacks is reduced by 30 (after applying Weakness and Resistance).",
       "fr": "Cette carte reste en jeu lorsque vous la jouez. Défaussez cette carte si une autre carte Stade arrive en jeu. Tous les dégâts infligés par des attaques de Pokémon () sont réduits de 30 (après application de la Faiblesse et de la Résistance.)",
       "de": "Diese Karte bleibt im Spiel, wenn du sie spielst. Lege diese Karte ab, sobald eine weitere Stadion-karte ins Spiel kommt. Alle Schadenspunkte, die von Angriffen von  Pokémon zugefügt werden, werdenum 30 Schadenspunkte reduziert (nachdem Schwäche und Resistenz verrechnet wurden)."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -7994,6 +8593,10 @@
       "en": "Flip a coin. If heads, return 1 of your Pokémon and all cards attached to it to your hand.",
       "fr": "Lancez une pièce. Si c'est face, reprenez 1 de vos Pokémon et toutes les cartes qui lui sont attachées dans votre main.",
       "de": "Flip a coin. If heads, return 1 of your Pokémon and all cards attached to it to your hand."
+    },
+    "legalities": {
+      "unlimited": "legal",
+      "expanded": "legal"
     }
   },
   {
@@ -8036,6 +8639,9 @@
       "en": "Attach Berry to 1 of your Pokémon that doesn't have a Pokémon Tool attached to it. At any time between turns, if there are at least 2 damage counters on the Pokémon Berry is attached to, you may remove 2 of them and discard Berry. At the start of each turn, if there are at least 2 damage counters on the Pokémon Berry is attached to, remove 2 of them and discard Berry.",
       "fr": "Attachez Baie à un de vos Pokémon qui n'a pas d'Outil Pokémon attaché à lui.\n\nN'importe quand entre deux tours, si le Pokémon auquel est attaché Baie a au moins 2 marqueurs de dégâts, vous pouvez retirer 2 de ces marqueurs et défausser Baie. Au début de chaque tour, si le Pokémon auquel est attaché Baie a au moins 2 marqueurs de dégâts, retirez 2 de ces marqueurs et défausser Baie.",
       "de": "Attach Berry to 1 of your Pokémon that doesn´t have a Pokémon Tool attached to it. At any time between turns, if there are at least 2 damage counters on the Pokémon Berry is attached to, you may remove 2 of them and discard Berry. At the start of each turn, if there at least 2 damage counters on the Pokémon Berry is attached to, remove 2 of them and discard Berry."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   }
 ]

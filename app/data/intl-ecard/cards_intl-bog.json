@@ -17,13 +17,13 @@
       {
         "id": "reverse_holo",
         "images": {
-          "en": ""
+          "en": "/images/cards/intl-bog/en/1.png"
         }
       },
       {
         "id": "stamped",
         "images": {
-          "en": ""
+          "en": "/images/cards/intl-bog/en/1.png"
         }
       }
     ],
@@ -65,7 +65,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "Normally found near power plants, it can wander away and cause major blackouts in cities."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-bog-2",
@@ -85,13 +91,13 @@
       {
         "id": "reverse_holo",
         "images": {
-          "en": ""
+          "en": "/images/cards/intl-bog/en/2.png"
         }
       },
       {
         "id": "stamped",
         "images": {
-          "en": ""
+          "en": "/images/cards/intl-bog/en/2.png"
         }
       }
     ],
@@ -127,7 +133,16 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "types": [
+      "fighting"
+    ],
+    "flavor_text": {
+      "en": "While seeming to do nothing, it fires punches in lightning-fast volleys that are impossible to see."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-bog-3",
@@ -145,12 +160,15 @@
       {
         "id": "reverse_holo",
         "images": {
-          "en": ""
+          "en": "/images/cards/intl-bog/en/3.png"
         }
       }
     ],
     "rules_text": {
       "en": "Shuffle your hand into your deck. Then, draw 7 cards. You can’t play any more Trainer cards this turn."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -171,13 +189,13 @@
       {
         "id": "normal",
         "images": {
-          "en": ""
+          "en": "/images/cards/intl-bog/en/4.png"
         }
       },
       {
         "id": "stamped",
         "images": {
-          "en": ""
+          "en": "/images/cards/intl-bog/en/4.png"
         }
       }
     ],
@@ -223,7 +241,13 @@
         "value": "-30"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "types": [
+      "metal"
+    ],
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-bog-5",
@@ -243,13 +267,13 @@
       {
         "id": "normal",
         "images": {
-          "en": ""
+          "en": "/images/cards/intl-bog/en/5.png"
         }
       },
       {
         "id": "stamped",
         "images": {
-          "en": ""
+          "en": "/images/cards/intl-bog/en/5.png"
         }
       }
     ],
@@ -294,7 +318,13 @@
         "value": "-30"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "types": [
+      "dark"
+    ],
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-bog-6",
@@ -314,13 +344,13 @@
       {
         "id": "normal",
         "images": {
-          "en": ""
+          "en": "/images/cards/intl-bog/en/6.png"
         }
       },
       {
         "id": "stamped",
         "images": {
-          "en": ""
+          "en": "/images/cards/intl-bog/en/6.png"
         }
       }
     ],
@@ -347,7 +377,16 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "types": [
+      "grass"
+    ],
+    "evolves_from": {
+      "en": "Bulbasaur"
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-bog-7",
@@ -367,13 +406,13 @@
       {
         "id": "normal",
         "images": {
-          "en": ""
+          "en": "/images/cards/intl-bog/en/7.png"
         }
       },
       {
         "id": "stamped",
         "images": {
-          "en": ""
+          "en": "/images/cards/intl-bog/en/7.png"
         }
       }
     ],
@@ -401,7 +440,16 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "types": [
+      "grass"
+    ],
+    "evolves_from": {
+      "en": "Dark Ivysaur"
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-bog-8",
@@ -421,7 +469,7 @@
       {
         "id": "stamped",
         "images": {
-          "en": ""
+          "en": "/images/cards/intl-bog/en/8.png"
         }
       }
     ],
@@ -473,7 +521,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "types": [
+      "psychic"
+    ],
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-bog-9",
@@ -493,7 +547,7 @@
       {
         "id": "stamped",
         "images": {
-          "en": ""
+          "en": "/images/cards/intl-bog/en/9.png"
         }
       }
     ],
@@ -531,6 +585,12 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "types": [
+      "fighting"
+    ],
+    "legalities": {
+      "unlimited": "legal"
+    }
   }
 ]

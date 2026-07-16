@@ -35,11 +35,18 @@ English and finally the first non-empty translated name.
 ./scripts/update_data.sh
 ```
 
-This pulls the latest source data, regenerates the app JSON, and synchronizes
-all set and card images. The conversion also recreates `app/data/pokemon.json`
+This pulls TCGdex as the primary multilingual source and Pokémon TCG API data
+as the international English fallback, regenerates the app JSON, and synchronizes
+all set and card images. Generation happens in `app/data.next` and is published
+only after every step succeeds. The conversion also recreates `app/data/pokemon.json`
 from TCGdex Pokédex ids and localized card names, keeping Mega and regional
 forms distinct. Set `PYTHON_BIN` if Python 3 is available under a different
 executable name.
+
+Source matching evidence and asset candidates are written to
+`app/data/source-map.json`. Coverage and conflict reports are generated under
+the Git-ignored `reports/` directory. TCGdex remains authoritative; fallback
+providers only fill missing values.
 
 ## Cache set artwork
 

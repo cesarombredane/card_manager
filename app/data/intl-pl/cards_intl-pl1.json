@@ -95,7 +95,10 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-10",
@@ -202,7 +205,10 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 3
+    "retreat_cost": 3,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-100",
@@ -289,7 +295,13 @@
         "value": "+20"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "It burns coal inside its shell for energy. It blows out black soot if it is endangered."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-101",
@@ -377,7 +389,13 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "The shell on its back is made of soil. On a very healthy TURTWIG, the shell should feel moist."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-102",
@@ -461,7 +479,13 @@
         "value": "+10"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It controls balls of fire. As it grows, its six tails split from their tips to make more tails."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-103",
@@ -543,7 +567,13 @@
         "value": "+10"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "Often targeted by bird Pokémon, it desperately resists by releasing poison from its tail spikes."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-104",
@@ -596,6 +626,9 @@
       "en": "This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card. Each player may evolve a Pokémon that he or she just played or evolved during that turn.",
       "fr": "Chaque joueur peut faire évoluer un Pokémon qu'il ou elle a joué ou fait évolué ce tour-ci.",
       "de": "Each player may evolve a Pokémon that he or she just played or evolved during that turn."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -649,6 +682,9 @@
       "en": "You can play only one Supporter card each turn. When you play this card, put it next to your Active Pokémon. When your turn ends, discard this card. Search your deck for a Supporter card, a basic Energy card, and a Trainer card that has Team Galactic's Invention in its name, show them to your opponent, and put them into your hand. Shuffle your deck afterward.",
       "fr": "Vous ne pouvez jouer qu'une seule carte Supporter par tour. Lorsque vous la jouez, placez-la à côté de votre Pokémon Actif. À la fin du tour, défaussez-la.",
       "de": "Search your deck for a Supporter card, a basic Energy card, and a Trainer card that has Team Galactic's Invention in its name, show them to your opponent, and put them into your hand. Shuffle your deck afterward."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -702,6 +738,9 @@
       "en": "This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card. Whenever any player plays any Pokémon from his or her hand to evolve his or her Pokémon, put 2 damage counters on that Pokémon.",
       "fr": "Lorsqu'1 des joueurs joue un Pokémon de sa main pour faire évoluer son Pokémon, placez 2 marqueurs de dégât sur ce Pokémon.",
       "de": "Whenever any player plays any Pokémon from his or her hand to evolve his or her Pokémon, put 2 damage counters on that Pokémon."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -745,6 +784,9 @@
       "en": "Flip a coin. If heads, search your deck for a Pokémon LV.X that levels up from 1 of your Pokémon, and put it onto that Pokémon. (This counts as leveling up that Pokémon.) Shuffle your deck afterward.",
       "fr": "Lancez une pièce. Si c'est face, choisissez dans votre deck un Pokémon NIV.X qui change de niveau à partir d'1 de vos Pokémon et placez-le sur ce Pokémon. (Vous le faites ainsi passer au niveau supérieur.) Ensuite, mélangez votre deck.",
       "de": "Flip a coin. If heads, search your deck for a Pokémon LV.X that levels up from 1 of your Pokémon, and put it onto that Pokémon. (This counts as leveling up that Pokémon.) Shuffle your deck afterward."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -788,6 +830,10 @@
       "en": "Flip a coin. If heads, choose 1 of your Pokémon, and remove all Special Conditions and 6 damage counters from that Pokémon (all if there are less than 6).",
       "fr": "Lancez une pièce. Si c'est face, choisissez 1 de vos Pokémon et retirez-lui tous ses États Spéciaux ainsi que 6 marqueurs de dégât (retirez-les lui tous s'il en a moins de 6).",
       "de": "Flip a coin. If heads, choose 1 of your Pokémon, and remove all Special Conditions and 6 damage counters from that Pokémon (all if there are less than 6)."
+    },
+    "legalities": {
+      "unlimited": "legal",
+      "expanded": "legal"
     }
   },
   {
@@ -841,6 +887,9 @@
       "en": "You can play only one Supporter card each turn. When you play this card, put it next to your Active Pokémon. When your turn ends, discard this card. Look at your opponent's hand, then choose you or your opponent. That player shuffles his or her hand into his or her deck and draws up to 5 cards.",
       "fr": "Vous ne pouvez jouer qu'une seule carte Supporter par tour. Lorsque vous la jouez, placez-la à côté de votre Pokémon Actif. À la fin du tour, défaussez-la.",
       "de": "Look at your opponent's hand, then choose you or your opponent. That player shuffles his or her hand into his or her deck and draws up to 5 cards."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -936,7 +985,10 @@
         "type": "metal",
         "value": "-20"
       }
-    ]
+    ],
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-110",
@@ -989,6 +1041,9 @@
       "en": "Attach Memory Berry to 1 of your Pokémon that doesn't already have a Pokémon Tool attached to it. If that Pokémon is Knocked Out, discard this card. The Pokémon this card is attached to can use any attack from its Basic Pokémon or its Stage 1 Evolution card. (You still have to pay for that attack's Energy cost.)",
       "fr": "Attachez Baie de mémoire à 1 de vos Pokémon qui ne possède pas déjà d'Outil Pokémon. Si ce Pokémon est mis K.O, défaussez-la.",
       "de": "The Pokémon this card is attached to can use any attack from its Basic Pokémon or its Stage 1 Evolution card. (You still have to pay for that attack's Energy cost.)"
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -1032,6 +1087,9 @@
       "en": "This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card. Whenever any player puts a Basic Pokémon (excluding Grass or Psychic Pokémon) from his or her hand onto his or her Bench, put 2 damage counters on that Pokémon.",
       "fr": "Cette carte reste en jeu lorsque vous la jouez. Défaussez-la si une autre carte Stade est mise en jeu. Si une autre carte comportant le même nom est en jeu, vous ne pouvez pas jouer cette carte.",
       "de": "Whenever any player puts a Basic Pokémon (excluding  or  Pokémon) from his or her hand onto his or her Bench, put 2 damage counters on that Pokémon."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -1075,6 +1133,10 @@
       "en": "Attach PlusPower to 1 of your Pokémon. Discard this card at the end of your turn. If the Pokémon PlusPower is attached to attacks, the attack does 10 more damage to the Active Pokémon (before applying Weakness and Resistance).",
       "fr": "Attachez PlusPower à 1 de vos Pokémon. Défaussez cette carte à la fin de votre tour.\n\nSi le Pokémon auquel PlusPower est attachée attaque, cette attaque inflige 10 dégâts supplémentaires au Pokémon Actif (avant application de la Faiblesse et de la Résistance).",
       "de": "Attach PlusPower to 1 of your Pokémon. Discard this card at the end of your turn.\n\nIf the Pokémon PlusPower is attached to attacks, the attack does 10 more damage to the Active Pokémon (before applying Weakness and Resistance)."
+    },
+    "legalities": {
+      "unlimited": "legal",
+      "expanded": "legal"
     }
   },
   {
@@ -1118,6 +1180,11 @@
       "en": "Flip a coin. If heads, search your deck for a Pokémon, show it to your opponent, and put it into your hand. Shuffle your deck afterward.",
       "fr": "Lancez une pièce. Si c'est face, choisissez un Pokémon dans votre deck, montrez-le à votre adversaire et placez-le dans votre main. Ensuite, mélangez votre deck.",
       "de": "Flip a coin. If heads, search your deck for a Pokémon, show it to your opponent, and put it into your hand. Shuffle your deck afterward."
+    },
+    "legalities": {
+      "unlimited": "legal",
+      "standard": "legal",
+      "expanded": "legal"
     }
   },
   {
@@ -1171,6 +1238,9 @@
       "en": "Look at the top 2 cards of your deck, choose 1 of them, and put it into your hand. Put the other card on the bottom of your deck.",
       "fr": "Regardez les 2 cartes du dessus de votre deck, choisissez-en 1 et placez-la dans votre main. Replacez l'autre carte au dessous de votre deck.",
       "de": "Look at the top 2 cards of your deck, choose 1 of them, and put it into your hand. Put the other card on the bottom of your deck."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -1224,6 +1294,9 @@
       "en": "Search your discard pile for a Pokémon, show it to your opponent, and put it into your hand.",
       "fr": "Choisissez un Pokémon dans votre pile de défausse, montrez-le à votre adversaire et placez-le dans votre main.",
       "de": "Search your discard pile for a Pokémon, show it to your opponent, and put it into your hand."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -1277,6 +1350,9 @@
       "en": "Attach Team Galactic's Invention G-101 Energy Gain to 1 of your Pokémon SP that doesn't already have a Pokémon Tool attached to it. If that Pokémon is Knocked Out, discard this card. When the Pokémon this card is attached to is no longer a Pokémon SP, discard this card. As long as Team Galactic's Invention G-101 Energy Gain is attached to a Pokémon, the attack cost of that Pokémon's attacks is Colorless less.",
       "fr": "Attachez Invention G-101 Gain d'Énergie de Team Galaxie à 1 de vos Pokémon SP qui ne possède pas déjà d'Outil Pokémon. Si ce Pokémon est mis K.O, défaussez-la. Lorsque le Pokémon auquel cette carte est attachée n'est plus un Pokémon SP, défaussez-la.",
       "de": "Attach Team Galactic's Invention G-101 Energy Gain to 1 of your Pokémon SP that doesn't already have a Pokémon Tool attached to it. If that Pokémon is Knocked Out, discard this card. When the Pokémon this card is attached to is no longer a Pokémon SP, discard this card.\n\nAs long as Team Galactic's Invention G-101 Energy Gain is attached to a Pokémon, the attack cost of that Pokémon's attacks is  less."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -1330,6 +1406,9 @@
       "en": "You may play this card during your opponent's turn when your opponent's Pokémon uses any Poké-Power. Prevent all effects of that Poké-Power. (This counts as that Pokémon using its Poké-Power.) If you have 2 or less Pokémon SP in play, you can't play this card.",
       "fr": "Vous pouvez jouer cette carte lors du tour de votre adversaire lorsque le Pokémon de votre adversaire utilise un Poké-Power. Prévenez tous les effets de ce Poké-Power. (Cela compte comme si ce Pokémon utilisait son Poké-Power.) Si vous avez un maximum de 2 Pokémon SP en jeu, vous ne pouvez pas jouer cette carte.",
       "de": "You may play this card during your opponent's next turn when your opponent's Pokémon uses any Poké-Power: Prevent all effects of that Poké-Power. (This counts as that Pokémon using its Poké-Power). If you have 2 or less Pokémon SP in play, you can't play this card."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -1383,6 +1462,9 @@
       "en": "Return 1 of your Pokémon SP and all cards attached to it to your hand.",
       "fr": "Reprenez dans votre main 1 de vos Pokémon SP ainsi que toutes les cartes qui lui sont attachées.",
       "de": "Return 1 of your Pokémon SP and all cards attached to it to your hand."
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -1427,6 +1509,9 @@
       "en": "Play Armor Fossil as if it were a Colorless Basic Pokémon. (Armor Fossil counts as a Trainer card as well, but if Armor Fossil is Knocked Out, this counts as a Knocked Out Pokémon.) Armor Fossil can't be affected by any Special Conditions and can't retreat. At any time during your turn before your attack, you may discard Armor Fossil from play. (This doesn't count as a Knocked Out Pokémon.)",
       "fr": "Jouez Fossile armure comme si c'était un Pokémon de base Colorless. (Fossile armure compte aussi comme une carte Dresseur mais si Fossile armure est mise K.O, elle compte comme un Pokémon K.O). Fossile armure ne peut pas être affectée par des États Spéciaux et ne peut pas battre en retraite. N'importe quand lors de votre tour, avant votre attaque, vous pouvez défausser Fossile armure. (Cela ne compte pas comme un Pokémon K.O.)",
       "de": "Play Armor Fossil as if it were a  Basic Pokémon. (Armor Fossil counts as a Trainer card as well, but if Armor Fossil is Knocked Out, this counts as a Knocked Out Pokémon.) Armor Fossil can't be affected by any Special Conditions and can't retreat. At any time during your turn before your attack, you may discard Armor Fossil from play. (This doesn't count as a Knocked Out Pokémon.)"
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -1516,7 +1601,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-120",
@@ -1560,6 +1648,9 @@
       "en": "Play Skull Fossil as if it were a Colorless Basic Pokémon. (Skull Fossil counts as a Trainer card as well, but if Skull Fossil is Knocked Out, this counts as a Knocked Out Pokémon.) Skull Fossil can't be affected by any Special Conditions and can't retreat. At any time during your turn before your attack, you may discard Skull Fossil from play. (This doesn't count as a Knocked Out Pokémon.)",
       "fr": "Jouez Fossile crâne comme si c'était un Pokémon de base Colorless. (Fossile crâne compte aussi comme une carte Dresseur mais si Fossile crâne est mise K.O, elle compte comme un Pokémon K.O). Fossile crâne ne peut pas être affectée par des États Spéciaux et ne peut pas battre en retraite. N'importe quand lors de votre tour, avant votre attaque, vous pouvez défausser Fossile crâne. (Cela ne compte pas comme un Pokémon K.O.)",
       "de": "Play Skull Fossil as if it were a  Basic Pokémon. (Skull Fossil counts as a Trainer card as well, but if Skull Fossil is Knocked Out, this counts as a Knocked Out Pokémon.) Skull Fossil can't be affected by any Special Conditions and can't retreat. At any time during your turn before your attack, you may discard Skull Fossil from play. (This doesn't count as a Knocked Out Pokémon.)"
+    },
+    "legalities": {
+      "unlimited": "legal"
     }
   },
   {
@@ -1602,6 +1693,10 @@
       "en": "Attach Rainbow Energy to 1 of your Pokémon. While in play, Rainbow Energy provides every type of Energy but provides only 1 Energy at a time. (Has no effect other than providing Energy.) When you attach this card from your hand to 1 of your Pokémon, put 1 damage counter on that Pokémon.",
       "fr": "Attachez Énergie multicolore à 1 de vos Pokémon. Lorsqu'elle est en jeu, Énergie multicolore fournit tous les types d'Énergie mais seulement 1 Énergie à la fois. (Elle n'a pas d'autre effet que de fournir de l'Énergie.) Lorsque vous attachez cette carte de votre main à 1 de vos Pokémon, placez 1 marqueur de dégât sur ce Pokémon.",
       "de": "Attach Rainbow Energy to 1 of your Pokémon. While in play, Rainbow Energy provides every type of Energy but provides only 1 Energy at a time. (Has no effect other than providing Energy.) When you attach this card from your hand to 1 of your Pokémon, put 1 damage counter on that Pokémon."
+    },
+    "legalities": {
+      "unlimited": "legal",
+      "expanded": "legal"
     }
   },
   {
@@ -1681,7 +1776,16 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "evolves_from": {
+      "en": "Dialga G"
+    },
+    "rules_text": {
+      "en": "Put this card onto your Active Dialga G. Dialga G LV.X can use any attack, Poké-Power, or Poké-Body from its previous level."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-123",
@@ -1743,7 +1847,16 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 3
+    "retreat_cost": 3,
+    "evolves_from": {
+      "en": "Drapion"
+    },
+    "rules_text": {
+      "en": "Put this card onto your Active Drapion. Drapion LV.X can use any attack, Poké-Power, or Poké-Body from its previous level."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-124",
@@ -1811,7 +1924,16 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 3
+    "retreat_cost": 3,
+    "evolves_from": {
+      "en": "Giratina"
+    },
+    "rules_text": {
+      "en": "Put this card onto your Active Giratina. Giratina LV.X can use any attack, Poké-Power, or Poké-Body from its previous level."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-125",
@@ -1874,7 +1996,16 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "evolves_from": {
+      "en": "Palkia G"
+    },
+    "rules_text": {
+      "en": "Put this card onto your Active Palkia G. Palkia G LV.X can use any attack, Poké-Power, or Poké-Body from its previous level."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-126",
@@ -1941,7 +2072,16 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "evolves_from": {
+      "en": "Shaymin"
+    },
+    "rules_text": {
+      "en": "Put this card onto your Active Shaymin. Shaymin LV.X can use any attack, Poké-Power, or Poké-Body from its previous level."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-127",
@@ -2006,7 +2146,16 @@
         "type": "fighting",
         "value": "-20"
       }
-    ]
+    ],
+    "evolves_from": {
+      "en": "Shaymin"
+    },
+    "rules_text": {
+      "en": "Put this card onto your Active Shaymin. Shaymin LV.X can use any attack, Poké-Power, or Poké-Body from its previous level."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-128",
@@ -2082,7 +2231,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "It loves to feed on strong electricity. It occasionally appears around large power plants and so on."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-129",
@@ -2151,7 +2306,13 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "The spirit of a pro boxer has infused this POKéMON. It throws punches that are faster than a bullet train."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-13",
@@ -2241,7 +2402,10 @@
         "value": "+30"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-130",
@@ -2319,7 +2483,13 @@
         "type": "fighting",
         "value": "-30"
       }
-    ]
+    ],
+    "flavor_text": {
+      "en": "It tears and shreds prey with its wickedly sharp scythes. It very rarely spreads its wings to fly."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-14",
@@ -2411,7 +2581,13 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It lives in flower patches and avoids detection by curling up to look like a flowering plant."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-15",
@@ -2501,7 +2677,13 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "The flowers all over its body burst into bloom if it is lovingly hugged and senses gratitude."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-16",
@@ -2577,7 +2759,13 @@
         "value": "+30"
       }
     ],
-    "retreat_cost": 4
+    "retreat_cost": 4,
+    "flavor_text": {
+      "en": "The world's laziest Pokémon. When it is lounging, it is actually saving energy for striking back."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-17",
@@ -2668,7 +2856,10 @@
         "type": "psychic",
         "value": "-20"
       }
-    ]
+    ],
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-18",
@@ -2781,7 +2972,10 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-19",
@@ -2877,7 +3071,10 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-2",
@@ -2970,7 +3167,10 @@
         "value": "+30"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-20",
@@ -3070,7 +3270,10 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 4
+    "retreat_cost": 4,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-21",
@@ -3164,7 +3367,13 @@
         "type": "fighting",
         "value": "-20"
       }
-    ]
+    ],
+    "flavor_text": {
+      "en": "Despite its looks, it is aggressive. It jabs with its long, thin mouth if disturbed while collecting pollen."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-22",
@@ -3256,7 +3465,10 @@
         "value": "+30"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-23",
@@ -3351,7 +3563,13 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 3
+    "retreat_cost": 3,
+    "flavor_text": {
+      "en": "A legendary Pokémon of Sinnoh. It is said that time flows when Dialga's heart beats."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-24",
@@ -3448,7 +3666,10 @@
         "type": "lightning",
         "value": "-20"
       }
-    ]
+    ],
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-25",
@@ -3539,7 +3760,10 @@
         "type": "fire",
         "value": "+30"
       }
-    ]
+    ],
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-26",
@@ -3631,7 +3855,13 @@
         "value": "+30"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "If anyone were to hurt its pride, it would slash them with wings that can cleave through an ice floe."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-27",
@@ -3725,7 +3955,13 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 3
+    "retreat_cost": 3,
+    "flavor_text": {
+      "en": "A Pokémon that is said to live in a world on the reverse side of ours. It appears in an ancient cemetery."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-28",
@@ -3825,7 +4061,13 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "It was banished for its violence. It silently gazed upon the old world from the Distortion World."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-29",
@@ -3912,7 +4154,13 @@
         "type": "lightning",
         "value": "+20"
       }
-    ]
+    ],
+    "flavor_text": {
+      "en": "It is seen swimming dynamically and elegantly using its well-developed limbs and flippers."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-3",
@@ -4004,7 +4252,10 @@
         "value": "+30"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-30",
@@ -4095,7 +4346,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 3
+    "retreat_cost": 3,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-31",
@@ -4184,7 +4438,13 @@
         "type": "water",
         "value": "+30"
       }
-    ]
+    ],
+    "flavor_text": {
+      "en": "It uses unique fighting moves with fires on its hands and feet. It will take on any opponent."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-32",
@@ -4275,7 +4535,13 @@
         "value": "+20"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "There is a village that hosts a contest based on the amazingly variable cries of this Pokémon."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-33",
@@ -4369,7 +4635,13 @@
         "value": "+20"
       }
     ],
-    "retreat_cost": 4
+    "retreat_cost": 4,
+    "flavor_text": {
+      "en": "The long tongue is always soggy with slobber. The saliva contains a solvent that causes numbness."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-34",
@@ -4461,7 +4733,10 @@
         "value": "+30"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-35",
@@ -4544,7 +4819,13 @@
         "value": "+10"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It lives in warm seas. It is said that a couple finding this Pokémon will be blessed with eternal love."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-36",
@@ -4631,7 +4912,13 @@
         "type": "water",
         "value": "+20"
       }
-    ]
+    ],
+    "flavor_text": {
+      "en": "Its nine tails are said to be imbued with a mystic power. It can live for a thousand years."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-37",
@@ -4719,7 +5006,13 @@
         "value": "+30"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "A legendary Pokémon of Sinnoh. It is said that space becomes more stable with PALKIA's every breath."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-38",
@@ -4820,7 +5113,13 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It lives in flower patches and avoids detection by curling up to look like a flowering plant."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-39",
@@ -4914,7 +5213,13 @@
         "value": "+30"
       }
     ],
-    "retreat_cost": 4
+    "retreat_cost": 4,
+    "flavor_text": {
+      "en": "Some Pokémon are born on a TORTERRA's back and spend their entire life there."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-4",
@@ -5001,7 +5306,10 @@
         "value": "+20"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-40",
@@ -5082,7 +5390,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-41",
@@ -5170,7 +5481,10 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 3
+    "retreat_cost": 3,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-42",
@@ -5261,7 +5575,13 @@
         "value": "+20"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "It becomes active at night, seeking prey that is exhausted from the day's desert heat."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-43",
@@ -5370,7 +5690,10 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-44",
@@ -5458,7 +5781,13 @@
         "value": "+20"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "It never forgets any attack it endured while in the cocoon. After evolution, it seeks payback."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-45",
@@ -5546,7 +5875,13 @@
         "value": "+20"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "Its kicking mastery lets it loose 10 kicks per second. It emits sharp cries to intimidate foes."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-46",
@@ -5636,7 +5971,13 @@
         "value": "+20"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "A lifelong jungle dweller from 100 million years ago, it would snap obstructing trees with head butts."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-47",
@@ -5722,7 +6063,10 @@
         "type": "fighting",
         "value": "-20"
       }
-    ]
+    ],
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-48",
@@ -5818,7 +6162,13 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "If its coat becomes fully charged with electricity, its tail lights up. It fires hair that zaps on impact."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-49",
@@ -5912,7 +6262,13 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 3
+    "retreat_cost": 3,
+    "flavor_text": {
+      "en": "It knows where pure water wells up. It carries fellow Pokémon there on its back."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-5",
@@ -5989,7 +6345,13 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 3
+    "retreat_cost": 3,
+    "flavor_text": {
+      "en": "It has the power to control time. It appears in Sinnoh-region myths as an ancient deity."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-50",
@@ -6084,7 +6446,10 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-51",
@@ -6182,7 +6547,13 @@
         "value": "+20"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "If its Trainer becomes happy, it overflows with energy, dancing joyously while spinning about."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-52",
@@ -6270,7 +6641,13 @@
         "value": "+20"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It has a mischievous spirit. If it spots an angler, it will tug on the fishing line to interfere."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-53",
@@ -6369,7 +6746,13 @@
         "type": "fire",
         "value": "+20"
       }
-    ]
+    ],
+    "flavor_text": {
+      "en": "A well-trained one can sense auras to identify and take in the feelings of creatures over half a mile away."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-54",
@@ -6466,7 +6849,10 @@
         "type": "psychic",
         "value": "-20"
       }
-    ]
+    ],
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-55",
@@ -6563,7 +6949,13 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "Its cry sounds like an incantation. It is said the cry may rarely be imbued with happiness-giving power."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-56",
@@ -6652,7 +7044,13 @@
         "type": "water",
         "value": "+20"
       }
-    ]
+    ],
+    "flavor_text": {
+      "en": "It skillfully control the intensity of the fire on its tail to keep its foes at an ideal distance."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-57",
@@ -6744,7 +7142,10 @@
         "value": "+20"
       }
     ],
-    "retreat_cost": 3
+    "retreat_cost": 3,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-58",
@@ -6832,7 +7233,13 @@
         "value": "+20"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "It loves to lurk inside holes in rocks. It sometimes sprays ink on prey by sticking out only its mouth."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-59",
@@ -6919,7 +7326,13 @@
         "value": "+20"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "Because every PRINPLUP considers itself to be the most important, they can never form a group."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-6",
@@ -6997,7 +7410,13 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "It has the power to control time. It appears in Sinnoh-region myths as an ancient deity."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-60",
@@ -7089,7 +7508,13 @@
         "value": "+20"
       }
     ],
-    "retreat_cost": 3
+    "retreat_cost": 3,
+    "flavor_text": {
+      "en": "It freely controls three small units called Mini-Noses using magnetic force."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-61",
@@ -7190,7 +7615,10 @@
         "value": "+20"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-62",
@@ -7286,7 +7714,13 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It is outstandingly armored. As a result, it can eat grass and berries without having to fight."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-63",
@@ -7374,7 +7808,13 @@
         "value": "+20"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "It wraps silk around the branches of a tree. It drinks rainwater on its silk while awaiting evolution."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-64",
@@ -7465,7 +7905,13 @@
         "value": "+20"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "Its heart beats at a tenfold tempo, so it cannot sit still even for a moment."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-65",
@@ -7555,7 +8001,13 @@
         "value": "+20"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It is said to live 10,000 years. Its furry tail is popular as a symbol of longevity."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-66",
@@ -7652,7 +8104,10 @@
         "value": "+20"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-67",
@@ -7743,7 +8198,13 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "By storing water in its body, this desert dweller can survive 30 days without water."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-68",
@@ -7833,7 +8294,13 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "It binds itself to trees in marshes. It attracts prey with its sweet-smelling drool and gulps them down."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-69",
@@ -7919,7 +8386,13 @@
         "value": "+20"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "A kindly Pokémon that lays highly nutritious eggs and shares them with injured Pokémon or people."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-7",
@@ -8024,7 +8497,10 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-70",
@@ -8102,7 +8578,13 @@
         "value": "+10"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It is very agile. Before going to sleep, it extinguishes the flame on its tail to prevent fires."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-71",
@@ -8192,7 +8674,13 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "The trio is together from birth. It constantly gathers honey from flowers to please VESPIQUEN."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-72",
@@ -8284,7 +8772,13 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "A Pokémon that lives underground. Because of its dark habitat, it is repelled by bright sunlight."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-73",
@@ -8367,7 +8861,13 @@
         "value": "+10"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It digs into the ground with its tail and makes a mazelike nest. It can fly just a little."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-74",
@@ -8458,7 +8958,13 @@
         "type": "metal",
         "value": "-20"
       }
-    ]
+    ],
+    "flavor_text": {
+      "en": "Using electricity stored in its fur, it stimulates its muscles to heighten its reaction speed."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-75",
@@ -8541,7 +9047,13 @@
         "value": "+10"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "It was born when sludge in a dirty stream was exposed to the moon's X-rays. It appears among filth."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-76",
@@ -8608,7 +9120,13 @@
         "value": "+10"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It likes to carry around a small rock. It may wander around others' feet and cause them to stumble."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-77",
@@ -8709,7 +9227,10 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-78",
@@ -8791,7 +9312,13 @@
         "value": "+10"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "Its legs are short. Whenever it stumbles, its stiff antennae clack with a xylophone-like sound."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-79",
@@ -8878,7 +9405,13 @@
         "value": "+20"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "It loves crossing the sea with people and Pokémon on its back. It understands human speech."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-8",
@@ -8979,7 +9512,10 @@
         "value": "+30"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-80",
@@ -9066,7 +9602,13 @@
         "value": "+20"
       }
     ],
-    "retreat_cost": 3
+    "retreat_cost": 3,
+    "flavor_text": {
+      "en": "When it extends its over-six-foot-long tongue, its tail quivers. There is a possibility they are connected."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-81",
@@ -9151,7 +9693,13 @@
         "value": "+10"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It looks like an aquatic plant and serves as a ferry to Pokémon that can't swim."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-82",
@@ -9240,7 +9788,13 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "Its fluffy coat swells to double when static electricity builds up. Touching it can be shocking."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-83",
@@ -9325,7 +9879,13 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "A Pokémon that startles people in the middle of the night. It gathers fear as its energy."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-84",
@@ -9407,7 +9967,13 @@
         "value": "+10"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "When endangered, it may protect itself by raising its magnetism and drawing iron objects to its body."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-85",
@@ -9489,7 +10055,13 @@
         "value": "+10"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "A poor walker, it often falls down. However, its strong pride makes it puff up its chest without a care."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-86",
@@ -9578,7 +10150,13 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "A Pokémon with persistent nature, it chases its prey until the prey becomes exhausted."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-87",
@@ -9661,7 +10239,13 @@
         "value": "+10"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "en": "Overwhelmed by enigmatic abilities, it suffers a constant headache. It sometimes uses mysterious powers."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-88",
@@ -9750,7 +10334,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 3
+    "retreat_cost": 3,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-89",
@@ -9843,7 +10430,13 @@
         "value": "+10"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "If its horns capture the warm feelings of people or Pokémon, its body warms up slightly."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-9",
@@ -9920,7 +10513,10 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 3
+    "retreat_cost": 3,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-90",
@@ -10002,7 +10598,13 @@
         "value": "+10"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It forcefully squirts water. The water jet never misses prey even if the REMORAID is deep in the sea."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-91",
@@ -10092,7 +10694,13 @@
         "value": "+10"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It has the peculiar power of being able to see emotions such as joy and rage in the form of waves."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-92",
@@ -10181,7 +10789,13 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It loves vengeful emotions and hangs in rows under the eaves of houses where vengeful people live."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-93",
@@ -10264,7 +10878,13 @@
         "value": "+10"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It can't stop itself from chasing moving things, and it runs in a circle, chasing its own tail."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-94",
@@ -10345,7 +10965,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-95",
@@ -10431,7 +11054,13 @@
         "value": "+10"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It spends nearly all its time in a day sprawled out. Just seeing it makes one drowsy."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-96",
@@ -10509,7 +11138,13 @@
         "value": "+10"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It shelters itself in its shell, then strikes back with spouts of water at every opportunity."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-97",
@@ -10599,7 +11234,13 @@
         "type": "fighting",
         "value": "-20"
       }
-    ]
+    ],
+    "flavor_text": {
+      "en": "It can't relax if it or its surroundings are not clean. It wipes off dirt with its wings."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-98",
@@ -10682,7 +11323,13 @@
         "value": "+10"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "Once it takes aim at its foe, it makes a headlong charge. It is famous for its violent nature."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-99",
@@ -10765,7 +11412,13 @@
         "value": "+10"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "A fire burns inside, so it feels very warm to hug. It launches fireballs of 1,800 degrees F."
+    },
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-sh4",
@@ -10841,7 +11494,10 @@
         "value": "+10"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-sh5",
@@ -10936,7 +11592,10 @@
         "value": "-20"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   },
   {
     "id": "intl-pl1-sh6",
@@ -11026,6 +11685,9 @@
         "value": "+10"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "legalities": {
+      "unlimited": "legal"
+    }
   }
 ]
