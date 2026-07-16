@@ -32,11 +32,12 @@ English and finally the first non-empty translated name.
 ## Update data based on tcgdex
 
 ```sh
-python3 scripts/pull_tcgdex_data.py
-python3 scripts/convert_tcgdex_data.py
-python3 scripts/sync_set_images.py
-python3 scripts/sync_card_images.py
+./scripts/update_data.sh
 ```
+
+This pulls the latest source data, regenerates the app JSON, and synchronizes
+all set and card images. Set `PYTHON_BIN` if Python 3 is available under a
+different executable name.
 
 ## Cache set artwork
 
