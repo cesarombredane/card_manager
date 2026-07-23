@@ -5,9 +5,7 @@
     "number": "001",
     "category": "pokemon",
     "name": {
-      "ja": "モンジャラ",
-      "zh-TW": "蔓藤怪",
-      "th": "มอนจารา"
+      "ja": "モンジャラ"
     },
     "pokemon": [
       "0114"
@@ -19,10 +17,7 @@
       {
         "id": "normal",
         "images": {
-          "ja": "/images/cards/asia-sv5a/ja/001.webp",
-          "ko": "",
-          "th": "/images/cards/asia-sv5a/th/001.webp",
-          "zh-TW": "/images/cards/asia-sv5a/zh-TW/001.webp"
+          "ja": "/images/cards/asia-sv5a/ja/001.webp"
         }
       }
     ],
@@ -34,9 +29,7 @@
     "attacks": [
       {
         "name": {
-          "ja": "ひっぱたく",
-          "zh-TW": "重摑",
-          "th": "ตบแรง"
+          "ja": "ひっぱたく"
         },
         "cost": [
           "normal"
@@ -46,9 +39,7 @@
       },
       {
         "name": {
-          "ja": "つるでうつ",
-          "zh-TW": "藤蔓攻擊",
-          "th": "โจมตีด้วยเถาวัลย์"
+          "ja": "つるでうつ"
         },
         "cost": [
           "grass",
@@ -64,7 +55,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "ja": "ちぎれても 無限に 伸びる ツルの 奥の 正体は いまだ 解明されていない。"
+    }
   },
   {
     "id": "asia-sv5a-002",
@@ -72,9 +66,7 @@
     "number": "002",
     "category": "pokemon",
     "name": {
-      "ja": "モジャンボ",
-      "zh-TW": "巨蔓藤",
-      "th": "โมจัมโบ"
+      "ja": "モジャンボ"
     },
     "pokemon": [
       "0465"
@@ -86,10 +78,7 @@
       {
         "id": "normal",
         "images": {
-          "ja": "/images/cards/asia-sv5a/ja/002.webp",
-          "ko": "",
-          "th": "/images/cards/asia-sv5a/th/002.webp",
-          "zh-TW": "/images/cards/asia-sv5a/zh-TW/002.webp"
+          "ja": "/images/cards/asia-sv5a/ja/002.webp"
         }
       }
     ],
@@ -101,9 +90,7 @@
     "attacks": [
       {
         "name": {
-          "ja": "おおいかぶさる",
-          "zh-TW": "覆蓋",
-          "th": "แผ่ปกคลุม"
+          "ja": "おおいかぶさる"
         },
         "cost": [
           "grass",
@@ -112,9 +99,7 @@
         ],
         "damage": "150-",
         "text": {
-          "ja": "このポケモンにのっているダメカンの数×10ダメージぶん、このワザのダメージは小さくなる。",
-          "zh-TW": "減少這隻寶可夢身上放置的傷害指示物的數量×10點傷害。",
-          "th": "แดเมจของท่าต่อสู้นี้จะลดลง ตามจำนวนตัวนับแดเมจที่วางอยู่บนโปเกมอนนี้ x10"
+          "ja": "このポケモンにのっているダメカンの数×10ダメージぶん、このワザのダメージは小さくなる。"
         }
       }
     ],
@@ -124,7 +109,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 4
+    "retreat_cost": 4,
+    "flavor_text": {
+      "ja": "自在に 伸びる ２本の 腕は じつは ツルが 束になったものと 最近の 研究で わかった。"
+    }
   },
   {
     "id": "asia-sv5a-003",
@@ -132,9 +120,7 @@
     "number": "003",
     "category": "pokemon",
     "name": {
-      "ja": "カイロス",
-      "zh-TW": "凱羅斯",
-      "th": "ไคลอส"
+      "ja": "カイロス"
     },
     "pokemon": [
       "0127"
@@ -146,3854 +132,7 @@
       {
         "id": "normal",
         "images": {
-          "ja": "/images/cards/asia-sv5a/ja/003.webp",
-          "ko": "",
-          "th": "/images/cards/asia-sv5a/th/003.webp",
-          "zh-TW": "/images/cards/asia-sv5a/zh-TW/003.webp"
-        }
-      }
-    ],
-    "hp": 110,
-    "types": [
-      "grass"
-    ],
-    "stage": "basic",
-    "attacks": [
-      {
-        "name": {
-          "ja": "スロークランチ",
-          "zh-TW": "慢嚼碎",
-          "th": "สโลว์ครันช์"
-        },
-        "cost": [
-          "grass",
-          "normal"
-        ],
-        "damage": "",
-        "text": {
-          "ja": "このポケモンについているエネルギーを、すべてトラッシュする。次の相手の番の終わりに、このワザを受けたポケモンはきぜつする。",
-          "zh-TW": "將這隻寶可夢身上附加的能量卡全部丟棄。在下個對手的回合結束時，受到這個招式的寶可夢會【昏厥】。",
-          "th": "ทิ้งพลังงานที่ติดอยู่กับโปเกมอนนี้ ทั้งหมดที่ตำแหน่งทิ้งการ์ด เมื่อจบเทิร์นถัดไปของฝ่ายตรงข้าม โปเกมอนที่ได้รับท่าต่อสู้นี้จะ[หมดสภาพ]"
-        }
-      },
-      {
-        "name": {
-          "ja": "かいりきホーン",
-          "zh-TW": "怪力角擊",
-          "th": "เขามหากาฬ"
-        },
-        "cost": [
-          "grass",
-          "normal",
-          "normal"
-        ],
-        "damage": "100",
-        "text": {}
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "fire",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 2
-  },
-  {
-    "id": "asia-sv5a-004",
-    "set_id": "asia-sv5a",
-    "number": "004",
-    "category": "pokemon",
-    "name": {
-      "ja": "イトマル",
-      "zh-TW": "圓絲蛛",
-      "th": "อิโตมารุ"
-    },
-    "pokemon": [
-      "0167"
-    ],
-    "illustrator": "Saya Tsuruta",
-    "rarity": "common",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/004.webp",
-          "ko": "",
-          "th": "/images/cards/asia-sv5a/th/004.webp",
-          "zh-TW": "/images/cards/asia-sv5a/zh-TW/004.webp"
-        }
-      }
-    ],
-    "hp": 60,
-    "types": [
-      "grass"
-    ],
-    "stage": "basic",
-    "attacks": [
-      {
-        "name": {
-          "ja": "むしくい",
-          "zh-TW": "蟲咬",
-          "th": "แมลงกัด"
-        },
-        "cost": [
-          "grass"
-        ],
-        "damage": "20",
-        "text": {}
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "fire",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 1
-  },
-  {
-    "id": "asia-sv5a-005",
-    "set_id": "asia-sv5a",
-    "number": "005",
-    "category": "pokemon",
-    "name": {
-      "ja": "アリアドス",
-      "zh-TW": "阿利多斯",
-      "th": "อาริอาโดส"
-    },
-    "pokemon": [
-      "0168"
-    ],
-    "illustrator": "Anesaki Dynamic",
-    "rarity": "uncommon",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/005.webp",
-          "ko": "",
-          "th": "/images/cards/asia-sv5a/th/005.webp",
-          "zh-TW": "/images/cards/asia-sv5a/zh-TW/005.webp"
-        }
-      }
-    ],
-    "hp": 90,
-    "types": [
-      "grass"
-    ],
-    "stage": "stage1",
-    "attacks": [
-      {
-        "name": {
-          "ja": "いとがらめ",
-          "zh-TW": "線帶纏繞",
-          "th": "ชักใยพัน"
-        },
-        "cost": [
-          "grass"
-        ],
-        "damage": "10+",
-        "text": {
-          "ja": "相手のバトルポケモンのにげるためのエネルギーの数×30ダメージ追加。",
-          "zh-TW": "增加對手的戰鬥寶可夢【撤退】所需的能量的數量×30點傷害。",
-          "th": "แดเมจจะเพิ่มตามจำนวนพลังงานสำหรับ[หนี]ของโปเกมอนบนตำแหน่งต่อสู้ฝ่ายตรงข้าม x30"
-        }
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "fire",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 1
-  },
-  {
-    "id": "asia-sv5a-006",
-    "set_id": "asia-sv5a",
-    "number": "006",
-    "category": "pokemon",
-    "name": {
-      "ja": "リーフィア",
-      "zh-TW": "葉伊布",
-      "th": "ลีเฟีย"
-    },
-    "pokemon": [
-      "0470"
-    ],
-    "illustrator": "Kuroimori",
-    "rarity": "uncommon",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/006.webp",
-          "ko": "",
-          "th": "/images/cards/asia-sv5a/th/006.webp",
-          "zh-TW": "/images/cards/asia-sv5a/zh-TW/006.webp"
-        }
-      }
-    ],
-    "hp": 120,
-    "types": [
-      "grass"
-    ],
-    "stage": "stage1",
-    "attacks": [
-      {
-        "name": {
-          "ja": "わかばのめぐみ",
-          "zh-TW": "嫩葉之恩",
-          "th": "พรจากใบอ่อน"
-        },
-        "cost": [
-          "normal"
-        ],
-        "damage": "",
-        "text": {
-          "ja": "自分の手札から「基本エネルギー」を1枚選び、ベンチポケモンにつける。その後、つけたポケモンのHPをすべて回復する。",
-          "zh-TW": "從自己的手牌選擇1張「基本【草】能量」卡，附於備戰寶可夢身上。然後，將附上那張卡的寶可夢的HP全部恢復。",
-          "th": "เลือกการ์ด [พลังงานพื้นฐาน[หญ้า]] 1 ใบจากบนมือฝ่ายเรา ติดที่โปเกมอนบนเบนช์ หลังจากนั้น ฟื้นฟู HP ทั้งหมดของโปเกมอนที่ติดการ์ดนั้น"
-        }
-      },
-      {
-        "name": {
-          "ja": "ソーラービーム",
-          "zh-TW": "日光束",
-          "th": "โซลาร์บีม"
-        },
-        "cost": [
-          "grass",
-          "normal"
-        ],
-        "damage": "70",
-        "text": {}
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "fire",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 1
-  },
-  {
-    "id": "asia-sv5a-007",
-    "set_id": "asia-sv5a",
-    "number": "007",
-    "category": "pokemon",
-    "name": {
-      "ja": "テツノイサハ",
-      "zh-TW": "鐵斑葉",
-      "th": "ใบด่างเหล็ก"
-    },
-    "pokemon": [
-      "1010"
-    ],
-    "illustrator": "Mitsuhiro Arita",
-    "rarity": "rare",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/007.webp",
-          "ko": "",
-          "th": "/images/cards/asia-sv5a/th/007.webp",
-          "zh-TW": "/images/cards/asia-sv5a/zh-TW/007.webp"
-        }
-      }
-    ],
-    "hp": 120,
-    "types": [
-      "grass"
-    ],
-    "stage": "basic",
-    "attacks": [
-      {
-        "name": {
-          "ja": "リカバーネット",
-          "zh-TW": "補全之網",
-          "th": "รีคัฟเวอร์เน็ต"
-        },
-        "cost": [
-          "grass"
-        ],
-        "damage": "",
-        "text": {
-          "ja": "自分のトラッシュからポケモンを2枚まで選び、相手に見せて、手札に加える。",
-          "zh-TW": "從自己的棄牌區選擇最多2張寶可夢卡，在給對手看過後加入手牌。",
-          "th": "เลือกการ์ดโปเกมอนได้สูงสุด 2 ใบจากตำแหน่งทิ้งการ์ดฝ่ายเรา ให้ฝ่ายตรงข้ามดู นำขึ้นมือ"
-        }
-      },
-      {
-        "name": {
-          "ja": "アベンジエッジ",
-          "zh-TW": "復仇刀鋒",
-          "th": "อเวนจ์เอดจ์"
-        },
-        "cost": [
-          "grass",
-          "normal",
-          "normal"
-        ],
-        "damage": "100+",
-        "text": {
-          "ja": "前の相手の番に、ワザのダメージで、自分のポケモンがきぜつしていたなら、60ダメージ追加。",
-          "zh-TW": "在上個對手的回合，若自己的寶可夢因招式的傷害而【昏厥】了，則增加60點傷害。",
-          "th": "ในเทิร์นก่อนของฝ่ายตรงข้าม ถ้าโปเกมอนฝ่ายเรา[หมดสภาพ] ด้วยแดเมจของท่าต่อสู้ การโจมตีนี้จะเพิ่มแดเมจอีก 60"
-        }
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "fire",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 1
-  },
-  {
-    "id": "asia-sv5a-008",
-    "set_id": "asia-sv5a",
-    "number": "008",
-    "category": "pokemon",
-    "name": {
-      "ja": "チャデス",
-      "zh-TW": "斯魔茶",
-      "th": "ฉะเดธ"
-    },
-    "pokemon": [
-      "1012"
-    ],
-    "illustrator": "MINAMINAMI Take",
-    "rarity": "common",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/008.webp",
-          "ko": "",
-          "th": "/images/cards/asia-sv5a/th/008.webp",
-          "zh-TW": "/images/cards/asia-sv5a/zh-TW/008.webp"
-        }
-      }
-    ],
-    "hp": 30,
-    "types": [
-      "grass"
-    ],
-    "stage": "basic",
-    "attacks": [
-      {
-        "name": {
-          "ja": "ひっかける",
-          "zh-TW": "鉤住",
-          "th": "จับแขวน"
-        },
-        "cost": [
-          "grass"
-        ],
-        "damage": "10",
-        "text": {}
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "fire",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 1
-  },
-  {
-    "id": "asia-sv5a-009",
-    "set_id": "asia-sv5a",
-    "number": "009",
-    "category": "pokemon",
-    "name": {
-      "ja": "ヤバソチャex",
-      "zh-TW": "來悲粗茶ex",
-      "th": "ยาบาโซฉะex"
-    },
-    "pokemon": [
-      "1013"
-    ],
-    "illustrator": "aky CG Works",
-    "rarity": "double_rare",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/009.webp",
-          "ko": "",
-          "th": "/images/cards/asia-sv5a/th/009.webp",
-          "zh-TW": "/images/cards/asia-sv5a/zh-TW/009.webp"
-        }
-      }
-    ],
-    "hp": 240,
-    "types": [
-      "grass"
-    ],
-    "stage": "stage1",
-    "rule_box": "EX",
-    "attacks": [
-      {
-        "name": {
-          "ja": "せんじがえし",
-          "zh-TW": "熬返",
-          "th": "ต้มสกัดคืน"
-        },
-        "cost": [
-          "normal"
-        ],
-        "damage": "",
-        "text": {
-          "ja": "自分のトラッシュにある「基本エネルギー」をすべて相手に見せ、その枚数×2個ぶんのダメカンを、相手のポケモン1匹にのせる。その後、見せたエネルギーを山札にもどして切る。",
-          "zh-TW": "在給對手看過自己的棄牌區的所有「基本【草】能量」卡後，將與其張數×2個的相同數量的傷害指示物，放置於對手的1隻寶可夢身上。然後，將給對手看過的能量卡放回牌庫並重洗。",
-          "th": "ให้ฝ่ายตรงข้ามดูการ์ด [พลังงานพื้นฐาน[หญ้า]] ที่อยู่บนตำแหน่งทิ้งการ์ดฝ่ายเราทั้งหมด วางตัวนับแดเมจบนโปเกมอนฝ่ายตรงข้าม 1 ตัว ตามจำนวนการ์ดนั้น x2 ตัว หลังจากนั้น นำการ์ดพลังงานที่ให้ดูใส่กลับไปในสำรับการ์ดแล้วสับ"
-        }
-      },
-      {
-        "name": {
-          "ja": "まっちゃスプラッシュ",
-          "zh-TW": "抹茶飛濺",
-          "th": "มัทฉะสแปลช"
-        },
-        "cost": [
-          "grass",
-          "normal"
-        ],
-        "damage": "120",
-        "text": {
-          "ja": "自分のポケモン全員のHPを、それぞれ「30」回復する。",
-          "zh-TW": "將自己的所有寶可夢各恢復「30」HP。",
-          "th": "ฟื้นฟู HP ของโปเกมอนฝ่ายเราทุกตัว ตัวละ [30]"
-        }
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "fire",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 1
-  },
-  {
-    "id": "asia-sv5a-010",
-    "set_id": "asia-sv5a",
-    "number": "010",
-    "category": "pokemon",
-    "name": {
-      "ja": "ロコン",
-      "zh-TW": "六尾",
-      "th": "โรคอน"
-    },
-    "pokemon": [
-      "0037"
-    ],
-    "illustrator": "sowsow",
-    "rarity": "common",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/010.webp",
-          "ko": "",
-          "th": "/images/cards/asia-sv5a/th/010.webp",
-          "zh-TW": "/images/cards/asia-sv5a/zh-TW/010.webp"
-        }
-      }
-    ],
-    "hp": 70,
-    "types": [
-      "fire"
-    ],
-    "stage": "basic",
-    "attacks": [
-      {
-        "name": {
-          "ja": "ひだね",
-          "zh-TW": "火種",
-          "th": "เชื้อไฟ"
-        },
-        "cost": [
-          "fire",
-          "fire"
-        ],
-        "damage": "40",
-        "text": {}
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "water",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 1
-  },
-  {
-    "id": "asia-sv5a-011",
-    "set_id": "asia-sv5a",
-    "number": "011",
-    "category": "pokemon",
-    "name": {
-      "ja": "キュウコン",
-      "zh-TW": "九尾",
-      "th": "คิวคอน"
-    },
-    "pokemon": [
-      "0038"
-    ],
-    "illustrator": "KEIICHIRO ITO",
-    "rarity": "common",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/011.webp",
-          "ko": "",
-          "th": "/images/cards/asia-sv5a/th/011.webp",
-          "zh-TW": "/images/cards/asia-sv5a/zh-TW/011.webp"
-        }
-      }
-    ],
-    "hp": 120,
-    "types": [
-      "fire"
-    ],
-    "stage": "stage1",
-    "attacks": [
-      {
-        "name": {
-          "ja": "あやしいともしび",
-          "zh-TW": "奇異燈火",
-          "th": "แสงไฟประหลาด"
-        },
-        "cost": [
-          "fire",
-          "fire"
-        ],
-        "damage": "90",
-        "text": {
-          "ja": "相手のバトルポケモンをやけどとこんらんにする。",
-          "zh-TW": "將對手的戰鬥寶可夢【灼傷】與【混亂】。",
-          "th": "ทำให้โปเกมอนบนตำแหน่งต่อสู้ฝ่ายตรงข้ามเป็นสภาวะ[ไหม้]และ[สับสน]"
-        }
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "water",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 2
-  },
-  {
-    "id": "asia-sv5a-012",
-    "set_id": "asia-sv5a",
-    "number": "012",
-    "category": "pokemon",
-    "name": {
-      "ja": "マグマッグ",
-      "zh-TW": "熔岩蟲",
-      "th": "มักแม็ก"
-    },
-    "pokemon": [
-      "0218"
-    ],
-    "illustrator": "Gapao",
-    "rarity": "common",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/012.webp",
-          "ko": "",
-          "th": "/images/cards/asia-sv5a/th/012.webp",
-          "zh-TW": "/images/cards/asia-sv5a/zh-TW/012.webp"
-        }
-      }
-    ],
-    "hp": 80,
-    "types": [
-      "fire"
-    ],
-    "stage": "basic",
-    "attacks": [
-      {
-        "name": {
-          "ja": "あついマグマ",
-          "zh-TW": "熾熱熔岩",
-          "th": "แม็กมาร้อน"
-        },
-        "cost": [
-          "fire",
-          "normal"
-        ],
-        "damage": "20",
-        "text": {
-          "ja": "相手のバトルポケモンをやけどにする。",
-          "zh-TW": "將對手的戰鬥寶可夢【灼傷】。",
-          "th": "ทำให้โปเกมอนบนตำแหน่งต่อสู้ฝ่ายตรงข้ามเป็นสภาวะ[ไหม้]"
-        }
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "water",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 3
-  },
-  {
-    "id": "asia-sv5a-013",
-    "set_id": "asia-sv5a",
-    "number": "013",
-    "category": "pokemon",
-    "name": {
-      "ja": "マグカルゴex",
-      "zh-TW": "熔岩蝸牛ex",
-      "th": "มักคาร์โกex"
-    },
-    "pokemon": [
-      "0219"
-    ],
-    "illustrator": "PLANETA Mochizuki",
-    "rarity": "double_rare",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/013.webp",
-          "ko": "",
-          "th": "/images/cards/asia-sv5a/th/013.webp",
-          "zh-TW": "/images/cards/asia-sv5a/zh-TW/013.webp"
-        }
-      }
-    ],
-    "hp": 270,
-    "types": [
-      "fire"
-    ],
-    "stage": "stage1",
-    "rule_box": "EX",
-    "attacks": [
-      {
-        "name": {
-          "ja": "あついマグマ",
-          "zh-TW": "熾熱熔岩",
-          "th": "แม็กมาร้อน"
-        },
-        "cost": [
-          "fire",
-          "normal"
-        ],
-        "damage": "70",
-        "text": {
-          "ja": "相手のバトルポケモンをやけどにする。",
-          "zh-TW": "將對手的戰鬥寶可夢【灼傷】。",
-          "th": "ทำให้โปเกมอนบนตำแหน่งต่อสู้ฝ่ายตรงข้ามเป็นสภาวะ[ไหม้]"
-        }
-      },
-      {
-        "name": {
-          "ja": "グラウンドバーン",
-          "zh-TW": "大地灼燒",
-          "th": "กราวนด์เบิร์น"
-        },
-        "cost": [
-          "fire",
-          "fire",
-          "normal"
-        ],
-        "damage": "140+",
-        "text": {
-          "ja": "おたがいの山札を上から1枚ずつトラッシュし、その中にあるエネルギーの枚数×140ダメージ追加。",
-          "zh-TW": "將雙方的牌庫上方各1張卡丟棄，增加其中能量卡的張數×140點傷害。",
-          "th": "ทิ้งการ์ดจากด้านบนของสำรับการ์ดของทั้งสองฝ่ายฝ่ายละ 1 ใบที่ตำแหน่งทิ้งการ์ด แดเมจจะเพิ่มตามจำนวนการ์ดพลังงานที่อยู่ในนั้น x140"
-        }
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "water",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 3
-  },
-  {
-    "id": "asia-sv5a-014",
-    "set_id": "asia-sv5a",
-    "number": "014",
-    "category": "pokemon",
-    "name": {
-      "ja": "コータス",
-      "zh-TW": "煤炭龜",
-      "th": "โคทอยซ์"
-    },
-    "pokemon": [
-      "0324"
-    ],
-    "illustrator": "Teeziro",
-    "rarity": "common",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/014.webp",
-          "ko": "",
-          "th": "/images/cards/asia-sv5a/th/014.webp",
-          "zh-TW": "/images/cards/asia-sv5a/zh-TW/014.webp"
-        }
-      }
-    ],
-    "hp": 130,
-    "types": [
-      "fire"
-    ],
-    "stage": "basic",
-    "attacks": [
-      {
-        "name": {
-          "ja": "こうらでぶつかる",
-          "zh-TW": "甲殼衝撞",
-          "th": "กระดองประจัญบาน"
-        },
-        "cost": [
-          "fire",
-          "normal"
-        ],
-        "damage": "30",
-        "text": {
-          "ja": "次の相手の番、このポケモンが受けるワザのダメージは「-30」される。",
-          "zh-TW": "在下個對手的回合，這隻寶可夢受到招式的傷害「-30」點。",
-          "th": "เทิร์นถัดไปของฝ่ายตรงข้าม แดเมจของท่าต่อสู้ที่โปเกมอนนี้จะได้รับจะถูก [-30]"
-        }
-      },
-      {
-        "name": {
-          "ja": "ほのおのうず",
-          "zh-TW": "火焰旋渦",
-          "th": "วงล้อไฟ"
-        },
-        "cost": [
-          "fire",
-          "normal",
-          "normal"
-        ],
-        "damage": "110",
-        "text": {
-          "ja": "このポケモンについているエネルギーを2個選び、トラッシュする。",
-          "zh-TW": "選擇2個這隻寶可夢身上附加的能量，將其丟棄。",
-          "th": "เลือกพลังงานที่ติดอยู่กับโปเกมอนนี้ 2 ลูก ทิ้งที่ตำแหน่งทิ้งการ์ด"
-        }
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "water",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 3
-  },
-  {
-    "id": "asia-sv5a-015",
-    "set_id": "asia-sv5a",
-    "number": "015",
-    "category": "pokemon",
-    "name": {
-      "ja": "ヒコザル",
-      "zh-TW": "小火焰猴",
-      "th": "ฮิโกซารุ"
-    },
-    "pokemon": [
-      "0390"
-    ],
-    "illustrator": "Jerky",
-    "rarity": "common",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/015.webp",
-          "ko": "",
-          "th": "/images/cards/asia-sv5a/th/015.webp",
-          "zh-TW": "/images/cards/asia-sv5a/zh-TW/015.webp"
-        }
-      }
-    ],
-    "hp": 60,
-    "types": [
-      "fire"
-    ],
-    "stage": "basic",
-    "attacks": [
-      {
-        "name": {
-          "ja": "ひをふく",
-          "zh-TW": "吹火",
-          "th": "เป่าไฟ"
-        },
-        "cost": [
-          "fire",
-          "normal"
-        ],
-        "damage": "20+",
-        "text": {
-          "ja": "コインを1回投げオモテなら、20ダメージ追加。",
-          "zh-TW": "擲1次硬幣若為正面，則增加20點傷害。",
-          "th": "ทอยเหรียญ 1 ครั้งถ้าออกหัว การโจมตีนี้จะเพิ่มแดเมจอีก 20"
-        }
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "water",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 1
-  },
-  {
-    "id": "asia-sv5a-016",
-    "set_id": "asia-sv5a",
-    "number": "016",
-    "category": "pokemon",
-    "name": {
-      "ja": "モウカザル",
-      "zh-TW": "猛火猴",
-      "th": "โมคาซารุ"
-    },
-    "pokemon": [
-      "0391"
-    ],
-    "illustrator": "Scav",
-    "rarity": "common",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/016.webp",
-          "ko": "",
-          "th": "/images/cards/asia-sv5a/th/016.webp",
-          "zh-TW": "/images/cards/asia-sv5a/zh-TW/016.webp"
-        }
-      }
-    ],
-    "hp": 90,
-    "types": [
-      "fire"
-    ],
-    "stage": "stage1",
-    "attacks": [
-      {
-        "name": {
-          "ja": "チョップ",
-          "zh-TW": "劈打",
-          "th": "สับ"
-        },
-        "cost": [
-          "fire",
-          "normal"
-        ],
-        "damage": "40",
-        "text": {}
-      },
-      {
-        "name": {
-          "ja": "ヒートブロー",
-          "zh-TW": "高溫打擊",
-          "th": "ฮีทโบลว์"
-        },
-        "cost": [
-          "fire",
-          "fire",
-          "normal"
-        ],
-        "damage": "80",
-        "text": {
-          "ja": "このポケモンについているエネルギーを1個選び、トラッシュする。",
-          "zh-TW": "選擇1個這隻寶可夢身上附加的能量，將其丟棄。",
-          "th": "เลือกพลังงานที่ติดอยู่กับโปเกมอนนี้ 1 ลูก ทิ้งที่ตำแหน่งทิ้งการ์ด"
-        }
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "water",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 1
-  },
-  {
-    "id": "asia-sv5a-017",
-    "set_id": "asia-sv5a",
-    "number": "017",
-    "category": "pokemon",
-    "name": {
-      "ja": "ゴウカザル",
-      "zh-TW": "烈焰猴",
-      "th": "โกคาซารุ"
-    },
-    "pokemon": [
-      "0392"
-    ],
-    "illustrator": "Takumi Wada",
-    "rarity": "rare",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/017.webp",
-          "ko": "",
-          "th": "/images/cards/asia-sv5a/th/017.webp",
-          "zh-TW": "/images/cards/asia-sv5a/zh-TW/017.webp"
-        }
-      }
-    ],
-    "hp": 140,
-    "types": [
-      "fire"
-    ],
-    "stage": "stage2",
-    "attacks": [
-      {
-        "name": {
-          "ja": "バーンアウト",
-          "zh-TW": "燃燒殆盡",
-          "th": "เบิร์นเอาต์"
-        },
-        "cost": [
-          "fire",
-          "fire",
-          "normal"
-        ],
-        "damage": "200",
-        "text": {
-          "ja": "このポケモンについているエネルギーを1個選び、トラッシュする。",
-          "zh-TW": "選擇1個這隻寶可夢身上附加的能量，將其丟棄。",
-          "th": "เลือกพลังงานที่ติดอยู่กับโปเกมอนนี้ 1 ลูก ทิ้งที่ตำแหน่งทิ้งการ์ด"
-        }
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "water",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 1
-  },
-  {
-    "id": "asia-sv5a-018",
-    "set_id": "asia-sv5a",
-    "number": "018",
-    "category": "pokemon",
-    "name": {
-      "ja": "イーユイ",
-      "zh-TW": "古玉魚",
-      "th": "อวี้อวี๋"
-    },
-    "pokemon": [
-      "1004"
-    ],
-    "illustrator": "Oku",
-    "rarity": "uncommon",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/018.webp",
-          "ko": "",
-          "th": "/images/cards/asia-sv5a/th/018.webp",
-          "zh-TW": "/images/cards/asia-sv5a/zh-TW/018.webp"
-        }
-      }
-    ],
-    "hp": 110,
-    "types": [
-      "fire"
-    ],
-    "stage": "basic",
-    "attacks": [
-      {
-        "name": {
-          "ja": "ひきつける",
-          "zh-TW": "吸引",
-          "th": "ดึงดูด"
-        },
-        "cost": [
-          "normal"
-        ],
-        "damage": "",
-        "text": {
-          "ja": "自分の山札を2枚引く。",
-          "zh-TW": "從自己的牌庫抽出2張卡。",
-          "th": "จั่วการ์ด 2 ใบจากสำรับการ์ดฝ่ายเรา"
-        }
-      },
-      {
-        "name": {
-          "ja": "グラウンドメルト",
-          "zh-TW": "大地熔化",
-          "th": "กราวนด์เมลต์"
-        },
-        "cost": [
-          "fire",
-          "normal"
-        ],
-        "damage": "60+",
-        "text": {
-          "ja": "場にスタジアムが出ているなら、60ダメージ追加。その後、そのスタジアムをトラッシュする。",
-          "zh-TW": "若場上有競技場卡，則增加60點傷害。然後，將那張競技場卡丟棄。",
-          "th": "ถ้ามีการ์ดสเตเดียมอยู่บนกระดาน การโจมตีนี้จะเพิ่มแดเมจอีก 60 หลังจากนั้น ทิ้งการ์ดสเตเดียมนั้นที่ตำแหน่งทิ้งการ์ด"
-        }
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "water",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 1
-  },
-  {
-    "id": "asia-sv5a-019",
-    "set_id": "asia-sv5a",
-    "number": "019",
-    "category": "pokemon",
-    "name": {
-      "ja": "ヘイガニ",
-      "zh-TW": "龍蝦小兵",
-      "th": "เฮกานิ"
-    },
-    "pokemon": [
-      "0341"
-    ],
-    "illustrator": "Kouki Saitou",
-    "rarity": "common",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/019.webp",
-          "ko": "",
-          "th": "/images/cards/asia-sv5a/th/019.webp",
-          "zh-TW": "/images/cards/asia-sv5a/zh-TW/019.webp"
-        }
-      }
-    ],
-    "hp": 80,
-    "types": [
-      "water"
-    ],
-    "stage": "basic",
-    "attacks": [
-      {
-        "name": {
-          "ja": "はさむ",
-          "zh-TW": "夾住",
-          "th": "หนีบ"
-        },
-        "cost": [
-          "water",
-          "water",
-          "normal"
-        ],
-        "damage": "60",
-        "text": {}
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "lightning",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 2
-  },
-  {
-    "id": "asia-sv5a-020",
-    "set_id": "asia-sv5a",
-    "number": "020",
-    "category": "pokemon",
-    "name": {
-      "ja": "シザリガー",
-      "zh-TW": "鐵螯龍蝦",
-      "th": "ชิซาริเกอร์"
-    },
-    "pokemon": [
-      "0342"
-    ],
-    "illustrator": "Kurata So",
-    "rarity": "common",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/020.webp",
-          "ko": "",
-          "th": "/images/cards/asia-sv5a/th/020.webp",
-          "zh-TW": "/images/cards/asia-sv5a/zh-TW/020.webp"
-        }
-      }
-    ],
-    "hp": 130,
-    "types": [
-      "water"
-    ],
-    "stage": "stage1",
-    "attacks": [
-      {
-        "name": {
-          "ja": "ジョキジョキ",
-          "zh-TW": "喀嚓喀嚓",
-          "th": "ฉับ ๆ"
-        },
-        "cost": [
-          "water",
-          "normal"
-        ],
-        "damage": "40",
-        "text": {
-          "ja": "コインを2回投げ、オモテの数ぶん、相手の山札を上からトラッシュする。",
-          "zh-TW": "擲2次硬幣，將對手的牌庫上方與正面出現的次數相同數量的卡丟棄。",
-          "th": "ทอยเหรียญ 2 ครั้ง ทิ้งการ์ดจากด้านบนของสำรับการ์ดฝ่ายตรงข้าม ตามจำนวนครั้งที่ออกหัวที่ตำแหน่งทิ้งการ์ด"
-        }
-      },
-      {
-        "name": {
-          "ja": "あばれハンマー",
-          "zh-TW": "暴亂之錘",
-          "th": "ค้อนคลั่ง"
-        },
-        "cost": [
-          "water",
-          "water",
-          "normal"
-        ],
-        "damage": "180",
-        "text": {
-          "ja": "次の自分の番、このポケモンはワザが使えない。",
-          "zh-TW": "在下個自己的回合，這隻寶可夢無法使用招式。",
-          "th": "เทิร์นถัดไปของฝ่ายเรา โปเกมอนนี้จะใช้ท่าต่อสู้ไม่ได้"
-        }
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "lightning",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 3
-  },
-  {
-    "id": "asia-sv5a-021",
-    "set_id": "asia-sv5a",
-    "number": "021",
-    "category": "pokemon",
-    "name": {
-      "ja": "グレイシア",
-      "zh-TW": "冰伊布",
-      "th": "กราเซีย"
-    },
-    "pokemon": [
-      "0471"
-    ],
-    "illustrator": "rika",
-    "rarity": "uncommon",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/021.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "hp": 120,
-    "types": [
-      "water"
-    ],
-    "stage": "stage1",
-    "attacks": [
-      {
-        "name": {
-          "ja": "しみいるれいき",
-          "zh-TW": "滲透寒氣",
-          "th": "ไอเย็นซึมลึก"
-        },
-        "cost": [
-          "water"
-        ],
-        "damage": "30",
-        "text": {
-          "ja": "次の相手の番の終わりに、このワザを受けたポケモンにダメカンを9個のせる。",
-          "zh-TW": "在下個對手的回合結束時，在受到這個招式的寶可夢身上放置9個傷害指示物。",
-          "th": "เมื่อจบเทิร์นถัดไปของฝ่ายตรงข้าม วางตัวนับแดเมจ 9 ตัวบนโปเกมอนที่ได้รับท่าต่อสู้นี้"
-        }
-      },
-      {
-        "name": {
-          "ja": "つららミサイル",
-          "zh-TW": "冰柱飛彈",
-          "th": "มิสไซล์แท่งน้ำแข็ง"
-        },
-        "cost": [
-          "water",
-          "normal"
-        ],
-        "damage": "70",
-        "text": {}
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "metal",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 1
-  },
-  {
-    "id": "asia-sv5a-022",
-    "set_id": "asia-sv5a",
-    "number": "022",
-    "category": "pokemon",
-    "name": {
-      "ja": "フィオネ",
-      "zh-TW": "霏歐納",
-      "th": "ฟีโอเน"
-    },
-    "pokemon": [
-      "0489"
-    ],
-    "illustrator": "aspara",
-    "rarity": "common",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/022.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "hp": 70,
-    "types": [
-      "water"
-    ],
-    "stage": "basic",
-    "attacks": [
-      {
-        "name": {
-          "ja": "まねきよせる",
-          "zh-TW": "招喚",
-          "th": "เรียกมาใกล้"
-        },
-        "cost": [
-          "normal"
-        ],
-        "damage": "",
-        "text": {
-          "ja": "自分のトラッシュからサポートを1枚選び、相手に見せて、手札に加える。",
-          "zh-TW": "從自己的棄牌區選擇1張支援者卡，在給對手看過後加入手牌。",
-          "th": "เลือกการ์ดซัพพอร์ต 1 ใบจากตำแหน่งทิ้งการ์ดฝ่ายเรา ให้ฝ่ายตรงข้ามดู นำขึ้นมือ"
-        }
-      },
-      {
-        "name": {
-          "ja": "エナジープレス",
-          "zh-TW": "能量壓制",
-          "th": "เอนเนอร์จี้เพรส"
-        },
-        "cost": [
-          "water"
-        ],
-        "damage": "20×",
-        "text": {
-          "ja": "相手のバトルポケモンについているエネルギーの数×20ダメージ。",
-          "zh-TW": "造成對手的戰鬥寶可夢身上附加的能量的數量×20點傷害。",
-          "th": "แดเมจจะเท่ากับจำนวนพลังงานที่ติดอยู่กับโปเกมอนบนตำแหน่งต่อสู้ฝ่ายตรงข้าม x20"
-        }
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "lightning",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 1
-  },
-  {
-    "id": "asia-sv5a-023",
-    "set_id": "asia-sv5a",
-    "number": "023",
-    "category": "pokemon",
-    "name": {
-      "ja": "ケロマツ",
-      "zh-TW": "呱呱泡蛙",
-      "th": "เคโรมัตซึ"
-    },
-    "pokemon": [
-      "0656"
-    ],
-    "illustrator": "Yuka Morii",
-    "rarity": "common",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/023.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "hp": 60,
-    "types": [
-      "water"
-    ],
-    "stage": "basic",
-    "attacks": [
-      {
-        "name": {
-          "ja": "むれる",
-          "zh-TW": "群聚",
-          "th": "ชุมนุม"
-        },
-        "cost": [
-          "water"
-        ],
-        "damage": "",
-        "text": {
-          "ja": "自分の山札から「ケロマツ」を2枚まで選び、ベンチに出す。そして山札を切る。",
-          "zh-TW": "從自己的牌庫選擇最多2張「呱呱泡蛙」，放置於備戰區。並且重洗牌庫。",
-          "th": "เลือกการ์ด [เคโรมัตซึ] ได้สูงสุด 2 ใบจากสำรับการ์ดฝ่ายเรา วางบนเบนช์ แล้วสับสำรับการ์ด"
-        }
-      },
-      {
-        "name": {
-          "ja": "はねまわる",
-          "zh-TW": "活蹦亂跳",
-          "th": "สะบัดตัว"
-        },
-        "cost": [
-          "water"
-        ],
-        "damage": "10",
-        "text": {}
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "lightning",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 1
-  },
-  {
-    "id": "asia-sv5a-024",
-    "set_id": "asia-sv5a",
-    "number": "024",
-    "category": "pokemon",
-    "name": {
-      "ja": "ゲコガシラ",
-      "zh-TW": "呱頭蛙",
-      "th": "เกโคกาชิระ"
-    },
-    "pokemon": [
-      "0657"
-    ],
-    "illustrator": "Hitoshi Ariga",
-    "rarity": "common",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/024.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "hp": 90,
-    "types": [
-      "water"
-    ],
-    "stage": "stage1",
-    "attacks": [
-      {
-        "name": {
-          "ja": "しびれみず",
-          "zh-TW": "麻麻水",
-          "th": "น้ำทำให้ชา"
-        },
-        "cost": [
-          "water"
-        ],
-        "damage": "20",
-        "text": {
-          "ja": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。",
-          "zh-TW": "擲1次硬幣若為正面，則將對手的戰鬥寶可夢【麻痺】。",
-          "th": "ทอยเหรียญ 1 ครั้งถ้าออกหัว จะทำให้โปเกมอนบนตำแหน่งต่อสู้ฝ่ายตรงข้ามเป็นสภาวะ[ชา]"
-        }
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "lightning",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 1
-  },
-  {
-    "id": "asia-sv5a-025",
-    "set_id": "asia-sv5a",
-    "number": "025",
-    "category": "pokemon",
-    "name": {
-      "ja": "ウッウ",
-      "zh-TW": "古月鳥",
-      "th": "อุ๊อุ"
-    },
-    "pokemon": [
-      "0845"
-    ],
-    "illustrator": "OKACHEKE",
-    "rarity": "uncommon",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/025.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "hp": 110,
-    "types": [
-      "water"
-    ],
-    "stage": "basic",
-    "attacks": [
-      {
-        "name": {
-          "ja": "みずでっぽう",
-          "zh-TW": "水槍",
-          "th": "ปืนฉีดน้ำ"
-        },
-        "cost": [
-          "water"
-        ],
-        "damage": "20",
-        "text": {}
-      },
-      {
-        "name": {
-          "ja": "スピットシュート",
-          "zh-TW": "噴吐射擊",
-          "th": "สปิตชูต"
-        },
-        "cost": [
-          "normal",
-          "normal",
-          "normal"
-        ],
-        "damage": "",
-        "text": {
-          "ja": "このポケモンについているエネルギーをすべてトラッシュし、相手のポケモン1匹に、120ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
-          "zh-TW": "將這隻寶可夢身上附加的能量卡全部丟棄，對手的1隻寶可夢受到120點傷害。[在備戰區不計算弱點・抵抗力。]",
-          "th": "ทิ้งพลังงานที่ติดอยู่กับโปเกมอนนี้ทั้งหมดที่ตำแหน่งทิ้งการ์ด ทำแดเมจ 120 กับโปเกมอนฝ่ายตรงข้าม 1 ตัว {โปเกมอนบนเบนช์จะไม่นำจุดอ่อนและความต้านทานมาคิด}"
-        }
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "lightning",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 1
-  },
-  {
-    "id": "asia-sv5a-026",
-    "set_id": "asia-sv5a",
-    "number": "026",
-    "category": "pokemon",
-    "name": {
-      "ja": "ウネルミナモ",
-      "zh-TW": "波盪水",
-      "th": "คลื่นน้ำกระเพื่อม"
-    },
-    "pokemon": [
-      "1009"
-    ],
-    "illustrator": "kawayoo",
-    "rarity": "rare",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/026.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "hp": 130,
-    "types": [
-      "water"
-    ],
-    "stage": "basic",
-    "attacks": [
-      {
-        "name": {
-          "ja": "オーロラゲイン",
-          "zh-TW": "極光增輝",
-          "th": "ออโรราเกน"
-        },
-        "cost": [
-          "water"
-        ],
-        "damage": "20",
-        "text": {
-          "ja": "このポケモンのHPを「20」回復する。",
-          "zh-TW": "將這隻寶可夢恢復「20」HP。",
-          "th": "ฟื้นฟู HP ของโปเกมอนนี้ [20]"
-        }
-      },
-      {
-        "name": {
-          "ja": "うねりさく",
-          "zh-TW": "蜿蜒割裂",
-          "th": "บิดแล้วฉีก"
-        },
-        "cost": [
-          "water",
-          "water",
-          "normal"
-        ],
-        "damage": "20×",
-        "text": {
-          "ja": "このポケモンにダメカンを9個までのせ、のせた数×20ダメージ。",
-          "zh-TW": "在這隻寶可夢身上放置最多9個傷害指示物，造成放置的數量×20點傷害。",
-          "th": "วางตัวนับแดเมจได้สูงสุด 9 ตัวบนโปเกมอนนี้ แดเมจจะเท่ากับจำนวนที่วาง x20"
-        }
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "lightning",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 1
-  },
-  {
-    "id": "asia-sv5a-027",
-    "set_id": "asia-sv5a",
-    "number": "027",
-    "category": "pokemon",
-    "name": {
-      "ja": "サンダー",
-      "zh-TW": "閃電鳥",
-      "th": "ธันเดอร์"
-    },
-    "pokemon": [
-      "0145"
-    ],
-    "illustrator": "GOSSAN",
-    "rarity": "rare",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/027.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "hp": 120,
-    "types": [
-      "lightning"
-    ],
-    "stage": "basic",
-    "attacks": [
-      {
-        "name": {
-          "ja": "でんじは",
-          "zh-TW": "電磁波",
-          "th": "คลื่นแม่เหล็กไฟฟ้า"
-        },
-        "cost": [
-          "lightning"
-        ],
-        "damage": "",
-        "text": {
-          "ja": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。",
-          "zh-TW": "擲1次硬幣若為正面，則將對手的戰鬥寶可夢【麻痺】。",
-          "th": "ทอยเหรียญ 1 ครั้งถ้าออกหัว จะทำให้โปเกมอนบนตำแหน่งต่อสู้ฝ่ายตรงข้ามเป็นสภาวะ[ชา]"
-        }
-      },
-      {
-        "name": {
-          "ja": "10まんボルト",
-          "zh-TW": "十萬伏特",
-          "th": "หนึ่งแสนโวลต์"
-        },
-        "cost": [
-          "lightning",
-          "lightning",
-          "normal"
-        ],
-        "damage": "190",
-        "text": {
-          "ja": "このポケモンについているエネルギーを、すべてトラッシュする。",
-          "zh-TW": "將這隻寶可夢身上附加的能量卡全部丟棄。",
-          "th": "ทิ้งพลังงานที่ติดอยู่กับโปเกมอนนี้ ทั้งหมดที่ตำแหน่งทิ้งการ์ด"
-        }
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "lightning",
-        "value": "x2"
-      }
-    ],
-    "resistances": [
-      {
-        "type": "fighting",
-        "value": "-30"
-      }
-    ],
-    "retreat_cost": 2
-  },
-  {
-    "id": "asia-sv5a-028",
-    "set_id": "asia-sv5a",
-    "number": "028",
-    "category": "pokemon",
-    "name": {
-      "ja": "エリキテル",
-      "zh-TW": "傘電蜥",
-      "th": "เอลิคิเทล"
-    },
-    "pokemon": [
-      "0694"
-    ],
-    "illustrator": "Taiga Kayama",
-    "rarity": "common",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/028.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "hp": 60,
-    "types": [
-      "lightning"
-    ],
-    "stage": "basic",
-    "attacks": [
-      {
-        "name": {
-          "ja": "もってくる",
-          "zh-TW": "呼喚",
-          "th": "รวบรวม"
-        },
-        "cost": [
-          "normal"
-        ],
-        "damage": "",
-        "text": {
-          "ja": "自分の山札を1枚引く。",
-          "zh-TW": "從自己的牌庫抽出1張卡。",
-          "th": "จั่วการ์ด 1 ใบจากสำรับการ์ดฝ่ายเรา"
-        }
-      },
-      {
-        "name": {
-          "ja": "バチバチ",
-          "zh-TW": "劈哩啪啦",
-          "th": "ประกายไฟ"
-        },
-        "cost": [
-          "lightning"
-        ],
-        "damage": "10",
-        "text": {}
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "fighting",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 1
-  },
-  {
-    "id": "asia-sv5a-029",
-    "set_id": "asia-sv5a",
-    "number": "029",
-    "category": "pokemon",
-    "name": {
-      "ja": "エレザード",
-      "zh-TW": "光電傘蜥",
-      "th": "เอเลซาร์ด"
-    },
-    "pokemon": [
-      "0695"
-    ],
-    "illustrator": "Atsuya Uki",
-    "rarity": "common",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/029.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "hp": 100,
-    "types": [
-      "lightning"
-    ],
-    "stage": "stage1",
-    "attacks": [
-      {
-        "name": {
-          "ja": "ワイルドボルト",
-          "zh-TW": "瘋狂伏特",
-          "th": "ไวลด์โวลต์"
-        },
-        "cost": [
-          "lightning"
-        ],
-        "damage": "70",
-        "text": {
-          "ja": "このポケモンにも20ダメージ。",
-          "zh-TW": "這隻寶可夢也受到20點傷害。",
-          "th": "โปเกมอนนี้ก็จะได้รับแดเมจ 20 ด้วย"
-        }
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "fighting",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 1
-  },
-  {
-    "id": "asia-sv5a-030",
-    "set_id": "asia-sv5a",
-    "number": "030",
-    "category": "pokemon",
-    "name": {
-      "ja": "モルペコ",
-      "zh-TW": "莫魯貝可",
-      "th": "โมรุเปโกะ"
-    },
-    "pokemon": [
-      "0877"
-    ],
-    "illustrator": "kodama",
-    "rarity": "uncommon",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/030.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "hp": 70,
-    "types": [
-      "lightning"
-    ],
-    "stage": "basic",
-    "attacks": [
-      {
-        "name": {
-          "ja": "ひろってつける",
-          "zh-TW": "撿拾附上",
-          "th": "เก็บมาติด"
-        },
-        "cost": [
-          "lightning"
-        ],
-        "damage": "",
-        "text": {
-          "ja": "自分のトラッシュから基本エネルギーを2枚まで選び、自分のポケモンに好きなようにつける。",
-          "zh-TW": "從自己的棄牌區選擇最多2張基本能量卡，以任意方式附於自己的寶可夢身上。",
-          "th": "เลือกการ์ดพลังงานพื้นฐานได้สูงสุด 2 ใบจากตำแหน่งทิ้งการ์ดฝ่ายเรา ติดที่โปเกมอนฝ่ายเราตามชอบ"
-        }
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "fighting",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 1
-  },
-  {
-    "id": "asia-sv5a-031",
-    "set_id": "asia-sv5a",
-    "number": "031",
-    "category": "pokemon",
-    "name": {
-      "ja": "ズピカ",
-      "zh-TW": "光蚪仔",
-      "th": "ซุพีคา"
-    },
-    "pokemon": [
-      "0938"
-    ],
-    "illustrator": "nisimono",
-    "rarity": "common",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/031.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "hp": 50,
-    "types": [
-      "lightning"
-    ],
-    "stage": "basic",
-    "attacks": [
-      {
-        "name": {
-          "ja": "たいあたり",
-          "zh-TW": "撞擊",
-          "th": "พุ่งเข้าชน"
-        },
-        "cost": [
-          "normal"
-        ],
-        "damage": "10",
-        "text": {}
-      },
-      {
-        "name": {
-          "ja": "エレキボール",
-          "zh-TW": "電球",
-          "th": "อิเล็กทริกบอล"
-        },
-        "cost": [
-          "lightning",
-          "normal"
-        ],
-        "damage": "20",
-        "text": {}
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "fighting",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 1
-  },
-  {
-    "id": "asia-sv5a-032",
-    "set_id": "asia-sv5a",
-    "number": "032",
-    "category": "pokemon",
-    "name": {
-      "ja": "ハラバリー",
-      "zh-TW": "電肚蛙",
-      "th": "ฮาราบารี"
-    },
-    "pokemon": [
-      "0939"
-    ],
-    "illustrator": "Mina Nakai",
-    "rarity": "uncommon",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/032.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "hp": 140,
-    "types": [
-      "lightning"
-    ],
-    "stage": "stage1",
-    "attacks": [
-      {
-        "name": {
-          "ja": "でんきショック",
-          "zh-TW": "電擊",
-          "th": "ช็อกไฟฟ้า"
-        },
-        "cost": [
-          "lightning",
-          "normal"
-        ],
-        "damage": "50",
-        "text": {
-          "ja": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。",
-          "zh-TW": "擲1次硬幣若為正面，則將對手的戰鬥寶可夢【麻痺】。",
-          "th": "ทอยเหรียญ 1 ครั้งถ้าออกหัว จะทำให้โปเกมอนบนตำแหน่งต่อสู้ฝ่ายตรงข้ามเป็นสภาวะ[ชา]"
-        }
-      },
-      {
-        "name": {
-          "ja": "ライトニングボール",
-          "zh-TW": "雷電球",
-          "th": "ไลท์นิงบอล"
-        },
-        "cost": [
-          "lightning",
-          "lightning",
-          "normal"
-        ],
-        "damage": "130",
-        "text": {}
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "fighting",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 3
-  },
-  {
-    "id": "asia-sv5a-033",
-    "set_id": "asia-sv5a",
-    "number": "033",
-    "category": "pokemon",
-    "name": {
-      "ja": "テツノイバラex",
-      "zh-TW": "鐵荊棘ex",
-      "th": "หนามเหล็กex"
-    },
-    "pokemon": [
-      "0995"
-    ],
-    "illustrator": "PLANETA Mochizuki",
-    "rarity": "double_rare",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/033.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "hp": 230,
-    "types": [
-      "lightning"
-    ],
-    "stage": "basic",
-    "rule_box": "EX",
-    "attacks": [
-      {
-        "name": {
-          "ja": "ボルトサイクロン",
-          "zh-TW": "伏特旋風",
-          "th": "โวลต์ไซโคลน"
-        },
-        "cost": [
-          "lightning",
-          "normal",
-          "normal"
-        ],
-        "damage": "140",
-        "text": {
-          "ja": "このポケモンについているエネルギーを1個選び、ベンチポケモンにつけ替える。",
-          "zh-TW": "選擇1個這隻寶可夢身上附加的能量，改附於備戰寶可夢身上。",
-          "th": "เลือกพลังงานที่ติดอยู่กับโปเกมอนนี้ 1 ลูก ย้ายไปติดกับโปเกมอนบนเบนช์"
-        }
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "fighting",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 4
-  },
-  {
-    "id": "asia-sv5a-034",
-    "set_id": "asia-sv5a",
-    "number": "034",
-    "category": "pokemon",
-    "name": {
-      "ja": "キリンリキ",
-      "zh-TW": "麒麟奇",
-      "th": "คิรินริกิ"
-    },
-    "pokemon": [
-      "0203"
-    ],
-    "illustrator": "Shinji Kanda",
-    "rarity": "common",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/034.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "hp": 100,
-    "types": [
-      "psychic"
-    ],
-    "stage": "basic",
-    "attacks": [
-      {
-        "name": {
-          "ja": "どっちもヘッド",
-          "zh-TW": "雙向頭擊",
-          "th": "หัวทั้งคู่"
-        },
-        "cost": [
-          "normal"
-        ],
-        "damage": "30",
-        "text": {
-          "ja": "自分のベンチポケモン1匹にも、10ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
-          "zh-TW": "自己的1隻備戰寶可夢也受到10點傷害。[在備戰區不計算弱點・抵抗力。]",
-          "th": "โปเกมอนบนเบนช์ฝ่ายเรา 1 ตัว ก็จะได้รับแดเมจ 10 ด้วย {โปเกมอนบนเบนช์จะไม่นำจุดอ่อนและความต้านทานมาคิด}"
-        }
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "dark",
-        "value": "x2"
-      }
-    ],
-    "resistances": [
-      {
-        "type": "fighting",
-        "value": "-30"
-      }
-    ],
-    "retreat_cost": 1
-  },
-  {
-    "id": "asia-sv5a-035",
-    "set_id": "asia-sv5a",
-    "number": "035",
-    "category": "pokemon",
-    "name": {
-      "ja": "リキキリン",
-      "zh-TW": "奇麒麟",
-      "th": "ริกิคิริน"
-    },
-    "pokemon": [
-      "0981"
-    ],
-    "illustrator": "Dsuke",
-    "rarity": "uncommon",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/035.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "hp": 140,
-    "types": [
-      "psychic"
-    ],
-    "stage": "stage1",
-    "attacks": [
-      {
-        "name": {
-          "ja": "ミッドランブル",
-          "zh-TW": "中級轟鳴",
-          "th": "มิดเดิลรัมเบิล"
-        },
-        "cost": [
-          "normal",
-          "normal"
-        ],
-        "damage": "40×",
-        "text": {
-          "ja": "自分の場の1進化ポケモンの数×40ダメージ。",
-          "zh-TW": "造成自己的場上【1階進化】寶可夢的數量×40點傷害。",
-          "th": "แดเมจจะเท่ากับจำนวนโปเกมอน[ร่าง1] บนกระดานฝ่ายเรา x40"
-        }
-      },
-      {
-        "name": {
-          "ja": "ぶきみなねんぱ",
-          "zh-TW": "不祥波動",
-          "th": "คลื่นแปลกประหลาด"
-        },
-        "cost": [
-          "psychic",
-          "normal",
-          "normal"
-        ],
-        "damage": "80",
-        "text": {
-          "ja": "相手のバトルポケモンをこんらんにする。",
-          "zh-TW": "將對手的戰鬥寶可夢【混亂】。",
-          "th": "ทำให้โปเกมอนบนตำแหน่งต่อสู้ฝ่ายตรงข้ามเป็นสภาวะ[สับสน]"
-        }
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "dark",
-        "value": "x2"
-      }
-    ],
-    "resistances": [
-      {
-        "type": "fighting",
-        "value": "-30"
-      }
-    ],
-    "retreat_cost": 2
-  },
-  {
-    "id": "asia-sv5a-036",
-    "set_id": "asia-sv5a",
-    "number": "036",
-    "category": "pokemon",
-    "name": {
-      "ja": "フラベベ",
-      "zh-TW": "花蓓蓓",
-      "th": "ฟลาเบเบ"
-    },
-    "pokemon": [
-      "0669"
-    ],
-    "illustrator": "Yukiko Baba",
-    "rarity": "common",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/036.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "hp": 40,
-    "types": [
-      "psychic"
-    ],
-    "stage": "basic",
-    "attacks": [
-      {
-        "name": {
-          "ja": "きずをなおす",
-          "zh-TW": "療傷",
-          "th": "รักษาบาดแผล"
-        },
-        "cost": [
-          "normal"
-        ],
-        "damage": "",
-        "text": {
-          "ja": "自分のポケモン1匹のHPを「30」回復する。",
-          "zh-TW": "將自己的1隻寶可夢恢復「30」HP。",
-          "th": "ฟื้นฟู HP ของโปเกมอนฝ่ายเรา 1 ตัว [30]"
-        }
-      },
-      {
-        "name": {
-          "ja": "ようせいのかぜ",
-          "zh-TW": "妖精之風",
-          "th": "สายลมแห่งภูตพราย"
-        },
-        "cost": [
-          "psychic"
-        ],
-        "damage": "10",
-        "text": {}
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "metal",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 1
-  },
-  {
-    "id": "asia-sv5a-037",
-    "set_id": "asia-sv5a",
-    "number": "037",
-    "category": "pokemon",
-    "name": {
-      "ja": "フラエッテ",
-      "zh-TW": "花葉蒂",
-      "th": "ฟลาเอตเต"
-    },
-    "pokemon": [
-      "0670"
-    ],
-    "illustrator": "mingo",
-    "rarity": "common",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/037.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "hp": 70,
-    "types": [
-      "psychic"
-    ],
-    "stage": "stage1",
-    "attacks": [
-      {
-        "name": {
-          "ja": "ちいさなおつかい",
-          "zh-TW": "小使者",
-          "th": "งานเล็กน้อย"
-        },
-        "cost": [
-          "normal"
-        ],
-        "damage": "",
-        "text": {
-          "ja": "自分の山札から基本エネルギーを3枚まで選び、相手に見せて、手札に加える。そして山札を切る。",
-          "zh-TW": "從自己的牌庫選擇最多3張基本能量卡，在給對手看過後加入手牌。並且重洗牌庫。",
-          "th": "เลือกการ์ดพลังงานพื้นฐานได้สูงสุด 3 ใบจากสำรับการ์ดฝ่ายเรา ให้ฝ่ายตรงข้ามดู นำขึ้นมือ แล้วสับสำรับการ์ด"
-        }
-      },
-      {
-        "name": {
-          "ja": "かいてんアタック",
-          "zh-TW": "迴轉攻擊",
-          "th": "โจมตีหมุนวน"
-        },
-        "cost": [
-          "psychic",
-          "normal"
-        ],
-        "damage": "40",
-        "text": {}
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "metal",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 1
-  },
-  {
-    "id": "asia-sv5a-038",
-    "set_id": "asia-sv5a",
-    "number": "038",
-    "category": "pokemon",
-    "name": {
-      "ja": "フラージェス",
-      "zh-TW": "花潔夫人",
-      "th": "ฟลาเจส"
-    },
-    "pokemon": [
-      "0671"
-    ],
-    "illustrator": "Ligton",
-    "rarity": "uncommon",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/038.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "hp": 140,
-    "types": [
-      "psychic"
-    ],
-    "stage": "stage2",
-    "attacks": [
-      {
-        "name": {
-          "ja": "マジカルショット",
-          "zh-TW": "魔法射擊",
-          "th": "เมจิคัลช็อต"
-        },
-        "cost": [
-          "psychic",
-          "normal"
-        ],
-        "damage": "120",
-        "text": {}
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "metal",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 2
-  },
-  {
-    "id": "asia-sv5a-039",
-    "set_id": "asia-sv5a",
-    "number": "039",
-    "category": "pokemon",
-    "name": {
-      "ja": "ラブトロス",
-      "zh-TW": "眷戀雲",
-      "th": "เลิฟโทลอส"
-    },
-    "pokemon": [
-      "0905"
-    ],
-    "illustrator": "DOM",
-    "rarity": "rare",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/039.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "hp": 120,
-    "types": [
-      "psychic"
-    ],
-    "stage": "basic",
-    "attacks": [
-      {
-        "name": {
-          "ja": "ハートサイン",
-          "zh-TW": "愛心標誌",
-          "th": "ฮาร์ตไซน์"
-        },
-        "cost": [
-          "normal"
-        ],
-        "damage": "30",
-        "text": {}
-      },
-      {
-        "name": {
-          "ja": "ラブレゾナンス",
-          "zh-TW": "愛之同感",
-          "th": "เลิฟเรโซแนนซ์"
-        },
-        "cost": [
-          "psychic",
-          "normal",
-          "normal"
-        ],
-        "damage": "80+",
-        "text": {
-          "ja": "自分の場に、相手の場のポケモンと同じタイプのポケモンがいるなら、120ダメージ追加。",
-          "zh-TW": "若自己的場上有與對手的場上寶可夢相同屬性的寶可夢，則增加120點傷害。",
-          "th": "ถ้าบนกระดานฝ่ายเรา มีโปเกมอนประเภทเดียวกับโปเกมอนบนกระดานฝ่ายตรงข้าม การโจมตีนี้จะเพิ่มแดเมจอีก 120"
-        }
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "metal",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 1
-  },
-  {
-    "id": "asia-sv5a-040",
-    "set_id": "asia-sv5a",
-    "number": "040",
-    "category": "pokemon",
-    "name": {
-      "ja": "サケブシッポex",
-      "zh-TW": "吼叫尾ex",
-      "th": "หางตะเบ็งex"
-    },
-    "pokemon": [
-      "0985"
-    ],
-    "illustrator": "akagi",
-    "rarity": "double_rare",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/040.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "hp": 190,
-    "types": [
-      "psychic"
-    ],
-    "stage": "basic",
-    "rule_box": "EX",
-    "attacks": [
-      {
-        "name": {
-          "ja": "ぜっきょう",
-          "zh-TW": "絕叫",
-          "th": "ร้องลั่น"
-        },
-        "cost": [
-          "normal"
-        ],
-        "damage": "",
-        "text": {
-          "ja": "このワザは、後攻プレイヤーの最初の番にだけ使える。次の相手の番、相手は手札からサポートを出して使えない。",
-          "zh-TW": "這個招式只可在後攻玩家的最初回合使用。在下個對手的回合，對手無法從手牌使出支援者卡。",
-          "th": "ท่าต่อสู้นี้ ใช้ได้ในเทิร์นแรกสุดของผู้เล่นฝ่ายเล่นทีหลังเท่านั้น เทิร์นถัดไปของฝ่ายตรงข้าม ฝ่ายตรงข้ามไม่สามารถนำการ์ดซัพพอร์ตจากบนมือออกมาใช้ได้"
-        }
-      },
-      {
-        "name": {
-          "ja": "かみくだく",
-          "zh-TW": "咬碎",
-          "th": "กัดขย้ำ"
-        },
-        "cost": [
-          "psychic",
-          "normal",
-          "normal"
-        ],
-        "damage": "120",
-        "text": {
-          "ja": "相手のバトルポケモンについているエネルギーを1個選び、トラッシュする。",
-          "zh-TW": "選擇1個對手的戰鬥寶可夢身上附加的能量，將其丟棄。",
-          "th": "เลือกพลังงานที่ติดอยู่กับโปเกมอนบนตำแหน่งต่อสู้ฝ่ายตรงข้าม 1 ลูก ทิ้งที่ตำแหน่งทิ้งการ์ด"
-        }
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "dark",
-        "value": "x2"
-      }
-    ],
-    "resistances": [
-      {
-        "type": "fighting",
-        "value": "-30"
-      }
-    ],
-    "retreat_cost": 1
-  },
-  {
-    "id": "asia-sv5a-041",
-    "set_id": "asia-sv5a",
-    "number": "041",
-    "category": "pokemon",
-    "name": {
-      "ja": "ヒスイ ガーディ",
-      "zh-TW": "洗翠 卡蒂狗",
-      "th": "ฮิซุย การ์ดี"
-    },
-    "pokemon": [
-      "0058"
-    ],
-    "illustrator": "Whisker",
-    "rarity": "common",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/041.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "hp": 80,
-    "types": [
-      "fighting"
-    ],
-    "stage": "basic",
-    "attacks": [
-      {
-        "name": {
-          "ja": "まるやけ",
-          "zh-TW": "全部燒光",
-          "th": "เผาเตียน"
-        },
-        "cost": [],
-        "damage": "",
-        "text": {
-          "ja": "場に出ているスタジアムをトラッシュする。",
-          "zh-TW": "將場上的競技場卡丟棄。",
-          "th": "ทิ้งการ์ดสเตเดียมที่วางอยู่บนกระดานที่ตำแหน่งทิ้งการ์ด"
-        }
-      },
-      {
-        "name": {
-          "ja": "とっしん",
-          "zh-TW": "猛撞",
-          "th": "พุ่งเข้าใส่"
-        },
-        "cost": [
-          "fighting",
-          "normal"
-        ],
-        "damage": "40",
-        "text": {
-          "ja": "このポケモンにも10ダメージ。",
-          "zh-TW": "這隻寶可夢也受到10點傷害。",
-          "th": "โปเกมอนนี้ก็จะได้รับแดเมจ 10 ด้วย"
-        }
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "grass",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 2
-  },
-  {
-    "id": "asia-sv5a-042",
-    "set_id": "asia-sv5a",
-    "number": "042",
-    "category": "pokemon",
-    "name": {
-      "ja": "ヒスイ ウインディ",
-      "zh-TW": "洗翠 風速狗",
-      "th": "ฮิซุย วินดี"
-    },
-    "pokemon": [
-      "0059"
-    ],
-    "illustrator": "SIE NANAHARA",
-    "rarity": "rare",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/042.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "hp": 130,
-    "types": [
-      "fighting"
-    ],
-    "stage": "stage1",
-    "attacks": [
-      {
-        "name": {
-          "ja": "プライドファング",
-          "zh-TW": "驕傲獠牙",
-          "th": "คมเขี้ยวหยิ่งทะนง"
-        },
-        "cost": [],
-        "damage": "30+",
-        "text": {
-          "ja": "自分のベンチポケモンにダメカンがのっているなら、90ダメージ追加。",
-          "zh-TW": "若自己的備戰寶可夢身上放置有傷害指示物，則增加90點傷害。",
-          "th": "ถ้าโปเกมอนบนเบนช์ฝ่ายเรามีตัวนับแดเมจวางอยู่ การโจมตีนี้จะเพิ่มแดเมจอีก 90"
-        }
-      },
-      {
-        "name": {
-          "ja": "やきこがす",
-          "zh-TW": "灼燒",
-          "th": "เพลิงประลัยกัลป์"
-        },
-        "cost": [
-          "fighting",
-          "fighting",
-          "normal"
-        ],
-        "damage": "90",
-        "text": {
-          "ja": "相手のバトルポケモンをやけどにする。",
-          "zh-TW": "將對手的戰鬥寶可夢【灼傷】。",
-          "th": "ทำให้โปเกมอนบนตำแหน่งต่อสู้ฝ่ายตรงข้ามเป็นสภาวะ[ไหม้]"
-        }
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "grass",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 2
-  },
-  {
-    "id": "asia-sv5a-043",
-    "set_id": "asia-sv5a",
-    "number": "043",
-    "category": "pokemon",
-    "name": {
-      "ja": "ノズパス",
-      "zh-TW": "朝北鼻",
-      "th": "โนซพาส"
-    },
-    "pokemon": [
-      "0299"
-    ],
-    "illustrator": "AKIRA EGAWA",
-    "rarity": "common",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/043.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "hp": 80,
-    "types": [
-      "fighting"
-    ],
-    "stage": "basic",
-    "attacks": [
-      {
-        "name": {
-          "ja": "パワーラッシュ",
-          "zh-TW": "力量猛攻",
-          "th": "พาวเวอร์รัช"
-        },
-        "cost": [
-          "normal",
-          "normal",
-          "normal"
-        ],
-        "damage": "60",
-        "text": {
-          "ja": "コインを1回投げウラなら、次の自分の番、このポケモンはワザが使えない。",
-          "zh-TW": "擲1次硬幣若為反面，則在下個自己的回合，這隻寶可夢無法使用招式。",
-          "th": "ทอยเหรียญ 1 ครั้งถ้าออกก้อย เทิร์นถัดไปของฝ่ายเรา โปเกมอนนี้จะใช้ท่าต่อสู้ไม่ได้"
-        }
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "grass",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 3
-  },
-  {
-    "id": "asia-sv5a-044",
-    "set_id": "asia-sv5a",
-    "number": "044",
-    "category": "pokemon",
-    "name": {
-      "ja": "ダイノーズ",
-      "zh-TW": "大朝北鼻",
-      "th": "ไดโนซ"
-    },
-    "pokemon": [
-      "0476"
-    ],
-    "illustrator": "OKUBO",
-    "rarity": "uncommon",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/044.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "hp": 140,
-    "types": [
-      "fighting"
-    ],
-    "stage": "stage1",
-    "attacks": [
-      {
-        "name": {
-          "ja": "アサルトレーザー",
-          "zh-TW": "進擊鐳射",
-          "th": "แอสซอลต์เลเซอร์"
-        },
-        "cost": [
-          "normal",
-          "normal",
-          "normal"
-        ],
-        "damage": "80+",
-        "text": {
-          "ja": "相手のバトルポケモンに「ポケモンのどうぐ」がついているなら、80ダメージ追加。",
-          "zh-TW": "若對手的戰鬥寶可夢身上附有「寶可夢道具」卡，則增加80點傷害。",
-          "th": "ถ้าโปเกมอนบนตำแหน่งต่อสู้ฝ่ายตรงข้ามมี [ไอเท็มติดโปเกมอน] ติดอยู่ การโจมตีนี้จะเพิ่มแดเมจอีก 80"
-        }
-      },
-      {
-        "name": {
-          "ja": "ランドクラッシュ",
-          "zh-TW": "大地粉碎",
-          "th": "แลนด์ครัช"
-        },
-        "cost": [
-          "fighting",
-          "normal",
-          "normal",
-          "normal"
-        ],
-        "damage": "120",
-        "text": {}
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "grass",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 3
-  },
-  {
-    "id": "asia-sv5a-045",
-    "set_id": "asia-sv5a",
-    "number": "045",
-    "category": "pokemon",
-    "name": {
-      "ja": "ゲッコウガex",
-      "zh-TW": "甲賀忍蛙ex",
-      "th": "เก็คโคกะex"
-    },
-    "pokemon": [
-      "0658"
-    ],
-    "illustrator": "5ban Graphics",
-    "rarity": "double_rare",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/045.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "hp": 310,
-    "types": [
-      "fighting"
-    ],
-    "stage": "stage2",
-    "rule_box": "EX",
-    "attacks": [
-      {
-        "name": {
-          "ja": "しのびのやいば",
-          "zh-TW": "忍之利刃",
-          "th": "คมดาบนินจา"
-        },
-        "cost": [
-          "water"
-        ],
-        "damage": "170",
-        "text": {
-          "ja": "のぞむなら、自分の山札から好きなカードを1枚選び、手札に加える。そして山札を切る。",
-          "zh-TW": "若希望，從自己的牌庫任意選擇1張卡加入手牌。並且重洗牌庫。",
-          "th": "หากต้องการ เลือกการ์ดที่ชอบ 1 ใบจากสำรับการ์ดฝ่ายเรา นำขึ้นมือ แล้วสับสำรับการ์ด"
-        }
-      },
-      {
-        "name": {
-          "ja": "ぶんしんれんだ",
-          "zh-TW": "分身連打",
-          "th": "แยกร่างกระหน่ำโจมตี"
-        },
-        "cost": [
-          "water",
-          "normal",
-          "normal"
-        ],
-        "damage": "",
-        "text": {
-          "ja": "このポケモンについているエネルギーを2個トラッシュし、相手のポケモン2匹に、それぞれ120ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
-          "zh-TW": "將2個這隻寶可夢身上附加的能量丟棄，對手的2隻寶可夢各受到120點傷害。[在備戰區不計算弱點・抵抗力。]",
-          "th": "ทิ้งพลังงานที่ติดอยู่กับโปเกมอนนี้ 2 ลูกที่ตำแหน่งทิ้งการ์ด โปเกมอนฝ่ายตรงข้าม 2 ตัว จะได้รับแดเมจตัวละ 120 {โปเกมอนบนเบนช์จะไม่นำจุดอ่อนและความต้านทานมาคิด}"
-        }
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "psychic",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 1
-  },
-  {
-    "id": "asia-sv5a-046",
-    "set_id": "asia-sv5a",
-    "number": "046",
-    "category": "pokemon",
-    "name": {
-      "ja": "ルチャブル",
-      "zh-TW": "摔角鷹人",
-      "th": "ลูจาบูล"
-    },
-    "pokemon": [
-      "0701"
-    ],
-    "illustrator": "Shigenori Negishi",
-    "rarity": "common",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/046.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "hp": 70,
-    "types": [
-      "fighting"
-    ],
-    "stage": "basic",
-    "attacks": [
-      {
-        "name": {
-          "ja": "サイドカウンター",
-          "zh-TW": "獎賞反擊",
-          "th": "ไซด์เคาน์เตอร์"
-        },
-        "cost": [
-          "fighting",
-          "fighting"
-        ],
-        "damage": "50+",
-        "text": {
-          "ja": "自分のサイドの残り枚数が、相手のサイドの残り枚数より多いなら、90ダメージ追加。",
-          "zh-TW": "若自己剩餘獎賞卡的張數，比對手剩餘獎賞卡的張數多，則增加90點傷害。",
-          "th": "ถ้าจำนวนการ์ดรางวัลที่เหลือของฝ่ายเรา มากกว่าจำนวนการ์ดรางวัลที่เหลือของฝ่ายตรงข้าม การโจมตีนี้จะเพิ่มแดเมจอีก 90"
-        }
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "psychic",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 1
-  },
-  {
-    "id": "asia-sv5a-047",
-    "set_id": "asia-sv5a",
-    "number": "047",
-    "category": "pokemon",
-    "name": {
-      "ja": "ディンルー",
-      "zh-TW": "古鼎鹿",
-      "th": "ติ่งลู่"
-    },
-    "pokemon": [
-      "1003"
-    ],
-    "illustrator": "Anesaki Dynamic",
-    "rarity": "rare",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/047.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "hp": 140,
-    "types": [
-      "fighting"
-    ],
-    "stage": "basic",
-    "attacks": [
-      {
-        "name": {
-          "ja": "グラウンドクラック",
-          "zh-TW": "大地斷裂",
-          "th": "กราวนด์แคร็ก"
-        },
-        "cost": [
-          "fighting"
-        ],
-        "damage": "30",
-        "text": {
-          "ja": "場にスタジアムが出ているなら、相手のベンチポケモン全員にも、それぞれ30ダメージを与え、そのスタジアムをトラッシュする。［ベンチは弱点・抵抗力を計算しない。］",
-          "zh-TW": "若場上有競技場卡，則對手的所有備戰寶可夢也各受到30點傷害，並將那張競技場卡丟棄。[在備戰區不計算弱點・抵抗力。]",
-          "th": "ถ้ามีการ์ดสเตเดียมอยู่บนกระดาน โปเกมอนบนเบนช์ฝ่ายตรงข้ามทุกตัว ก็จะได้รับแดเมจตัวละ 30 ด้วย ทิ้งการ์ดสเตเดียมนั้นที่ตำแหน่งทิ้งการ์ด {โปเกมอนบนเบนช์จะไม่นำจุดอ่อนและความต้านทานมาคิด}"
-        }
-      },
-      {
-        "name": {
-          "ja": "ぶちかます",
-          "zh-TW": "頭突",
-          "th": "ตบหนัก"
-        },
-        "cost": [
-          "fighting",
-          "fighting",
-          "normal"
-        ],
-        "damage": "110",
-        "text": {}
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "grass",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 3
-  },
-  {
-    "id": "asia-sv5a-048",
-    "set_id": "asia-sv5a",
-    "number": "048",
-    "category": "pokemon",
-    "name": {
-      "ja": "カジッチュ",
-      "zh-TW": "啃果蟲",
-      "th": "คาจิชชู"
-    },
-    "pokemon": [
-      "0840"
-    ],
-    "illustrator": "Teeziro",
-    "rarity": "common",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/048.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "hp": 40,
-    "types": [
-      "dragon"
-    ],
-    "stage": "basic",
-    "attacks": [
-      {
-        "name": {
-          "ja": "ともだちをさがす",
-          "zh-TW": "尋找朋友",
-          "th": "หาพรรคพวก"
-        },
-        "cost": [
-          "normal"
-        ],
-        "damage": "",
-        "text": {
-          "ja": "自分の山札からポケモンを1枚選び、相手に見せて、手札に加える。そして山札を切る。",
-          "zh-TW": "從自己的牌庫選擇1張寶可夢卡，在給對手看過後加入手牌。並且重洗牌庫。",
-          "th": "เลือกการ์ดโปเกมอน 1 ใบจากสำรับการ์ดฝ่ายเรา ให้ฝ่ายตรงข้ามดู นำขึ้นมือ แล้วสับสำรับการ์ด"
-        }
-      },
-      {
-        "name": {
-          "ja": "ころがりタックル",
-          "zh-TW": "滾動衝撞",
-          "th": "กลิ้งโจมตี"
-        },
-        "cost": [
-          "grass",
-          "fire"
-        ],
-        "damage": "30",
-        "text": {}
-      }
-    ],
-    "retreat_cost": 1
-  },
-  {
-    "id": "asia-sv5a-049",
-    "set_id": "asia-sv5a",
-    "number": "049",
-    "category": "pokemon",
-    "name": {
-      "ja": "カミッチュ",
-      "zh-TW": "裹蜜蟲",
-      "th": "คามิชชู"
-    },
-    "pokemon": [
-      "1011"
-    ],
-    "illustrator": "OKACHEKE",
-    "rarity": "uncommon",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/049.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "hp": 80,
-    "types": [
-      "dragon"
-    ],
-    "stage": "stage1",
-    "attacks": [
-      {
-        "name": {
-          "ja": "みつあめキャッチャー",
-          "zh-TW": "蜜糖捕捉器",
-          "th": "ลูกอมน้ำหวานแคชเชอร์"
-        },
-        "cost": [
-          "grass",
-          "fire"
-        ],
-        "damage": "",
-        "text": {
-          "ja": "相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。その後、新しく出てきたポケモンに70ダメージ。",
-          "zh-TW": "選擇1隻對手的備戰寶可夢，與戰鬥寶可夢互換。然後，新上場的寶可夢受到70點傷害。",
-          "th": "เลือกโปเกมอนบนเบนช์ฝ่ายตรงข้าม 1 ตัว สลับกับโปเกมอนบนตำแหน่งต่อสู้ หลังจากนั้น ทำแดเมจ 70 กับโปเกมอนที่เพิ่งออกมาใหม่"
-        }
-      }
-    ],
-    "retreat_cost": 2
-  },
-  {
-    "id": "asia-sv5a-050",
-    "set_id": "asia-sv5a",
-    "number": "050",
-    "category": "pokemon",
-    "name": {
-      "ja": "イーブイ",
-      "zh-TW": "伊布",
-      "th": "อีวุย"
-    },
-    "pokemon": [
-      "0133"
-    ],
-    "illustrator": "satoma",
-    "rarity": "common",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/050.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "hp": 50,
-    "types": [
-      "normal"
-    ],
-    "stage": "basic",
-    "attacks": [
-      {
-        "name": {
-          "ja": "かくせい",
-          "zh-TW": "覺醒",
-          "th": "ปลุกพลัง"
-        },
-        "cost": [
-          "normal"
-        ],
-        "damage": "",
-        "text": {
-          "ja": "このポケモンから進化するカードを、自分の山札から1枚選び、このポケモンにのせて進化させる。そして山札を切る。",
-          "zh-TW": "從自己的牌庫選擇1張從這隻寶可夢進化而來的卡，放置於這隻寶可夢身上完成進化。並且重洗牌庫。",
-          "th": "เลือกการ์ดที่จะวิวัฒนาการจากโปเกมอนนี้ 1 ใบจากสำรับการ์ดฝ่ายเรา วางบนโปเกมอนนี้เพื่อวิวัฒนาการ แล้วสับสำรับการ์ด"
-        }
-      },
-      {
-        "name": {
-          "ja": "でんこうせっか",
-          "zh-TW": "電光一閃",
-          "th": "เคลื่อนที่ความไวแสง"
-        },
-        "cost": [
-          "normal",
-          "normal",
-          "normal"
-        ],
-        "damage": "20+",
-        "text": {
-          "ja": "コインを1回投げオモテなら、20ダメージ追加。",
-          "zh-TW": "擲1次硬幣若為正面，則增加20點傷害。",
-          "th": "ทอยเหรียญ 1 ครั้งถ้าออกหัว การโจมตีนี้จะเพิ่มแดเมจอีก 20"
-        }
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "fighting",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 1
-  },
-  {
-    "id": "asia-sv5a-051",
-    "set_id": "asia-sv5a",
-    "number": "051",
-    "category": "pokemon",
-    "name": {
-      "ja": "カビゴン",
-      "zh-TW": "卡比獸",
-      "th": "คาบิกอน"
-    },
-    "pokemon": [
-      "0143"
-    ],
-    "illustrator": "Souichirou Gunjima",
-    "rarity": "uncommon",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/051.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "hp": 160,
-    "types": [
-      "normal"
-    ],
-    "stage": "basic",
-    "attacks": [
-      {
-        "name": {
-          "ja": "はらごしらえ",
-          "zh-TW": "吃飽先",
-          "th": "กินรองท้อง"
-        },
-        "cost": [
-          "normal"
-        ],
-        "damage": "",
-        "text": {
-          "ja": "自分の手札からエネルギーを1枚選び、このポケモンにつける。その後、このポケモンのHPを「60」回復する。",
-          "zh-TW": "從自己的手牌選擇1張能量卡，附於這隻寶可夢身上。然後，將這隻寶可夢恢復「60」HP。",
-          "th": "เลือกการ์ดพลังงาน 1 ใบจากบนมือฝ่ายเรา ติดที่โปเกมอนนี้ หลังจากนั้น ฟื้นฟู HP ของโปเกมอนนี้ [60]"
-        }
-      },
-      {
-        "name": {
-          "ja": "ヘビーインパクト",
-          "zh-TW": "重磅衝擊",
-          "th": "เฮฟวีอิมแพกต์"
-        },
-        "cost": [
-          "normal",
-          "normal",
-          "normal",
-          "normal",
-          "normal"
-        ],
-        "damage": "160",
-        "text": {}
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "fighting",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 4
-  },
-  {
-    "id": "asia-sv5a-052",
-    "set_id": "asia-sv5a",
-    "number": "052",
-    "category": "pokemon",
-    "name": {
-      "ja": "ガチグマ アカツキex",
-      "zh-TW": "月月熊 赫月 ex",
-      "th": "กาจิกุมะ พระจันทร์สีเลือดex"
-    },
-    "pokemon": [
-      "0901"
-    ],
-    "illustrator": "aky CG Works",
-    "rarity": "double_rare",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/052.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "hp": 260,
-    "types": [
-      "normal"
-    ],
-    "stage": "basic",
-    "rule_box": "EX",
-    "attacks": [
-      {
-        "name": {
-          "ja": "ブラッドムーン",
-          "zh-TW": "血月",
-          "th": "บลัดมูน"
-        },
-        "cost": [
-          "normal",
-          "normal",
-          "normal",
-          "normal",
-          "normal"
-        ],
-        "damage": "240",
-        "text": {
-          "ja": "次の自分の番、このポケモンはワザが使えない。",
-          "zh-TW": "在下個自己的回合，這隻寶可夢無法使用招式。",
-          "th": "เทิร์นถัดไปของฝ่ายเรา โปเกมอนนี้จะใช้ท่าต่อสู้ไม่ได้"
-        }
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "fighting",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 3
-  },
-  {
-    "id": "asia-sv5a-053",
-    "set_id": "asia-sv5a",
-    "number": "053",
-    "category": "trainer",
-    "name": {
-      "ja": "アンフェアスタンプ",
-      "zh-TW": "不公印章",
-      "th": "อันแฟร์สแตมป์"
-    },
-    "pokemon": [],
-    "illustrator": "Toyste Beach",
-    "rarity": "unknown",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/053.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "trainer_type": "item",
-    "rules_text": {
-      "ja": "このカードは、前の相手の番に、自分のポケモンがきぜつしていなければ使えない。\n\nおたがいのプレイヤーは、それぞれ手札をすべて山札にもどして切る。その後、自分は5枚、相手は2枚、山札を引く。",
-      "zh-TW": "這張卡必須在上個對手的回合自己的寶可夢【昏厥】了才可使用。 雙方玩家各自將手牌全部放回牌庫並重洗。然後，從牌庫抽卡，自己抽出5張，對手抽出2張。",
-      "th": "การ์ดนี้ ในเทิร์นก่อนของฝ่ายตรงข้าม ถ้าโปเกมอนฝ่ายเราไม่[หมดสภาพ]จะใช้ไม่ได้ ผู้เล่นทั้งสองฝ่าย นำการ์ดบนมือของแต่ละฝ่ายทั้งหมดใส่กลับไปในสำรับการ์ดแล้วสับ หลังจากนั้น ฝ่ายเราจั่วการ์ด 5 ใบ ฝ่ายตรงข้ามจั่วการ์ด 2 ใบจากสำรับการ์ด"
-    }
-  },
-  {
-    "id": "asia-sv5a-054",
-    "set_id": "asia-sv5a",
-    "number": "054",
-    "category": "trainer",
-    "name": {
-      "ja": "改造ハンマー",
-      "zh-TW": "改造之錘",
-      "th": "ค้อนสลายพลังงาน"
-    },
-    "pokemon": [],
-    "illustrator": "Eske Yoshinob",
-    "rarity": "uncommon",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/054.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "trainer_type": "item",
-    "rules_text": {
-      "ja": "相手の場のポケモンについている特殊エネルギーを1個選び、トラッシュする。",
-      "zh-TW": "選擇1個對手的場上寶可夢身上附加的特殊能量，將其丟棄。",
-      "th": "เลือกพลังงานพิเศษที่ติดอยู่กับโปเกมอนบนกระดานฝ่ายตรงข้าม 1 ลูก ทิ้งที่ตำแหน่งทิ้งการ์ด"
-    }
-  },
-  {
-    "id": "asia-sv5a-055",
-    "set_id": "asia-sv5a",
-    "number": "055",
-    "category": "trainer",
-    "name": {
-      "ja": "ハイパーアロマ",
-      "zh-TW": "高級香氛",
-      "th": "ไฮเปอร์อโรมา"
-    },
-    "pokemon": [],
-    "illustrator": "Toyste Beach",
-    "rarity": "unknown",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/055.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "trainer_type": "item",
-    "rules_text": {
-      "ja": "自分の山札から1進化ポケモンを3枚まで選び、相手に見せて、手札に加える。そして山札を切る。",
-      "zh-TW": "從自己的牌庫選擇最多3張【1階進化】寶可夢卡，在給對手看過後加入手牌。並且重洗牌庫。",
-      "th": "เลือกการ์ดโปเกมอน[ร่าง1] ได้สูงสุด 3 ใบจากสำรับการ์ดฝ่ายเรา ให้ฝ่ายตรงข้ามดู นำขึ้นมือ แล้วสับสำรับการ์ด"
-    }
-  },
-  {
-    "id": "asia-sv5a-056",
-    "set_id": "asia-sv5a",
-    "number": "056",
-    "category": "trainer",
-    "name": {
-      "ja": "ポケモンいれかえ",
-      "zh-TW": "寶可夢交替",
-      "th": "สับเปลี่ยนโปเกมอน"
-    },
-    "pokemon": [],
-    "illustrator": "Studio Bora Inc.",
-    "rarity": "uncommon",
-    "regulation_mark": "G",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/056.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "trainer_type": "item",
-    "rules_text": {
-      "ja": "自分のバトルポケモンをベンチポケモンと入れ替える。",
-      "zh-TW": "將自己的戰鬥寶可夢與備戰寶可夢互換。",
-      "th": "สลับโปเกมอนบนตำแหน่งต่อสู้ฝ่ายเรากับโปเกมอนบนเบนช์"
-    }
-  },
-  {
-    "id": "asia-sv5a-057",
-    "set_id": "asia-sv5a",
-    "number": "057",
-    "category": "trainer",
-    "name": {
-      "ja": "ポケモンキャッチャー",
-      "zh-TW": "寶可夢捕捉器",
-      "th": "โปเกมอนแคชเชอร์"
-    },
-    "pokemon": [],
-    "illustrator": "Studio Bora Inc.",
-    "rarity": "uncommon",
-    "regulation_mark": "G",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/057.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "trainer_type": "item",
-    "rules_text": {
-      "ja": "コインを1回投げオモテなら、相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。",
-      "zh-TW": "擲1次硬幣若為正面，則選擇1隻對手的備戰寶可夢，與戰鬥寶可夢互換。",
-      "th": "ทอยเหรียญ 1 ครั้งถ้าออกหัว เลือกโปเกมอนบนเบนช์ฝ่ายตรงข้าม 1 ตัว สลับกับโปเกมอนบนตำแหน่งต่อสู้"
-    }
-  },
-  {
-    "id": "asia-sv5a-058",
-    "set_id": "asia-sv5a",
-    "number": "058",
-    "category": "trainer",
-    "name": {
-      "ja": "ラブラブボール",
-      "zh-TW": "甜蜜球",
-      "th": "เลิฟเลิฟบอล"
-    },
-    "pokemon": [],
-    "illustrator": "Studio Bora Inc.",
-    "rarity": "uncommon",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/058.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "trainer_type": "item",
-    "rules_text": {
-      "ja": "自分の山札から、相手の場のポケモンと同じ名前のポケモンを1枚選び、相手に見せて、手札に加える。そして山札を切る。",
-      "zh-TW": "從自己的牌庫選擇1張與對手的場上寶可夢名稱相同的寶可夢卡，在給對手看過後加入手牌。並且重洗牌庫。",
-      "th": "เลือกการ์ดโปเกมอนที่มีชื่อเดียวกับโปเกมอนบนกระดานฝ่ายตรงข้าม 1 ใบ จากสำรับการ์ดฝ่ายเรา ให้ฝ่ายตรงข้ามดู นำขึ้นมือ แล้วสับสำรับการ์ด"
-    }
-  },
-  {
-    "id": "asia-sv5a-059",
-    "set_id": "asia-sv5a",
-    "number": "059",
-    "category": "trainer",
-    "name": {
-      "ja": "サバイブギプス",
-      "zh-TW": "倖存鍛鍊器",
-      "th": "อุปกรณ์เพาะกายช่วยชีวิต"
-    },
-    "pokemon": [],
-    "illustrator": "inose yukie",
-    "rarity": "unknown",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/059.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "trainer_type": "tool",
-    "rules_text": {
-      "ja": "このカードをつけているポケモンのHPがまんたんの状態で、相手のポケモンからワザのダメージを受けてきぜつするとき、そのポケモンはきぜつせず、残りHPが「10」の状態で場に残る。その後、このカードをトラッシュする。",
-      "zh-TW": "附有這張卡的寶可夢的HP是全滿的狀態下，受到對手的寶可夢招式的傷害而【昏厥】時，那隻寶可夢不會【昏厥】，而是以剩餘HP為「10」的狀態留在場上。然後，將這張卡丟棄。",
-      "th": "ในตอนที่โปเกมอนที่ติดการ์ดนี้อยู่มี HP เต็ม และได้รับแดเมจของท่าต่อสู้จากโปเกมอนฝ่ายตรงข้ามและจะ[หมดสภาพ] โปเกมอนนั้นจะไม่[หมดสภาพ] และจะอยู่บนกระดานด้วย HP ที่เหลือ [10] หลังจากนั้น ทิ้งการ์ดนี้ที่ตำแหน่งทิ้งการ์ด"
-    }
-  },
-  {
-    "id": "asia-sv5a-060",
-    "set_id": "asia-sv5a",
-    "number": "060",
-    "category": "trainer",
-    "name": {
-      "ja": "ラッキーメット",
-      "zh-TW": "幸運頭盔",
-      "th": "หมวกนิรภัยนำโชค"
-    },
-    "pokemon": [],
-    "illustrator": "Studio Bora Inc.",
-    "rarity": "uncommon",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/060.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "trainer_type": "tool",
-    "rules_text": {
-      "ja": "このカードをつけているポケモンが、バトル場で相手のポケモンからワザのダメージを受けたとき、自分の山札を2枚引く。",
-      "zh-TW": "附有這張卡的寶可夢在戰鬥場受到對手的寶可夢招式的傷害時，從自己的牌庫抽出2張卡。",
-      "th": "เมื่อโปเกมอนที่ติดการ์ดนี้ อยู่บนตำแหน่งต่อสู้และได้รับแดเมจของท่าต่อสู้จากโปเกมอนฝ่ายตรงข้าม จั่วการ์ด 2 ใบจากสำรับการ์ดฝ่ายเรา"
-    }
-  },
-  {
-    "id": "asia-sv5a-061",
-    "set_id": "asia-sv5a",
-    "number": "061",
-    "category": "trainer",
-    "name": {
-      "ja": "管理人",
-      "zh-TW": "管理員",
-      "th": "ผู้ดูแล"
-    },
-    "pokemon": [],
-    "illustrator": "Akira Komayama",
-    "rarity": "common",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/061.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "trainer_type": "supporter",
-    "rules_text": {
-      "ja": "自分の山札を2枚引く。その後、場に「公民館」が出ているなら、この「管理人」はトラッシュせず、山札にもどして切る。",
-      "zh-TW": "從自己的牌庫抽出2張卡。然後，若場上有「居民會館」，則不丟棄這張「管理員」，而是放回牌庫並重洗。",
-      "th": "จั่วการ์ด 2 ใบจากสำรับการ์ดฝ่ายเรา หลังจากนั้น ถ้ามี [ศาลาประชาคม] อยู่บนกระดาน นำ [ผู้ดูแล] นี้ใส่กลับไปในสำรับการ์ดแล้วสับ โดยไม่ต้องทิ้งที่ตำแหน่งทิ้งการ์ด"
-    }
-  },
-  {
-    "id": "asia-sv5a-062",
-    "set_id": "asia-sv5a",
-    "number": "062",
-    "category": "trainer",
-    "name": {
-      "ja": "ゴヨウ",
-      "zh-TW": "悟松",
-      "th": "โกโย"
-    },
-    "pokemon": [],
-    "illustrator": "hncl",
-    "rarity": "uncommon",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/062.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "trainer_type": "supporter",
-    "rules_text": {
-      "ja": "おたがいのプレイヤーは、それぞれ自分の手札をすべてウラにして切り、山札の下にもどす。その後、おたがいのプレイヤーは、それぞれコインを1回投げ、オモテなら6枚、ウラなら3枚、山札を引く。",
-      "zh-TW": "雙方玩家各將自己的手牌全部翻回反面並重洗，放回牌庫下方。然後，雙方玩家各擲1次硬幣，若為正面，則從牌庫抽出6張卡，若為反面，則從牌庫抽出3張卡。",
-      "th": "ผู้เล่นทั้งสองฝ่าย แต่ละฝ่ายสับการ์ดบนมือฝ่ายตัวเองทั้งหมดโดยไม่ดูหน้าการ์ด ใส่กลับไปด้านล่างของสำรับการ์ด หลังจากนั้น ผู้เล่นทั้งสองฝ่าย แต่ละฝ่ายทอยเหรียญ 1 ครั้ง ถ้าออกหัวจั่วการ์ด 6 ใบ ถ้าออกก้อยจั่วการ์ด 3 ใบจากสำรับการ์ด"
-    }
-  },
-  {
-    "id": "asia-sv5a-063",
-    "set_id": "asia-sv5a",
-    "number": "063",
-    "category": "trainer",
-    "name": {
-      "ja": "サザレ",
-      "zh-TW": "沙儷",
-      "th": "ซาซาเระ"
-    },
-    "pokemon": [],
-    "illustrator": "Naoki Saito",
-    "rarity": "uncommon",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/063.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "trainer_type": "supporter",
-    "rules_text": {
-      "ja": "自分の手札からポケモンを2枚まで選び、相手に見せて、山札にもどす。その後、もどした枚数ぶんまで、自分の山札からポケモンを選び、相手に見せて、手札に加える。そして山札を切る。",
-      "zh-TW": "從自己的手牌選擇最多2張寶可夢卡，在給對手看過後放回牌庫。然後，從自己的牌庫選擇最多與放回的張數相同數量的寶可夢卡，在給對手看過後加入手牌。並且重洗牌庫。",
-      "th": "เลือกการ์ดโปเกมอนได้สูงสุด 2 ใบจากบนมือฝ่ายเรา ให้ฝ่ายตรงข้ามดู ใส่กลับไปในสำรับการ์ด หลังจากนั้น เลือกการ์ดโปเกมอนจากสำรับการ์ดฝ่ายเรา ได้สูงสุดไม่เกินจำนวนการ์ดที่ใส่กลับไป ให้ฝ่ายตรงข้ามดู นำขึ้นมือ แล้วสับสำรับการ์ด"
-    }
-  },
-  {
-    "id": "asia-sv5a-064",
-    "set_id": "asia-sv5a",
-    "number": "064",
-    "category": "trainer",
-    "name": {
-      "ja": "スイレンのお世話",
-      "zh-TW": "水蓮的照顧",
-      "th": "การปรนนิบัติของซุยเรน"
-    },
-    "pokemon": [],
-    "illustrator": "Atsushi Furusawa",
-    "rarity": "uncommon",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/064.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "trainer_type": "supporter",
-    "rules_text": {
-      "ja": "自分のトラッシュからポケモン（「ルールを持つポケモン」をのぞく）と基本エネルギーを合計3枚まで選び、相手に見せて、手札に加える。",
-      "zh-TW": "從自己的棄牌區選擇寶可夢卡（「擁有規則的寶可夢」除外）與基本能量卡合計最多3張，在給對手看過後加入手牌。",
-      "th": "เลือกการ์ดโปเกมอน (ยกเว้น [โปเกมอนที่มีกฎ]) และการ์ดพลังงานพื้นฐานรวมกันได้สูงสุด 3 ใบจากตำแหน่งทิ้งการ์ดฝ่ายเรา ให้ฝ่ายตรงข้ามดู นำขึ้นมือ"
-    }
-  },
-  {
-    "id": "asia-sv5a-065",
-    "set_id": "asia-sv5a",
-    "number": "065",
-    "category": "trainer",
-    "name": {
-      "ja": "公民館",
-      "zh-TW": "居民會館",
-      "th": "ศาลาประชาคม"
-    },
-    "pokemon": [],
-    "illustrator": "MARINA Chikazawa",
-    "rarity": "uncommon",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/065.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "trainer_type": "stadium",
-    "rules_text": {
-      "ja": "この番、手札からサポートを出して使っていたプレイヤーは、自分の番ごとに1回、自分のポケモン全員のHPを、それぞれ「10」回復してよい。",
-      "zh-TW": "在每個自己的回合時，可使用1次。在這個回合從手牌使出了支援者卡的玩家，可將自己的所有寶可夢各恢復「10」HP。",
-      "th": "เทิร์นนี้ ผู้เล่นที่นำการ์ดซัพพอร์ตจากบนมือออกมาใช้แล้ว ในแต่ละเทิร์นของตัวเองทำได้ 1 ครั้ง จะฟื้นฟู HP ของโปเกมอนฝ่ายตัวเองทุกตัว ตัวละ [10] ก็ได้"
-    }
-  },
-  {
-    "id": "asia-sv5a-066",
-    "set_id": "asia-sv5a",
-    "number": "066",
-    "category": "energy",
-    "name": {
-      "ja": "ブーメランエネルギー",
-      "zh-TW": "回力鏢能量",
-      "th": "บูมเมอแรงเอนเนอร์จี้"
-    },
-    "pokemon": [],
-    "illustrator": "5ban Graphics",
-    "rarity": "uncommon",
-    "regulation_mark": "H",
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/066.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
-        }
-      }
-    ],
-    "rules_text": {
-      "ja": "このカードは、ポケモンについているかぎり、エネルギー1個ぶんとしてはたらく。\n\nこのカードをつけているポケモンが使うワザの効果で、このカードがトラッシュされたなら、ワザのダメージや効果のあとに、もとのポケモンにつけなおす。",
-      "zh-TW": "只要這張卡附於寶可夢身上，視為提供1個【無】能量。 若因附有這張卡的寶可夢使用的招式的效果使這張卡被丟棄，則在招式的傷害與效果的影響之後，重新附於原本的寶可夢身上。",
-      "th": "การ์ดนี้ ตราบใดที่ติดอยู่กับโปเกมอน จะทำงานเทียบเท่าพลังงาน[ไร้สี] 1 ลูก ถ้าการ์ดนี้ถูกทิ้งที่ตำแหน่งทิ้งการ์ด ด้วยเอฟเฟกต์ของท่าต่อสู้ที่โปเกมอนที่ติดการ์ดนี้อยู่ใช้ หลังจากทำแดเมจและเอฟเฟกต์ของท่าต่อสู้แล้ว นำไปติดที่โปเกมอนตัวเดิมอีกครั้ง"
-    }
-  },
-  {
-    "id": "asia-sv5a-067",
-    "set_id": "asia-sv5a",
-    "number": "067",
-    "category": "pokemon",
-    "name": {
-      "ja": "カイロス"
-    },
-    "pokemon": [
-      "0127"
-    ],
-    "illustrator": "Yukihiro Tada",
-    "rarity": "unknown",
-    "regulation_mark": null,
-    "variants": [
-      {
-        "id": "normal",
-        "images": {
-          "ja": "/images/cards/asia-sv5a/ja/067.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
+          "ja": "/images/cards/asia-sv5a/ja/003.webp"
         }
       }
     ],
@@ -4035,12 +174,246 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "ja": "ツノで 互いを 格付けする。 太く 立派な ツノを 持つ カイロスほど 異性に 人気。"
+    }
   },
   {
-    "id": "asia-sv5a-068",
+    "id": "asia-sv5a-004",
     "set_id": "asia-sv5a",
-    "number": "068",
+    "number": "004",
+    "category": "pokemon",
+    "name": {
+      "ja": "イトマル"
+    },
+    "pokemon": [
+      "0167"
+    ],
+    "illustrator": "Saya Tsuruta",
+    "rarity": "common",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/004.webp"
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "むしくい"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "丈夫な 糸を より合わせ 魚ポケモンを 捕らえる 網を こしらえる 漁師も いるぞ。"
+    }
+  },
+  {
+    "id": "asia-sv5a-005",
+    "set_id": "asia-sv5a",
+    "number": "005",
+    "category": "pokemon",
+    "name": {
+      "ja": "アリアドス"
+    },
+    "pokemon": [
+      "0168"
+    ],
+    "illustrator": "Anesaki Dynamic",
+    "rarity": "uncommon",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/005.webp"
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "ja": "いとがらめ"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "10+",
+        "text": {
+          "ja": "相手のバトルポケモンのにげるためのエネルギーの数×30ダメージ追加。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "決まった 場所に 巣を作らず あたりが 暗くなってから エサを 探し求め うろつく。"
+    }
+  },
+  {
+    "id": "asia-sv5a-006",
+    "set_id": "asia-sv5a",
+    "number": "006",
+    "category": "pokemon",
+    "name": {
+      "ja": "リーフィア"
+    },
+    "pokemon": [
+      "0470"
+    ],
+    "illustrator": "Kuroimori",
+    "rarity": "uncommon",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/006.webp"
+        }
+      }
+    ],
+    "hp": 120,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "ja": "わかばのめぐみ"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "自分の手札から「基本エネルギー」を1枚選び、ベンチポケモンにつける。その後、つけたポケモンのHPをすべて回復する。"
+        }
+      },
+      {
+        "name": {
+          "ja": "ソーラービーム"
+        },
+        "cost": [
+          "grass",
+          "normal"
+        ],
+        "damage": "70",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "若い リーフィアほど ツンとくる 青臭い 匂い。 年老いると 落ち葉のような 匂いになる。"
+    }
+  },
+  {
+    "id": "asia-sv5a-007",
+    "set_id": "asia-sv5a",
+    "number": "007",
+    "category": "pokemon",
+    "name": {
+      "ja": "テツノイサハ"
+    },
+    "pokemon": [
+      "1010"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "rare",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/007.webp"
+        }
+      }
+    ],
+    "hp": 120,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "リカバーネット"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "自分のトラッシュからポケモンを2枚まで選び、相手に見せて、手札に加える。"
+        }
+      },
+      {
+        "name": {
+          "ja": "アベンジエッジ"
+        },
+        "cost": [
+          "grass",
+          "normal",
+          "normal"
+        ],
+        "damage": "100+",
+        "text": {
+          "ja": "前の相手の番に、ワザのダメージで、自分のポケモンがきぜつしていたなら、60ダメージ追加。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "わずかな 目撃談によると 光り輝く 剣で 大木や 大岩を なます切りにしたという。"
+    }
+  },
+  {
+    "id": "asia-sv5a-008",
+    "set_id": "asia-sv5a",
+    "number": "008",
     "category": "pokemon",
     "name": {
       "ja": "チャデス"
@@ -4048,17 +421,14 @@
     "pokemon": [
       "1012"
     ],
-    "illustrator": "Saboteri",
-    "rarity": "unknown",
-    "regulation_mark": null,
+    "illustrator": "MINAMINAMI Take",
+    "rarity": "common",
+    "regulation_mark": "H",
     "variants": [
       {
         "id": "normal",
         "images": {
-          "ja": "/images/cards/asia-sv5a/ja/068.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
+          "ja": "/images/cards/asia-sv5a/ja/008.webp"
         }
       }
     ],
@@ -4085,12 +455,300 @@
         "value": "x2"
       }
     ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "ヤバチャの リージョンフォームに 見えるが まったく 関係のない ポケモンと 最近 判明した。"
+    }
+  },
+  {
+    "id": "asia-sv5a-009",
+    "set_id": "asia-sv5a",
+    "number": "009",
+    "category": "pokemon",
+    "name": {
+      "ja": "ヤバソチャex"
+    },
+    "pokemon": [
+      "1013"
+    ],
+    "illustrator": "aky CG Works",
+    "rarity": "double_rare",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/009.webp"
+        }
+      }
+    ],
+    "hp": 240,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "ja": "せんじがえし"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "自分のトラッシュにある「基本エネルギー」をすべて相手に見せ、その枚数×2個ぶんのダメカンを、相手のポケモン1匹にのせる。その後、見せたエネルギーを山札にもどして切る。"
+        }
+      },
+      {
+        "name": {
+          "ja": "まっちゃスプラッシュ"
+        },
+        "cost": [
+          "grass",
+          "normal"
+        ],
+        "damage": "120",
+        "text": {
+          "ja": "自分のポケモン全員のHPを、それぞれ「30」回復する。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
     "retreat_cost": 1
   },
   {
-    "id": "asia-sv5a-069",
+    "id": "asia-sv5a-010",
     "set_id": "asia-sv5a",
-    "number": "069",
+    "number": "010",
+    "category": "pokemon",
+    "name": {
+      "ja": "ロコン"
+    },
+    "pokemon": [
+      "0037"
+    ],
+    "illustrator": "sowsow",
+    "rarity": "common",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/010.webp"
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ひだね"
+        },
+        "cost": [
+          "fire",
+          "fire"
+        ],
+        "damage": "40",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "温かい ６本の 尻尾は 体が 育つごとに 毛並みが 良くなり 美しく なっていく。"
+    }
+  },
+  {
+    "id": "asia-sv5a-011",
+    "set_id": "asia-sv5a",
+    "number": "011",
+    "category": "pokemon",
+    "name": {
+      "ja": "キュウコン"
+    },
+    "pokemon": [
+      "0038"
+    ],
+    "illustrator": "KEIICHIRO ITO",
+    "rarity": "common",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/011.webp"
+        }
+      }
+    ],
+    "hp": 120,
+    "types": [
+      "fire"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "ja": "あやしいともしび"
+        },
+        "cost": [
+          "fire",
+          "fire"
+        ],
+        "damage": "90",
+        "text": {
+          "ja": "相手のバトルポケモンをやけどとこんらんにする。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2,
+    "flavor_text": {
+      "ja": "黄金に 輝く 体毛と ９本の 長い 尻尾を 持つ。 １０００年は 生きると 言われる。"
+    }
+  },
+  {
+    "id": "asia-sv5a-012",
+    "set_id": "asia-sv5a",
+    "number": "012",
+    "category": "pokemon",
+    "name": {
+      "ja": "マグマッグ"
+    },
+    "pokemon": [
+      "0218"
+    ],
+    "illustrator": "Gapao",
+    "rarity": "common",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/012.webp"
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "あついマグマ"
+        },
+        "cost": [
+          "fire",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {
+          "ja": "相手のバトルポケモンをやけどにする。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3,
+    "flavor_text": {
+      "ja": "火山が 活発だった 太古の 世界では 今よりも たくさんの マグマッグが 暮らしていたという。"
+    }
+  },
+  {
+    "id": "asia-sv5a-013",
+    "set_id": "asia-sv5a",
+    "number": "013",
+    "category": "pokemon",
+    "name": {
+      "ja": "マグカルゴex"
+    },
+    "pokemon": [
+      "0219"
+    ],
+    "illustrator": "PLANETA Mochizuki",
+    "rarity": "double_rare",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/013.webp"
+        }
+      }
+    ],
+    "hp": 270,
+    "types": [
+      "fire"
+    ],
+    "stage": "stage1",
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "ja": "あついマグマ"
+        },
+        "cost": [
+          "fire",
+          "normal"
+        ],
+        "damage": "70",
+        "text": {
+          "ja": "相手のバトルポケモンをやけどにする。"
+        }
+      },
+      {
+        "name": {
+          "ja": "グラウンドバーン"
+        },
+        "cost": [
+          "fire",
+          "fire",
+          "normal"
+        ],
+        "damage": "140+",
+        "text": {
+          "ja": "おたがいの山札を上から1枚ずつトラッシュし、その中にあるエネルギーの枚数×140ダメージ追加。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "asia-sv5a-014",
+    "set_id": "asia-sv5a",
+    "number": "014",
     "category": "pokemon",
     "name": {
       "ja": "コータス"
@@ -4098,17 +756,14 @@
     "pokemon": [
       "0324"
     ],
-    "illustrator": "Masa",
-    "rarity": "unknown",
-    "regulation_mark": null,
+    "illustrator": "Teeziro",
+    "rarity": "common",
+    "regulation_mark": "H",
     "variants": [
       {
         "id": "normal",
         "images": {
-          "ja": "/images/cards/asia-sv5a/ja/069.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
+          "ja": "/images/cards/asia-sv5a/ja/014.webp"
         }
       }
     ],
@@ -4152,12 +807,133 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 3
+    "retreat_cost": 3,
+    "flavor_text": {
+      "ja": "石炭が エネルギーの 源。 コータスの 棲んでいる 山には 多くの 石炭が 眠っている。"
+    }
   },
   {
-    "id": "asia-sv5a-070",
+    "id": "asia-sv5a-015",
     "set_id": "asia-sv5a",
-    "number": "070",
+    "number": "015",
+    "category": "pokemon",
+    "name": {
+      "ja": "ヒコザル"
+    },
+    "pokemon": [
+      "0390"
+    ],
+    "illustrator": "Jerky",
+    "rarity": "common",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/015.webp"
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ひをふく"
+        },
+        "cost": [
+          "fire",
+          "normal"
+        ],
+        "damage": "20+",
+        "text": {
+          "ja": "コインを1回投げオモテなら、20ダメージ追加。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "お尻の 炎は お腹で 作られた ガスが 燃料。 雨に ぬれても 消えない。"
+    }
+  },
+  {
+    "id": "asia-sv5a-016",
+    "set_id": "asia-sv5a",
+    "number": "016",
+    "category": "pokemon",
+    "name": {
+      "ja": "モウカザル"
+    },
+    "pokemon": [
+      "0391"
+    ],
+    "illustrator": "Scav",
+    "rarity": "common",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/016.webp"
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "fire"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "ja": "チョップ"
+        },
+        "cost": [
+          "fire",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {}
+      },
+      {
+        "name": {
+          "ja": "ヒートブロー"
+        },
+        "cost": [
+          "fire",
+          "fire",
+          "normal"
+        ],
+        "damage": "80",
+        "text": {
+          "ja": "このポケモンについているエネルギーを1個選び、トラッシュする。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "尻尾の 炎の 勢いを うまく コントロールして 自分の 得意な 間合いで 戦うのだ。"
+    }
+  },
+  {
+    "id": "asia-sv5a-017",
+    "set_id": "asia-sv5a",
+    "number": "017",
     "category": "pokemon",
     "name": {
       "ja": "ゴウカザル"
@@ -4165,17 +941,14 @@
     "pokemon": [
       "0392"
     ],
-    "illustrator": "Krgc",
-    "rarity": "unknown",
-    "regulation_mark": null,
+    "illustrator": "Takumi Wada",
+    "rarity": "rare",
+    "regulation_mark": "H",
     "variants": [
       {
         "id": "normal",
         "images": {
-          "ja": "/images/cards/asia-sv5a/ja/070.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
+          "ja": "/images/cards/asia-sv5a/ja/017.webp"
         }
       }
     ],
@@ -4206,12 +979,262 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "頭で 燃える 炎の ように 激しい 性格の ポケモン。 素早さでは だれにも 負けない。"
+    }
   },
   {
-    "id": "asia-sv5a-071",
+    "id": "asia-sv5a-018",
     "set_id": "asia-sv5a",
-    "number": "071",
+    "number": "018",
+    "category": "pokemon",
+    "name": {
+      "ja": "イーユイ"
+    },
+    "pokemon": [
+      "1004"
+    ],
+    "illustrator": "Oku",
+    "rarity": "uncommon",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/018.webp"
+        }
+      }
+    ],
+    "hp": 110,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ひきつける"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "自分の山札を2枚引く。"
+        }
+      },
+      {
+        "name": {
+          "ja": "グラウンドメルト"
+        },
+        "cost": [
+          "fire",
+          "normal"
+        ],
+        "damage": "60+",
+        "text": {
+          "ja": "場にスタジアムが出ているなら、60ダメージ追加。その後、そのスタジアムをトラッシュする。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "多くの 争いの 火種となった 勾玉に 集まった 妬みが 炎を まとい ポケモンとなった。"
+    }
+  },
+  {
+    "id": "asia-sv5a-019",
+    "set_id": "asia-sv5a",
+    "number": "019",
+    "category": "pokemon",
+    "name": {
+      "ja": "ヘイガニ"
+    },
+    "pokemon": [
+      "0341"
+    ],
+    "illustrator": "Kouki Saitou",
+    "rarity": "common",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/019.webp"
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "はさむ"
+        },
+        "cost": [
+          "water",
+          "water",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2,
+    "flavor_text": {
+      "ja": "水質が 悪くても 平気なので ほかの 水ポケモンと エサの 奪い合いがなく どんどん 増えた。"
+    }
+  },
+  {
+    "id": "asia-sv5a-020",
+    "set_id": "asia-sv5a",
+    "number": "020",
+    "category": "pokemon",
+    "name": {
+      "ja": "シザリガー"
+    },
+    "pokemon": [
+      "0342"
+    ],
+    "illustrator": "Kurata So",
+    "rarity": "common",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/020.webp"
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "water"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ジョキジョキ"
+        },
+        "cost": [
+          "water",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {
+          "ja": "コインを2回投げ、オモテの数ぶん、相手の山札を上からトラッシュする。"
+        }
+      },
+      {
+        "name": {
+          "ja": "あばれハンマー"
+        },
+        "cost": [
+          "water",
+          "water",
+          "normal"
+        ],
+        "damage": "180",
+        "text": {
+          "ja": "次の自分の番、このポケモンはワザが使えない。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3,
+    "flavor_text": {
+      "ja": "巨大な ハサミを 振りまわす 暴れ者。 育てるのが とても 難しい ポケモンと いわれる。"
+    }
+  },
+  {
+    "id": "asia-sv5a-021",
+    "set_id": "asia-sv5a",
+    "number": "021",
+    "category": "pokemon",
+    "name": {
+      "ja": "グレイシア"
+    },
+    "pokemon": [
+      "0471"
+    ],
+    "illustrator": "rika",
+    "rarity": "uncommon",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/021.webp"
+        }
+      }
+    ],
+    "hp": 120,
+    "types": [
+      "water"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "ja": "しみいるれいき"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "30",
+        "text": {
+          "ja": "次の相手の番の終わりに、このワザを受けたポケモンにダメカンを9個のせる。"
+        }
+      },
+      {
+        "name": {
+          "ja": "つららミサイル"
+        },
+        "cost": [
+          "water",
+          "normal"
+        ],
+        "damage": "70",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "体温を 下げることで 全身の 体毛を 凍らせて 鋭く 尖った 針のようにして 飛ばす。"
+    }
+  },
+  {
+    "id": "asia-sv5a-022",
+    "set_id": "asia-sv5a",
+    "number": "022",
     "category": "pokemon",
     "name": {
       "ja": "フィオネ"
@@ -4219,17 +1242,14 @@
     "pokemon": [
       "0489"
     ],
-    "illustrator": "takashi shiraishi",
-    "rarity": "unknown",
-    "regulation_mark": null,
+    "illustrator": "aspara",
+    "rarity": "common",
+    "regulation_mark": "H",
     "variants": [
       {
         "id": "normal",
         "images": {
-          "ja": "/images/cards/asia-sv5a/ja/071.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
+          "ja": "/images/cards/asia-sv5a/ja/022.webp"
         }
       }
     ],
@@ -4270,12 +1290,129 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "海の 温度が 高くなると 頭の 浮き袋を ふくらませて 海面を 集団で 漂う。"
+    }
   },
   {
-    "id": "asia-sv5a-072",
+    "id": "asia-sv5a-023",
     "set_id": "asia-sv5a",
-    "number": "072",
+    "number": "023",
+    "category": "pokemon",
+    "name": {
+      "ja": "ケロマツ"
+    },
+    "pokemon": [
+      "0656"
+    ],
+    "illustrator": "Yuka Morii",
+    "rarity": "common",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/023.webp"
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "むれる"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "自分の山札から「ケロマツ」を2枚まで選び、ベンチに出す。そして山札を切る。"
+        }
+      },
+      {
+        "name": {
+          "ja": "はねまわる"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "胸と 背中から 泡を 出す。 弾力のある 泡で 攻撃を 受け止めて ダメージを 減らす。"
+    }
+  },
+  {
+    "id": "asia-sv5a-024",
+    "set_id": "asia-sv5a",
+    "number": "024",
+    "category": "pokemon",
+    "name": {
+      "ja": "ゲコガシラ"
+    },
+    "pokemon": [
+      "0657"
+    ],
+    "illustrator": "Hitoshi Ariga",
+    "rarity": "common",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/024.webp"
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "water"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "ja": "しびれみず"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "20",
+        "text": {
+          "ja": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "泡で 包んだ 小石を 投げる 技を 使う。３０メートル 先の 空き缶に 当てる コントロール。"
+    }
+  },
+  {
+    "id": "asia-sv5a-025",
+    "set_id": "asia-sv5a",
+    "number": "025",
     "category": "pokemon",
     "name": {
       "ja": "ウッウ"
@@ -4283,17 +1420,14 @@
     "pokemon": [
       "0845"
     ],
-    "illustrator": "Fujimoto Gold",
-    "rarity": "unknown",
-    "regulation_mark": null,
+    "illustrator": "OKACHEKE",
+    "rarity": "uncommon",
+    "regulation_mark": "H",
     "variants": [
       {
         "id": "normal",
         "images": {
-          "ja": "/images/cards/asia-sv5a/ja/072.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
+          "ja": "/images/cards/asia-sv5a/ja/025.webp"
         }
       }
     ],
@@ -4334,12 +1468,215 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "物覚えは 悪すぎだが 脳に 使う エネルギーを ぎりぎりにして そのぶんを 戦いに 回すのだ。"
+    }
   },
   {
-    "id": "asia-sv5a-073",
+    "id": "asia-sv5a-026",
     "set_id": "asia-sv5a",
-    "number": "073",
+    "number": "026",
+    "category": "pokemon",
+    "name": {
+      "ja": "ウネルミナモ"
+    },
+    "pokemon": [
+      "1009"
+    ],
+    "illustrator": "kawayoo",
+    "rarity": "rare",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/026.webp"
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "オーロラゲイン"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "20",
+        "text": {
+          "ja": "このポケモンのHPを「20」回復する。"
+        }
+      },
+      {
+        "name": {
+          "ja": "うねりさく"
+        },
+        "cost": [
+          "water",
+          "water",
+          "normal"
+        ],
+        "damage": "20×",
+        "text": {
+          "ja": "このポケモンにダメカンを9個までのせ、のせた数×20ダメージ。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "謎多き 凶暴な 生物。 古い 探検記に 記された 水の 怪物から 名付けられた。"
+    }
+  },
+  {
+    "id": "asia-sv5a-027",
+    "set_id": "asia-sv5a",
+    "number": "027",
+    "category": "pokemon",
+    "name": {
+      "ja": "サンダー"
+    },
+    "pokemon": [
+      "0145"
+    ],
+    "illustrator": "GOSSAN",
+    "rarity": "rare",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/027.webp"
+        }
+      }
+    ],
+    "hp": 120,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "でんじは"
+        },
+        "cost": [
+          "lightning"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。"
+        }
+      },
+      {
+        "name": {
+          "ja": "10まんボルト"
+        },
+        "cost": [
+          "lightning",
+          "lightning",
+          "normal"
+        ],
+        "damage": "190",
+        "text": {
+          "ja": "このポケモンについているエネルギーを、すべてトラッシュする。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 2,
+    "flavor_text": {
+      "ja": "電気を 自在に 操る。 真っ黒な 雷雲の 中に 巣があると 言い伝えられている。"
+    }
+  },
+  {
+    "id": "asia-sv5a-028",
+    "set_id": "asia-sv5a",
+    "number": "028",
+    "category": "pokemon",
+    "name": {
+      "ja": "エリキテル"
+    },
+    "pokemon": [
+      "0694"
+    ],
+    "illustrator": "Taiga Kayama",
+    "rarity": "common",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/028.webp"
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "もってくる"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "自分の山札を1枚引く。"
+        }
+      },
+      {
+        "name": {
+          "ja": "バチバチ"
+        },
+        "cost": [
+          "lightning"
+        ],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "頭の ひだを 広げ 太陽の 光で 発電すると パワフルな 電気技を 出せるようになる。"
+    }
+  },
+  {
+    "id": "asia-sv5a-029",
+    "set_id": "asia-sv5a",
+    "number": "029",
     "category": "pokemon",
     "name": {
       "ja": "エレザード"
@@ -4347,17 +1684,14 @@
     "pokemon": [
       "0695"
     ],
-    "illustrator": "Tonji Matsuno",
-    "rarity": "unknown",
-    "regulation_mark": null,
+    "illustrator": "Atsuya Uki",
+    "rarity": "common",
+    "regulation_mark": "H",
     "variants": [
       {
         "id": "normal",
         "images": {
-          "ja": "/images/cards/asia-sv5a/ja/073.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
+          "ja": "/images/cards/asia-sv5a/ja/029.webp"
         }
       }
     ],
@@ -4386,7 +1720,2165 @@
         "value": "x2"
       }
     ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "かつて 滅びた 砂漠の 国で 大事に されていた。 財宝と ともに ガラル地方へ やってきた。"
+    }
+  },
+  {
+    "id": "asia-sv5a-030",
+    "set_id": "asia-sv5a",
+    "number": "030",
+    "category": "pokemon",
+    "name": {
+      "ja": "モルペコ"
+    },
+    "pokemon": [
+      "0877"
+    ],
+    "illustrator": "kodama",
+    "rarity": "uncommon",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/030.webp"
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ひろってつける"
+        },
+        "cost": [
+          "lightning"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "自分のトラッシュから基本エネルギーを2枚まで選び、自分のポケモンに好きなようにつける。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "胃袋が 小さいので ポケットに 入れた タネを いつも 食べてないと すぐに お腹が 空いてしまうのだ。"
+    }
+  },
+  {
+    "id": "asia-sv5a-031",
+    "set_id": "asia-sv5a",
+    "number": "031",
+    "category": "pokemon",
+    "name": {
+      "ja": "ズピカ"
+    },
+    "pokemon": [
+      "0938"
+    ],
+    "illustrator": "nisimono",
+    "rarity": "common",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/031.webp"
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "たいあたり"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "ja": "エレキボール"
+        },
+        "cost": [
+          "lightning",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "体に 蓄えた 電力で 浮遊する。 雷雲のときは いつもより 高く 浮き上がるのだ。"
+    }
+  },
+  {
+    "id": "asia-sv5a-032",
+    "set_id": "asia-sv5a",
+    "number": "032",
+    "category": "pokemon",
+    "name": {
+      "ja": "ハラバリー"
+    },
+    "pokemon": [
+      "0939"
+    ],
+    "illustrator": "Mina Nakai",
+    "rarity": "uncommon",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/032.webp"
+        }
+      }
+    ],
+    "hp": 140,
+    "types": [
+      "lightning"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "ja": "でんきショック"
+        },
+        "cost": [
+          "lightning",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "ja": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。"
+        }
+      },
+      {
+        "name": {
+          "ja": "ライトニングボール"
+        },
+        "cost": [
+          "lightning",
+          "lightning",
+          "normal"
+        ],
+        "damage": "130",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3,
+    "flavor_text": {
+      "ja": "目玉に 見えるが じつは お腹の へそダイナモで 作った 電気を 撃ちだす 放電器官なのだ。"
+    }
+  },
+  {
+    "id": "asia-sv5a-033",
+    "set_id": "asia-sv5a",
+    "number": "033",
+    "category": "pokemon",
+    "name": {
+      "ja": "テツノイバラex"
+    },
+    "pokemon": [
+      "0995"
+    ],
+    "illustrator": "PLANETA Mochizuki",
+    "rarity": "double_rare",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/033.webp"
+        }
+      }
+    ],
+    "hp": 230,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ボルトサイクロン"
+        },
+        "cost": [
+          "lightning",
+          "normal",
+          "normal"
+        ],
+        "damage": "140",
+        "text": {
+          "ja": "このポケモンについているエネルギーを1個選び、ベンチポケモンにつけ替える。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 4
+  },
+  {
+    "id": "asia-sv5a-034",
+    "set_id": "asia-sv5a",
+    "number": "034",
+    "category": "pokemon",
+    "name": {
+      "ja": "キリンリキ"
+    },
+    "pokemon": [
+      "0203"
+    ],
+    "illustrator": "Shinji Kanda",
+    "rarity": "common",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/034.webp"
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "どっちもヘッド"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "ja": "自分のベンチポケモン1匹にも、10ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "尻尾にも 小さな 頭がある。 背後から 近づく 敵がいると 本能的に 噛みついてくる。"
+    }
+  },
+  {
+    "id": "asia-sv5a-035",
+    "set_id": "asia-sv5a",
+    "number": "035",
+    "category": "pokemon",
+    "name": {
+      "ja": "リキキリン"
+    },
+    "pokemon": [
+      "0981"
+    ],
+    "illustrator": "Dsuke",
+    "rarity": "uncommon",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/035.webp"
+        }
+      }
+    ],
+    "hp": 140,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ミッドランブル"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "40×",
+        "text": {
+          "ja": "自分の場の1進化ポケモンの数×40ダメージ。"
+        }
+      },
+      {
+        "name": {
+          "ja": "ぶきみなねんぱ"
+        },
+        "cost": [
+          "psychic",
+          "normal",
+          "normal"
+        ],
+        "damage": "80",
+        "text": {
+          "ja": "相手のバトルポケモンをこんらんにする。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 2,
+    "flavor_text": {
+      "ja": "硬い テールヘッドで 本体の 頭を 守りつつ 長い 首を 振りまわして 頭突きを 食らわせる。"
+    }
+  },
+  {
+    "id": "asia-sv5a-036",
+    "set_id": "asia-sv5a",
+    "number": "036",
+    "category": "pokemon",
+    "name": {
+      "ja": "フラベベ"
+    },
+    "pokemon": [
+      "0669"
+    ],
+    "illustrator": "Yukiko Baba",
+    "rarity": "common",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/036.webp"
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "きずをなおす"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "自分のポケモン1匹のHPを「30」回復する。"
+        }
+      },
+      {
+        "name": {
+          "ja": "ようせいのかぜ"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "赤い花に 乗った フラベベ。 生まれると すぐに お気に入りの 花を 探すために 飛びまわる。"
+    }
+  },
+  {
+    "id": "asia-sv5a-037",
+    "set_id": "asia-sv5a",
+    "number": "037",
+    "category": "pokemon",
+    "name": {
+      "ja": "フラエッテ"
+    },
+    "pokemon": [
+      "0670"
+    ],
+    "illustrator": "mingo",
+    "rarity": "common",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/037.webp"
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ちいさなおつかい"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "自分の山札から基本エネルギーを3枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+        }
+      },
+      {
+        "name": {
+          "ja": "かいてんアタック"
+        },
+        "cost": [
+          "psychic",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "自分の エネルギーを 赤色の 波長に 乗せて 花へ 送り 潜在能力を 引き出すのだ。"
+    }
+  },
+  {
+    "id": "asia-sv5a-038",
+    "set_id": "asia-sv5a",
+    "number": "038",
+    "category": "pokemon",
+    "name": {
+      "ja": "フラージェス"
+    },
+    "pokemon": [
+      "0671"
+    ],
+    "illustrator": "Ligton",
+    "rarity": "uncommon",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/038.webp"
+        }
+      }
+    ],
+    "hp": 140,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage2",
+    "attacks": [
+      {
+        "name": {
+          "ja": "マジカルショット"
+        },
+        "cost": [
+          "psychic",
+          "normal"
+        ],
+        "damage": "120",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2,
+    "flavor_text": {
+      "ja": "フラージェスの 作った 花園は 心と 体を 癒す パワーが 絶えず 降り注いでいるという。"
+    }
+  },
+  {
+    "id": "asia-sv5a-039",
+    "set_id": "asia-sv5a",
+    "number": "039",
+    "category": "pokemon",
+    "name": {
+      "ja": "ラブトロス"
+    },
+    "pokemon": [
+      "0905"
+    ],
+    "illustrator": "DOM",
+    "rarity": "rare",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/039.webp"
+        }
+      }
+    ],
+    "hp": 120,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ハートサイン"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      },
+      {
+        "name": {
+          "ja": "ラブレゾナンス"
+        },
+        "cost": [
+          "psychic",
+          "normal",
+          "normal"
+        ],
+        "damage": "80+",
+        "text": {
+          "ja": "自分の場に、相手の場のポケモンと同じタイプのポケモンがいるなら、120ダメージ追加。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "海を越えて 飛来したらば 厳しき冬の 終わりを知る。 慈愛が ヒスイの地に 新しき命 芽吹かせるとの 伝承あり。"
+    }
+  },
+  {
+    "id": "asia-sv5a-040",
+    "set_id": "asia-sv5a",
+    "number": "040",
+    "category": "pokemon",
+    "name": {
+      "ja": "サケブシッポex"
+    },
+    "pokemon": [
+      "0985"
+    ],
+    "illustrator": "akagi",
+    "rarity": "double_rare",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/040.webp"
+        }
+      }
+    ],
+    "hp": 190,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ぜっきょう"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "このワザは、後攻プレイヤーの最初の番にだけ使える。次の相手の番、相手は手札からサポートを出して使えない。"
+        }
+      },
+      {
+        "name": {
+          "ja": "かみくだく"
+        },
+        "cost": [
+          "psychic",
+          "normal",
+          "normal"
+        ],
+        "damage": "120",
+        "text": {
+          "ja": "相手のバトルポケモンについているエネルギーを1個選び、トラッシュする。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
     "retreat_cost": 1
+  },
+  {
+    "id": "asia-sv5a-041",
+    "set_id": "asia-sv5a",
+    "number": "041",
+    "category": "pokemon",
+    "name": {
+      "ja": "ヒスイ ガーディ"
+    },
+    "pokemon": [
+      "0058"
+    ],
+    "illustrator": "Whisker",
+    "rarity": "common",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/041.webp"
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "まるやけ"
+        },
+        "cost": [],
+        "damage": "",
+        "text": {
+          "ja": "場に出ているスタジアムをトラッシュする。"
+        }
+      },
+      {
+        "name": {
+          "ja": "とっしん"
+        },
+        "cost": [
+          "fighting",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {
+          "ja": "このポケモンにも10ダメージ。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2,
+    "flavor_text": {
+      "ja": "対になりて 縄張りを 哨戒す。 体毛に 火成岩なる 成分 混ざるは 火山活動の 影響と 推察す。"
+    }
+  },
+  {
+    "id": "asia-sv5a-042",
+    "set_id": "asia-sv5a",
+    "number": "042",
+    "category": "pokemon",
+    "name": {
+      "ja": "ヒスイ ウインディ"
+    },
+    "pokemon": [
+      "0059"
+    ],
+    "illustrator": "SIE NANAHARA",
+    "rarity": "rare",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/042.webp"
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "ja": "プライドファング"
+        },
+        "cost": [],
+        "damage": "30+",
+        "text": {
+          "ja": "自分のベンチポケモンにダメカンがのっているなら、90ダメージ追加。"
+        }
+      },
+      {
+        "name": {
+          "ja": "やきこがす"
+        },
+        "cost": [
+          "fighting",
+          "fighting",
+          "normal"
+        ],
+        "damage": "90",
+        "text": {
+          "ja": "相手のバトルポケモンをやけどにする。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2,
+    "flavor_text": {
+      "ja": "燃え盛る炎 牙に纏わせ 食らい付く。 体躯 大柄なれど 陽動 鮮やかなりて 敵 翻弄せしむる姿 演舞の如し。"
+    }
+  },
+  {
+    "id": "asia-sv5a-043",
+    "set_id": "asia-sv5a",
+    "number": "043",
+    "category": "pokemon",
+    "name": {
+      "ja": "ノズパス"
+    },
+    "pokemon": [
+      "0299"
+    ],
+    "illustrator": "AKIRA EGAWA",
+    "rarity": "common",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/043.webp"
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "パワーラッシュ"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {
+          "ja": "コインを1回投げウラなら、次の自分の番、このポケモンはワザが使えない。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3,
+    "flavor_text": {
+      "ja": "ピンチになると 磁力を 強め まわりにある 鉄の 塊を 引き寄せて 身を守ることも ある。"
+    }
+  },
+  {
+    "id": "asia-sv5a-044",
+    "set_id": "asia-sv5a",
+    "number": "044",
+    "category": "pokemon",
+    "name": {
+      "ja": "ダイノーズ"
+    },
+    "pokemon": [
+      "0476"
+    ],
+    "illustrator": "OKUBO",
+    "rarity": "uncommon",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/044.webp"
+        }
+      }
+    ],
+    "hp": 140,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "ja": "アサルトレーザー"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "80+",
+        "text": {
+          "ja": "相手のバトルポケモンに「ポケモンのどうぐ」がついているなら、80ダメージ追加。"
+        }
+      },
+      {
+        "name": {
+          "ja": "ランドクラッシュ"
+        },
+        "cost": [
+          "fighting",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "120",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3,
+    "flavor_text": {
+      "ja": "強い 磁力を 放っているので 近くにある 電化製品は 使いものに ならなくなってしまう。"
+    }
+  },
+  {
+    "id": "asia-sv5a-045",
+    "set_id": "asia-sv5a",
+    "number": "045",
+    "category": "pokemon",
+    "name": {
+      "ja": "ゲッコウガex"
+    },
+    "pokemon": [
+      "0658"
+    ],
+    "illustrator": "5ban Graphics",
+    "rarity": "double_rare",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/045.webp"
+        }
+      }
+    ],
+    "hp": 310,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage2",
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "ja": "しのびのやいば"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "170",
+        "text": {
+          "ja": "のぞむなら、自分の山札から好きなカードを1枚選び、手札に加える。そして山札を切る。"
+        }
+      },
+      {
+        "name": {
+          "ja": "ぶんしんれんだ"
+        },
+        "cost": [
+          "water",
+          "normal",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "このポケモンについているエネルギーを2個トラッシュし、相手のポケモン2匹に、それぞれ120ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-sv5a-046",
+    "set_id": "asia-sv5a",
+    "number": "046",
+    "category": "pokemon",
+    "name": {
+      "ja": "ルチャブル"
+    },
+    "pokemon": [
+      "0701"
+    ],
+    "illustrator": "Shigenori Negishi",
+    "rarity": "common",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/046.webp"
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "サイドカウンター"
+        },
+        "cost": [
+          "fighting",
+          "fighting"
+        ],
+        "damage": "50+",
+        "text": {
+          "ja": "自分のサイドの残り枚数が、相手のサイドの残り枚数より多いなら、90ダメージ追加。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "群れを 作らず 静かに 暮らす。 集団で 騒ぐ オコリザルは 天敵で いつも 争いになる。"
+    }
+  },
+  {
+    "id": "asia-sv5a-047",
+    "set_id": "asia-sv5a",
+    "number": "047",
+    "category": "pokemon",
+    "name": {
+      "ja": "ディンルー"
+    },
+    "pokemon": [
+      "1003"
+    ],
+    "illustrator": "Anesaki Dynamic",
+    "rarity": "rare",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/047.webp"
+        }
+      }
+    ],
+    "hp": 140,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "グラウンドクラック"
+        },
+        "cost": [
+          "fighting"
+        ],
+        "damage": "30",
+        "text": {
+          "ja": "場にスタジアムが出ているなら、相手のベンチポケモン全員にも、それぞれ30ダメージを与え、そのスタジアムをトラッシュする。［ベンチは弱点・抵抗力を計算しない。］"
+        }
+      },
+      {
+        "name": {
+          "ja": "ぶちかます"
+        },
+        "cost": [
+          "fighting",
+          "fighting",
+          "normal"
+        ],
+        "damage": "110",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3,
+    "flavor_text": {
+      "ja": "とても 重たい 頭を ゆっくり 振り下ろし 深さ５０メートルの 長大な 地割れを 引き起こす。"
+    }
+  },
+  {
+    "id": "asia-sv5a-048",
+    "set_id": "asia-sv5a",
+    "number": "048",
+    "category": "pokemon",
+    "name": {
+      "ja": "カジッチュ"
+    },
+    "pokemon": [
+      "0840"
+    ],
+    "illustrator": "Teeziro",
+    "rarity": "common",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/048.webp"
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "dragon"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ともだちをさがす"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "自分の山札からポケモンを1枚選び、相手に見せて、手札に加える。そして山札を切る。"
+        }
+      },
+      {
+        "name": {
+          "ja": "ころがりタックル"
+        },
+        "cost": [
+          "grass",
+          "fire"
+        ],
+        "damage": "30",
+        "text": {}
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "りんごの 中で 暮らしている。 りんごが なくなると 体の 水分が 抜けて 弱ってしまう。"
+    }
+  },
+  {
+    "id": "asia-sv5a-049",
+    "set_id": "asia-sv5a",
+    "number": "049",
+    "category": "pokemon",
+    "name": {
+      "ja": "カミッチュ"
+    },
+    "pokemon": [
+      "1011"
+    ],
+    "illustrator": "OKACHEKE",
+    "rarity": "uncommon",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/049.webp"
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "dragon"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "ja": "みつあめキャッチャー"
+        },
+        "cost": [
+          "grass",
+          "fire"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。その後、新しく出てきたポケモンに70ダメージ。"
+        }
+      }
+    ],
+    "retreat_cost": 2,
+    "flavor_text": {
+      "ja": "頭を 出している そとッチュと 尻尾を 出している なかッチュが 助け合い りんごのなかで 暮らす。"
+    }
+  },
+  {
+    "id": "asia-sv5a-050",
+    "set_id": "asia-sv5a",
+    "number": "050",
+    "category": "pokemon",
+    "name": {
+      "ja": "イーブイ"
+    },
+    "pokemon": [
+      "0133"
+    ],
+    "illustrator": "satoma",
+    "rarity": "common",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/050.webp"
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "かくせい"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "このポケモンから進化するカードを、自分の山札から1枚選び、このポケモンにのせて進化させる。そして山札を切る。"
+        }
+      },
+      {
+        "name": {
+          "ja": "でんこうせっか"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "20+",
+        "text": {
+          "ja": "コインを1回投げオモテなら、20ダメージ追加。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "不規則な 遺伝子を 持つ。 石から出る 放射線によって 体が 突然変異を 起こす。"
+    }
+  },
+  {
+    "id": "asia-sv5a-051",
+    "set_id": "asia-sv5a",
+    "number": "051",
+    "category": "pokemon",
+    "name": {
+      "ja": "カビゴン"
+    },
+    "pokemon": [
+      "0143"
+    ],
+    "illustrator": "Souichirou Gunjima",
+    "rarity": "uncommon",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/051.webp"
+        }
+      }
+    ],
+    "hp": 160,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "はらごしらえ"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "自分の手札からエネルギーを1枚選び、このポケモンにつける。その後、このポケモンのHPを「60」回復する。"
+        }
+      },
+      {
+        "name": {
+          "ja": "ヘビーインパクト"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "160",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 4,
+    "flavor_text": {
+      "ja": "胃袋の 消化液は どんな 毒も 消化できる。 落ちているものを 食べても 平気。"
+    }
+  },
+  {
+    "id": "asia-sv5a-052",
+    "set_id": "asia-sv5a",
+    "number": "052",
+    "category": "pokemon",
+    "name": {
+      "ja": "ガチグマ アカツキex"
+    },
+    "pokemon": [
+      "0901"
+    ],
+    "illustrator": "aky CG Works",
+    "rarity": "double_rare",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/052.webp"
+        }
+      }
+    ],
+    "hp": 260,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ブラッドムーン"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "240",
+        "text": {
+          "ja": "次の自分の番、このポケモンはワザが使えない。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "asia-sv5a-053",
+    "set_id": "asia-sv5a",
+    "number": "053",
+    "category": "trainer",
+    "name": {
+      "ja": "アンフェアスタンプ"
+    },
+    "pokemon": [],
+    "illustrator": "Toyste Beach",
+    "rarity": "unknown",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/053.webp"
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "ja": "このカードは、前の相手の番に、自分のポケモンがきぜつしていなければ使えない。\n\nおたがいのプレイヤーは、それぞれ手札をすべて山札にもどして切る。その後、自分は5枚、相手は2枚、山札を引く。"
+    }
+  },
+  {
+    "id": "asia-sv5a-054",
+    "set_id": "asia-sv5a",
+    "number": "054",
+    "category": "trainer",
+    "name": {
+      "ja": "改造ハンマー"
+    },
+    "pokemon": [],
+    "illustrator": "Eske Yoshinob",
+    "rarity": "uncommon",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/054.webp"
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "ja": "相手の場のポケモンについている特殊エネルギーを1個選び、トラッシュする。"
+    }
+  },
+  {
+    "id": "asia-sv5a-055",
+    "set_id": "asia-sv5a",
+    "number": "055",
+    "category": "trainer",
+    "name": {
+      "ja": "ハイパーアロマ"
+    },
+    "pokemon": [],
+    "illustrator": "Toyste Beach",
+    "rarity": "unknown",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/055.webp"
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "ja": "自分の山札から1進化ポケモンを3枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+    }
+  },
+  {
+    "id": "asia-sv5a-056",
+    "set_id": "asia-sv5a",
+    "number": "056",
+    "category": "trainer",
+    "name": {
+      "ja": "ポケモンいれかえ"
+    },
+    "pokemon": [],
+    "illustrator": "Studio Bora Inc.",
+    "rarity": "uncommon",
+    "regulation_mark": "G",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/056.webp"
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "ja": "自分のバトルポケモンをベンチポケモンと入れ替える。"
+    }
+  },
+  {
+    "id": "asia-sv5a-057",
+    "set_id": "asia-sv5a",
+    "number": "057",
+    "category": "trainer",
+    "name": {
+      "ja": "ポケモンキャッチャー"
+    },
+    "pokemon": [],
+    "illustrator": "Studio Bora Inc.",
+    "rarity": "uncommon",
+    "regulation_mark": "G",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/057.webp"
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "ja": "コインを1回投げオモテなら、相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。"
+    }
+  },
+  {
+    "id": "asia-sv5a-058",
+    "set_id": "asia-sv5a",
+    "number": "058",
+    "category": "trainer",
+    "name": {
+      "ja": "ラブラブボール"
+    },
+    "pokemon": [],
+    "illustrator": "Studio Bora Inc.",
+    "rarity": "uncommon",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/058.webp"
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "ja": "自分の山札から、相手の場のポケモンと同じ名前のポケモンを1枚選び、相手に見せて、手札に加える。そして山札を切る。"
+    }
+  },
+  {
+    "id": "asia-sv5a-059",
+    "set_id": "asia-sv5a",
+    "number": "059",
+    "category": "trainer",
+    "name": {
+      "ja": "サバイブギプス"
+    },
+    "pokemon": [],
+    "illustrator": "inose yukie",
+    "rarity": "unknown",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/059.webp"
+        }
+      }
+    ],
+    "trainer_type": "tool",
+    "rules_text": {
+      "ja": "このカードをつけているポケモンのHPがまんたんの状態で、相手のポケモンからワザのダメージを受けてきぜつするとき、そのポケモンはきぜつせず、残りHPが「10」の状態で場に残る。その後、このカードをトラッシュする。"
+    }
+  },
+  {
+    "id": "asia-sv5a-060",
+    "set_id": "asia-sv5a",
+    "number": "060",
+    "category": "trainer",
+    "name": {
+      "ja": "ラッキーメット"
+    },
+    "pokemon": [],
+    "illustrator": "Studio Bora Inc.",
+    "rarity": "uncommon",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/060.webp"
+        }
+      }
+    ],
+    "trainer_type": "tool",
+    "rules_text": {
+      "ja": "このカードをつけているポケモンが、バトル場で相手のポケモンからワザのダメージを受けたとき、自分の山札を2枚引く。"
+    }
+  },
+  {
+    "id": "asia-sv5a-061",
+    "set_id": "asia-sv5a",
+    "number": "061",
+    "category": "trainer",
+    "name": {
+      "ja": "管理人"
+    },
+    "pokemon": [],
+    "illustrator": "Akira Komayama",
+    "rarity": "common",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/061.webp"
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "ja": "自分の山札を2枚引く。その後、場に「公民館」が出ているなら、この「管理人」はトラッシュせず、山札にもどして切る。"
+    }
+  },
+  {
+    "id": "asia-sv5a-062",
+    "set_id": "asia-sv5a",
+    "number": "062",
+    "category": "trainer",
+    "name": {
+      "ja": "ゴヨウ"
+    },
+    "pokemon": [],
+    "illustrator": "hncl",
+    "rarity": "uncommon",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/062.webp"
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "ja": "おたがいのプレイヤーは、それぞれ自分の手札をすべてウラにして切り、山札の下にもどす。その後、おたがいのプレイヤーは、それぞれコインを1回投げ、オモテなら6枚、ウラなら3枚、山札を引く。"
+    }
+  },
+  {
+    "id": "asia-sv5a-063",
+    "set_id": "asia-sv5a",
+    "number": "063",
+    "category": "trainer",
+    "name": {
+      "ja": "サザレ"
+    },
+    "pokemon": [],
+    "illustrator": "Naoki Saito",
+    "rarity": "uncommon",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/063.webp"
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "ja": "自分の手札からポケモンを2枚まで選び、相手に見せて、山札にもどす。その後、もどした枚数ぶんまで、自分の山札からポケモンを選び、相手に見せて、手札に加える。そして山札を切る。"
+    }
+  },
+  {
+    "id": "asia-sv5a-064",
+    "set_id": "asia-sv5a",
+    "number": "064",
+    "category": "trainer",
+    "name": {
+      "ja": "スイレンのお世話"
+    },
+    "pokemon": [],
+    "illustrator": "Atsushi Furusawa",
+    "rarity": "uncommon",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/064.webp"
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "ja": "自分のトラッシュからポケモン（「ルールを持つポケモン」をのぞく）と基本エネルギーを合計3枚まで選び、相手に見せて、手札に加える。"
+    }
+  },
+  {
+    "id": "asia-sv5a-065",
+    "set_id": "asia-sv5a",
+    "number": "065",
+    "category": "trainer",
+    "name": {
+      "ja": "公民館"
+    },
+    "pokemon": [],
+    "illustrator": "MARINA Chikazawa",
+    "rarity": "uncommon",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/065.webp"
+        }
+      }
+    ],
+    "trainer_type": "stadium",
+    "rules_text": {
+      "ja": "この番、手札からサポートを出して使っていたプレイヤーは、自分の番ごとに1回、自分のポケモン全員のHPを、それぞれ「10」回復してよい。"
+    }
+  },
+  {
+    "id": "asia-sv5a-066",
+    "set_id": "asia-sv5a",
+    "number": "066",
+    "category": "energy",
+    "name": {
+      "ja": "ブーメランエネルギー"
+    },
+    "pokemon": [],
+    "illustrator": "5ban Graphics",
+    "rarity": "uncommon",
+    "regulation_mark": "H",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/066.webp"
+        }
+      }
+    ],
+    "rules_text": {
+      "ja": "このカードは、ポケモンについているかぎり、エネルギー1個ぶんとしてはたらく。\n\nこのカードをつけているポケモンが使うワザの効果で、このカードがトラッシュされたなら、ワザのダメージや効果のあとに、もとのポケモンにつけなおす。"
+    }
+  },
+  {
+    "id": "asia-sv5a-067",
+    "set_id": "asia-sv5a",
+    "number": "067",
+    "category": "pokemon",
+    "name": {
+      "ja": "カイロス"
+    },
+    "pokemon": [
+      "0127"
+    ],
+    "illustrator": "Yukihiro Tada",
+    "rarity": "unknown",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/067.webp"
+        }
+      }
+    ],
+    "hp": 110,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "スロークランチ"
+        },
+        "cost": [
+          "grass",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "このポケモンについているエネルギーを、すべてトラッシュする。次の相手の番の終わりに、このワザを受けたポケモンはきぜつする。"
+        }
+      },
+      {
+        "name": {
+          "ja": "かいりきホーン"
+        },
+        "cost": [
+          "grass",
+          "normal",
+          "normal"
+        ],
+        "damage": "100",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2,
+    "flavor_text": {
+      "ja": "ツノで 互いを 格付けする。 太く 立派な ツノを 持つ カイロスほど 異性に 人気。"
+    }
+  },
+  {
+    "id": "asia-sv5a-068",
+    "set_id": "asia-sv5a",
+    "number": "068",
+    "category": "pokemon",
+    "name": {
+      "ja": "チャデス"
+    },
+    "pokemon": [
+      "1012"
+    ],
+    "illustrator": "Saboteri",
+    "rarity": "unknown",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/068.webp"
+        }
+      }
+    ],
+    "hp": 30,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ひっかける"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "ヤバチャの リージョンフォームに 見えるが まったく 関係のない ポケモンと 最近 判明した。"
+    }
+  },
+  {
+    "id": "asia-sv5a-069",
+    "set_id": "asia-sv5a",
+    "number": "069",
+    "category": "pokemon",
+    "name": {
+      "ja": "コータス"
+    },
+    "pokemon": [
+      "0324"
+    ],
+    "illustrator": "Masa",
+    "rarity": "unknown",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/069.webp"
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "こうらでぶつかる"
+        },
+        "cost": [
+          "fire",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "ja": "次の相手の番、このポケモンが受けるワザのダメージは「-30」される。"
+        }
+      },
+      {
+        "name": {
+          "ja": "ほのおのうず"
+        },
+        "cost": [
+          "fire",
+          "normal",
+          "normal"
+        ],
+        "damage": "110",
+        "text": {
+          "ja": "このポケモンについているエネルギーを2個選び、トラッシュする。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3,
+    "flavor_text": {
+      "ja": "石炭が エネルギーの 源。 コータスの 棲んでいる 山には 多くの 石炭が 眠っている。"
+    }
+  },
+  {
+    "id": "asia-sv5a-070",
+    "set_id": "asia-sv5a",
+    "number": "070",
+    "category": "pokemon",
+    "name": {
+      "ja": "ゴウカザル"
+    },
+    "pokemon": [
+      "0392"
+    ],
+    "illustrator": "Krgc",
+    "rarity": "unknown",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/070.webp"
+        }
+      }
+    ],
+    "hp": 140,
+    "types": [
+      "fire"
+    ],
+    "stage": "stage2",
+    "attacks": [
+      {
+        "name": {
+          "ja": "バーンアウト"
+        },
+        "cost": [
+          "fire",
+          "fire",
+          "normal"
+        ],
+        "damage": "200",
+        "text": {
+          "ja": "このポケモンについているエネルギーを1個選び、トラッシュする。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "頭で 燃える 炎の ように 激しい 性格の ポケモン。 素早さでは だれにも 負けない。"
+    }
+  },
+  {
+    "id": "asia-sv5a-071",
+    "set_id": "asia-sv5a",
+    "number": "071",
+    "category": "pokemon",
+    "name": {
+      "ja": "フィオネ"
+    },
+    "pokemon": [
+      "0489"
+    ],
+    "illustrator": "takashi shiraishi",
+    "rarity": "unknown",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/071.webp"
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "まねきよせる"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "自分のトラッシュからサポートを1枚選び、相手に見せて、手札に加える。"
+        }
+      },
+      {
+        "name": {
+          "ja": "エナジープレス"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "20×",
+        "text": {
+          "ja": "相手のバトルポケモンについているエネルギーの数×20ダメージ。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "海の 温度が 高くなると 頭の 浮き袋を ふくらませて 海面を 集団で 漂う。"
+    }
+  },
+  {
+    "id": "asia-sv5a-072",
+    "set_id": "asia-sv5a",
+    "number": "072",
+    "category": "pokemon",
+    "name": {
+      "ja": "ウッウ"
+    },
+    "pokemon": [
+      "0845"
+    ],
+    "illustrator": "Fujimoto Gold",
+    "rarity": "unknown",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/072.webp"
+        }
+      }
+    ],
+    "hp": 110,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "みずでっぽう"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "20",
+        "text": {}
+      },
+      {
+        "name": {
+          "ja": "スピットシュート"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "このポケモンについているエネルギーをすべてトラッシュし、相手のポケモン1匹に、120ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "物覚えは 悪すぎだが 脳に 使う エネルギーを ぎりぎりにして そのぶんを 戦いに 回すのだ。"
+    }
+  },
+  {
+    "id": "asia-sv5a-073",
+    "set_id": "asia-sv5a",
+    "number": "073",
+    "category": "pokemon",
+    "name": {
+      "ja": "エレザード"
+    },
+    "pokemon": [
+      "0695"
+    ],
+    "illustrator": "Tonji Matsuno",
+    "rarity": "unknown",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "/images/cards/asia-sv5a/ja/073.webp"
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "lightning"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ワイルドボルト"
+        },
+        "cost": [
+          "lightning"
+        ],
+        "damage": "70",
+        "text": {
+          "ja": "このポケモンにも20ダメージ。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "かつて 滅びた 砂漠の 国で 大事に されていた。 財宝と ともに ガラル地方へ やってきた。"
+    }
   },
   {
     "id": "asia-sv5a-074",
@@ -4406,10 +3898,7 @@
       {
         "id": "normal",
         "images": {
-          "ja": "/images/cards/asia-sv5a/ja/074.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
+          "ja": "/images/cards/asia-sv5a/ja/074.webp"
         }
       }
     ],
@@ -4450,7 +3939,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "海を越えて 飛来したらば 厳しき冬の 終わりを知る。 慈愛が ヒスイの地に 新しき命 芽吹かせるとの 伝承あり。"
+    }
   },
   {
     "id": "asia-sv5a-075",
@@ -4470,10 +3962,7 @@
       {
         "id": "normal",
         "images": {
-          "ja": "/images/cards/asia-sv5a/ja/075.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
+          "ja": "/images/cards/asia-sv5a/ja/075.webp"
         }
       }
     ],
@@ -4513,7 +4002,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 2
+    "retreat_cost": 2,
+    "flavor_text": {
+      "ja": "対になりて 縄張りを 哨戒す。 体毛に 火成岩なる 成分 混ざるは 火山活動の 影響と 推察す。"
+    }
   },
   {
     "id": "asia-sv5a-076",
@@ -4533,10 +4025,7 @@
       {
         "id": "normal",
         "images": {
-          "ja": "/images/cards/asia-sv5a/ja/076.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
+          "ja": "/images/cards/asia-sv5a/ja/076.webp"
         }
       }
     ],
@@ -4580,7 +4069,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 3
+    "retreat_cost": 3,
+    "flavor_text": {
+      "ja": "強い 磁力を 放っているので 近くにある 電化製品は 使いものに ならなくなってしまう。"
+    }
   },
   {
     "id": "asia-sv5a-077",
@@ -4600,10 +4092,7 @@
       {
         "id": "normal",
         "images": {
-          "ja": "/images/cards/asia-sv5a/ja/077.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
+          "ja": "/images/cards/asia-sv5a/ja/077.webp"
         }
       }
     ],
@@ -4637,7 +4126,10 @@
         "text": {}
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "りんごの 中で 暮らしている。 りんごが なくなると 体の 水分が 抜けて 弱ってしまう。"
+    }
   },
   {
     "id": "asia-sv5a-078",
@@ -4657,10 +4149,7 @@
       {
         "id": "normal",
         "images": {
-          "ja": "/images/cards/asia-sv5a/ja/078.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
+          "ja": "/images/cards/asia-sv5a/ja/078.webp"
         }
       }
     ],
@@ -4703,7 +4192,10 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "不規則な 遺伝子を 持つ。 石から出る 放射線によって 体が 突然変異を 起こす。"
+    }
   },
   {
     "id": "asia-sv5a-079",
@@ -4723,10 +4215,7 @@
       {
         "id": "normal",
         "images": {
-          "ja": "/images/cards/asia-sv5a/ja/079.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
+          "ja": "/images/cards/asia-sv5a/ja/079.webp"
         }
       }
     ],
@@ -4789,10 +4278,7 @@
       {
         "id": "normal",
         "images": {
-          "ja": "/images/cards/asia-sv5a/ja/080.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
+          "ja": "/images/cards/asia-sv5a/ja/080.webp"
         }
       }
     ],
@@ -4857,10 +4343,7 @@
       {
         "id": "normal",
         "images": {
-          "ja": "/images/cards/asia-sv5a/ja/081.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
+          "ja": "/images/cards/asia-sv5a/ja/081.webp"
         }
       }
     ],
@@ -4912,10 +4395,7 @@
       {
         "id": "normal",
         "images": {
-          "ja": "/images/cards/asia-sv5a/ja/082.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
+          "ja": "/images/cards/asia-sv5a/ja/082.webp"
         }
       }
     ],
@@ -4985,10 +4465,7 @@
       {
         "id": "normal",
         "images": {
-          "ja": "/images/cards/asia-sv5a/ja/083.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
+          "ja": "/images/cards/asia-sv5a/ja/083.webp"
         }
       }
     ],
@@ -5052,10 +4529,7 @@
       {
         "id": "normal",
         "images": {
-          "ja": "/images/cards/asia-sv5a/ja/084.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
+          "ja": "/images/cards/asia-sv5a/ja/084.webp"
         }
       }
     ],
@@ -5107,10 +4581,7 @@
       {
         "id": "normal",
         "images": {
-          "ja": "/images/cards/asia-sv5a/ja/085.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
+          "ja": "/images/cards/asia-sv5a/ja/085.webp"
         }
       }
     ],
@@ -5135,10 +4606,7 @@
       {
         "id": "normal",
         "images": {
-          "ja": "/images/cards/asia-sv5a/ja/086.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
+          "ja": "/images/cards/asia-sv5a/ja/086.webp"
         }
       }
     ],
@@ -5163,10 +4631,7 @@
       {
         "id": "normal",
         "images": {
-          "ja": "/images/cards/asia-sv5a/ja/087.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
+          "ja": "/images/cards/asia-sv5a/ja/087.webp"
         }
       }
     ],
@@ -5191,10 +4656,7 @@
       {
         "id": "normal",
         "images": {
-          "ja": "/images/cards/asia-sv5a/ja/088.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
+          "ja": "/images/cards/asia-sv5a/ja/088.webp"
         }
       }
     ],
@@ -5221,10 +4683,7 @@
       {
         "id": "normal",
         "images": {
-          "ja": "/images/cards/asia-sv5a/ja/089.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
+          "ja": "/images/cards/asia-sv5a/ja/089.webp"
         }
       }
     ],
@@ -5287,10 +4746,7 @@
       {
         "id": "normal",
         "images": {
-          "ja": "/images/cards/asia-sv5a/ja/090.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
+          "ja": "/images/cards/asia-sv5a/ja/090.webp"
         }
       }
     ],
@@ -5354,10 +4810,7 @@
       {
         "id": "normal",
         "images": {
-          "ja": "/images/cards/asia-sv5a/ja/091.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
+          "ja": "/images/cards/asia-sv5a/ja/091.webp"
         }
       }
     ],
@@ -5409,10 +4862,7 @@
       {
         "id": "normal",
         "images": {
-          "ja": "/images/cards/asia-sv5a/ja/092.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
+          "ja": "/images/cards/asia-sv5a/ja/092.webp"
         }
       }
     ],
@@ -5437,10 +4887,7 @@
       {
         "id": "normal",
         "images": {
-          "ja": "/images/cards/asia-sv5a/ja/093.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
+          "ja": "/images/cards/asia-sv5a/ja/093.webp"
         }
       }
     ],
@@ -5467,10 +4914,7 @@
       {
         "id": "normal",
         "images": {
-          "ja": "/images/cards/asia-sv5a/ja/094.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
+          "ja": "/images/cards/asia-sv5a/ja/094.webp"
         }
       }
     ],
@@ -5522,10 +4966,7 @@
       {
         "id": "normal",
         "images": {
-          "ja": "/images/cards/asia-sv5a/ja/095.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
+          "ja": "/images/cards/asia-sv5a/ja/095.webp"
         }
       }
     ],
@@ -5550,10 +4991,7 @@
       {
         "id": "normal",
         "images": {
-          "ja": "/images/cards/asia-sv5a/ja/096.webp",
-          "ko": "",
-          "th": "",
-          "zh-TW": ""
+          "ja": "/images/cards/asia-sv5a/ja/096.webp"
         }
       }
     ],

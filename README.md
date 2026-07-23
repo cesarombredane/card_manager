@@ -26,8 +26,14 @@ The app reads JSON files directly from:
 app/data
 ```
 
-The UI displays the selected language when available, then falls back to
-English and finally the first non-empty translated name.
+The catalog is intentionally limited to three product regions:
+
+- International sets in English and French when a French release exists.
+- Japanese sets in Japanese.
+- Mainland Chinese sets in Simplified Chinese.
+
+No other translations or localized card scans are shipped. The UI displays the
+selected supported language when available, then uses a stable fallback.
 
 ## Update data based on tcgdex
 
@@ -35,13 +41,16 @@ English and finally the first non-empty translated name.
 ./scripts/update_data.sh
 ```
 
-This pulls TCGdex as the primary multilingual source and Pokémon TCG API data
+This pulls TCGdex as the primary source and Pokémon TCG API data
 as the international English fallback, regenerates the app JSON, and synchronizes
-all set and card images. Generation happens in `app/data.next` and is published
+supported set and card images. A final catalog-scope step removes unsupported
+sets, translations, and cached image languages. Generation happens in
+`app/data.next` and is published
 only after every step succeeds. The conversion also recreates `app/data/pokemon.json`
 from TCGdex Pokédex ids and localized card names, keeping Mega and regional
-forms distinct. Set `PYTHON_BIN` if Python 3 is available under a different
-executable name.
+forms distinct; the scope step fills known inference gaps with canonical
+National Pokédex names. Set `PYTHON_BIN` if Python 3 is available under a
+different executable name.
 
 Source matching evidence and asset candidates are written to
 `app/data/source-map.json`. Detailed coverage is regenerated as

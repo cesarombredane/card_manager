@@ -139,19 +139,25 @@
     const query: string = (sets_search_input.value || '').trim().toLowerCase();
     const regionById: Map<string, Region> = new Map(regions.map((region) => [region.id, region]));
     const setsBySeries: Map<string, Set[]> = new Map();
+    const requiredLanguage: string | null = selected_region_id.value === 'JPN'
+      ? 'ja'
+      : selected_region_id.value === 'CHN'
+        ? 'zh-CN'
+        : null;
 
     for (const set of sets) {
       const matchesSearch: boolean = query === '' || Object.values(set.name).some((name) => name?.toLowerCase().includes(query));
       if (!matchesSearch) continue;
+      if (requiredLanguage && !set.language_ids.includes(requiredLanguage)) continue;
       if (!setsBySeries.has(set.series_id)) setsBySeries.set(set.series_id, []);
       setsBySeries.get(set.series_id)?.push(set);
     }
 
     return series
-      .filter(item => item.region_id === selected_region_id.value)
+      .filter((item) => selected_region_id.value === 'INTL' ? item.region_id === 'INTL' : item.region_id === 'JPN')
       .map((item): SeriesSetGroup => ({
         series: item,
-        region: regionById.get(item.region_id) ?? { id: item.region_id, name: item.region_id },
+        region: regionById.get(selected_region_id.value) ?? { id: selected_region_id.value, name: selected_region_id.value },
         sets: [...(setsBySeries.get(item.id) ?? [])].sort((a, b) => b.release_date.localeCompare(a.release_date))
       }))
       .filter((group) => group.sets.length > 0)
@@ -162,11 +168,23 @@
   /* methods */
   // Resolves a set name using the shared language preference and stable fallbacks.
   const setDisplayName = (set: Set): string => {
-    return localizedValue(set.name, store.state.selected_language_id) ?? set.id;
+    const regionLanguage: string = selected_region_id.value === 'JPN'
+      ? 'ja'
+      : selected_region_id.value === 'CHN'
+        ? 'zh-CN'
+        : store.state.selected_language_id;
+    return localizedValue(set.name, regionLanguage) ?? set.id;
   };
 
 
   /* watchers */
   // Update the store when the selected region changes.
-  watch(selected_region_id, v => store.commit('set_selected_region_id', v));
+  watch(selected_region_id, (regionId): void => {
+    store.commit('set_selected_region_id', regionId);
+    if (regionId === 'JPN') store.commit('set_sekected_language_id', 'ja');
+    if (regionId === 'CHN') store.commit('set_sekected_language_id', 'zh-CN');
+    if (regionId === 'INTL' && !['en', 'fr'].includes(store.state.selected_language_id)) {
+      store.commit('set_sekected_language_id', 'en');
+    }
+  });
 </script>

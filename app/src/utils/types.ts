@@ -74,6 +74,7 @@ export type CoverageReport = {
 export type Set = {
   id: string;
   tcgdex_id: string;
+  tcgdex_series_id: string;
   series_id: string;
   name: LocalizedText;
   title_image_url: string | null;

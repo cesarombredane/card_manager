@@ -161,7 +161,13 @@
 
   // Stores the current set region and navigates back to the series page.
   const goBackToSeries = (): void => {
-    if (currentSeries) store.commit('set_selected_region_id', currentSeries.region_id);
+    if (currentSet?.language_ids.includes('zh-CN') && selectedLanguageId.value === 'zh-CN') {
+      store.commit('set_selected_region_id', 'CHN');
+    } else if (currentSet?.language_ids.includes('ja')) {
+      store.commit('set_selected_region_id', 'JPN');
+    } else if (currentSeries) {
+      store.commit('set_selected_region_id', currentSeries.region_id);
+    }
     router.push('/series');
   };
 
