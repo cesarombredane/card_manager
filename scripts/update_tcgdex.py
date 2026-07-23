@@ -655,6 +655,81 @@ def validate_generated_sets(output_root: Path) -> None:
                 raise ValueError(f"Set {set_id} name languages must match language_ids")
 
 
+def append_unique(existing: list[dict[str, Any]], discovered: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], int]:
+    """Append new id-addressable records without changing existing records."""
+    known_ids = {str(row["id"]) for row in existing}
+    additions = [row for row in discovered if str(row["id"]) not in known_ids]
+    return [*existing, *additions], len(additions)
+
+
+def merge_append_only(existing_root: Path, discovered_root: Path, destination_root: Path) -> dict[str, int]:
+    """Copy the repository catalog and append only previously unknown records."""
+    if destination_root.exists():
+        shutil.rmtree(destination_root)
+    if existing_root.exists():
+        shutil.copytree(existing_root, destination_root)
+    else:
+        destination_root.mkdir(parents=True)
+
+    counts = {"series": 0, "sets": 0, "cards": 0, "pokemon": 0}
+    for filename, counter in (
+        ("regions.json", None),
+        ("languages.json", None),
+        ("series.json", "series"),
+        ("pokemon.json", "pokemon"),
+    ):
+        existing_path = destination_root / filename
+        discovered_path = discovered_root / filename
+        existing = json.loads(existing_path.read_text(encoding="utf-8")) if existing_path.exists() else []
+        discovered = json.loads(discovered_path.read_text(encoding="utf-8"))
+        merged, added = append_unique(existing, discovered)
+        if counter:
+            counts[counter] += added
+        if added or not existing_path.exists():
+            write_json(existing_path, merged)
+
+    for discovered_series_path in discovered_root.iterdir():
+        if not discovered_series_path.is_dir():
+            continue
+        series_id = discovered_series_path.name
+        destination_series_path = destination_root / series_id
+        if not destination_series_path.exists():
+            shutil.copytree(discovered_series_path, destination_series_path)
+            discovered_sets = json.loads((discovered_series_path / "sets.json").read_text(encoding="utf-8"))
+            counts["sets"] += len(discovered_sets)
+            counts["cards"] += sum(
+                len(json.loads((discovered_series_path / f"cards_{set_row['id']}.json").read_text(encoding="utf-8")))
+                for set_row in discovered_sets
+            )
+            continue
+
+        existing_sets_path = destination_series_path / "sets.json"
+        discovered_sets_path = discovered_series_path / "sets.json"
+        existing_sets = json.loads(existing_sets_path.read_text(encoding="utf-8"))
+        discovered_sets = json.loads(discovered_sets_path.read_text(encoding="utf-8"))
+        merged_sets, added_sets = append_unique(existing_sets, discovered_sets)
+        counts["sets"] += added_sets
+        if added_sets:
+            write_json(existing_sets_path, merged_sets)
+
+        for discovered_set in discovered_sets:
+            set_id = str(discovered_set["id"])
+            discovered_cards_path = discovered_series_path / f"cards_{set_id}.json"
+            destination_cards_path = destination_series_path / f"cards_{set_id}.json"
+            if not destination_cards_path.exists():
+                shutil.copy2(discovered_cards_path, destination_cards_path)
+                counts["cards"] += len(json.loads(discovered_cards_path.read_text(encoding="utf-8")))
+                continue
+            existing_cards = json.loads(destination_cards_path.read_text(encoding="utf-8"))
+            discovered_cards = json.loads(discovered_cards_path.read_text(encoding="utf-8"))
+            merged_cards, added_cards = append_unique(existing_cards, discovered_cards)
+            counts["cards"] += added_cards
+            if added_cards:
+                write_json(destination_cards_path, merged_cards)
+
+    return counts
+
+
 def run_command(command: list[str], cwd: Path | None = None) -> str:
     result = subprocess.run(command, cwd=cwd, check=True, text=True, capture_output=True)
     return result.stdout.strip()
@@ -682,6 +757,8 @@ def asset_url(language_id: str, series_id: str, set_id: str, *names: str) -> str
 
 
 def download_webp(url: str, destination: Path, timeout: float) -> None:
+    if destination.exists():
+        return
     request = Request(url, headers={"Accept": "image/webp", "User-Agent": USER_AGENT})
     with urlopen(request, timeout=timeout) as response:
         payload = response.read()
@@ -711,26 +788,24 @@ def sync_assets(
         if legacy_card_status_path.exists() else {}
     )
     tasks: dict[str, Path] = {}
-    retained_sets: dict[str, set[str]] = {}
 
     for sets_path in data_root.glob("*/sets.json"):
         for set_row in json.loads(sets_path.read_text(encoding="utf-8")):
             set_id = str(set_row["id"])
             upstream_set = str(set_row["tcgdex_id"])
             upstream_series = str(set_row["tcgdex_series_id"])
-            languages = set(set_row["language_ids"])
-            retained_sets[set_id] = languages
-
             symbol_url = asset_url("univ", upstream_series, upstream_set, "symbol.webp")
             symbol_path = sets_root / set_id / "symbol.webp"
-            if not symbol_path.exists() and symbol_url not in missing:
+            existing_symbol = str(set_row.get("symbol_image_url") or "")
+            if not symbol_path.exists() and not existing_symbol and symbol_url not in missing:
                 tasks[symbol_url] = symbol_path
 
             for language_id in set_row["language_ids"]:
                 logo_url = asset_url(language_id, upstream_series, upstream_set, "logo.webp")
                 logo_path = sets_root / set_id / f"logo-{language_id}.webp"
                 legacy_logo_path = sets_root / set_id / "logo.webp"
-                if not logo_path.exists() and not legacy_logo_path.exists() and logo_url not in missing:
+                existing_logo = str(set_row.get("title_image_url") or "")
+                if not logo_path.exists() and not legacy_logo_path.exists() and not existing_logo and logo_url not in missing:
                     tasks[logo_url] = logo_path
 
             cards_path = sets_path.parent / f"cards_{set_id}.json"
@@ -742,7 +817,12 @@ def sync_assets(
                     legacy_key = f"{set_id}/{language_id}/{card['id']}"
                     if legacy_key in legacy_card_status and legacy_card_status[legacy_key] is None:
                         missing[url] = True
-                    if not destination.exists() and url not in missing:
+                    existing_images = [
+                        str(variant.get("images", {}).get(language_id) or "")
+                        for variant in card.get("variants", [])
+                    ]
+                    has_existing_image = any(existing_images)
+                    if not destination.exists() and not has_existing_image and url not in missing:
                         tasks[url] = destination
 
     downloaded = unavailable = failures = 0
@@ -771,10 +851,13 @@ def sync_assets(
     referenced = 0
     for sets_path in data_root.glob("*/sets.json"):
         sets = json.loads(sets_path.read_text(encoding="utf-8"))
+        sets_changed = False
         for set_row in sets:
             set_id = str(set_row["id"])
             symbol_path = sets_root / set_id / "symbol.webp"
-            set_row["symbol_image_url"] = f"/images/sets/{set_id}/symbol.webp" if symbol_path.exists() else None
+            if not set_row.get("symbol_image_url") and symbol_path.exists():
+                set_row["symbol_image_url"] = f"/images/sets/{set_id}/symbol.webp"
+                sets_changed = True
             logo_path = next((
                 sets_root / set_id / f"logo-{language_id}.webp"
                 for language_id in set_row["language_ids"]
@@ -783,35 +866,26 @@ def sync_assets(
                 sets_root / set_id / "logo.webp"
                 if (sets_root / set_id / "logo.webp").exists() else None
             )
-            set_row["title_image_url"] = f"/images/sets/{set_id}/{logo_path.name}" if logo_path else None
+            if not set_row.get("title_image_url") and logo_path:
+                set_row["title_image_url"] = f"/images/sets/{set_id}/{logo_path.name}"
+                sets_changed = True
 
             cards_path = sets_path.parent / f"cards_{set_id}.json"
             cards = json.loads(cards_path.read_text(encoding="utf-8"))
+            cards_changed = False
             for card in cards:
                 filename = safe_filename(card.get("number"))
                 for variant in card["variants"]:
                     for language_id in set_row["language_ids"]:
                         path = cards_root / set_id / language_id / f"{filename}.webp"
-                        variant["images"][language_id] = (
-                            f"/images/cards/{set_id}/{language_id}/{filename}.webp"
-                            if path.exists() else ""
-                        )
+                        if not variant["images"].get(language_id) and path.exists():
+                            variant["images"][language_id] = f"/images/cards/{set_id}/{language_id}/{filename}.webp"
+                            cards_changed = True
                         referenced += path.exists()
-            write_json(cards_path, cards)
-        write_json(sets_path, sets)
-
-    for set_path in cards_root.iterdir() if cards_root.exists() else []:
-        if not set_path.is_dir():
-            continue
-        if set_path.name not in retained_sets:
-            shutil.rmtree(set_path)
-            continue
-        for language_path in set_path.iterdir():
-            if language_path.is_dir() and language_path.name not in retained_sets[set_path.name]:
-                shutil.rmtree(language_path)
-    for set_path in sets_root.iterdir() if sets_root.exists() else []:
-        if set_path.is_dir() and set_path.name not in retained_sets:
-            shutil.rmtree(set_path)
+            if cards_changed:
+                write_json(cards_path, cards)
+        if sets_changed:
+            write_json(sets_path, sets)
 
     write_json(status_path, missing)
     return {
@@ -918,14 +992,16 @@ def build_catalog(args: argparse.Namespace, source_root: Path, commit_sha: str) 
     output_root = (project_root / args.output).resolve()
     public_root = (project_root / args.public).resolve()
     staging_root = output_root.with_name(f"{output_root.name}.tmp")
+    discovered_root = output_root.with_name(f"{output_root.name}.discovered")
 
     if not source_root.exists():
         print(f"Missing source folder: {source_root}", file=sys.stderr)
         return 1
 
-    if staging_root.exists():
-        shutil.rmtree(staging_root)
-    staging_root.mkdir(parents=True)
+    for temporary_root in (staging_root, discovered_root):
+        if temporary_root.exists():
+            shutil.rmtree(temporary_root)
+    discovered_root.mkdir(parents=True)
 
     pokemon_catalog, pokemon_aliases, pokemon_name_aliases = build_pokemon_catalog(source_root)
     all_series: list[dict[str, Any]] = []
@@ -935,7 +1011,7 @@ def build_catalog(args: argparse.Namespace, source_root: Path, commit_sha: str) 
         series_rows, language_ids = convert_source_folder(
             source_root,
             source_name,
-            staging_root,
+            discovered_root,
             pokemon_aliases,
             pokemon_name_aliases,
         )
@@ -952,25 +1028,39 @@ def build_catalog(args: argparse.Namespace, source_root: Path, commit_sha: str) 
         for language_id in sorted(all_language_ids)
     ]
 
-    write_json(staging_root / "regions.json", regions)
-    write_json(staging_root / "languages.json", languages)
-    write_json(staging_root / "series.json", sorted(all_series, key=lambda row: (row["region_id"], row["start_date"], row["name"])))
-    write_json(staging_root / "pokemon.json", pokemon_catalog)
-    write_json(staging_root / "tcgdex-source.json", {"commit": commit_sha})
+    write_json(discovered_root / "regions.json", regions)
+    write_json(discovered_root / "languages.json", languages)
+    write_json(discovered_root / "series.json", sorted(all_series, key=lambda row: (row["region_id"], row["start_date"], row["name"])))
+    write_json(discovered_root / "pokemon.json", pokemon_catalog)
+    validate_generated_sets(discovered_root)
+
+    additions = merge_append_only(output_root, discovered_root, staging_root)
     validate_generated_sets(staging_root)
 
     asset_result = {"candidates": 0, "downloaded": 0, "unavailable": 0, "failures": 0, "referenced": 0}
     if not args.no_images:
         asset_result = sync_assets(staging_root, public_root, args.workers, args.timeout)
 
+    backup_root = output_root.with_name(f"{output_root.name}.previous")
+    if backup_root.exists():
+        shutil.rmtree(backup_root)
     if output_root.exists():
-        shutil.rmtree(output_root)
-    staging_root.rename(output_root)
+        output_root.rename(backup_root)
+    try:
+        staging_root.rename(output_root)
+    except Exception:
+        if backup_root.exists() and not output_root.exists():
+            backup_root.rename(output_root)
+        raise
+    if backup_root.exists():
+        shutil.rmtree(backup_root)
+    shutil.rmtree(discovered_root)
 
     card_file_count = len(list(output_root.glob("*/cards_*.json")))
     print(f"Converted {len(all_series)} series")
     print(f"Converted {card_file_count} set card files")
     print(f"Generated {len(pokemon_catalog)} Pokemon entries")
+    print(f"Append-only additions: {json.dumps(additions, sort_keys=True)}")
     print(f"TCGdex commit: {commit_sha}")
     print(f"Image sync: {json.dumps(asset_result, sort_keys=True)}")
     print(f"Wrote app data to {output_root}")
