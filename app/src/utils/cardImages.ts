@@ -5,12 +5,18 @@ export type ResolvedCardImage = {
 };
 
 // Resolves the requested scan and exposes when another language had to be used.
-export const resolveCardImage = (images: Record<string, string>, languageId: string): ResolvedCardImage => {
+export const resolveCardImage = (
+  images: Record<string, string>,
+  languageId: string,
+  fallbackLanguageId: string = 'en'
+): ResolvedCardImage => {
   if (images[languageId]) {
     return { url: images[languageId], languageId, isFallback: false };
   }
 
-  const fallback = Object.entries(images).find(([, url]) => Boolean(url));
+  const fallback = images[fallbackLanguageId]
+    ? [fallbackLanguageId, images[fallbackLanguageId]] as const
+    : Object.entries(images).find(([, url]) => Boolean(url));
   return {
     url: fallback?.[1] ?? null,
     languageId: fallback?.[0] ?? null,

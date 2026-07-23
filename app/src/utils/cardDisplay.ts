@@ -44,7 +44,8 @@ export const buildDisplayCard = (
 ): DisplayCard => {
   const cardName: string = localizedValue(card.name, languageId) ?? card.id;
   const variantSuffix: string = variant.id !== 'normal' ? ` (${formatCardValue(variant.id)})` : '';
-  const image = resolveCardImage(variant.images, languageId);
+  const fallbackLanguageId: string = card.set_id.startsWith('asia-') ? 'ja' : 'en';
+  const image = resolveCardImage(variant.images, languageId, fallbackLanguageId);
 
   return {
     id: `${card.set_id}-${card.id}-${variant.id}`,

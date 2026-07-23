@@ -32,14 +32,12 @@
                   </div>
                 </template>
               </q-img>
-              <q-badge
+              <div
                 v-if="selectedImage.isFallback && selectedImage.languageId"
-                class="absolute-top-left q-ma-sm"
-                color="orange-9"
-                text-color="white"
+                class="fallback-language-overlay"
               >
-                Image in {{ selectedImage.languageId }}
-              </q-badge>
+                <span>{{ selectedImage.languageId }} scan</span>
+              </div>
               <div v-else class="column items-center justify-center full-height full-width text-grey-5">
                 <q-icon name="image" size="42px" />
                 <div class="text-caption q-mt-sm">
@@ -227,7 +225,11 @@
   // Image URL for the selected variant and selected language.
   const selectedImage = computed<ResolvedCardImage>(() => {
     return selectedVariant.value
-      ? resolveCardImage(selectedVariant.value.images, selectedLanguageId.value)
+      ? resolveCardImage(
+        selectedVariant.value.images,
+        selectedLanguageId.value,
+        currentSet?.series_id.startsWith('asia-') ? 'ja' : 'en'
+      )
       : { url: null, languageId: null, isFallback: false };
   });
 
@@ -272,3 +274,29 @@
     router.push(`/set/${setId}`);
   };
 </script>
+
+<style scoped>
+  .fallback-language-overlay {
+    position: absolute;
+    z-index: 2;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(32 32 32 / 16%);
+    backdrop-filter: blur(1.25px);
+    color: rgb(235 235 235 / 92%);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    pointer-events: none;
+    text-transform: uppercase;
+  }
+
+  .fallback-language-overlay span {
+    padding: 4px 9px;
+    border: 1px solid rgb(255 255 255 / 18%);
+    border-radius: 6px;
+    background: rgb(24 24 24 / 64%);
+  }
+</style>
