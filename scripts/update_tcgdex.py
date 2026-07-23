@@ -36,6 +36,7 @@ SOURCE_FOLDERS = {
 TCGDEX_REPOSITORY_URL = "https://github.com/tcgdex/cards-database.git"
 TCGDEX_ASSET_ROOT = "https://assets.tcgdex.net"
 SPARSE_FOLDERS = tuple(SOURCE_FOLDERS)
+EXCLUDED_SOURCE_SERIES = {"Pokémon TCG Pocket"}
 SUPPORTED_LANGUAGES = {
     "data": ("en", "fr"),
     "data-asia": ("ja", "zh-CN"),
@@ -391,6 +392,8 @@ def build_pokemon_catalog(
     for source_name in SOURCE_FOLDERS:
         for path in sorted((source_root / source_name).glob("**/*.ts")):
             if not path.parent.is_dir() or path.parent == source_root / source_name:
+                continue
+            if any(part in EXCLUDED_SOURCE_SERIES for part in path.parts):
                 continue
             try:
                 card = parse_typescript_object(path)
@@ -836,6 +839,8 @@ def convert_source_folder(
 
     for series_file in sorted(source_path.glob("*.ts")):
         series_name = series_file.stem
+        if series_name in EXCLUDED_SOURCE_SERIES:
+            continue
         series_folder = source_path / series_name
         if not series_folder.is_dir():
             continue
