@@ -34,6 +34,7 @@
   const props = defineProps<{
     modelValue: string;
     languageIds: string[];
+    includeAll?: boolean;
   }>();
 
   // Component event used by v-model.
@@ -57,10 +58,13 @@
 
   /* computed vars */
   // Language options displayed in the toggle.
-  const languageOptions: ComputedRef<LanguageOption[]> = computed(() => props.languageIds.map((languageId) => ({
-    label: getLanguageLabel(languageId),
-    value: languageId
-  })));
+  const languageOptions: ComputedRef<LanguageOption[]> = computed(() => [
+    ...(props.includeAll ? [{ label: 'all', value: 'all' }] : []),
+    ...props.languageIds.map((languageId) => ({
+      label: getLanguageLabel(languageId),
+      value: languageId
+    }))
+  ]);
 
 
   /* methods */
