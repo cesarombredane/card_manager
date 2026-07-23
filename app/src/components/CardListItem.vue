@@ -1,6 +1,6 @@
 <template>
   <q-card flat bordered class="bg-grey-10 text-white no-wrap cursor-pointer q-pa-none" @click="$emit('click', card)">
-    <q-responsive :ratio="cardImageRatio" class="bg-grey-9">
+    <q-responsive :ratio="cardImageRatio" class="bg-grey-9 relative-position">
       <q-img v-if="card.image_url" :src="card.image_url" fit="contain" class="full-height">
         <template #error>
           <div class="column items-center justify-center full-height full-width text-grey-5">
@@ -8,6 +8,14 @@
           </div>
         </template>
       </q-img>
+      <q-badge
+        v-if="card.image_is_fallback && card.image_language_id"
+        class="absolute-top-left q-ma-xs"
+        color="orange-9"
+        text-color="white"
+      >
+        Image in {{ card.image_language_id }}
+      </q-badge>
       <div v-else class="column items-center justify-center full-height full-width text-grey-5">
         <q-icon name="image" size="28px" />
       </div>

@@ -1,4 +1,4 @@
-import { localizedCardImage } from './cardImages';
+import { resolveCardImage } from './cardImages';
 import { localizedValue } from './localization';
 import type { Card, CardVariant } from './types';
 
@@ -29,6 +29,8 @@ export type DisplayCard = {
   pokemon_names: string[];
   energy_costs: string[];
   image_url: string | null;
+  image_language_id: string | null;
+  image_is_fallback: boolean;
 };
 
 export const formatCardValue = (value: string): string => value.replaceAll('_', ' ');
@@ -42,6 +44,7 @@ export const buildDisplayCard = (
 ): DisplayCard => {
   const cardName: string = localizedValue(card.name, languageId) ?? card.id;
   const variantSuffix: string = variant.id !== 'normal' ? ` (${formatCardValue(variant.id)})` : '';
+  const image = resolveCardImage(variant.images, languageId);
 
   return {
     id: `${card.set_id}-${card.id}-${variant.id}`,
@@ -58,6 +61,8 @@ export const buildDisplayCard = (
     types: card.types ?? [],
     pokemon_names: card.pokemon ?? [],
     energy_costs: [...new Set((card.attacks ?? []).flatMap((attack) => attack.cost))].sort(),
-    image_url: localizedCardImage(variant.images, languageId)
+    image_url: image.url,
+    image_language_id: image.languageId,
+    image_is_fallback: image.isFallback
   };
 };

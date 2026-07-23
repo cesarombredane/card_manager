@@ -28,8 +28,8 @@ SOURCE_FOLDERS = {
         "series_prefix": "intl",
     },
     "data-asia": {
-        "region_id": "JPN",
-        "region_name": "Japanese",
+        "region_id": "ASIA",
+        "region_name": "Asia",
         "series_prefix": "asia",
     },
 }
@@ -38,20 +38,27 @@ TCGDEX_REPOSITORY_URL = "https://github.com/tcgdex/cards-database.git"
 TCGDEX_ASSET_ROOT = "https://assets.tcgdex.net"
 SPARSE_FOLDERS = tuple(SOURCE_FOLDERS)
 EXCLUDED_SOURCE_SERIES = {"Pokémon TCG Pocket"}
-SUPPORTED_LANGUAGES = {
-    "data": ("en", "fr"),
-    "data-asia": ("ja", "zh-CN"),
-}
 ASSET_LANGUAGE_CODES = {"zh-CN": "zh-cn"}
 USER_AGENT = "card-manager-tcgdex-sync/2.0"
 IMAGE_WORKERS = 8
 REQUEST_TIMEOUT = 30.0
 
 LANGUAGE_NAMES = {
+    "de": "German",
     "en": "English",
+    "es": "Spanish",
     "fr": "French",
+    "id": "Indonesian",
+    "it": "Italian",
     "ja": "Japanese",
+    "ko": "Korean",
+    "nl": "Dutch",
+    "pl": "Polish",
+    "pt-BR": "Portuguese (Brazil)",
+    "ru": "Russian",
+    "th": "Thai",
     "zh-CN": "Simplified Chinese",
+    "zh-TW": "Traditional Chinese",
 }
 
 LANGUAGE_CODE_MAP = {
@@ -321,12 +328,6 @@ def normalize_localized_text(value: Any) -> dict[str, str | None]:
         for language_code, text in value.items()
         if text is None or isinstance(text, str)
     }
-
-
-def supported_localized_text(value: Any, language_ids: list[str] | tuple[str, ...]) -> dict[str, str | None]:
-    """Keep only explicitly supported translations."""
-    localized = normalize_localized_text(value)
-    return {language_id: localized[language_id] for language_id in language_ids if language_id in localized}
 
 
 def restrict_card_languages(card: dict[str, Any], language_ids: list[str]) -> None:
@@ -984,7 +985,6 @@ def convert_source_folder(
 ) -> tuple[list[dict[str, Any]], list[str]]:
     """Convert one TCGdex source folder into per-series app data."""
     source_config = SOURCE_FOLDERS[source_name]
-    supported_languages = SUPPORTED_LANGUAGES[source_name]
     source_path = source_root / source_name
     series_rows: list[dict[str, Any]] = []
     language_ids_seen: set[str] = set()
@@ -1010,18 +1010,10 @@ def convert_source_folder(
 
             raw_set = parse_typescript_object(set_file)
             set_id = f"{source_config['series_prefix']}-{slugify(str(raw_set.get('id') or set_file.stem))}"
-            localized_names = supported_localized_text(raw_set.get("name"), supported_languages)
+            localized_names = normalize_localized_text(raw_set.get("name"))
             if not any(localized_names.values()):
                 continue
-            if source_name == "data-asia":
-                # Shared Japanese/Chinese releases belong to Japan. Chinese contains
-                # only releases that have no Japanese edition in TCGdex.
-                language_ids = ["ja"] if "ja" in localized_names else ["zh-CN"]
-                localized_names = {
-                    language_id: localized_names[language_id] for language_id in language_ids
-                }
-            else:
-                language_ids = [language for language in supported_languages if language in localized_names]
+            language_ids = sorted(localized_names)
             language_ids_seen.update(language_ids)
 
             cards = []
@@ -1108,8 +1100,7 @@ def build_catalog(args: argparse.Namespace, source_root: Path, commit_sha: str) 
 
     regions = [
         {"id": "INTL", "name": "International"},
-        {"id": "JPN", "name": "Japanese"},
-        {"id": "CHN", "name": "Chinese"},
+        {"id": "ASIA", "name": "Asia"},
     ]
     languages = [
         {"id": language_id, "name": LANGUAGE_NAMES.get(language_id, language_id)}

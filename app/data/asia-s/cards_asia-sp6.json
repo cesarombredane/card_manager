@@ -1,0 +1,397 @@
+[
+  {
+    "id": "asia-sp6-001",
+    "set_id": "asia-sp6",
+    "number": "001",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "洛托姆V"
+    },
+    "pokemon": [
+      "0479"
+    ],
+    "illustrator": "5ban Graphics",
+    "rarity": "unknown",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 190,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "rule_box": "V",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "放逐駭入"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "zh-TW": "選擇1個對手的場上寶可夢身上附加的特殊能量，放置於放逐區。"
+        }
+      },
+      {
+        "name": {
+          "zh-TW": "激電流"
+        },
+        "cost": [
+          "lightning",
+          "lightning",
+          "normal"
+        ],
+        "damage": "160",
+        "text": {
+          "zh-TW": "選擇1個這隻寶可夢身上附加的能量，將其丟棄。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-sp6-002",
+    "set_id": "asia-sp6",
+    "number": "002",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "洛托姆VSTAR"
+    },
+    "pokemon": [
+      "0479"
+    ],
+    "illustrator": "5ban Graphics",
+    "rarity": "unknown",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 250,
+    "types": [
+      "lightning"
+    ],
+    "stage": "vmax",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "廢鐵脈衝"
+        },
+        "cost": [
+          "lightning",
+          "lightning"
+        ],
+        "damage": "80＋",
+        "text": {
+          "zh-TW": "將自己的棄牌區的任意數量的「寶可夢道具」放置於放逐區，增加其張數×40點傷害。"
+        }
+      },
+      {
+        "name": {},
+        "cost": [],
+        "damage": "",
+        "text": {}
+      },
+      {
+        "name": {},
+        "cost": [],
+        "damage": "",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "asia-sp6-003",
+    "set_id": "asia-sp6",
+    "number": "003",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "蒼響V"
+    },
+    "pokemon": [
+      "0888"
+    ],
+    "illustrator": "aky CG Works",
+    "rarity": "unknown",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 220,
+    "types": [
+      "metal"
+    ],
+    "stage": "basic",
+    "rule_box": "V",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "打穿"
+        },
+        "cost": [
+          "metal"
+        ],
+        "damage": "40",
+        "text": {
+          "zh-TW": "這個招式的傷害不計算弱點・抵抗力、對手的戰鬥寶可夢身上的附加效果。"
+        }
+      },
+      {
+        "name": {
+          "zh-TW": "巨獸斬"
+        },
+        "cost": [
+          "metal",
+          "metal",
+          "normal"
+        ],
+        "damage": "100＋",
+        "text": {
+          "zh-TW": "若對手的戰鬥寶可夢為「寶可夢【VMAX】」，則增加160點傷害。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "grass",
+        "value": "－30"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-sp6-004",
+    "set_id": "asia-sp6",
+    "number": "004",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "蒼響VSTAR"
+    },
+    "pokemon": [
+      "0888"
+    ],
+    "illustrator": "5ban Graphics",
+    "rarity": "unknown",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 270,
+    "types": [
+      "metal"
+    ],
+    "stage": "vmax",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "破壞刀鋒"
+        },
+        "cost": [
+          "metal",
+          "metal",
+          "normal"
+        ],
+        "damage": "200",
+        "text": {
+          "zh-TW": "這個招式的傷害不計算弱點・抵抗力、對手的戰鬥寶可夢身上的附加效果。"
+        }
+      },
+      {
+        "name": {
+          "zh-TW": "[VSTAR力量]劍之星星"
+        },
+        "cost": [
+          "metal",
+          "metal",
+          "normal",
+          "normal"
+        ],
+        "damage": "310",
+        "text": {
+          "zh-TW": "這隻寶可夢也受到30點傷害。[對戰中，己方只可使用1次【VSTAR】力量。]"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "grass",
+        "value": "－30"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-sp6-005",
+    "set_id": "asia-sp6",
+    "number": "005",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "藏瑪然特V"
+    },
+    "pokemon": [
+      "0889"
+    ],
+    "illustrator": "5ban Graphics",
+    "rarity": "unknown",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 220,
+    "types": [
+      "metal"
+    ],
+    "stage": "basic",
+    "rule_box": "V",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "復仇暴擊"
+        },
+        "cost": [
+          "metal",
+          "normal",
+          "normal"
+        ],
+        "damage": "120＋",
+        "text": {
+          "zh-TW": "增加對手已經獲得的獎賞卡的張數×30點傷害。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "grass",
+        "value": "－30"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-sp6-006",
+    "set_id": "asia-sp6",
+    "number": "006",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "藏瑪然特VSTAR"
+    },
+    "pokemon": [
+      "0889"
+    ],
+    "illustrator": "5ban Graphics",
+    "rarity": "unknown",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 270,
+    "types": [
+      "metal"
+    ],
+    "stage": "vmax",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "終極衝擊"
+        },
+        "cost": [
+          "metal",
+          "metal",
+          "normal"
+        ],
+        "damage": "220",
+        "text": {
+          "zh-TW": "在下個自己的回合，這隻寶可夢無法使用招式。"
+        }
+      },
+      {
+        "name": {},
+        "cost": [],
+        "damage": "",
+        "text": {}
+      },
+      {
+        "name": {},
+        "cost": [],
+        "damage": "",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "grass",
+        "value": "－30"
+      }
+    ],
+    "retreat_cost": 2
+  }
+]

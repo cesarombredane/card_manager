@@ -21,7 +21,7 @@
       <div class="row q-col-gutter-lg items-start">
         <div class="col-12 col-sm-8 col-md-4 col-lg-3">
           <q-card flat bordered class="bg-grey-10 text-white">
-            <q-responsive :ratio="cardImageRatio" class="bg-grey-9">
+            <q-responsive :ratio="cardImageRatio" class="bg-grey-9 relative-position">
               <q-img v-if="selectedImageUrl" :src="selectedImageUrl" fit="contain" class="full-height">
                 <template #error>
                   <div class="column items-center justify-center full-height full-width text-grey-5">
@@ -32,6 +32,14 @@
                   </div>
                 </template>
               </q-img>
+              <q-badge
+                v-if="selectedImage.isFallback && selectedImage.languageId"
+                class="absolute-top-left q-ma-sm"
+                color="orange-9"
+                text-color="white"
+              >
+                Image in {{ selectedImage.languageId }}
+              </q-badge>
               <div v-else class="column items-center justify-center full-height full-width text-grey-5">
                 <q-icon name="image" size="42px" />
                 <div class="text-caption q-mt-sm">
@@ -160,7 +168,8 @@
 
   // import utils
   import { getCardById, getPokemon, getSetById } from '../utils/dataManagement';
-  import { localizedCardImage } from '../utils/cardImages';
+  import { resolveCardImage } from '../utils/cardImages';
+  import type { ResolvedCardImage } from '../utils/cardImages';
   import { cardImageRatio } from '../utils/cardDisplay';
   import { localizedValue } from '../utils/localization';
   import type { Card, CardModifier, CardVariant, Pokemon, Set } from '../utils/types';
@@ -216,9 +225,13 @@
   });
 
   // Image URL for the selected variant and selected language.
-  const selectedImageUrl = computed<string | null>(() => {
-    return selectedVariant.value ? localizedCardImage(selectedVariant.value.images, selectedLanguageId.value) : null;
+  const selectedImage = computed<ResolvedCardImage>(() => {
+    return selectedVariant.value
+      ? resolveCardImage(selectedVariant.value.images, selectedLanguageId.value)
+      : { url: null, languageId: null, isFallback: false };
   });
+
+  const selectedImageUrl = computed<string | null>(() => selectedImage.value.url);
 
   // Localized card display name.
   const displayName = computed<string>(() => {

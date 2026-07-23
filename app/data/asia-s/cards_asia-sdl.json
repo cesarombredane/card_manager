@@ -1,0 +1,895 @@
+[
+  {
+    "id": "asia-sdl-001",
+    "set_id": "asia-sdl",
+    "number": "001",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "噴火龍V"
+    },
+    "pokemon": [],
+    "illustrator": "N-DESIGN Inc.",
+    "rarity": "unknown",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 220,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "rule_box": "V",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "燒盡"
+        },
+        "cost": [
+          "fire",
+          "fire",
+          "normal"
+        ],
+        "damage": "90",
+        "text": {
+          "zh-TW": "在造成傷害前，將對手的戰鬥寶可夢身上附加的「寶可夢道具」丟棄。"
+        }
+      },
+      {
+        "name": {
+          "zh-TW": "高溫爆破"
+        },
+        "cost": [
+          "fire",
+          "fire",
+          "fire",
+          "normal"
+        ],
+        "damage": "180",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-sdl-002",
+    "set_id": "asia-sdl",
+    "number": "002",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "六尾"
+    },
+    "pokemon": [
+      "0037"
+    ],
+    "illustrator": "ryoma uratsuka",
+    "rarity": "unknown",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "飛撲"
+        },
+        "cost": [
+          "fire"
+        ],
+        "damage": "10+",
+        "text": {
+          "zh-TW": "擲1次硬幣若為正面，則增加20點傷害。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "zh-TW": "雖然還是孩子，但已擁有美麗的６根尾巴。 長大後尾巴會變得更多。"
+    }
+  },
+  {
+    "id": "asia-sdl-003",
+    "set_id": "asia-sdl",
+    "number": "003",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "九尾"
+    },
+    "pokemon": [
+      "0038"
+    ],
+    "illustrator": "Shiburingaru",
+    "rarity": "unknown",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 110,
+    "types": [
+      "fire"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "目不轉睛"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "zh-TW": "將對手的戰鬥寶可夢【睡眠】。"
+        }
+      },
+      {
+        "name": {
+          "zh-TW": "灼熱氣息"
+        },
+        "cost": [
+          "fire",
+          "normal"
+        ],
+        "damage": "120",
+        "text": {
+          "zh-TW": "在下個自己的回合，這隻寶可夢無法使用招式。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "zh-TW": "每一根尾巴裡都蘊含著神通力。據說牠的壽命 長達１０００年。"
+    }
+  },
+  {
+    "id": "asia-sdl-004",
+    "set_id": "asia-sdl",
+    "number": "004",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "卡蒂狗"
+    },
+    "pokemon": [
+      "0058"
+    ],
+    "illustrator": "Narumi Sato",
+    "rarity": "unknown",
+    "regulation_mark": "E",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "升溫"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "zh-TW": "從自己的牌庫選擇1張【火】能量卡，附於自己的寶可夢身上。並且重洗牌庫。"
+        }
+      },
+      {
+        "name": {
+          "zh-TW": "烈焰"
+        },
+        "cost": [
+          "fire",
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2,
+    "flavor_text": {
+      "zh-TW": "性格忠誠。為了保護自己的訓練家， 會拼命地朝對手狂吠。"
+    }
+  },
+  {
+    "id": "asia-sdl-005",
+    "set_id": "asia-sdl",
+    "number": "005",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "風速狗"
+    },
+    "pokemon": [
+      "0059"
+    ],
+    "illustrator": "Yuu Nishida",
+    "rarity": "unknown",
+    "regulation_mark": "E",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "fire"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "火之爪"
+        },
+        "cost": [
+          "fire"
+        ],
+        "damage": "40",
+        "text": {}
+      },
+      {
+        "name": {
+          "zh-TW": "熱力衝撞"
+        },
+        "cost": [
+          "fire",
+          "fire",
+          "normal"
+        ],
+        "damage": "160",
+        "text": {
+          "zh-TW": "這隻寶可夢也受到30點傷害。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2,
+    "flavor_text": {
+      "zh-TW": "從古時候起就是擄獲眾多人心的美麗寶可夢。 能像飛一樣輕盈地奔跑。"
+    }
+  },
+  {
+    "id": "asia-sdl-006",
+    "set_id": "asia-sdl",
+    "number": "006",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "小火馬"
+    },
+    "pokemon": [
+      "0077"
+    ],
+    "illustrator": "Jiro Sasumo",
+    "rarity": "unknown",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "火之尾"
+        },
+        "cost": [
+          "fire"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "zh-TW": "在草原上群居生活。剛誕生的 幼崽身上沒有火焰鬃毛，而是會 在出生後一小時左右長出來。"
+    }
+  },
+  {
+    "id": "asia-sdl-007",
+    "set_id": "asia-sdl",
+    "number": "007",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "烈焰馬"
+    },
+    "pokemon": [
+      "0078"
+    ],
+    "illustrator": "Ligton",
+    "rarity": "unknown",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "fire"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "烈焰"
+        },
+        "cost": [
+          "fire"
+        ],
+        "damage": "30",
+        "text": {}
+      },
+      {
+        "name": {
+          "zh-TW": "火焰陣"
+        },
+        "cost": [
+          "fire",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "zh-TW": "將對手的戰鬥寶可夢【灼傷】。在下個對手的回合，受到這個招式的寶可夢無法撤退。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "zh-TW": "任由燃燒的鬃毛隨風飄揚，以每小時２４０公里的速度 在大草原上自在奔馳。"
+    }
+  },
+  {
+    "id": "asia-sdl-008",
+    "set_id": "asia-sdl",
+    "number": "008",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "炎帝"
+    },
+    "pokemon": [
+      "0244"
+    ],
+    "illustrator": "kodama",
+    "rarity": "unknown",
+    "regulation_mark": "E",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "高溫衝刺"
+        },
+        "cost": [
+          "fire"
+        ],
+        "damage": "30",
+        "text": {
+          "zh-TW": "若希望，從自己的手牌選擇1張【火】能量卡，附於這隻寶可夢身上。"
+        }
+      },
+      {
+        "name": {
+          "zh-TW": "火焰牙"
+        },
+        "cost": [
+          "fire",
+          "fire",
+          "normal"
+        ],
+        "damage": "90",
+        "text": {
+          "zh-TW": "將對手的戰鬥寶可夢【灼傷】。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2,
+    "flavor_text": {
+      "zh-TW": "據說如果炎帝吼叫的話，世界上的某處火山就會爆發。"
+    }
+  },
+  {
+    "id": "asia-sdl-009",
+    "set_id": "asia-sdl",
+    "number": "009",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "煤炭龜"
+    },
+    "pokemon": [
+      "0324"
+    ],
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "unknown",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 120,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "吹火"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "30+",
+        "text": {
+          "zh-TW": "擲1次硬幣若為正面，則增加30點傷害。"
+        }
+      },
+      {
+        "name": {
+          "zh-TW": "防守壓制"
+        },
+        "cost": [
+          "fire",
+          "normal",
+          "normal"
+        ],
+        "damage": "90",
+        "text": {
+          "zh-TW": "在下個對手的回合，這隻寶可夢受到招式的傷害「-30」點。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2,
+    "flavor_text": {
+      "zh-TW": "會在甲殼中燃燒煤炭產生能量。遇到危機時 會噴出黑色的煤煙。"
+    }
+  },
+  {
+    "id": "asia-sdl-010",
+    "set_id": "asia-sdl",
+    "number": "010",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "飄浮泡泡"
+    },
+    "pokemon": [
+      "0351"
+    ],
+    "illustrator": "kawayoo",
+    "rarity": "unknown",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "雙重抽出"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "zh-TW": "從自己的牌庫抽出2張卡。"
+        }
+      },
+      {
+        "name": {
+          "zh-TW": "暴風"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "zh-TW": "選擇1個這隻寶可夢身上附加的基本能量，改附於備戰寶可夢身上。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "zh-TW": "樣子會隨著天氣而變化。天氣越是惡劣， 性情就會變得越粗暴。"
+    }
+  },
+  {
+    "id": "asia-sdl-011",
+    "set_id": "asia-sdl",
+    "number": "011",
+    "category": "trainer",
+    "name": {
+      "zh-TW": "能量轉移"
+    },
+    "pokemon": [],
+    "illustrator": "Toyste Beach",
+    "rarity": "unknown",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "zh-TW": "選擇1個自己的場上寶可夢身上附加的基本能量，改附於自己的其他寶可夢身上。"
+    }
+  },
+  {
+    "id": "asia-sdl-012",
+    "set_id": "asia-sdl",
+    "number": "012",
+    "category": "trainer",
+    "name": {
+      "zh-TW": "粉碎之錘"
+    },
+    "pokemon": [],
+    "illustrator": "sadaji",
+    "rarity": "unknown",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "zh-TW": "擲1次硬幣若為正面，則選擇1個對手的場上寶可夢身上附加的能量，將其丟棄。"
+    }
+  },
+  {
+    "id": "asia-sdl-013",
+    "set_id": "asia-sdl",
+    "number": "013",
+    "category": "trainer",
+    "name": {
+      "zh-TW": "超級球"
+    },
+    "pokemon": [],
+    "illustrator": "Toyste Beach",
+    "rarity": "unknown",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "zh-TW": "查看自己的牌庫上方7張卡。選擇其中1張寶可夢卡，在給對手看過後加入手牌。將剩餘卡放回牌庫並重洗。"
+    }
+  },
+  {
+    "id": "asia-sdl-014",
+    "set_id": "asia-sdl",
+    "number": "014",
+    "category": "trainer",
+    "name": {
+      "zh-TW": "高級球"
+    },
+    "pokemon": [],
+    "illustrator": "sadaji",
+    "rarity": "unknown",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "zh-TW": "這張卡必須將自己的2張手牌丟棄才可使用。 從自己的牌庫選擇1張寶可夢卡，在給對手看過後加入手牌。並且重洗牌庫。"
+    }
+  },
+  {
+    "id": "asia-sdl-015",
+    "set_id": "asia-sdl",
+    "number": "015",
+    "category": "trainer",
+    "name": {
+      "zh-TW": "寶可夢交替"
+    },
+    "pokemon": [],
+    "illustrator": "Studio Bora Inc.",
+    "rarity": "unknown",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "zh-TW": "將自己的戰鬥寶可夢與備戰寶可夢互換。"
+    }
+  },
+  {
+    "id": "asia-sdl-016",
+    "set_id": "asia-sdl",
+    "number": "016",
+    "category": "trainer",
+    "name": {
+      "zh-TW": "寶可夢捕捉器"
+    },
+    "pokemon": [],
+    "illustrator": "Ryo Ueda",
+    "rarity": "unknown",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "zh-TW": "擲1次硬幣若為正面，則選擇對手的1隻備戰寶可夢，與戰鬥寶可夢互換。"
+    }
+  },
+  {
+    "id": "asia-sdl-017",
+    "set_id": "asia-sdl",
+    "number": "017",
+    "category": "trainer",
+    "name": {
+      "zh-TW": "莎娜"
+    },
+    "pokemon": [],
+    "illustrator": "Yuu Nishida",
+    "rarity": "unknown",
+    "regulation_mark": "E",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "zh-TW": "將自己的手牌全部放回牌庫並重洗。然後，從牌庫抽出5張卡。"
+    }
+  },
+  {
+    "id": "asia-sdl-018",
+    "set_id": "asia-sdl",
+    "number": "018",
+    "category": "trainer",
+    "name": {
+      "zh-TW": "裁判"
+    },
+    "pokemon": [],
+    "illustrator": "Ryuta Fuse",
+    "rarity": "unknown",
+    "regulation_mark": "E",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "zh-TW": "雙方玩家各將手牌全部放回牌庫並重洗。然後，各從牌庫抽出4張。"
+    }
+  },
+  {
+    "id": "asia-sdl-019",
+    "set_id": "asia-sdl",
+    "number": "019",
+    "category": "trainer",
+    "name": {
+      "zh-TW": "阿馴"
+    },
+    "pokemon": [],
+    "illustrator": "Ken Sugimori",
+    "rarity": "unknown",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "zh-TW": "從自己的牌庫抽出3張卡。"
+    }
+  },
+  {
+    "id": "asia-sdl-020",
+    "set_id": "asia-sdl",
+    "number": "020",
+    "category": "trainer",
+    "name": {
+      "zh-TW": "博士的研究（山梨博士）"
+    },
+    "pokemon": [],
+    "illustrator": "Sanosuke Sakuma",
+    "rarity": "unknown",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "zh-TW": "將自己的手牌全部丟棄，從牌庫抽出7張卡。"
+    }
+  },
+  {
+    "id": "asia-sdl-021",
+    "set_id": "asia-sdl",
+    "number": "021",
+    "category": "trainer",
+    "name": {
+      "zh-TW": "老大的指令（赤日）"
+    },
+    "pokemon": [],
+    "illustrator": "GIDORA",
+    "rarity": "unknown",
+    "regulation_mark": "F",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "zh-TW": "選擇1隻對手的備戰寶可夢，與戰鬥寶可夢互換。"
+    }
+  }
+]

@@ -1,0 +1,854 @@
+[
+  {
+    "id": "asia-svem-001",
+    "set_id": "asia-svem",
+    "number": "001",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "超夢ex"
+    },
+    "pokemon": [],
+    "illustrator": "aky CG Works",
+    "rarity": "unknown",
+    "regulation_mark": "G",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 230,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "rule_box": "EX",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "轉移充能"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "",
+        "text": {
+          "zh-TW": "從自己的棄牌區選擇最多2張「基本【超】能量」卡，以任意方式附於自己的寶可夢身上。"
+        }
+      },
+      {
+        "name": {
+          "zh-TW": "光子強念"
+        },
+        "cost": [
+          "psychic",
+          "psychic"
+        ],
+        "damage": "10+",
+        "text": {
+          "zh-TW": "增加自己的所有寶可夢身上附加的【超】能量的數量×30點傷害。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-svem-002",
+    "set_id": "asia-svem",
+    "number": "002",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "蛋蛋"
+    },
+    "pokemon": [
+      "0102"
+    ],
+    "illustrator": "Kariya",
+    "rarity": "unknown",
+    "regulation_mark": "G",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "催眠術"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "",
+        "text": {
+          "zh-TW": "將對手的戰鬥寶可夢【睡眠】。"
+        }
+      },
+      {
+        "name": {
+          "zh-TW": "滾動衝撞"
+        },
+        "cost": [
+          "psychic",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 2,
+    "flavor_text": {
+      "zh-TW": "非得湊齊６隻才會有安全感。那怕只是少了１隻，都會立刻 變得很膽小，隨時想要逃跑。"
+    }
+  },
+  {
+    "id": "asia-svem-003",
+    "set_id": "asia-svem",
+    "number": "003",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "椰蛋樹"
+    },
+    "pokemon": [
+      "0103"
+    ],
+    "illustrator": "Yoriyuki Ikegami",
+    "rarity": "unknown",
+    "regulation_mark": "G",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "催眠波動"
+        },
+        "cost": [
+          "psychic",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "zh-TW": "將對手的戰鬥寶可夢【睡眠】。"
+        }
+      },
+      {
+        "name": {
+          "zh-TW": "超能閉環"
+        },
+        "cost": [
+          "psychic",
+          "psychic",
+          "normal"
+        ],
+        "damage": "160",
+        "text": {
+          "zh-TW": "選擇2個這隻寶可夢身上附加的能量，放回手牌。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 2,
+    "flavor_text": {
+      "zh-TW": "３顆頭團結一致發出的精神力量威力強大。天氣 變陰時動作就會變得遲緩。"
+    }
+  },
+  {
+    "id": "asia-svem-004",
+    "set_id": "asia-svem",
+    "number": "004",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "天然雀"
+    },
+    "pokemon": [
+      "0177"
+    ],
+    "illustrator": "ryoma uratsuka",
+    "rarity": "unknown",
+    "regulation_mark": "G",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "三連撞"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "10×",
+        "text": {
+          "zh-TW": "擲3次硬幣，造成正面出現的次數×10點傷害。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "zh-TW": "翅膀還沒有完全長好，所以只能一跳一跳地移動。 一直在注視著什麼。"
+    }
+  },
+  {
+    "id": "asia-svem-005",
+    "set_id": "asia-svem",
+    "number": "005",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "天然鳥"
+    },
+    "pokemon": [
+      "0178"
+    ],
+    "illustrator": "Tetsu Kayama",
+    "rarity": "unknown",
+    "regulation_mark": "G",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "超念力"
+        },
+        "cost": [
+          "psychic",
+          "normal",
+          "normal"
+        ],
+        "damage": "80",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "zh-TW": "能夠看穿過去和未來。日復一日注視著太陽 動向的奇異寶可夢。"
+    }
+  },
+  {
+    "id": "asia-svem-006",
+    "set_id": "asia-svem",
+    "number": "006",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "代歐奇希斯"
+    },
+    "pokemon": [
+      "0386"
+    ],
+    "illustrator": "Saya Tsuruta",
+    "rarity": "unknown",
+    "regulation_mark": "G",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 120,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "精神拳"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "30",
+        "text": {}
+      },
+      {
+        "name": {
+          "zh-TW": "基因螺旋"
+        },
+        "cost": [
+          "psychic",
+          "psychic",
+          "psychic"
+        ],
+        "damage": "120",
+        "text": {
+          "zh-TW": "將這隻寶可夢身上附加的所有能量卡，以任意方式改附於備戰寶可夢身上。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "zh-TW": "宇宙病毒發生突變後變成了寶可夢。 出現在極光的附近。"
+    }
+  },
+  {
+    "id": "asia-svem-007",
+    "set_id": "asia-svem",
+    "number": "007",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "木棉球"
+    },
+    "pokemon": [
+      "0546"
+    ],
+    "illustrator": "kurumitsu",
+    "rarity": "unknown",
+    "regulation_mark": "G",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "浮躁攻擊"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "30",
+        "text": {
+          "zh-TW": "擲1次硬幣若為反面，則這個招式失敗。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "zh-TW": "將木棉球和白蓬蓬的棉花混合後編織出的布料極其精緻， 因此常被高級品牌選用。"
+    }
+  },
+  {
+    "id": "asia-svem-008",
+    "set_id": "asia-svem",
+    "number": "008",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "風妖精"
+    },
+    "pokemon": [
+      "0547"
+    ],
+    "illustrator": "KYUPIYAMA",
+    "rarity": "unknown",
+    "regulation_mark": "G",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage1",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "妖精之風"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "50",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 0,
+    "flavor_text": {
+      "zh-TW": "每當沐浴陽光，身上的棉花就會膨脹。如果膨脹過了頭， 牠就會把棉花扯開到處亂撒。"
+    }
+  },
+  {
+    "id": "asia-svem-009",
+    "set_id": "asia-svem",
+    "number": "009",
+    "category": "pokemon",
+    "name": {
+      "zh-TW": "咚咚鼠"
+    },
+    "pokemon": [
+      "0702"
+    ],
+    "illustrator": "Tika Matsuno",
+    "rarity": "unknown",
+    "regulation_mark": "G",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "zh-TW": "小使者"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "",
+        "text": {
+          "zh-TW": "從自己的牌庫選擇最多2張基本能量卡，在給對手看過後加入手牌。並且重洗牌庫。"
+        }
+      },
+      {
+        "name": {
+          "zh-TW": "旋轉迴旋"
+        },
+        "cost": [
+          "psychic",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "zh-TW": "將這隻寶可夢與備戰寶可夢互換。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "zh-TW": "由於體型嬌小，發電器官尚未發達，因此會用尾巴 吸取住家的電力來充電。"
+    }
+  },
+  {
+    "id": "asia-svem-010",
+    "set_id": "asia-svem",
+    "number": "010",
+    "category": "trainer",
+    "name": {
+      "zh-TW": "霧之水晶"
+    },
+    "pokemon": [],
+    "illustrator": "sadaji",
+    "rarity": "unknown",
+    "regulation_mark": "E",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "zh-TW": "從自己的牌庫選擇1張【超】屬性的【基礎】寶可夢卡或者【超】能量卡，在給對手看過後加入手牌。並且重洗牌庫。"
+    }
+  },
+  {
+    "id": "asia-svem-011",
+    "set_id": "asia-svem",
+    "number": "011",
+    "category": "trainer",
+    "name": {
+      "zh-TW": "厲害釣竿"
+    },
+    "pokemon": [],
+    "illustrator": "Toyste Beach",
+    "rarity": "unknown",
+    "regulation_mark": "G",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "zh-TW": "從自己的棄牌區選擇寶可夢卡與基本能量卡合計最多3張，在給對手看過後放回牌庫並重洗。"
+    }
+  },
+  {
+    "id": "asia-svem-012",
+    "set_id": "asia-svem",
+    "number": "012",
+    "category": "trainer",
+    "name": {
+      "zh-TW": "巢穴球"
+    },
+    "pokemon": [],
+    "illustrator": "Toyste Beach",
+    "rarity": "unknown",
+    "regulation_mark": "G",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "zh-TW": "從自己的牌庫選擇1張【基礎】寶可夢卡，放置於備戰區。並且重洗牌庫。"
+    }
+  },
+  {
+    "id": "asia-svem-013",
+    "set_id": "asia-svem",
+    "number": "013",
+    "category": "trainer",
+    "name": {
+      "zh-TW": "高級球"
+    },
+    "pokemon": [],
+    "illustrator": "Ayaka Yoshida",
+    "rarity": "unknown",
+    "regulation_mark": "G",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "zh-TW": "這張卡必須將自己的2張手牌丟棄才可使用。 從自己的牌庫選擇1張寶可夢卡，在給對手看過後加入手牌。並且重洗牌庫。"
+    }
+  },
+  {
+    "id": "asia-svem-014",
+    "set_id": "asia-svem",
+    "number": "014",
+    "category": "trainer",
+    "name": {
+      "zh-TW": "寶可裝置3.0"
+    },
+    "pokemon": [],
+    "illustrator": "Toyste Beach",
+    "rarity": "unknown",
+    "regulation_mark": "G",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "zh-TW": "查看自己的牌庫上方7張卡，從其中選擇1張支援者卡，在給對手看過後加入手牌。將剩餘卡放回牌庫並重洗。"
+    }
+  },
+  {
+    "id": "asia-svem-015",
+    "set_id": "asia-svem",
+    "number": "015",
+    "category": "trainer",
+    "name": {
+      "zh-TW": "寶可夢交替"
+    },
+    "pokemon": [],
+    "illustrator": "Studio Bora Inc.",
+    "rarity": "unknown",
+    "regulation_mark": "G",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "zh-TW": "將自己的戰鬥寶可夢與備戰寶可夢互換。"
+    }
+  },
+  {
+    "id": "asia-svem-016",
+    "set_id": "asia-svem",
+    "number": "016",
+    "category": "trainer",
+    "name": {
+      "zh-TW": "勇氣護符"
+    },
+    "pokemon": [],
+    "illustrator": "Toyste Beach",
+    "rarity": "unknown",
+    "regulation_mark": "G",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "trainer_type": "tool",
+    "rules_text": {
+      "zh-TW": "附有這張卡的【基礎】寶可夢的最大HP「+50」。"
+    }
+  },
+  {
+    "id": "asia-svem-017",
+    "set_id": "asia-svem",
+    "number": "017",
+    "category": "trainer",
+    "name": {
+      "zh-TW": "奇樹"
+    },
+    "pokemon": [],
+    "illustrator": "Sanosuke Sakuma",
+    "rarity": "unknown",
+    "regulation_mark": "G",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "zh-TW": "雙方玩家各將自己的手牌全部翻回反面並重洗，放回牌庫下方。然後，各從牌庫抽出與自己剩餘獎賞卡的張數相同數量的卡。"
+    }
+  },
+  {
+    "id": "asia-svem-018",
+    "set_id": "asia-svem",
+    "number": "018",
+    "category": "trainer",
+    "name": {
+      "zh-TW": "妮莫"
+    },
+    "pokemon": [],
+    "illustrator": "Sanosuke Sakuma",
+    "rarity": "unknown",
+    "regulation_mark": "G",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "zh-TW": "從自己的牌庫抽出3張卡。"
+    }
+  },
+  {
+    "id": "asia-svem-019",
+    "set_id": "asia-svem",
+    "number": "019",
+    "category": "trainer",
+    "name": {
+      "zh-TW": "博士的研究"
+    },
+    "pokemon": [],
+    "illustrator": "kirisAki",
+    "rarity": "unknown",
+    "regulation_mark": "G",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "zh-TW": "將自己的手牌全部丟棄，從牌庫抽出7張卡。"
+    }
+  },
+  {
+    "id": "asia-svem-020",
+    "set_id": "asia-svem",
+    "number": "020",
+    "category": "trainer",
+    "name": {
+      "zh-TW": "老大的指令"
+    },
+    "pokemon": [],
+    "illustrator": "NC Empire",
+    "rarity": "unknown",
+    "regulation_mark": "G",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "zh-TW": "選擇1隻對手的備戰寶可夢，與戰鬥寶可夢互換。"
+    }
+  },
+  {
+    "id": "asia-svem-psy",
+    "set_id": "asia-svem",
+    "number": "PSY",
+    "category": "energy",
+    "name": {
+      "zh-TW": "基本【超】能量"
+    },
+    "pokemon": [],
+    "illustrator": null,
+    "rarity": "unknown",
+    "regulation_mark": "G",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "zh-TW": ""
+        }
+      }
+    ]
+  }
+]

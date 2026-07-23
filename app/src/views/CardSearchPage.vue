@@ -14,7 +14,7 @@
 
     <section class="row q-col-gutter-md items-center q-mb-md">
       <div class="col-auto">
-        <language-selector v-model="selectedLanguageId" :language-ids="languageIds" include-all />
+        <language-selector v-model="selectedLanguageId" :language-ids="languageIds" />
       </div>
       <div class="col-auto">
         <q-input v-model="search" dark dense outlined clearable debounce="150" label="Search a card by name">
@@ -210,8 +210,12 @@
 
 
   /* reactive vars */
-  // Language used to filter search results. All languages are visible by default.
-  const selectedLanguageId = ref<string>('all');
+  // Language used for localized labels and the preferred card scan.
+  const selectedLanguageId = ref<string>(
+    sets.some((set) => set.language_ids.includes(store.state.selected_language_id))
+      ? store.state.selected_language_id
+      : 'en'
+  );
 
   // Search text used to filter card names.
   const search = ref<string>('');
@@ -244,13 +248,6 @@
   /* computed vars */
   // Language ids available across every set.
   const languageIds = computed<string[]>(() => uniqueValues(sets.flatMap((set) => set.language_ids)));
-
-  // Language used for labels and images when the result filter is set to all.
-  const displayLanguageId = computed<string>(() => {
-    if (selectedLanguageId.value !== 'all') return selectedLanguageId.value;
-    const preferredLanguageId: string = store.state.selected_language_id;
-    return languageIds.value.includes(preferredLanguageId) ? preferredLanguageId : 'en';
-  });
 
   // Artist filter options found across every card.
   const artistOptions = computed<string[]>(() => uniqueValues(cards.map((card) => card.illustrator ?? '')));
@@ -299,9 +296,8 @@
   // Every card variant as an individual display row.
   const allCards = computed<DisplayCard[]>(() => cards.flatMap((card) => {
     const set: Set | null = getSetById(card.set_id);
-    if (selectedLanguageId.value !== 'all' && !set?.language_ids.includes(selectedLanguageId.value)) return [];
-    const setName: string | null = set ? localizedValue(set.name, displayLanguageId.value) ?? set.id : 'Unknown set';
-    return card.variants.map((variant) => buildDisplayCard(card, variant, displayLanguageId.value, setName));
+    const setName: string | null = set ? localizedValue(set.name, selectedLanguageId.value) ?? set.id : 'Unknown set';
+    return card.variants.map((variant) => buildDisplayCard(card, variant, selectedLanguageId.value, setName));
   }));
 
   // Cards matching the search text and selected filters.
@@ -335,9 +331,9 @@
     selectedPokemon.value = queryValue('pokemon');
   });
 
-  // Persists concrete language choices without storing the search-only all option.
+  // Persists the presentation language.
   watch(selectedLanguageId, (languageId): void => {
-    if (languageId !== 'all') store.commit('set_sekected_language_id', languageId);
+    store.commit('set_sekected_language_id', languageId);
   });
 
   // Resets pagination whenever the visible result set changes.
