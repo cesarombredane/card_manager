@@ -45,7 +45,7 @@ This one script shallow-clones the required TCGdex data, excludes Pokémon TCG
 Pocket, filters the supported regions and languages, appends new catalog
 records, and caches newly available images.
 
-Updates are append-only:
+By default, updates are append-only:
 
 - Existing Pokémon, series, set, and card records remain unchanged.
 - Existing translations and metadata are never replaced.
@@ -55,5 +55,11 @@ Updates are append-only:
 - Cached files are never pruned by the updater.
 
 Generated data is prepared in temporary directories and published atomically.
-Use `--source tcgdex_data` to process an existing local TCGdex checkout, or
-`--no-images` to skip image discovery and downloads.
+The updater accepts two options, which can be combined:
+
+- `--no-images` skips image discovery and downloads.
+- `--overwrite` replaces current catalog data with the latest filtered TCGdex
+  catalog. Existing cached image files are still reused and never overwritten.
+
+Every update regenerates `app/data/coverage.json`. The same report can be
+refreshed independently with `python3 scripts/report_coverage.py`.

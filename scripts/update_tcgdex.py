@@ -12,6 +12,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from typing import Any
@@ -43,6 +44,8 @@ SUPPORTED_LANGUAGES = {
 }
 ASSET_LANGUAGE_CODES = {"zh-CN": "zh-cn"}
 USER_AGENT = "card-manager-tcgdex-sync/2.0"
+IMAGE_WORKERS = 8
+REQUEST_TIMEOUT = 30.0
 
 LANGUAGE_NAMES = {
     "en": "English",
@@ -662,6 +665,69 @@ def append_unique(existing: list[dict[str, Any]], discovered: list[dict[str, Any
     return [*existing, *additions], len(additions)
 
 
+def catalog_inventory(data_root: Path) -> dict[str, dict[str, Any]]:
+    """Index comparable catalog records for a concise update preview."""
+    inventory: dict[str, dict[str, Any]] = {
+        "series": {}, "sets": {}, "cards": {}, "pokemon": {},
+    }
+    if not data_root.exists():
+        return inventory
+    for kind, filename in (("series", "series.json"), ("pokemon", "pokemon.json")):
+        path = data_root / filename
+        if path.exists():
+            inventory[kind] = {str(row["id"]): row for row in json.loads(path.read_text(encoding="utf-8"))}
+    for sets_path in data_root.glob("*/sets.json"):
+        for set_row in json.loads(sets_path.read_text(encoding="utf-8")):
+            set_id = str(set_row["id"])
+            inventory["sets"][set_id] = set_row
+            cards_path = sets_path.parent / f"cards_{set_id}.json"
+            if cards_path.exists():
+                for card in json.loads(cards_path.read_text(encoding="utf-8")):
+                    inventory["cards"][str(card["id"])] = card
+    return inventory
+
+
+def comparison_value(kind: str, row: dict[str, Any]) -> dict[str, Any]:
+    """Ignore local image state when comparing TCGdex metadata."""
+    value = json.loads(json.dumps(row))
+    if kind == "sets":
+        value.pop("title_image_url", None)
+        value.pop("symbol_image_url", None)
+    if kind == "cards":
+        for variant in value.get("variants", []):
+            variant.pop("images", None)
+    return value
+
+
+def inventory_changes(
+    existing: dict[str, dict[str, Any]],
+    discovered: dict[str, dict[str, Any]],
+) -> dict[str, dict[str, int]]:
+    report: dict[str, dict[str, int]] = {}
+    for kind in ("series", "sets", "cards", "pokemon"):
+        old = existing[kind]
+        new = discovered[kind]
+        shared = old.keys() & new.keys()
+        report[kind] = {
+            "pulled": len(new),
+            "added": len(new.keys() - old.keys()),
+            "updated": sum(comparison_value(kind, old[key]) != comparison_value(kind, new[key]) for key in shared),
+            "removed": len(old.keys() - new.keys()),
+        }
+    return report
+
+
+def print_change_table(changes: dict[str, dict[str, int]], overwrite: bool) -> None:
+    print("\nData summary")
+    print("  Type       Pulled    Added    Updated    Removed")
+    print("  --------  -------  -------  ---------  ---------")
+    for kind in ("series", "sets", "cards", "pokemon"):
+        row = changes[kind]
+        updated = row["updated"] if overwrite else 0
+        removed = row["removed"] if overwrite else 0
+        print(f"  {kind.title():<8}  {row['pulled']:>7}  {row['added']:>7}  {updated:>9}  {removed:>9}")
+
+
 def merge_append_only(existing_root: Path, discovered_root: Path, destination_root: Path) -> dict[str, int]:
     """Copy the repository catalog and append only previously unknown records."""
     if destination_root.exists():
@@ -750,6 +816,12 @@ def safe_filename(value: Any) -> str:
     return filename or "unknown"
 
 
+def existing_image(base: Path) -> Path | None:
+    """Return the cached WebP image; other formats are intentionally unsupported."""
+    path = base.with_suffix(".webp")
+    return path if path.exists() else None
+
+
 def asset_url(language_id: str, series_id: str, set_id: str, *names: str) -> str:
     language = ASSET_LANGUAGE_CODES.get(language_id, language_id)
     parts = (language, series_id.lower(), set_id.lower(), *names)
@@ -797,15 +869,21 @@ def sync_assets(
             symbol_url = asset_url("univ", upstream_series, upstream_set, "symbol.webp")
             symbol_path = sets_root / set_id / "symbol.webp"
             existing_symbol = str(set_row.get("symbol_image_url") or "")
-            if not symbol_path.exists() and not existing_symbol and symbol_url not in missing:
+            has_webp_symbol = existing_symbol.lower().endswith(".webp")
+            cached_symbol = existing_image(sets_root / set_id / "symbol")
+            if not cached_symbol and not has_webp_symbol and symbol_url not in missing:
                 tasks[symbol_url] = symbol_path
 
             for language_id in set_row["language_ids"]:
                 logo_url = asset_url(language_id, upstream_series, upstream_set, "logo.webp")
                 logo_path = sets_root / set_id / f"logo-{language_id}.webp"
-                legacy_logo_path = sets_root / set_id / "logo.webp"
+                cached_logo = (
+                    existing_image(sets_root / set_id / f"logo-{language_id}")
+                    or existing_image(sets_root / set_id / "logo")
+                )
                 existing_logo = str(set_row.get("title_image_url") or "")
-                if not logo_path.exists() and not legacy_logo_path.exists() and not existing_logo and logo_url not in missing:
+                has_webp_logo = existing_logo.lower().endswith(".webp")
+                if not cached_logo and not has_webp_logo and logo_url not in missing:
                     tasks[logo_url] = logo_path
 
             cards_path = sets_path.parent / f"cards_{set_id}.json"
@@ -813,6 +891,7 @@ def sync_assets(
                 filename = safe_filename(card.get("number"))
                 for language_id in set_row["language_ids"]:
                     destination = cards_root / set_id / language_id / f"{filename}.webp"
+                    cached_card = existing_image(cards_root / set_id / language_id / filename)
                     url = asset_url(language_id, upstream_series, upstream_set, str(card["number"]), "high.webp")
                     legacy_key = f"{set_id}/{language_id}/{card['id']}"
                     if legacy_key in legacy_card_status and legacy_card_status[legacy_key] is None:
@@ -821,8 +900,8 @@ def sync_assets(
                         str(variant.get("images", {}).get(language_id) or "")
                         for variant in card.get("variants", [])
                     ]
-                    has_existing_image = any(existing_images)
-                    if not destination.exists() and not has_existing_image and url not in missing:
+                    has_existing_image = any(image.lower().endswith(".webp") for image in existing_images)
+                    if not cached_card and not has_existing_image and url not in missing:
                         tasks[url] = destination
 
     downloaded = unavailable = failures = 0
@@ -848,24 +927,21 @@ def sync_assets(
                     failures += 1
                     print(f"Asset request failed: {url}: {error}", file=sys.stderr)
 
-    referenced = 0
+    referenced = filled_references = 0
     for sets_path in data_root.glob("*/sets.json"):
         sets = json.loads(sets_path.read_text(encoding="utf-8"))
         sets_changed = False
         for set_row in sets:
             set_id = str(set_row["id"])
-            symbol_path = sets_root / set_id / "symbol.webp"
-            if not set_row.get("symbol_image_url") and symbol_path.exists():
-                set_row["symbol_image_url"] = f"/images/sets/{set_id}/symbol.webp"
+            symbol_path = existing_image(sets_root / set_id / "symbol")
+            if not set_row.get("symbol_image_url") and symbol_path:
+                set_row["symbol_image_url"] = f"/images/sets/{set_id}/{symbol_path.name}"
                 sets_changed = True
             logo_path = next((
-                sets_root / set_id / f"logo-{language_id}.webp"
+                existing_image(sets_root / set_id / f"logo-{language_id}")
                 for language_id in set_row["language_ids"]
-                if (sets_root / set_id / f"logo-{language_id}.webp").exists()
-            ), None) or (
-                sets_root / set_id / "logo.webp"
-                if (sets_root / set_id / "logo.webp").exists() else None
-            )
+                if existing_image(sets_root / set_id / f"logo-{language_id}")
+            ), None) or existing_image(sets_root / set_id / "logo")
             if not set_row.get("title_image_url") and logo_path:
                 set_row["title_image_url"] = f"/images/sets/{set_id}/{logo_path.name}"
                 sets_changed = True
@@ -877,11 +953,12 @@ def sync_assets(
                 filename = safe_filename(card.get("number"))
                 for variant in card["variants"]:
                     for language_id in set_row["language_ids"]:
-                        path = cards_root / set_id / language_id / f"{filename}.webp"
-                        if not variant["images"].get(language_id) and path.exists():
-                            variant["images"][language_id] = f"/images/cards/{set_id}/{language_id}/{filename}.webp"
+                        path = existing_image(cards_root / set_id / language_id / filename)
+                        if not variant["images"].get(language_id) and path:
+                            variant["images"][language_id] = f"/images/cards/{set_id}/{language_id}/{path.name}"
                             cards_changed = True
-                        referenced += path.exists()
+                            filled_references += 1
+                        referenced += bool(variant["images"].get(language_id))
             if cards_changed:
                 write_json(cards_path, cards)
         if sets_changed:
@@ -894,6 +971,7 @@ def sync_assets(
         "unavailable": unavailable,
         "failures": failures,
         "referenced": referenced,
+        "filled_references": filled_references,
     }
 
 
@@ -935,7 +1013,15 @@ def convert_source_folder(
             localized_names = supported_localized_text(raw_set.get("name"), supported_languages)
             if not any(localized_names.values()):
                 continue
-            language_ids = [language for language in supported_languages if language in localized_names]
+            if source_name == "data-asia":
+                # Shared Japanese/Chinese releases belong to Japan. Chinese contains
+                # only releases that have no Japanese edition in TCGdex.
+                language_ids = ["ja"] if "ja" in localized_names else ["zh-CN"]
+                localized_names = {
+                    language_id: localized_names[language_id] for language_id in language_ids
+                }
+            else:
+                language_ids = [language for language in supported_languages if language in localized_names]
             language_ids_seen.update(language_ids)
 
             cards = []
@@ -978,19 +1064,19 @@ def convert_source_folder(
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--source", help="Use an existing TCGdex checkout instead of fetching it.")
-    parser.add_argument("--output", default="app/data", help="Destination app data folder.")
-    parser.add_argument("--public", default="app/public/images", help="Destination image cache.")
-    parser.add_argument("--workers", type=int, default=8, help="Concurrent missing-image downloads.")
-    parser.add_argument("--timeout", type=float, default=30.0, help="Per-image request timeout.")
-    parser.add_argument("--no-images", action="store_true", help="Rebuild JSON without fetching images.")
+    parser.add_argument("--no-images", action="store_true", help="Skip image discovery and downloads.")
+    parser.add_argument(
+        "--overwrite",
+        action="store_true",
+        help="Replace current catalog data with the latest filtered TCGdex data instead of appending.",
+    )
     return parser.parse_args()
 
 
 def build_catalog(args: argparse.Namespace, source_root: Path, commit_sha: str) -> int:
     project_root = Path(__file__).resolve().parents[1]
-    output_root = (project_root / args.output).resolve()
-    public_root = (project_root / args.public).resolve()
+    output_root = project_root / "app" / "data"
+    public_root = project_root / "app" / "public" / "images"
     staging_root = output_root.with_name(f"{output_root.name}.tmp")
     discovered_root = output_root.with_name(f"{output_root.name}.discovered")
 
@@ -1003,6 +1089,8 @@ def build_catalog(args: argparse.Namespace, source_root: Path, commit_sha: str) 
             shutil.rmtree(temporary_root)
     discovered_root.mkdir(parents=True)
 
+    print("\n[2/5] Converting supported physical-card data")
+    phase_started = time.monotonic()
     pokemon_catalog, pokemon_aliases, pokemon_name_aliases = build_pokemon_catalog(source_root)
     all_series: list[dict[str, Any]] = []
     all_language_ids: set[str] = set()
@@ -1033,13 +1121,40 @@ def build_catalog(args: argparse.Namespace, source_root: Path, commit_sha: str) 
     write_json(discovered_root / "series.json", sorted(all_series, key=lambda row: (row["region_id"], row["start_date"], row["name"])))
     write_json(discovered_root / "pokemon.json", pokemon_catalog)
     validate_generated_sets(discovered_root)
+    print(f"      Completed in {time.monotonic() - phase_started:.1f}s")
 
-    additions = merge_append_only(output_root, discovered_root, staging_root)
+    existing_inventory = catalog_inventory(output_root)
+    discovered_inventory = catalog_inventory(discovered_root)
+    changes = inventory_changes(existing_inventory, discovered_inventory)
+    print_change_table(changes, args.overwrite)
+
+    print(f"\n[3/5] Preparing {'overwrite' if args.overwrite else 'append-only'} catalog")
+    if args.overwrite:
+        shutil.copytree(discovered_root, staging_root)
+        additions = {kind: changes[kind]["added"] for kind in changes}
+    else:
+        additions = merge_append_only(output_root, discovered_root, staging_root)
     validate_generated_sets(staging_root)
+    print(f"      New records applied: {sum(additions.values())}")
 
-    asset_result = {"candidates": 0, "downloaded": 0, "unavailable": 0, "failures": 0, "referenced": 0}
+    asset_result = {
+        "candidates": 0, "downloaded": 0, "unavailable": 0,
+        "failures": 0, "referenced": 0, "filled_references": 0,
+    }
+    print("\n[4/5] Images")
     if not args.no_images:
-        asset_result = sync_assets(staging_root, public_root, args.workers, args.timeout)
+        asset_result = sync_assets(staging_root, public_root, IMAGE_WORKERS, REQUEST_TIMEOUT)
+        print(f"      Missing assets checked: {asset_result['candidates']}")
+        print(f"      Images downloaded:      {asset_result['downloaded']}")
+        print(f"      References filled:      {asset_result['filled_references']}")
+        print(f"      Known unavailable:      {asset_result['unavailable']}")
+        print(f"      Request failures:       {asset_result['failures']}")
+    else:
+        print("      Skipped (--no-images)")
+
+    print("\n[5/5] Generating coverage and publishing")
+    from report_coverage import generate_coverage
+    coverage = generate_coverage(staging_root, staging_root / "coverage.json")
 
     backup_root = output_root.with_name(f"{output_root.name}.previous")
     if backup_root.exists():
@@ -1056,31 +1171,30 @@ def build_catalog(args: argparse.Namespace, source_root: Path, commit_sha: str) 
         shutil.rmtree(backup_root)
     shutil.rmtree(discovered_root)
 
-    card_file_count = len(list(output_root.glob("*/cards_*.json")))
-    print(f"Converted {len(all_series)} series")
-    print(f"Converted {card_file_count} set card files")
-    print(f"Generated {len(pokemon_catalog)} Pokemon entries")
-    print(f"Append-only additions: {json.dumps(additions, sort_keys=True)}")
-    print(f"TCGdex commit: {commit_sha}")
-    print(f"Image sync: {json.dumps(asset_result, sort_keys=True)}")
-    print(f"Wrote app data to {output_root}")
+    print("\nUpdate complete")
+    print(f"  Mode:              {'overwrite' if args.overwrite else 'append-only'}")
+    print(f"  TCGdex commit:     {commit_sha}")
+    print(f"  Series:            {coverage['totals']['sets'] and len(coverage['series'])}")
+    print(f"  Sets:              {coverage['totals']['sets']}")
+    print(f"  Cards:             {coverage['totals']['cards']}")
+    print(f"  Variants:          {coverage['totals']['variants']}")
+    print(f"  Image coverage:    {coverage['totals']['image_slot_coverage_percent']:.2f}%")
+    print(f"  Published to:      {output_root}")
     return 1 if asset_result["failures"] else 0
 
 
 def main() -> int:
     """Fetch TCGdex once, build the scoped catalog, and cache available images."""
     args = parse_args()
-    project_root = Path(__file__).resolve().parents[1]
-    if args.source:
-        source_root = (project_root / args.source).resolve()
-        commit_sha = run_command(["git", "rev-parse", "HEAD"], cwd=source_root) if (source_root / ".git").exists() else "local"
-        return build_catalog(args, source_root, commit_sha)
-
+    started = time.monotonic()
     with tempfile.TemporaryDirectory(prefix="card-manager-tcgdex-") as temporary:
         source_root = Path(temporary) / "cards-database"
-        print("Fetching TCGdex card database...")
+        print("[1/5] Fetching TCGdex card database")
         commit_sha = fetch_tcgdex(source_root)
-        return build_catalog(args, source_root, commit_sha)
+        print(f"      Commit: {commit_sha}")
+        result = build_catalog(args, source_root, commit_sha)
+    print(f"  Total duration:    {time.monotonic() - started:.1f}s")
+    return result
 
 
 if __name__ == "__main__":
