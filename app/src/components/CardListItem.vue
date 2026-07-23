@@ -14,7 +14,7 @@
       >
         <span>{{ card.image_language_id }} scan</span>
       </div>
-      <div v-else class="column items-center justify-center full-height full-width text-grey-5">
+      <div v-if="!card.image_url" class="column items-center justify-center full-height full-width text-grey-5">
         <q-icon name="image" size="28px" />
       </div>
     </q-responsive>

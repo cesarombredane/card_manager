@@ -13,8 +13,13 @@
     </section>
 
     <section class="row q-col-gutter-md items-center q-mb-md">
-      <div class="col-auto">
-        <language-selector v-model="selectedLanguageId" :language-ids="languageIds" />
+      <div v-if="internationalLanguageIds.length" class="col-auto">
+        <div class="text-caption text-grey-5 q-mb-xs">International card language</div>
+        <language-selector v-model="selectedInternationalLanguageId" :language-ids="internationalLanguageIds" />
+      </div>
+      <div v-if="asiaLanguageIds.length" class="col-auto">
+        <div class="text-caption text-grey-5 q-mb-xs">Asian card language</div>
+        <language-selector v-model="selectedAsiaLanguageId" :language-ids="asiaLanguageIds" />
       </div>
       <div class="col-auto">
         <q-input v-model="search" dark dense outlined clearable debounce="150" label="Search a card by name">
@@ -210,12 +215,15 @@
 
 
   /* reactive vars */
-  // Language used for localized labels and the preferred card scan.
-  const selectedLanguageId = ref<string>(
-    sets.some((set) => set.language_ids.includes(store.state.selected_language_id))
+  // Preferred language for localized International labels and scans.
+  const selectedInternationalLanguageId = ref<string>(
+    sets.some((set) => !set.series_id.startsWith('asia-') && set.language_ids.includes(store.state.selected_language_id))
       ? store.state.selected_language_id
       : 'en'
   );
+
+  // Preferred language for localized Asian labels and scans.
+  const selectedAsiaLanguageId = ref<string>('ja');
 
   // Search text used to filter card names.
   const search = ref<string>('');
@@ -246,9 +254,6 @@
 
 
   /* computed vars */
-  // Language ids available across every set.
-  const languageIds = computed<string[]>(() => uniqueValues(sets.flatMap((set) => set.language_ids)));
-
   // Artist filter options found across every card.
   const artistOptions = computed<string[]>(() => uniqueValues(cards.map((card) => card.illustrator ?? '')));
 
@@ -296,8 +301,11 @@
   // Every card variant as an individual display row.
   const allCards = computed<DisplayCard[]>(() => cards.flatMap((card) => {
     const set: Set | null = getSetById(card.set_id);
-    const setName: string | null = set ? localizedValue(set.name, selectedLanguageId.value) ?? set.id : 'Unknown set';
-    return card.variants.map((variant) => buildDisplayCard(card, variant, selectedLanguageId.value, setName));
+    const languageId: string = set?.series_id.startsWith('asia-')
+      ? selectedAsiaLanguageId.value
+      : selectedInternationalLanguageId.value;
+    const setName: string | null = set ? localizedValue(set.name, languageId) ?? set.id : 'Unknown set';
+    return card.variants.map((variant) => buildDisplayCard(card, variant, languageId, setName));
   }));
 
   // Cards matching the search text and selected filters.
@@ -323,6 +331,22 @@
   // Cards currently rendered after applying the visible result limit.
   const displayedCards = computed<DisplayCard[]>(() => filteredCards.value.slice(0, visibleCardCount.value));
 
+  // International languages represented by the cards matching the active filters.
+  const internationalLanguageIds = computed<string[]>(() => {
+    const visibleSetIds = new Set(filteredCards.value.map((card) => card.set_id));
+    return uniqueValues(sets
+      .filter((set) => visibleSetIds.has(set.id) && !set.series_id.startsWith('asia-'))
+      .flatMap((set) => set.language_ids));
+  });
+
+  // Asian languages represented by the cards matching the active filters.
+  const asiaLanguageIds = computed<string[]>(() => {
+    const visibleSetIds = new Set(filteredCards.value.map((card) => card.set_id));
+    return uniqueValues(sets
+      .filter((set) => visibleSetIds.has(set.id) && set.series_id.startsWith('asia-'))
+      .flatMap((set) => set.language_ids));
+  });
+
 
   /* watchers */
   // Keeps route-driven filters in sync if the user opens a new search link while already on this page.
@@ -331,13 +355,30 @@
     selectedPokemon.value = queryValue('pokemon');
   });
 
-  // Persists the presentation language.
-  watch(selectedLanguageId, (languageId): void => {
-    store.commit('set_sekected_language_id', languageId);
-  });
+  // Keeps each preference valid as result filters change the represented sets.
+  watch(internationalLanguageIds, (languageIds): void => {
+    if (languageIds.length > 0 && !languageIds.includes(selectedInternationalLanguageId.value)) {
+      selectedInternationalLanguageId.value = languageIds.includes('en') ? 'en' : languageIds[0];
+    }
+  }, { immediate: true });
+
+  watch(asiaLanguageIds, (languageIds): void => {
+    if (languageIds.length > 0 && !languageIds.includes(selectedAsiaLanguageId.value)) {
+      selectedAsiaLanguageId.value = languageIds.includes('ja') ? 'ja' : languageIds[0];
+    }
+  }, { immediate: true });
 
   // Resets pagination whenever the visible result set changes.
-  watch([search, selectedLanguageId, selectedArtist, selectedPokemon, selectedRarities, selectedSort, includeSpecialForms], (): void => {
+  watch([
+    search,
+    selectedInternationalLanguageId,
+    selectedAsiaLanguageId,
+    selectedArtist,
+    selectedPokemon,
+    selectedRarities,
+    selectedSort,
+    includeSpecialForms
+  ], (): void => {
     visibleCardCount.value = initialVisibleCardCount;
   });
 
