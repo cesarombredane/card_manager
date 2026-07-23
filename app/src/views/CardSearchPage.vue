@@ -41,19 +41,87 @@
         />
       </div>
       <div class="col-12 col-sm-6 col-md-4">
+        <div class="row no-wrap items-center q-gutter-xs">
+          <q-btn
+            aria-label="Previous Pokemon"
+            :disable="!previousPokemon"
+            dark
+            dense
+            flat
+            round
+            icon="chevron_left"
+            @click="selectAdjacentPokemon(previousPokemon)"
+          >
+            <q-tooltip v-if="previousPokemon">Previous: {{ previousPokemon.label }}</q-tooltip>
+          </q-btn>
+          <q-select
+            v-model="selectedPokemon"
+            class="col"
+            :options="filteredPokemonOptions"
+            emit-value
+            map-options
+            dark
+            dense
+            outlined
+            clearable
+            use-input
+            fill-input
+            hide-selected
+            input-debounce="0"
+            label="Pokemon"
+            @filter="filterPokemon"
+          />
+          <q-btn
+            aria-label="Next Pokemon"
+            :disable="!nextPokemon"
+            dark
+            dense
+            flat
+            round
+            icon="chevron_right"
+            @click="selectAdjacentPokemon(nextPokemon)"
+          >
+            <q-tooltip v-if="nextPokemon">Next: {{ nextPokemon.label }}</q-tooltip>
+          </q-btn>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
         <q-select
-          v-model="selectedPokemon"
-          :options="filteredPokemonOptions"
+          v-model="selectedRarities"
+          :display-value="raritySelectionLabel"
+          :options="rarityOptions"
+          dark
+          dense
+          outlined
+          multiple
+          options-selected-class="text-primary"
+          label="Rarities"
+        >
+          <template #append>
+            <q-btn
+              aria-label="Clear all rarities"
+              :disable="selectedRarities.length === 0"
+              dense
+              flat
+              round
+              icon="deselect"
+              @click.stop="clearRarities"
+            >
+              <q-tooltip>Clear all rarities</q-tooltip>
+            </q-btn>
+          </template>
+        </q-select>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        <q-select
+          v-model="selectedSort"
+          :options="sortOptions"
           emit-value
           map-options
           dark
           dense
           outlined
-          clearable
-          use-input
-          input-debounce="0"
-          label="Pokemon"
-          @filter="filterPokemon"
+          label="Sort by"
         />
       </div>
       <div class="col-12 col-sm-auto">
@@ -102,6 +170,12 @@
   // Number of extra card results added when clicking show more.
   const visibleCardStep = 12;
 
+  // Supported release-date sort directions.
+  const sortOptions: { label: string; value: 'date-desc' | 'date-asc' }[] = [
+    { label: 'Release date: newest first', value: 'date-desc' },
+    { label: 'Release date: oldest first', value: 'date-asc' }
+  ];
+
   // Current route used to read deep-linked filters.
   const route = useRoute();
 
@@ -119,6 +193,12 @@
 
   // Standardized Pokemon species and form catalog.
   const pokemon: Pokemon[] = getPokemon();
+
+  // Every rarity represented in the local card catalog.
+  const rarityOptions: string[] = uniqueValues(cards.map((card) => card.rarity));
+
+  // Release dates indexed once for efficient card sorting.
+  const setReleaseDates = new Map<string, string>(sets.map((set) => [set.id, set.release_date]));
 
 
   /* methods */
@@ -148,6 +228,12 @@
   // Selected Pokemon filter.
   const selectedPokemon = ref<string | null>(queryValue('pokemon'));
 
+  // Selected rarity filters. The complete catalog is visible by default.
+  const selectedRarities = ref<string[]>([...rarityOptions]);
+
+  // Current result ordering, newest releases first by default.
+  const selectedSort = ref<'date-desc' | 'date-asc'>('date-desc');
+
   // Whether regional and Mega forms are available in Pokemon results.
   const includeSpecialForms = ref<boolean>(false);
 
@@ -170,11 +256,36 @@
 
   // Pokemon filter options found across every card.
   // Base-species options display English canonical names while retaining stable ids.
-  const pokemonOptions = computed<{ label: string; value: string; searchNames: string[] }[]>(() => pokemon.filter((entry) => entry.form === null).map((entry) => ({
-    label: entry.name,
-    value: entry.id,
-    searchNames: uniqueValues(Object.values(entry.names).filter((name): name is string => Boolean(name)))
-  })));
+  const pokemonOptions = computed<{ label: string; value: string; searchNames: string[] }[]>(() => pokemon
+    .filter((entry) => entry.form === null)
+    .sort((a, b) => a.pokedex_id - b.pokedex_id)
+    .map((entry) => ({
+      label: entry.name,
+      value: entry.id,
+      searchNames: uniqueValues(Object.values(entry.names).filter((name): name is string => Boolean(name)))
+    })));
+
+  // Index of the selected base species in Pokedex order.
+  const selectedPokemonIndex = computed<number>(() => pokemonOptions.value.findIndex((option) => option.value === selectedPokemon.value));
+
+  // Base species immediately before the current selection in Pokedex order.
+  const previousPokemon = computed<{ label: string; value: string } | null>(() => {
+    const index: number = selectedPokemonIndex.value;
+    return index > 0 ? pokemonOptions.value[index - 1] : null;
+  });
+
+  // Base species immediately after the current selection in Pokedex order.
+  const nextPokemon = computed<{ label: string; value: string } | null>(() => {
+    const index: number = selectedPokemonIndex.value;
+    return index >= 0 && index < pokemonOptions.value.length - 1 ? pokemonOptions.value[index + 1] : null;
+  });
+
+  // Compact summary shown by the multi-select instead of a long list of values.
+  const raritySelectionLabel = computed<string>(() => {
+    if (selectedRarities.value.length === rarityOptions.length) return 'All rarities';
+    if (selectedRarities.value.length === 0) return 'No rarities';
+    return `${selectedRarities.value.length} rarities selected`;
+  });
 
   // Selected catalog ids, broadened to requested forms sharing the same Pokedex number.
   const selectedPokemonIds = computed<globalThis.Set<string>>(() => {
@@ -199,7 +310,16 @@
       .filter((card) => query === '' || card.display_name.toLowerCase().includes(query))
       .filter((card) => !selectedArtist.value || card.illustrator === selectedArtist.value)
       .filter((card) => !selectedPokemon.value || card.pokemon_names.some((pokemonId) => selectedPokemonIds.value.has(pokemonId)))
-      .sort((a, b) => (a.set_name ?? '').localeCompare(b.set_name ?? '') || compareCardNumbers(a.number, b.number) || a.variant_id.localeCompare(b.variant_id));
+      .filter((card) => selectedRarities.value.includes(card.rarity))
+      .sort((a, b) => {
+        const dateComparison: number = (setReleaseDates.get(a.set_id) ?? '').localeCompare(setReleaseDates.get(b.set_id) ?? '');
+        const directedDateComparison: number = selectedSort.value === 'date-asc' ? dateComparison : -dateComparison;
+
+        return directedDateComparison
+          || (a.set_name ?? '').localeCompare(b.set_name ?? '')
+          || compareCardNumbers(a.number, b.number)
+          || a.variant_id.localeCompare(b.variant_id);
+      });
   });
 
   // Cards currently rendered after applying the visible result limit.
@@ -214,7 +334,7 @@
   });
 
   // Resets pagination whenever the visible result set changes.
-  watch([search, selectedLanguageId, selectedArtist, selectedPokemon, includeSpecialForms], (): void => {
+  watch([search, selectedLanguageId, selectedArtist, selectedPokemon, selectedRarities, selectedSort, includeSpecialForms], (): void => {
     visibleCardCount.value = initialVisibleCardCount;
   });
 
@@ -247,6 +367,20 @@
       filteredPokemonOptions.value = pokemonOptions.value
         .filter((option) => query === '' || option.searchNames.some((name) => name.toLocaleLowerCase().startsWith(query)));
     });
+  };
+
+  // Changes only the Pokemon filter, preserving every other search field.
+  const selectAdjacentPokemon = (option: { value: string } | null): void => {
+    if (!option) return;
+
+    // Keep the selected id-to-label mapping available after a narrowed text search.
+    filteredPokemonOptions.value = pokemonOptions.value;
+    selectedPokemon.value = option.value;
+  };
+
+  // Deselects every rarity so the user can rebuild the filter from scratch.
+  const clearRarities = (): void => {
+    selectedRarities.value = [];
   };
 
   // Increases the number of rendered card results.
