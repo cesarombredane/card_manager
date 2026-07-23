@@ -24,6 +24,9 @@
           </template>
         </q-input>
       </div>
+      <div class="col-auto">
+        <q-toggle v-model="showVariants" dark color="yellow-7" label="Show variants" />
+      </div>
     </section>
 
     <section class="row q-col-gutter-md tems-center q-mb-md">
@@ -37,7 +40,7 @@
         <q-select v-model="selectedCategory" :options="categoryOptions" dark dense outlined clearable label="Category" />
       </div>
       <div class="col-12 col-sm-6 col-md-3">
-        <q-select v-model="selectedVariant" :options="variantOptions" dark dense outlined clearable label="Variant" />
+        <q-select v-model="selectedVariant" :options="variantOptions" :disable="!showVariants" dark dense outlined clearable label="Variant" />
       </div>
     </section>
 
@@ -117,6 +120,9 @@
   // Selected variant filter.
   const selectedVariant = ref<string | null>(null);
 
+  // Whether every declared collectible variant is displayed.
+  const showVariants = ref<boolean>(true);
+
 
   /* computed vars */
   // Every card variant in this set as an individual display row.
@@ -134,16 +140,30 @@
   // Variant filter options found in this set.
   const variantOptions = computed<string[]>(() => uniqueValues(allCards.value.map((card) => card.variant_id)));
 
+  // Full variants or one representative printing per card, depending on the toggle.
+  const listedCards = computed<DisplayCard[]>(() => {
+    if (showVariants.value) return allCards.value;
+
+    const representativeCards = new Map<string, DisplayCard>();
+    for (const card of allCards.value) {
+      const current = representativeCards.get(card.card_id);
+      if (!current || (card.variant_id === 'normal' && current.variant_id !== 'normal')) {
+        representativeCards.set(card.card_id, card);
+      }
+    }
+    return [...representativeCards.values()];
+  });
+
   // Cards shown after applying search and filters.
   const displayedCards = computed<DisplayCard[]>(() => {
     const query: string = search.value.trim().toLowerCase();
 
-    return allCards.value
+    return listedCards.value
       .filter((card) => query === '' || card.display_name.toLowerCase().includes(query) || card.number.toLowerCase().includes(query))
       .filter((card) => !selectedRarity.value || card.rarity === selectedRarity.value)
       .filter((card) => !selectedType.value || card.types.includes(selectedType.value))
       .filter((card) => !selectedCategory.value || card.category === selectedCategory.value)
-      .filter((card) => !selectedVariant.value || card.variant_id === selectedVariant.value)
+      .filter((card) => !showVariants.value || !selectedVariant.value || card.variant_id === selectedVariant.value)
       .sort((a, b) => compareCardNumbers(a.number, b.number) || a.variant_id.localeCompare(b.variant_id));
   });
 
