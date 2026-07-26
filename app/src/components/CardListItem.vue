@@ -39,6 +39,14 @@
       </div>
       <div v-if="displayPrice !== null" class="text-caption text-yellow-6 text-weight-bold">
         {{ formatEuroPrice(displayPrice) }}
+        <template v-if="collectionEntry">
+          each · {{ formatEuroPrice(displayPrice * collectionEntry.quantity) }} total
+        </template>
+      </div>
+      <div v-if="collectionEntry" class="row q-gutter-xs q-mt-xs">
+        <q-badge color="primary" text-color="black">×{{ collectionEntry.quantity }}</q-badge>
+        <q-badge color="grey-8" text-color="white">{{ collectionEntry.language_id.toUpperCase() }}</q-badge>
+        <q-badge color="grey-8" text-color="white">{{ collectionEntry.condition }}</q-badge>
       </div>
       <div class="row no-wrap q-gutter-xs q-mt-auto overflow-hidden">
         <q-badge color="grey-9" text-color="white" class="ellipsis overflow-hidden text-no-wrap">
@@ -52,20 +60,44 @@
         </q-badge>
       </div>
       <div class="row items-center no-wrap q-mt-xs">
-        <q-btn
-          class="col"
-          dense
-          flat
-          color="yellow-6"
-          icon="add_circle"
-          label="Collection"
-          no-caps
-          @click.stop="$emit('add-to-collection', card)"
-        />
-        <q-badge v-if="ownedQuantity > 0" rounded color="primary" text-color="black" class="q-ml-xs">
-          ×{{ ownedQuantity }}
-          <q-tooltip>Owned across all collection folders</q-tooltip>
-        </q-badge>
+        <template v-if="collectionEntry">
+          <q-btn
+            class="col"
+            dense
+            flat
+            color="primary"
+            icon="edit"
+            label="Edit"
+            no-caps
+            @click.stop="$emit('edit-entry', collectionEntry)"
+          />
+          <q-btn
+            dense
+            flat
+            round
+            color="negative"
+            icon="delete"
+            @click.stop="$emit('delete-entry', collectionEntry)"
+          >
+            <q-tooltip>Remove from collection</q-tooltip>
+          </q-btn>
+        </template>
+        <template v-else>
+          <q-btn
+            class="col"
+            dense
+            flat
+            color="yellow-6"
+            icon="add_circle"
+            label="Collection"
+            no-caps
+            @click.stop="$emit('add-to-collection', card)"
+          />
+          <q-badge v-if="ownedQuantity > 0" rounded color="primary" text-color="black" class="q-ml-xs">
+            ×{{ ownedQuantity }}
+            <q-tooltip>Owned across all collection folders</q-tooltip>
+          </q-badge>
+        </template>
       </div>
     </q-card-section>
   </q-card>
@@ -76,11 +108,14 @@
   import { cardImageRatio, cardmarketDisplayPrice, formatCardValue, formatEuroPrice } from '../utils/cardDisplay';
   import type { DisplayCard } from '../utils/cardDisplay';
   import { collectionStore } from '../utils/collection';
+  import type { CollectionEntry } from '../utils/collection';
 
-  const props = defineProps<{ card: DisplayCard }>();
+  const props = defineProps<{ card: DisplayCard; collectionEntry?: CollectionEntry }>();
   defineEmits<{
     click: [card: DisplayCard];
     'add-to-collection': [card: DisplayCard];
+    'edit-entry': [entry: CollectionEntry];
+    'delete-entry': [entry: CollectionEntry];
   }>();
 
   const displayPrice = computed<number | null>(() => cardmarketDisplayPrice(props.card.cardmarket));

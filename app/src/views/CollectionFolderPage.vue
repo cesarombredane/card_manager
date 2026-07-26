@@ -44,46 +44,14 @@
       No card matches this search.
     </q-banner>
 
-    <q-list v-else bordered separator class="bg-grey-10 rounded-borders">
-      <q-item v-for="row in displayedRows" :key="row.entry.id" class="q-py-md">
-        <q-item-section avatar>
-          <q-img v-if="row.card.image_url" :src="row.card.image_url" fit="contain" width="64px" height="88px" />
-          <q-icon v-else name="image" color="grey-6" size="48px" />
-        </q-item-section>
-
-        <q-item-section>
-          <q-item-label>
-            <router-link
-              :to="{ path: `/set/${row.entry.set_id}/card/${row.entry.card_id}`, query: { variant: row.entry.variant_id } }"
-              class="text-white text-weight-bold"
-            >
-              {{ row.card.display_name }}
-            </router-link>
-          </q-item-label>
-          <q-item-label caption class="text-grey-4">
-            {{ row.card.set_name }} · #{{ row.card.number }} · {{ row.entry.language_id.toUpperCase() }} · {{ row.entry.condition }}
-          </q-item-label>
-          <q-item-label caption class="text-grey-4">
-            <template v-if="row.unitPrice !== null">
-              {{ formatEuroPrice(row.unitPrice) }} each · {{ formatEuroPrice(row.totalValue) }} total
-            </template>
-            <template v-else>Market price unavailable</template>
-          </q-item-label>
-        </q-item-section>
-
-        <q-item-section side class="collection-actions">
-          <div class="row items-center no-wrap q-gutter-sm">
-            <div class="text-body2 text-grey-4">{{ row.entry.quantity }} cards</div>
-            <q-btn flat round dense color="primary" icon="edit" @click="openEditEntry(row)">
-              <q-tooltip>Edit card</q-tooltip>
-            </q-btn>
-            <q-btn flat round dense color="negative" icon="delete" @click="entryToDelete = row">
-              <q-tooltip>Remove from collection</q-tooltip>
-            </q-btn>
-          </div>
-        </q-item-section>
-      </q-item>
-    </q-list>
+    <card-list
+      v-else
+      :cards="displayedRows.map((row) => row.card)"
+      :collection-entries="displayedRows.map((row) => row.entry)"
+      @card-click="openCard"
+      @edit-entry="openEditEntryById"
+      @delete-entry="setEntryToDelete"
+    />
 
     <q-dialog v-model="showEditDialog">
       <q-card class="bg-grey-10 text-white" style="width: 460px; max-width: 90vw">
@@ -154,7 +122,8 @@
 
 <script setup lang="ts">
   import { computed, ref } from 'vue';
-  import { useRoute } from 'vue-router';
+  import { useRoute, useRouter } from 'vue-router';
+  import CardList from '../components/CardList.vue';
   import { buildDisplayCard, cardmarketDisplayPrice, formatEuroPrice } from '../utils/cardDisplay';
   import type { DisplayCard } from '../utils/cardDisplay';
   import { getCardById, getLanguages, getSetById } from '../utils/dataManagement';
@@ -180,6 +149,7 @@
   ];
 
   const route = useRoute();
+  const router = useRouter();
   const search = ref('');
   const selectedSort = ref<CollectionSort>('name-asc');
   const entryToDelete = ref<CollectionRow | null>(null);
@@ -269,6 +239,22 @@
     showEditDialog.value = true;
   };
 
+  const openEditEntryById = (entry: CollectionEntry): void => {
+    const row = collectionRows.value.find((candidate) => candidate.entry.id === entry.id);
+    if (row) openEditEntry(row);
+  };
+
+  const setEntryToDelete = (entry: CollectionEntry): void => {
+    entryToDelete.value = collectionRows.value.find((candidate) => candidate.entry.id === entry.id) ?? null;
+  };
+
+  const openCard = (card: DisplayCard): void => {
+    void router.push({
+      path: `/set/${card.set_id}/card/${card.card_id}`,
+      query: { variant: card.variant_id }
+    });
+  };
+
   const saveEntry = (): void => {
     if (!editingEntry.value || editQuantity.value < 1 || !editLanguageId.value || !editFolderId.value) return;
     collectionStore.updateEntry(editingEntry.value.entry.id, {
@@ -286,16 +272,3 @@
     entryToDelete.value = null;
   };
 </script>
-
-<style scoped>
-  @media (max-width: 700px) {
-    .collection-actions {
-      align-items: stretch;
-      width: 100%;
-    }
-
-    .collection-actions .row {
-      flex-wrap: wrap;
-    }
-  }
-</style>

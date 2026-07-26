@@ -1,7 +1,14 @@
 <template>
   <section class="row q-col-gutter-md">
-    <div v-for="card in cards" :key="card.id" class="col-6 col-sm-4 col-md-3 col-lg-2">
-      <card-list-item :card="card" @click="$emit('card-click', $event)" @add-to-collection="openCollectionDialog" />
+    <div v-for="(card, index) in cards" :key="collectionEntries[index]?.id ?? card.id" class="col-6 col-sm-4 col-md-3 col-lg-2">
+      <card-list-item
+        :card="card"
+        :collection-entry="collectionEntries[index]"
+        @click="$emit('card-click', $event)"
+        @add-to-collection="openCollectionDialog"
+        @edit-entry="$emit('edit-entry', $event)"
+        @delete-entry="$emit('delete-entry', $event)"
+      />
     </div>
   </section>
 
@@ -21,9 +28,19 @@
   import AddToCollectionDialog from './AddToCollectionDialog.vue';
   import CardListItem from './CardListItem.vue';
   import type { DisplayCard } from '../utils/cardDisplay';
+  import type { CollectionEntry } from '../utils/collection';
 
-  defineProps<{ cards: DisplayCard[] }>();
-  defineEmits<{ 'card-click': [card: DisplayCard] }>();
+  withDefaults(defineProps<{
+    cards: DisplayCard[];
+    collectionEntries?: CollectionEntry[];
+  }>(), {
+    collectionEntries: () => []
+  });
+  defineEmits<{
+    'card-click': [card: DisplayCard];
+    'edit-entry': [entry: CollectionEntry];
+    'delete-entry': [entry: CollectionEntry];
+  }>();
 
   const selectedCard = ref<DisplayCard | null>(null);
   const showCollectionDialog = ref(false);
