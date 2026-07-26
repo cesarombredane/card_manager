@@ -126,7 +126,7 @@
   const languageName = (id: string): string => languageNames.get(id) ?? id;
   const displayField = (field: string): string => field.replaceAll('_', ' ').replace(/^./, (value) => value.toUpperCase());
   const reloadPage = (): void => window.location.reload();
-  const generatedAt = computed(() => coverage ? new Intl.DateTimeFormat(undefined, { dateStyle: 'medium', timeStyle: 'short' }).format(new Date(coverage.generated_at)) : 'Never');
+  const generatedAt = computed(() => coverage ? new Intl.DateTimeFormat('fr-FR', { dateStyle: 'medium', timeStyle: 'short' }).format(new Date(coverage.generated_at)) : 'Never');
   const summaryMetrics = computed(() => coverage ? [
     { label: 'Cards', value: coverage.totals.cards, icon: 'style' }, { label: 'Sets', value: coverage.totals.sets, icon: 'inventory_2' },
     { label: 'Cards missing scans', value: coverage.totals.cards_without_image, icon: 'image_not_supported' }, { label: 'Missing image slots', value: coverage.totals.missing_image_slots, icon: 'broken_image' }

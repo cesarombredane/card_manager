@@ -63,7 +63,7 @@
               </router-link>
             </q-item-label>
             <q-item-label caption class="text-grey-4">
-              {{ set.card_count }} collectible cards including variants · Released {{ set.release_date }}
+              {{ set.card_count }} collectible cards including variants · Released {{ formatFrenchDate(set.release_date) }}
             </q-item-label>
             <div class="row q-gutter-xs q-mt-xs">
               <q-chip v-for="languageId in set.language_ids" :key="languageId" dense square color="grey-9" text-color="white" size="sm">
@@ -91,6 +91,7 @@
   import { localizedValue } from '../utils/localization';
   import type { Region, Series, Set } from '../utils/types';
   import type { AppState } from '../store';
+  import { formatFrenchDate } from '../utils/dates';
 
 
   /* types */

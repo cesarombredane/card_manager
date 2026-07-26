@@ -5,10 +5,19 @@
         <div class="text-overline text-primary">My collection</div>
         <div class="text-h4 text-weight-bold">Collection dashboard</div>
         <div class="text-body2 text-grey-4">
-          {{ totalCards }} cards · Estimated Cardmarket value {{ formatEuroPrice(totalValue) }}
+          {{ totalCards }} cards · Estimated collection value {{ formatEuroPrice(totalValue) }}
         </div>
       </div>
       <div class="col-auto row q-gutter-sm">
+        <q-btn
+          outline
+          color="primary"
+          icon="add_photo_alternate"
+          label="Add manual card"
+          no-caps
+          :disable="!collectionStore.isFileConnected.value"
+          @click="showManualCardDialog = true"
+        />
         <q-btn
           color="primary"
           text-color="black"
@@ -97,6 +106,8 @@
       </q-card>
     </q-dialog>
 
+    <manual-card-dialog v-model="showManualCardDialog" />
+
     <q-dialog :model-value="folderToDelete !== null" @update:model-value="value => { if (!value) folderToDelete = null; }">
       <q-card class="bg-grey-10 text-white">
         <q-card-section>
@@ -116,17 +127,22 @@
 
 <script setup lang="ts">
   import { computed, ref } from 'vue';
+  import ManualCardDialog from '../components/ManualCardDialog.vue';
   import { cardmarketDisplayPrice, formatEuroPrice } from '../utils/cardDisplay';
   import { getCardById } from '../utils/dataManagement';
   import { collectionStore, mainFolderId } from '../utils/collection';
   import type { CollectionFolder } from '../utils/collection';
 
   const showFolderDialog = ref(false);
+  const showManualCardDialog = ref(false);
   const editingFolder = ref<CollectionFolder | null>(null);
   const folderToDelete = ref<CollectionFolder | null>(null);
   const folderName = ref('');
 
   const entryValue = (setId: string, cardId: string, variantId: string): number => {
+    if (setId === 'manual-collection') {
+      return collectionStore.manualCards.value.find((card) => card.id === cardId)?.estimated_value ?? 0;
+    }
     const variant = getCardById(setId, cardId)?.variants.find((candidate) => candidate.id === variantId);
     return cardmarketDisplayPrice(variant?.cardmarket) ?? 0;
   };

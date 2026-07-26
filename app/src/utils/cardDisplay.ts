@@ -34,6 +34,8 @@ export type DisplayCard = {
   image_is_fallback: boolean;
   image_source: 'automatic' | 'manual' | null;
   cardmarket: CardmarketPrice | null;
+  is_manual?: boolean;
+  estimated_value?: number | null;
 };
 
 export const formatCardValue = (value: string): string => value.replaceAll('_', ' ');

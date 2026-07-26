@@ -1,4 +1,5 @@
 import { computed, reactive, ref } from 'vue';
+import { manualImageStore } from './manualImages';
 
 export const cardConditions = [
   { label: 'MT — Mint', value: 'MT' },
@@ -31,18 +32,38 @@ export type CollectionEntry = {
   updated_at: string;
 };
 
+export type ManualCollectionCard = {
+  id: string;
+  name: string;
+  set_name: string;
+  number: string;
+  category: string;
+  rarity: string;
+  pokemon_name: string;
+  hp: number | null;
+  types: string[];
+  illustrator: string;
+  notes: string;
+  estimated_value: number | null;
+  release_date: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
 type CollectionData = {
-  version: 1;
+  version: 2;
   folders: CollectionFolder[];
   entries: CollectionEntry[];
+  manual_cards: ManualCollectionCard[];
 };
 
 export const mainFolderId = 'main';
 
 const defaultData = (): CollectionData => ({
-  version: 1,
+  version: 2,
   folders: [{ id: mainFolderId, name: 'Main collection', created_at: new Date().toISOString() }],
-  entries: []
+  entries: [],
+  manual_cards: []
 });
 
 const state = reactive<CollectionData>(defaultData());
@@ -61,13 +82,19 @@ const normalizeData = (parsed: Partial<CollectionData>): CollectionData => {
     ...entry,
     language_id: entry.language_id || (entry.set_id.startsWith('asia-') ? 'ja' : 'en')
   }));
-  return { version: 1, folders, entries };
+  return {
+    version: 2,
+    folders,
+    entries,
+    manual_cards: Array.isArray(parsed.manual_cards) ? parsed.manual_cards : []
+  };
 };
 
 const replaceData = (data: CollectionData): void => {
-  state.version = 1;
+  state.version = 2;
   state.folders.splice(0, state.folders.length, ...data.folders);
   state.entries.splice(0, state.entries.length, ...data.entries);
+  state.manual_cards.splice(0, state.manual_cards.length, ...data.manual_cards);
 };
 
 const loadFile = async (): Promise<void> => {
@@ -109,6 +136,7 @@ const newId = (prefix: string): string => {
 export const collectionStore = {
   folders: computed(() => state.folders),
   entries: computed(() => state.entries),
+  manualCards: computed(() => state.manual_cards),
   isFileConnected: computed(() => isReady.value),
   fileName: computed(() => 'collection.json'),
   saveError: computed(() => saveError.value),
@@ -168,6 +196,97 @@ export const collectionStore = {
       const now = new Date().toISOString();
       state.entries.push({ id: newId('entry'), ...input, quantity, added_at: now, updated_at: now });
     }
+    persist();
+  },
+
+  createManualCard(input: {
+    folder_id: string;
+    name: string;
+    set_name: string;
+    number: string;
+    language_id: string;
+    variant_id: string;
+    condition: CardCondition;
+    quantity: number;
+    category: string;
+    rarity: string;
+    pokemon_name: string;
+    hp: number | null;
+    types: string[];
+    illustrator: string;
+    notes: string;
+    estimated_value: number | null;
+    release_date: string | null;
+  }): { card: ManualCollectionCard; entry: CollectionEntry } {
+    if (!input.name.trim()) throw new Error('Card name is required');
+    if (!state.folders.some((folder) => folder.id === input.folder_id)) throw new Error('Collection folder does not exist');
+    const now = new Date().toISOString();
+    const card: ManualCollectionCard = {
+      id: newId('manual-card'),
+      name: input.name.trim(),
+      set_name: input.set_name.trim(),
+      number: input.number.trim(),
+      category: input.category || 'pokemon',
+      rarity: input.rarity.trim() || 'unknown',
+      pokemon_name: input.pokemon_name.trim(),
+      hp: input.hp && input.hp > 0 ? Math.floor(input.hp) : null,
+      types: input.types.map((type) => type.trim()).filter(Boolean),
+      illustrator: input.illustrator.trim(),
+      notes: input.notes.trim(),
+      estimated_value: input.estimated_value !== null && input.estimated_value >= 0 ? input.estimated_value : null,
+      release_date: input.release_date || null,
+      created_at: now,
+      updated_at: now
+    };
+    const entry: CollectionEntry = {
+      id: newId('entry'),
+      folder_id: input.folder_id,
+      set_id: 'manual-collection',
+      card_id: card.id,
+      variant_id: input.variant_id.trim() || 'normal',
+      language_id: input.language_id,
+      condition: input.condition,
+      quantity: Math.max(1, Math.floor(input.quantity)),
+      added_at: now,
+      updated_at: now
+    };
+    state.manual_cards.push(card);
+    state.entries.push(entry);
+    persist();
+    return { card, entry };
+  },
+
+  updateManualCard(cardId: string, input: {
+    name: string;
+    set_name: string;
+    number: string;
+    category: string;
+    rarity: string;
+    pokemon_name: string;
+    hp: number | null;
+    types: string[];
+    illustrator: string;
+    notes: string;
+    estimated_value: number | null;
+    release_date: string | null;
+  }): void {
+    const card = state.manual_cards.find((candidate) => candidate.id === cardId);
+    if (!card || !input.name.trim()) return;
+    Object.assign(card, {
+      name: input.name.trim(),
+      set_name: input.set_name.trim(),
+      number: input.number.trim(),
+      category: input.category || 'pokemon',
+      rarity: input.rarity.trim() || 'unknown',
+      pokemon_name: input.pokemon_name.trim(),
+      hp: input.hp && input.hp > 0 ? Math.floor(input.hp) : null,
+      types: input.types.map((type) => type.trim()).filter(Boolean),
+      illustrator: input.illustrator.trim(),
+      notes: input.notes.trim(),
+      estimated_value: input.estimated_value !== null && input.estimated_value >= 0 ? input.estimated_value : null,
+      release_date: input.release_date || null,
+      updated_at: new Date().toISOString()
+    });
     persist();
   },
 
@@ -246,7 +365,19 @@ export const collectionStore = {
   removeEntry(entryId: string): void {
     const index = state.entries.findIndex((entry) => entry.id === entryId);
     if (index === -1) return;
-    state.entries.splice(index, 1);
+    const [entry] = state.entries.splice(index, 1);
+    if (
+      entry.set_id === 'manual-collection'
+      && !state.entries.some((candidate) => candidate.set_id === 'manual-collection' && candidate.card_id === entry.card_id)
+    ) {
+      const cardIndex = state.manual_cards.findIndex((card) => card.id === entry.card_id);
+      if (cardIndex !== -1) state.manual_cards.splice(cardIndex, 1);
+      for (const image of [...manualImageStore.entries.value].filter((candidate) =>
+        candidate.set_id === 'manual-collection' && candidate.card_id === entry.card_id
+      )) {
+        void manualImageStore.remove(image.set_id, image.card_id, image.variant_id, image.language_id);
+      }
+    }
     persist();
   }
 };

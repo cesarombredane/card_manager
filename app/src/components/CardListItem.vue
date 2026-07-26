@@ -49,6 +49,9 @@
         <q-badge color="grey-8" text-color="white">{{ collectionEntry.condition }}</q-badge>
       </div>
       <div class="row no-wrap q-gutter-xs q-mt-auto overflow-hidden">
+        <q-badge v-if="card.is_manual" color="deep-orange-8" text-color="white">
+          Manual card
+        </q-badge>
         <q-badge color="grey-9" text-color="white" class="ellipsis overflow-hidden text-no-wrap">
           {{ card.category }}
         </q-badge>
@@ -118,7 +121,9 @@
     'delete-entry': [entry: CollectionEntry];
   }>();
 
-  const displayPrice = computed<number | null>(() => cardmarketDisplayPrice(props.card.cardmarket));
+  const displayPrice = computed<number | null>(() =>
+    props.card.is_manual ? props.card.estimated_value ?? null : cardmarketDisplayPrice(props.card.cardmarket)
+  );
   const ownedQuantity = computed<number>(() => collectionStore.entries.value
     .filter((entry) =>
       entry.set_id === props.card.set_id

@@ -6,9 +6,10 @@ import { dirname, resolve } from 'node:path';
 
 const collectionPath = resolve(__dirname, 'data/collection.json');
 const emptyCollection = {
-  version: 1,
+  version: 2,
   folders: [{ id: 'main', name: 'Main collection', created_at: new Date().toISOString() }],
-  entries: []
+  entries: [],
+  manual_cards: []
 };
 
 type ManualImageEntry = {
