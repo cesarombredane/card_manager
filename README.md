@@ -87,3 +87,16 @@ python3 scripts/update_cardmarket_prices.py
 The price-only updater downloads Cardmarket's EUR price guide once, updates
 variants that already contain a Cardmarket product ID, and leaves every other
 JSON field unchanged.
+
+## Collection file
+
+Personal collection data is loaded from and saved automatically to:
+
+```text
+app/data/collection.json
+```
+
+The file is ignored by Git. Collection reads and atomic writes are provided by
+the local Vite development and preview servers, so collection editing requires
+running the app with `npm run dev` or `npm run preview`. A purely static
+deployment can display the catalog but cannot write to the server filesystem.

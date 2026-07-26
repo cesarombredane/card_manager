@@ -8,6 +8,8 @@ import CardSearchPage from '../views/CardSearchPage.vue';
 import SetDetailPage from '../views/SetDetailPage.vue';
 import HomePage from '../views/HomePage.vue';
 import CoveragePage from '../views/CoveragePage.vue';
+import CollectionDashboardPage from '../views/CollectionDashboardPage.vue';
+import CollectionFolderPage from '../views/CollectionFolderPage.vue';
 
 
 // create router instance
@@ -39,6 +41,16 @@ export const router = createRouter({
       path: '/coverage',
       name: 'coverage',
       component: CoveragePage
+    },
+    {
+      path: '/collection',
+      name: 'collection',
+      component: CollectionDashboardPage
+    },
+    {
+      path: '/collection/folder/:folderId',
+      name: 'collection-folder',
+      component: CollectionFolderPage
     },
     {
       path: '/set/:setId',

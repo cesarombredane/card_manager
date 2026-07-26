@@ -51,6 +51,22 @@
           {{ energy }}
         </q-badge>
       </div>
+      <div class="row items-center no-wrap q-mt-xs">
+        <q-btn
+          class="col"
+          dense
+          flat
+          color="yellow-6"
+          icon="add_circle"
+          label="Collection"
+          no-caps
+          @click.stop="$emit('add-to-collection', card)"
+        />
+        <q-badge v-if="ownedQuantity > 0" rounded color="primary" text-color="black" class="q-ml-xs">
+          ×{{ ownedQuantity }}
+          <q-tooltip>Owned across all collection folders</q-tooltip>
+        </q-badge>
+      </div>
     </q-card-section>
   </q-card>
 </template>
@@ -59,11 +75,23 @@
   import { computed } from 'vue';
   import { cardImageRatio, cardmarketDisplayPrice, formatCardValue, formatEuroPrice } from '../utils/cardDisplay';
   import type { DisplayCard } from '../utils/cardDisplay';
+  import { collectionStore } from '../utils/collection';
 
   const props = defineProps<{ card: DisplayCard }>();
-  defineEmits<{ click: [card: DisplayCard] }>();
+  defineEmits<{
+    click: [card: DisplayCard];
+    'add-to-collection': [card: DisplayCard];
+  }>();
 
   const displayPrice = computed<number | null>(() => cardmarketDisplayPrice(props.card.cardmarket));
+  const ownedQuantity = computed<number>(() => collectionStore.entries.value
+    .filter((entry) =>
+      entry.set_id === props.card.set_id
+      && entry.card_id === props.card.card_id
+      && entry.variant_id === props.card.variant_id
+      && entry.language_id === props.card.language_id
+    )
+    .reduce((total, entry) => total + entry.quantity, 0));
 </script>
 
 <style scoped>

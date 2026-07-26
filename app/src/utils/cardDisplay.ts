@@ -18,6 +18,7 @@ export type DisplayCard = {
   card_id: string;
   set_id: string;
   set_name: string | null;
+  language_id: string;
   variant_id: string;
   number: string;
   display_name: string;
@@ -61,6 +62,7 @@ export const buildDisplayCard = (
     card_id: card.id,
     set_id: card.set_id,
     set_name: setName,
+    language_id: languageId,
     variant_id: variant.id,
     number: card.number,
     display_name: `${cardName}${variantSuffix}`,

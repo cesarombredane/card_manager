@@ -57,6 +57,23 @@
               <div class="col-12 col-sm-8 col-md-5 col-lg-4">
                 <q-select v-model="selectedVariantId" :options="variantOptions" dark dense outlined label="Variant" />
               </div>
+              <div class="col-12 col-sm-auto">
+                <div class="row items-center no-wrap">
+                  <q-btn
+                    color="primary"
+                    text-color="black"
+                    icon="add_circle"
+                    label="Add to collection"
+                    no-caps
+                    :disable="!currentCard || !selectedVariant"
+                    @click="showCollectionDialog = true"
+                  />
+                  <q-badge v-if="ownedQuantity > 0" rounded color="primary" text-color="black" class="q-ml-sm">
+                    ×{{ ownedQuantity }}
+                    <q-tooltip>Owned in {{ selectedLanguageId }} across all collection folders</q-tooltip>
+                  </q-badge>
+                </div>
+              </div>
             </div>
 
             <q-list bordered separator class="bg-grey-10 rounded-borders">
@@ -176,6 +193,16 @@
         </div>
       </div>
     </div>
+
+    <add-to-collection-dialog
+      v-if="currentCard && selectedVariant"
+      v-model="showCollectionDialog"
+      :set-id="setId"
+      :card-id="currentCard.id"
+      :variant-id="selectedVariant.id"
+      :language-id="selectedLanguageId"
+      :card-name="`${displayName} (${formatValue(selectedVariant.id)})`"
+    />
   </q-page>
 </template>
 
@@ -187,6 +214,7 @@
 
   // import components
   import LanguageSelector from '../components/LanguageSelector.vue';
+  import AddToCollectionDialog from '../components/AddToCollectionDialog.vue';
 
   // import utils
   import { getCardById, getPokemon, getSetById } from '../utils/dataManagement';
@@ -196,6 +224,7 @@
   import { localizedValue } from '../utils/localization';
   import type { Card, CardmarketPrice, CardModifier, CardVariant, Pokemon, Set } from '../utils/types';
   import type { AppState } from '../store';
+  import { collectionStore } from '../utils/collection';
 
   /* constant vars */
   // Current route used to identify the selected card.
@@ -231,6 +260,7 @@
       ? requestedVariantId
       : currentCard?.variants[0]?.id ?? 'normal'
   );
+  const showCollectionDialog = ref(false);
 
   // Currently selected language for localized card text and image.
   const selectedLanguageId = computed({
@@ -267,6 +297,18 @@
   const selectedCardmarket = computed<CardmarketPrice | null>(() => selectedVariant.value?.cardmarket ?? null);
 
   const selectedCardmarketPrice = computed<number | null>(() => cardmarketDisplayPrice(selectedCardmarket.value));
+
+  const ownedQuantity = computed<number>(() => {
+    if (!currentCard || !selectedVariant.value) return 0;
+    return collectionStore.entries.value
+      .filter((entry) =>
+        entry.set_id === setId
+        && entry.card_id === currentCard.id
+        && entry.variant_id === selectedVariant.value?.id
+        && entry.language_id === selectedLanguageId.value
+      )
+      .reduce((total, entry) => total + entry.quantity, 0);
+  });
 
   // Localized card display name.
   const displayName = computed<string>(() => {
