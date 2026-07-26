@@ -10,6 +10,7 @@ import HomePage from '../views/HomePage.vue';
 import CoveragePage from '../views/CoveragePage.vue';
 import CollectionDashboardPage from '../views/CollectionDashboardPage.vue';
 import CollectionFolderPage from '../views/CollectionFolderPage.vue';
+import CollectionBinderPage from '../views/CollectionBinderPage.vue';
 
 
 // create router instance
@@ -51,6 +52,11 @@ export const router = createRouter({
       path: '/collection/folder/:folderId',
       name: 'collection-folder',
       component: CollectionFolderPage
+    },
+    {
+      path: '/collection/folder/:folderId/binder',
+      name: 'collection-binder',
+      component: CollectionBinderPage
     },
     {
       path: '/set/:setId',

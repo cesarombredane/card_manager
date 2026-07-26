@@ -132,6 +132,7 @@
   import { getCardById } from '../utils/dataManagement';
   import { collectionStore, mainFolderId } from '../utils/collection';
   import type { CollectionFolder } from '../utils/collection';
+  import { binderStore } from '../utils/binders';
 
   const showFolderDialog = ref(false);
   const showManualCardDialog = ref(false);
@@ -183,7 +184,10 @@
   };
 
   const confirmDeleteFolder = (): void => {
-    if (folderToDelete.value) collectionStore.deleteFolder(folderToDelete.value.id);
+    if (folderToDelete.value) {
+      binderStore.remove(folderToDelete.value.id);
+      collectionStore.deleteFolder(folderToDelete.value.id);
+    }
     folderToDelete.value = null;
   };
 </script>

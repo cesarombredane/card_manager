@@ -11,6 +11,8 @@ const emptyCollection = {
   entries: [],
   manual_cards: []
 };
+const bindersPath = resolve(__dirname, 'data/binders.json');
+const emptyBinders = { version: 1, binders: [] };
 
 type ManualImageEntry = {
   set_id: string;
@@ -133,6 +135,55 @@ const collectionApi = () => {
   };
 };
 
+const bindersApi = () => {
+  const middleware = (req: import('node:http').IncomingMessage, res: import('node:http').ServerResponse, next: () => void): void => {
+    if (req.url !== '/api/binders') {
+      next();
+      return;
+    }
+    res.setHeader('Content-Type', 'application/json; charset=utf-8');
+    if (req.method === 'GET') {
+      readFile(bindersPath, 'utf-8')
+        .then((contents) => res.end(contents))
+        .catch(async (error: NodeJS.ErrnoException) => {
+          if (error.code !== 'ENOENT') {
+            res.statusCode = 500;
+            res.end(JSON.stringify({ error: error.message }));
+            return;
+          }
+          await writeFile(bindersPath, `${JSON.stringify(emptyBinders, null, 2)}\n`, 'utf-8');
+          res.end(JSON.stringify(emptyBinders));
+        });
+      return;
+    }
+    if (req.method === 'PUT') {
+      readRequestBody(req, 10_000_000).then(async (body) => {
+        const parsed = JSON.parse(body) as { binders?: unknown[] };
+        if (!Array.isArray(parsed.binders)) throw new Error('Invalid binders JSON');
+        const temporary = `${bindersPath}.tmp`;
+        await writeFile(temporary, `${JSON.stringify(parsed, null, 2)}\n`, 'utf-8');
+        await rename(temporary, bindersPath);
+        res.end(JSON.stringify({ ok: true }));
+      }).catch((error: unknown) => {
+        res.statusCode = 400;
+        res.end(JSON.stringify({ error: error instanceof Error ? error.message : String(error) }));
+      });
+      return;
+    }
+    res.statusCode = 405;
+    res.end(JSON.stringify({ error: 'Method not allowed' }));
+  };
+  return {
+    name: 'binders-json-api',
+    configureServer(server: { middlewares: { use: (handler: typeof middleware) => void } }) {
+      server.middlewares.use(middleware);
+    },
+    configurePreviewServer(server: { middlewares: { use: (handler: typeof middleware) => void } }) {
+      server.middlewares.use(middleware);
+    }
+  };
+};
+
 const manualImagesApi = () => {
   const middleware = (req: import('node:http').IncomingMessage, res: import('node:http').ServerResponse, next: () => void): void => {
     if (req.url !== '/api/manual-images') {
@@ -243,6 +294,7 @@ export default defineConfig({
     }),
     quasar(),
     collectionApi(),
+    bindersApi(),
     manualImagesApi()
   ],
   server: {

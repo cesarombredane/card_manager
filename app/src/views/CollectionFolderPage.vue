@@ -33,6 +33,16 @@
       <div class="col-12 col-md-auto">
         <q-btn color="primary" text-color="black" icon="add_photo_alternate" label="Add manual card" no-caps @click="showManualCardDialog = true" />
       </div>
+      <div class="col-12 col-md-auto">
+        <q-btn
+          outline
+          color="primary"
+          icon="auto_stories"
+          :label="binderStore.get(folderId) ? 'Open binder' : 'Create binder'"
+          no-caps
+          :to="`/collection/folder/${folderId}/binder`"
+        />
+      </div>
     </section>
 
     <q-banner v-if="!folder" class="bg-grey-10 text-grey-4">
@@ -154,6 +164,7 @@
   import { resolveCardImage } from '../utils/cardImages';
   import { manualImageStore } from '../utils/manualImages';
   import { formatFrenchDate, parseFrenchDate } from '../utils/dates';
+  import { binderStore } from '../utils/binders';
 
   type CollectionRow = {
     entry: CollectionEntry;
