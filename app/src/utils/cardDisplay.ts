@@ -32,6 +32,7 @@ export type DisplayCard = {
   image_url: string | null;
   image_language_id: string | null;
   image_is_fallback: boolean;
+  image_source: 'automatic' | 'manual' | null;
   cardmarket: CardmarketPrice | null;
 };
 
@@ -55,7 +56,11 @@ export const buildDisplayCard = (
   const cardName: string = localizedValue(card.name, languageId) ?? card.id;
   const variantSuffix: string = variant.id !== 'normal' ? ` (${formatCardValue(variant.id)})` : '';
   const fallbackLanguageId: string = card.set_id.startsWith('asia-') ? 'ja' : 'en';
-  const image = resolveCardImage(variant.images, languageId, fallbackLanguageId);
+  const image = resolveCardImage(variant.images, languageId, fallbackLanguageId, {
+    setId: card.set_id,
+    cardId: card.id,
+    variantId: variant.id
+  });
 
   return {
     id: `${card.set_id}-${card.id}-${variant.id}`,
@@ -76,6 +81,7 @@ export const buildDisplayCard = (
     image_url: image.url,
     image_language_id: image.languageId,
     image_is_fallback: image.isFallback,
+    image_source: image.source,
     cardmarket: variant.cardmarket ?? null
   };
 };

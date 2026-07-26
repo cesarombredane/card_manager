@@ -33,18 +33,41 @@
                 </template>
               </q-img>
               <div
-                v-if="selectedImage.isFallback && selectedImage.languageId"
+                v-if="selectedImage.url && selectedImage.isFallback && selectedImage.source === 'automatic'"
                 class="fallback-language-overlay"
               >
-                <span>{{ selectedImage.languageId }} scan</span>
+                <span>{{ selectedImage.languageId }} fallback scan</span>
               </div>
-              <div v-else class="column items-center justify-center full-height full-width text-grey-5">
+              <div v-if="!selectedImageUrl" class="column items-center justify-center full-height full-width text-grey-5">
                 <q-icon name="image" size="42px" />
                 <div class="text-caption q-mt-sm">
                   Image placeholder
                 </div>
               </div>
             </q-responsive>
+            <q-card-actions v-if="!hasAutomaticImage">
+              <q-btn
+                class="col"
+                flat
+                color="primary"
+                icon="add_photo_alternate"
+                :label="currentManualImage ? 'Replace manual image' : 'Add manual image'"
+                no-caps
+                :disable="!currentCard || !selectedVariant"
+                @click="openManualImageDialog"
+              />
+              <q-btn
+                v-if="currentManualImage"
+                flat
+                round
+                color="negative"
+                icon="delete"
+                :loading="manualImageSaving"
+                @click="deleteManualImage"
+              >
+                <q-tooltip>Delete manual image</q-tooltip>
+              </q-btn>
+            </q-card-actions>
           </q-card>
         </div>
 
@@ -203,6 +226,50 @@
       :language-id="selectedLanguageId"
       :card-name="`${displayName} (${formatValue(selectedVariant.id)})`"
     />
+
+    <q-dialog v-model="showManualImageDialog">
+      <q-card class="bg-grey-10 text-white" style="width: 520px; max-width: 90vw">
+        <q-card-section>
+          <div class="text-h6">{{ currentManualImage ? 'Replace manual image' : 'Add manual image' }}</div>
+          <div class="text-body2 text-grey-4">
+            {{ displayName }} · {{ formatValue(selectedVariantId) }} · {{ selectedLanguageId.toUpperCase() }}
+          </div>
+        </q-card-section>
+        <q-card-section class="column q-gutter-md">
+          <q-file
+            v-model="manualImageFile"
+            dark
+            outlined
+            accept="image/jpeg,image/png,image/webp"
+            label="Choose a JPEG, PNG, or WebP image"
+            @update:model-value="prepareManualImage"
+          >
+            <template #prepend><q-icon name="image" /></template>
+          </q-file>
+          <q-img
+            v-if="manualImagePreview"
+            :src="manualImagePreview"
+            fit="contain"
+            style="max-height: 440px"
+            class="bg-grey-9 rounded-borders"
+          />
+          <q-banner v-if="manualImageError" class="bg-red-10 text-negative rounded-borders">
+            {{ manualImageError }}
+          </q-banner>
+        </q-card-section>
+        <q-card-actions align="right">
+          <q-btn flat color="grey-4" label="Cancel" v-close-popup />
+          <q-btn
+            color="primary"
+            text-color="black"
+            label="Save image"
+            :disable="!manualImageDataUrl"
+            :loading="manualImageSaving"
+            @click="saveManualImage"
+          />
+        </q-card-actions>
+      </q-card>
+    </q-dialog>
   </q-page>
 </template>
 
@@ -225,6 +292,7 @@
   import type { Card, CardmarketPrice, CardModifier, CardVariant, Pokemon, Set } from '../utils/types';
   import type { AppState } from '../store';
   import { collectionStore } from '../utils/collection';
+  import { manualImageStore } from '../utils/manualImages';
 
   /* constant vars */
   // Current route used to identify the selected card.
@@ -261,6 +329,12 @@
       : currentCard?.variants[0]?.id ?? 'normal'
   );
   const showCollectionDialog = ref(false);
+  const showManualImageDialog = ref(false);
+  const manualImageFile = ref<File | null>(null);
+  const manualImageDataUrl = ref<string | null>(null);
+  const manualImagePreview = ref<string | null>(null);
+  const manualImageError = ref<string | null>(null);
+  const manualImageSaving = ref(false);
 
   // Currently selected language for localized card text and image.
   const selectedLanguageId = computed({
@@ -287,12 +361,21 @@
       ? resolveCardImage(
         selectedVariant.value.images,
         selectedLanguageId.value,
-        currentSet?.series_id.startsWith('asia-') ? 'ja' : 'en'
+        currentSet?.series_id.startsWith('asia-') ? 'ja' : 'en',
+        { setId, cardId, variantId: selectedVariant.value.id }
       )
-      : { url: null, languageId: null, isFallback: false };
+      : { url: null, languageId: null, isFallback: false, source: null };
   });
 
   const selectedImageUrl = computed<string | null>(() => selectedImage.value.url);
+  const hasAutomaticImage = computed<boolean>(() =>
+    Boolean(selectedVariant.value?.images[selectedLanguageId.value])
+  );
+  const currentManualImage = computed(() =>
+    selectedVariant.value
+      ? manualImageStore.find(setId, cardId, selectedVariant.value.id, selectedLanguageId.value)
+      : null
+  );
 
   const selectedCardmarket = computed<CardmarketPrice | null>(() => selectedVariant.value?.cardmarket ?? null);
 
@@ -347,6 +430,73 @@
   const formatPriceDate = (value: string): string => {
     const date = new Date(value);
     return Number.isNaN(date.getTime()) ? value : new Intl.DateTimeFormat(undefined, { dateStyle: 'medium' }).format(date);
+  };
+
+  const openManualImageDialog = (): void => {
+    manualImageFile.value = null;
+    manualImageDataUrl.value = null;
+    manualImagePreview.value = currentManualImage.value
+      ? `${currentManualImage.value.url}?v=${encodeURIComponent(currentManualImage.value.updated_at)}`
+      : null;
+    manualImageError.value = null;
+    showManualImageDialog.value = true;
+  };
+
+  const prepareManualImage = (file: File | null): void => {
+    manualImageDataUrl.value = null;
+    manualImagePreview.value = null;
+    manualImageError.value = null;
+    if (!file) return;
+    if (!['image/jpeg', 'image/png', 'image/webp'].includes(file.type)) {
+      manualImageError.value = 'Only JPEG, PNG, and WebP images are supported.';
+      return;
+    }
+    if (file.size > 15_000_000) {
+      manualImageError.value = 'The image must be smaller than 15 MB.';
+      return;
+    }
+    const reader = new FileReader();
+    reader.onload = () => {
+      manualImageDataUrl.value = typeof reader.result === 'string' ? reader.result : null;
+      manualImagePreview.value = manualImageDataUrl.value;
+    };
+    reader.onerror = () => {
+      manualImageError.value = 'Unable to read the selected image.';
+    };
+    reader.readAsDataURL(file);
+  };
+
+  const saveManualImage = async (): Promise<void> => {
+    if (!currentCard || !selectedVariant.value || !manualImageDataUrl.value) return;
+    manualImageSaving.value = true;
+    manualImageError.value = null;
+    try {
+      await manualImageStore.upload({
+        set_id: setId,
+        card_id: currentCard.id,
+        variant_id: selectedVariant.value.id,
+        language_id: selectedLanguageId.value,
+        data_url: manualImageDataUrl.value
+      });
+      showManualImageDialog.value = false;
+    } catch (error) {
+      manualImageError.value = error instanceof Error ? error.message : String(error);
+    } finally {
+      manualImageSaving.value = false;
+    }
+  };
+
+  const deleteManualImage = async (): Promise<void> => {
+    if (!currentCard || !selectedVariant.value || !currentManualImage.value) return;
+    manualImageSaving.value = true;
+    manualImageError.value = null;
+    try {
+      await manualImageStore.remove(setId, currentCard.id, selectedVariant.value.id, selectedLanguageId.value);
+    } catch (error) {
+      manualImageError.value = error instanceof Error ? error.message : String(error);
+    } finally {
+      manualImageSaving.value = false;
+    }
   };
 
   // Navigates back to the current set detail page.

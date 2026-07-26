@@ -9,10 +9,10 @@
         </template>
       </q-img>
       <div
-        v-if="card.image_is_fallback && card.image_language_id"
+        v-if="card.image_url && card.image_is_fallback && card.image_source === 'automatic'"
         class="fallback-language-overlay"
       >
-        <span>{{ card.image_language_id }} scan</span>
+        <span>{{ card.image_language_id }} fallback scan</span>
       </div>
       <div v-if="!card.image_url" class="column items-center justify-center full-height full-width text-grey-5">
         <q-icon name="image" size="28px" />
