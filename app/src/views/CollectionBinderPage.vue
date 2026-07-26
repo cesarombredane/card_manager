@@ -39,6 +39,7 @@
             <q-input v-model="search" dark dense outlined clearable class="q-mt-sm" label="Search">
               <template #prepend><q-icon name="search" /></template>
             </q-input>
+            <card-sort-selector v-if="selectorTab === 'collection'" v-model="selectedCardSort" class="q-mt-sm" />
           </q-card-section>
           <q-separator dark />
           <q-scroll-area style="height: 50vh">
@@ -247,12 +248,22 @@
   import type { CollectionEntry } from '../utils/collection';
   import { buildDisplayCard } from '../utils/cardDisplay';
   import type { DisplayCard } from '../utils/cardDisplay';
-  import { getCardById, getSetById } from '../utils/dataManagement';
+  import { getCardById, getPokemon, getSetById } from '../utils/dataManagement';
   import { localizedValue } from '../utils/localization';
   import { resolveCardImage } from '../utils/cardImages';
   import { manualImageStore } from '../utils/manualImages';
+  import CardSortSelector from '../components/CardSortSelector.vue';
+  import type { CardSort } from '../utils/cardSorting';
+  import { cardmarketDisplayPrice } from '../utils/cardDisplay';
 
-  type BinderRow = { entry: CollectionEntry; card: DisplayCard; available: number; };
+  type BinderRow = {
+    entry: CollectionEntry;
+    card: DisplayCard;
+    available: number;
+    releaseDate: string | null;
+    pokedexNumber: number | null;
+    price: number | null;
+  };
   type SelectorTab = 'collection' | 'proxies' | 'images';
 
   const route = useRoute();
@@ -267,6 +278,7 @@
   const settingsLayout = ref<BinderLayout>('3x3');
   const currentSpread = ref(0);
   const search = ref('');
+  const selectedCardSort = ref<CardSort>('release-desc');
   const selectorTab = ref<SelectorTab>('collection');
   const showAssetDialog = ref(false);
   const assetKind = ref<'proxy' | 'image'>('proxy');
@@ -283,6 +295,12 @@
     { label: '2 × 2 — 4 cards per page', value: '2x2' },
     { label: '3 × 3 — 9 cards per page', value: '3x3' }
   ];
+  const pokemon = getPokemon();
+  const pokedexByPokemonId = new Map(pokemon.map((entry) => [entry.id, entry.pokedex_id]));
+  const pokedexByPokemonName = new Map(pokemon.flatMap((entry) =>
+    [entry.name, ...Object.values(entry.names).filter((name): name is string => Boolean(name))]
+      .map((name) => [name.toLocaleLowerCase(), entry.pokedex_id] as const)
+  ));
 
   const cardForEntry = (entry: CollectionEntry): DisplayCard | null => {
     if (entry.set_id === 'manual-collection') {
@@ -312,7 +330,25 @@
     .filter((entry) => entry.folder_id === folderId.value)
     .flatMap((entry): Array<Omit<BinderRow, 'available'>> => {
       const card = cardForEntry(entry);
-      return card ? [{ entry, card }] : [];
+      if (!card) return [];
+      const manual = entry.set_id === 'manual-collection'
+        ? collectionStore.manualCards.value.find((candidate) => candidate.id === entry.card_id)
+        : null;
+      const set = entry.set_id === 'manual-collection' ? null : getSetById(entry.set_id);
+      const pokedexNumbers = card.pokemon_names
+        .map((pokemonId) => pokedexByPokemonId.get(pokemonId))
+        .filter((number): number is number => number !== undefined);
+      return [{
+        entry,
+        card,
+        releaseDate: manual?.release_date ?? set?.release_date ?? null,
+        pokedexNumber: pokedexNumbers.length
+          ? Math.min(...pokedexNumbers)
+          : manual?.pokemon_name
+            ? pokedexByPokemonName.get(manual.pokemon_name.toLocaleLowerCase()) ?? null
+            : null,
+        price: manual?.estimated_value ?? cardmarketDisplayPrice(card.cardmarket)
+      }];
     }));
   const usedCounts = computed(() => {
     const counts = new Map<string, number>();
@@ -327,9 +363,36 @@
   })));
   const availableRows = computed(() => {
     const query = search.value.trim().toLocaleLowerCase();
-    return rows.value.filter((row) =>
-      !query || row.card.display_name.toLocaleLowerCase().includes(query) || row.card.set_name?.toLocaleLowerCase().includes(query)
-    );
+    return rows.value
+      .filter((row) =>
+        !query || row.card.display_name.toLocaleLowerCase().includes(query) || row.card.set_name?.toLocaleLowerCase().includes(query)
+      )
+      .sort((left, right) => {
+        if (selectedCardSort.value === 'pokedex-asc' || selectedCardSort.value === 'pokedex-desc') {
+          if (left.pokedexNumber === null && right.pokedexNumber !== null) return 1;
+          if (left.pokedexNumber !== null && right.pokedexNumber === null) return -1;
+          if (left.pokedexNumber !== null && right.pokedexNumber !== null && left.pokedexNumber !== right.pokedexNumber) {
+            return selectedCardSort.value === 'pokedex-asc'
+              ? left.pokedexNumber - right.pokedexNumber
+              : right.pokedexNumber - left.pokedexNumber;
+          }
+        }
+        if (selectedCardSort.value === 'price-asc' || selectedCardSort.value === 'price-desc') {
+          if (left.price === null && right.price !== null) return 1;
+          if (left.price !== null && right.price === null) return -1;
+          if (left.price !== null && right.price !== null && left.price !== right.price) {
+            return selectedCardSort.value === 'price-asc' ? left.price - right.price : right.price - left.price;
+          }
+        }
+        if (left.releaseDate === null && right.releaseDate !== null) return 1;
+        if (left.releaseDate !== null && right.releaseDate === null) return -1;
+        if (left.releaseDate && right.releaseDate && left.releaseDate !== right.releaseDate) {
+          return selectedCardSort.value === 'release-asc'
+            ? left.releaseDate.localeCompare(right.releaseDate)
+            : right.releaseDate.localeCompare(left.releaseDate);
+        }
+        return left.card.display_name.localeCompare(right.card.display_name);
+      });
   });
   const binderColumns = computed(() => binder.value?.layout === '2x2' ? 2 : 3);
   const assetDimensions = computed(() => Array.from({ length: binderColumns.value }, (_, index) => index + 1));

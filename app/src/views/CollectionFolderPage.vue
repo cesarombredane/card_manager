@@ -19,16 +19,7 @@
         </q-input>
       </div>
       <div class="col-12 col-sm-6 col-md-4">
-        <q-select
-          v-model="selectedSort"
-          :options="sortOptions"
-          emit-value
-          map-options
-          dark
-          dense
-          outlined
-          label="Sort by"
-        />
+        <card-sort-selector v-model="selectedSort" />
       </div>
       <div class="col-12 col-md-auto">
         <q-btn color="primary" text-color="black" icon="add_photo_alternate" label="Add manual card" no-caps @click="showManualCardDialog = true" />
@@ -155,9 +146,10 @@
   import { useRoute, useRouter } from 'vue-router';
   import CardList from '../components/CardList.vue';
   import ManualCardDialog from '../components/ManualCardDialog.vue';
+  import CardSortSelector from '../components/CardSortSelector.vue';
   import { buildDisplayCard, cardmarketDisplayPrice, formatEuroPrice } from '../utils/cardDisplay';
   import type { DisplayCard } from '../utils/cardDisplay';
-  import { getCardById, getLanguages, getSetById } from '../utils/dataManagement';
+  import { getCardById, getLanguages, getPokemon, getSetById } from '../utils/dataManagement';
   import { localizedValue } from '../utils/localization';
   import { cardConditions, collectionStore } from '../utils/collection';
   import type { CardCondition, CollectionEntry, CollectionFolder } from '../utils/collection';
@@ -165,28 +157,20 @@
   import { manualImageStore } from '../utils/manualImages';
   import { formatFrenchDate, parseFrenchDate } from '../utils/dates';
   import { binderStore } from '../utils/binders';
+  import type { CardSort } from '../utils/cardSorting';
 
   type CollectionRow = {
     entry: CollectionEntry;
     card: DisplayCard;
     releaseDate: string | null;
+    pokedexNumber: number | null;
     unitPrice: number | null;
     totalValue: number;
   };
-  type CollectionSort = 'name-asc' | 'release-desc' | 'release-asc' | 'price-asc' | 'price-desc';
-
-  const sortOptions: { label: string; value: CollectionSort }[] = [
-    { label: 'Name: A to Z', value: 'name-asc' },
-    { label: 'Release date: newest first', value: 'release-desc' },
-    { label: 'Release date: oldest first', value: 'release-asc' },
-    { label: 'Price: cheapest first', value: 'price-asc' },
-    { label: 'Price: most expensive first', value: 'price-desc' }
-  ];
-
   const route = useRoute();
   const router = useRouter();
   const search = ref('');
-  const selectedSort = ref<CollectionSort>('name-asc');
+  const selectedSort = ref<CardSort>('release-desc');
   const entryToDelete = ref<CollectionRow | null>(null);
   const showManualCardDialog = ref(false);
   const showEditDialog = ref(false);
@@ -221,6 +205,12 @@
     value: candidate.id
   })));
   const languageNames = new Map(getLanguages().map((language) => [language.id, language.name]));
+  const pokemon = getPokemon();
+  const pokedexByPokemonId = new Map(pokemon.map((entry) => [entry.id, entry.pokedex_id]));
+  const pokedexByPokemonName = new Map(pokemon.flatMap((entry) =>
+    [entry.name, ...Object.values(entry.names).filter((name): name is string => Boolean(name))]
+      .map((name) => [name.toLocaleLowerCase(), entry.pokedex_id] as const)
+  ));
   const editLanguageOptions = computed(() => {
     if (!editingEntry.value) return [];
     if (editingEntry.value.entry.set_id === 'manual-collection') {
@@ -281,6 +271,9 @@
             estimated_value: manualCard.estimated_value
           },
           releaseDate: manualCard.release_date,
+          pokedexNumber: manualCard.pokemon_name
+            ? pokedexByPokemonName.get(manualCard.pokemon_name.toLocaleLowerCase()) ?? null
+            : null,
           unitPrice: manualCard.estimated_value,
           totalValue: (manualCard.estimated_value ?? 0) * entry.quantity
         }];
@@ -293,10 +286,14 @@
       const setName = set ? localizedValue(set.name, languageId) ?? set.id : null;
       const displayCard = buildDisplayCard(card, variant, languageId, setName);
       const unitPrice = cardmarketDisplayPrice(variant.cardmarket);
+      const pokedexNumbers = (card.pokemon ?? [])
+        .map((pokemonId) => pokedexByPokemonId.get(pokemonId))
+        .filter((number): number is number => number !== undefined);
       return [{
         entry,
         card: displayCard,
         releaseDate: set?.release_date ?? null,
+        pokedexNumber: pokedexNumbers.length ? Math.min(...pokedexNumbers) : null,
         unitPrice,
         totalValue: (unitPrice ?? 0) * entry.quantity
       }];
@@ -322,6 +319,15 @@
           if (left.releaseDate !== null && right.releaseDate !== null) {
             const comparison = left.releaseDate.localeCompare(right.releaseDate);
             if (comparison !== 0) return selectedSort.value === 'release-asc' ? comparison : -comparison;
+          }
+        }
+        if (selectedSort.value === 'pokedex-asc' || selectedSort.value === 'pokedex-desc') {
+          if (left.pokedexNumber === null && right.pokedexNumber !== null) return 1;
+          if (left.pokedexNumber !== null && right.pokedexNumber === null) return -1;
+          if (left.pokedexNumber !== null && right.pokedexNumber !== null && left.pokedexNumber !== right.pokedexNumber) {
+            return selectedSort.value === 'pokedex-asc'
+              ? left.pokedexNumber - right.pokedexNumber
+              : right.pokedexNumber - left.pokedexNumber;
           }
         }
         return left.card.display_name.localeCompare(right.card.display_name);

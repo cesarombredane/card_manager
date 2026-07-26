@@ -118,16 +118,7 @@
         </q-select>
       </div>
       <div class="col-12 col-sm-6 col-md-4">
-        <q-select
-          v-model="selectedSort"
-          :options="sortOptions"
-          emit-value
-          map-options
-          dark
-          dense
-          outlined
-          label="Sort by"
-        />
+        <card-sort-selector v-model="selectedSort" />
       </div>
       <div class="col-12 col-sm-auto">
         <q-checkbox v-model="includeSpecialForms" dark label="Include regional and Mega forms" />
@@ -157,6 +148,7 @@
   // import components
   import LanguageSelector from '../components/LanguageSelector.vue';
   import CardList from '../components/CardList.vue';
+  import CardSortSelector from '../components/CardSortSelector.vue';
 
   // import utils
   import { getCards, getPokemon, getSetById, getSets } from '../utils/dataManagement';
@@ -166,6 +158,7 @@
   import type { Card, Pokemon, Set } from '../utils/types';
   import { uniqueValues } from '../utils/arrayUtils';
   import type { AppState } from '../store';
+  import type { CardSort } from '../utils/cardSorting';
 
 
   /* constant vars */
@@ -174,16 +167,6 @@
 
   // Number of extra card results added when clicking show more.
   const visibleCardStep = 12;
-
-  type CardSort = 'date-desc' | 'date-asc' | 'price-asc' | 'price-desc';
-
-  // Supported result ordering options.
-  const sortOptions: { label: string; value: CardSort }[] = [
-    { label: 'Release date: newest first', value: 'date-desc' },
-    { label: 'Release date: oldest first', value: 'date-asc' },
-    { label: 'Price: cheapest first', value: 'price-asc' },
-    { label: 'Price: most expensive first', value: 'price-desc' }
-  ];
 
   // Current route used to read deep-linked filters.
   const route = useRoute();
@@ -208,6 +191,7 @@
 
   // Release dates indexed once for efficient card sorting.
   const setReleaseDates = new Map<string, string>(sets.map((set) => [set.id, set.release_date]));
+  const pokedexByPokemonId = new Map<string, number>(pokemon.map((entry) => [entry.id, entry.pokedex_id]));
 
 
   /* methods */
@@ -242,7 +226,7 @@
   const selectedRarities = ref<string[]>([...rarityOptions]);
 
   // Current result ordering, newest releases first by default.
-  const selectedSort = ref<CardSort>('date-desc');
+  const selectedSort = ref<CardSort>('release-desc');
 
   // Whether regional and Mega forms are available in Pokemon results.
   const includeSpecialForms = ref<boolean>(false);
@@ -322,6 +306,23 @@
       .filter((card) => !selectedPokemon.value || card.pokemon_names.some((pokemonId) => selectedPokemonIds.value.has(pokemonId)))
       .filter((card) => selectedRarities.value.includes(card.rarity))
       .sort((a, b) => {
+        if (selectedSort.value === 'pokedex-asc' || selectedSort.value === 'pokedex-desc') {
+          const leftNumbers = a.pokemon_names
+            .map((pokemonId) => pokedexByPokemonId.get(pokemonId))
+            .filter((number): number is number => number !== undefined);
+          const rightNumbers = b.pokemon_names
+            .map((pokemonId) => pokedexByPokemonId.get(pokemonId))
+            .filter((number): number is number => number !== undefined);
+          const leftNumber = leftNumbers.length ? Math.min(...leftNumbers) : null;
+          const rightNumber = rightNumbers.length ? Math.min(...rightNumbers) : null;
+          if (leftNumber === null && rightNumber !== null) return 1;
+          if (leftNumber !== null && rightNumber === null) return -1;
+          if (leftNumber !== null && rightNumber !== null && leftNumber !== rightNumber) {
+            return selectedSort.value === 'pokedex-asc'
+              ? leftNumber - rightNumber
+              : rightNumber - leftNumber;
+          }
+        }
         if (selectedSort.value === 'price-asc' || selectedSort.value === 'price-desc') {
           const leftPrice = cardmarketDisplayPrice(a.cardmarket);
           const rightPrice = cardmarketDisplayPrice(b.cardmarket);
@@ -335,7 +336,7 @@
         }
 
         const dateComparison: number = (setReleaseDates.get(a.set_id) ?? '').localeCompare(setReleaseDates.get(b.set_id) ?? '');
-        const directedDateComparison: number = selectedSort.value === 'date-asc' ? dateComparison : -dateComparison;
+        const directedDateComparison: number = selectedSort.value === 'release-asc' ? dateComparison : -dateComparison;
 
         return directedDateComparison
           || (a.set_name ?? '').localeCompare(b.set_name ?? '')
