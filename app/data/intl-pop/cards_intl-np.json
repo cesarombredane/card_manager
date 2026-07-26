@@ -16,6 +16,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/1.webp",
@@ -25,14 +26,28 @@
         }
       },
       {
-        "id": "holo",
+        "id": "holo-cosmos",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/1.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "foil": "cosmos"
+      },
+      {
+        "id": "normal-no_e_reader",
+        "type": "normal",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-np/en/1.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "subtype": "no-e-reader"
       }
     ],
     "hp": 120,
@@ -82,6 +97,7 @@
     "variants": [
       {
         "id": "reverse_holo",
+        "type": "reverse_holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/10.webp",
@@ -148,14 +164,32 @@
     "regulation_mark": null,
     "variants": [
       {
-        "id": "stamped",
+        "id": "stamped-winner",
+        "type": "stamped",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/11.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "stamps": [
+          "winner"
+        ]
+      },
+      {
+        "id": "stamped-winner-2",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-np/en/11.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "winner"
+        ]
       }
     ],
     "hp": 70,
@@ -220,6 +254,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/12.webp",
@@ -229,14 +264,18 @@
         }
       },
       {
-        "id": "stamped",
+        "id": "stamped-10th_anniversary",
+        "type": "stamped",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/12.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "stamps": [
+          "10th-anniversary"
+        ]
       }
     ],
     "hp": 50,
@@ -296,6 +335,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/13.webp",
@@ -359,6 +399,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/14.webp",
@@ -422,6 +463,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/15.webp",
@@ -486,6 +528,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/16.webp",
@@ -495,14 +538,16 @@
         }
       },
       {
-        "id": "holo",
+        "id": "holo-cosmos",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/16.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "foil": "cosmos"
       }
     ],
     "hp": 40,
@@ -564,6 +609,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/17.webp",
@@ -573,14 +619,16 @@
         }
       },
       {
-        "id": "holo",
+        "id": "holo-cosmos",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/17.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "foil": "cosmos"
       }
     ],
     "hp": 50,
@@ -627,6 +675,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/18.webp",
@@ -636,14 +685,16 @@
         }
       },
       {
-        "id": "holo",
+        "id": "holo-cosmos",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/18.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "foil": "cosmos"
       }
     ],
     "hp": 50,
@@ -700,6 +751,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/19.webp",
@@ -709,14 +761,16 @@
         }
       },
       {
-        "id": "holo",
+        "id": "holo-cosmos",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/19.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "foil": "cosmos"
       }
     ],
     "hp": 50,
@@ -772,6 +826,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/2.webp",
@@ -781,14 +836,28 @@
         }
       },
       {
-        "id": "holo",
+        "id": "holo-cosmos",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/2.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "foil": "cosmos"
+      },
+      {
+        "id": "normal-no_e_reader",
+        "type": "normal",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-np/en/2.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "subtype": "no-e-reader"
       }
     ],
     "hp": 120,
@@ -837,6 +906,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/20.webp",
@@ -894,6 +964,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/21.webp",
@@ -958,6 +1029,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/22.webp",
@@ -967,14 +1039,18 @@
         }
       },
       {
-        "id": "stamped",
+        "id": "stamped-winner",
+        "type": "stamped",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/22.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "stamps": [
+          "winner"
+        ]
       }
     ],
     "hp": 50,
@@ -1026,14 +1102,18 @@
     "regulation_mark": null,
     "variants": [
       {
-        "id": "stamped",
+        "id": "stamped-stadium_challenge",
+        "type": "stamped",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/23.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "stamps": [
+          "stadium-challenge"
+        ]
       }
     ],
     "hp": 80,
@@ -1099,6 +1179,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/24.webp",
@@ -1108,14 +1189,18 @@
         }
       },
       {
-        "id": "stamped",
+        "id": "stamped-winner",
+        "type": "stamped",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/24.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "stamps": [
+          "winner"
+        ]
       }
     ],
     "hp": 70,
@@ -1175,6 +1260,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/25.webp",
@@ -1184,14 +1270,18 @@
         }
       },
       {
-        "id": "stamped",
+        "id": "stamped-winner",
+        "type": "stamped",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/25.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "stamps": [
+          "winner"
+        ]
       }
     ],
     "hp": 120,
@@ -1269,14 +1359,108 @@
     "regulation_mark": null,
     "variants": [
       {
-        "id": "stamped",
+        "id": "stamped-worlds_2004",
+        "type": "stamped",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/26.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "stamps": [
+          "worlds-2004"
+        ]
+      },
+      {
+        "id": "stamped-worlds_2004-staff",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-np/en/26.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "worlds-2004",
+          "staff"
+        ]
+      },
+      {
+        "id": "stamped-worlds_2004-finalist",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-np/en/26.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "worlds-2004",
+          "finalist"
+        ]
+      },
+      {
+        "id": "stamped-worlds_2004-quarter_finalist",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-np/en/26.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "worlds-2004",
+          "quarter-finalist"
+        ]
+      },
+      {
+        "id": "stamped-worlds_2004-semi_finalist",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-np/en/26.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "worlds-2004",
+          "semi-finalist"
+        ]
+      },
+      {
+        "id": "stamped-worlds_2004-top_sixteen",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-np/en/26.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "worlds-2004",
+          "top-sixteen"
+        ]
+      },
+      {
+        "id": "stamped-worlds_2004-top_thirty_two",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-np/en/26.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "worlds-2004",
+          "top-thirty-two"
+        ]
       }
     ]
   },
@@ -1295,14 +1479,108 @@
     "regulation_mark": null,
     "variants": [
       {
-        "id": "stamped",
+        "id": "stamped-worlds_2005",
+        "type": "stamped",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/27.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "stamps": [
+          "worlds-2005"
+        ]
+      },
+      {
+        "id": "stamped-worlds_2005-staff",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-np/en/27.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "worlds-2005",
+          "staff"
+        ]
+      },
+      {
+        "id": "stamped-worlds_2005-finalist",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-np/en/27.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "worlds-2005",
+          "finalist"
+        ]
+      },
+      {
+        "id": "stamped-worlds_2005-quarter_finalist",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-np/en/27.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "worlds-2005",
+          "quarter-finalist"
+        ]
+      },
+      {
+        "id": "stamped-worlds_2005-semi_finalist",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-np/en/27.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "worlds-2005",
+          "semi-finalist"
+        ]
+      },
+      {
+        "id": "stamped-worlds_2005-top_sixteen",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-np/en/27.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "worlds-2005",
+          "top-sixteen"
+        ]
+      },
+      {
+        "id": "stamped-worlds_2005-top_thirty_two",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-np/en/27.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "worlds-2005",
+          "top-thirty-two"
+        ]
       }
     ],
     "trainer_type": "item"
@@ -1322,6 +1600,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/28.webp",
@@ -1351,6 +1630,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/29.webp",
@@ -1407,6 +1687,7 @@
     "variants": [
       {
         "id": "reverse_holo",
+        "type": "reverse_holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/3.webp",
@@ -1477,6 +1758,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/30.webp",
@@ -1534,6 +1816,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/31.webp",
@@ -1605,6 +1888,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/32.webp",
@@ -1676,6 +1960,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/33.webp",
@@ -1746,6 +2031,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/34.webp",
@@ -1815,6 +2101,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/35.webp",
@@ -1825,6 +2112,7 @@
       },
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/35.webp",
@@ -1888,14 +2176,108 @@
     "regulation_mark": null,
     "variants": [
       {
-        "id": "stamped",
+        "id": "stamped-worlds_2010",
+        "type": "stamped",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/36.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "stamps": [
+          "worlds-2010"
+        ]
+      },
+      {
+        "id": "stamped-worlds_2010-staff",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-np/en/36.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "worlds-2010",
+          "staff"
+        ]
+      },
+      {
+        "id": "stamped-worlds_2010-finalist",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-np/en/36.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "worlds-2010",
+          "finalist"
+        ]
+      },
+      {
+        "id": "stamped-worlds_2010-quarter_finalist",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-np/en/36.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "worlds-2010",
+          "quarter-finalist"
+        ]
+      },
+      {
+        "id": "stamped-worlds_2010-semi_finalist",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-np/en/36.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "worlds-2010",
+          "semi-finalist"
+        ]
+      },
+      {
+        "id": "stamped-worlds_2010-top_sixteen",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-np/en/36.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "worlds-2010",
+          "top-sixteen"
+        ]
+      },
+      {
+        "id": "stamped-worlds_2010-top_thirty_two",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-np/en/36.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "worlds-2010",
+          "top-thirty-two"
+        ]
       }
     ],
     "trainer_type": "item"
@@ -1918,6 +2300,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/37.webp",
@@ -1990,6 +2373,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/38.webp",
@@ -2062,6 +2446,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/39.webp",
@@ -2143,14 +2528,32 @@
     "regulation_mark": null,
     "variants": [
       {
-        "id": "stamped",
+        "id": "stamped-winner",
+        "type": "stamped",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/4.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "stamps": [
+          "winner"
+        ]
+      },
+      {
+        "id": "stamped-winner-2",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-np/en/4.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "winner"
+        ]
       }
     ],
     "hp": 70,
@@ -2225,6 +2628,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/40.webp",
@@ -2289,14 +2693,18 @@
     "regulation_mark": null,
     "variants": [
       {
-        "id": "stamped",
+        "id": "stamped-pop_tournament",
+        "type": "stamped",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/5.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "stamps": [
+          "pop-tournament"
+        ]
       }
     ],
     "hp": 50,
@@ -2356,14 +2764,18 @@
     "regulation_mark": null,
     "variants": [
       {
-        "id": "stamped",
+        "id": "stamped-pop_tournament",
+        "type": "stamped",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/6.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "stamps": [
+          "pop-tournament"
+        ]
       }
     ],
     "hp": 40,
@@ -2423,14 +2835,18 @@
     "regulation_mark": null,
     "variants": [
       {
-        "id": "stamped",
+        "id": "stamped-pop_tournament",
+        "type": "stamped",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/7.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "stamps": [
+          "pop-tournament"
+        ]
       }
     ],
     "hp": 40,
@@ -2494,6 +2910,7 @@
     "variants": [
       {
         "id": "reverse_holo",
+        "type": "reverse_holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/8.webp",
@@ -2558,14 +2975,32 @@
     "regulation_mark": null,
     "variants": [
       {
-        "id": "stamped",
+        "id": "stamped-winner",
+        "type": "stamped",
         "images": {
           "de": "",
           "en": "/images/cards/intl-np/en/9.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "stamps": [
+          "winner"
+        ]
+      },
+      {
+        "id": "stamped-winner-2",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-np/en/9.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "winner"
+        ]
       }
     ],
     "hp": 70,

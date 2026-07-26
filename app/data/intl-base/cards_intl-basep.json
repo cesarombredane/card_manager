@@ -16,6 +16,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/1.webp",
@@ -25,14 +26,46 @@
         }
       },
       {
-        "id": "stamped",
+        "id": "stamped-1st_edition_error",
+        "type": "stamped",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/1.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "stamps": [
+          "1st-edition-error"
+        ]
+      },
+      {
+        "id": "stamped-pikachu_tail",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-basep/en/1.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "pikachu-tail"
+        ]
+      },
+      {
+        "id": "stamped-grey_star",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-basep/en/1.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "grey-star"
+        ]
       }
     ],
     "hp": 60,
@@ -95,6 +128,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/10.webp",
@@ -157,24 +191,30 @@
     "regulation_mark": null,
     "variants": [
       {
-        "id": "holo",
+        "id": "holo-cosmos",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/11.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "foil": "cosmos"
       },
       {
-        "id": "stamped",
+        "id": "stamped-jr_stamp_rally",
+        "type": "stamped",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/11.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "stamps": [
+          "jr-stamp-rally"
+        ]
       }
     ],
     "hp": 30,
@@ -227,6 +267,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/12.webp",
@@ -297,6 +338,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/13.webp",
@@ -360,6 +402,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/14.webp",
@@ -432,6 +475,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/15.webp",
@@ -508,6 +552,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/16.webp",
@@ -537,14 +582,28 @@
     "regulation_mark": null,
     "variants": [
       {
-        "id": "holo",
+        "id": "holo-cosmos",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/17.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "foil": "cosmos"
+      },
+      {
+        "id": "holo-missing_hp",
+        "type": "holo",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-basep/en/17.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "subtype": "missing-hp"
       }
     ],
     "hp": 60,
@@ -615,6 +674,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/18.webp",
@@ -677,6 +737,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/19.webp",
@@ -740,14 +801,32 @@
     "regulation_mark": null,
     "variants": [
       {
-        "id": "stamped",
+        "id": "stamped-1st_movie_inverted",
+        "type": "stamped",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/2.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "stamps": [
+          "1st-movie-inverted"
+        ]
+      },
+      {
+        "id": "stamped-1st_movie",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-basep/en/2.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "1st-movie"
+        ]
       }
     ],
     "hp": 60,
@@ -816,6 +895,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/20.webp",
@@ -890,6 +970,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/21.webp",
@@ -897,6 +978,18 @@
           "fr": "",
           "it": ""
         }
+      },
+      {
+        "id": "normal-aoki_error",
+        "type": "normal",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-basep/en/21.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "subtype": "aoki-error"
       }
     ],
     "hp": 70,
@@ -952,6 +1045,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/22.webp",
@@ -959,6 +1053,18 @@
           "fr": "",
           "it": ""
         }
+      },
+      {
+        "id": "normal-aoki_error",
+        "type": "normal",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-basep/en/22.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "subtype": "aoki-error"
       }
     ],
     "hp": 70,
@@ -1014,6 +1120,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/23.webp",
@@ -1021,6 +1128,18 @@
           "fr": "",
           "it": ""
         }
+      },
+      {
+        "id": "normal-aoki_error",
+        "type": "normal",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-basep/en/23.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "subtype": "aoki-error"
       }
     ],
     "hp": 70,
@@ -1075,24 +1194,30 @@
     "regulation_mark": null,
     "variants": [
       {
-        "id": "stamped",
+        "id": "stamped-pikachu_tail",
+        "type": "stamped",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/24.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "stamps": [
+          "pikachu-tail"
+        ]
       },
       {
-        "id": "holo",
+        "id": "holo-cosmos",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/24.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "foil": "cosmos"
       }
     ],
     "hp": 50,
@@ -1146,17 +1271,22 @@
     "regulation_mark": null,
     "variants": [
       {
-        "id": "stamped",
+        "id": "stamped-pikachu_tail",
+        "type": "stamped",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/25.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "stamps": [
+          "pikachu-tail"
+        ]
       },
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/25.webp",
@@ -1232,17 +1362,22 @@
     "regulation_mark": null,
     "variants": [
       {
-        "id": "stamped",
+        "id": "stamped-pikachu_tail",
+        "type": "stamped",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/26.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "stamps": [
+          "pikachu-tail"
+        ]
       },
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/26.webp",
@@ -1313,17 +1448,22 @@
     "regulation_mark": null,
     "variants": [
       {
-        "id": "stamped",
+        "id": "stamped-pikachu_tail",
+        "type": "stamped",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/27.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "stamps": [
+          "pikachu-tail"
+        ]
       },
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/27.webp",
@@ -1392,17 +1532,22 @@
     "regulation_mark": null,
     "variants": [
       {
-        "id": "stamped",
+        "id": "stamped-pikachu_tail",
+        "type": "stamped",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/28.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "stamps": [
+          "pikachu-tail"
+        ]
       },
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/28.webp",
@@ -1461,6 +1606,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/29.webp",
@@ -1521,14 +1667,32 @@
     "regulation_mark": null,
     "variants": [
       {
-        "id": "stamped",
+        "id": "stamped-1st_movie_inverted",
+        "type": "stamped",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/3.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "stamps": [
+          "1st-movie-inverted"
+        ]
+      },
+      {
+        "id": "stamped-1st_movie",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-basep/en/3.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "1st-movie"
+        ]
       }
     ],
     "hp": 70,
@@ -1595,6 +1759,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/30.webp",
@@ -1670,6 +1835,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/31.webp",
@@ -1723,6 +1889,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/32.webp",
@@ -1789,6 +1956,7 @@
     "variants": [
       {
         "id": "reverse_holo",
+        "type": "reverse_holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/33.webp",
@@ -1874,6 +2042,7 @@
     "variants": [
       {
         "id": "reverse_holo",
+        "type": "reverse_holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/34.webp",
@@ -1933,6 +2102,7 @@
     "variants": [
       {
         "id": "reverse_holo",
+        "type": "reverse_holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/35.webp",
@@ -1986,6 +2156,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/36.webp",
@@ -2039,6 +2210,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/37.webp",
@@ -2116,6 +2288,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/38.webp",
@@ -2173,6 +2346,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/39.webp",
@@ -2247,14 +2421,46 @@
     "regulation_mark": null,
     "variants": [
       {
-        "id": "stamped",
+        "id": "stamped-1st_movie_inverted",
+        "type": "stamped",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/4.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "stamps": [
+          "1st-movie-inverted"
+        ]
+      },
+      {
+        "id": "stamped-1st_movie",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-basep/en/4.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "1st-movie"
+        ]
+      },
+      {
+        "id": "stamped-pikachu_tail",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-basep/en/4.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "pikachu-tail"
+        ]
       }
     ],
     "hp": 50,
@@ -2321,6 +2527,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/40.webp",
@@ -2349,6 +2556,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/41.webp",
@@ -2377,6 +2585,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/42.webp",
@@ -2407,6 +2616,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/43.webp",
@@ -2482,12 +2692,26 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/44.webp",
           "es": "",
           "fr": "",
           "it": ""
+        },
+        "cardmarket": {
+          "product_id": 275463,
+          "currency": "EUR",
+          "updated_at": "2026-07-26T02:44:32+0200",
+          "price_kind": "standard",
+          "average": 16.83,
+          "low": 11.9,
+          "trend": 19.25,
+          "average_1d": 14.95,
+          "average_7d": 16.14,
+          "average_30d": 14.74,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products/Singles/Wizards-Black-Star-Promos/Magmar-44"
         }
       }
     ],
@@ -2550,6 +2774,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/45.webp",
@@ -2613,6 +2838,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/46.webp",
@@ -2682,6 +2908,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/47.webp",
@@ -2738,6 +2965,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/48.webp",
@@ -2797,6 +3025,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/49.webp",
@@ -2862,14 +3091,32 @@
     "regulation_mark": null,
     "variants": [
       {
-        "id": "stamped",
+        "id": "stamped-1st_movie_inverted",
+        "type": "stamped",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/5.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "stamps": [
+          "1st-movie-inverted"
+        ]
+      },
+      {
+        "id": "stamped-1st_movie",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-basep/en/5.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "1st-movie"
+        ]
       }
     ],
     "hp": 90,
@@ -2927,14 +3174,18 @@
     "regulation_mark": null,
     "variants": [
       {
-        "id": "stamped",
+        "id": "stamped-pokemon_4_ever",
+        "type": "stamped",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/50.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "stamps": [
+          "pokemon-4-ever"
+        ]
       }
     ],
     "hp": 50,
@@ -2982,6 +3233,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/51.webp",
@@ -2991,14 +3243,18 @@
         }
       },
       {
-        "id": "stamped",
+        "id": "stamped-pokemon_center_ny",
+        "type": "stamped",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/51.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "stamps": [
+          "pokemon-center-ny"
+        ]
       }
     ],
     "hp": 60,
@@ -3062,6 +3318,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/52.webp",
@@ -3071,14 +3328,18 @@
         }
       },
       {
-        "id": "stamped",
+        "id": "stamped-pokemon_center_ny",
+        "type": "stamped",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/52.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "stamps": [
+          "pokemon-center-ny"
+        ]
       }
     ],
     "hp": 80,
@@ -3133,14 +3394,18 @@
     "regulation_mark": null,
     "variants": [
       {
-        "id": "stamped",
+        "id": "stamped-pokemon_4_ever",
+        "type": "stamped",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/53.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "stamps": [
+          "pokemon-4-ever"
+        ]
       }
     ],
     "hp": 70,
@@ -3190,6 +3455,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/6.webp",
@@ -3269,6 +3535,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/7.webp",
@@ -3346,6 +3613,7 @@
     "variants": [
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/8.webp",
@@ -3353,6 +3621,18 @@
           "fr": "",
           "it": ""
         }
+      },
+      {
+        "id": "normal-glossy",
+        "type": "normal",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-basep/en/8.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "subtype": "glossy"
       }
     ],
     "hp": 50,
@@ -3421,6 +3701,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-basep/en/9.webp",

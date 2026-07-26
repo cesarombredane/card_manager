@@ -37,6 +37,9 @@
       <div class="text-caption text-grey-5 ellipsis overflow-hidden text-no-wrap">
         <span v-if="card.hp">{{ card.hp }} HP · </span>{{ card.illustrator ?? 'Unknown illustrator' }}
       </div>
+      <div v-if="displayPrice !== null" class="text-caption text-yellow-6 text-weight-bold">
+        {{ formatEuroPrice(displayPrice) }}
+      </div>
       <div class="row no-wrap q-gutter-xs q-mt-auto overflow-hidden">
         <q-badge color="grey-9" text-color="white" class="ellipsis overflow-hidden text-no-wrap">
           {{ card.category }}
@@ -53,11 +56,14 @@
 </template>
 
 <script setup lang="ts">
-  import { cardImageRatio, formatCardValue } from '../utils/cardDisplay';
+  import { computed } from 'vue';
+  import { cardImageRatio, cardmarketDisplayPrice, formatCardValue, formatEuroPrice } from '../utils/cardDisplay';
   import type { DisplayCard } from '../utils/cardDisplay';
 
-  defineProps<{ card: DisplayCard }>();
+  const props = defineProps<{ card: DisplayCard }>();
   defineEmits<{ click: [card: DisplayCard] }>();
+
+  const displayPrice = computed<number | null>(() => cardmarketDisplayPrice(props.card.cardmarket));
 </script>
 
 <style scoped>

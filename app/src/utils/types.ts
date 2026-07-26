@@ -101,8 +101,27 @@ export type CardAttack = {
 // A specific collectible version of a card.
 export type CardVariant = {
   id: string;
-  stamp?: string;
+  type?: string;
+  subtype?: string;
+  foil?: string;
+  stamps?: string[];
+  language_ids?: string[];
   images: Record<string, string>;
+  cardmarket?: CardmarketPrice;
+};
+
+export type CardmarketPrice = {
+  product_id: number;
+  currency: 'EUR';
+  updated_at: string;
+  price_kind: 'standard' | 'holo';
+  average: number | null;
+  low: number | null;
+  trend: number | null;
+  average_1d: number | null;
+  average_7d: number | null;
+  average_30d: number | null;
+  url: string | null;
 };
 
 // A card definition inside a set.

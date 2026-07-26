@@ -19,6 +19,8 @@ from urllib.error import HTTPError, URLError
 from urllib.parse import quote
 from urllib.request import Request, urlopen
 
+from cardmarket_prices import download_price_guide, index_price_guide, normalized_price, product_url
+
 
 SOURCE_FOLDERS = {
     "data": {
@@ -503,31 +505,109 @@ def normalize_variant_id(variant: Any) -> str:
     return VARIANT_MAP.get(variant_type, variant_type or "normal")
 
 
-def normalize_variants(card: dict[str, Any], language_ids: list[str]) -> list[dict[str, Any]]:
+def variant_identifier(variant: Any) -> str:
+    """Build a stable, descriptive id for one detailed upstream variant."""
+    if not isinstance(variant, dict):
+        return normalize_variant_id(variant)
+
+    parts = [normalize_variant_id(variant)]
+    subtype = normalize_enum(variant.get("subtype")) if variant.get("subtype") else ""
+    foil = normalize_enum(variant.get("foil")) if variant.get("foil") else ""
+    stamps = variant.get("stamp") or []
+    if isinstance(stamps, str):
+        stamps = [stamps]
+    if subtype:
+        parts.append(subtype)
+    if foil and foil not in parts:
+        parts.append(foil)
+    parts.extend(normalize_enum(stamp) for stamp in stamps if stamp)
+    return "-".join(dict.fromkeys(part for part in parts if part))
+
+
+def normalize_variants(
+    card: dict[str, Any],
+    language_ids: list[str],
+    card_number: str,
+    set_name: str,
+    set_abbreviation: str,
+    cardmarket_updated_at: str,
+    cardmarket_prices: dict[int, dict[str, Any]],
+) -> list[dict[str, Any]]:
     """Convert upstream variant data into the app variant list."""
     variants = card.get("variants")
-    variant_ids: list[str] = []
-
+    upstream_variants: list[Any]
     if isinstance(variants, list):
-        variant_ids = [normalize_variant_id(variant) for variant in variants]
+        upstream_variants = variants
     elif isinstance(variants, dict):
-        variant_ids = [
-            normalize_variant_id(variant_key)
-            for variant_key, enabled in variants.items()
-            if enabled
-        ]
+        upstream_variants = [variant_key for variant_key, enabled in variants.items() if enabled]
+    else:
+        upstream_variants = ["normal"]
 
-    if not variant_ids:
-        variant_ids = ["normal"]
+    card_market_id = (card.get("thirdParty") or {}).get("cardmarket")
+    output: list[dict[str, Any]] = []
+    used_ids: set[str] = set()
+    for upstream_variant in upstream_variants:
+        variant_type = normalize_variant_id(upstream_variant)
+        variant_id = variant_identifier(upstream_variant)
+        third_party = upstream_variant.get("thirdParty") if isinstance(upstream_variant, dict) else None
+        variant_market_id = (third_party or {}).get("cardmarket")
+        product_id = variant_market_id if isinstance(variant_market_id, int) else card_market_id
 
-    unique_variant_ids = list(dict.fromkeys(variant_ids))
-    return [
-        {
+        if variant_id in used_ids:
+            suffix = str(product_id) if isinstance(product_id, int) else str(len(output) + 1)
+            variant_id = f"{variant_id}-{suffix}"
+        used_ids.add(variant_id)
+
+        normalized: dict[str, Any] = {
             "id": variant_id,
+            "type": variant_type,
             "images": {language_id: "" for language_id in language_ids},
         }
-        for variant_id in unique_variant_ids
-    ]
+        if isinstance(upstream_variant, dict):
+            for source_key, output_key in (("subtype", "subtype"), ("foil", "foil"), ("stamp", "stamps")):
+                value = upstream_variant.get(source_key)
+                if value:
+                    normalized[output_key] = [value] if source_key == "stamp" and isinstance(value, str) else value
+            if upstream_variant.get("languages"):
+                normalized["language_ids"] = [
+                    normalize_language_code(language)
+                    for language in upstream_variant["languages"]
+                ]
+
+        if isinstance(product_id, int):
+            price_row = cardmarket_prices.get(product_id)
+            use_holo_fields = variant_market_id is None and variant_type in {"holo", "reverse_holo"}
+            market_number = f"{set_abbreviation}{card_number}" if set_abbreviation and card_number.isdigit() else card_number
+            market_url = product_url(
+                set_name,
+                str((card.get("name") or {}).get("en") or first_localized_value(card.get("name")) or card_number),
+                market_number,
+            )
+            normalized["cardmarket"] = (
+                normalized_price(
+                    product_id,
+                    price_row,
+                    cardmarket_updated_at,
+                    use_holo_fields=use_holo_fields,
+                    url=market_url,
+                )
+                if price_row
+                else {
+                    "product_id": product_id,
+                    "currency": "EUR",
+                    "updated_at": cardmarket_updated_at,
+                    "price_kind": "holo" if use_holo_fields else "standard",
+                    "average": None,
+                    "low": None,
+                    "trend": None,
+                    "average_1d": None,
+                    "average_7d": None,
+                    "average_30d": None,
+                    "url": market_url,
+                }
+            )
+        output.append(normalized)
+    return output
 
 
 def normalize_attack(attack: dict[str, Any]) -> dict[str, Any]:
@@ -546,6 +626,10 @@ def normalize_card(
     language_ids: list[str],
     pokemon_aliases: dict[tuple[int, str, str], str],
     pokemon_name_aliases: dict[tuple[str, str], set[str]],
+    set_name: str,
+    set_abbreviation: str,
+    cardmarket_updated_at: str,
+    cardmarket_prices: dict[int, dict[str, Any]],
 ) -> dict[str, Any]:
     """Convert one upstream card file into the app card shape."""
     raw_card = parse_typescript_object(path)
@@ -588,7 +672,15 @@ def normalize_card(
         "illustrator": raw_card.get("illustrator"),
         "rarity": normalize_enum(raw_card.get("rarity")),
         "regulation_mark": raw_card.get("regulationMark"),
-        "variants": normalize_variants(raw_card, language_ids),
+        "variants": normalize_variants(
+            raw_card,
+            language_ids,
+            number,
+            set_name,
+            set_abbreviation,
+            cardmarket_updated_at,
+            cardmarket_prices,
+        ),
     }
 
     if raw_card.get("hp") is not None:
@@ -969,6 +1061,8 @@ def convert_source_folder(
     output_root: Path,
     pokemon_aliases: dict[tuple[int, str, str], str],
     pokemon_name_aliases: dict[tuple[str, str], set[str]],
+    cardmarket_updated_at: str,
+    cardmarket_prices: dict[int, dict[str, Any]],
 ) -> tuple[list[dict[str, Any]], list[str]]:
     """Convert one TCGdex source folder into per-series app data."""
     source_config = SOURCE_FOLDERS[source_name]
@@ -1004,8 +1098,21 @@ def convert_source_folder(
             language_ids_seen.update(language_ids)
 
             cards = []
+            cardmarket_set_name = str(localized_names.get("en") or first_localized_value(raw_set.get("name")) or set_file.stem)
+            abbreviations = raw_set.get("abbreviations") or {}
+            cardmarket_set_abbreviation = str(abbreviations.get("official") or "")
             for card_file in sorted(set_folder.glob("*.ts"), key=lambda path: path.stem):
-                card = normalize_card(card_file, set_id, language_ids, pokemon_aliases, pokemon_name_aliases)
+                card = normalize_card(
+                    card_file,
+                    set_id,
+                    language_ids,
+                    pokemon_aliases,
+                    pokemon_name_aliases,
+                    cardmarket_set_name,
+                    cardmarket_set_abbreviation,
+                    cardmarket_updated_at,
+                    cardmarket_prices,
+                )
                 restrict_card_languages(card, language_ids)
                 cards.append(card)
 
@@ -1066,6 +1173,16 @@ def build_catalog(args: argparse.Namespace, source_root: Path, commit_sha: str) 
             shutil.rmtree(temporary_root)
     discovered_root.mkdir(parents=True)
 
+    print("Loading Cardmarket price guide")
+    cache_path = project_root / "tcgdex_data" / "cardmarket-price-guide.json"
+    try:
+        price_guide = download_price_guide(cache_path)
+        cardmarket_updated_at, cardmarket_prices = index_price_guide(price_guide)
+        print(f"      Loaded {len(cardmarket_prices)} products ({cardmarket_updated_at or 'unknown date'})")
+    except Exception as error:
+        cardmarket_updated_at, cardmarket_prices = "", {}
+        print(f"      Price guide unavailable; generating links without prices: {error}", file=sys.stderr)
+
     print("[1/3] Converting supported physical-card data")
     phase_started = time.monotonic()
     pokemon_catalog, pokemon_aliases, pokemon_name_aliases = build_pokemon_catalog(source_root)
@@ -1079,6 +1196,8 @@ def build_catalog(args: argparse.Namespace, source_root: Path, commit_sha: str) 
             discovered_root,
             pokemon_aliases,
             pokemon_name_aliases,
+            cardmarket_updated_at,
+            cardmarket_prices,
         )
         all_series.extend(series_rows)
         all_language_ids.update(language_ids)

@@ -18,6 +18,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP01.webp",
@@ -93,6 +94,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP02.webp",
@@ -166,24 +168,30 @@
     "regulation_mark": null,
     "variants": [
       {
-        "id": "holo",
+        "id": "holo-cosmos",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP03.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "foil": "cosmos"
       },
       {
-        "id": "stamped",
+        "id": "stamped-dylan_lefavour",
+        "type": "stamped",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP03.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "stamps": [
+          "dylan-lefavour"
+        ]
       }
     ],
     "hp": 60,
@@ -247,6 +255,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP04.webp",
@@ -324,14 +333,108 @@
     "regulation_mark": null,
     "variants": [
       {
-        "id": "stamped",
+        "id": "stamped-worlds_2007",
+        "type": "stamped",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP05.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "stamps": [
+          "worlds-2007"
+        ]
+      },
+      {
+        "id": "stamped-worlds_2007-finalist",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-dpp/en/DP05.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "worlds-2007",
+          "finalist"
+        ]
+      },
+      {
+        "id": "stamped-worlds_2007-quarter_finalist",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-dpp/en/DP05.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "worlds-2007",
+          "quarter-finalist"
+        ]
+      },
+      {
+        "id": "stamped-worlds_2007-semi_finalist",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-dpp/en/DP05.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "worlds-2007",
+          "semi-finalist"
+        ]
+      },
+      {
+        "id": "stamped-worlds_2007-staff",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-dpp/en/DP05.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "worlds-2007",
+          "staff"
+        ]
+      },
+      {
+        "id": "stamped-worlds_2007-top_sixteen",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-dpp/en/DP05.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "worlds-2007",
+          "top-sixteen"
+        ]
+      },
+      {
+        "id": "stamped-worlds_2007-top_thirty_two",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-dpp/en/DP05.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "worlds-2007",
+          "top-thirty-two"
+        ]
       }
     ],
     "rules_text": {
@@ -358,6 +461,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP06.webp",
@@ -430,6 +534,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP07.webp",
@@ -510,6 +615,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP08.webp",
@@ -602,6 +708,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP09.webp",
@@ -664,6 +771,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP10.webp",
@@ -723,6 +831,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP11.webp",
@@ -784,6 +893,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP12.webp",
@@ -842,6 +952,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP13.webp",
@@ -902,6 +1013,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP14.webp",
@@ -981,6 +1093,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP15.webp",
@@ -1046,24 +1159,30 @@
     "regulation_mark": null,
     "variants": [
       {
-        "id": "holo",
+        "id": "holo-cosmos",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP16.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "foil": "cosmos"
       },
       {
-        "id": "stamped",
+        "id": "stamped-countdown_calendar",
+        "type": "stamped",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP16.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "stamps": [
+          "countdown-calendar"
+        ]
       }
     ],
     "hp": 60,
@@ -1127,6 +1246,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP17.webp",
@@ -1195,6 +1315,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP18.webp",
@@ -1204,14 +1325,18 @@
         }
       },
       {
-        "id": "stamped",
+        "id": "stamped-david_cohen",
+        "type": "stamped",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP18.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "stamps": [
+          "david-cohen"
+        ]
       }
     ],
     "hp": 120,
@@ -1266,6 +1391,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP19.webp",
@@ -1333,12 +1459,26 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP20.webp",
           "es": "",
           "fr": "",
           "it": ""
+        },
+        "cardmarket": {
+          "product_id": 275562,
+          "currency": "EUR",
+          "updated_at": "2026-07-26T02:44:32+0200",
+          "price_kind": "holo",
+          "average": null,
+          "low": null,
+          "trend": 1.79,
+          "average_1d": 1,
+          "average_7d": 2.18,
+          "average_30d": 1.45,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products/Singles/DP-Black-Star-Promos/Magmortar-DP20"
         }
       }
     ],
@@ -1419,6 +1559,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP21.webp",
@@ -1507,6 +1648,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP22.webp",
@@ -1570,6 +1712,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP23.webp",
@@ -1649,7 +1792,20 @@
     "regulation_mark": null,
     "variants": [
       {
+        "id": "holo-cosmos",
+        "type": "holo",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-dpp/en/DP24.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "foil": "cosmos"
+      },
+      {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP24.webp",
@@ -1660,6 +1816,7 @@
       },
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP24.webp",
@@ -1740,14 +1897,108 @@
     "regulation_mark": null,
     "variants": [
       {
-        "id": "stamped",
+        "id": "stamped-worlds_2008",
+        "type": "stamped",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP25.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "stamps": [
+          "worlds-2008"
+        ]
+      },
+      {
+        "id": "stamped-worlds_2008-finalist",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-dpp/en/DP25.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "worlds-2008",
+          "finalist"
+        ]
+      },
+      {
+        "id": "stamped-worlds_2008-quarter_finalist",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-dpp/en/DP25.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "worlds-2008",
+          "quarter-finalist"
+        ]
+      },
+      {
+        "id": "stamped-worlds_2008-semi_finalist",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-dpp/en/DP25.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "worlds-2008",
+          "semi-finalist"
+        ]
+      },
+      {
+        "id": "stamped-worlds_2008-staff",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-dpp/en/DP25.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "worlds-2008",
+          "staff"
+        ]
+      },
+      {
+        "id": "stamped-worlds_2008-top_sixteen",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-dpp/en/DP25.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "worlds-2008",
+          "top-sixteen"
+        ]
+      },
+      {
+        "id": "stamped-worlds_2008-top_thirty_two",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-dpp/en/DP25.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "worlds-2008",
+          "top-thirty-two"
+        ]
       }
     ],
     "rules_text": {
@@ -1774,14 +2025,40 @@
     "regulation_mark": null,
     "variants": [
       {
-        "id": "holo",
+        "id": "holo-cosmos",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP26.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "foil": "cosmos"
+      },
+      {
+        "id": "holo-cracked_ice",
+        "type": "holo",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-dpp/en/DP26.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "foil": "cracked-ice"
+      },
+      {
+        "id": "holo-mirror",
+        "type": "holo",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-dpp/en/DP26.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "foil": "mirror"
       }
     ],
     "hp": 90,
@@ -1861,14 +2138,40 @@
     "regulation_mark": null,
     "variants": [
       {
-        "id": "holo",
+        "id": "holo-cosmos",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP27.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "foil": "cosmos"
+      },
+      {
+        "id": "holo-cracked_ice",
+        "type": "holo",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-dpp/en/DP27.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "foil": "cracked-ice"
+      },
+      {
+        "id": "holo-mirror",
+        "type": "holo",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-dpp/en/DP27.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "foil": "mirror"
       }
     ],
     "hp": 90,
@@ -1943,6 +2246,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP28.webp",
@@ -2004,6 +2308,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP29.webp",
@@ -2085,6 +2390,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP30.webp",
@@ -2147,6 +2453,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP31.webp",
@@ -2188,6 +2495,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP32.webp",
@@ -2281,6 +2589,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP33.webp",
@@ -2356,6 +2665,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP34.webp",
@@ -2446,6 +2756,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP35.webp",
@@ -2524,6 +2835,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP36.webp",
@@ -2608,6 +2920,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP37.webp",
@@ -2676,6 +2989,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP38.webp",
@@ -2744,6 +3058,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP39.webp",
@@ -2808,7 +3123,20 @@
     "regulation_mark": null,
     "variants": [
       {
+        "id": "holo-cosmos",
+        "type": "holo",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-dpp/en/DP40.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "foil": "cosmos"
+      },
+      {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP40.webp",
@@ -2819,6 +3147,7 @@
       },
       {
         "id": "normal",
+        "type": "normal",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP40.webp",
@@ -2901,24 +3230,30 @@
     "regulation_mark": null,
     "variants": [
       {
-        "id": "holo",
+        "id": "holo-cosmos",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP41.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "foil": "cosmos"
       },
       {
-        "id": "stamped",
+        "id": "stamped-tsubasa_nakamura",
+        "type": "stamped",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP41.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "stamps": [
+          "tsubasa-nakamura"
+        ]
       }
     ],
     "hp": 90,
@@ -2970,6 +3305,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP42.webp",
@@ -3052,6 +3388,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP43.webp",
@@ -3130,6 +3467,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP44.webp",
@@ -3215,6 +3553,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP45.webp",
@@ -3281,6 +3620,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP46.webp",
@@ -3338,6 +3678,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP47.webp",
@@ -3401,14 +3742,108 @@
     "regulation_mark": null,
     "variants": [
       {
-        "id": "stamped",
+        "id": "stamped-worlds_2009",
+        "type": "stamped",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP48.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "stamps": [
+          "worlds-2009"
+        ]
+      },
+      {
+        "id": "stamped-worlds_2009-finalist",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-dpp/en/DP48.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "worlds-2009",
+          "finalist"
+        ]
+      },
+      {
+        "id": "stamped-worlds_2009-quarter_finalist",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-dpp/en/DP48.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "worlds-2009",
+          "quarter-finalist"
+        ]
+      },
+      {
+        "id": "stamped-worlds_2009-semi_finalist",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-dpp/en/DP48.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "worlds-2009",
+          "semi-finalist"
+        ]
+      },
+      {
+        "id": "stamped-worlds_2009-staff",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-dpp/en/DP48.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "worlds-2009",
+          "staff"
+        ]
+      },
+      {
+        "id": "stamped-worlds_2009-top_sixteen",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-dpp/en/DP48.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "worlds-2009",
+          "top-sixteen"
+        ]
+      },
+      {
+        "id": "stamped-worlds_2009-top_thirty_two",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-dpp/en/DP48.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "worlds-2009",
+          "top-thirty-two"
+        ]
       }
     ],
     "rules_text": {
@@ -3435,6 +3870,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP49.webp",
@@ -3517,6 +3953,18 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-dpp/en/DP50.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        }
+      },
+      {
+        "id": "holo-2",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP50.webp",
@@ -3582,6 +4030,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP51.webp",
@@ -3643,6 +4092,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP52.webp",
@@ -3711,6 +4161,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP53.webp",
@@ -3744,6 +4195,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP54.webp",
@@ -3776,6 +4228,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP55.webp",
@@ -3810,6 +4263,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-dpp/en/DP56.webp",

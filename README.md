@@ -76,3 +76,14 @@ atomically. Both update commands accept `--overwrite`:
 
 Both update commands regenerate `app/data/coverage.json`. The same report can
 be refreshed independently with `python3 scripts/report_coverage.py`.
+
+Cardmarket prices are included per card variant during a full data update. To
+refresh only those price fields without changing any other catalog data, run:
+
+```sh
+python3 scripts/update_cardmarket_prices.py
+```
+
+The price-only updater downloads Cardmarket's EUR price guide once, updates
+variants that already contain a Cardmarket product ID, and leaves every other
+JSON field unchanged.

@@ -17,6 +17,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-hgssp/en/HGSS01.webp",
@@ -96,6 +97,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-hgssp/en/HGSS02.webp",
@@ -175,6 +177,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-hgssp/en/HGSS03.webp",
@@ -257,6 +260,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-hgssp/en/HGSS04.webp",
@@ -317,6 +321,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-hgssp/en/HGSS05.webp",
@@ -379,6 +384,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-hgssp/en/HGSS06.webp",
@@ -450,6 +456,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-hgssp/en/HGSS07.webp",
@@ -513,6 +520,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-hgssp/en/HGSS08.webp",
@@ -579,6 +587,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-hgssp/en/HGSS09.webp",
@@ -640,14 +649,28 @@
     "regulation_mark": null,
     "variants": [
       {
-        "id": "holo",
+        "id": "holo-cracked_ice",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-hgssp/en/HGSS10.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "foil": "cracked-ice"
+      },
+      {
+        "id": "holo-cosmos",
+        "type": "holo",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-hgssp/en/HGSS10.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "foil": "cosmos"
       }
     ],
     "hp": 80,
@@ -715,14 +738,28 @@
     "regulation_mark": null,
     "variants": [
       {
-        "id": "holo",
+        "id": "holo-cracked_ice",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-hgssp/en/HGSS11.webp",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "foil": "cracked-ice"
+      },
+      {
+        "id": "holo-cosmos",
+        "type": "holo",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-hgssp/en/HGSS11.webp",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "foil": "cosmos"
       }
     ],
     "hp": 90,
@@ -778,6 +815,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-hgssp/en/HGSS12.webp",
@@ -828,6 +866,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-hgssp/en/HGSS13.webp",
@@ -878,6 +917,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-hgssp/en/HGSS14.webp",
@@ -950,6 +990,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-hgssp/en/HGSS15.webp",
@@ -1010,6 +1051,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-hgssp/en/HGSS16.webp",
@@ -1089,6 +1131,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-hgssp/en/HGSS17.webp",
@@ -1165,14 +1208,108 @@
     "regulation_mark": null,
     "variants": [
       {
-        "id": "stamped",
+        "id": "stamped-worlds_2010",
+        "type": "stamped",
         "images": {
           "de": "",
           "en": "",
           "es": "",
           "fr": "",
           "it": ""
-        }
+        },
+        "stamps": [
+          "worlds-2010"
+        ]
+      },
+      {
+        "id": "stamped-worlds_2010-staff",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "worlds-2010",
+          "staff"
+        ]
+      },
+      {
+        "id": "stamped-worlds_2010-finalist",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "worlds-2010",
+          "finalist"
+        ]
+      },
+      {
+        "id": "stamped-worlds_2010-quarter_finalist",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "worlds-2010",
+          "quarter-finalist"
+        ]
+      },
+      {
+        "id": "stamped-worlds_2010-semi_finalist",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "worlds-2010",
+          "semi-finalist"
+        ]
+      },
+      {
+        "id": "stamped-worlds_2010-top_sixteen",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "worlds-2010",
+          "top-sixteen"
+        ]
+      },
+      {
+        "id": "stamped-worlds_2010-top_thirty_two",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "",
+          "es": "",
+          "fr": "",
+          "it": ""
+        },
+        "stamps": [
+          "worlds-2010",
+          "top-thirty-two"
+        ]
       }
     ],
     "rules_text": {
@@ -1198,6 +1335,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-hgssp/en/HGSS19.webp",
@@ -1265,6 +1403,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-hgssp/en/HGSS20.webp",
@@ -1326,6 +1465,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-hgssp/en/HGSS21.webp",
@@ -1387,6 +1527,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-hgssp/en/HGSS22.webp",
@@ -1461,6 +1602,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-hgssp/en/HGSS23.webp",
@@ -1526,6 +1668,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-hgssp/en/HGSS24.webp",
@@ -1600,6 +1743,7 @@
     "variants": [
       {
         "id": "holo",
+        "type": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-hgssp/en/HGSS25.webp",

@@ -94,6 +94,30 @@
                 </q-item-section>
               </q-item>
 
+              <q-item v-if="selectedCardmarket">
+                <q-item-section>
+                  <q-item-label caption class="text-grey-5">Cardmarket price</q-item-label>
+                  <q-item-label v-if="selectedCardmarketPrice !== null" class="text-h6 text-yellow-6 text-weight-bold">
+                    {{ formatEuroPrice(selectedCardmarketPrice) }}
+                  </q-item-label>
+                  <q-item-label v-else>Price unavailable</q-item-label>
+                  <q-item-label caption class="text-grey-4">
+                    <template v-if="selectedCardmarket.low !== null">Low: {{ formatEuroPrice(selectedCardmarket.low) }}</template>
+                    <template v-if="selectedCardmarket.average_30d !== null">
+                      <span v-if="selectedCardmarket.low !== null"> · </span>30-day average: {{ formatEuroPrice(selectedCardmarket.average_30d) }}
+                    </template>
+                    <template v-if="selectedCardmarket.updated_at">
+                      · Updated {{ formatPriceDate(selectedCardmarket.updated_at) }}
+                    </template>
+                  </q-item-label>
+                  <q-item-label v-if="selectedCardmarket.url" class="q-mt-xs">
+                    <a :href="selectedCardmarket.url" target="_blank" rel="noopener noreferrer" class="text-yellow-6">
+                      View on Cardmarket
+                    </a>
+                  </q-item-label>
+                </q-item-section>
+              </q-item>
+
               <q-item>
                 <q-item-section>
                   <q-item-label caption class="text-grey-5">Pokemon</q-item-label>
@@ -168,9 +192,9 @@
   import { getCardById, getPokemon, getSetById } from '../utils/dataManagement';
   import { resolveCardImage } from '../utils/cardImages';
   import type { ResolvedCardImage } from '../utils/cardImages';
-  import { cardImageRatio } from '../utils/cardDisplay';
+  import { cardImageRatio, cardmarketDisplayPrice, formatEuroPrice } from '../utils/cardDisplay';
   import { localizedValue } from '../utils/localization';
-  import type { Card, CardModifier, CardVariant, Pokemon, Set } from '../utils/types';
+  import type { Card, CardmarketPrice, CardModifier, CardVariant, Pokemon, Set } from '../utils/types';
   import type { AppState } from '../store';
 
   /* constant vars */
@@ -201,7 +225,12 @@
 
   /* reactive vars */
   // Currently selected variant used for the large image.
-  const selectedVariantId = ref(currentCard?.variants[0]?.id ?? 'normal');
+  const requestedVariantId: string = String(route.query.variant ?? '');
+  const selectedVariantId = ref(
+    currentCard?.variants.some((variant) => variant.id === requestedVariantId)
+      ? requestedVariantId
+      : currentCard?.variants[0]?.id ?? 'normal'
+  );
 
   // Currently selected language for localized card text and image.
   const selectedLanguageId = computed({
@@ -235,6 +264,10 @@
 
   const selectedImageUrl = computed<string | null>(() => selectedImage.value.url);
 
+  const selectedCardmarket = computed<CardmarketPrice | null>(() => selectedVariant.value?.cardmarket ?? null);
+
+  const selectedCardmarketPrice = computed<number | null>(() => cardmarketDisplayPrice(selectedCardmarket.value));
+
   // Localized card display name.
   const displayName = computed<string>(() => {
     return localizedValue(currentCard?.name ?? {}, selectedLanguageId.value) ?? currentCard?.id ?? 'Unknown card';
@@ -267,6 +300,11 @@
   const modifierLabel = (modifiers: CardModifier[]): string => {
     if (modifiers.length === 0) return 'none';
     return modifiers.map((modifier) => `${modifier.type} ${modifier.value}`).join(', ');
+  };
+
+  const formatPriceDate = (value: string): string => {
+    const date = new Date(value);
+    return Number.isNaN(date.getTime()) ? value : new Intl.DateTimeFormat(undefined, { dateStyle: 'medium' }).format(date);
   };
 
   // Navigates back to the current set detail page.

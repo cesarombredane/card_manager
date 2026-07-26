@@ -160,7 +160,7 @@
 
   // import utils
   import { getCards, getPokemon, getSetById, getSets } from '../utils/dataManagement';
-  import { buildDisplayCard, compareCardNumbers } from '../utils/cardDisplay';
+  import { buildDisplayCard, cardmarketDisplayPrice, compareCardNumbers } from '../utils/cardDisplay';
   import type { DisplayCard } from '../utils/cardDisplay';
   import { localizedValue } from '../utils/localization';
   import type { Card, Pokemon, Set } from '../utils/types';
@@ -175,10 +175,14 @@
   // Number of extra card results added when clicking show more.
   const visibleCardStep = 12;
 
-  // Supported release-date sort directions.
-  const sortOptions: { label: string; value: 'date-desc' | 'date-asc' }[] = [
+  type CardSort = 'date-desc' | 'date-asc' | 'price-asc' | 'price-desc';
+
+  // Supported result ordering options.
+  const sortOptions: { label: string; value: CardSort }[] = [
     { label: 'Release date: newest first', value: 'date-desc' },
-    { label: 'Release date: oldest first', value: 'date-asc' }
+    { label: 'Release date: oldest first', value: 'date-asc' },
+    { label: 'Price: cheapest first', value: 'price-asc' },
+    { label: 'Price: most expensive first', value: 'price-desc' }
   ];
 
   // Current route used to read deep-linked filters.
@@ -238,7 +242,7 @@
   const selectedRarities = ref<string[]>([...rarityOptions]);
 
   // Current result ordering, newest releases first by default.
-  const selectedSort = ref<'date-desc' | 'date-asc'>('date-desc');
+  const selectedSort = ref<CardSort>('date-desc');
 
   // Whether regional and Mega forms are available in Pokemon results.
   const includeSpecialForms = ref<boolean>(false);
@@ -318,6 +322,18 @@
       .filter((card) => !selectedPokemon.value || card.pokemon_names.some((pokemonId) => selectedPokemonIds.value.has(pokemonId)))
       .filter((card) => selectedRarities.value.includes(card.rarity))
       .sort((a, b) => {
+        if (selectedSort.value === 'price-asc' || selectedSort.value === 'price-desc') {
+          const leftPrice = cardmarketDisplayPrice(a.cardmarket);
+          const rightPrice = cardmarketDisplayPrice(b.cardmarket);
+          if (leftPrice === null && rightPrice !== null) return 1;
+          if (leftPrice !== null && rightPrice === null) return -1;
+          if (leftPrice !== null && rightPrice !== null && leftPrice !== rightPrice) {
+            return selectedSort.value === 'price-asc'
+              ? leftPrice - rightPrice
+              : rightPrice - leftPrice;
+          }
+        }
+
         const dateComparison: number = (setReleaseDates.get(a.set_id) ?? '').localeCompare(setReleaseDates.get(b.set_id) ?? '');
         const directedDateComparison: number = selectedSort.value === 'date-asc' ? dateComparison : -dateComparison;
 
@@ -434,6 +450,6 @@
 
   // Opens the detail page for a card from its set.
   const goToCard = (card: DisplayCard): void => {
-    router.push(`/set/${card.set_id}/card/${card.card_id}`);
+    router.push({ path: `/set/${card.set_id}/card/${card.card_id}`, query: { variant: card.variant_id } });
   };
 </script>

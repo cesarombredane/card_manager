@@ -1,6 +1,6 @@
 import { resolveCardImage } from './cardImages';
 import { localizedValue } from './localization';
-import type { Card, CardVariant } from './types';
+import type { Card, CardmarketPrice, CardVariant } from './types';
 
 // The source card images are 600 x 825 pixels, which simplifies to 8:11.
 export const cardImageRatio = 8 / 11;
@@ -31,9 +31,18 @@ export type DisplayCard = {
   image_url: string | null;
   image_language_id: string | null;
   image_is_fallback: boolean;
+  cardmarket: CardmarketPrice | null;
 };
 
 export const formatCardValue = (value: string): string => value.replaceAll('_', ' ');
+
+export const cardmarketDisplayPrice = (price: CardmarketPrice | null | undefined): number | null => {
+  return price?.trend ?? price?.average ?? price?.low ?? null;
+};
+
+export const formatEuroPrice = (value: number): string => {
+  return new Intl.NumberFormat(undefined, { style: 'currency', currency: 'EUR' }).format(value);
+};
 
 // Builds the presentation model used by CardList and CardListItem.
 export const buildDisplayCard = (
@@ -64,6 +73,7 @@ export const buildDisplayCard = (
     energy_costs: [...new Set((card.attacks ?? []).flatMap((attack) => attack.cost))].sort(),
     image_url: image.url,
     image_language_id: image.languageId,
-    image_is_fallback: image.isFallback
+    image_is_fallback: image.isFallback,
+    cardmarket: variant.cardmarket ?? null
   };
 };
