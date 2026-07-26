@@ -183,6 +183,43 @@ export const collectionStore = {
     persist();
   },
 
+  updateEntry(entryId: string, input: {
+    folder_id: string;
+    language_id: string;
+    condition: CardCondition;
+    quantity: number;
+  }): void {
+    const entry = state.entries.find((candidate) => candidate.id === entryId);
+    const quantity = Math.max(1, Math.floor(input.quantity));
+    if (
+      !entry
+      || !state.folders.some((folder) => folder.id === input.folder_id)
+      || !input.language_id
+    ) return;
+
+    const matching = state.entries.find((candidate) =>
+      candidate.id !== entry.id
+      && candidate.folder_id === input.folder_id
+      && candidate.set_id === entry.set_id
+      && candidate.card_id === entry.card_id
+      && candidate.variant_id === entry.variant_id
+      && candidate.language_id === input.language_id
+      && candidate.condition === input.condition
+    );
+    if (matching) {
+      matching.quantity += quantity;
+      matching.updated_at = new Date().toISOString();
+      state.entries.splice(state.entries.indexOf(entry), 1);
+    } else {
+      entry.folder_id = input.folder_id;
+      entry.language_id = input.language_id;
+      entry.condition = input.condition;
+      entry.quantity = quantity;
+      entry.updated_at = new Date().toISOString();
+    }
+    persist();
+  },
+
   transferEntry(entryId: string, folderId: string): void {
     const entry = state.entries.find((candidate) => candidate.id === entryId);
     if (!entry || entry.folder_id === folderId || !state.folders.some((folder) => folder.id === folderId)) return;

@@ -6,6 +6,7 @@ import { createStore } from 'vuex';
 export type AppState = {
   selected_region_id: string;
   selected_language_id: string;
+  last_collection_folder_id: string;
 };
 
 
@@ -14,7 +15,8 @@ export const store = createStore<AppState>({
   state() {
     return {
       selected_region_id: 'INTL',
-      selected_language_id: 'en'
+      selected_language_id: 'en',
+      last_collection_folder_id: 'main'
     };
   },
   mutations: {
@@ -26,6 +28,11 @@ export const store = createStore<AppState>({
     // Store the preferred language used on set pages.
     set_sekected_language_id(state: AppState, language_id: string) {
       state.selected_language_id = language_id;
+    },
+
+    // Store the folder used for the most recent card addition.
+    set_last_collection_folder_id(state: AppState, folder_id: string) {
+      state.last_collection_folder_id = folder_id;
     }
   },
   actions: {}

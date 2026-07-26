@@ -73,29 +73,10 @@
 
         <q-item-section side class="collection-actions">
           <div class="row items-center no-wrap q-gutter-sm">
-            <q-input
-              :model-value="row.entry.quantity"
-              type="number"
-              min="1"
-              dense
-              dark
-              outlined
-              label="Qty"
-              style="width: 82px"
-              @update:model-value="value => updateQuantity(row.entry.id, value)"
-            />
-            <q-select
-              :model-value="row.entry.folder_id"
-              :options="folderOptions"
-              emit-value
-              map-options
-              dense
-              dark
-              outlined
-              label="Folder"
-              style="width: 180px"
-              @update:model-value="value => transferEntry(row.entry.id, value)"
-            />
+            <div class="text-body2 text-grey-4">{{ row.entry.quantity }} cards</div>
+            <q-btn flat round dense color="primary" icon="edit" @click="openEditEntry(row)">
+              <q-tooltip>Edit card</q-tooltip>
+            </q-btn>
             <q-btn flat round dense color="negative" icon="delete" @click="entryToDelete = row">
               <q-tooltip>Remove from collection</q-tooltip>
             </q-btn>
@@ -103,6 +84,55 @@
         </q-item-section>
       </q-item>
     </q-list>
+
+    <q-dialog v-model="showEditDialog">
+      <q-card class="bg-grey-10 text-white" style="width: 460px; max-width: 90vw">
+        <q-card-section>
+          <div class="text-h6">Edit collection card</div>
+          <div class="text-body2 text-grey-4">{{ editingEntry?.card.display_name }}</div>
+        </q-card-section>
+        <q-card-section class="column q-gutter-md">
+          <q-input v-model.number="editQuantity" type="number" min="1" step="1" dark outlined label="Quantity" />
+          <q-select
+            v-model="editLanguageId"
+            :options="editLanguageOptions"
+            emit-value
+            map-options
+            dark
+            outlined
+            label="Language"
+          />
+          <q-select
+            v-model="editCondition"
+            :options="conditionOptions"
+            emit-value
+            map-options
+            dark
+            outlined
+            label="Condition"
+          />
+          <q-select
+            v-model="editFolderId"
+            :options="folderOptions"
+            emit-value
+            map-options
+            dark
+            outlined
+            label="Collection"
+          />
+        </q-card-section>
+        <q-card-actions align="right">
+          <q-btn flat color="grey-4" label="Cancel" v-close-popup />
+          <q-btn
+            color="primary"
+            text-color="black"
+            label="Save changes"
+            :disable="editQuantity < 1 || !editLanguageId || !editFolderId"
+            @click="saveEntry"
+          />
+        </q-card-actions>
+      </q-card>
+    </q-dialog>
 
     <q-dialog :model-value="entryToDelete !== null" @update:model-value="value => { if (!value) entryToDelete = null; }">
       <q-card class="bg-grey-10 text-white">
@@ -127,10 +157,10 @@
   import { useRoute } from 'vue-router';
   import { buildDisplayCard, cardmarketDisplayPrice, formatEuroPrice } from '../utils/cardDisplay';
   import type { DisplayCard } from '../utils/cardDisplay';
-  import { getCardById, getSetById } from '../utils/dataManagement';
+  import { getCardById, getLanguages, getSetById } from '../utils/dataManagement';
   import { localizedValue } from '../utils/localization';
-  import { collectionStore } from '../utils/collection';
-  import type { CollectionEntry, CollectionFolder } from '../utils/collection';
+  import { cardConditions, collectionStore } from '../utils/collection';
+  import type { CardCondition, CollectionEntry, CollectionFolder } from '../utils/collection';
 
   type CollectionRow = {
     entry: CollectionEntry;
@@ -152,6 +182,12 @@
   const search = ref('');
   const selectedSort = ref<CollectionSort>('name-asc');
   const entryToDelete = ref<CollectionRow | null>(null);
+  const showEditDialog = ref(false);
+  const editingEntry = ref<CollectionRow | null>(null);
+  const editQuantity = ref(1);
+  const editLanguageId = ref('');
+  const editCondition = ref<CardCondition>('NM');
+  const editFolderId = ref('');
   const folderId = computed(() => String(route.params.folderId ?? ''));
   const folder = computed<CollectionFolder | null>(() =>
     collectionStore.folders.value.find((candidate) => candidate.id === folderId.value) ?? null
@@ -160,6 +196,19 @@
     label: candidate.name,
     value: candidate.id
   })));
+  const languageNames = new Map(getLanguages().map((language) => [language.id, language.name]));
+  const editLanguageOptions = computed(() => {
+    if (!editingEntry.value) return [];
+    const set = getSetById(editingEntry.value.entry.set_id);
+    const card = getCardById(editingEntry.value.entry.set_id, editingEntry.value.entry.card_id);
+    const variant = card?.variants.find((candidate) => candidate.id === editingEntry.value?.entry.variant_id);
+    const languageIds = variant?.language_ids?.length ? variant.language_ids : set?.language_ids ?? [];
+    return languageIds.map((languageId) => ({
+      label: languageNames.get(languageId) ?? languageId.toUpperCase(),
+      value: languageId
+    }));
+  });
+  const conditionOptions = cardConditions.map((entry) => ({ ...entry }));
 
   const collectionRows = computed<CollectionRow[]>(() => collectionStore.entries.value
     .filter((entry) => entry.folder_id === folderId.value)
@@ -200,13 +249,25 @@
   const cardCount = computed(() => collectionRows.value.reduce((total, row) => total + row.entry.quantity, 0));
   const folderValue = computed(() => collectionRows.value.reduce((total, row) => total + row.totalValue, 0));
 
-  const updateQuantity = (entryId: string, value: string | number | null): void => {
-    const quantity = Number(value);
-    if (Number.isFinite(quantity) && quantity >= 1) collectionStore.setQuantity(entryId, quantity);
+  const openEditEntry = (row: CollectionRow): void => {
+    editingEntry.value = row;
+    editQuantity.value = row.entry.quantity;
+    editLanguageId.value = row.entry.language_id;
+    editCondition.value = row.entry.condition;
+    editFolderId.value = row.entry.folder_id;
+    showEditDialog.value = true;
   };
 
-  const transferEntry = (entryId: string, targetFolderId: string | null): void => {
-    if (targetFolderId) collectionStore.transferEntry(entryId, targetFolderId);
+  const saveEntry = (): void => {
+    if (!editingEntry.value || editQuantity.value < 1 || !editLanguageId.value || !editFolderId.value) return;
+    collectionStore.updateEntry(editingEntry.value.entry.id, {
+      folder_id: editFolderId.value,
+      language_id: editLanguageId.value,
+      condition: editCondition.value,
+      quantity: editQuantity.value
+    });
+    showEditDialog.value = false;
+    editingEntry.value = null;
   };
 
   const confirmRemoveEntry = (): void => {

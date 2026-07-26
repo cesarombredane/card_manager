@@ -48,9 +48,11 @@
 </template>
 
 <script setup lang="ts">
-  import { computed, ref } from 'vue';
+  import { computed, ref, watch } from 'vue';
+  import { useStore } from 'vuex';
   import { cardConditions, collectionStore, mainFolderId } from '../utils/collection';
   import type { CardCondition } from '../utils/collection';
+  import type { AppState } from '../store';
 
   const props = defineProps<{
     modelValue: boolean;
@@ -69,7 +71,8 @@
     get: () => props.modelValue,
     set: (value: boolean) => emit('update:modelValue', value)
   });
-  const folderId = ref(mainFolderId);
+  const store = useStore<AppState>();
+  const folderId = ref(store.state.last_collection_folder_id);
   const condition = ref<CardCondition>('NM');
   const quantity = ref(1);
 
@@ -78,6 +81,18 @@
     value: folder.id
   })));
   const conditionOptions = cardConditions.map((entry) => ({ ...entry }));
+
+  watch(
+    [isOpen, collectionStore.isFileConnected],
+    ([open, connected]) => {
+      if (!open || !connected) return;
+      const rememberedFolderId = store.state.last_collection_folder_id;
+      folderId.value = collectionStore.folders.value.some((folder) => folder.id === rememberedFolderId)
+        ? rememberedFolderId
+        : mainFolderId;
+    },
+    { immediate: true }
+  );
 
   const addCards = (): void => {
     collectionStore.addCards({
@@ -89,6 +104,7 @@
       condition: condition.value,
       quantity: quantity.value
     });
+    store.commit('set_last_collection_folder_id', folderId.value);
     quantity.value = 1;
     isOpen.value = false;
     emit('added');
