@@ -129,7 +129,6 @@
       entry.set_id === props.card.set_id
       && entry.card_id === props.card.card_id
       && entry.variant_id === props.card.variant_id
-      && entry.language_id === props.card.language_id
     )
     .reduce((total, entry) => total + entry.quantity, 0));
 </script>

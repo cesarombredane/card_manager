@@ -63,8 +63,24 @@
               </router-link>
             </q-item-label>
             <q-item-label caption class="text-grey-4">
-              {{ set.card_count }} collectible cards including variants · Released {{ formatFrenchDate(set.release_date) }}
+              <template v-if="ownedCardCount(set.id) === 0">
+                {{ set.card_count }} collectible cards including variants ·
+              </template>
+              Released {{ formatFrenchDate(set.release_date) }}
             </q-item-label>
+            <div v-if="ownedCardCount(set.id) > 0" class="q-mt-sm" style="max-width: 420px">
+              <div class="row justify-between text-caption text-grey-4 q-mb-xs">
+                <span>Collection completion</span>
+                <span>{{ ownedCardCount(set.id) }} / {{ set.card_count }} cards</span>
+              </div>
+              <q-linear-progress
+                rounded
+                size="8px"
+                color="primary"
+                track-color="grey-8"
+                :value="setCompletion(set)"
+              />
+            </div>
             <div class="row q-gutter-xs q-mt-xs">
               <q-chip v-for="languageId in set.language_ids" :key="languageId" dense square color="grey-9" text-color="white" size="sm">
                 {{ languageId }}
@@ -92,6 +108,7 @@
   import type { Region, Series, Set } from '../utils/types';
   import type { AppState } from '../store';
   import { formatFrenchDate } from '../utils/dates';
+  import { collectionStore } from '../utils/collection';
 
 
   /* types */
@@ -159,11 +176,29 @@
       .sort((a, b) => b.series.start_date.localeCompare(a.series.start_date));
   });
 
+  // Distinct card variants owned per set. Quantities, languages, conditions,
+  // and collection folders do not increase completion more than once.
+  const ownedCardsBySet = computed<Map<string, number>>(() => {
+    const variantsBySet = new Map<string, globalThis.Set<string>>();
+    for (const entry of collectionStore.entries.value) {
+      if (entry.set_id === 'manual-collection') continue;
+      if (!variantsBySet.has(entry.set_id)) variantsBySet.set(entry.set_id, new globalThis.Set());
+      variantsBySet.get(entry.set_id)?.add(`${entry.card_id}:${entry.variant_id}`);
+    }
+    return new Map([...variantsBySet].map(([setId, variants]) => [setId, variants.size]));
+  });
+
 
   /* methods */
   // Resolves a set name using the shared language preference and stable fallbacks.
   const setDisplayName = (set: Set): string => {
     return localizedValue(set.name, store.state.selected_language_id) ?? set.id;
+  };
+
+  const ownedCardCount = (setId: string): number => ownedCardsBySet.value.get(setId) ?? 0;
+
+  const setCompletion = (set: Set): number => {
+    return set.card_count > 0 ? Math.min(ownedCardCount(set.id) / set.card_count, 1) : 0;
   };
 
 
