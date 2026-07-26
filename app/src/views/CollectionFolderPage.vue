@@ -165,15 +165,16 @@
   type CollectionRow = {
     entry: CollectionEntry;
     card: DisplayCard;
+    releaseDate: string | null;
     unitPrice: number | null;
     totalValue: number;
   };
-  type CollectionSort = 'name-asc' | 'added-desc' | 'added-asc' | 'price-asc' | 'price-desc';
+  type CollectionSort = 'name-asc' | 'release-desc' | 'release-asc' | 'price-asc' | 'price-desc';
 
   const sortOptions: { label: string; value: CollectionSort }[] = [
     { label: 'Name: A to Z', value: 'name-asc' },
-    { label: 'Date added: newest first', value: 'added-desc' },
-    { label: 'Date added: oldest first', value: 'added-asc' },
+    { label: 'Release date: newest first', value: 'release-desc' },
+    { label: 'Release date: oldest first', value: 'release-asc' },
     { label: 'Price: cheapest first', value: 'price-asc' },
     { label: 'Price: most expensive first', value: 'price-desc' }
   ];
@@ -221,7 +222,13 @@
       const setName = set ? localizedValue(set.name, languageId) ?? set.id : null;
       const displayCard = buildDisplayCard(card, variant, languageId, setName);
       const unitPrice = cardmarketDisplayPrice(variant.cardmarket);
-      return [{ entry, card: displayCard, unitPrice, totalValue: (unitPrice ?? 0) * entry.quantity }];
+      return [{
+        entry,
+        card: displayCard,
+        releaseDate: set?.release_date ?? null,
+        unitPrice,
+        totalValue: (unitPrice ?? 0) * entry.quantity
+      }];
     }));
 
   const displayedRows = computed<CollectionRow[]>(() => {
@@ -238,9 +245,13 @@
               : right.unitPrice - left.unitPrice;
           }
         }
-        if (selectedSort.value === 'added-desc' || selectedSort.value === 'added-asc') {
-          const comparison = left.entry.added_at.localeCompare(right.entry.added_at);
-          if (comparison !== 0) return selectedSort.value === 'added-asc' ? comparison : -comparison;
+        if (selectedSort.value === 'release-desc' || selectedSort.value === 'release-asc') {
+          if (left.releaseDate === null && right.releaseDate !== null) return 1;
+          if (left.releaseDate !== null && right.releaseDate === null) return -1;
+          if (left.releaseDate !== null && right.releaseDate !== null) {
+            const comparison = left.releaseDate.localeCompare(right.releaseDate);
+            if (comparison !== 0) return selectedSort.value === 'release-asc' ? comparison : -comparison;
+          }
         }
         return left.card.display_name.localeCompare(right.card.display_name);
       });
