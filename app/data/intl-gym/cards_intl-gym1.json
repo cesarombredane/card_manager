@@ -11,7 +11,7 @@
       "0146"
     ],
     "illustrator": "Ken Sugimori",
-    "rarity": "rare_holo",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -70,7 +70,7 @@
       "0073"
     ],
     "illustrator": "Ken Sugimori",
-    "rarity": "rare_holo",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -116,7 +116,8 @@
         "type": "lightning",
         "value": "x2"
       }
-    ]
+    ],
+    "retreat_cost": 0
   },
   {
     "id": "intl-gym1-100",
@@ -234,6 +235,7 @@
         }
       }
     ],
+    "trainer_type": "stadium",
     "rules_text": {
       "en": "This card stays in play when you play it. Discard this card if another Stadium card comes into play. A player must discard 2 cards from his or her hand in order to play an Energy Removal or Super Energy Removal card."
     }
@@ -264,6 +266,7 @@
         }
       }
     ],
+    "trainer_type": "stadium",
     "rules_text": {
       "en": "This card stays in play when you play it. Discard this card if another Stadium card comes into play. Each player pays Colorless more to retreat his or her Active Pokémon."
     }
@@ -354,6 +357,7 @@
         }
       }
     ],
+    "trainer_type": "stadium",
     "rules_text": {
       "en": "This card stays in play when you play it. Discard this card if another Stadium card comes into play. During each player's turn, that player may choose to discard an Energy card attached to 1 of his or her Pokémon with Erika in its name. If that player does so, that Pokémon is no longer Asleep, Confused, Paralyzed, or Poisoned."
     }
@@ -384,6 +388,7 @@
         }
       }
     ],
+    "trainer_type": "stadium",
     "rules_text": {
       "en": "This card stays in play when you play it. Discard this card if another Stadium card comes into play. Each player pays Colorless less to retreat his or her Pokémon if it has Misty in its name."
     }
@@ -430,7 +435,7 @@
       "0107"
     ],
     "illustrator": "Ken Sugimori",
-    "rarity": "rare_holo",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -664,6 +669,7 @@
         }
       }
     ],
+    "trainer_type": "stadium",
     "rules_text": {
       "en": "This card stays in play when you play it. Discard this card if another Stadium card comes into play. Don't apply Resistance to any attacks made by Pokémon with Brock in their names."
     }
@@ -800,7 +806,7 @@
       "0146"
     ],
     "illustrator": "Ken Sugimori",
-    "rarity": "rare_holo",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -871,6 +877,7 @@
         }
       }
     ],
+    "trainer_type": "stadium",
     "rules_text": {
       "en": "This card stays in play when you play it. Discard this card if another Stadium card comes into play. Whenever a player attacks with a Pokémon with Lt. Surge in its name, he or she may flip a coin. If heads, and if that Pokémon's attack does damage to the Defending Pokémon (after applying Weakness and Resistance), that attack does 10 more damage to the Defending Pokémon. If tails, the attacking Pokémon does 10 damage to itself in addition to whatever its attack usually does."
     }
@@ -991,6 +998,7 @@
         }
       }
     ],
+    "trainer_type": "stadium",
     "rules_text": {
       "en": "This card stays in play when you play it. Discard this card if another Stadium card comes into play. No player may have more than 4 Pokémon on his or her Bench. When this card is played, if a player has 5 Pokémon on his or her Bench, that player chooses 1 of them and returns it and all cards attached to it to his or her hand. (If both players have to return a Pokémon, your opponent returns a Pokémon first.)"
     }
@@ -1081,6 +1089,9 @@
         }
       }
     ],
+    "types": [
+      "fighting"
+    ],
     "stage": "basic"
   },
   {
@@ -1108,6 +1119,9 @@
           "en": "/images/cards/intl-gym1/en/128.webp"
         }
       }
+    ],
+    "types": [
+      "fire"
     ],
     "stage": "basic"
   },
@@ -1137,6 +1151,9 @@
         }
       }
     ],
+    "types": [
+      "grass"
+    ],
     "stage": "basic"
   },
   {
@@ -1151,7 +1168,7 @@
       "0123"
     ],
     "illustrator": "Ken Sugimori",
-    "rarity": "rare_holo",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -1266,6 +1283,9 @@
         }
       }
     ],
+    "types": [
+      "psychic"
+    ],
     "stage": "basic"
   },
   {
@@ -1294,6 +1314,9 @@
         }
       }
     ],
+    "types": [
+      "water"
+    ],
     "stage": "basic"
   },
   {
@@ -1308,7 +1331,7 @@
       "0094"
     ],
     "illustrator": "Ken Sugimori",
-    "rarity": "rare_holo",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -1342,7 +1365,7 @@
         ],
         "damage": "",
         "text": {
-          "en": "Put a damage counter on each of your opponent's Pokémon that already has any damage counters on it."
+          "en": "Put a damage counter on each of your opponent's Pokémon has already has any damage counters on it."
         }
       },
       {
@@ -1378,7 +1401,7 @@
     },
     "pokemon": [],
     "illustrator": "Ken Sugimori",
-    "rarity": "rare_holo",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -1408,7 +1431,7 @@
     },
     "pokemon": [],
     "illustrator": "Ken Sugimori",
-    "rarity": "rare_holo",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -1438,7 +1461,7 @@
     },
     "pokemon": [],
     "illustrator": "Ken Sugimori",
-    "rarity": "rare_holo",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -1468,7 +1491,7 @@
     },
     "pokemon": [],
     "illustrator": "Ken Sugimori",
-    "rarity": "rare_holo",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -1498,7 +1521,7 @@
     },
     "pokemon": [],
     "illustrator": "Ken Sugimori",
-    "rarity": "rare_holo",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -1530,7 +1553,7 @@
       "0112"
     ],
     "illustrator": "Ken Sugimori",
-    "rarity": "rare_holo",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -1597,7 +1620,7 @@
       "0076"
     ],
     "illustrator": "Ken Sugimori",
-    "rarity": "rare_holo",
+    "rarity": "rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -1633,7 +1656,7 @@
         ],
         "damage": "20",
         "text": {
-          "en": "If your opponent has any Benched Pokémon, choose up to 3 of them. This attack does 10 damage to each of them. (Don't apply Weakness and Resistance for Benched Pokémon.)"
+          "en": "If your opponent has any Benched Pokémon, choose up to 3 of them. This attack does 10 damgae to each of them. (Don't apply Weakness and Resistance for Benched Pokémon.)"
         }
       },
       {
@@ -1670,7 +1693,7 @@
       "0095"
     ],
     "illustrator": "Benimaru Itoh",
-    "rarity": "rare_holo",
+    "rarity": "rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -1740,7 +1763,7 @@
       "0111"
     ],
     "illustrator": "Ken Sugimori",
-    "rarity": "rare_holo",
+    "rarity": "rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -1816,7 +1839,7 @@
       "0028"
     ],
     "illustrator": "Ken Sugimori",
-    "rarity": "rare_holo",
+    "rarity": "rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -1894,7 +1917,7 @@
       "0041"
     ],
     "illustrator": "Ken Sugimori",
-    "rarity": "rare_holo",
+    "rarity": "rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -1951,7 +1974,8 @@
         "type": "fighting",
         "value": "-30"
       }
-    ]
+    ],
+    "retreat_cost": 0
   },
   {
     "id": "intl-gym1-25",
@@ -1965,7 +1989,7 @@
       "0035"
     ],
     "illustrator": "Ken Sugimori",
-    "rarity": "rare_holo",
+    "rarity": "rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -2010,7 +2034,7 @@
           "normal",
           "normal"
         ],
-        "damage": "10",
+        "damage": "10x",
         "text": {
           "en": "Flip 3 coins. This attack does 10 damage times the number of heads."
         }
@@ -2042,7 +2066,7 @@
       "0071"
     ],
     "illustrator": "Ken Sugimori",
-    "rarity": "rare_holo",
+    "rarity": "rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -2100,7 +2124,7 @@
       "0125"
     ],
     "illustrator": "Ken Sugimori",
-    "rarity": "rare_holo",
+    "rarity": "rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -2134,7 +2158,7 @@
         ],
         "damage": "",
         "text": {
-          "en": "Take up to 2 Energy cards from your discard pile and attach them to Lt. Surge's Electabuzz"
+          "en": "Take up to 2 Lightning Energy cards from your discard pile and attach them to Lt. Surge's Electabuzz."
         }
       },
       {
@@ -2147,7 +2171,7 @@
         ],
         "damage": "20",
         "text": {
-          "en": "Take 1 Energy card attached to Lt. Surge's Electabuzz and attach it to 1 of your Benched Pokémon. If you have no Benched Pokémon, discard that Energy card."
+          "en": "Take 1 Lightning Energy card attached to Lt. Surge's Electabuzz and attach it to 1 of your Benched Pokémon. If you have no Benched Pokémon, discard that Energy card."
         }
       }
     ],
@@ -2171,7 +2195,7 @@
       "0026"
     ],
     "illustrator": "Ken Sugimori",
-    "rarity": "rare_holo",
+    "rarity": "rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -2243,7 +2267,7 @@
       "0091"
     ],
     "illustrator": "Ken Sugimori",
-    "rarity": "rare_holo",
+    "rarity": "rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -2259,7 +2283,7 @@
         }
       }
     ],
-    "hp": 60,
+    "hp": 70,
     "types": [
       "water"
     ],
@@ -2277,7 +2301,7 @@
           "water",
           "normal"
         ],
-        "damage": "20",
+        "damage": "20x",
         "text": {
           "en": "Flip 3 coins. This attack does 20 damage times the number of heads."
         }
@@ -2303,7 +2327,7 @@
       "0036"
     ],
     "illustrator": "Atsuko Nishida",
-    "rarity": "rare_holo",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -2379,7 +2403,7 @@
       "0118"
     ],
     "illustrator": "Ken Sugimori",
-    "rarity": "rare_holo",
+    "rarity": "rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -2419,7 +2443,8 @@
         "type": "lightning",
         "value": "x2"
       }
-    ]
+    ],
+    "retreat_cost": 0
   },
   {
     "id": "intl-gym1-31",
@@ -2433,7 +2458,7 @@
       "0062"
     ],
     "illustrator": "Ken Sugimori",
-    "rarity": "rare_holo",
+    "rarity": "rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -2470,7 +2495,7 @@
         ],
         "damage": "30",
         "text": {
-          "en": "Does 10 damage to each Pokémon that isn't on each player's Bench. (Don't apply Weakness and Resistance for Benched Pokémon.)"
+          "en": "Does 10 damage to each Pokémon that isn't Water on each player's Bench. (Don't apply Weakness and Resistance for Benched Pokémon.)"
         }
       }
     ],
@@ -2494,7 +2519,7 @@
       "0072"
     ],
     "illustrator": "Ken Sugimori",
-    "rarity": "rare_holo",
+    "rarity": "rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -2538,7 +2563,7 @@
         ],
         "damage": "",
         "text": {
-          "en": "Search your deck for any number of Pokémon named Tentacool, Tentacruel, Misty's Tentacool, or Misty's Tentacruel. Show those cards to your opponent, then put them into your hand. Shuffle your deck afterward."
+          "en": "Search your deck for any number of Pokémon named Tentacool, Tentacruel, Misty's Tentacool, and/or Misty's Tentacruel. Show those cards to your opponent, then put them into your hand. Shuffle your deck afterward."
         }
       }
     ],
@@ -2547,7 +2572,8 @@
         "type": "lightning",
         "value": "x2"
       }
-    ]
+    ],
+    "retreat_cost": 0
   },
   {
     "id": "intl-gym1-33",
@@ -2561,7 +2587,7 @@
       "0143"
     ],
     "illustrator": "Shin-ichi Yoshida",
-    "rarity": "rare_holo",
+    "rarity": "rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -2627,7 +2653,7 @@
       "0049"
     ],
     "illustrator": "Ken Sugimori",
-    "rarity": "rare_holo",
+    "rarity": "rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -2688,7 +2714,8 @@
         "type": "fighting",
         "value": "-30"
       }
-    ]
+    ],
+    "retreat_cost": 0
   },
   {
     "id": "intl-gym1-35",
@@ -2813,7 +2840,7 @@
           "normal",
           "normal"
         ],
-        "damage": "30",
+        "damage": "30+",
         "text": {
           "en": "Flip a coin. If heads, this attack does 30 damage plus 10 more damage; if tails, this attack does 30 damage."
         }
@@ -2877,7 +2904,7 @@
         "cost": [
           "fire"
         ],
-        "damage": "10",
+        "damage": "10+",
         "text": {
           "en": "Flip a coin. If heads, this attack does 10 damage plus 10 more damage; if tails, this attack does 10 damage."
         }
@@ -2893,7 +2920,7 @@
         ],
         "damage": "",
         "text": {
-          "en": "Discard the top 5 cards of your deck. (If there are fewer than 5 cards in your deck, discard all of them.) This attack does 20 damage for each Energy card you discarded in this way."
+          "en": "Discard the top 5 cards of your deck. (If there are fewer than 5 cards in your deck, discard all of them.) This attack does 20 damage for each Fire Energy card you discarded in this way."
         }
       }
     ],
@@ -3059,7 +3086,7 @@
       "0148"
     ],
     "illustrator": "Atsuko Nishida",
-    "rarity": "rare_holo",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -3168,7 +3195,7 @@
           "normal",
           "normal"
         ],
-        "damage": "20",
+        "damage": "20x",
         "text": {
           "en": "Flip 3 coins. This attack does 20 damage times the number of heads."
         }
@@ -3236,7 +3263,7 @@
           "normal",
           "normal"
         ],
-        "damage": "30",
+        "damage": "30x",
         "text": {
           "en": "Flip 2 coins. This attack does 30 damage times the number of heads."
         }
@@ -3298,7 +3325,7 @@
           "normal",
           "normal"
         ],
-        "damage": "10",
+        "damage": "10+",
         "text": {
           "en": "Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage."
         }
@@ -3438,7 +3465,7 @@
           "normal",
           "normal"
         ],
-        "damage": "30",
+        "damage": "30+",
         "text": {
           "en": "Flip a coin. If heads, this attack does 30 damage plus 10 more damage; if tails, this attack does 30 damage."
         }
@@ -3571,7 +3598,7 @@
         ],
         "damage": "10",
         "text": {
-          "en": "Both the Defending Pokémon and Erika's Gloom are now Asleep (after dealing damage)."
+          "en": "Both the Defending Pokémon and Erika's Gloom are now Asleep (after doing damage)."
         }
       },
       {
@@ -3805,7 +3832,7 @@
       "0045"
     ],
     "illustrator": "Ken Sugimori",
-    "rarity": "rare_holo",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -3918,7 +3945,8 @@
         "type": "fighting",
         "value": "x2"
       }
-    ]
+    ],
+    "retreat_cost": 0
   },
   {
     "id": "intl-gym1-51",
@@ -4040,7 +4068,8 @@
         "type": "fighting",
         "value": "-30"
       }
-    ]
+    ],
+    "retreat_cost": 0
   },
   {
     "id": "intl-gym1-53",
@@ -4101,9 +4130,9 @@
           "normal",
           "normal"
         ],
-        "damage": "30",
+        "damage": "30+",
         "text": {
-          "en": "Flip a number of coins equal to the number of Energy attached to Misty's Poliwhirl. This attack does 30 damage plus 10 damage for each heads."
+          "en": "Flip a number of coins equal to the number of Water Energy attached to Misty's Poliwhirl. This attack does 30 damage plus 10 damage for each heads."
         }
       }
     ],
@@ -4293,9 +4322,9 @@
         "cost": [
           "water"
         ],
-        "damage": "10",
+        "damage": "10+",
         "text": {
-          "en": "Does 10 damage plus 10 more damage for each W Energy attached to Misty's Starmie but not used to pay for this attack's Energy cost. You can't add more than 20 damage in this way."
+          "en": "Does 10 damage plus 10 more damage for each Water Energy attached to Misty's Starmie but not used to pay for this attack's Energy cost. You can't add more than 20 damage in this way."
         }
       },
       {
@@ -4422,7 +4451,7 @@
           "psychic",
           "psychic"
         ],
-        "damage": "30",
+        "damage": "30x",
         "text": {
           "en": "Flip a number of coins equal to the total number of Sabrina's Gastlys, Sabrina's Haunters, and Sabrina's Gengars you have in play. This attack does 30 damage times the number of heads."
         }
@@ -4433,7 +4462,8 @@
         "type": "fighting",
         "value": "-30"
       }
-    ]
+    ],
+    "retreat_cost": 0
   },
   {
     "id": "intl-gym1-59",
@@ -4446,7 +4476,7 @@
     "pokemon": [
       "0124"
     ],
-    "illustrator": "Atsuko Nishida",
+    "illustrator": "Ken Sugimori",
     "rarity": "uncommon",
     "regulation_mark": null,
     "variants": [
@@ -4518,7 +4548,7 @@
       "0125"
     ],
     "illustrator": "Ken Sugimori",
-    "rarity": "rare_holo",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -4552,7 +4582,7 @@
         ],
         "damage": "",
         "text": {
-          "en": "Take up to 2 Energy cards from your discard pile and attach them to Lt. Surge's Electabuzz"
+          "en": "Take up to 2 Lightning Energy cards from your discard pile and attach them to Lt. Surge's Electabuzz."
         }
       },
       {
@@ -4562,9 +4592,9 @@
         "cost": [
           "lightning"
         ],
-        "damage": "30",
+        "damage": "30x",
         "text": {
-          "en": "Discard all Energy cards attach to Lt. Surge's Electabuzz in order to use this attack. Flip a number of coins equal to the number of Energy cards you discarded. This attack does 30 damage times the number of heads."
+          "en": "Discard all Lightning Energy cards attached to Lt. Surge's Electabuzz in order to use this attack. Flip a number of coins equal to the number of Lightning Energy cards you discarded. This attack does 30 damage times the number of heads."
         }
       }
     ],
@@ -4758,7 +4788,7 @@
         ],
         "damage": "20",
         "text": {
-          "en": "Does 10 damage to each Pokémon on your opponent's Bench. (Don't apply Weakness and Resistance for Benched Pokémon.)"
+          "en": "Does 10 damage to each Grass Pokémon on your opponent's Bench. (Don't apply Weakness and Resistance for Benched Pokémon.)"
         }
       }
     ],
@@ -4823,7 +4853,8 @@
         "type": "water",
         "value": "x2"
       }
-    ]
+    ],
+    "retreat_cost": 0
   },
   {
     "id": "intl-gym1-64",
@@ -4866,7 +4897,7 @@
         "cost": [
           "normal"
         ],
-        "damage": "10",
+        "damage": "10x",
         "text": {
           "en": "Flip 3 coins. This attack does 10 damage times the number of heads."
         }
@@ -4880,9 +4911,9 @@
           "normal",
           "normal"
         ],
-        "damage": "20",
+        "damage": "20x",
         "text": {
-          "en": "Flip 4 coins. This attack does 20 damage times the number of heads to the Defending Pokémon and 20 damage times the number tails to Blaine's Tauros."
+          "en": "Flip 4 coins. This attack does 20 damage times the number of heads to the Defending Pokémon and 20 damage times the number of tails to Blaine's Tauros."
         }
       }
     ],
@@ -5087,7 +5118,8 @@
         "type": "psychic",
         "value": "x2"
       }
-    ]
+    ],
+    "retreat_cost": 0
   },
   {
     "id": "intl-gym1-68",
@@ -5154,7 +5186,8 @@
         "type": "psychic",
         "value": "x2"
       }
-    ]
+    ],
+    "retreat_cost": 0
   },
   {
     "id": "intl-gym1-69",
@@ -5235,7 +5268,7 @@
       "0022"
     ],
     "illustrator": "Ken Sugimori",
-    "rarity": "rare_holo",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -5268,7 +5301,7 @@
           "normal",
           "normal"
         ],
-        "damage": "10",
+        "damage": "10x",
         "text": {
           "en": "Flip 5 coins. This attack does 10 damage times the number of heads."
         }
@@ -5299,7 +5332,8 @@
         "type": "fighting",
         "value": "-30"
       }
-    ]
+    ],
+    "retreat_cost": 0
   },
   {
     "id": "intl-gym1-70",
@@ -5549,7 +5583,7 @@
           "normal",
           "normal"
         ],
-        "damage": "10",
+        "damage": "10+",
         "text": {
           "en": "Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage."
         }
@@ -5632,7 +5666,8 @@
         "type": "fighting",
         "value": "-30"
       }
-    ]
+    ],
+    "retreat_cost": 0
   },
   {
     "id": "intl-gym1-75",
@@ -5796,7 +5831,7 @@
         "cost": [
           "normal"
         ],
-        "damage": "10",
+        "damage": "10x",
         "text": {
           "en": "Flip a number of coins equal to the number of Energy attached to Erika's Exeggcute. This attack does 10 damage times the number of heads."
         }
@@ -5809,7 +5844,7 @@
           "psychic",
           "normal"
         ],
-        "damage": "10",
+        "damage": "10+",
         "text": {
           "en": "Does 10 damage plus 10 more damage for each Energy card attached to the Defending Pokémon."
         }
@@ -5970,7 +6005,7 @@
       "0082"
     ],
     "illustrator": "Ken Sugimori",
-    "rarity": "rare_holo",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -6128,7 +6163,7 @@
         ],
         "damage": "",
         "text": {
-          "en": "Take 1 Energy card from your discard pile and attach it to Lt. Surge's Pikachu."
+          "en": "Take 1 Lightning Energy card from your discard pile and attach it to Lt. Surge's Pikachu."
         }
       },
       {
@@ -6296,7 +6331,8 @@
         "type": "fighting",
         "value": "-30"
       }
-    ]
+    ],
+    "retreat_cost": 0
   },
   {
     "id": "intl-gym1-84",
@@ -6339,7 +6375,7 @@
         "cost": [
           "lightning"
         ],
-        "damage": "20",
+        "damage": "20x",
         "text": {
           "en": "Flip 1 coin. This attack does 20 damage times the number of heads."
         }
@@ -6352,7 +6388,7 @@
           "lightning",
           "normal"
         ],
-        "damage": "20",
+        "damage": "20x",
         "text": {
           "en": "Flip 2 coins. This attack does 20 damage times the number of heads."
         }
@@ -6407,7 +6443,7 @@
         "cost": [
           "normal"
         ],
-        "damage": "10",
+        "damage": "10x",
         "text": {
           "en": "Flip 2 coins. This attack does 10 damage times the number of heads."
         }
@@ -6496,7 +6532,8 @@
         "type": "lightning",
         "value": "x2"
       }
-    ]
+    ],
+    "retreat_cost": 0
   },
   {
     "id": "intl-gym1-87",
@@ -6552,7 +6589,7 @@
           "water",
           "normal"
         ],
-        "damage": "20",
+        "damage": "20x",
         "text": {
           "en": "Flip 2 coins. This attack does 20 damage times the number of heads."
         }
@@ -6698,7 +6735,7 @@
       "0117"
     ],
     "illustrator": "Atsuko Nishida",
-    "rarity": "rare_holo",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -6742,7 +6779,7 @@
           "water",
           "water"
         ],
-        "damage": "30",
+        "damage": "30+",
         "text": {
           "en": "Flip 2 coins. If both of them are heads, this attack does 30 damage plus 60 more damage. If 1 or both of them are tails, this attack does 30 damage."
         }
@@ -6855,7 +6892,7 @@
         ],
         "damage": "20",
         "text": {
-          "en": "Return a Energy card attached to Sabrina's Abra to your hand in order to use this attack."
+          "en": "Return a Psychic Energy card attached to Sabrina's Abra to your hand in order to use this attack."
         }
       }
     ],
@@ -6864,7 +6901,8 @@
         "type": "psychic",
         "value": "x2"
       }
-    ]
+    ],
+    "retreat_cost": 0
   },
   {
     "id": "intl-gym1-92",

@@ -1,0 +1,4010 @@
+[
+  {
+    "id": "asia-sm9b-001",
+    "set_id": "asia-sm9b",
+    "number": "001",
+    "category": "pokemon",
+    "name": {
+      "ja": "フェローチェ&マッシブーンGX"
+    },
+    "pokemon": [
+      "0795",
+      "0794"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "double_rare",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 260,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "rule_box": "TAG TEAM-GX",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ジェットパンチ"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "30",
+        "text": {
+          "ja": "相手のベンチポケモン1匹にも、30ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+        }
+      },
+      {
+        "name": {
+          "ja": "エレガントソール"
+        },
+        "cost": [
+          "grass",
+          "grass",
+          "normal"
+        ],
+        "damage": "190",
+        "text": {
+          "ja": "次の自分の番、このポケモンの「エレガントソール」のダメージは「60」になる。"
+        }
+      },
+      {
+        "name": {
+          "ja": "ビーストゲームGX"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "50",
+        "text": {
+          "ja": "このワザのダメージで、相手のポケモンがきぜつしたなら、サイドを1枚多くとる。追加でエネルギーが7個ついているなら、多くとる枚数は3枚になる。［対戦中、自分はGXワザを1回しか使えない。］"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-sm9b-002",
+    "set_id": "asia-sm9b",
+    "number": "002",
+    "category": "pokemon",
+    "name": {
+      "ja": "キャタピー"
+    },
+    "pokemon": [
+      "0010"
+    ],
+    "illustrator": "Shibuzoh.",
+    "rarity": "common",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 40,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ひっかける"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "早く 成長 したいのか 食欲旺盛で １日に １００枚の 葉っぱを 食らう。"
+    }
+  },
+  {
+    "id": "asia-sm9b-003",
+    "set_id": "asia-sm9b",
+    "number": "003",
+    "category": "pokemon",
+    "name": {
+      "ja": "トランセル"
+    },
+    "pokemon": [
+      "0011"
+    ],
+    "illustrator": "Shigenori Negishi",
+    "rarity": "common",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "キャタピー"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "むしくい"
+        },
+        "cost": [
+          "grass",
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3,
+    "flavor_text": {
+      "ja": "カラの中は ドロドロの 液体。 進化に 備えて 体中の 細胞を 作りなおしている。"
+    }
+  },
+  {
+    "id": "asia-sm9b-004",
+    "set_id": "asia-sm9b",
+    "number": "004",
+    "category": "pokemon",
+    "name": {
+      "ja": "バタフリー"
+    },
+    "pokemon": [
+      "0012"
+    ],
+    "illustrator": "Midori Harada",
+    "rarity": "uncommon",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "ja": "トランセル"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "トリプルチャージ"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "自分の山札にある基本エネルギーを3枚まで、自分のポケモンに好きなようにつける。そして山札を切る。"
+        }
+      },
+      {
+        "name": {
+          "ja": "ソーラービーム"
+        },
+        "cost": [
+          "grass",
+          "normal",
+          "normal"
+        ],
+        "damage": "70",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "羽を 包む りん粉は 猛毒。 キャタピーを 狙う とりポケモンを 見つけると ふりかけて 追い払うぞ。"
+    }
+  },
+  {
+    "id": "asia-sm9b-005",
+    "set_id": "asia-sm9b",
+    "number": "005",
+    "category": "pokemon",
+    "name": {
+      "ja": "モンジャラ"
+    },
+    "pokemon": [
+      "0114"
+    ],
+    "illustrator": "Naoyo Kimura",
+    "rarity": "common",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "からめてひっぱる"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。"
+        }
+      },
+      {
+        "name": {
+          "ja": "ひっぱたく"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2,
+    "flavor_text": {
+      "ja": "たくさんの うごめく ツルに 覆われて 正体不明。 青いツルは 一生 伸びる。"
+    }
+  },
+  {
+    "id": "asia-sm9b-006",
+    "set_id": "asia-sm9b",
+    "number": "006",
+    "category": "pokemon",
+    "name": {
+      "ja": "モジャンボ"
+    },
+    "pokemon": [
+      "0465"
+    ],
+    "illustrator": "kodama",
+    "rarity": "uncommon",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "モンジャラ"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "しばりつける"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "30",
+        "text": {
+          "ja": "次の相手の番、このワザを受けたポケモンは、にげられない。"
+        }
+      },
+      {
+        "name": {
+          "ja": "クロロウィップ"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "90",
+        "text": {
+          "ja": "このポケモンに[草]エネルギーが2個ついているなら、このポケモンのHPを「60」回復する。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3,
+    "flavor_text": {
+      "ja": "植物の ツルで できた 腕を 伸ばして 獲物を 絡め取る。 腕を 食べられても へっちゃら。"
+    }
+  },
+  {
+    "id": "asia-sm9b-007",
+    "set_id": "asia-sm9b",
+    "number": "007",
+    "category": "pokemon",
+    "name": {
+      "ja": "カミツルギ"
+    },
+    "pokemon": [
+      "0798"
+    ],
+    "illustrator": "Shin Nagasawa",
+    "rarity": "rare",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ダイキリ"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "10+",
+        "text": {
+          "ja": "自分のサイドの残り枚数が4枚なら、120ダメージ追加。"
+        }
+      },
+      {
+        "name": {
+          "ja": "みねうち"
+        },
+        "cost": [
+          "grass",
+          "normal",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "コインを1回投げオモテなら、相手のバトルポケモンの残りHPが「10」になるように、ダメカンをのせる。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 0,
+    "flavor_text": {
+      "ja": "紙の ように 薄い 身体から 研がれた 刀に 似た 鋭さを 感じる ウルトラビーストだ。"
+    }
+  },
+  {
+    "id": "asia-sm9b-008",
+    "set_id": "asia-sm9b",
+    "number": "008",
+    "category": "pokemon",
+    "name": {
+      "ja": "ゼニガメ"
+    },
+    "pokemon": [
+      "0007"
+    ],
+    "illustrator": "tetsuya koizumi",
+    "rarity": "common",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "あわ"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "10",
+        "text": {
+          "ja": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "甲羅に 閉じこもり 身を 守る。 相手の すきを 見逃さず 水を 噴き出して 反撃する。"
+    }
+  },
+  {
+    "id": "asia-sm9b-009",
+    "set_id": "asia-sm9b",
+    "number": "009",
+    "category": "pokemon",
+    "name": {
+      "ja": "カメール"
+    },
+    "pokemon": [
+      "0008"
+    ],
+    "illustrator": "Hiroki Asanuma",
+    "rarity": "common",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "water"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "ゼニガメ"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "アクアスラッシュ"
+        },
+        "cost": [
+          "water",
+          "water"
+        ],
+        "damage": "60",
+        "text": {
+          "ja": "次の自分の番、このポケモンはワザが使えない。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2,
+    "flavor_text": {
+      "ja": "ポカンと 頭を たたかれるとき 甲羅に 引っこんで 避ける。でも ちょっとだけ 尻尾が 出ているよ。"
+    }
+  },
+  {
+    "id": "asia-sm9b-010",
+    "set_id": "asia-sm9b",
+    "number": "010",
+    "category": "pokemon",
+    "name": {
+      "ja": "カメックスGX"
+    },
+    "pokemon": [
+      "0009"
+    ],
+    "illustrator": "sadaji",
+    "rarity": "double_rare",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 240,
+    "types": [
+      "water"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "ja": "カメール"
+    },
+    "rule_box": "GX",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ロケットスプラッシュ"
+        },
+        "cost": [
+          "water",
+          "water"
+        ],
+        "damage": "60×",
+        "text": {
+          "ja": "自分の場のポケモンについている[水]エネルギーを好きなだけ山札にもどし、その枚数x60ダメージ。その場合、山札を切る。"
+        }
+      },
+      {
+        "name": {
+          "ja": "だいほうすいGX"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "自分の手札にある[水]エネルギーを好きなだけ、自分のポケモンに好きなようにつける。［対戦中、自分はGXワザを1回しか使えない。］"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "asia-sm9b-011",
+    "set_id": "asia-sm9b",
+    "number": "011",
+    "category": "pokemon",
+    "name": {
+      "ja": "ヤドン"
+    },
+    "pokemon": [
+      "0079"
+    ],
+    "illustrator": "Kouki Saitou",
+    "rarity": "common",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "なきごえ"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "次の相手の番、このワザを受けたポケモンが使うワザのダメージは「-20」される。"
+        }
+      },
+      {
+        "name": {
+          "ja": "しっぽではたく"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2,
+    "flavor_text": {
+      "ja": "あくびを すると 雨が 降る という 言い伝え から ヤドンを まつっている 地域が あるという。"
+    }
+  },
+  {
+    "id": "asia-sm9b-012",
+    "set_id": "asia-sm9b",
+    "number": "012",
+    "category": "pokemon",
+    "name": {
+      "ja": "ヤドラン"
+    },
+    "pokemon": [
+      "0080"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "rare",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 120,
+    "types": [
+      "water"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "ヤドン"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "あくび"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "相手のバトルポケモンをねむりにする。"
+        }
+      },
+      {
+        "name": {
+          "ja": "かれいなるかけ"
+        },
+        "cost": [
+          "water",
+          "normal",
+          "normal"
+        ],
+        "damage": "100×",
+        "text": {
+          "ja": "コインを3回投げ、オモテの数x100ダメージ。すべてウラなら、この対戦は自分の負けになる。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2,
+    "flavor_text": {
+      "ja": "基本的に ぼんやり している。 シッポが ちぎれて シェルダーが 外れてしまうと ヤドンに 戻る。"
+    }
+  },
+  {
+    "id": "asia-sm9b-013",
+    "set_id": "asia-sm9b",
+    "number": "013",
+    "category": "pokemon",
+    "name": {
+      "ja": "ナマコブシ"
+    },
+    "pokemon": [
+      "0771"
+    ],
+    "illustrator": "Asako Ito",
+    "rarity": "common",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "なかまをよぶ"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "自分の山札にあるたねポケモンを2枚まで、ベンチに出す。そして山札を切る。"
+        }
+      },
+      {
+        "name": {
+          "ja": "びっくりけん"
+        },
+        "cost": [
+          "water",
+          "normal",
+          "normal"
+        ],
+        "damage": "60+",
+        "text": {
+          "ja": "相手プレイヤーとジャンケンをし、自分が勝ったなら60ダメージ追加。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "ナマコブシ投げ という 文化は 打ち上げられた ナマコブシを 海に 投げ返す 習慣が 始まり。"
+    }
+  },
+  {
+    "id": "asia-sm9b-014",
+    "set_id": "asia-sm9b",
+    "number": "014",
+    "category": "pokemon",
+    "name": {
+      "ja": "アーボ"
+    },
+    "pokemon": [
+      "0023"
+    ],
+    "illustrator": "Yumi",
+    "rarity": "common",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "へびにらみ"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。"
+        }
+      },
+      {
+        "name": {
+          "ja": "しっぽでたたく"
+        },
+        "cost": [
+          "psychic",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2,
+    "flavor_text": {
+      "ja": "顎を 外すことで 自分より 大きな 獲物も 丸呑みに する。 食後は 身体を 丸め 休む。"
+    }
+  },
+  {
+    "id": "asia-sm9b-015",
+    "set_id": "asia-sm9b",
+    "number": "015",
+    "category": "pokemon",
+    "name": {
+      "ja": "アーボック"
+    },
+    "pokemon": [
+      "0024"
+    ],
+    "illustrator": "Yukiko Baba",
+    "rarity": "uncommon",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 120,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "アーボ"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "まきつく"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "ja": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。"
+        }
+      },
+      {
+        "name": {
+          "ja": "ヘビーチョーク"
+        },
+        "cost": [
+          "psychic",
+          "normal"
+        ],
+        "damage": "50+",
+        "text": {
+          "ja": "前の自分の番、このポケモンが「まきつく」を使っていたなら、120ダメージ追加。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2,
+    "flavor_text": {
+      "ja": "最新の 研究で お腹の 模様は ２０種類 以上の パターンが あることが 判明。"
+    }
+  },
+  {
+    "id": "asia-sm9b-016",
+    "set_id": "asia-sm9b",
+    "number": "016",
+    "category": "pokemon",
+    "name": {
+      "ja": "ズバット"
+    },
+    "pokemon": [
+      "0041"
+    ],
+    "illustrator": "Sekio",
+    "rarity": "common",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "かみつく"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "ja": "ベノムショック"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20+",
+        "text": {
+          "ja": "相手のバトルポケモンがどくなら、50ダメージ追加。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "目玉が ないので 目は 見えない。 口から 出す 超音波で 周りの 様子を うかがっている。"
+    }
+  },
+  {
+    "id": "asia-sm9b-017",
+    "set_id": "asia-sm9b",
+    "number": "017",
+    "category": "pokemon",
+    "name": {
+      "ja": "ゴルバット"
+    },
+    "pokemon": [
+      "0042"
+    ],
+    "illustrator": "Shin Nagasawa",
+    "rarity": "common",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "ズバット"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "かみつく"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "20",
+        "text": {}
+      },
+      {
+        "name": {
+          "ja": "きゅうけつ"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {
+          "ja": "相手のバトルポケモンに与えたダメージぶん、このポケモンのHPを回復する。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "空腹の あまり はがねポケモンに 噛みついたせいで キバの 欠けた ゴルバットを たまに 見かけるぞ。"
+    }
+  },
+  {
+    "id": "asia-sm9b-018",
+    "set_id": "asia-sm9b",
+    "number": "018",
+    "category": "pokemon",
+    "name": {
+      "ja": "クロバット"
+    },
+    "pokemon": [
+      "0169"
+    ],
+    "illustrator": "Anesaki Dynamic",
+    "rarity": "rare",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "ja": "ゴルバット"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "バッドポイズン"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "60",
+        "text": {
+          "ja": "相手のバトルポケモンをどくにする。このどくでのせるダメカンの数は4個になる。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 0,
+    "flavor_text": {
+      "ja": "キバが 鋭いので 暗闇で 噛まれ 血を 吸われても 痛みが なくて すぐに 気が つかない。"
+    }
+  },
+  {
+    "id": "asia-sm9b-019",
+    "set_id": "asia-sm9b",
+    "number": "019",
+    "category": "pokemon",
+    "name": {
+      "ja": "スリープ"
+    },
+    "pokemon": [
+      "0096"
+    ],
+    "illustrator": "Miki Tanaka",
+    "rarity": "common",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "さいみんじゅつ"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "相手のバトルポケモンをねむりにする。"
+        }
+      },
+      {
+        "name": {
+          "ja": "サイコパンチ"
+        },
+        "cost": [
+          "psychic",
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2,
+    "flavor_text": {
+      "ja": "レジャー施設の 近くで 姿を 見かける。 その晩 子どもが 見る 楽しいユメを 狙って いるのだ。"
+    }
+  },
+  {
+    "id": "asia-sm9b-020",
+    "set_id": "asia-sm9b",
+    "number": "020",
+    "category": "pokemon",
+    "name": {
+      "ja": "スリーパー"
+    },
+    "pokemon": [
+      "0097"
+    ],
+    "illustrator": "sui",
+    "rarity": "uncommon",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 110,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "スリープ"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "のうをゆさぶる"
+        },
+        "cost": [
+          "psychic",
+          "normal",
+          "normal"
+        ],
+        "damage": "30+",
+        "text": {
+          "ja": "相手の手札の枚数x10ダメージ追加。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2,
+    "flavor_text": {
+      "ja": "アローラに 暮らす スリーパーの ターゲットは 主に ネッコアラ。 人は あまり 被害に あわない。"
+    }
+  },
+  {
+    "id": "asia-sm9b-021",
+    "set_id": "asia-sm9b",
+    "number": "021",
+    "category": "pokemon",
+    "name": {
+      "ja": "サンド"
+    },
+    "pokemon": [
+      "0027"
+    ],
+    "illustrator": "Sekio",
+    "rarity": "common",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "もってくる"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "自分の山札を1枚引く。"
+        }
+      },
+      {
+        "name": {
+          "ja": "ころがりタックル"
+        },
+        "cost": [
+          "fighting",
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "雨の 少ない 土地に 棲んでいる。 危険が 迫ると 身体を 丸め 柔らかい お腹を 守るぞ。"
+    }
+  },
+  {
+    "id": "asia-sm9b-022",
+    "set_id": "asia-sm9b",
+    "number": "022",
+    "category": "pokemon",
+    "name": {
+      "ja": "サンドパン"
+    },
+    "pokemon": [
+      "0028"
+    ],
+    "illustrator": "Shigenori Negishi",
+    "rarity": "uncommon",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 110,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "サンド"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "れんぞくひっかき"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "30×",
+        "text": {
+          "ja": "コインを4回投げ、オモテの数x30ダメージ。"
+        }
+      },
+      {
+        "name": {
+          "ja": "すなじごく"
+        },
+        "cost": [
+          "fighting",
+          "normal",
+          "normal"
+        ],
+        "damage": "90",
+        "text": {
+          "ja": "次の相手の番、このワザを受けたポケモンは、にげられない。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "よく ツメや ツノが 折れてしまう。 折れた ツメや ツノで 土を 耕す 道具が 作られる。"
+    }
+  },
+  {
+    "id": "asia-sm9b-023",
+    "set_id": "asia-sm9b",
+    "number": "023",
+    "category": "pokemon",
+    "name": {
+      "ja": "イシツブテ"
+    },
+    "pokemon": [
+      "0074"
+    ],
+    "illustrator": "Sumiyoshi Kizuki",
+    "rarity": "common",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "まるくなる"
+        },
+        "cost": [
+          "fighting"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "コインを1回投げオモテなら、次の相手の番、このポケモンはワザのダメージを受けない。"
+        }
+      },
+      {
+        "name": {
+          "ja": "いわおとし"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2,
+    "flavor_text": {
+      "ja": "長く 生きた イシツブテは 角が とれて まんまる。 性格も とても 落ち着いていて 穏やか なのだ。"
+    }
+  },
+  {
+    "id": "asia-sm9b-024",
+    "set_id": "asia-sm9b",
+    "number": "024",
+    "category": "pokemon",
+    "name": {
+      "ja": "ゴローン"
+    },
+    "pokemon": [
+      "0075"
+    ],
+    "illustrator": "Ayaka Yoshida",
+    "rarity": "common",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 110,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "イシツブテ"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "いわころがり"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {}
+      },
+      {
+        "name": {
+          "ja": "すてみタックル"
+        },
+        "cost": [
+          "fighting",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "90",
+        "text": {
+          "ja": "このポケモンにも30ダメージ。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 4,
+    "flavor_text": {
+      "ja": "崖を 登り 山頂を 目指す。 てっぺんに 着くなり すぐに 来た 山道を 転がり 落ちていく。"
+    }
+  },
+  {
+    "id": "asia-sm9b-025",
+    "set_id": "asia-sm9b",
+    "number": "025",
+    "category": "pokemon",
+    "name": {
+      "ja": "ゴローニャ"
+    },
+    "pokemon": [
+      "0076"
+    ],
+    "illustrator": "Kyoko Umemoto",
+    "rarity": "rare",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 180,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "ja": "ゴローン"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "ハードローラー"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "100",
+        "text": {
+          "ja": "このワザのダメージは抵抗力を計算しない。"
+        }
+      },
+      {
+        "name": {
+          "ja": "ヘビーボンバー 180-"
+        },
+        "cost": [
+          "fighting",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "相手のバトルポケモンのにげるためのエネルギーの数x20ダメージぶん、このワザのダメージは小さくなる。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 4,
+    "flavor_text": {
+      "ja": "年老いると 脱皮 しなくなる。 長く長く 生きた ゴローニャの カラは 苔むしていて 緑だ。"
+    }
+  },
+  {
+    "id": "asia-sm9b-026",
+    "set_id": "asia-sm9b",
+    "number": "026",
+    "category": "pokemon",
+    "name": {
+      "ja": "カポエラー"
+    },
+    "pokemon": [
+      "0237"
+    ],
+    "illustrator": "Tomokazu Komiya",
+    "rarity": "common",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "フィニッシュコンボ"
+        },
+        "cost": [
+          "fighting"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "このワザは、前の自分の番に「サワムラー」が「スペシャルコンボ」を使っていなければ使えない。相手のポケモン全員に、それぞれ60ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+        }
+      },
+      {
+        "name": {
+          "ja": "かいてんアタック"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "コマのように 回転しながら 戦う。 遠心力の パワーで 破壊力は １０倍だ。"
+    }
+  },
+  {
+    "id": "asia-sm9b-027",
+    "set_id": "asia-sm9b",
+    "number": "027",
+    "category": "pokemon",
+    "name": {
+      "ja": "リオル"
+    },
+    "pokemon": [
+      "0447"
+    ],
+    "illustrator": "Mizue",
+    "rarity": "common",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "フェイント"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {
+          "ja": "このワザのダメージは抵抗力を計算しない。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "波動と 呼ばれる 波を 見て 人や ポケモンの 気持ちを 知る。 危険な 相手には 近付かない。"
+    }
+  },
+  {
+    "id": "asia-sm9b-028",
+    "set_id": "asia-sm9b",
+    "number": "028",
+    "category": "pokemon",
+    "name": {
+      "ja": "ツンデツンデ"
+    },
+    "pokemon": [
+      "0805"
+    ],
+    "illustrator": "nagimiso",
+    "rarity": "rare",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 120,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "やまおとし"
+        },
+        "cost": [
+          "fighting",
+          "fighting",
+          "normal"
+        ],
+        "damage": "110",
+        "text": {
+          "ja": "ウラが出るまでコインを投げ、オモテの数ぶん、相手の山札を上からトラッシュする。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 4,
+    "flavor_text": {
+      "ja": "ウルトラホールから 出現した。 複数の 生命が 積み上がり １匹を 形成している ようだ。"
+    }
+  },
+  {
+    "id": "asia-sm9b-029",
+    "set_id": "asia-sm9b",
+    "number": "029",
+    "category": "pokemon",
+    "name": {
+      "ja": "ルカリオ&メルメタルGX"
+    },
+    "pokemon": [
+      "0448",
+      "0809"
+    ],
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "double_rare",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 260,
+    "types": [
+      "metal"
+    ],
+    "stage": "basic",
+    "rule_box": "TAG TEAM-GX",
+    "attacks": [
+      {
+        "name": {
+          "ja": "こうてつのこぶし"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "ja": "自分の山札にある[鋼]エネルギーを1枚、このポケモンにつける。そして山札を切る。"
+        }
+      },
+      {
+        "name": {
+          "ja": "ヘビーインパクト"
+        },
+        "cost": [
+          "metal",
+          "metal",
+          "normal",
+          "normal"
+        ],
+        "damage": "150",
+        "text": {}
+      },
+      {
+        "name": {
+          "ja": "フルメタルウォールGX"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "この対戦が終わるまで、自分の[鋼]ポケモン全員が、相手のポケモンから受けるワザのダメージは、すべて「-30」される。追加でエネルギーが1個ついているなら、相手のバトルポケモンについているエネルギーを、すべてトラッシュする。［対戦中、自分はGXワザを1回しか使えない。］"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "asia-sm9b-030",
+    "set_id": "asia-sm9b",
+    "number": "030",
+    "category": "pokemon",
+    "name": {
+      "ja": "アローラディグダ"
+    },
+    "pokemon": [
+      "0050"
+    ],
+    "illustrator": "Atsuko Nishida",
+    "rarity": "common",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "metal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ぶつかる"
+        },
+        "cost": [],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "溶岩質の 地面も グングン 掘り進むほど パワフルだが なかなか 姿を 見せないぞ。"
+    }
+  },
+  {
+    "id": "asia-sm9b-031",
+    "set_id": "asia-sm9b",
+    "number": "031",
+    "category": "pokemon",
+    "name": {
+      "ja": "アローラダグトリオ"
+    },
+    "pokemon": [
+      "0051"
+    ],
+    "illustrator": "SATOSHI NAKAI",
+    "rarity": "uncommon",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "metal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "アローラディグダ"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "ぶちかます"
+        },
+        "cost": [
+          "metal",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "金属質の 髭は 重いので 素早さは いまいちだが 硬い 岩盤も 掘りぬくパワーを 持つ。"
+    }
+  },
+  {
+    "id": "asia-sm9b-032",
+    "set_id": "asia-sm9b",
+    "number": "032",
+    "category": "pokemon",
+    "name": {
+      "ja": "ココドラ"
+    },
+    "pokemon": [
+      "0304"
+    ],
+    "illustrator": "Ken Sugimori",
+    "rarity": "common",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "metal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "こうちょく"
+        },
+        "cost": [
+          "metal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "次の相手の番、このポケモンが受けるワザのダメージは「-30」される。"
+        }
+      },
+      {
+        "name": {
+          "ja": "メタルクロー"
+        },
+        "cost": [
+          "metal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "普段は 山奥で 暮らしているが お腹が すくと ふもとに 現われ 線路や 車を 食べてしまう。"
+    }
+  },
+  {
+    "id": "asia-sm9b-033",
+    "set_id": "asia-sm9b",
+    "number": "033",
+    "category": "pokemon",
+    "name": {
+      "ja": "コドラ"
+    },
+    "pokemon": [
+      "0305"
+    ],
+    "illustrator": "Suwama Chiaki",
+    "rarity": "common",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 90,
+    "types": [
+      "metal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "ココドラ"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "こうちょく"
+        },
+        "cost": [
+          "metal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "次の相手の番、このポケモンが受けるワザのダメージは「-30」される。"
+        }
+      },
+      {
+        "name": {
+          "ja": "ずつき"
+        },
+        "cost": [
+          "metal",
+          "metal",
+          "normal"
+        ],
+        "damage": "70",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 3,
+    "flavor_text": {
+      "ja": "鉄鉱石が 大好物。 鋼の 体を ぶつけ合って 縄張り 争いを する。"
+    }
+  },
+  {
+    "id": "asia-sm9b-034",
+    "set_id": "asia-sm9b",
+    "number": "034",
+    "category": "pokemon",
+    "name": {
+      "ja": "ボスゴドラ"
+    },
+    "pokemon": [
+      "0306"
+    ],
+    "illustrator": "Satoshi Shirai",
+    "rarity": "uncommon",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 170,
+    "types": [
+      "metal"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "ja": "コドラ"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "ガチガチプレス"
+        },
+        "cost": [
+          "metal",
+          "normal",
+          "normal"
+        ],
+        "damage": "80",
+        "text": {
+          "ja": "次の相手の番、このポケモンがワザのダメージを受けたとき、ワザを使ったポケモンにダメカンを8個のせる。"
+        }
+      },
+      {
+        "name": {
+          "ja": "ギガインパクト"
+        },
+        "cost": [
+          "metal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "160",
+        "text": {
+          "ja": "次の自分の番、このポケモンはワザが使えない。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 4,
+    "flavor_text": {
+      "ja": "山を まるごと 縄張りに する。 傷が 多い ボスゴドラほど 戦っているので 侮れない。"
+    }
+  },
+  {
+    "id": "asia-sm9b-035",
+    "set_id": "asia-sm9b",
+    "number": "035",
+    "category": "pokemon",
+    "name": {
+      "ja": "ルカリオ"
+    },
+    "pokemon": [
+      "0448"
+    ],
+    "illustrator": "Midori Harada",
+    "rarity": "rare",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "metal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "リオル"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "ローキック"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "40",
+        "text": {}
+      },
+      {
+        "name": {
+          "ja": "ラッシュアップ"
+        },
+        "cost": [
+          "metal",
+          "metal"
+        ],
+        "damage": "60+",
+        "text": {
+          "ja": "この番、手札からこのポケモンに「ポケモンのどうぐ」をつけていたなら、70ダメージ追加。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 2,
+    "flavor_text": {
+      "ja": "精神を 集中して 放つ 波動と 呼ばれる 不思議な 波は 大岩をも 粉々に 砕く。"
+    }
+  },
+  {
+    "id": "asia-sm9b-036",
+    "set_id": "asia-sm9b",
+    "number": "036",
+    "category": "pokemon",
+    "name": {
+      "ja": "ゲノセクト"
+    },
+    "pokemon": [
+      "0649"
+    ],
+    "illustrator": "Anesaki Dynamic",
+    "rarity": "uncommon",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "metal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "スプリットビーム"
+        },
+        "cost": [
+          "metal",
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "ja": "相手のベンチポケモン2匹にも、それぞれ30ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 2,
+    "flavor_text": {
+      "ja": "プラズマ団によって 改造された 古代の むしポケモン。 背中の 大砲が パワーアップした。"
+    }
+  },
+  {
+    "id": "asia-sm9b-037",
+    "set_id": "asia-sm9b",
+    "number": "037",
+    "category": "pokemon",
+    "name": {
+      "ja": "メルタン"
+    },
+    "pokemon": [
+      "0808"
+    ],
+    "illustrator": "Kouki Saitou",
+    "rarity": "common",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "metal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "はがねとかし"
+        },
+        "cost": [
+          "metal"
+        ],
+        "damage": "10+",
+        "text": {
+          "ja": "相手のバトルポケモンが[鋼]ポケモンなら、40ダメージ追加。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "とろりと 溶けた 鋼の 体。 地中の 鉄分や 金属を 溶かして 吸収する。"
+    }
+  },
+  {
+    "id": "asia-sm9b-038",
+    "set_id": "asia-sm9b",
+    "number": "038",
+    "category": "pokemon",
+    "name": {
+      "ja": "メルメタル"
+    },
+    "pokemon": [
+      "0809"
+    ],
+    "illustrator": "Kouki Saitou",
+    "rarity": "rare",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 150,
+    "types": [
+      "metal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "メルタン"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "ヘビーインパクト"
+        },
+        "cost": [
+          "metal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "130",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 4,
+    "flavor_text": {
+      "ja": "鉄を 産み出す 力を 持つと 崇められていた。 ３０００年の 時を 経て なぜか 蘇った。"
+    }
+  },
+  {
+    "id": "asia-sm9b-039",
+    "set_id": "asia-sm9b",
+    "number": "039",
+    "category": "pokemon",
+    "name": {
+      "ja": "オニスズメ"
+    },
+    "pokemon": [
+      "0021"
+    ],
+    "illustrator": "tetsuya koizumi",
+    "rarity": "common",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "かっくう"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "ja": "スピードひこう"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "自分のテリトリーを 守るためなら 大きな ポケモンが 相手でも 向かっていく 向こう見ずな 性質。"
+    }
+  },
+  {
+    "id": "asia-sm9b-040",
+    "set_id": "asia-sm9b",
+    "number": "040",
+    "category": "pokemon",
+    "name": {
+      "ja": "オニドリル"
+    },
+    "pokemon": [
+      "0022"
+    ],
+    "illustrator": "kawayoo",
+    "rarity": "common",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "normal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "オニスズメ"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "ドリルライナーダブル"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "70",
+        "text": {
+          "ja": "コインを1回投げオモテなら、相手のバトルポケモンについているエネルギーを、2個トラッシュする。"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "オニドリルの 縄張りで 食べ物を 持って 歩くのは 危険だ。 あっという 間に かっさらわれるぞ。"
+    }
+  },
+  {
+    "id": "asia-sm9b-041",
+    "set_id": "asia-sm9b",
+    "number": "041",
+    "category": "pokemon",
+    "name": {
+      "ja": "ニャルマー"
+    },
+    "pokemon": [
+      "0431"
+    ],
+    "illustrator": "sowsow",
+    "rarity": "common",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ねこびより"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "自分の山札を1枚引く。その後、このポケモンをねむりにする。"
+        }
+      },
+      {
+        "name": {
+          "ja": "びょんびょんテール"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "相手の「ポケモンGX・EX」1匹に、60ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "ja": "気に入らないと ツメを 立てるが たまに のどを 鳴らして 甘える 性格が 一部に 大人気だ。"
+    }
+  },
+  {
+    "id": "asia-sm9b-042",
+    "set_id": "asia-sm9b",
+    "number": "042",
+    "category": "pokemon",
+    "name": {
+      "ja": "ブニャット"
+    },
+    "pokemon": [
+      "0432"
+    ],
+    "illustrator": "Tomokazu Komiya",
+    "rarity": "uncommon",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 120,
+    "types": [
+      "normal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "ja": "ニャルマー"
+    },
+    "attacks": [
+      {
+        "name": {
+          "ja": "ドラネコダッシュ"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {
+          "ja": "相手の手札からオモテを見ないで、1枚トラッシュする。この番、このポケモンが「ニャルマー」から進化していたなら、さらに1枚トラッシュする。"
+        }
+      },
+      {
+        "name": {
+          "ja": "つきたおし"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "80",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3,
+    "flavor_text": {
+      "ja": "ほかの ポケモンの 住処でも 居心地が 良ければ 居座って 自分の 住処に してしまう。"
+    }
+  },
+  {
+    "id": "asia-sm9b-043",
+    "set_id": "asia-sm9b",
+    "number": "043",
+    "category": "pokemon",
+    "name": {
+      "ja": "テッカグヤGX"
+    },
+    "pokemon": [
+      "0797"
+    ],
+    "illustrator": "PLANETA Igarashi",
+    "rarity": "double_rare",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 200,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "rule_box": "GX",
+    "attacks": [
+      {
+        "name": {
+          "ja": "パワーサイクロン"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "110",
+        "text": {
+          "ja": "このポケモンについているエネルギーを1個、ベンチポケモンにつけ替える。"
+        }
+      },
+      {
+        "name": {
+          "ja": "ディスカバリーGX"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "自分のサイドを数えたあと、すべて手札に加える。その後、山札の上から、加えた枚数ぶんのカードを、サイドとして置く。数えた枚数ぶんのサイドを置けないなら、このワザは失敗。［対戦中、自分はGXワザを1回しか使えない。］"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 4
+  },
+  {
+    "id": "asia-sm9b-044",
+    "set_id": "asia-sm9b",
+    "number": "044",
+    "category": "trainer",
+    "name": {
+      "ja": "退化スプレーZ"
+    },
+    "pokemon": [],
+    "illustrator": "Toyste Beach",
+    "rarity": "uncommon",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "ja": "自分の進化しているポケモンを1匹選び、そのポケモンの上から「進化カード」を好きなだけはがして退化させる。はがしたカードは、山札にもどして切る。［退化したポケモンは、その番に進化できない。］"
+    }
+  },
+  {
+    "id": "asia-sm9b-045",
+    "set_id": "asia-sm9b",
+    "number": "045",
+    "category": "trainer",
+    "name": {
+      "ja": "ビーストブリンガー"
+    },
+    "pokemon": [],
+    "illustrator": "Ayaka Yoshida",
+    "rarity": "uncommon",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "trainer_type": "tool",
+    "rules_text": {
+      "ja": "自分のサイドの残り枚数が6枚のとき、このカードをつけている「ウルトラビースト」のワザのダメージで、相手のバトル場の「ポケモンGX・EX」がきぜつしたなら、サイドを1枚多くとる。"
+    }
+  },
+  {
+    "id": "asia-sm9b-046",
+    "set_id": "asia-sm9b",
+    "number": "046",
+    "category": "trainer",
+    "name": {
+      "ja": "メタルコアバリア"
+    },
+    "pokemon": [],
+    "illustrator": "Studio Bora Inc.",
+    "rarity": "uncommon",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "trainer_type": "tool",
+    "rules_text": {
+      "ja": "ポケモンについているこのカードは、相手の番の終わりにトラッシュする。 このカードをつけているポケモンが、相手のポケモンから受けるワザのダメージは「-70」される。"
+    }
+  },
+  {
+    "id": "asia-sm9b-047",
+    "set_id": "asia-sm9b",
+    "number": "047",
+    "category": "trainer",
+    "name": {
+      "ja": "ウルトラフォレストのかみつかい"
+    },
+    "pokemon": [],
+    "illustrator": "Masakazu Fukuda",
+    "rarity": "uncommon",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "ja": "この番、自分の「ウルトラビースト」が使うワザのダメージは、相手のバトルポケモンにかかっている効果を計算しない。"
+    }
+  },
+  {
+    "id": "asia-sm9b-048",
+    "set_id": "asia-sm9b",
+    "number": "048",
+    "category": "trainer",
+    "name": {
+      "ja": "ブルーの探索"
+    },
+    "pokemon": [],
+    "illustrator": "Naoki Saito",
+    "rarity": "uncommon",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "ja": "このカードは、自分の場に特性を持つポケモンがいるなら、使えない。自分の山札にあるトレーナ−ズを2枚まで、相手に見せてから、手札に加える。そして山札を切る。"
+    }
+  },
+  {
+    "id": "asia-sm9b-049",
+    "set_id": "asia-sm9b",
+    "number": "049",
+    "category": "trainer",
+    "name": {
+      "ja": "マーレイン"
+    },
+    "pokemon": [],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "ja": "このカードは、自分の手札にある[鋼]エネルギーを2枚トラッシュしなければ使えない。自分のトラッシュにあるトレーナーズを1枚、相手に見せてから、山札にもどして切る。"
+    }
+  },
+  {
+    "id": "asia-sm9b-050",
+    "set_id": "asia-sm9b",
+    "number": "050",
+    "category": "trainer",
+    "name": {
+      "ja": "無人発電所"
+    },
+    "pokemon": [],
+    "illustrator": "aky CG Works",
+    "rarity": "uncommon",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "trainer_type": "stadium",
+    "rules_text": {
+      "ja": "おたがいの場の「ポケモンGX・EX」の特性は、すべてなくなる。"
+    }
+  },
+  {
+    "id": "asia-sm9b-051",
+    "set_id": "asia-sm9b",
+    "number": "051",
+    "category": "trainer",
+    "name": {
+      "ja": "ハイパーボール"
+    },
+    "pokemon": [],
+    "illustrator": "Ryo Ueda",
+    "rarity": "rare_holo",
+    "regulation_mark": "A",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "ja": "このカードは、自分の手札を2枚トラッシュしなければ使えない。自分の山札からポケモンを1枚選び、相手に見せてから、手札に加える。そして山札を切る。"
+    }
+  },
+  {
+    "id": "asia-sm9b-052",
+    "set_id": "asia-sm9b",
+    "number": "052",
+    "category": "trainer",
+    "name": {
+      "ja": "ビーストリング"
+    },
+    "pokemon": [],
+    "illustrator": "5ban Graphics",
+    "rarity": "rare_holo",
+    "regulation_mark": "B",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "ja": "このカードは、相手のサイドの残り枚数が、4枚または3枚でなければ使えない。自分の山札にある基本エネルギーを2枚まで、自分の「ウルトラビースト」1匹につける。そして山札を切る。"
+    }
+  },
+  {
+    "id": "asia-sm9b-053",
+    "set_id": "asia-sm9b",
+    "number": "053",
+    "category": "trainer",
+    "name": {
+      "ja": "鋼鉄のフライパン"
+    },
+    "pokemon": [],
+    "illustrator": "Ryo Ueda",
+    "rarity": "rare_holo",
+    "regulation_mark": "B",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "trainer_type": "tool",
+    "rules_text": {
+      "ja": "このカードをつけているポケモンは、相手のポケモンから受けるワザのダメージが「-30」され、弱点もなくなる。"
+    }
+  },
+  {
+    "id": "asia-sm9b-054",
+    "set_id": "asia-sm9b",
+    "number": "054",
+    "category": "trainer",
+    "name": {
+      "ja": "アセロラ"
+    },
+    "pokemon": [],
+    "illustrator": "Hideki Ishikawa",
+    "rarity": "rare_holo",
+    "regulation_mark": "A",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "ja": "ダメカンがのっている自分のポケモン1匹と、ついているすべてのカードを、手札にもどす。"
+    }
+  },
+  {
+    "id": "asia-sm9b-055",
+    "set_id": "asia-sm9b",
+    "number": "055",
+    "category": "pokemon",
+    "name": {
+      "ja": "フェローチェ&マッシブーンGX"
+    },
+    "pokemon": [
+      "0795",
+      "0794"
+    ],
+    "illustrator": "aky CG Works",
+    "rarity": "ultra_rare",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 260,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "rule_box": "TAG TEAM-GX",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ジェットパンチ"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "30",
+        "text": {
+          "ja": "相手のベンチポケモン1匹にも、30ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+        }
+      },
+      {
+        "name": {
+          "ja": "エレガントソール"
+        },
+        "cost": [
+          "grass",
+          "grass",
+          "normal"
+        ],
+        "damage": "190",
+        "text": {
+          "ja": "次の自分の番、このポケモンの「エレガントソール」のダメージは「60」になる。"
+        }
+      },
+      {
+        "name": {
+          "ja": "ビーストゲームGX"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "50",
+        "text": {
+          "ja": "このワザのダメージで、相手のポケモンがきぜつしたなら、サイドを1枚多くとる。追加でエネルギーが7個ついているなら、多くとる枚数は3枚になる。［対戦中、自分はGXワザを1回しか使えない。］"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-sm9b-056",
+    "set_id": "asia-sm9b",
+    "number": "056",
+    "category": "pokemon",
+    "name": {
+      "ja": "フェローチェ&マッシブーンGX"
+    },
+    "pokemon": [
+      "0795",
+      "0794"
+    ],
+    "illustrator": "kirisAki",
+    "rarity": "ultra_rare",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 260,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "rule_box": "TAG TEAM-GX",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ジェットパンチ"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "30",
+        "text": {
+          "ja": "相手のベンチポケモン1匹にも、30ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+        }
+      },
+      {
+        "name": {
+          "ja": "エレガントソール"
+        },
+        "cost": [
+          "grass",
+          "grass",
+          "normal"
+        ],
+        "damage": "190",
+        "text": {
+          "ja": "次の自分の番、このポケモンの「エレガントソール」のダメージは「60」になる。"
+        }
+      },
+      {
+        "name": {
+          "ja": "ビーストゲームGX"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "50",
+        "text": {
+          "ja": "このワザのダメージで、相手のポケモンがきぜつしたなら、サイドを1枚多くとる。追加でエネルギーが7個ついているなら、多くとる枚数は3枚になる。［対戦中、自分はGXワザを1回しか使えない。］"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-sm9b-057",
+    "set_id": "asia-sm9b",
+    "number": "057",
+    "category": "pokemon",
+    "name": {
+      "ja": "カメックスGX"
+    },
+    "pokemon": [
+      "0009"
+    ],
+    "illustrator": "sadaji",
+    "rarity": "ultra_rare",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 240,
+    "types": [
+      "water"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "ja": "カメール"
+    },
+    "rule_box": "GX",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ロケットスプラッシュ"
+        },
+        "cost": [
+          "water",
+          "water"
+        ],
+        "damage": "60×",
+        "text": {
+          "ja": "自分の場のポケモンについている[水]エネルギーを好きなだけ山札にもどし、その枚数x60ダメージ。その場合、山札を切る。"
+        }
+      },
+      {
+        "name": {
+          "ja": "だいほうすいGX"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "自分の手札にある[水]エネルギーを好きなだけ、自分のポケモンに好きなようにつける。［対戦中、自分はGXワザを1回しか使えない。］"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "asia-sm9b-058",
+    "set_id": "asia-sm9b",
+    "number": "058",
+    "category": "pokemon",
+    "name": {
+      "ja": "ルカリオ&メルメタルGX"
+    },
+    "pokemon": [
+      "0448",
+      "0809"
+    ],
+    "illustrator": "5ban Graphics",
+    "rarity": "ultra_rare",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 260,
+    "types": [
+      "metal"
+    ],
+    "stage": "basic",
+    "rule_box": "TAG TEAM-GX",
+    "attacks": [
+      {
+        "name": {
+          "ja": "こうてつのこぶし"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "ja": "自分の山札にある[鋼]エネルギーを1枚、このポケモンにつける。そして山札を切る。"
+        }
+      },
+      {
+        "name": {
+          "ja": "ヘビーインパクト"
+        },
+        "cost": [
+          "metal",
+          "metal",
+          "normal",
+          "normal"
+        ],
+        "damage": "150",
+        "text": {}
+      },
+      {
+        "name": {
+          "ja": "フルメタルウォールGX"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "この対戦が終わるまで、自分の[鋼]ポケモン全員が、相手のポケモンから受けるワザのダメージは、すべて「-30」される。追加でエネルギーが1個ついているなら、相手のバトルポケモンについているエネルギーを、すべてトラッシュする。［対戦中、自分はGXワザを1回しか使えない。］"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "asia-sm9b-059",
+    "set_id": "asia-sm9b",
+    "number": "059",
+    "category": "pokemon",
+    "name": {
+      "ja": "ルカリオ&メルメタルGX"
+    },
+    "pokemon": [
+      "0448",
+      "0809"
+    ],
+    "illustrator": "nagimiso",
+    "rarity": "ultra_rare",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 260,
+    "types": [
+      "metal"
+    ],
+    "stage": "basic",
+    "rule_box": "TAG TEAM-GX",
+    "attacks": [
+      {
+        "name": {
+          "ja": "こうてつのこぶし"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "ja": "自分の山札にある[鋼]エネルギーを1枚、このポケモンにつける。そして山札を切る。"
+        }
+      },
+      {
+        "name": {
+          "ja": "ヘビーインパクト"
+        },
+        "cost": [
+          "metal",
+          "metal",
+          "normal",
+          "normal"
+        ],
+        "damage": "150",
+        "text": {}
+      },
+      {
+        "name": {
+          "ja": "フルメタルウォールGX"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "この対戦が終わるまで、自分の[鋼]ポケモン全員が、相手のポケモンから受けるワザのダメージは、すべて「-30」される。追加でエネルギーが1個ついているなら、相手のバトルポケモンについているエネルギーを、すべてトラッシュする。［対戦中、自分はGXワザを1回しか使えない。］"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "asia-sm9b-060",
+    "set_id": "asia-sm9b",
+    "number": "060",
+    "category": "pokemon",
+    "name": {
+      "ja": "テッカグヤGX"
+    },
+    "pokemon": [
+      "0797"
+    ],
+    "illustrator": "aky CG Works",
+    "rarity": "ultra_rare",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 200,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "rule_box": "GX",
+    "attacks": [
+      {
+        "name": {
+          "ja": "パワーサイクロン"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "110",
+        "text": {
+          "ja": "このポケモンについているエネルギーを1個、ベンチポケモンにつけ替える。"
+        }
+      },
+      {
+        "name": {
+          "ja": "ディスカバリーGX"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "自分のサイドを数えたあと、すべて手札に加える。その後、山札の上から、加えた枚数ぶんのカードを、サイドとして置く。数えた枚数ぶんのサイドを置けないなら、このワザは失敗。［対戦中、自分はGXワザを1回しか使えない。］"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 4
+  },
+  {
+    "id": "asia-sm9b-061",
+    "set_id": "asia-sm9b",
+    "number": "061",
+    "category": "trainer",
+    "name": {
+      "ja": "ブルーの探索"
+    },
+    "pokemon": [],
+    "illustrator": "Naoki Saito",
+    "rarity": "ultra_rare",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "ja": "このカードは、自分の場に特性を持つポケモンがいるなら、使えない。自分の山札にあるトレーナ−ズを2枚まで、相手に見せてから、手札に加える。そして山札を切る。"
+    }
+  },
+  {
+    "id": "asia-sm9b-062",
+    "set_id": "asia-sm9b",
+    "number": "062",
+    "category": "trainer",
+    "name": {
+      "ja": "マーレイン"
+    },
+    "pokemon": [],
+    "illustrator": "Masakazu Fukuda",
+    "rarity": "ultra_rare",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "ja": "このカードは、自分の手札にある[鋼]エネルギーを2枚トラッシュしなければ使えない。自分のトラッシュにあるトレーナーズを1枚、相手に見せてから、山札にもどして切る。"
+    }
+  },
+  {
+    "id": "asia-sm9b-063",
+    "set_id": "asia-sm9b",
+    "number": "063",
+    "category": "pokemon",
+    "name": {
+      "ja": "フェローチェ&マッシブーンGX"
+    },
+    "pokemon": [
+      "0795",
+      "0794"
+    ],
+    "illustrator": "",
+    "rarity": "hyper_rare",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 260,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "rule_box": "TAG TEAM-GX",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ジェットパンチ"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "30",
+        "text": {
+          "ja": "相手のベンチポケモン1匹にも、30ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+        }
+      },
+      {
+        "name": {
+          "ja": "エレガントソール"
+        },
+        "cost": [
+          "grass",
+          "grass",
+          "normal"
+        ],
+        "damage": "190",
+        "text": {
+          "ja": "次の自分の番、このポケモンの「エレガントソール」のダメージは「60」になる。"
+        }
+      },
+      {
+        "name": {
+          "ja": "ビーストゲームGX"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "50",
+        "text": {
+          "ja": "このワザのダメージで、相手のポケモンがきぜつしたなら、サイドを1枚多くとる。追加でエネルギーが7個ついているなら、多くとる枚数は3枚になる。［対戦中、自分はGXワザを1回しか使えない。］"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "asia-sm9b-064",
+    "set_id": "asia-sm9b",
+    "number": "064",
+    "category": "pokemon",
+    "name": {
+      "ja": "カメックスGX"
+    },
+    "pokemon": [
+      "0009"
+    ],
+    "illustrator": "",
+    "rarity": "hyper_rare",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 240,
+    "types": [
+      "water"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "ja": "カメール"
+    },
+    "rule_box": "GX",
+    "attacks": [
+      {
+        "name": {
+          "ja": "ロケットスプラッシュ"
+        },
+        "cost": [
+          "water",
+          "water"
+        ],
+        "damage": "60×",
+        "text": {
+          "ja": "自分の場のポケモンについている[水]エネルギーを好きなだけ山札にもどし、その枚数x60ダメージ。その場合、山札を切る。"
+        }
+      },
+      {
+        "name": {
+          "ja": "だいほうすいGX"
+        },
+        "cost": [
+          "water"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "自分の手札にある[水]エネルギーを好きなだけ、自分のポケモンに好きなようにつける。［対戦中、自分はGXワザを1回しか使えない。］"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "asia-sm9b-065",
+    "set_id": "asia-sm9b",
+    "number": "065",
+    "category": "pokemon",
+    "name": {
+      "ja": "ルカリオ&メルメタルGX"
+    },
+    "pokemon": [
+      "0448",
+      "0809"
+    ],
+    "illustrator": "",
+    "rarity": "hyper_rare",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 260,
+    "types": [
+      "metal"
+    ],
+    "stage": "basic",
+    "rule_box": "TAG TEAM-GX",
+    "attacks": [
+      {
+        "name": {
+          "ja": "こうてつのこぶし"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "50",
+        "text": {
+          "ja": "自分の山札にある[鋼]エネルギーを1枚、このポケモンにつける。そして山札を切る。"
+        }
+      },
+      {
+        "name": {
+          "ja": "ヘビーインパクト"
+        },
+        "cost": [
+          "metal",
+          "metal",
+          "normal",
+          "normal"
+        ],
+        "damage": "150",
+        "text": {}
+      },
+      {
+        "name": {
+          "ja": "フルメタルウォールGX"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "この対戦が終わるまで、自分の[鋼]ポケモン全員が、相手のポケモンから受けるワザのダメージは、すべて「-30」される。追加でエネルギーが1個ついているなら、相手のバトルポケモンについているエネルギーを、すべてトラッシュする。［対戦中、自分はGXワザを1回しか使えない。］"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "asia-sm9b-066",
+    "set_id": "asia-sm9b",
+    "number": "066",
+    "category": "pokemon",
+    "name": {
+      "ja": "テッカグヤGX"
+    },
+    "pokemon": [
+      "0797"
+    ],
+    "illustrator": "",
+    "rarity": "hyper_rare",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "hp": 200,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "rule_box": "GX",
+    "attacks": [
+      {
+        "name": {
+          "ja": "パワーサイクロン"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "110",
+        "text": {
+          "ja": "このポケモンについているエネルギーを1個、ベンチポケモンにつけ替える。"
+        }
+      },
+      {
+        "name": {
+          "ja": "ディスカバリーGX"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "ja": "自分のサイドを数えたあと、すべて手札に加える。その後、山札の上から、加えた枚数ぶんのカードを、サイドとして置く。数えた枚数ぶんのサイドを置けないなら、このワザは失敗。［対戦中、自分はGXワザを1回しか使えない。］"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 4
+  },
+  {
+    "id": "asia-sm9b-067",
+    "set_id": "asia-sm9b",
+    "number": "067",
+    "category": "trainer",
+    "name": {
+      "ja": "ビーストブリンガー"
+    },
+    "pokemon": [],
+    "illustrator": "",
+    "rarity": "secret_rare",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "trainer_type": "tool",
+    "rules_text": {
+      "ja": "自分のサイドの残り枚数が6枚のとき、このカードをつけている「ウルトラビースト」のワザのダメージで、相手のバトル場の「ポケモンGX・EX」がきぜつしたなら、サイドを1枚多くとる。"
+    }
+  },
+  {
+    "id": "asia-sm9b-068",
+    "set_id": "asia-sm9b",
+    "number": "068",
+    "category": "trainer",
+    "name": {
+      "ja": "メタルコアバリア"
+    },
+    "pokemon": [],
+    "illustrator": "",
+    "rarity": "secret_rare",
+    "regulation_mark": "C",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "trainer_type": "tool",
+    "rules_text": {
+      "ja": "ポケモンについているこのカードは、相手の番の終わりにトラッシュする。 このカードをつけているポケモンが、相手のポケモンから受けるワザのダメージは「-70」される。"
+    }
+  },
+  {
+    "id": "asia-sm9b-069",
+    "set_id": "asia-sm9b",
+    "number": "069",
+    "category": "trainer",
+    "name": {
+      "ja": "テンガン山"
+    },
+    "pokemon": [],
+    "illustrator": "",
+    "rarity": "secret_rare",
+    "regulation_mark": "B",
+    "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "trainer_type": "stadium",
+    "rules_text": {
+      "ja": "おたがいのプレイヤーは、自分の番に1回、自分のトラッシュにある[鋼]エネルギーを2枚、相手に見せてから、手札に加えてよい。"
+    }
+  }
+]

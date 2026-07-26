@@ -56,7 +56,7 @@
         ],
         "damage": "30",
         "text": {
-          "en": "This attack’s damage isn’t affected by Weakness or Resistance.",
+          "en": "This attack's damage isn't affected by Weakness or Resistance.",
           "fr": "Les dégâts de cette attaque ne sont pas affectés par la Faiblesse ou la Résistance."
         }
       }
@@ -64,7 +64,7 @@
     "weaknesses": [
       {
         "type": "psychic",
-        "value": ""
+        "value": "x2"
       }
     ],
     "retreat_cost": 1
@@ -158,7 +158,7 @@
     "weaknesses": [
       {
         "type": "grass",
-        "value": ""
+        "value": "x2"
       }
     ],
     "retreat_cost": 1
@@ -214,7 +214,7 @@
     "weaknesses": [
       {
         "type": "lightning",
-        "value": ""
+        "value": "x2"
       }
     ],
     "resistances": [
@@ -277,7 +277,7 @@
         ],
         "damage": "20",
         "text": {
-          "en": "Does 10 damage to 1 of your opponent’s Benched Pokémon. (Don’t apply Weakness and Resistance for Benched Pokémon.)",
+          "en": "Does 10 damage to 1 of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
           "fr": "Inflige 10 dégâts à 1 des Pokémon de Banc de votre adversaire. (Vous ne pouvez pas appliquer la Faiblesse et la Résistance aux Pokémon de Banc.)"
         }
       }
@@ -285,7 +285,7 @@
     "weaknesses": [
       {
         "type": "fighting",
-        "value": ""
+        "value": "x2"
       }
     ],
     "retreat_cost": 1
@@ -337,7 +337,7 @@
     "weaknesses": [
       {
         "type": "lightning",
-        "value": ""
+        "value": "x2"
       }
     ],
     "retreat_cost": 1
@@ -403,7 +403,7 @@
     "weaknesses": [
       {
         "type": "fire",
-        "value": ""
+        "value": "x2"
       }
     ],
     "resistances": [
@@ -430,6 +430,15 @@
     "rarity": "common",
     "regulation_mark": null,
     "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-pop4/en/16.webp",
+          "fr": "/images/cards/intl-pop4/fr/16.webp",
+          "it": ""
+        }
+      },
       {
         "id": "holo",
         "images": {
@@ -471,7 +480,7 @@
         ],
         "damage": "20",
         "text": {
-          "en": "During your opponent’s next turn, any damage done to Wobbuffet is reduced by 20 (after applying Weakness and Resistance).",
+          "en": "During your opponent's next turn, any damage done to Wobbuffet is reduced by 20 (after applying Weakness and Resistance).",
           "fr": "Lors du prochain tour de votre adversaire, les dégâts infligés à Qulbutoké sont réduits de 20 (après application de la Faiblesse et de la Résistance)."
         }
       }
@@ -479,7 +488,7 @@
     "weaknesses": [
       {
         "type": "psychic",
-        "value": ""
+        "value": "x2"
       }
     ],
     "retreat_cost": 2
@@ -497,7 +506,7 @@
       "0386"
     ],
     "illustrator": "Hiromichi Sugiyama",
-    "rarity": "ultra_rare",
+    "rarity": "rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -529,7 +538,7 @@
         ],
         "damage": "50",
         "text": {
-          "en": "This attack’s damage isn’t affected by Resistance, Poké-Powers, Poké-Bodies, or any other effects on the Defending Pokémon.",
+          "en": "This attack's damage isn't affected by Resistance, Poké-Powers, Poké-Bodies, or any other effects on the Defending Pokémon.",
           "fr": "Les dégâts de cette attaque ne sont pas affectés par la Résistance, les Poké-Powers, les Poké-Bodies ou tout autre effet sur le Pokémon Défenseur."
         }
       }
@@ -537,7 +546,7 @@
     "weaknesses": [
       {
         "type": "psychic",
-        "value": ""
+        "value": "x2"
       }
     ],
     "retreat_cost": 1
@@ -594,7 +603,7 @@
         ],
         "damage": "20",
         "text": {
-          "en": "During your next turn, Deoxys’s attacks do 40 more damage to the Defending Pokémon (before applying Weakness and Resistance).",
+          "en": "During your next turn, Deoxys's attacks do 40 more damage to the Defending Pokémon (before applying Weakness and Resistance).",
           "fr": "Lors de votre prochain tour, les attaques de Deoxys infligent 40 dégâts supplémentaires au Pokémon Défenseur (avant application de la Faiblesse et de la Résistance)."
         }
       }
@@ -602,7 +611,7 @@
     "weaknesses": [
       {
         "type": "psychic",
-        "value": ""
+        "value": "x2"
       }
     ],
     "retreat_cost": 1
@@ -625,6 +634,15 @@
     "variants": [
       {
         "id": "normal",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-pop4/en/3.webp",
+          "fr": "/images/cards/intl-pop4/fr/3.webp",
+          "it": ""
+        }
+      },
+      {
+        "id": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-pop4/en/3.webp",
@@ -668,7 +686,7 @@
         ],
         "damage": "70",
         "text": {
-          "en": "The Defending Pokémon can’t retreat during your opponent’s next turn.",
+          "en": "The Defending Pokémon can't retreat during your opponent's next turn.",
           "fr": "Le Pokémon Défenseur ne peut pas battre en retraite lors du prochain tour de votre adversaire."
         }
       }
@@ -676,7 +694,7 @@
     "weaknesses": [
       {
         "type": "water",
-        "value": ""
+        "value": "x2"
       }
     ],
     "retreat_cost": 2
@@ -741,7 +759,7 @@
     "weaknesses": [
       {
         "type": "psychic",
-        "value": ""
+        "value": "x2"
       }
     ],
     "retreat_cost": 1
@@ -802,7 +820,7 @@
     "weaknesses": [
       {
         "type": "fire",
-        "value": ""
+        "value": "x2"
       }
     ],
     "resistances": [
@@ -829,6 +847,15 @@
     "rarity": "uncommon",
     "regulation_mark": null,
     "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-pop4/en/6.webp",
+          "fr": "/images/cards/intl-pop4/fr/6.webp",
+          "it": ""
+        }
+      },
       {
         "id": "holo",
         "images": {
@@ -859,7 +886,7 @@
         ],
         "damage": "10",
         "text": {
-          "en": "If the Defending Pokémon tries to attack during your opponent’s next turn, your opponent flips a coin. If tails, that attack does nothing.",
+          "en": "If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing.",
           "fr": "Si le Pokémon Défenseur essaye d'attaquer lors du prochain tour de votre adversaire, celui-ci lance une pièce. Si c'est pile, cette attaque est sans effet."
         }
       },
@@ -875,7 +902,7 @@
         ],
         "damage": "40",
         "text": {
-          "en": "This attack’s damage isn’t affected by Resistance.",
+          "en": "This attack's damage isn't affected by Resistance.",
           "fr": "Les dégâts de cette attaque ne sont pas affectés par la Résistance."
         }
       }
@@ -883,7 +910,7 @@
     "weaknesses": [
       {
         "type": "water",
-        "value": ""
+        "value": "x2"
       }
     ],
     "retreat_cost": 1
@@ -957,7 +984,7 @@
     "weaknesses": [
       {
         "type": "fire",
-        "value": ""
+        "value": "x2"
       }
     ],
     "resistances": [
@@ -1023,7 +1050,7 @@
     ],
     "trainer_type": "supporter",
     "rules_text": {
-      "en": "Search your deck for up to 2 Basic Pokémon and put them onto your Bench. Shuffle your deck afterward.",
+      "en": "You can play only one Supporter card each turn. When you play this card, put it next to your Active Pokémon. When your turn ends, discard this card. Search your deck for up to 2 Basic Pokémon and put them onto your Bench. Shuffle your deck afterward.",
       "fr": "Vous ne pouvez jouer qu'une seule carte Supporter par tour. Lorsque vous la jouez, placez-la à côté de votre Pokémon Actif. À la fin du tour, défaussez-la.\n\nChoisissez dans votre deck jusqu'à 2 Pokémon de base et placez-les sur votre Banc. Ensuite, mélangez votre deck."
     }
   }

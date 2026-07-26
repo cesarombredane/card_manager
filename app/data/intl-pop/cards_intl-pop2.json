@@ -67,7 +67,7 @@
         ],
         "damage": "50",
         "text": {
-          "en": "Discard 2 basic Energy cards attached to Entei or this attack does nothing.",
+          "en": "Discard 2 Basic Energy cards attached to Entei or this attack does nothing.",
           "fr": "Défaussez 2 cartes Énergie de base attachées à Entei ou cette attaque est sans effet."
         }
       }
@@ -104,9 +104,10 @@
         }
       }
     ],
+    "retreat_cost": 0,
     "trainer_type": "stadium",
     "rules_text": {
-      "en": "Once during each player’s turn, when that player attaches an Energy card from his or her hand to 1 of his or her Benched Pokémon, he or she removes 1 damage counter from that Pokémon.",
+      "en": "This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card. Once during each player's turn, when that player attaches an Energy card from his or her hand to 1 of his or her Benched Pokémon, he or she removes 1 damage counter from that Pokémon.",
       "fr": "Cette carte reste en jeu lorsque vous la jouez. Défaussez-la si une autre carte Stade est mise en jeu.\n\nUne seule fois lors du tour de chaque joueur, lorsqu'un joueur attache une carte Énergie de sa main à 1 des Pokémon de son Banc, il retire à ce Pokémon 1 marqueur de dégât."
     }
   },
@@ -134,9 +135,10 @@
         }
       }
     ],
+    "retreat_cost": 0,
     "trainer_type": "supporter",
     "rules_text": {
-      "en": "Draw 3 cards. Then discard any 1 card from your hand.",
+      "en": "You can play only one Supporter card each turn. When you play this card, put it next to your Active Pokémon. When your turn ends, discard this card. Draw 3 cards. Then discard any 1 card from your hand.",
       "fr": "Vous ne pouvez jouer qu'une seule carte Supporter par tour. Lorsque vous la jouez, placez-la à côté de votre Pokémon Actif. À la fin du tour, défaussez-la.\n\nPiochez 3 cartes. Ensuite, défaussez une carte de votre main."
     }
   },
@@ -246,7 +248,7 @@
         ],
         "damage": "10",
         "text": {
-          "en": "If the Defending Pokémon tries to attack during your opponent’s next turn, your opponent flips a coin. If tails, that attack does nothing.",
+          "en": "If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing.",
           "fr": "Si le Pokémon Défenseur essaye d'attaquer lors du prochain tour de votre adversaire, celui-ci lance une pièce. Si c'est pile, cette attaque est sans effet."
         }
       }
@@ -490,6 +492,15 @@
           "fr": "/images/cards/intl-pop2/fr/17.webp",
           "it": ""
         }
+      },
+      {
+        "id": "holo",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-pop2/en/17.webp",
+          "fr": "/images/cards/intl-pop2/fr/17.webp",
+          "it": ""
+        }
       }
     ],
     "hp": 80,
@@ -510,7 +521,7 @@
         ],
         "damage": "30",
         "text": {
-          "en": "Prevent all effects of attacks, including damage, done to Celebi ex by your opponent’s Pokémon-ex during your opponent’s next turn.",
+          "en": "Prevent all effects of attacks, including damage, done to Celebi ex by your opponent's Pokémon-ex during your opponent's next turn.",
           "fr": "Prévenez tous les effets d'une attaque, dégâts inclus, infligés à Celebi ex par le Pokémon-ex de votre adversaire lors du prochain tour de votre adversaire."
         }
       }
@@ -761,6 +772,15 @@
     "regulation_mark": null,
     "variants": [
       {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-pop2/en/5.webp",
+          "fr": "/images/cards/intl-pop2/fr/5.webp",
+          "it": ""
+        }
+      },
+      {
         "id": "holo",
         "images": {
           "de": "",
@@ -873,7 +893,7 @@
         ],
         "damage": "20",
         "text": {
-          "en": "Does 20 damage to 2 of your opponent’s Benched Pokémon. (Don’t apply Weakness and Resistance for Benched Pokémon.)",
+          "en": "Does 20 damage to 2 of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
           "fr": "Inflige 20 dégâts à 2 des Pokémon de Banc de votre adversaire. (Vous ne pouvez pas appliquer la Faiblesse et la Résistance aux Pokémon de Banc.)"
         }
       },
@@ -890,7 +910,7 @@
         ],
         "damage": "80",
         "text": {
-          "en": "Venusaur can’t use Hard Plant during your next turn.",
+          "en": "Venusaur can't use Hard Plant during your next turn.",
           "fr": "Florizarre ne peut pas utiliser Herbe forte lors de votre prochain tour."
         }
       }
@@ -981,7 +1001,7 @@
     "number": "8",
     "category": "trainer",
     "name": {
-      "en": "Mr. Briney’s Compassion",
+      "en": "Mr. Briney's Compassion",
       "fr": "La compassion de M. Briney"
     },
     "pokemon": [],
@@ -999,9 +1019,10 @@
         }
       }
     ],
+    "retreat_cost": 0,
     "trainer_type": "supporter",
     "rules_text": {
-      "en": "Choose 1 of your Pokémon in play (excluding Pokémon-ex). Return that Pokémon and all cards attached to it to your hand.",
+      "en": "You can play only one Supporter card each turn. When you play this card, put it next to your Active Pokémon. When your turn ends, discard this card. Choose 1 of your Pokémon in play (excluding Pokémon-ex). Return that Pokémon and all cards attached to it to your hand.",
       "fr": "Vous ne pouvez jouer qu'une seule carte Supporter par tour. Lorsque vous jouez cette carte, placez-la à côté de votre Pokémon Actif. À la fin du tour, défaussez-la.\n\nChoisissez 1 des Pokémon que vous avez en jeu (sauf les Pokémon-ex). Reprenez dans votre main ce Pokémon ainsi que toutes les cartes qui lui sont attachées."
     }
   },
@@ -1015,7 +1036,7 @@
       "fr": "Machine multi-technique 01"
     },
     "pokemon": [],
-    "illustrator": "\"Big Mama\" Tagawa",
+    "illustrator": "\"Big Mama\" Tagawa\"Big Mama\" Tagawa",
     "rarity": "uncommon",
     "regulation_mark": null,
     "variants": [
@@ -1032,16 +1053,14 @@
     "attacks": [
       {
         "name": {
-          "en": "Paralyzing Gaze",
-          "fr": "Regard paralysant"
+          "en": "Paralyzing Gaze"
         },
         "cost": [
           "normal"
         ],
         "damage": "",
         "text": {
-          "en": "The Defending Pokémon is now Paralyzed.",
-          "fr": "Le Pokémon Défenseur est maintenant Paralysé."
+          "en": "The Defending Pokémon is now Paralyzed."
         }
       }
     ],

@@ -13,7 +13,7 @@
       "0306"
     ],
     "illustrator": "Mitsuhiro Arita",
-    "rarity": "rare",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -58,7 +58,7 @@
         "cost": [
           "normal"
         ],
-        "damage": "10x",
+        "damage": "10×",
         "text": {
           "en": "Flip a coin. If heads, this attack does 10 damage times the number of damage counters on Aggron.",
           "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 10 dégâts pour chaque marqueur de dégât sur Galeking.",
@@ -92,7 +92,7 @@
           "normal",
           "normal"
         ],
-        "damage": "70x",
+        "damage": "70×",
         "text": {
           "en": "Flip 2 coins. This attack does 70 damage times the number of heads.",
           "fr": "Lancez deux pièces. Cette attaque inflige 70 dégâts multipliés par le nombre de face.",
@@ -128,7 +128,7 @@
       "0262"
     ],
     "illustrator": "Atsuko Nishida",
-    "rarity": "rare",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -230,6 +230,7 @@
     "types": [
       "fire"
     ],
+    "stage": "basic",
     "rule_box": "ex",
     "attacks": [
       {
@@ -308,6 +309,7 @@
     "types": [
       "psychic"
     ],
+    "stage": "basic",
     "rule_box": "ex",
     "attacks": [
       {
@@ -382,6 +384,7 @@
     "types": [
       "grass"
     ],
+    "stage": "basic",
     "rule_box": "ex",
     "attacks": [
       {
@@ -462,6 +465,7 @@
     "types": [
       "dark"
     ],
+    "stage": "basic",
     "rule_box": "ex",
     "attacks": [
       {
@@ -473,7 +477,7 @@
         "cost": [
           "dark"
         ],
-        "damage": "10x",
+        "damage": "10×",
         "text": {
           "en": "Flip 2 coins. This attack does 10 damage times the number of heads.",
           "fr": "Lancez deux pièces. Cette attaque inflige 10 dégâts multipliés par le nombre de face.",
@@ -491,7 +495,7 @@
           "dark",
           "normal"
         ],
-        "damage": "20x",
+        "damage": "20×",
         "text": {
           "en": "Flip a coin for each of your Pokémon in play (including Sneasel ex). This attack does 20 damage times the number of heads.",
           "fr": "Lancez une pièce pour chaque Pokémon que vous avez en jeu (Farfuret Ex inclus). Cette attaque inflige 20 dégâts multipliés par le nombre de face.",
@@ -562,7 +566,11 @@
         }
       }
     ],
-    "stage": "basic"
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "retreat_cost": 0
   },
   {
     "id": "intl-ex1-105",
@@ -613,7 +621,11 @@
         }
       }
     ],
-    "stage": "basic"
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "retreat_cost": 0
   },
   {
     "id": "intl-ex1-106",
@@ -664,7 +676,11 @@
         }
       }
     ],
-    "stage": "basic"
+    "types": [
+      "water"
+    ],
+    "stage": "basic",
+    "retreat_cost": 0
   },
   {
     "id": "intl-ex1-107",
@@ -715,7 +731,11 @@
         }
       }
     ],
-    "stage": "basic"
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "retreat_cost": 0
   },
   {
     "id": "intl-ex1-108",
@@ -766,7 +786,11 @@
         }
       }
     ],
-    "stage": "basic"
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "retreat_cost": 0
   },
   {
     "id": "intl-ex1-109",
@@ -817,7 +841,8 @@
         }
       }
     ],
-    "stage": "basic"
+    "stage": "basic",
+    "retreat_cost": 0
   },
   {
     "id": "intl-ex1-11",
@@ -833,7 +858,7 @@
       "0254"
     ],
     "illustrator": "Midori Harada",
-    "rarity": "rare",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -930,7 +955,7 @@
       "0289"
     ],
     "illustrator": "Ken Sugimori",
-    "rarity": "rare",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -1008,7 +1033,7 @@
       "0260"
     ],
     "illustrator": "Mitsuhiro Arita",
-    "rarity": "rare",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -1024,6 +1049,17 @@
       },
       {
         "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-ex1/en/13.webp",
+          "es": "",
+          "fr": "/images/cards/intl-ex1/fr/13.webp",
+          "it": "",
+          "pt-BR": ""
+        }
+      },
+      {
+        "id": "stamped",
         "images": {
           "de": "",
           "en": "/images/cards/intl-ex1/en/13.webp",
@@ -1086,7 +1122,7 @@
       "0321"
     ],
     "illustrator": "Ken Sugimori",
-    "rarity": "rare",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -1336,7 +1372,7 @@
         ],
         "damage": "40+",
         "text": {
-          "en": "Does 40 damage plus 10 more damage for each Fighting Energy attached to Breloom.\"",
+          "en": "Does 40 damage plus 10 more damage for each Fighting Energy attached to Breloom.",
           "fr": "Inflige 40 dégâts plus 10 dégâts supplémentaires pour chaque Énergie  attachée à Chapignon.",
           "de": "Does 40 damage plus 10 more damage for each  Energy card attached to Breloom."
         }
@@ -1429,7 +1465,7 @@
           "normal",
           "normal"
         ],
-        "damage": "60x",
+        "damage": "60×",
         "text": {
           "en": "Flip 2 coins. This attack does 60 damage times the number of heads.",
           "fr": "Lancez deux pièces. Cette attaque inflige 60 dégâts multipliés par le nombre de face.",
@@ -1659,7 +1695,7 @@
       "0267"
     ],
     "illustrator": "Hajime Kusajima",
-    "rarity": "rare",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -1799,7 +1835,7 @@
           "normal",
           "normal"
         ],
-        "damage": "50x",
+        "damage": "50×",
         "text": {
           "en": "Flip 2 coins. This attack does 50 damage times the number of heads.",
           "fr": "Lancez deux pièces. Cette attaque inflige 50 dégâts multipliés par le nombre de face.",
@@ -2239,7 +2275,7 @@
           "normal",
           "normal"
         ],
-        "damage": "20x",
+        "damage": "20×",
         "text": {
           "en": "Flip 2 coins. This attack does 20 damage times the number of heads.",
           "fr": "Lancez deux pièces. Cette attaque inflige 20 dégâts multipliés par le nombre de face.",
@@ -2409,7 +2445,7 @@
           "normal",
           "normal"
         ],
-        "damage": "40x",
+        "damage": "40×",
         "text": {
           "en": "Flip 2 coins. This attack does 40 damage times the number of heads.",
           "fr": "Lancez deux pièces. Cette attaque inflige 40 dégâts multipliés par le nombre de face.",
@@ -2455,6 +2491,17 @@
       },
       {
         "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-ex1/en/28.webp",
+          "es": "",
+          "fr": "/images/cards/intl-ex1/fr/28.webp",
+          "it": "",
+          "pt-BR": ""
+        }
+      },
+      {
+        "id": "stamped",
         "images": {
           "de": "",
           "en": "/images/cards/intl-ex1/en/28.webp",
@@ -2607,7 +2654,7 @@
       "0257"
     ],
     "illustrator": "Kouki Saitou",
-    "rarity": "rare",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -2738,7 +2785,7 @@
         ],
         "damage": "",
         "text": {
-          "en": "Attach a Lightning Energy from your discard pile to Electrike.",
+          "en": "Attach a Lightning Energy card from your discard pile to Electrike.",
           "fr": "Attachez une carte Énergie  de votre pile de défausse à Dynavolt.",
           "de": "Attack a  Energy card from your discard pile to Electrike."
         }
@@ -3506,7 +3553,7 @@
           "normal",
           "normal"
         ],
-        "damage": "40x",
+        "damage": "40×",
         "text": {
           "en": "Flip a coin until you get tails. This attack does 40 damage times the number of heads.",
           "fr": "Lancez une pièce jusqu'à ce que ce soit pile. Cette attaque inflige 40 dégâts multipliés par le nombre de face.",
@@ -3636,7 +3683,7 @@
       "0323"
     ],
     "illustrator": "Ken Sugimori",
-    "rarity": "rare",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -3747,6 +3794,17 @@
       },
       {
         "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-ex1/en/40.webp",
+          "es": "",
+          "fr": "/images/cards/intl-ex1/fr/40.webp",
+          "it": "",
+          "pt-BR": ""
+        }
+      },
+      {
+        "id": "stamped",
         "images": {
           "de": "",
           "en": "/images/cards/intl-ex1/en/40.webp",
@@ -4091,6 +4149,17 @@
           "it": "",
           "pt-BR": ""
         }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-ex1/en/44.webp",
+          "es": "",
+          "fr": "/images/cards/intl-ex1/fr/44.webp",
+          "it": "",
+          "pt-BR": ""
+        }
       }
     ],
     "hp": 40,
@@ -4366,7 +4435,7 @@
           "normal",
           "normal"
         ],
-        "damage": "20x",
+        "damage": "20×",
         "text": {
           "en": "Flip 3 coins. This attack does 20 damage times the number of heads.",
           "fr": "Lancez trois pièces. Cette attaque inflige 20 dégâts multipliés par le nombre de face.",
@@ -4593,7 +4662,7 @@
       "0301"
     ],
     "illustrator": "Atsuko Nishida",
-    "rarity": "rare",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -4609,6 +4678,17 @@
       },
       {
         "id": "reverse_holo",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-ex1/en/5.webp",
+          "es": "",
+          "fr": "/images/cards/intl-ex1/fr/5.webp",
+          "it": "",
+          "pt-BR": ""
+        }
+      },
+      {
+        "id": "stamped",
         "images": {
           "de": "",
           "en": "/images/cards/intl-ex1/en/5.webp",
@@ -4638,7 +4718,7 @@
         "cost": [
           "normal"
         ],
-        "damage": "10x",
+        "damage": "10×",
         "text": {
           "en": "Does 10 damage times the amount of Energy attached to all of your Active Pokémon.",
           "fr": "Inflige 10 dégâts pour chaque Énergie attachée à vos Pokémon Actifs.",
@@ -5100,7 +5180,7 @@
         "cost": [
           "normal"
         ],
-        "damage": "10x",
+        "damage": "10×",
         "text": {
           "en": "Does 10 damage for each damage counter on Goldeen.",
           "fr": "Inflige 10 dégâts multipliés par le nombre de marqueur de dégât sur Poissirène.",
@@ -5447,7 +5527,7 @@
       "0269"
     ],
     "illustrator": "Midori Harada",
-    "rarity": "rare",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -5591,7 +5671,7 @@
           "normal",
           "normal"
         ],
-        "damage": "10x",
+        "damage": "10×",
         "text": {
           "en": "Flip 3 coins. This attack does 10 damage times the number of heads.",
           "fr": "Lancez trois pièces. Cette attaque inflige 10 dégâts multipliés par le nombre de face.",
@@ -6345,7 +6425,7 @@
       "0282"
     ],
     "illustrator": "Ken Sugimori",
-    "rarity": "rare",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -6401,7 +6481,7 @@
         "cost": [
           "psychic"
         ],
-        "damage": "10x",
+        "damage": "10×",
         "text": {
           "en": "Does 10 damage times the total amount of Energy attached to Gardevoir and the Defending Pokémon.",
           "fr": "Inflige 10 dégâts pour chaque carte Énergie attachée à Gardevoir et au Pokémon Défenseur.",
@@ -7229,7 +7309,7 @@
         "cost": [
           "normal"
         ],
-        "damage": "10x",
+        "damage": "10×",
         "text": {
           "en": "Flip 3 coins. This attack does 10 damage times the number of heads.",
           "fr": "Lancez trois pièces. Cette attaque inflige 10 dégâts multipliés par le nombre de face.",
@@ -7259,7 +7339,7 @@
       "0297"
     ],
     "illustrator": "Naoyo Kimura",
-    "rarity": "rare",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -7376,6 +7456,7 @@
         }
       }
     ],
+    "retreat_cost": 0,
     "trainer_type": "item",
     "rules_text": {
       "en": "Flip a coin. If heads, choose 1 Energy card attached to 1 of your opponent's Pokémon and discard it.",
@@ -7421,6 +7502,7 @@
         }
       }
     ],
+    "retreat_cost": 0,
     "trainer_type": "item",
     "rules_text": {
       "en": "Flip 3 coins. For each heads, put a Basic Energy card from your discard pile into your hand. If you don't have that many basic Energy cards in your discard pile, put all of them into your hand.",
@@ -7466,6 +7548,7 @@
         }
       }
     ],
+    "retreat_cost": 0,
     "trainer_type": "item",
     "rules_text": {
       "en": "Move a basic Energy card attached to 1 of your Pokémon to another of your Pokémon.",
@@ -7511,6 +7594,7 @@
         }
       }
     ],
+    "retreat_cost": 0,
     "trainer_type": "supporter",
     "rules_text": {
       "en": "You can play only one Supporter card each turn. When you play this card, put it next to your Active Pokémon. When your turn ends, discard this card. Search your deck for up to 3 different types of basic Energy cards, show them to your opponent, and put them into your hand. Shuffle your deck afterward.",
@@ -7556,6 +7640,7 @@
         }
       }
     ],
+    "retreat_cost": 0,
     "trainer_type": "tool",
     "rules_text": {
       "en": "Attach Lum Berry to 1 of your Pokémon that doesn't already have a Pokémon Tool attached to it. If that Pokémon is Knocked Out, discard this card. At any time between turns, if the Pokémon this card is attached to is affected by any Special Conditions, remove all of them. Then discard Lum Berry.",
@@ -7601,6 +7686,7 @@
         }
       }
     ],
+    "retreat_cost": 0,
     "trainer_type": "tool",
     "rules_text": {
       "en": "Attach Oran Berry to 1 of your Pokémon that doesn't already have a Pokémon Tool attached to it. If that Pokémon is Knocked Out, discard this card. At any time between turns, if the Pokémon this card is attached to has at least 2 damage counters on it, remove 2 damage counters from it. Then discard Oran Berry.",
@@ -7646,6 +7732,7 @@
         }
       }
     ],
+    "retreat_cost": 0,
     "trainer_type": "item",
     "rules_text": {
       "en": "Flip a coin. If heads, search your deck for a Basic Pokémon or Evolution card, show it to your opponent and put it into your hand. Shuffle your deck afterward.",
@@ -7689,8 +7776,20 @@
           "it": "",
           "pt-BR": ""
         }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-ex1/en/87.webp",
+          "es": "",
+          "fr": "/images/cards/intl-ex1/fr/87.webp",
+          "it": "",
+          "pt-BR": ""
+        }
       }
     ],
+    "retreat_cost": 0,
     "trainer_type": "item",
     "rules_text": {
       "en": "Flip a coin. If heads, your opponent switches 1 of his or her Active Pokémon with 1 of his or her Benched Pokémon.",
@@ -7736,6 +7835,7 @@
         }
       }
     ],
+    "retreat_cost": 0,
     "trainer_type": "item",
     "rules_text": {
       "en": "Look at the top 3 cards of your deck, and choose a Basic Pokémon, Evolution card, or Energy card. Show it to your opponent and put it into your hand. Put the 2 other cards back on top of your deck in any order.",
@@ -7781,6 +7881,7 @@
         }
       }
     ],
+    "retreat_cost": 0,
     "trainer_type": "supporter",
     "rules_text": {
       "en": "You can play only one Supporter card each turn. When you play this card, put it next to your Active Pokémon. When your turn ends, discard this card. Draw cards from your deck until you have 6 cards in your hand.",
@@ -7802,7 +7903,7 @@
       "0310"
     ],
     "illustrator": "Mitsuhiro Arita",
-    "rarity": "rare",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -7925,6 +8026,7 @@
         }
       }
     ],
+    "retreat_cost": 0,
     "trainer_type": "item",
     "rules_text": {
       "en": "Search your deck for a basic Energy card, show it to your opponent, and put it into your hand. Shuffle your deck afterward.",
@@ -7981,6 +8083,7 @@
         }
       }
     ],
+    "retreat_cost": 0,
     "trainer_type": "item",
     "rules_text": {
       "en": "Remove 2 damage counters from 1 of your Pokémon (remove 1 damage counter if that Pokémon has only 1).",
@@ -8037,6 +8140,7 @@
         }
       }
     ],
+    "retreat_cost": 0,
     "trainer_type": "item",
     "rules_text": {
       "en": "Switch 1 of your Active Pokémon with 1 of your Benched Pokémon.",
@@ -8104,6 +8208,10 @@
         }
       }
     ],
+    "types": [
+      "dark"
+    ],
+    "retreat_cost": 0,
     "rules_text": {
       "en": "If the Pokémon Darkness Energy is attached to attacks, the attack does 10 more damage to the Active Pokémon (before applying Weakness and Resistance). Ignore this effect unless the Attacking Pokémon is Darkness or has Dark in its name. Darkness Energy provides Darkness Energy. (Doesn't count as a basic Energy card.)",
       "de": "If the Pokémon Darkness Energy is attached to attacks, the attack does 10 more damage to the Active Pokémon (before applying Weakness and Resistance). Ignore this effect unless the Attacking Pokémon is  or has Dark in its name. Darkness Energy provides  Energy. (Doesn't count as a basic Energy card.)",
@@ -8170,6 +8278,10 @@
         }
       }
     ],
+    "types": [
+      "metal"
+    ],
+    "retreat_cost": 0,
     "rules_text": {
       "en": "Damage done by attacks to the Pokémon that Metal Energy is attached to is reduced by 10 (after applying Weakness and Resistance). Ignore this effect if the Pokémon that Metal Energy is attached to isn't Metal. Metal Energy provides Metal Energy. (Doesn't count as a basic Energy card.)",
       "de": "Schaden, der dem Pokémon, an das Metall-Energie angelegt ist, durch Angriffe zugefügt wird, wird um 10 reduziert (nachdem Schwäche und Resistenz verrechnet wurden). Dieser Effekt wirkt nur, wenn die Metall-Energie an einem Pokémon vom Typ  angelegt ist. Metall-Energie liefert -Energie. (Zählt nicht als Basis-Energiekarte.)",
@@ -8212,8 +8324,20 @@
           "it": "",
           "pt-BR": ""
         }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-ex1/en/95.webp",
+          "es": "",
+          "fr": "/images/cards/intl-ex1/fr/95.webp",
+          "it": "",
+          "pt-BR": ""
+        }
       }
     ],
+    "retreat_cost": 0,
     "rules_text": {
       "en": "Attach Rainbow Energy to 1 of your Pokémon. While in play, Rainbow Energy provides every type of Energy but provides only 1 Energy at a time. (Doesn't count as a basic Energy card when not in play.) When you attach this card from your hand to 1 of your Pokémon, put 1 damage counter on that Pokémon.",
       "de": "Lege Regenbogen-Energie an 1 deiner Pokémon an. Während Regenbogen-Energie im Spiel ist, zählt sie als jeder beliebige Basis-Energietyp, spendet aber immer nur eine Energie auf einmal. (Zählt nicht als Basis-Energie, wenn sie nicht im Spiel ist.) Lege eine Schadensmarke auf das Pokémon, an das du diese Karte von der Hand anlegst.",
@@ -8253,6 +8377,7 @@
     "types": [
       "normal"
     ],
+    "stage": "basic",
     "rule_box": "ex",
     "attacks": [
       {
@@ -8332,6 +8457,7 @@
     "types": [
       "lightning"
     ],
+    "stage": "basic",
     "rule_box": "ex",
     "attacks": [
       {
@@ -8415,6 +8541,7 @@
     "types": [
       "fighting"
     ],
+    "stage": "basic",
     "rule_box": "ex",
     "attacks": [
       {
@@ -8446,7 +8573,7 @@
         ],
         "damage": "50",
         "text": {
-          "en": "The attack's damage is not affected by Resistance.",
+          "en": "This attack's damage is not affected by Resistance.",
           "fr": "Les dégâts de cette attaque ne sont pas affectés par la Résistance.",
           "de": "Der Schaden dieses Angriff wird nicht durch die Resistenz des Verteidigenden Pokémon verringert."
         }
@@ -8493,6 +8620,7 @@
     "types": [
       "water"
     ],
+    "stage": "basic",
     "rule_box": "ex",
     "attacks": [
       {
@@ -8524,7 +8652,7 @@
         ],
         "damage": "30",
         "text": {
-          "en": "The Defending Pokémon is now Confused",
+          "en": "The Defending Pokémon is now Confused.",
           "fr": "Le Pokémon Défenseur est maintenant Confus.",
           "de": "The Defending Pokémon is now Confused."
         }

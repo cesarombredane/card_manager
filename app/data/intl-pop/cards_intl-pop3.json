@@ -72,7 +72,7 @@
         ],
         "damage": "60",
         "text": {
-          "en": "Blastoise does 10 damage to itself. Flip a coin. If heads, prevent all damage done to Blastoise by attacks during your opponent’s next turn.",
+          "en": "Blastoise does 10 damage to itself. Flip a coin. If heads, prevent all damage done to Blastoise by attacks during your opponent's next turn.",
           "fr": "Tortank s'inflige 10 dégâts. Lancez une pièce. Si c'est face, prévenez tous les dégâts infligés à Tortank par des attaques lors du prochain tour de votre adversaire."
         }
       }
@@ -80,7 +80,7 @@
     "weaknesses": [
       {
         "type": "lightning",
-        "value": ""
+        "value": "x2"
       }
     ],
     "retreat_cost": 2
@@ -111,7 +111,7 @@
     ],
     "trainer_type": "stadium",
     "rules_text": {
-      "en": "Each player pays Colorless less to retreat his or her Fire and Water Pokémon.",
+      "en": "This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card. Each player pays Colorless less to retreat his or her Fire and Water Pokémon.",
       "fr": "Cette carte reste en jeu lorsque vous la jouez. Défaussez-la si une autre carte Stade est mise en jeu. Si une autre carte comportant le même nom est en jeu, vous ne pouvez pas jouer cette carte.\n\nChaque joueur ne paye pas de  pour faire battre en retraite ses Pokémon  et ."
     }
   },
@@ -141,7 +141,7 @@
     ],
     "trainer_type": "stadium",
     "rules_text": {
-      "en": "Each Grass and Lightning Pokémon in play (both yours and your opponent’s) gets +10 HP.",
+      "en": "This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card. Each Grass and Lightning Pokémon in play (both yours and your opponent's) gets +10 HP.",
       "fr": "Cette carte reste en jeu lorsque vous la jouez. Défaussez-la si une autre carte Stade est mise en jeu. Si une autre carte comportant le même nom est en jeu, vous ne pouvez pas jouer cette carte.\n\nChaque Pokémon  et  en jeu (les vôtres et ceux de votre adversaire) obtient 10 PV de plus."
     }
   },
@@ -196,7 +196,7 @@
     "weaknesses": [
       {
         "type": "psychic",
-        "value": ""
+        "value": "x2"
       }
     ],
     "retreat_cost": 1
@@ -263,7 +263,7 @@
     "weaknesses": [
       {
         "type": "fighting",
-        "value": ""
+        "value": "x2"
       }
     ],
     "retreat_cost": 1
@@ -334,7 +334,7 @@
     "weaknesses": [
       {
         "type": "psychic",
-        "value": ""
+        "value": "x2"
       }
     ],
     "retreat_cost": 1
@@ -406,7 +406,7 @@
     "weaknesses": [
       {
         "type": "grass",
-        "value": ""
+        "value": "x2"
       }
     ],
     "retreat_cost": 1
@@ -462,7 +462,7 @@
     "weaknesses": [
       {
         "type": "fighting",
-        "value": ""
+        "value": "x2"
       }
     ],
     "retreat_cost": 1
@@ -480,11 +480,20 @@
       "0250"
     ],
     "illustrator": "Mitsuhiro Arita",
-    "rarity": "ultra_rare",
+    "rarity": "rare",
     "regulation_mark": null,
     "variants": [
       {
         "id": "normal",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-pop3/en/17.webp",
+          "fr": "/images/cards/intl-pop3/fr/17.webp",
+          "it": ""
+        }
+      },
+      {
+        "id": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-pop3/en/17.webp",
@@ -520,7 +529,7 @@
     "weaknesses": [
       {
         "type": "water",
-        "value": ""
+        "value": "x2"
       }
     ],
     "retreat_cost": 2
@@ -541,6 +550,15 @@
     "rarity": "rare",
     "regulation_mark": null,
     "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-pop3/en/2.webp",
+          "fr": "/images/cards/intl-pop3/fr/2.webp",
+          "it": ""
+        }
+      },
       {
         "id": "holo",
         "images": {
@@ -596,7 +614,7 @@
     "weaknesses": [
       {
         "type": "water",
-        "value": ""
+        "value": "x2"
       }
     ],
     "retreat_cost": 1
@@ -617,6 +635,15 @@
     "rarity": "rare",
     "regulation_mark": null,
     "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-pop3/en/3.webp",
+          "fr": "/images/cards/intl-pop3/fr/3.webp",
+          "it": ""
+        }
+      },
       {
         "id": "holo",
         "images": {
@@ -672,7 +699,7 @@
     "weaknesses": [
       {
         "type": "fighting",
-        "value": ""
+        "value": "x2"
       }
     ],
     "resistances": [
@@ -699,6 +726,15 @@
     "rarity": "rare",
     "regulation_mark": null,
     "variants": [
+      {
+        "id": "normal",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-pop3/en/4.webp",
+          "fr": "/images/cards/intl-pop3/fr/4.webp",
+          "it": ""
+        }
+      },
       {
         "id": "holo",
         "images": {
@@ -740,7 +776,7 @@
         ],
         "damage": "20",
         "text": {
-          "en": "During your opponent’s next turn, any damage done by attacks from the Defending Pokémon is reduced by 10 (before applying Weakness and Resistance).",
+          "en": "During your opponent's next turn, any damage done by attacks from the Defending Pokémon is reduced by 10 (before applying Weakness and Resistance).",
           "fr": "Lors du prochain tour de votre adversaire, tous dégâts infligés par des attaques du Pokémon Défenseur sont réduits de 10 (avant application de la Faiblesse et de la Résistance)."
         }
       },
@@ -755,7 +791,7 @@
         ],
         "damage": "",
         "text": {
-          "en": "Choose 1 of your opponent’s Pokémon that has any Poké-Powers. This attack does 30 damage to that Pokémon. (Don’t apply Weakness and Resistance for Benched Pokémon.)",
+          "en": "Choose 1 of your opponent's Pokémon that has any Poké-Powers. This attack does 30 damage to that Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
           "fr": "Choisissez 1 des Pokémon de votre adversaire qui a un Poké-Power. Cette attaque inflige 30 dégâts à ce Pokémon. (N'appliquez pas la Faiblesse et la Résistance aux Pokémon de Banc.)"
         }
       }
@@ -763,7 +799,7 @@
     "weaknesses": [
       {
         "type": "fighting",
-        "value": ""
+        "value": "x2"
       }
     ],
     "resistances": [
@@ -855,7 +891,7 @@
         ],
         "damage": "",
         "text": {
-          "en": "Choose 1 of your opponent’s Pokémon that has any Poké-Bodies. This attack does 30 damage to that Pokémon. (Don’t apply Weakness and Resistance for Benched Pokémon.)",
+          "en": "Choose 1 of your opponent's Pokémon that has any Poké-Bodies. This attack does 30 damage to that Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
           "fr": "Choisissez 1 des Pokémon de votre adversaire qui a un Poké-Body. Cette attaque inflige 30 dégâts à ce Pokémon. (N'appliquez pas la Faiblesse et la Résistance aux Pokémon de Banc.)"
         }
       }
@@ -863,7 +899,7 @@
     "weaknesses": [
       {
         "type": "fighting",
-        "value": ""
+        "value": "x2"
       }
     ],
     "resistances": [
@@ -941,7 +977,7 @@
         ],
         "damage": "30+",
         "text": {
-          "en": "Does 30 damage plus 20 more damage for each Water Energy attached to Vaporeon but not used to pay for this attack’s Energy cost. You can’t add more than 40 damage in this way.",
+          "en": "Does 30 damage plus 20 more damage for each Water Energy attached to Vaporeon but not used to pay for this attack's Energy cost. You can't add more than 40 damage in this way.",
           "fr": "Inflige 30 dégâts plus 20 dégâts supplémentaires pour chaque Énergie  attachée à Aquali en plus du coût en Énergie de cette attaque. Vous ne pouvez pas ajouter plus de 40 dégâts de cette façon."
         }
       }
@@ -949,7 +985,7 @@
     "weaknesses": [
       {
         "type": "lightning",
-        "value": ""
+        "value": "x2"
       }
     ],
     "retreat_cost": 1
@@ -1017,7 +1053,7 @@
     "weaknesses": [
       {
         "type": "water",
-        "value": ""
+        "value": "x2"
       }
     ],
     "retreat_cost": 1
@@ -1088,7 +1124,7 @@
     "weaknesses": [
       {
         "type": "grass",
-        "value": ""
+        "value": "x2"
       }
     ],
     "retreat_cost": 1
@@ -1157,7 +1193,7 @@
     "weaknesses": [
       {
         "type": "fire",
-        "value": ""
+        "value": "x2"
       }
     ],
     "retreat_cost": 2

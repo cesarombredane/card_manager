@@ -13,11 +13,21 @@
       "0306"
     ],
     "illustrator": "Kagemaru Himeno",
-    "rarity": "rare_holo",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
         "id": "holo",
+        "images": {
+          "de": "/images/cards/intl-hgss4/de/1.webp",
+          "en": "/images/cards/intl-hgss4/en/1.webp",
+          "fr": "/images/cards/intl-hgss4/fr/1.webp",
+          "it": "",
+          "pt-BR": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
         "images": {
           "de": "/images/cards/intl-hgss4/de/1.webp",
           "en": "/images/cards/intl-hgss4/en/1.webp",
@@ -48,7 +58,7 @@
           "metal",
           "normal"
         ],
-        "damage": "40+",
+        "damage": "40",
         "text": {
           "en": "If the Defending Pokémon already has any damage counters on it, this attack does 40 damage plus 40 more damage.",
           "fr": "Si le Pokémon Défenseur a déjà des marqueurs de dégât, cette attaque inflige 40 dégâts plus 40 dégâts supplémentaires.",
@@ -69,7 +79,7 @@
         ],
         "damage": "60",
         "text": {
-          "en": "During your opponent’s next turn, any damage done to Aggron by attacks is reduced by 20 (after applying Weakness and Resistance).",
+          "en": "During your opponent's next turn, any damage done to Aggron by attacks is reduced by 20 (after applying Weakness and Resistance).",
           "fr": "Pendant le prochain tour de votre adversaire, tous les dégâts infligés à Galeking par des attaques sont réduits de 20 (après application de la Faiblesse et de la Résistance).",
           "de": "Während des nächsten Zuges deines Gegners wird Schaden, der Stolloss durch Angriffe zugefügt wird, um 20 Schadenspunkte reduziert (nachdem Schwäche und Resistenz verrechnet wurden)."
         }
@@ -106,11 +116,21 @@
       "0442"
     ],
     "illustrator": "Shizurow",
-    "rarity": "rare_holo",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
-        "id": "normal",
+        "id": "holo",
+        "images": {
+          "de": "/images/cards/intl-hgss4/de/10.webp",
+          "en": "/images/cards/intl-hgss4/en/10.webp",
+          "fr": "/images/cards/intl-hgss4/fr/10.webp",
+          "it": "",
+          "pt-BR": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
         "images": {
           "de": "/images/cards/intl-hgss4/de/10.webp",
           "en": "/images/cards/intl-hgss4/en/10.webp",
@@ -137,9 +157,9 @@
         ],
         "damage": "",
         "text": {
-          "en": "Choose Grass, Fire, Water, Lightning, Psychic, Fighting, Darkness, Metal, or Colorless type. Put 1 damage counter on each Pokémon your opponent has in play of the type you chose.",
+          "en": "Choose Grass Fire Water Lightning Psychic Fighting Darkness Metal or Colorless type. Put 1 damage counter on each Pokémon your opponent has in play of the type you chose.",
           "fr": "Choisissez le type GrassFireWaterLightningPsychicFightingDarknessMetal ou Colorless. Placez un marqueur de dégât sur chacun des Pokémon que votre adversaire a en jeu et qui correspond au type choisi.",
-          "de": "Wähle einen Typ: , , , , , , ,  oder . Lege auf jedes Pokémon des gewählten Typs, das dein Gegner im Spiel hat, 1 Schadensmarke."
+          "de": "Wähle einen Typ: ,  oder . Lege auf jedes Pokémon des gewählten Typs, das dein Gegner im Spiel hat, 1 Schadensmarke."
         }
       }
     ],
@@ -165,10 +185,10 @@
       "de": "Darkrai & Cresselia LEGENDE"
     },
     "pokemon": [
-      "0491",
-      "0488"
+      "0488",
+      "0491"
     ],
-    "illustrator": "Shinji Higuchi + Noriko Takaya/樋口真嗣+高屋法子",
+    "illustrator": "Shinji Higuchi + Noriko Takaya",
     "rarity": "legend",
     "regulation_mark": null,
     "variants": [
@@ -205,7 +225,7 @@
         ],
         "damage": "100",
         "text": {
-          "en": "Choose 2 Energy attached to Darkrai & Cresselia LEGEND and put them in the Lost Zone. If any of your opponent’s Pokémon would be Knocked Out by damage from this attack, put that Pokémon and all cards attached to it in the Lost Zone instead of discarding it.",
+          "en": "Choose 2 Energy attached to Darkrai & Cresselia LEGEND and put them in the Lost Zone. If any of your opponent's Pokémon would be Knocked Out by damage from this attack, put that Pokémon and all cards attached to it in the Lost Zone instead of discarding it.",
           "fr": "Choisissez 2 cartes Énergie attachées à Darkrai & Cresselia LÉGENDE et placez-les dans la Zone Perdue. Si l’un des Pokémon de votre adversaire est mis K.O. par cette attaque, placez ce Pokémon et toutes les cartes qui lui sont attachées dans la Zone Perdue au lieu de le défausser.",
           "de": "Wähle 2 an Darkrai- & Cresselia-LEGENDE angelegte Energiekarten und lege sie ins Nirgendwo. Wenn ein Pokémon deines Gegners durch diesen Angriff kampfunfähig würde, lege dieses Pokémon und alle daran angelegten Karten nicht auf den Ablagestapel, sondern ins Nirgendwo."
         }
@@ -250,10 +270,10 @@
       "de": "Palkia & Dialga LEGENDE"
     },
     "pokemon": [
-      "0484",
-      "0483"
+      "0483",
+      "0484"
     ],
-    "illustrator": "Shinji Higuchi + Sachiko Eba/樋口真嗣+江場左知子",
+    "illustrator": "Shinji Higuchi + Sachiko Eba",
     "rarity": "legend",
     "regulation_mark": null,
     "variants": [
@@ -321,7 +341,7 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 0
+    "retreat_cost": 3
   },
   {
     "id": "intl-hgss4-102",
@@ -334,10 +354,10 @@
       "de": "Palkia & Dialga LEGENDE"
     },
     "pokemon": [
-      "0484",
-      "0483"
+      "0483",
+      "0484"
     ],
-    "illustrator": "Shinji Higuchi + Sachiko Eba/樋口真嗣+江場左知子",
+    "illustrator": "Shinji Higuchi + Sachiko Eba",
     "rarity": "legend",
     "regulation_mark": null,
     "variants": [
@@ -373,7 +393,7 @@
         ],
         "damage": "",
         "text": {
-          "en": "Choose 1 of your opponent’s Benched Pokémon. Put that Pokémon and all cards attached to it back into your opponent’s hand.",
+          "en": "Choose 1 of your opponent's Benched Pokémon. Put that Pokémon and all cards attached to it back to your opponent's hand.",
           "fr": "Choisissez l’un des Pokémon de Banc de votre adversaire. Remettez ce Pokémon et toutes les cartes qui lui sont attachées dans la main de votre adversaire.",
           "de": "Wähle 1 Pokémon auf der Bank deines Gegners. Dein Gegner nimmt das gewählte Pokémon und alle an es angelegten Karten auf seine Hand zurück.  "
         }
@@ -423,11 +443,31 @@
       "0049"
     ],
     "illustrator": "Hideaki Hakozaki",
-    "rarity": "rare_holo",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
         "id": "holo",
+        "images": {
+          "de": "/images/cards/intl-hgss4/de/11.webp",
+          "en": "/images/cards/intl-hgss4/en/11.webp",
+          "fr": "/images/cards/intl-hgss4/fr/11.webp",
+          "it": "",
+          "pt-BR": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "/images/cards/intl-hgss4/de/11.webp",
+          "en": "/images/cards/intl-hgss4/en/11.webp",
+          "fr": "/images/cards/intl-hgss4/fr/11.webp",
+          "it": "",
+          "pt-BR": ""
+        }
+      },
+      {
+        "id": "normal",
         "images": {
           "de": "/images/cards/intl-hgss4/de/11.webp",
           "en": "/images/cards/intl-hgss4/en/11.webp",
@@ -490,11 +530,21 @@
       "0071"
     ],
     "illustrator": "Midori Harada",
-    "rarity": "rare_holo",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
         "id": "holo",
+        "images": {
+          "de": "/images/cards/intl-hgss4/de/12.webp",
+          "en": "/images/cards/intl-hgss4/en/12.webp",
+          "fr": "/images/cards/intl-hgss4/fr/12.webp",
+          "it": "",
+          "pt-BR": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
         "images": {
           "de": "/images/cards/intl-hgss4/de/12.webp",
           "en": "/images/cards/intl-hgss4/en/12.webp",
@@ -603,7 +653,7 @@
         ],
         "damage": "20",
         "text": {
-          "en": "Choose 2 cards from your opponent’s hand without looking. Look at the cards you chose, then have your opponent shuffle those cards into his or her deck.",
+          "en": "Choose 2 cards from your opponent's hand without looking. Look at the cards you chose, then have your opponent shuffle those cards into his or her deck.",
           "fr": "Choisissez au hasard 2 cartes dans la main de votre adversaire. Regardez les cartes que vous avez choisies, puis demandez à votre adversaire de les mélanger avec son deck.",
           "de": "Wähle 2 Karten von der Hand deines Gegners (ohne sie vorher anzusehen). Schau dir die gewählten Karten an, danach mischt dein Gegner sie in sein Deck zurück."
         }
@@ -620,7 +670,7 @@
         ],
         "damage": "60",
         "text": {
-          "en": "Discard 2 cards from your hand. (If you can’t discard 2 cards from your hand, this attack does nothing.)",
+          "en": "Discard 2 cards from your hand. (If you can't discard 2 cards from your hand, this attack does nothing.)",
           "fr": "Défaussez 2 cartes de votre main. (Si vous ne pouvez pas, cette attaque ne fait rien.)",
           "de": "Lege 2 Karten von deiner Hand auf deinen Ablagestapel. (Wenn du keine 2 Karten von der Hand auf deinen Ablagestapel legen kannst, hat dieser Angriff keine Auswirkungen.)"
         }
@@ -696,7 +746,7 @@
         ],
         "damage": "",
         "text": {
-          "en": "Flip a coin. If heads, choose 1 Energy card attached to 1 of your opponent’s Pokémon and put it in the Lost Zone.",
+          "en": "Flip a coin. If heads, choose 1 Energy card attached to 1 of your opponent's Pokémon and put it in the Lost Zone.",
           "fr": "Lancez une pièce. Si c’est face, choisissez une carte Énergie attachée à l’un des Pokémon de votre adversaire et placez-la dans la Zone Perdue.",
           "de": "Wirf eine Münze. Wähle bei \"Kopf\" 1 an 1 Pokémon deines Gegners angelegte Energiekarte und lege sie ins Nirgendwo."
         }
@@ -714,7 +764,7 @@
         ],
         "damage": "",
         "text": {
-          "en": "Count the number of cards in your opponent’s hand. Put that many damage counters on the Defending Pokémon.",
+          "en": "Count the number of cards in your opponent's hand. Put that many damage counters on the Defending Pokémon.",
           "fr": "Comptez le nombre de cartes dans la main de votre adversaire. Placez un nombre équivalent de marqueurs de dégât sur le Pokémon Défenseur.",
           "de": "Zähle die Anzahl der Handkarten deines Gegners. Lege ebenso viele Schadensmarken auf das Verteidigende Pokémon."
         }
@@ -891,7 +941,7 @@
         ],
         "damage": "",
         "text": {
-          "en": "Switch the Defending Pokémon with 1 of your opponent’s Benched Pokémon.",
+          "en": "Switch the Defending Pokémon with 1 of your opponent's Benched Pokémon.",
           "fr": "Échangez le Pokémon Défenseur avec l’un des Pokémon de Banc de votre adversaire.",
           "de": "Tausche das Verteidigende Pokémon gegen 1 Pokémon auf der Bank deines Gegners aus."
         }
@@ -909,7 +959,7 @@
         ],
         "damage": "30",
         "text": {
-          "en": "Remove 3 damage counters from Carnivine. The Defending Pokémon can’t retreat during your opponent’s next turn.",
+          "en": "Remove 3 damage counters from Carnivine. The Defending Pokémon can't retreat during your opponent's next turn.",
           "fr": "Retirez 3 marqueurs de dégât à Vortente. Le Pokémon Défenseur ne peut pas battre en retraite durant le prochain tour de votre adversaire.",
           "de": "Entferne 3 Schadensmarken von Venuflibis. Das Verteidigende Pokémon kann sich im nächsten Zug deines Gegners nicht zurückziehen."
         }
@@ -1214,11 +1264,11 @@
       "0334"
     ],
     "illustrator": "Ryo Ueda",
-    "rarity": "rare_holo",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
-        "id": "reverse_holo",
+        "id": "holo",
         "images": {
           "de": "/images/cards/intl-hgss4/de/2.webp",
           "en": "/images/cards/intl-hgss4/en/2.webp",
@@ -1228,7 +1278,7 @@
         }
       },
       {
-        "id": "holo",
+        "id": "reverse_holo",
         "images": {
           "de": "/images/cards/intl-hgss4/de/2.webp",
           "en": "/images/cards/intl-hgss4/en/2.webp",
@@ -1336,6 +1386,16 @@
           "it": "",
           "pt-BR": ""
         }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "/images/cards/intl-hgss4/de/20.webp",
+          "en": "/images/cards/intl-hgss4/en/20.webp",
+          "fr": "/images/cards/intl-hgss4/fr/20.webp",
+          "it": "",
+          "pt-BR": ""
+        }
       }
     ],
     "hp": 100,
@@ -1377,7 +1437,7 @@
         ],
         "damage": "",
         "text": {
-          "en": "This attack does 50 damage to each of your opponent’s Pokémon that has any Energy cards attached to it. (Don’t apply Weakness and Resistance for Benched Pokémon.)",
+          "en": "This attack does 50 damage to each of your opponent's Pokémon that has any Energy cards attached to it. (Don't apply Weakness and Resistance for Benched Pokémon.)",
           "fr": "Cette attaque inflige 50 dégâts à chacun des Pokémon de votre adversaire auxquels sont attachées des cartes Énergie. (N’appliquez ni la Faiblesse ni la Résistance aux Pokémon de Banc.)",
           "de": "Dieser Angriff fügt jedem Pokémon deines Gegners, an das Energiekarten angelegt sind, 50 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
         }
@@ -1418,6 +1478,16 @@
     "regulation_mark": null,
     "variants": [
       {
+        "id": "normal",
+        "images": {
+          "de": "/images/cards/intl-hgss4/de/21.webp",
+          "en": "/images/cards/intl-hgss4/en/21.webp",
+          "fr": "/images/cards/intl-hgss4/fr/21.webp",
+          "it": "",
+          "pt-BR": ""
+        }
+      },
+      {
         "id": "reverse_holo",
         "images": {
           "de": "/images/cards/intl-hgss4/de/21.webp",
@@ -1443,7 +1513,7 @@
         "cost": [],
         "damage": "",
         "text": {
-          "en": "Choose 1 of your opponent’s Pokémon. This attack does 20 damage to that Pokémon. This attack’s damage isn’t affected by Weakness or Resistance. Elekid is now Asleep.",
+          "en": "Choose 1 of your opponent's Pokémon. This attack does 20 damage to that Pokémon. This attack's damage isn't affected by Weakness or Resistance. Elekid is now Asleep.",
           "fr": "Choisissez l’un des Pokémon de votre adversaire. Cette attaque inflige 20 dégâts à ce Pokémon. Les dégâts infligés par cette attaque ne sont pas affectés par la Faiblesse ou la Résistance. Elekid est maintenant Endormi.",
           "de": "Wähle 1 Pokémon deines Gegners. Dieser Angriff fügt dem gewählten Pokémon 20 Schadenspunkte zu. Der Schaden dieses Angriffs wird durch Schwäche und Resistenz nicht verändert. Elekid schläft jetzt."
         }
@@ -1473,6 +1543,16 @@
     "variants": [
       {
         "id": "normal",
+        "images": {
+          "de": "/images/cards/intl-hgss4/de/22.webp",
+          "en": "/images/cards/intl-hgss4/en/22.webp",
+          "fr": "/images/cards/intl-hgss4/fr/22.webp",
+          "it": "",
+          "pt-BR": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
         "images": {
           "de": "/images/cards/intl-hgss4/de/22.webp",
           "en": "/images/cards/intl-hgss4/en/22.webp",
@@ -1581,7 +1661,7 @@
         ],
         "damage": "20",
         "text": {
-          "en": "Your opponent can’t use any Poké-Powers on his or her Pokémon on his or her next turn.",
+          "en": "Your opponent can't use any Poké-Powers on his or her Pokémon during his or her next turn.",
           "fr": "Votre adversaire ne peut utiliser aucun Poké-Power sur ses Pokémon lors de son prochain tour.",
           "de": "Dein Gegner kann in seinem nächsten Zug keine Poké-Power seiner Pokémon benutzen."
         }
@@ -1597,9 +1677,9 @@
           "normal",
           "normal"
         ],
-        "damage": "40x",
+        "damage": "40×",
         "text": {
-          "en": "Your opponent flips a coin for each of his or her Benched Pokémon. This attack does 40 damage times the number of tails. This attack’s damage isn’t affected by Weakness or Resistance.",
+          "en": "Your opponent flips a coin for each of his or her Benched Pokémon. This attack does 40 damage times the number of tails. This attack's damage isn't affected by Weakness or Resistance.",
           "fr": "Votre adversaire lance une pièce pour chacun de ses Pokémon de Banc. Cette attaque inflige 40 dégâts multipliés par le nombre de côtés pile. Les dégâts infligés par cette attaque ne sont pas affectés par la Faiblesse ou la Résistance.",
           "de": "Dein Gegner wirft eine Münze für jedes Pokémon auf seiner Bank. Dieser Angriff fügt 40 Schadenspunkte mal der Anzahl \"Zahl\" zu. Der Schaden dieses Angriffs wird durch Schwäche und Resistenz nicht verändert."
         }
@@ -1779,7 +1859,7 @@
         ],
         "damage": "60",
         "text": {
-          "en": "Does 10 damage to each Benched Pokémon (both yours and your opponent’s). (Don’t apply Weakness and Resistance for Benched Pokémon.) Lunatone does 60 damage to itself.",
+          "en": "Does 10 damage to each Benched Pokémon (both yours and your opponent's). (Don't apply Weakness and Resistance for Benched Pokémon.) Lunatone does 60 damage to itself.",
           "fr": "Cette attaque inflige 10 dégâts à chaque Pokémon de Banc (les vôtres et ceux de votre adversaire).(N’appliquez ni la Faiblesse ni la Résistance aux Pokémon de Banc.) Seleroc s’inflige 60 dégâts.",
           "de": "Dieser Angriff fügt jedem Pokémon auf der Bank (deinen und denen deines Gegners) 10 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.) Lunastein fügt sich selbst 60 Schadenspunkte zu."
         }
@@ -1949,7 +2029,7 @@
         ],
         "damage": "",
         "text": {
-          "en": "For each Fire Energy attached to Magmortar, discard the top card from your opponent’s deck. Then, flip a coin. If tails, discard all Fire Energy attached to Magmortar.",
+          "en": "For each Fire Energy attached to Magmortar, discard the top card from your opponent's deck. Then, flip a coin. If tail, discard all Fire Energy attached to Magmortar.",
           "fr": "Pour chaque carte Énergie Fire attachée à Maganon, défaussez la carte du dessus du deck de votre adversaire. Lancez ensuite une pièce. Si c’est pile, défaussez toutes les cartes Énergie Fire attachées à Maganon.",
           "de": "Lege für jede an Magbrant angelegte -Energie die oberste Karte vom Deck deines Gegners auf seinen Ablagestapel. Wirf anschließend eine Münze. Bei \"Zahl\" lege alle an Magbrant angelegten -Energien auf deinen Ablagestapel."
         }
@@ -2003,6 +2083,16 @@
     "variants": [
       {
         "id": "normal",
+        "images": {
+          "de": "/images/cards/intl-hgss4/de/28.webp",
+          "en": "/images/cards/intl-hgss4/en/28.webp",
+          "fr": "/images/cards/intl-hgss4/fr/28.webp",
+          "it": "",
+          "pt-BR": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
         "images": {
           "de": "/images/cards/intl-hgss4/de/28.webp",
           "en": "/images/cards/intl-hgss4/en/28.webp",
@@ -2128,7 +2218,7 @@
         ],
         "damage": "20",
         "text": {
-          "en": "During your opponent’s next turn, the attack cost of each of the Defending Pokémon’s attacks is ColorlessColorless more.",
+          "en": "During your opponent's next turn, the attack cost of each of the Defending Pokémon's attacks is ColorlessColorless more.",
           "fr": "Pendant le prochain tour de votre adversaire, le coût de chaque attaque du Pokémon Défenseur est augmenté de ColorlessColorless.",
           "de": "Während des nächsten Zuges deines Gegners kosten die Angriffe des Verteidigenden Pokémon  mehr."
         }
@@ -2183,9 +2273,19 @@
       "0251"
     ],
     "illustrator": "Shin Nagasawa",
-    "rarity": "rare_holo",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "/images/cards/intl-hgss4/de/3.webp",
+          "en": "/images/cards/intl-hgss4/en/3.webp",
+          "fr": "/images/cards/intl-hgss4/fr/3.webp",
+          "it": "",
+          "pt-BR": ""
+        }
+      },
       {
         "id": "reverse_holo",
         "images": {
@@ -2197,7 +2297,7 @@
         }
       },
       {
-        "id": "holo",
+        "id": "normal",
         "images": {
           "de": "/images/cards/intl-hgss4/de/3.webp",
           "en": "/images/cards/intl-hgss4/en/3.webp",
@@ -2224,7 +2324,7 @@
         ],
         "damage": "",
         "text": {
-          "en": "Look at the top 5 cards of either player’s deck and put them back on top of that player’s deck in any order.",
+          "en": "Look at the top 5 cards of either player's deck and put them back on top of that player's deck in any order.",
           "fr": "Regardez les 5 cartes du dessus d’un deck (le vôtre ou celui de votre adversaire) et replacez-les au-dessus du même deck dans n’importe quel ordre.",
           "de": "Schau dir die obersten 5 Karten eines Decks an und lege sie danach in beliebiger Reihenfolge wieder auf das Deck des Spielers zurück."
         }
@@ -2317,7 +2417,7 @@
         ],
         "damage": "20",
         "text": {
-          "en": "Flip 2 coins. If both of them are heads, your opponent discards all cards from his or her hand.",
+          "en": "Flip 2 coins. If both of them are heads, your opponent discards all card from his or her hand.",
           "fr": "Lancez 2 pièces. Si vous obtenez deux fois un côté face, votre adversaire défausse toutes les cartes de sa main.",
           "de": "Wirf 2 Münzen. Wenn beide \"Kopf\" zeigen, legt dein Gegner alle Handkarten auf seinen Ablagestapel."
         }
@@ -2524,7 +2624,7 @@
           "normal",
           "normal"
         ],
-        "damage": "40x",
+        "damage": "40×",
         "text": {
           "en": "Flip 2 coins. This attack does 40 damage times the number of heads.",
           "fr": "Lancez 2 pièces. Cette attaque inflige 40 dégâts multipliés par le nombre de côtés face.",
@@ -2790,7 +2890,7 @@
         ],
         "damage": "",
         "text": {
-          "en": "Put 2 damage counters on 1 of your opponent’s Pokémon.",
+          "en": "Put 2 damage counters on 1 of your opponent's Pokémon.",
           "fr": "Placez 2 marqueurs de dégât sur l’un des Pokémon de votre adversaire.",
           "de": "Lege 2 Schadensmarken auf 1 Pokémon deines Gegners."
         }
@@ -2902,7 +3002,7 @@
           "normal",
           "normal"
         ],
-        "damage": "50x",
+        "damage": "50×",
         "text": {
           "en": "Flip 2 coins. This attack does 50 damage times the number of heads.",
           "fr": "Lancez 2 pièces. Cette attaque inflige 50 dégâts multipliés par le nombre de côtés face.",
@@ -3064,7 +3164,7 @@
         ],
         "damage": "",
         "text": {
-          "en": "Choose 1 of your opponent’s Pokémon. This attack does 10 damage to that Pokémon for each Energy attached to Lickilicky. (Don’t apply Weakness and Resistance for Benched Pokémon.)",
+          "en": "Choose 1 of your opponent's Pokémon. This attack does 10 damage to that Pokémon for each Energy attached to Lickilicky. (Don't apply Weakness and Resistance for Benched Pokémon.)",
           "fr": "Choisissez l’un des Pokémon de votre adversaire. Cette attaque inflige 10 dégâts à ce Pokémon pour chaque carte Énergie attachée à Coudlangue. (N’appliquez ni la Faiblesse ni la Résistance aux Pokémon de Banc.)",
           "de": "Wähle 1 Pokémon deines Gegners. Dieser Angriff fügt dem gewählten Pokémon 10 Schadenspunkte für jede an Schlurplek angelegte Energie zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
         }
@@ -3082,7 +3182,7 @@
         ],
         "damage": "50",
         "text": {
-          "en": "Remove 2 damage counters from Lickilicky. The Defending Pokémon can’t retreat during your opponent’s next turn.",
+          "en": "Remove 2 damage counters from Lickilicky. The Defending Pokémon can't retreat during your opponent's next turn.",
           "fr": "Retirez 2 marqueurs de dégât à Coudlangue. Le Pokémon Défenseur ne peut pas battre en retraite durant le prochain tour de votre adversaire.",
           "de": "Entferne 2 Schadensmarken von Schlurplek. Das Verteidigende Pokémon kann sich im nächsten Zug deines Gegners nicht zurückziehen."
         }
@@ -3201,11 +3301,11 @@
       "0452"
     ],
     "illustrator": "Sumiyoshi Kizuki",
-    "rarity": "rare_holo",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
-        "id": "reverse_holo",
+        "id": "holo",
         "images": {
           "de": "/images/cards/intl-hgss4/de/4.webp",
           "en": "/images/cards/intl-hgss4/en/4.webp",
@@ -3215,7 +3315,7 @@
         }
       },
       {
-        "id": "holo",
+        "id": "reverse_holo",
         "images": {
           "de": "/images/cards/intl-hgss4/de/4.webp",
           "en": "/images/cards/intl-hgss4/en/4.webp",
@@ -3345,7 +3445,7 @@
         ],
         "damage": "30",
         "text": {
-          "en": "This attack’s damage isn’t affected by Poké-Powers, Poké-Bodies, or any other effects on the Defending Pokémon.",
+          "en": "This attack's damage isn't affected by Poké-Powers, Poké-Bodies, or any other effects on the Defending Pokémon.",
           "fr": "Les dégâts de cette attaque ne sont pas affectés par les Poké-Powers, les Poké-Bodies ou tout autre effet en action sur le Pokémon Défenseur.",
           "de": "Poké-Power, Poké-Body und alle anderen Effekte auf dem Verteidigenden Pokémon haben keine Auswirkungen auf die Schadenspunkte dieses Angriffs."
         }
@@ -3493,7 +3593,7 @@
         "cost": [
           "fire"
         ],
-        "damage": "20x",
+        "damage": "20×",
         "text": {
           "en": "Each player discards the top card of his or her deck. This attack does 20 damage times the number of Energy cards discarded in this way.",
           "fr": "Chaque joueur défausse la carte du dessus de son deck. Cette attaque inflige 20 dégâts multipliés par le nombre de cartes Énergie ainsi défaussées.",
@@ -3562,6 +3662,16 @@
           "it": "",
           "pt-BR": ""
         }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "/images/cards/intl-hgss4/de/43.webp",
+          "en": "/images/cards/intl-hgss4/en/43.webp",
+          "fr": "/images/cards/intl-hgss4/fr/43.webp",
+          "it": "",
+          "pt-BR": ""
+        }
       }
     ],
     "hp": 80,
@@ -3596,7 +3706,7 @@
           "normal",
           "normal"
         ],
-        "damage": "20x",
+        "damage": "20×",
         "text": {
           "en": "Flip 3 coins. This attack does 20 damage times the number of heads.",
           "fr": "Lancez 3 pièces. Cette attaque inflige 20 dégâts multipliés par le nombre de côtés face.",
@@ -3679,7 +3789,7 @@
           "normal",
           "normal"
         ],
-        "damage": "60x",
+        "damage": "60×",
         "text": {
           "en": "Flip 2 coins. This attack does 60 damage times the number of heads.",
           "fr": "Lancez 2 pièces. Cette attaque inflige 60 dégâts multipliés par le nombre de côtés face.",
@@ -4060,7 +4170,7 @@
         ],
         "damage": "40",
         "text": {
-          "en": "Flip a coin. If heads, this attack does 10 damage to each of your opponent’s Benched Pokémon. If tails, this attack does 10 damage to each of your Benched Pokémon. (Don’t apply Weakness and Resistance for Benched Pokémon.)",
+          "en": "Flip a coin. If heads, this attack does 10 damage to each of your opponent's Benched Pokémon. If tails, this attack does 10 damage to each of your Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
           "fr": "Lancez une pièce. Si c’est face, cette attaque inflige 10 dégâts à chaque Pokémon de Banc de votre adversaire. Si c’est pile, cette attaque inflige 10 dégâts à chacun de vos Pokémon de Banc. (N’appliquez ni la Faiblesse ni la Résistance aux Pokémon de Banc.)",
           "de": "Wirf eine Münze. Bei \"Kopf\" fügt dieser Angriff jedem Pokémon auf der Bank deines Gegners 10 Schadenspunkte zu. Bei \"Zahl\" fügt dieser Angriff jedem Pokémon auf deiner Bank 10 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
         }
@@ -4118,6 +4228,16 @@
           "it": "",
           "pt-BR": ""
         }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "/images/cards/intl-hgss4/de/49.webp",
+          "en": "/images/cards/intl-hgss4/en/49.webp",
+          "fr": "/images/cards/intl-hgss4/fr/49.webp",
+          "it": "",
+          "pt-BR": ""
+        }
       }
     ],
     "hp": 80,
@@ -4140,7 +4260,7 @@
           "normal",
           "normal"
         ],
-        "damage": "20x",
+        "damage": "20×",
         "text": {
           "en": "Flip 3 coins. This attack does 20 damage times the number of heads.",
           "fr": "Lancez 3 pièces. Cette attaque inflige 20 dégâts multipliés par le nombre de côtés face.",
@@ -4154,7 +4274,7 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 1,
+    "retreat_cost": 2,
     "flavor_text": {
       "en": "Further research enhanced its abilities. Sometimes, it may exhibit motions that were not programmed."
     }
@@ -4173,9 +4293,19 @@
       "0473"
     ],
     "illustrator": "Kagemaru Himeno",
-    "rarity": "rare_holo",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "/images/cards/intl-hgss4/de/5.webp",
+          "en": "/images/cards/intl-hgss4/en/5.webp",
+          "fr": "/images/cards/intl-hgss4/fr/5.webp",
+          "it": "",
+          "pt-BR": ""
+        }
+      },
       {
         "id": "reverse_holo",
         "images": {
@@ -4187,7 +4317,7 @@
         }
       },
       {
-        "id": "holo",
+        "id": "normal",
         "images": {
           "de": "/images/cards/intl-hgss4/de/5.webp",
           "en": "/images/cards/intl-hgss4/en/5.webp",
@@ -4239,7 +4369,7 @@
         ],
         "damage": "70",
         "text": {
-          "en": "Does 20 damage to each of your opponent’s Benched Pokémon that has any damage counters on it. (Don’t apply Weakness and Resistance for Benched Pokémon.)",
+          "en": "Does 20 damage to each of your opponent's Benched Pokémon that has any damage counters on it. (Don't apply Weakness and Resistance for Benched Pokémon.)",
           "fr": "Inflige 20 dégâts à chacun des Pokémon se trouvant sur le Banc de votre adversaire et ayant des marqueurs de dégât. (N’appliquez ni la Faiblesse ni la Résistance aux Pokémon de Banc.)",
           "de": "Dieser Angriff fügt jedem Pokémon auf der Bank deines Gegners, auf dem bereits mindestens 1 Schadensmarke liegt, 20 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
         }
@@ -4475,7 +4605,7 @@
         ],
         "damage": "",
         "text": {
-          "en": "Choose 2 of your opponent’s Pokémon. This attack does 20 damage to each of them. (Don’t apply Weakness and Resistance for Benched Pokémon.)",
+          "en": "Choose 2 of your opponent's Pokémon. This attack does 20 damage to each of them. (Don't apply Weakness and Resistance for Benched Pokémon.)",
           "fr": "Choisissez 2 des Pokémon de votre adversaire. Cette attaque inflige 20 dégâts à chacun d’entre eux. (N’appliquez ni la Faiblesse ni la Résistance aux Pokémon de Banc.)",
           "de": "Wähle 2 Pokémon deines Gegners. Dieser Angriff fügt jedem der gewählten Pokémon 20 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
         }
@@ -4583,7 +4713,7 @@
         ],
         "damage": "10",
         "text": {
-          "en": "Filp a coin. If heads, look at your opponent’s hand, choose 1 card, and discard it.",
+          "en": "Flip a coin. If heads, look at your opponent's hand, choose 1 card, and discard it.",
           "fr": "Lancez une pièce. Si c’est face, regardez la main de votre adversaire, choisissez une carte et défaussez-la.",
           "de": "Wirf eine Münze. Schau dir bei \"Kopf\" die Handkarten deines Gegners an, wähle 1 davon und lege sie auf seinen Ablagestapel."
         }
@@ -4659,7 +4789,7 @@
         ],
         "damage": "20",
         "text": {
-          "en": "Does 10 damage to 1 of your opponent’s Benched Pokémon. (Don’t apply Weakness and Resistance for Benched Pokémon.)",
+          "en": "Does 10 damage to 1 of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
           "fr": "Inflige 10 dégâts à l’un des Pokémon de Banc de votre adversaire. (N’appliquez ni la Faiblesse ni la Résistance aux Pokémon de Banc.)",
           "de": "Dieser Angriff fügt 1 Pokémon auf der Bank deines Gegners 10 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
         }
@@ -4931,7 +5061,7 @@
         ],
         "damage": "",
         "text": {
-          "en": "Switch the Defending Pokémon with 1 of your opponent’s Benched Pokémon.",
+          "en": "Switch the Defending Pokémon with 1 of your opponent's Benched Pokémon.",
           "fr": "Échangez le Pokémon Défenseur avec l’un des Pokémon de Banc de votre adversaire.",
           "de": "Tausche das Verteidigende Pokémon gegen 1 Pokémon auf der Bank deines Gegeners aus."
         }
@@ -5019,7 +5149,7 @@
         ],
         "damage": "",
         "text": {
-          "en": "Flip a coin. If heads, prevent all effects of attacks, including damage, done to Bronzor during your opponent’s next turn.",
+          "en": "Flip a coin. If heads, prevent all effects of attacks, including damage, done to Bronzor during your opponent's next turn.",
           "fr": "Lancez une pièce. Si c’est face, prévenez tous les effets d’attaques (y compris les dégâts) infligés à Archéomire durant le prochain tour de votre adversaire.",
           "de": "Wirf eine Münze. Verhindere bei \"Kopf\" während des nächsten Zuges deines Gegners alle Effekte von Angriffen, einschließlich Schaden, die Bronzel zugefügt werden."
         }
@@ -5110,7 +5240,7 @@
         ],
         "damage": "",
         "text": {
-          "en": "During your next turn, Carvanha’s Bite attack’s base damage is 40.",
+          "en": "During your next turn, Carvanha's Bite attack's base damage is 40.",
           "fr": "Pendant votre prochain tour, l’attaque Morsure de Carvanha inflige 40 dégâts de base.",
           "de": "In deinem nächsten Zug beträgt der Grundschaden von Kanivanhas Biss 40 Schadenspunkte."
         }
@@ -5153,9 +5283,19 @@
       "0034"
     ],
     "illustrator": "match",
-    "rarity": "rare_holo",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
+      {
+        "id": "holo",
+        "images": {
+          "de": "/images/cards/intl-hgss4/de/6.webp",
+          "en": "/images/cards/intl-hgss4/en/6.webp",
+          "fr": "/images/cards/intl-hgss4/fr/6.webp",
+          "it": "",
+          "pt-BR": ""
+        }
+      },
       {
         "id": "reverse_holo",
         "images": {
@@ -5167,7 +5307,7 @@
         }
       },
       {
-        "id": "holo",
+        "id": "normal",
         "images": {
           "de": "/images/cards/intl-hgss4/de/6.webp",
           "en": "/images/cards/intl-hgss4/en/6.webp",
@@ -5278,7 +5418,7 @@
           "normal",
           "normal"
         ],
-        "damage": "20x",
+        "damage": "20×",
         "text": {
           "en": "Flip a coin until you get tails. This attack does 20 damage times the number of heads.",
           "fr": "Lancez une pièce jusqu’à ce qu’elle tombe sur pile. Cette attaque inflige 20 dégâts multipliés par le nombre de côtés face.",
@@ -5358,7 +5498,7 @@
         ],
         "damage": "",
         "text": {
-          "en": "Flip a coin. If heads, prevent all effects of attacks, including damage, done to Diglett during your opponent’s next turn.",
+          "en": "Flip a coin. If heads, prevent all effects of attacks, including damage, done to Diglett during your opponent's next turn.",
           "fr": "Lancez une pièce. Si c’est face, prévenez tous les effets d’attaques (y compris les dégâts) infligés à Taupiqueur pendant le prochain tour de votre adversaire.",
           "de": "Wirf eine Münze. Verhindere bei \"Kopf\" während des nächsten Zuges deines Gegners alle Effekte von Angriffen, einschließlich Schaden, die Digda zugefügt werden."
         }
@@ -5375,7 +5515,7 @@
         ],
         "damage": "40",
         "text": {
-          "en": "Does 10 damage to each of your Benched Pokémon. (Don’t apply Weakness and Resistance for Benched Pokémon.)",
+          "en": "Does 10 damage to each of your Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
           "fr": "Inflige 10 dégâts à chacun de vos Pokémon de Banc. (N’appliquez ni la Faiblesse ni la Résistance aux Pokémon de Banc.)",
           "de": "Dieser Angriff fügt jedem Pokémon auf deiner Bank 10 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
         }
@@ -5453,7 +5593,7 @@
         ],
         "damage": "10",
         "text": {
-          "en": "The Defending Pokémon can’t retreat during your opponent’s next turn.",
+          "en": "The Defending Pokémon can't retreat during your opponent's next turn.",
           "fr": "Le Pokémon Défenseur ne peut pas battre en retraite durant le prochain tour de votre adversaire.",
           "de": "Das Verteidigende Pokémon kann sich im nächsten Zug deines Gegners nicht zurückziehen."
         }
@@ -5538,7 +5678,7 @@
         ],
         "damage": "",
         "text": {
-          "en": "Put 1 damage counter on 1 of your opponent’s Pokémon.",
+          "en": "Put 1 damage counter on 1 of your opponent's Pokémon.",
           "fr": "Placez un marqueur de dégât sur l’un des Pokémon de votre adversaire.",
           "de": "Lege 1 Schadensmarken auf 1 Pokémon deines Gegners."
         }
@@ -5630,7 +5770,7 @@
         "cost": [
           "grass"
         ],
-        "damage": "30x",
+        "damage": "30×",
         "text": {
           "en": "Flip a coin for each Volbeat you have in play. This attack does 30 damage times the number of heads.",
           "fr": "Lancez une pièce pour chacun de vos Muciole en jeu. Cette attaque inflige 30 dégâts multipliés par le nombre de côtés face.",
@@ -5787,7 +5927,7 @@
         ],
         "damage": "",
         "text": {
-          "en": "Choose 1 of your opponent’s Benched Pokémon. This attack does 30 damage to that Pokémon. (Don’t apply Weakness and Resistance for Benched Pokémon.)",
+          "en": "Choose 1 of your opponent's Benched Pokémon. This attack does 30 damage to that Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
           "fr": "Choisissez l’un des Pokémon de Banc de votre adversaire. Cette attaque inflige 30 dégâts à ce Pokémon. (N’appliquez ni la Faiblesse ni la Résistance aux Pokémon de Banc.)",
           "de": "Wähle 1 Pokémon auf der Bank deines Gegners. Dieser Angriff fügt dem gewählten Pokémon 30 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
         }
@@ -5926,6 +6066,16 @@
           "it": "",
           "pt-BR": ""
         }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "/images/cards/intl-hgss4/de/68.webp",
+          "en": "/images/cards/intl-hgss4/en/68.webp",
+          "fr": "/images/cards/intl-hgss4/fr/68.webp",
+          "it": "",
+          "pt-BR": ""
+        }
       }
     ],
     "hp": 50,
@@ -5991,7 +6141,7 @@
     "number": "69",
     "category": "pokemon",
     "name": {
-      "en": "Nidoran♀",
+      "en": "Nidoran ♀",
       "fr": "Nidoran♀",
       "de": "Nidoran w"
     },
@@ -6055,7 +6205,7 @@
           "psychic",
           "normal"
         ],
-        "damage": "20x",
+        "damage": "20×",
         "text": {
           "en": "Flip 2 coins. This attack does 20 damage times the number of heads.",
           "fr": "Lancez 2 pièces. Cette attaque inflige 20 dégâts multipliés par le nombre de côtés face.",
@@ -6088,11 +6238,11 @@
       "0474"
     ],
     "illustrator": "Kouki Saitou",
-    "rarity": "rare_holo",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
-        "id": "reverse_holo",
+        "id": "holo",
         "images": {
           "de": "/images/cards/intl-hgss4/de/7.webp",
           "en": "/images/cards/intl-hgss4/en/7.webp",
@@ -6102,7 +6252,7 @@
         }
       },
       {
-        "id": "holo",
+        "id": "reverse_holo",
         "images": {
           "de": "/images/cards/intl-hgss4/de/7.webp",
           "en": "/images/cards/intl-hgss4/en/7.webp",
@@ -6158,7 +6308,7 @@
     "number": "70",
     "category": "pokemon",
     "name": {
-      "en": "Nidoran♂",
+      "en": "Nidoran ♂",
       "fr": "Nidoran♂",
       "de": "Nidoran m"
     },
@@ -6207,7 +6357,7 @@
         ],
         "damage": "10",
         "text": {
-          "en": "If Nidoran♀ is on your Bench, the Defending Pokémon is now Poisoned.",
+          "en": "If Nidoran ♀ is on your Bench, the Defending Pokémon is now Poisoned.",
           "fr": "Si Nidoran♀ est sur votre Banc, le Pokémon Défenseur est maintenant Empoisonné.",
           "de": "Wenn sich Nidoran♀ auf deiner Bank befindet, ist das Verteidigende Pokémon jetzt vergiftet."
         }
@@ -6346,6 +6496,16 @@
     "variants": [
       {
         "id": "normal",
+        "images": {
+          "de": "/images/cards/intl-hgss4/de/72.webp",
+          "en": "/images/cards/intl-hgss4/en/72.webp",
+          "fr": "/images/cards/intl-hgss4/fr/72.webp",
+          "it": "",
+          "pt-BR": ""
+        }
+      },
+      {
+        "id": "reverse_holo",
         "images": {
           "de": "/images/cards/intl-hgss4/de/72.webp",
           "en": "/images/cards/intl-hgss4/en/72.webp",
@@ -6509,6 +6669,16 @@
           "it": "",
           "pt-BR": ""
         }
+      },
+      {
+        "id": "reverse_holo",
+        "images": {
+          "de": "/images/cards/intl-hgss4/de/74.webp",
+          "en": "/images/cards/intl-hgss4/en/74.webp",
+          "fr": "/images/cards/intl-hgss4/fr/74.webp",
+          "it": "",
+          "pt-BR": ""
+        }
       }
     ],
     "hp": 60,
@@ -6528,7 +6698,7 @@
         ],
         "damage": "",
         "text": {
-          "en": "Filp a coin. If heads, this attack does 30 damage to 1 of your opponent's Pokémon. If tails, this attack does 30 damage to 1 of your Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "en": "Flip a coin. If heads, this attack does 30 damage to 1 of your opponent's Pokémon. If tails, this attack does 30 damage to 1 of your Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
           "fr": "Lancez une pièce. Si c’est face, cette attaque inflige 30 dégâts à l’un des Pokémon de Banc de votre adversaire. Si c’est pile, cette attaque inflige 30 dégâts à l’un de vos Pokémon. (N’appliquez ni la Faiblesse ni la Résistance aux Pokémon de Banc.)",
           "de": "Wirf eine Münze. Bei \"Kopf\" fügt dieser Angriff 1 Pokémon deines Gegners 30 Schadenspunkte zu. Bei \"Zahl\" fügt dieser Angriff 1 deiner Pokémon 30 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
         }
@@ -6600,7 +6770,7 @@
         ],
         "damage": "",
         "text": {
-          "en": "Flip a coin. If heads, choose 1 of the Defending Pokémon’s attacks. That Pokémon can’t use that attack during your opponent’s next turn.",
+          "en": "Flip a coin. If heads, choose 1 of the Defending Pokémon's attacks. That Pokémon can't use that attack during your opponent's next turn.",
           "fr": "Lancez une pièce. Si c’est face, choisissez l’une des attaques du Pokémon Défenseur. Ce Pokémon ne peut pas utiliser cette attaque pendant le prochain tour de votre adversaire.",
           "de": "Wirf eine Münze. Wähle bei \"Kopf\" 1 Angriff des Verteidigenden Pokémon. Das Pokémon kann den gewählten Angriff im nächsten Zug deines Gegners nicht einsetzen."
         }
@@ -6957,11 +7127,11 @@
       "0078"
     ],
     "illustrator": "Kyoko Umemoto",
-    "rarity": "rare_holo",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
-        "id": "reverse_holo",
+        "id": "holo",
         "images": {
           "de": "/images/cards/intl-hgss4/de/8.webp",
           "en": "/images/cards/intl-hgss4/en/8.webp",
@@ -6971,7 +7141,7 @@
         }
       },
       {
-        "id": "holo",
+        "id": "reverse_holo",
         "images": {
           "de": "/images/cards/intl-hgss4/de/8.webp",
           "en": "/images/cards/intl-hgss4/en/8.webp",
@@ -7004,7 +7174,7 @@
         ],
         "damage": "50",
         "text": {
-          "en": "The Defending Pokémon is now Burned and can’t retreat during your opponent’s next turn.",
+          "en": "The Defending Pokémon is now Burned and can't retreat during your opponent's next turn.",
           "fr": "Le Pokémon Défenseur est maintenant Brûlé et ne peut pas battre en retraite durant le prochain tour de votre adversaire.",
           "de": "Das Verteidigende Pokémon ist jetzt verbrannt und kann sich im nächsten Zug deines Gegners nicht zurückziehen."
         }
@@ -7076,7 +7246,7 @@
         ],
         "damage": "10",
         "text": {
-          "en": "The Defending Pokémon can’t retreat during your opponent’s next turn.",
+          "en": "The Defending Pokémon can't retreat during your opponent's next turn.",
           "fr": "Le Pokémon Défenseur ne peut pas battre en retraite pendant le prochain tour de votre adversaire.",
           "de": "Das Verteidigende Pokémon kann sich im nächsten Zug deines Gegners nicht zurückziehen."
         }
@@ -7149,7 +7319,7 @@
         ],
         "damage": "10",
         "text": {
-          "en": "Remove from Venomat the number of damage counters equal to the damage you did to the Definding Pokémon.",
+          "en": "Remove from Venonat the number of damage counters equal to the damage you did to the Defending Pokémon.",
           "fr": "Retirez à Mimitoss un nombre de marqueurs de dégât équivalant aux dégâts que vous avez infligés au Pokémon Défenseur.",
           "de": "Entferne Schadensmarken von Bluzuk entsprechend der Höhe der Schadenspunkte, die dem Verteidigenden Pokémon durch diesen Angriff zugefügt wurden."
         }
@@ -7234,7 +7404,7 @@
         ],
         "damage": "",
         "text": {
-          "en": "If you don’t have Illumise in play, this attack does nothing. Choose 1 of your opponent’s Benched Pokémon. This attack does 30 damage to that Pokémon. (Don’t apply Weakness and Resistance for Benched Pokémon.)",
+          "en": "If you don't have Illumise in play, this attack does nothing. Choose 1 of your opponent's Benched Pokémon. This attack does 30 damage to that Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
           "fr": "Si vous ne disposez pas de Lumivole en jeu, cette attaque ne fait rien. Choisissez l’un des Pokémon de Banc de votre adversaire. Cette attaque inflige 30 dégâts à ce Pokémon. (N’appliquez ni la Faiblesse ni la Résistance aux Pokémon de Banc.)",
           "de": "Wenn du kein Illumise im Spiel hast, hat dieser Angriff keine Auswirkungen. Wähle 1 Pokémon auf der Bank deines Gegners. Dieser Angriff fügt dem gewählten Pokémon 30 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
         }
@@ -7383,6 +7553,16 @@
           "it": "",
           "pt-BR": ""
         }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "/images/cards/intl-hgss4/de/84.webp",
+          "en": "/images/cards/intl-hgss4/en/84.webp",
+          "fr": "/images/cards/intl-hgss4/fr/84.webp",
+          "it": "",
+          "pt-BR": ""
+        }
       }
     ],
     "hp": 50,
@@ -7459,10 +7639,11 @@
       }
     ],
     "hp": 0,
+    "retreat_cost": 0,
     "trainer_type": "supporter",
     "rules_text": {
       "fr": "Vous pouvez utiliser cette carte uniquement s’il vous reste plus de cartes Récompense que votre adversaire. Pendant ce tour, chaque attaque de votre Pokémon Actif inflige 40 dégâts supplémentaires au Pokémon Actif de votre adversaire (avant application de la Faiblesse et de la Résistance).",
-      "en": "You may use this card only if you have more Prize cards left than your opponent. During this turn, each of your Active Pokémon’s attacks does 40 more damage to your opponent’s Active Pokémon (before applying Weakness and Resistance).",
+      "en": "You can play only one Supporter card each turn. When you play this card, put it next to your Active Pokémon. When your turn ends, discard this card. You may use this card only if you have more Prize cards left than your opponent. During this turn, each of your Active Pokémon's attacks does 40 more damage to your opponent's Active Pokémon (before applying Weakness and Resistance).",
       "de": "Du darfst diese Karte nur spielen, wenn du mehr Preise übrig hast als dein Gegner. Während dieses Zuges fügt jeder Angriff deines Aktiven Pokémon den Aktiven Pokémon des Gegners 40 weitere Schadenspunkte zu (bevor Schwäche und Resistenz verrechnet werden)."
     }
   },
@@ -7503,10 +7684,11 @@
       }
     ],
     "hp": 0,
+    "retreat_cost": 0,
     "trainer_type": "stadium",
     "rules_text": {
       "fr": "Cette carte reste en jeu lorsque vous la jouez. Défaussez-la si une autre carte Stade est jouée. Si une autre carte du même nom est en jeu, vous ne pouvez pas l’utiliser.",
-      "en": "This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can’t play this card.",
+      "en": "This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card. Each Pokémon LEGEND in play (both yours and your opponent's) gets +30 HP.",
       "de": "Jede Pokémon-LEGENDE im Spiel (deine und die deines Gegners) erhält +30 KP."
     }
   },
@@ -7544,13 +7726,24 @@
           "it": "",
           "pt-BR": ""
         }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "/images/cards/intl-hgss4/de/87.webp",
+          "en": "/images/cards/intl-hgss4/en/87.webp",
+          "fr": "/images/cards/intl-hgss4/fr/87.webp",
+          "it": "",
+          "pt-BR": ""
+        }
       }
     ],
     "hp": 0,
+    "retreat_cost": 0,
     "trainer_type": "item",
     "rules_text": {
       "fr": "Défaussez 2 cartes de votre main. Cherchez une carte Dresseur dans votre pile de défausse, montrez-la à votre adversaire et ajoutez-la à votre main. Vous ne pouvez pas associer Bras indésirable aux effets de cette carte.",
-      "en": "Discard 2 cards from your hand. Search your discard pile for a Trainer card, show it to your opponent, and put it into your hand. You can’t choose Junk Arm with the effect of this card.",
+      "en": "Discard 2 cards from your hand. Search your discard pile for a Trainer card, show it to your opponent, and put it into your hand. You can't choose Junk Arm with the effect of this card.",
       "de": "Lege 2 Karten von deiner Hand auf deinen Ablagestapel. Durchsuche deinen Ablagestapel nach 1 Trainer-Karte, zeige sie deinem Gegner und nimm sie auf die Hand. Du kannst mit diesem Effekt keine Müllgreifer-Karte wählen."
     }
   },
@@ -7588,13 +7781,24 @@
           "it": "",
           "pt-BR": ""
         }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "/images/cards/intl-hgss4/de/88.webp",
+          "en": "/images/cards/intl-hgss4/en/88.webp",
+          "fr": "/images/cards/intl-hgss4/fr/88.webp",
+          "it": "",
+          "pt-BR": ""
+        }
       }
     ],
     "hp": 0,
+    "retreat_cost": 0,
     "trainer_type": "supporter",
     "rules_text": {
       "fr": "Chaque joueur récupère l’un de ses Pokémon de Banc dans sa main, ainsi que toutes les cartes qui lui sont attachées. (Vous récupérez votre Pokémon en premier.)",
-      "en": "Each player returns 1 of his or her Benched Pokémon and all cards attached to it to his or her hand. (You return your Pokémon first.",
+      "en": "You can play only one Supporter card each turn. When you play this card, put it next to your Active Pokémon. When your turn ends, discard this card. Each player returns 1 of his or her Benched Pokémon and all cards attached to it to his or her hand. (You return your Pokémon first.)",
       "de": "Jeder Spieler nimmt 1 Pokémon von seiner Bank und alle daran angelegten Karten zurück auf seine Hand. (Du nimmst dein Pokémon zuerst.)"
     }
   },
@@ -7632,13 +7836,24 @@
           "it": "",
           "pt-BR": ""
         }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "/images/cards/intl-hgss4/de/89.webp",
+          "en": "/images/cards/intl-hgss4/en/89.webp",
+          "fr": "/images/cards/intl-hgss4/fr/89.webp",
+          "it": "",
+          "pt-BR": ""
+        }
       }
     ],
     "hp": 0,
+    "retreat_cost": 0,
     "trainer_type": "supporter",
     "rules_text": {
       "fr": "Vous pouvez utiliser cette carte uniquement s’il vous reste plus de cartes Récompense que votre adversaire. Cherchez 2 cartes dans votre deck et ajoutez-les à votre main. Mélangez ensuite votre deck.",
-      "en": "You may use this card only if you have more Prize cards left than your opponent. Search your deck for any 2 cards and put them into your hand. Shuffle your deck afterward.",
+      "en": "You can play only one Supporter card each turn. When you play this card, put it next to your Active Pokémon. When your turn ends, discard this card. You may use this card only if you have more Prize cards left than your opponent. Search your deck for any 2 cards and put them into your hand. Shuffle your deck afterward.",
       "de": "Du darfst diese Karte nur spielen, wenn du mehr Preise übrig hast als dein Gegner. Durchsuche dein Deck nach 2 Karten und nimm sie auf deine Hand. Mische anschließend dein Deck."
     }
   },
@@ -7656,11 +7871,11 @@
       "0338"
     ],
     "illustrator": "Kouki Saitou",
-    "rarity": "rare_holo",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
-        "id": "reverse_holo",
+        "id": "holo",
         "images": {
           "de": "/images/cards/intl-hgss4/de/9.webp",
           "en": "/images/cards/intl-hgss4/en/9.webp",
@@ -7670,7 +7885,7 @@
         }
       },
       {
-        "id": "holo",
+        "id": "reverse_holo",
         "images": {
           "de": "/images/cards/intl-hgss4/de/9.webp",
           "en": "/images/cards/intl-hgss4/en/9.webp",
@@ -7697,7 +7912,7 @@
         ],
         "damage": "20",
         "text": {
-          "en": "If the Defending Pokémon tries to attack during your opponent’s next turn, your opponent flips a coin. If tails, that attack does nothing.",
+          "en": "If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing.",
           "fr": "Si le Pokémon Défenseur essaie d’attaquer pendant le prochain tour de votre adversaire, ce dernier lance une pièce. Si c’est pile, cette attaque ne fait rien.",
           "de": "Falls das Verteidigende Pokémon während des nächsten Zuges deines Gegners angreift, wirft dein Gegner 1 Münze. Bei \"Zahl\" hat dieser Angriff keine Auswirkungen."
         }
@@ -7748,9 +7963,20 @@
           "it": "",
           "pt-BR": ""
         }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "/images/cards/intl-hgss4/de/90.webp",
+          "en": "/images/cards/intl-hgss4/en/90.webp",
+          "fr": "/images/cards/intl-hgss4/fr/90.webp",
+          "it": "",
+          "pt-BR": ""
+        }
       }
     ],
     "hp": 0,
+    "retreat_cost": 0,
     "rules_text": {
       "fr": "Énergie Rescousse fournit de l’Énergie Colorless. Si le Pokémon auquel est attachée cette carte est mis K.O. par une attaque, récupérez ce Pokémon dans votre main. (Défaussez toutes les cartes attachées à ce Pokémon.)",
       "en": "Rescue Energy provides Colorless Energy. If the Pokémon this card is attached to is Knocked Out by damage from an attack, put that Pokémon back into your hand. (Discard all cards attached to that Pokémon.)",
@@ -7804,7 +8030,7 @@
         ],
         "damage": "70",
         "text": {
-          "en": "Choose 1 Pokémon from your hand and put it in the Lost Zone. (If you can’t put a Pokémon in the Lost Zone, this attack does nothing.)",
+          "en": "Choose 1 Pokémon from your hand and put it in the Lost Zone. (If you can't put a Pokémon in the Lost Zone, this attack does nothing.)",
           "fr": "Choisissez un Pokémon dans votre main et placez-le dans la Zone Perdue. (Si vous ne pouvez pas, cette attaque ne fait rien.)",
           "de": "Wähle 1 Pokémon-Karte von deiner Hand und lege sie ins Nirgendwo. (Wenn du keine Pokémon-Karte ins Nirgendwo legen kannst, hat dieser Angriff keine Auswirkung.)"
         }
@@ -7850,6 +8076,16 @@
           "it": "",
           "pt-BR": ""
         }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "/images/cards/intl-hgss4/de/92.webp",
+          "en": "/images/cards/intl-hgss4/en/92.webp",
+          "fr": "/images/cards/intl-hgss4/fr/92.webp",
+          "it": "",
+          "pt-BR": ""
+        }
       }
     ],
     "hp": 60,
@@ -7872,7 +8108,7 @@
         ],
         "damage": "30",
         "text": {
-          "en": "During your opponent’s next turn, prevent all damage done to Celebi by attacks from your opponent’s Stage 1 or Stage 2 Pokémon.",
+          "en": "During your opponent's next turn, prevent all damage done to Celebi by attacks from your opponent's Stage 1 or Stage 2 Pokémon.",
           "fr": "Pendant le prochain tour de votre adversaire, prévenez tous les dégâts infligés à Celebi par le Pokémon de niveau 1 ou 2 de votre adversaire.",
           "de": "Verhindere während des nächsten Zuges deines Gegners allen Schaden, der Celebi durch Angriffe von gegnerischen Pokémon der Phase 1 und Phase 2 zugefügt würde."
         }
@@ -7937,7 +8173,7 @@
         ],
         "damage": "30",
         "text": {
-          "en": "Does 10 damage to 2 of your opponent’s Benched Pokémon. (Don’t apply Weakness and Resistance for Benched Pokémon.)",
+          "en": "Does 10 damage to 2 of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
           "fr": "Inflige 10 dégâts à 2 des Pokémon de Banc de votre adversaire. (N’appliquez ni la Faiblesse ni la Résistance aux Pokémon de Banc.)",
           "de": "Dieser Angriff fügt 2 Pokémon auf der Bank deines Gegners 10 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
         }
@@ -8007,7 +8243,7 @@
         ],
         "damage": "",
         "text": {
-          "en": "Look at your opponent’s hand and choose a number of Pokémon you find there up to the number of Psychic Energy attached to Gengar. Put the Pokémon you chose in the Lost Zone.",
+          "en": "Look at your opponent's hand and choose a number of Pokémon you find there up to the number of Psychic Energy attached to Gengar. Put the Pokémon you chose in the Lost Zone.",
           "fr": "Regardez la main de votre adversaire et choisissez-y autant de Pokémon qu’il existe de cartes Énergie Psychic attachées à Ectoplasma. Placez les Pokémon que vous avez choisis dans la Zone Perdue.",
           "de": "Schau dir die Handkarten deines Gegners an und wähle eine Anzahl Pokémon-Karten, die du dort findest, die höchstens der Anzahl der an Gengar angeleten -Energien entspricht. Lege die gewählten Pokémon-Karten ins Nirgendwo."
         }
@@ -8024,7 +8260,7 @@
         ],
         "damage": "",
         "text": {
-          "en": "Put 4 damage counters on your opponent’s Pokémon in any way you like.",
+          "en": "Put 4 damage counters on your opponent's Pokémon in any way you like.",
           "fr": "Placez 4 marqueurs de dégât sur les Pokémon de votre adversaire, comme bon vous semble.",
           "de": "Lege 4 Schadensmarken in beliebiger Verteilung auf die Pokémon deines Gegners."
         }
@@ -8155,6 +8391,16 @@
           "it": "",
           "pt-BR": ""
         }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "/images/cards/intl-hgss4/de/96.webp",
+          "en": "/images/cards/intl-hgss4/en/96.webp",
+          "fr": "/images/cards/intl-hgss4/fr/96.webp",
+          "it": "",
+          "pt-BR": ""
+        }
       }
     ],
     "hp": 140,
@@ -8178,7 +8424,7 @@
           "lightning",
           "normal"
         ],
-        "damage": "50x",
+        "damage": "50×",
         "text": {
           "en": "Put as many Energy cards attached to your Pokémon as you like in the Lost Zone. This attack does 50 damage times the number of Energy cards put in the Lost Zone in this way.",
           "fr": "Placez autant de cartes Énergie attachées à vos Pokémon que vous le souhaitez dans la Zone Perdue. Cette attaque inflige 50 dégâts multipliés par le nombre de cartes Énergie que vous avez ainsi placées dans la Zone Perdue.",
@@ -8286,6 +8532,16 @@
           "it": "",
           "pt-BR": ""
         }
+      },
+      {
+        "id": "stamped",
+        "images": {
+          "de": "/images/cards/intl-hgss4/de/98.webp",
+          "en": "/images/cards/intl-hgss4/en/98.webp",
+          "fr": "/images/cards/intl-hgss4/fr/98.webp",
+          "it": "",
+          "pt-BR": ""
+        }
       }
     ],
     "hp": 110,
@@ -8311,7 +8567,7 @@
         ],
         "damage": "",
         "text": {
-          "en": "Choose 1 of your opponent’s Pokémon. This attack does 40 damage to that Pokémon. (Don’t apply Weakness and Resistance for Benched Pokémon.)",
+          "en": "Choose 1 of your opponent's Pokémon. This attack does 40 damage to that Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
           "fr": "Choisissez l’un des Pokémon de votre adversaire. Cette attaque inflige 40 dégâts à ce Pokémon. (N’appliquez ni la Faiblesse ni la Résistance aux Pokémon de Banc.)",
           "de": "Wähle 1 Pokémon deines Gegners. Dieser Angriff fügt dem gewählten Pokémon 40 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an)."
         }
@@ -8329,7 +8585,7 @@
         ],
         "damage": "70",
         "text": {
-          "en": "This attack’s damage isn’t affected by Weakness or Resistance.",
+          "en": "This attack's damage isn't affected by Weakness or Resistance.",
           "fr": "Les dégâts infligés par cette attaque ne sont pas affectés par la Faiblesse ou la Résistance.",
           "de": "Der Schaden dieses Angriffs wird durch Schwäche und Resistenz nicht verändert."
         }
@@ -8360,11 +8616,11 @@
       "de": "Darkrai & Cresselia LEGENDE"
     },
     "pokemon": [
-      "0491",
-      "0488"
+      "0488",
+      "0491"
     ],
-    "illustrator": "Shinji Higuchi + Noriko Takaya/樋口真嗣+高屋法子",
-    "rarity": "ultra_rare",
+    "illustrator": "Shinji Higuchi + Noriko Takaya",
+    "rarity": "legend",
     "regulation_mark": null,
     "variants": [
       {
@@ -8430,7 +8686,7 @@
         "value": "x2"
       }
     ],
-    "retreat_cost": 0,
+    "retreat_cost": 2,
     "rules_text": {
       "en": "[2DD] Lost Crisis (100) Choose 2 Energy attached to Darkrai and Cresselia LEGEND and put them in the Lost Zone. If any of your opponent’s Pokémon would be Knocked Out by damage from the attack, put that Pokémon and all cards attached to it in the Lost Zone instead of discarding it."
     }
@@ -8462,6 +8718,7 @@
       }
     ],
     "hp": 0,
+    "retreat_cost": 0,
     "trainer_type": "item",
     "rules_text": {
       "fr": "REGARDEZ TOUTES VOS CARTES RECOMPENSE QUI SONT FACE CACHEE!",

@@ -97,7 +97,7 @@
       },
       {
         "name": {
-          "en": "Will-o'-the-Wisp"
+          "en": "Will-o'-the-wisp"
         },
         "cost": [
           "psychic",
@@ -113,7 +113,8 @@
         "type": "psychic",
         "value": "x2"
       }
-    ]
+    ],
+    "retreat_cost": 0
   },
   {
     "id": "intl-ru1-11",
@@ -277,7 +278,7 @@
           "normal",
           "normal"
         ],
-        "damage": "20",
+        "damage": "20+",
         "text": {
           "en": "Does 20 damage plus 10 more damage for each damage counter on Skuntank."
         }
@@ -610,7 +611,7 @@
           "normal",
           "normal"
         ],
-        "damage": "60",
+        "damage": "60+",
         "text": {
           "en": "If the Defending Pokémon is a Water Pokémon, this attack does 60 damage plus 40 more damage."
         }

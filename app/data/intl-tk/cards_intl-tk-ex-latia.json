@@ -68,7 +68,7 @@
       "fr": "Énergie Feu"
     },
     "pokemon": [],
-    "illustrator": "",
+    "illustrator": null,
     "rarity": "none",
     "regulation_mark": null,
     "variants": [
@@ -83,7 +83,11 @@
         }
       }
     ],
-    "stage": "basic"
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "retreat_cost": 0
   },
   {
     "id": "intl-tk-ex-latia-2",
@@ -153,7 +157,7 @@
     "weaknesses": [
       {
         "type": "water",
-        "value": "2x"
+        "value": ""
       }
     ],
     "retreat_cost": 1
@@ -227,7 +231,7 @@
     "weaknesses": [
       {
         "type": "fighting",
-        "value": "2x"
+        "value": ""
       }
     ],
     "retreat_cost": 1
@@ -249,7 +253,7 @@
     "regulation_mark": null,
     "variants": [
       {
-        "id": "normal",
+        "id": "holo",
         "images": {
           "de": "",
           "en": "/images/cards/intl-tk-ex-latia/en/4.webp",
@@ -296,7 +300,7 @@
     "weaknesses": [
       {
         "type": "psychic",
-        "value": "2x"
+        "value": ""
       }
     ],
     "retreat_cost": 1
@@ -364,7 +368,7 @@
     "weaknesses": [
       {
         "type": "water",
-        "value": "2x"
+        "value": ""
       }
     ],
     "retreat_cost": 1
@@ -432,7 +436,7 @@
     "weaknesses": [
       {
         "type": "fighting",
-        "value": "2x"
+        "value": ""
       }
     ],
     "retreat_cost": 1
@@ -489,7 +493,7 @@
     "weaknesses": [
       {
         "type": "water",
-        "value": "2x"
+        "value": ""
       }
     ],
     "retreat_cost": 1
@@ -519,6 +523,8 @@
         }
       }
     ],
+    "retreat_cost": 0,
+    "trainer_type": "item",
     "rules_text": {
       "en": "Remove 2 damage counters from 1 of your Pokémon (remove 1 damage counter if that Pokémon has only 1).",
       "fr": "Soignez 30 dégâts à 1 de vos Pokémon."
@@ -549,8 +555,10 @@
         }
       }
     ],
+    "retreat_cost": 0,
+    "trainer_type": "item",
     "rules_text": {
-      "en": "Search your deck for a basic Energy card, show it to your opponent, and put it into your hand. Shuffle your deck afterward.",
+      "en": "Search your deck for a basic Energy card, show it to your opponent, and put it into your hand. Shuffle your deck afterward",
       "fr": "Cherchez dans votre deck une carte Énergie de base, montrez-la à votre adversaire et placez-la dans votre main. Mélangez ensuite votre deck."
     }
   }

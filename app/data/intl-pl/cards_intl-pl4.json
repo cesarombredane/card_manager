@@ -12,7 +12,7 @@
       "0006"
     ],
     "illustrator": "Kagemaru Himeno",
-    "rarity": "rare_holo",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -98,7 +98,7 @@
       "0465"
     ],
     "illustrator": "Masakazu Fukuda",
-    "rarity": "rare_holo",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -201,7 +201,7 @@
       "0454"
     ],
     "illustrator": "Kouki Saitou",
-    "rarity": "rare_holo",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -279,14 +279,14 @@
     "number": "12",
     "category": "pokemon",
     "name": {
-      "en": "Zapdos",
+      "en": "Zapdos G",
       "de": "Zapdos G"
     },
     "pokemon": [
       "0145"
     ],
     "illustrator": "Ryota Saito",
-    "rarity": "rare_holo",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -324,7 +324,7 @@
         ],
         "damage": "10",
         "text": {
-          "en": "Flip a coin. If heads, search your discard pile for an Energy card and attach it to Zapdos .",
+          "en": "Flip a coin. If heads, search your discard pile for an Energy card and attach it to Zapdos G.",
           "de": "Wirf 1 Münze. Bei \"Kopf\" durchsuche deinen Ablagestapel nach 1 Energiekarte und lege sie an Zapdos G an."
         }
       },
@@ -340,7 +340,7 @@
         ],
         "damage": "40",
         "text": {
-          "en": "You may discard all Lightning Energy attached to Zapdos . If you do, this attack's base damage is 80 instead of 40.",
+          "en": "You may discard all Lightning attached to Zapdos G. If you do, this attack's base damage is 80 instead of 40.",
           "de": "Du kannst alle -Energien von Zapdos G entfernen und auf deinen Ablagestapel legen. Wenn du das machst, beträgt der Grundschaden dieses Angriffs 80 Schadenspunkte anstelle von 40 Schadenspunkten."
         }
       }
@@ -679,6 +679,7 @@
         "value": "-20"
       }
     ],
+    "retreat_cost": 0,
     "flavor_text": {
       "en": "The leer that floats in darkness belongs to a Gengar delighting in casting curses on people."
     }
@@ -771,6 +772,7 @@
         "value": "-20"
       }
     ],
+    "retreat_cost": 0,
     "flavor_text": {
       "en": "The leer that floats in darkness belongs to a Gengar delighting in casting curses on people."
     }
@@ -928,9 +930,9 @@
           "normal",
           "normal"
         ],
-        "damage": "30x",
+        "damage": "30×",
         "text": {
-          "en": "Discard as many Fighting Energy cards as you like from your hand. This attack does 30 damage times the number of Fighting Energy cards you discarded.",
+          "en": "Discard as many Fighting Energy cards as you like from your hand. The attack does 30 damage times the number of Fighting Energy cards you discarded.",
           "de": "Lege beliebig viele -Energiekarten von deiner Hand auf den Ablagestapel. Dieser Angriff fügt für jede auf dieser Weise auf den Ablagestapel gelegte -Energiekarte 30 Schadenspunkte zu."
         }
       },
@@ -979,7 +981,7 @@
       "0478"
     ],
     "illustrator": "TOKIYA",
-    "rarity": "rare_holo",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -1021,7 +1023,7 @@
         ],
         "damage": "50",
         "text": {
-          "en": "If there is any Stadium card in play, this attack does nothing.",
+          "en": "If there is any Stadium Card in play, this attack does nothing.",
           "de": "Wenn sich eine Stadion-Karte im Spiel befindet, hat dieser Angriff keine Auswirkungen."
         }
       }
@@ -1285,6 +1287,7 @@
         "value": "-20"
       }
     ],
+    "retreat_cost": 0,
     "flavor_text": {
       "en": "It discharges electricity from its mane. It creates a thundercloud overhead to drop lightning bolts."
     }
@@ -1546,7 +1549,7 @@
     "number": "26",
     "category": "pokemon",
     "name": {
-      "en": "Porygon-Z",
+      "en": "Porygon-Z G",
       "de": "Porygon-Z G"
     },
     "pokemon": [
@@ -1784,7 +1787,8 @@
         "type": "water",
         "value": "+20"
       }
-    ]
+    ],
+    "retreat_cost": 0
   },
   {
     "id": "intl-pl4-29",
@@ -1865,6 +1869,7 @@
         "value": "+20"
       }
     ],
+    "retreat_cost": 0,
     "flavor_text": {
       "en": "It whittles its constantly growing fangs by gnawing on hard things. It can chew apart cinder walls."
     }
@@ -1882,7 +1887,7 @@
       "0485"
     ],
     "illustrator": "Keiko Moritsugu",
-    "rarity": "rare_holo",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -2006,7 +2011,7 @@
         "cost": [
           "grass"
         ],
-        "damage": "20x",
+        "damage": "20×",
         "text": {
           "en": "Does 20 damage times the amount of Grass Energy attached to Sceptile.",
           "de": "Dieser Angriff fügt 20 Schadenspunkte mal der Anzahl der an Gewaldro angelegten -Energien zu."
@@ -2112,7 +2117,7 @@
           "normal",
           "normal"
         ],
-        "damage": "70x",
+        "damage": "70×",
         "text": {
           "en": "Flip 2 coins. This attack does 70 damage times the number of heads.",
           "de": "Wirf 2 Münzen. Dieser Angriff fügt 70 Schadenspunkte mal der Anzahl \"Kopf\" zu."
@@ -2449,7 +2454,7 @@
           "normal",
           "normal"
         ],
-        "damage": "30x",
+        "damage": "30×",
         "text": {
           "en": "Flip 2 coins. This attack does 30 damage times the number of heads.",
           "de": "Wirf 2 Münzen. Dieser Angriff fügt 30 Schadenspunkte mal der Anzahl \"Kopf\" zu."
@@ -2849,7 +2854,7 @@
       "0141"
     ],
     "illustrator": "Hajime Kusajima",
-    "rarity": "rare_holo",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -3230,7 +3235,7 @@
           "normal",
           "normal"
         ],
-        "damage": "40x",
+        "damage": "40×",
         "text": {
           "en": "Discard all Lightning Energy attached to Luxio. Flip a coin for each Energy card you discarded. This attack does 40 damage times the number of heads.",
           "de": "Entferne alle -Energien von Luxio und lege sie auf deinen Ablagestapel. Wirf für jede auf diese Weise auf deinen Ablagestapel gelegte Energiekarte 1 Münze. Dieser Angriff fügt 40 Schadenspunkte mal der Anzahl \"Kopf\" zu."
@@ -3335,6 +3340,7 @@
         "value": "-20"
       }
     ],
+    "retreat_cost": 0,
     "flavor_text": {
       "en": "It discharges electricity from its mane. It creates a thundercloud overhead to drop lightning bolts."
     }
@@ -3584,6 +3590,7 @@
         "value": "+20"
       }
     ],
+    "retreat_cost": 0,
     "flavor_text": {
       "en": "When at an all-out gallop, its blazing mane sparkles, enhancing its beautiful appearance."
     }
@@ -3642,7 +3649,7 @@
         ],
         "damage": "",
         "text": {
-          "en": "Flip a coin. If heads, prevent all damage done to Shelgon by attacks during your opponent's next turn.",
+          "en": "Flip a coin. If heads, prevent all damage done to Shelgon during your opponent's next turn.",
           "de": "Wirf 1 Münze. Bei \"Kopf\" verhindere allen Schaden, der Draschel im nächsten Zug deines Gegners durch Angriffe zugefügt würde."
         }
       },
@@ -3773,7 +3780,7 @@
       "0405"
     ],
     "illustrator": "kawayoo",
-    "rarity": "rare_holo",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -3856,6 +3863,7 @@
         "value": "-20"
       }
     ],
+    "retreat_cost": 0,
     "flavor_text": {
       "en": "It can see clearly through walls to track down its prey and seek its lost young."
     }
@@ -4125,7 +4133,7 @@
     "number": "53",
     "category": "pokemon",
     "name": {
-      "en": "Beedrill",
+      "en": "Beedrill G",
       "de": "Bibor G"
     },
     "pokemon": [
@@ -4170,7 +4178,7 @@
         ],
         "damage": "10",
         "text": {
-          "en": "If you played Beedrill from your hand during this turn, this attack's base damage is 40 instead of 10.",
+          "en": "If you played Beedrill G from your hand during this turn, this attack's base damage is 40 instead of 10.",
           "de": "Wenn du Bibor G in diesem Zug aus deiner Hand gespielt hast, beträgt der Grundschaden dieses Angriffs 40 Schadenspunkte anstelle von 10 Schadenspunkten."
         }
       },
@@ -4184,7 +4192,7 @@
           "normal",
           "normal"
         ],
-        "damage": "30x",
+        "damage": "30×",
         "text": {
           "en": "Flip 3 coins. This attack does 30 damage times the number of heads.",
           "de": "Wirf 3 Münzen. Dieser Angriff fügt 30 Schadenspunkte mal der Anzahl \"Kopf\" zu."
@@ -4638,7 +4646,7 @@
       "0414"
     ],
     "illustrator": "Kagemaru Himeno",
-    "rarity": "rare_holo",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -4691,7 +4699,7 @@
         ],
         "damage": "30",
         "text": {
-          "en": "Search your discard pile for a basic Energy card and attach it to 1 of your Benched Pokémon.",
+          "en": "Seach your discard pile for a basic Energy card and attach it to 1 of your Benched Pokémon.",
           "de": "Durchsuche deinen Ablagestapel nach 1 Basis-Energiekarte und lege sie an 1 Pokémon auf deiner Bank an."
         }
       }
@@ -4708,6 +4716,7 @@
         "value": "-20"
       }
     ],
+    "retreat_cost": 0,
     "flavor_text": {
       "en": "While it loves floral honey, it won't gather any itself. Instead, it plots to steal some from Combee."
     }
@@ -5159,7 +5168,7 @@
         "cost": [
           "fighting"
         ],
-        "damage": "10x",
+        "damage": "10×",
         "text": {
           "en": "Flip a coin until you get tails. This attack does 10 damage times the number of heads.",
           "de": "Wirf so lange 1 Münze, bis zum ersten Mal das Ergebnis \"Zahl\" kommt. Dieser Angriff fügt 10 Schadenspunkte mal der Anzahl \"Kopf\" zu."
@@ -5518,7 +5527,7 @@
       "0476"
     ],
     "illustrator": "Kouki Saitou",
-    "rarity": "rare_holo",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -5827,7 +5836,7 @@
           "fire",
           "normal"
         ],
-        "damage": "10+",
+        "damage": "10",
         "text": {
           "en": "Flip a coin. If heads, this attack does 10 damage plus 20 more damage.",
           "de": "Wirf 1 Münze. Bei \"Kopf\" fügt dieser Angriff 10 Schadenspunkte plus 20 weitere Schadenspunkte zu."
@@ -5907,6 +5916,7 @@
         "value": "+10"
       }
     ],
+    "retreat_cost": 0,
     "flavor_text": {
       "en": "Cautious in the extreme, its hardy vitality lets it live in any kind of environment."
     }
@@ -6060,7 +6070,7 @@
           "water",
           "normal"
         ],
-        "damage": "20x",
+        "damage": "20×",
         "text": {
           "en": "Flip 2 coins. This attack does 20 damage times the number of heads.",
           "de": "Wirf 2 Münzen. Dieser Angriff fügt 20 Schadenspunkte mal der Anzahl \"Kopf\" zu."
@@ -6424,7 +6434,7 @@
       "0373"
     ],
     "illustrator": "Shin Nagasawa",
-    "rarity": "rare_holo",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -6688,6 +6698,7 @@
         }
       }
     ],
+    "retreat_cost": 0,
     "trainer_type": "item",
     "rules_text": {
       "en": "Search your deck for Arceus, show it to your opponent, and put it into your hand. Shuffle your deck afterward.",
@@ -6727,9 +6738,10 @@
         }
       }
     ],
+    "retreat_cost": 0,
     "trainer_type": "tool",
     "rules_text": {
-      "en": "Attach Bench Shield to 1 of your Pokémon that doesn't already have a Pokémon Tool attached to it.\nIf that Pokémon is Knocked Out, discard this card.",
+      "en": "Attach Bench Shield to 1 of your Pokémon that doesn't already have a Pokémon Tool attached to it. If that Pokémon is Knocked Out, discard this card. As long as the Pokémon this card is attached to is on your Bench, prevent all damage done to that Pokémon by attacks (both yours and your opponent's).",
       "de": "Solange sich das Pokémon, an das diese Karte angelegt ist, auf deiner Bank befindet, verhindere allen Schaden, der diesem Pokémon durch Angriffe (deine und die deines Gegners) zugefügt würde."
     }
   },
@@ -6766,9 +6778,10 @@
         }
       }
     ],
+    "retreat_cost": 0,
     "trainer_type": "tool",
     "rules_text": {
-      "en": "Attach Buffer Piece to 1 of your Pokémon that doesn't already have a Pokémon Tool attached to it.\nIf that Pokémon is Knocked Out, discard this card.",
+      "en": "Attach Buffer Piece to 1 of your Pokémon that doesn't already have a Pokémon Tool attached to it. If that Pokémon is Knocked Out, discard this card. Any damage done to the Pokémon this card is attached to by an opponent's attack is reduced by 20 (after applying Weakness and Resistance). At the end of your opponent's turn after you played Buffer Piece, discard Buffer Piece.",
       "de": "Schaden, der dem Pokémon, an das Dämpfender Talisman angelegt ist, durch einen gegnerischen Angriff zugefügt wird, wird um 20 Schadenspunkte reduziert (nachdem Schwäche und Resistenz verrechnet wurden). Nachdem du Dämpfender Talisman ausgespielt hast, lege Dämpfender Talisman am Ende des nächsten Zuges deines Gegners auf den Ablagestapel."
     }
   },
@@ -6805,9 +6818,10 @@
         }
       }
     ],
+    "retreat_cost": 0,
     "trainer_type": "supporter",
     "rules_text": {
-      "en": "You can play only one Supporter card each turn. When you play this card, put it next to your Active Pokémon. When your turn ends, discard this card.",
+      "en": "You can play only one Supporter card each turn. When you play this card, put it next to your Active Pokémon. When your turn ends, discard this card. Search your deck for up to 3 Pokémon Tool cards, show them to your opponent, and put them into your hand. Shuffle your deck afterward.",
       "de": "Durchsuche dein Deck nach bis zu 3 Pokémon-Ausrüstungs-Karten, zeige sie deinem Gegner und nimm sie auf die Hand. Mische dein Deck danach."
     }
   },
@@ -6844,6 +6858,7 @@
         }
       }
     ],
+    "retreat_cost": 0,
     "trainer_type": "item",
     "rules_text": {
       "en": "Flip 3 coins. For each heads, put a basic Energy card from your discard pile into your hand. If you don't have that many basic Energy cards in your discard pile, put all of them into your hand.",
@@ -6892,9 +6907,10 @@
         }
       }
     ],
+    "retreat_cost": 0,
     "trainer_type": "tool",
     "rules_text": {
-      "en": "Attach Expert Belt to 1 of your Pokémon that doesn't already have a Pokémon Tool attached to it. If\nthat Pokémon is Knocked Out, discard this card.",
+      "en": "Attach Expert Belt to 1 of your Pokémon that doesn't already have a Pokémon Tool attached to it. If that Pokémon is Knocked Out, discard this card. The Pokémon this card is attached to gets +20 HP and that Pokémon's attacks do 20 more damage to your opponent's Active Pokémon (before applying Weakness and Resistance). When the Pokémon this card is attached to is Knocked Out, your opponent takes 1 more Prize card.",
       "de": "Das Pokémon, an das diese Karte angelegt ist, erhält +20 KP und die Angriffe dieses Pokémon fügen den Aktiven Pokémon deines Gegners 20 zusätzliche Schadenspunkte zu (bevor Schwäche und Resistenz verrechnet werden). Wenn das Pokémon, an das diese Karte angelegt ist, kampfunfähig wird, nimmt dein Gegner 1 zusätzlichen Preis."
     }
   },
@@ -6931,9 +6947,10 @@
         }
       }
     ],
+    "retreat_cost": 0,
     "trainer_type": "tool",
     "rules_text": {
-      "en": "Attach Lucky Egg to 1 of your Pokémon that doesn't already have a Pokémon Tool attached to it. If\nthat Pokémon is Knocked Out, discard this card.",
+      "en": "Attach Lucky Egg to 1 of your Pokémon that doesn't already have a Pokémon Tool attached to it. If that Pokémon is Knocked Out, discard this card. When the Pokémon this card is attached to is Knocked Out by damage from an opponent's attack, draw cards until you have 7 cards in your hand.",
       "de": "Wenn das Pokémon, an das diese Karte angelegt ist, durch Schaden eines gegnerischen Angriffs kampfunfähig wird, ziehe so viele Karten, bis du 7 Karten auf deiner Hand hast."
     }
   },
@@ -6971,6 +6988,7 @@
       }
     ],
     "hp": 50,
+    "retreat_cost": 0,
     "trainer_type": "item",
     "rules_text": {
       "en": "Play Old Amber as if it were a Colorless Basic Pokémon. (Old Amber counts as a Trainer card as well, but if Old Amber is Knocked Out, this counts as a Knocked Out Pokémon.) Old Amber can't be affected by any Special Conditions and can't retreat. At any time during your turn before your attack, you may discard Old Amber from play. (This doesn't count as a Knocked Out Pokémon.)",
@@ -6990,7 +7008,7 @@
       "0317"
     ],
     "illustrator": "Aya Kusube",
-    "rarity": "rare_holo",
+    "rarity": "holo_rare",
     "regulation_mark": null,
     "variants": [
       {
@@ -7105,9 +7123,10 @@
         }
       }
     ],
+    "retreat_cost": 0,
     "trainer_type": "supporter",
     "rules_text": {
-      "en": "You can play only one Supporter card each turn. When you play this card, put it next to your Active Pokémon. When your turn ends, discard this card.",
+      "en": "You can play only one Supporter card each turn. When you play this card, put it next to your Active Pokémon. When your turn ends, discard this card. Draw 3 cards. Then, choose a card from your hand and put it on the bottom of your deck.",
       "de": "Ziehe 3 Karten. Danach wähle 1 Karte von deiner Hand und lege sie unter dein Deck."
     }
   },
@@ -7144,9 +7163,10 @@
         }
       }
     ],
+    "retreat_cost": 0,
     "trainer_type": "stadium",
     "rules_text": {
-      "en": "This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card.",
+      "en": "This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card. During each player's turn, the player may move an Energy card attached to 1 of his or her Benched Pokémon to his or her Active Arceus as often as he or she likes.",
       "de": "Beliebig oft während seines Zuges kann jeder Spieler 1 Energiekarte von 1 Pokémon auf seiner Bank entfernen und an sein Aktives Arceus anlegen."
     }
   },
@@ -7184,6 +7204,7 @@
       }
     ],
     "hp": 50,
+    "retreat_cost": 0,
     "trainer_type": "item",
     "rules_text": {
       "en": "Play Dome Fossil as if it were a Colorless Basic Pokémon. (Dome Fossil counts as a Trainer card as well, but if Dome Fossil is Knocked Out, this counts as a Knocked Out Pokémon.) Dome Fossil can't be affected by any Special Conditions and can't retreat. At any time during your turn before your attack, you may discard Dome Fossil from play. (This doesn't count as a Knocked Out Pokémon.)",
@@ -7224,6 +7245,7 @@
       }
     ],
     "hp": 50,
+    "retreat_cost": 0,
     "trainer_type": "item",
     "rules_text": {
       "en": "Play Helix Fossil as if it were a Colorless Basic Pokémon. (Helix Fossil counts as a Trainer card as well, but if Helix Fossil is Knocked Out, this counts as a Knocked Out Pokémon.) Helix Fossil can't be affected by any Special Conditions and can't retreat. At any time during your turn before your attack, you may discard Helix Fossil from play. (This doesn't count as a Knocked Out Pokémon.)",
@@ -7236,7 +7258,7 @@
     "number": "94",
     "category": "pokemon",
     "name": {
-      "en": "Arceus LV. X",
+      "en": "Arceus LV.X",
       "de": "Arceus"
     },
     "pokemon": [
@@ -7269,7 +7291,7 @@
     "number": "95",
     "category": "pokemon",
     "name": {
-      "en": "Arceus LV. X",
+      "en": "Arceus LV.X",
       "de": "Arceus"
     },
     "pokemon": [
@@ -7320,7 +7342,7 @@
     "number": "96",
     "category": "pokemon",
     "name": {
-      "en": "Arceus LV. X",
+      "en": "Arceus LV.X",
       "de": "Arceus"
     },
     "pokemon": [
@@ -7371,7 +7393,7 @@
     "number": "97",
     "category": "pokemon",
     "name": {
-      "en": "Gengar LV. X",
+      "en": "Gengar LV.X",
       "de": "Gengar"
     },
     "pokemon": [
@@ -7425,7 +7447,8 @@
         "type": "normal",
         "value": "-20"
       }
-    ]
+    ],
+    "retreat_cost": 0
   },
   {
     "id": "intl-pl4-98",
@@ -7433,7 +7456,7 @@
     "number": "98",
     "category": "pokemon",
     "name": {
-      "en": "Salamence LV. X",
+      "en": "Salamence LV.X",
       "de": "Brutalanda"
     },
     "pokemon": [
@@ -7497,7 +7520,7 @@
     "number": "99",
     "category": "pokemon",
     "name": {
-      "en": "Tangrowth LV. X",
+      "en": "Tangrowth LV.X",
       "de": "Tangoloss"
     },
     "pokemon": [

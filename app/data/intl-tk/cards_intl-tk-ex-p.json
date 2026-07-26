@@ -63,7 +63,7 @@
     "weaknesses": [
       {
         "type": "psychic",
-        "value": "2x"
+        "value": ""
       }
     ],
     "retreat_cost": 1
@@ -92,9 +92,10 @@
         }
       }
     ],
+    "retreat_cost": 0,
     "trainer_type": "supporter",
     "rules_text": {
-      "en": "Flip a coin. If heads, draw the bottom 3 cards of your deck. If tails, draw the top 2 cards of your deck.",
+      "en": "You can play only one Supporter card each turn. When you play this card, put it next to your Active Pokémon. When your turn ends, discard this card. Flip a coin. If heads, draw the bottom 3 cards of your deck. If tails, draw the top 2 cards of your deck.",
       "fr": "Vous ne pouvez jouer qu'une seule carte Supporter par tour. Lorsque vous la jouez, placez-la à côté de votre Pokémon Actif. À la fin du tour, défaussez-la."
     }
   },
@@ -108,7 +109,7 @@
       "fr": "Énergie Électrique"
     },
     "pokemon": [],
-    "illustrator": "",
+    "illustrator": null,
     "rarity": "none",
     "regulation_mark": null,
     "variants": [
@@ -122,7 +123,8 @@
         }
       }
     ],
-    "stage": "basic"
+    "stage": "basic",
+    "retreat_cost": 0
   },
   {
     "id": "intl-tk-ex-p-12",
@@ -134,7 +136,7 @@
       "fr": "Énergie Psy"
     },
     "pokemon": [],
-    "illustrator": "",
+    "illustrator": null,
     "rarity": "none",
     "regulation_mark": null,
     "variants": [
@@ -148,7 +150,11 @@
         }
       }
     ],
-    "stage": "basic"
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "retreat_cost": 0
   },
   {
     "id": "intl-tk-ex-p-2",
@@ -215,7 +221,7 @@
     "weaknesses": [
       {
         "type": "fighting",
-        "value": "2x"
+        "value": ""
       }
     ],
     "retreat_cost": 1
@@ -232,7 +238,7 @@
     "pokemon": [
       "0326"
     ],
-    "illustrator": "Ken Sugimori",
+    "illustrator": "Atsuko Nishida",
     "rarity": "none",
     "regulation_mark": null,
     "variants": [
@@ -286,7 +292,7 @@
     "weaknesses": [
       {
         "type": "psychic",
-        "value": "2x"
+        "value": ""
       }
     ],
     "retreat_cost": 1
@@ -353,7 +359,7 @@
     "weaknesses": [
       {
         "type": "fighting",
-        "value": "2x"
+        "value": ""
       }
     ],
     "retreat_cost": 1
@@ -429,7 +435,7 @@
     "weaknesses": [
       {
         "type": "psychic",
-        "value": "2x"
+        "value": ""
       }
     ],
     "retreat_cost": 2
@@ -451,7 +457,7 @@
     "regulation_mark": null,
     "variants": [
       {
-        "id": "normal",
+        "id": "holo",
         "images": {
           "en": "/images/cards/intl-tk-ex-p/en/6.webp",
           "es": "",
@@ -499,7 +505,7 @@
     "weaknesses": [
       {
         "type": "fighting",
-        "value": "2x"
+        "value": ""
       }
     ],
     "resistances": [
@@ -522,7 +528,7 @@
     "pokemon": [
       "0325"
     ],
-    "illustrator": "Ken Sugimori",
+    "illustrator": "Kagemaru Himeno",
     "rarity": "none",
     "regulation_mark": null,
     "variants": [
@@ -560,7 +566,7 @@
     "weaknesses": [
       {
         "type": "psychic",
-        "value": "2x"
+        "value": ""
       }
     ],
     "retreat_cost": 1
@@ -589,8 +595,10 @@
         }
       }
     ],
+    "retreat_cost": 0,
+    "trainer_type": "item",
     "rules_text": {
-      "en": "Search your deck for a basic Energy card, show it to your opponent, and put it into your hand. Shuffle your deck afterward.",
+      "en": "Search your deck for a basic Energy card, show it to your opponent, and put it into your hand. Shuffle your deck afterward",
       "fr": "Choisissez dans votre deck une carte Énergie de base, montrez-la à votre adversaire et placez-la dans votre main. Mélangez ensuite votre deck."
     }
   },
@@ -618,6 +626,8 @@
         }
       }
     ],
+    "retreat_cost": 0,
+    "trainer_type": "item",
     "rules_text": {
       "en": "Remove 2 damage counters from 1 of your Pokémon (remove 1 damage counter if that Pokémon has only 1).",
       "fr": "Soignez 30 dégâts à 1 de vos Pokémon."
