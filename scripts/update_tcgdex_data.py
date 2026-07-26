@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fetch TCGdex and atomically rebuild the complete supported app catalog."""
+"""Atomically rebuild app card data from the persistent TCGdex checkout."""
 
 from __future__ import annotations
 
@@ -11,7 +11,6 @@ import re
 import shutil
 import subprocess
 import sys
-import tempfile
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
@@ -34,9 +33,7 @@ SOURCE_FOLDERS = {
     },
 }
 
-TCGDEX_REPOSITORY_URL = "https://github.com/tcgdex/cards-database.git"
 TCGDEX_ASSET_ROOT = "https://assets.tcgdex.net"
-SPARSE_FOLDERS = tuple(SOURCE_FOLDERS)
 EXCLUDED_SOURCE_SERIES = {"Pokémon TCG Pocket"}
 ASSET_LANGUAGE_CODES = {"zh-CN": "zh-cn"}
 USER_AGENT = "card-manager-tcgdex-sync/2.0"
@@ -802,16 +799,6 @@ def run_command(command: list[str], cwd: Path | None = None) -> str:
     return result.stdout.strip()
 
 
-def fetch_tcgdex(destination: Path) -> str:
-    """Shallow-clone only the two TCGdex source folders used by the app."""
-    run_command([
-        "git", "clone", "--depth", "1", "--filter=blob:none", "--sparse",
-        TCGDEX_REPOSITORY_URL, str(destination),
-    ])
-    run_command(["git", "sparse-checkout", "set", *SPARSE_FOLDERS], cwd=destination)
-    return run_command(["git", "rev-parse", "HEAD"], cwd=destination)
-
-
 def safe_filename(value: Any) -> str:
     filename = re.sub(r"[^A-Za-z0-9._-]+", "-", str(value or "unknown")).strip("-.")
     return filename or "unknown"
@@ -1056,7 +1043,6 @@ def convert_source_folder(
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--no-images", action="store_true", help="Skip image discovery and downloads.")
     parser.add_argument(
         "--overwrite",
         action="store_true",
@@ -1068,7 +1054,6 @@ def parse_args() -> argparse.Namespace:
 def build_catalog(args: argparse.Namespace, source_root: Path, commit_sha: str) -> int:
     project_root = Path(__file__).resolve().parents[1]
     output_root = project_root / "app" / "data"
-    public_root = project_root / "app" / "public" / "images"
     staging_root = output_root.with_name(f"{output_root.name}.tmp")
     discovered_root = output_root.with_name(f"{output_root.name}.discovered")
 
@@ -1081,7 +1066,7 @@ def build_catalog(args: argparse.Namespace, source_root: Path, commit_sha: str) 
             shutil.rmtree(temporary_root)
     discovered_root.mkdir(parents=True)
 
-    print("\n[2/5] Converting supported physical-card data")
+    print("[1/3] Converting supported physical-card data")
     phase_started = time.monotonic()
     pokemon_catalog, pokemon_aliases, pokemon_name_aliases = build_pokemon_catalog(source_root)
     all_series: list[dict[str, Any]] = []
@@ -1119,7 +1104,7 @@ def build_catalog(args: argparse.Namespace, source_root: Path, commit_sha: str) 
     changes = inventory_changes(existing_inventory, discovered_inventory)
     print_change_table(changes, args.overwrite)
 
-    print(f"\n[3/5] Preparing {'overwrite' if args.overwrite else 'append-only'} catalog")
+    print(f"\n[2/3] Preparing {'overwrite' if args.overwrite else 'append-only'} catalog")
     if args.overwrite:
         shutil.copytree(discovered_root, staging_root)
         additions = {kind: changes[kind]["added"] for kind in changes}
@@ -1128,22 +1113,7 @@ def build_catalog(args: argparse.Namespace, source_root: Path, commit_sha: str) 
     validate_generated_sets(staging_root)
     print(f"      New records applied: {sum(additions.values())}")
 
-    asset_result = {
-        "candidates": 0, "downloaded": 0, "unavailable": 0,
-        "failures": 0, "referenced": 0, "filled_references": 0,
-    }
-    print("\n[4/5] Images")
-    if not args.no_images:
-        asset_result = sync_assets(staging_root, public_root, IMAGE_WORKERS, REQUEST_TIMEOUT)
-        print(f"      Missing assets checked: {asset_result['candidates']}")
-        print(f"      Images downloaded:      {asset_result['downloaded']}")
-        print(f"      References filled:      {asset_result['filled_references']}")
-        print(f"      Known unavailable:      {asset_result['unavailable']}")
-        print(f"      Request failures:       {asset_result['failures']}")
-    else:
-        print("      Skipped (--no-images)")
-
-    print("\n[5/5] Generating coverage and publishing")
+    print("\n[3/3] Generating coverage and publishing")
     from report_coverage import generate_coverage
     coverage = generate_coverage(staging_root, staging_root / "coverage.json")
 
@@ -1171,19 +1141,24 @@ def build_catalog(args: argparse.Namespace, source_root: Path, commit_sha: str) 
     print(f"  Variants:          {coverage['totals']['variants']}")
     print(f"  Image coverage:    {coverage['totals']['image_slot_coverage_percent']:.2f}%")
     print(f"  Published to:      {output_root}")
-    return 1 if asset_result["failures"] else 0
+    return 0
 
 
 def main() -> int:
-    """Fetch TCGdex once, build the scoped catalog, and cache available images."""
+    """Build the scoped catalog from the persistent checkout."""
     args = parse_args()
     started = time.monotonic()
-    with tempfile.TemporaryDirectory(prefix="card-manager-tcgdex-") as temporary:
-        source_root = Path(temporary) / "cards-database"
-        print("[1/5] Fetching TCGdex card database")
-        commit_sha = fetch_tcgdex(source_root)
-        print(f"      Commit: {commit_sha}")
-        result = build_catalog(args, source_root, commit_sha)
+    project_root = Path(__file__).resolve().parents[1]
+    source_root = project_root / "tcgdex_data" / "cards-database"
+    if not (source_root / ".git").is_dir():
+        print(
+            f"Missing TCGdex checkout: {source_root}\n"
+            "Run scripts/fetch_tcgdex.py first.",
+            file=sys.stderr,
+        )
+        return 1
+    commit_sha = run_command(["git", "rev-parse", "HEAD"], cwd=source_root)
+    result = build_catalog(args, source_root, commit_sha)
     print(f"  Total duration:    {time.monotonic() - started:.1f}s")
     return result
 
