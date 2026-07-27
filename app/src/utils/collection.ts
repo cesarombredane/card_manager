@@ -164,9 +164,10 @@ export const collectionStore = {
     if (folderId === mainFolderId) return;
     const folderIndex = state.folders.findIndex((folder) => folder.id === folderId);
     if (folderIndex === -1) return;
-    for (const entry of [...state.entries].filter((candidate) => candidate.folder_id === folderId)) {
-      this.transferEntry(entry.id, mainFolderId);
-    }
+    this.transferEntries(
+      state.entries.filter((candidate) => candidate.folder_id === folderId).map((entry) => entry.id),
+      mainFolderId
+    );
     state.folders.splice(folderIndex, 1);
     persist();
   },
@@ -340,26 +341,39 @@ export const collectionStore = {
   },
 
   transferEntry(entryId: string, folderId: string): void {
-    const entry = state.entries.find((candidate) => candidate.id === entryId);
-    if (!entry || entry.folder_id === folderId || !state.folders.some((folder) => folder.id === folderId)) return;
-    const matching = state.entries.find((candidate) =>
-      candidate.id !== entry.id
-      && candidate.folder_id === folderId
-      && candidate.set_id === entry.set_id
-      && candidate.card_id === entry.card_id
-      && candidate.variant_id === entry.variant_id
-      && candidate.language_id === entry.language_id
-      && candidate.condition === entry.condition
+    this.transferEntries([entryId], folderId);
+  },
+
+  transferEntries(entryIds: string[], folderId: string): number {
+    if (!state.folders.some((folder) => folder.id === folderId)) return 0;
+    const requestedIds = new Set(entryIds);
+    const entries = state.entries.filter((entry) =>
+      requestedIds.has(entry.id) && entry.folder_id !== folderId
     );
-    if (matching) {
-      matching.quantity += entry.quantity;
-      matching.updated_at = new Date().toISOString();
-      state.entries.splice(state.entries.indexOf(entry), 1);
-    } else {
-      entry.folder_id = folderId;
-      entry.updated_at = new Date().toISOString();
+    if (entries.length === 0) return 0;
+
+    const now = new Date().toISOString();
+    for (const entry of entries) {
+      const matching = state.entries.find((candidate) =>
+        candidate.id !== entry.id
+        && candidate.folder_id === folderId
+        && candidate.set_id === entry.set_id
+        && candidate.card_id === entry.card_id
+        && candidate.variant_id === entry.variant_id
+        && candidate.language_id === entry.language_id
+        && candidate.condition === entry.condition
+      );
+      if (matching) {
+        matching.quantity += entry.quantity;
+        matching.updated_at = now;
+        state.entries.splice(state.entries.indexOf(entry), 1);
+      } else {
+        entry.folder_id = folderId;
+        entry.updated_at = now;
+      }
     }
     persist();
+    return entries.length;
   },
 
   removeEntry(entryId: string): void {

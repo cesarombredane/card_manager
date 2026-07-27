@@ -15,7 +15,7 @@ export const store = createStore<AppState>({
   state() {
     return {
       selected_region_id: 'INTL',
-      selected_language_id: 'en',
+      selected_language_id: 'fr',
       last_collection_folder_id: 'main'
     };
   },

@@ -4,10 +4,13 @@
       <card-list-item
         :card="card"
         :collection-entry="collectionEntries[index]"
+        :selectable="selectable"
+        :selected="collectionEntries[index] ? selectedEntryIds.includes(collectionEntries[index].id) : false"
         @click="$emit('card-click', $event)"
         @add-to-collection="openCollectionDialog"
         @edit-entry="$emit('edit-entry', $event)"
         @delete-entry="$emit('delete-entry', $event)"
+        @toggle-selection="$emit('toggle-selection', $event)"
       />
     </div>
   </section>
@@ -33,13 +36,18 @@
   withDefaults(defineProps<{
     cards: DisplayCard[];
     collectionEntries?: CollectionEntry[];
+    selectable?: boolean;
+    selectedEntryIds?: string[];
   }>(), {
-    collectionEntries: () => []
+    collectionEntries: () => [],
+    selectable: false,
+    selectedEntryIds: () => []
   });
   defineEmits<{
     'card-click': [card: DisplayCard];
     'edit-entry': [entry: CollectionEntry];
     'delete-entry': [entry: CollectionEntry];
+    'toggle-selection': [entry: CollectionEntry];
   }>();
 
   const selectedCard = ref<DisplayCard | null>(null);

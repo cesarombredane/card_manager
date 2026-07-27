@@ -47,6 +47,38 @@
           :to="`/collection/folder/${folderId}/binder`"
         />
       </div>
+      <div class="col-12 col-md-auto">
+        <q-btn
+          :outline="!selectionMode"
+          color="primary"
+          icon="checklist"
+          :label="selectionMode ? 'Cancel selection' : 'Select cards'"
+          no-caps
+          @click="toggleSelectionMode"
+        />
+      </div>
+    </section>
+
+    <section v-if="folder && selectionMode" class="row items-center q-gutter-sm q-mb-md">
+      <q-checkbox
+        :model-value="allDisplayedSelected"
+        :indeterminate="someDisplayedSelected && !allDisplayedSelected"
+        dark
+        color="primary"
+        :label="`Select all visible (${displayedRows.length})`"
+        @update:model-value="toggleSelectAllDisplayed"
+      />
+      <q-space />
+      <span class="text-body2 text-grey-4">{{ selectedEntryIds.size }} selected</span>
+      <q-btn
+        color="primary"
+        text-color="black"
+        icon="drive_file_move"
+        label="Move to collection"
+        no-caps
+        :disable="selectedEntryIds.size === 0 || destinationOptions.length === 0"
+        @click="openTransferDialog"
+      />
     </section>
 
     <q-banner v-if="!folder" class="bg-grey-10 text-grey-4">
@@ -65,10 +97,45 @@
       v-else
       :cards="displayedRows.map((row) => row.card)"
       :collection-entries="displayedRows.map((row) => row.entry)"
+      :selectable="selectionMode"
+      :selected-entry-ids="[...selectedEntryIds]"
       @card-click="openCard"
       @edit-entry="openEditEntryById"
       @delete-entry="setEntryToDelete"
+      @toggle-selection="toggleEntrySelection"
     />
+
+    <q-dialog v-model="showTransferDialog">
+      <q-card class="bg-grey-10 text-white" style="width: 480px; max-width: 94vw">
+        <q-card-section>
+          <div class="text-h6">Move selected cards</div>
+          <div class="text-body2 text-grey-4">
+            Move {{ selectedEntryIds.size }} selected {{ selectedEntryIds.size === 1 ? 'entry' : 'entries' }} to another collection.
+          </div>
+        </q-card-section>
+        <q-card-section>
+          <q-select
+            v-model="transferFolderId"
+            :options="destinationOptions"
+            emit-value
+            map-options
+            dark
+            outlined
+            label="Destination collection"
+          />
+        </q-card-section>
+        <q-card-actions align="right">
+          <q-btn flat color="grey-4" label="Cancel" v-close-popup />
+          <q-btn
+            color="primary"
+            text-color="black"
+            label="Move cards"
+            :disable="!transferFolderId"
+            @click="confirmBulkTransfer"
+          />
+        </q-card-actions>
+      </q-card>
+    </q-dialog>
 
     <q-dialog v-model="showEditDialog">
       <q-card class="bg-grey-10 text-white" style="width: 720px; max-width: 94vw">
@@ -185,6 +252,10 @@
   const search = ref('');
   const selectedLanguageId = ref<string | null>(null);
   const selectedSort = ref<CardSort>('release-desc');
+  const selectionMode = ref(false);
+  const selectedEntryIds = ref(new Set<string>());
+  const showTransferDialog = ref(false);
+  const transferFolderId = ref('');
   const entryToDelete = ref<CollectionRow | null>(null);
   const showManualCardDialog = ref(false);
   const showEditDialog = ref(false);
@@ -218,6 +289,7 @@
     label: candidate.name,
     value: candidate.id
   })));
+  const destinationOptions = computed(() => folderOptions.value.filter((option) => option.value !== folderId.value));
   const languageNames = new Map(getLanguages().map((language) => [language.id, language.name]));
   const pokemon = getPokemon();
   const pokedexByPokemonId = new Map(pokemon.map((entry) => [entry.id, entry.pokedex_id]));
@@ -358,6 +430,49 @@
 
   const cardCount = computed(() => collectionRows.value.reduce((total, row) => total + row.entry.quantity, 0));
   const folderValue = computed(() => collectionRows.value.reduce((total, row) => total + row.totalValue, 0));
+  const displayedEntryIds = computed(() => displayedRows.value.map((row) => row.entry.id));
+  const allDisplayedSelected = computed(() =>
+    displayedEntryIds.value.length > 0
+    && displayedEntryIds.value.every((entryId) => selectedEntryIds.value.has(entryId))
+  );
+  const someDisplayedSelected = computed(() =>
+    displayedEntryIds.value.some((entryId) => selectedEntryIds.value.has(entryId))
+  );
+
+  const toggleSelectionMode = (): void => {
+    selectionMode.value = !selectionMode.value;
+    if (!selectionMode.value) selectedEntryIds.value = new Set();
+  };
+
+  const toggleEntrySelection = (entry: CollectionEntry): void => {
+    const next = new Set(selectedEntryIds.value);
+    next.has(entry.id) ? next.delete(entry.id) : next.add(entry.id);
+    selectedEntryIds.value = next;
+  };
+
+  const toggleSelectAllDisplayed = (): void => {
+    const next = new Set(selectedEntryIds.value);
+    if (allDisplayedSelected.value) {
+      displayedEntryIds.value.forEach((entryId) => next.delete(entryId));
+    } else {
+      displayedEntryIds.value.forEach((entryId) => next.add(entryId));
+    }
+    selectedEntryIds.value = next;
+  };
+
+  const openTransferDialog = (): void => {
+    transferFolderId.value = destinationOptions.value[0]?.value ?? '';
+    showTransferDialog.value = true;
+  };
+
+  const confirmBulkTransfer = (): void => {
+    if (!transferFolderId.value) return;
+    collectionStore.transferEntries([...selectedEntryIds.value], transferFolderId.value);
+    selectedEntryIds.value = new Set();
+    selectionMode.value = false;
+    showTransferDialog.value = false;
+    transferFolderId.value = '';
+  };
 
   const openEditEntry = (row: CollectionRow): void => {
     editingEntry.value = row;

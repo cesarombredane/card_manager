@@ -1,5 +1,20 @@
 <template>
-  <q-card flat bordered class="bg-grey-10 text-white no-wrap cursor-pointer q-pa-none" @click="$emit('click', card)">
+  <q-card
+    flat
+    bordered
+    class="bg-grey-10 text-white no-wrap cursor-pointer q-pa-none relative-position"
+    :class="{ 'selected-card': selected }"
+    @click="selectable && collectionEntry ? $emit('toggle-selection', collectionEntry) : $emit('click', card)"
+  >
+    <q-checkbox
+      v-if="selectable && collectionEntry"
+      :model-value="selected"
+      class="selection-checkbox absolute-top-left q-ma-xs"
+      color="primary"
+      dark
+      @click.stop
+      @update:model-value="$emit('toggle-selection', collectionEntry)"
+    />
     <q-responsive :ratio="cardImageRatio" class="bg-grey-9 relative-position">
       <q-img v-if="card.image_url" :src="card.image_url" fit="contain" class="full-height">
         <template #error>
@@ -62,7 +77,7 @@
           {{ energy }}
         </q-badge>
       </div>
-      <div class="row items-center no-wrap q-mt-xs">
+      <div v-if="!selectable" class="row items-center no-wrap q-mt-xs">
         <template v-if="collectionEntry">
           <q-btn
             class="col"
@@ -113,12 +128,21 @@
   import { collectionStore } from '../utils/collection';
   import type { CollectionEntry } from '../utils/collection';
 
-  const props = defineProps<{ card: DisplayCard; collectionEntry?: CollectionEntry }>();
+  const props = withDefaults(defineProps<{
+    card: DisplayCard;
+    collectionEntry?: CollectionEntry;
+    selectable?: boolean;
+    selected?: boolean;
+  }>(), {
+    selectable: false,
+    selected: false
+  });
   defineEmits<{
     click: [card: DisplayCard];
     'add-to-collection': [card: DisplayCard];
     'edit-entry': [entry: CollectionEntry];
     'delete-entry': [entry: CollectionEntry];
+    'toggle-selection': [entry: CollectionEntry];
   }>();
 
   const displayPrice = computed<number | null>(() =>
@@ -134,6 +158,17 @@
 </script>
 
 <style scoped>
+  .selection-checkbox {
+    z-index: 3;
+    border-radius: 50%;
+    background: rgb(20 20 20 / 80%);
+  }
+
+  .selected-card {
+    outline: 2px solid var(--q-primary);
+    outline-offset: -2px;
+  }
+
   .fallback-language-overlay {
     position: absolute;
     z-index: 2;
