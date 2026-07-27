@@ -17,10 +17,13 @@ import CollectionBinderPage from '../views/CollectionBinderPage.vue';
 export const router = createRouter({
   history: createWebHistory(),
   scrollBehavior(to, _from, savedPosition) {
+    // History navigation should restore the position captured before leaving.
+    if (savedPosition) return savedPosition;
+
     // A set is an entry page: always show its heading and filters first.
     if (to.name === 'set-detail') return { top: 0, left: 0 };
 
-    return savedPosition ?? { top: 0, left: 0 };
+    return { top: 0, left: 0 };
   },
   routes: [
     {

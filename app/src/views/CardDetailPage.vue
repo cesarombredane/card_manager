@@ -501,7 +501,15 @@
 
   // Navigates back to the current set detail page.
   const goBackToSet = (): void => {
-    router.push(`/set/${setId}`);
+    const setPath = `/set/${setId}`;
+
+    // Preserve the set page's scroll position when this card was opened from it.
+    if (window.history.state?.back === setPath) {
+      router.back();
+      return;
+    }
+
+    router.push(setPath);
   };
 </script>
 

@@ -13,12 +13,25 @@
     </section>
 
     <section v-if="folder" class="row q-col-gutter-md items-center q-mb-md">
-      <div class="col-12 col-sm-6 col-md-4">
+      <div class="col-12 col-sm-6 col-md-3">
         <q-input v-model="search" dark dense outlined clearable debounce="150" label="Search cards by name">
           <template #prepend><q-icon name="search" /></template>
         </q-input>
       </div>
-      <div class="col-12 col-sm-6 col-md-4">
+      <div class="col-12 col-sm-6 col-md-3">
+        <q-select
+          v-model="selectedLanguageId"
+          :options="languageOptions"
+          emit-value
+          map-options
+          dark
+          dense
+          outlined
+          clearable
+          label="Language"
+        />
+      </div>
+      <div class="col-12 col-sm-6 col-md-3">
         <card-sort-selector v-model="selectedSort" />
       </div>
       <div class="col-12 col-md-auto">
@@ -45,7 +58,7 @@
     </q-banner>
 
     <q-banner v-else-if="displayedRows.length === 0" class="bg-grey-10 text-grey-4">
-      No card matches this search.
+      No card matches these filters.
     </q-banner>
 
     <card-list
@@ -170,6 +183,7 @@
   const route = useRoute();
   const router = useRouter();
   const search = ref('');
+  const selectedLanguageId = ref<string | null>(null);
   const selectedSort = ref<CardSort>('release-desc');
   const entryToDelete = ref<CollectionRow | null>(null);
   const showManualCardDialog = ref(false);
@@ -299,10 +313,18 @@
       }];
     }));
 
+  const languageOptions = computed(() => [...new Set(collectionRows.value.map((row) => row.entry.language_id))]
+    .map((languageId) => ({
+      label: languageNames.get(languageId) ?? languageId.toUpperCase(),
+      value: languageId
+    }))
+    .sort((left, right) => left.label.localeCompare(right.label)));
+
   const displayedRows = computed<CollectionRow[]>(() => {
     const query = search.value.trim().toLocaleLowerCase();
     return collectionRows.value
       .filter((row) => query === '' || row.card.display_name.toLocaleLowerCase().includes(query))
+      .filter((row) => !selectedLanguageId.value || row.entry.language_id === selectedLanguageId.value)
       .sort((left, right) => {
         if (selectedSort.value === 'price-asc' || selectedSort.value === 'price-desc') {
           if (left.unitPrice === null && right.unitPrice !== null) return 1;
