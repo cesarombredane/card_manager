@@ -59,6 +59,18 @@
           :to="`/collection/folder/${folderId}/binder`"
         />
       </div>
+      <div v-if="collectionTab === 'wanted'" class="col-12 col-md-auto">
+        <q-btn
+          outline
+          color="grey-3"
+          icon="picture_as_pdf"
+          label="Print placeholder"
+          no-caps
+          :loading="generatingPlaceholders"
+          :disable="wantedRows.length === 0"
+          @click="printWantedPlaceholders"
+        />
+      </div>
       <div class="col-12 col-md-auto">
         <q-btn
           :outline="!selectionMode"
@@ -70,6 +82,10 @@
         />
       </div>
     </section>
+
+    <q-banner v-if="placeholderError" class="bg-red-10 text-negative q-mb-md rounded-borders">
+      {{ placeholderError }}
+    </q-banner>
 
     <section v-if="folder && selectionMode" class="row items-center q-gutter-sm q-mb-md">
       <q-checkbox
@@ -260,6 +276,7 @@
   import { formatFrenchDate, parseFrenchDate } from '../utils/dates';
   import { binderStore } from '../utils/binders';
   import type { CardSort } from '../utils/cardSorting';
+  import { downloadWantedPlaceholdersPdf } from '../utils/wantedPlaceholdersPdf';
 
   type CollectionRow = {
     entry: CollectionEntry;
@@ -304,6 +321,8 @@
   const editManualImageDataUrl = ref<string | null>(null);
   const editManualImagePreview = ref<string | null>(null);
   const editSaveError = ref<string | null>(null);
+  const generatingPlaceholders = ref(false);
+  const placeholderError = ref<string | null>(null);
   const folderId = computed(() => String(route.params.folderId ?? ''));
   const folder = computed<CollectionFolder | null>(() =>
     collectionStore.folders.value.find((candidate) => candidate.id === folderId.value) ?? null
@@ -411,6 +430,7 @@
   const activeRows = computed<CollectionRow[]>(() =>
     collectionRows.value.filter((row) => row.entry.wanted === (collectionTab.value === 'wanted'))
   );
+  const wantedRows = computed<CollectionRow[]>(() => collectionRows.value.filter((row) => row.entry.wanted));
 
   const languageOptions = computed(() => [...new Set(activeRows.value.map((row) => row.entry.language_id))]
     .map((languageId) => ({
@@ -637,5 +657,21 @@
   const confirmRemoveEntry = (): void => {
     if (entryToDelete.value) collectionStore.removeEntry(entryToDelete.value.entry.id);
     entryToDelete.value = null;
+  };
+
+  const printWantedPlaceholders = async (): Promise<void> => {
+    if (!folder.value || wantedRows.value.length === 0) return;
+    generatingPlaceholders.value = true;
+    placeholderError.value = null;
+    try {
+      await downloadWantedPlaceholdersPdf(
+        folder.value.name,
+        wantedRows.value.map((row) => ({ card: row.card, quantity: row.entry.quantity }))
+      );
+    } catch (error) {
+      placeholderError.value = error instanceof Error ? error.message : String(error);
+    } finally {
+      generatingPlaceholders.value = false;
+    }
   };
 </script>
