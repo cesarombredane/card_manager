@@ -138,6 +138,17 @@
                     @click="binderStore.setSlot(folderId, slot.index, null)">
                     <q-tooltip>Remove from binder</q-tooltip>
                   </q-btn>
+                  <q-btn
+                    v-if="slot.content.wanted && slot.content.entryId"
+                    class="slot-got-it absolute-bottom q-ma-sm"
+                    color="primary"
+                    text-color="black"
+                    icon="check_circle"
+                    label="Got it"
+                    no-caps
+                    dense
+                    @click.stop="openGotIt(slot.index, slot.content.entryId)"
+                  />
                 </template>
                 <div v-else-if="!slot.hasDecoration" class="full-height column items-center justify-center text-grey-6">
                   <q-icon name="add" size="24px" />
@@ -239,6 +250,30 @@
         </q-card-actions>
       </q-card>
     </q-dialog>
+
+    <q-dialog :model-value="gotItTarget !== null" @update:model-value="value => { if (!value) gotItTarget = null; }">
+      <q-card class="bg-grey-10 text-white" style="width: 420px; max-width: 90vw">
+        <q-card-section>
+          <div class="text-h6">Mark card as owned</div>
+          <div class="text-body2 text-grey-4">{{ gotItCardName }}</div>
+        </q-card-section>
+        <q-card-section>
+          <q-select
+            v-model="gotItCondition"
+            :options="conditionOptions"
+            emit-value
+            map-options
+            dark
+            outlined
+            label="Condition"
+          />
+        </q-card-section>
+        <q-card-actions align="right">
+          <q-btn flat color="grey-4" label="Cancel" @click="gotItTarget = null" />
+          <q-btn color="primary" text-color="black" label="OK" @click="confirmGotIt" />
+        </q-card-actions>
+      </q-card>
+    </q-dialog>
   </q-page>
 </template>
 
@@ -247,8 +282,8 @@
   import { useRoute } from 'vue-router';
   import { binderSlotsPerPage, binderStore } from '../utils/binders';
   import type { BinderLayout, BinderProxy } from '../utils/binders';
-  import { collectionStore } from '../utils/collection';
-  import type { CollectionEntry } from '../utils/collection';
+  import { cardConditions, collectionStore } from '../utils/collection';
+  import type { CardCondition, CollectionEntry } from '../utils/collection';
   import { buildDisplayCard } from '../utils/cardDisplay';
   import type { DisplayCard } from '../utils/cardDisplay';
   import { getCardById, getPokemon, getSetById } from '../utils/dataManagement';
@@ -294,10 +329,13 @@
   const assetPreview = ref<string | null>(null);
   const assetError = ref<string | null>(null);
   const assetSaving = ref(false);
+  const gotItTarget = ref<{ slotIndex: number; entryId: string } | null>(null);
+  const gotItCondition = ref<CardCondition>('NM');
   const layoutOptions = [
     { label: '2 × 2 — 4 cards per page', value: '2x2' },
     { label: '3 × 3 — 9 cards per page', value: '3x3' }
   ];
+  const conditionOptions = cardConditions.map((condition) => ({ ...condition }));
   const pokemon = getPokemon();
   const pokedexByPokemonId = new Map(pokemon.map((entry) => [entry.id, entry.pokedex_id]));
   const pokedexByPokemonName = new Map(pokemon.flatMap((entry) =>
@@ -436,15 +474,24 @@
     const asset = manualImageStore.find('binder-assets', folderId.value, assetId, kind);
     return asset ? `${asset.url}?v=${encodeURIComponent(asset.updated_at)}` : '';
   };
-  const slotContent = (slotValue: string | null): { name: string; imageUrl: string | null; wanted: boolean; } | null => {
+  const slotContent = (slotValue: string | null): {
+    name: string;
+    imageUrl: string | null;
+    wanted: boolean;
+    entryId: string | null;
+  } | null => {
     if (!slotValue) return null;
     if (slotValue.startsWith('proxy:')) {
       const proxyId = slotValue.slice(6);
       const proxy = binder.value?.proxies.find((candidate) => candidate.id === proxyId);
-      return proxy ? { name: proxy.name, imageUrl: binderAssetUrl(proxy.id, 'proxy'), wanted: false } : null;
+      return proxy
+        ? { name: proxy.name, imageUrl: binderAssetUrl(proxy.id, 'proxy'), wanted: false, entryId: null }
+        : null;
     }
     const row = rows.value.find((candidate) => candidate.entry.id === slotValue);
-    return row ? { name: row.card.display_name, imageUrl: row.card.image_url, wanted: row.entry.wanted } : null;
+    return row
+      ? { name: row.card.display_name, imageUrl: row.card.image_url, wanted: row.entry.wanted, entryId: row.entry.id }
+      : null;
   };
   const slotsForSide = (sideIndex: number) => {
     if (!binder.value) return [];
@@ -650,6 +697,21 @@
       );
     }
   };
+
+  const openGotIt = (slotIndex: number, entryId: string): void => {
+    gotItCondition.value = 'NM';
+    gotItTarget.value = { slotIndex, entryId };
+  };
+  const gotItCardName = computed(() => {
+    const entryId = gotItTarget.value?.entryId;
+    return entryId ? rows.value.find((row) => row.entry.id === entryId)?.card.display_name ?? '' : '';
+  });
+  const confirmGotIt = (): void => {
+    if (!gotItTarget.value) return;
+    const ownedEntry = collectionStore.fulfillWanted(gotItTarget.value.entryId, gotItCondition.value);
+    if (ownedEntry) binderStore.setSlot(folderId.value, gotItTarget.value.slotIndex, ownedEntry.id);
+    gotItTarget.value = null;
+  };
 </script>
 
 <style scoped>
@@ -740,8 +802,23 @@
     transition: opacity 120ms ease;
   }
 
+  .slot-got-it {
+    right: auto;
+    bottom: 8px;
+    left: 50%;
+    z-index: 3;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: opacity 120ms ease;
+  }
+
   .binder-slot:hover .slot-remove,
   .binder-slot:focus-within .slot-remove {
+    opacity: 1;
+  }
+
+  .binder-slot:hover .slot-got-it,
+  .binder-slot:focus-within .slot-got-it {
     opacity: 1;
   }
 
@@ -751,6 +828,10 @@
 
   @media (hover: none) {
     .slot-remove {
+      opacity: 1;
+    }
+
+    .slot-got-it {
       opacity: 1;
     }
   }

@@ -240,6 +240,45 @@ export const collectionStore = {
     persist();
   },
 
+  fulfillWanted(entryId: string, condition: CardCondition): CollectionEntry | null {
+    const wantedEntry = state.entries.find((entry) => entry.id === entryId && entry.wanted);
+    if (!wantedEntry) return null;
+    const now = new Date().toISOString();
+    let ownedEntry = state.entries.find((entry) =>
+      !entry.wanted
+      && entry.folder_id === wantedEntry.folder_id
+      && entry.set_id === wantedEntry.set_id
+      && entry.card_id === wantedEntry.card_id
+      && entry.variant_id === wantedEntry.variant_id
+      && entry.language_id === wantedEntry.language_id
+      && entry.condition === condition
+    );
+    if (ownedEntry) {
+      ownedEntry.quantity += 1;
+      ownedEntry.updated_at = now;
+    } else {
+      ownedEntry = {
+        ...wantedEntry,
+        id: newId('entry'),
+        condition,
+        quantity: 1,
+        wanted: false,
+        added_at: now,
+        updated_at: now
+      };
+      state.entries.push(ownedEntry);
+    }
+
+    if (wantedEntry.quantity > 1) {
+      wantedEntry.quantity -= 1;
+      wantedEntry.updated_at = now;
+    } else {
+      state.entries.splice(state.entries.indexOf(wantedEntry), 1);
+    }
+    persist();
+    return ownedEntry;
+  },
+
   createManualCard(input: {
     folder_id: string;
     name: string;
