@@ -1,8 +1,9 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import { quasar, transformAssetUrls } from '@quasar/vite-plugin';
-import { mkdir, readFile, rename, unlink, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, rename, rm, unlink, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
+import AdmZip from 'adm-zip';
 
 const collectionPath = resolve(__dirname, 'data/collection.json');
 const emptyCollection = {
@@ -50,6 +51,24 @@ const readRequestBody = (
     }
   });
   req.on('end', () => resolveBody(body));
+  req.on('error', reject);
+});
+const readBinaryRequest = (
+  req: import('node:http').IncomingMessage,
+  maximumBytes: number
+): Promise<Buffer> => new Promise((resolveBody, reject) => {
+  const chunks: Buffer[] = [];
+  let size = 0;
+  req.on('data', (chunk: Buffer) => {
+    size += chunk.length;
+    if (size > maximumBytes) {
+      reject(new Error('Backup archive is too large'));
+      req.destroy();
+      return;
+    }
+    chunks.push(chunk);
+  });
+  req.on('end', () => resolveBody(Buffer.concat(chunks)));
   req.on('error', reject);
 });
 const readManualImages = async (): Promise<ManualImagesData> => {
@@ -184,6 +203,127 @@ const bindersApi = () => {
   };
 };
 
+const personalDataApi = () => {
+  const middleware = (req: import('node:http').IncomingMessage, res: import('node:http').ServerResponse, next: () => void): void => {
+    if (req.url === '/api/personal-data/export' && req.method === 'GET') {
+      Promise.all([
+        readFile(collectionPath).catch(() => Buffer.from(`${JSON.stringify(emptyCollection, null, 2)}\n`)),
+        readFile(bindersPath).catch(() => Buffer.from(`${JSON.stringify(emptyBinders, null, 2)}\n`)),
+        readFile(manualImagesPath).catch(() => Buffer.from(`${JSON.stringify(emptyManualImages, null, 2)}\n`))
+      ]).then(async ([collection, binders, manualImages]) => {
+        const archive = new AdmZip();
+        archive.addFile('manifest.json', Buffer.from(`${JSON.stringify({
+          format: 'card-manager-personal-data',
+          version: 1,
+          exported_at: new Date().toISOString()
+        }, null, 2)}\n`));
+        archive.addFile('data/collection.json', collection);
+        archive.addFile('data/binders.json', binders);
+        archive.addFile('data/manual-images.json', manualImages);
+        await mkdir(manualImagesRoot, { recursive: true });
+        archive.addLocalFolder(manualImagesRoot, 'images/manual', (filename) => !filename.startsWith('.'));
+        const contents = archive.toBuffer();
+        const date = new Date().toISOString().slice(0, 10);
+        res.statusCode = 200;
+        res.setHeader('Content-Type', 'application/zip');
+        res.setHeader('Content-Disposition', `attachment; filename="card-manager-backup-${date}.zip"`);
+        res.setHeader('Content-Length', String(contents.length));
+        res.end(contents);
+      }).catch((error: unknown) => {
+        res.statusCode = 500;
+        res.setHeader('Content-Type', 'application/json; charset=utf-8');
+        res.end(JSON.stringify({ error: error instanceof Error ? error.message : String(error) }));
+      });
+      return;
+    }
+
+    if (req.url === '/api/personal-data/import' && req.method === 'POST') {
+      readBinaryRequest(req, 300_000_000).then(async (contents) => {
+        const archive = new AdmZip(contents);
+        const entries = archive.getEntries();
+        for (const entry of entries) {
+          const parts = entry.entryName.replaceAll('\\', '/').split('/');
+          if (entry.entryName.startsWith('/') || parts.includes('..')) throw new Error('Backup contains an unsafe path');
+        }
+        const requiredFile = (name: string): Buffer => {
+          const entry = archive.getEntry(name);
+          if (!entry || entry.isDirectory) throw new Error(`Backup is missing ${name}`);
+          return entry.getData();
+        };
+        const manifest = JSON.parse(requiredFile('manifest.json').toString('utf-8')) as Record<string, unknown>;
+        if (manifest.format !== 'card-manager-personal-data' || manifest.version !== 1) {
+          throw new Error('This is not a supported Card Manager backup');
+        }
+        const collection = JSON.parse(requiredFile('data/collection.json').toString('utf-8')) as Record<string, unknown>;
+        const binders = JSON.parse(requiredFile('data/binders.json').toString('utf-8')) as Record<string, unknown>;
+        const manualImages = JSON.parse(requiredFile('data/manual-images.json').toString('utf-8')) as Record<string, unknown>;
+        if (!Array.isArray(collection.folders) || !Array.isArray(collection.entries) || !Array.isArray(collection.manual_cards)) {
+          throw new Error('Backup contains invalid collection data');
+        }
+        if (!Array.isArray(binders.binders)) throw new Error('Backup contains invalid binder data');
+        if (!Array.isArray(manualImages.entries)) throw new Error('Backup contains invalid manual image data');
+
+        const importId = Date.now().toString(36);
+        const stagedImages = resolve(__dirname, `public/images/manual.import-${importId}`);
+        const backupImages = resolve(__dirname, `public/images/manual.backup-${importId}`);
+        await mkdir(stagedImages, { recursive: true });
+        for (const entry of entries) {
+          if (entry.isDirectory || !entry.entryName.startsWith('images/manual/')) continue;
+          const relative = entry.entryName.slice('images/manual/'.length);
+          if (!relative) continue;
+          const destination = resolve(stagedImages, relative);
+          if (!destination.startsWith(`${stagedImages}/`)) throw new Error('Backup contains an unsafe image path');
+          await mkdir(dirname(destination), { recursive: true });
+          await writeFile(destination, entry.getData());
+        }
+
+        let previousImagesMoved = false;
+        try {
+          await rename(manualImagesRoot, backupImages);
+          previousImagesMoved = true;
+        } catch (error) {
+          if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error;
+        }
+        try {
+          await rename(stagedImages, manualImagesRoot);
+          const writes: Array<[string, Record<string, unknown>]> = [
+            [collectionPath, collection],
+            [bindersPath, binders],
+            [manualImagesPath, manualImages]
+          ];
+          for (const [path, data] of writes) {
+            const temporary = `${path}.import.tmp`;
+            await writeFile(temporary, `${JSON.stringify(data, null, 2)}\n`, 'utf-8');
+            await rename(temporary, path);
+          }
+          if (previousImagesMoved) await rm(backupImages, { recursive: true, force: true });
+        } catch (error) {
+          await rm(manualImagesRoot, { recursive: true, force: true });
+          if (previousImagesMoved) await rename(backupImages, manualImagesRoot);
+          throw error;
+        }
+        res.setHeader('Content-Type', 'application/json; charset=utf-8');
+        res.end(JSON.stringify({ ok: true }));
+      }).catch((error: unknown) => {
+        res.statusCode = 400;
+        res.setHeader('Content-Type', 'application/json; charset=utf-8');
+        res.end(JSON.stringify({ error: error instanceof Error ? error.message : String(error) }));
+      });
+      return;
+    }
+    next();
+  };
+  return {
+    name: 'personal-data-backup-api',
+    configureServer(server: { middlewares: { use: (handler: typeof middleware) => void } }) {
+      server.middlewares.use(middleware);
+    },
+    configurePreviewServer(server: { middlewares: { use: (handler: typeof middleware) => void } }) {
+      server.middlewares.use(middleware);
+    }
+  };
+};
+
 const manualImagesApi = () => {
   const middleware = (req: import('node:http').IncomingMessage, res: import('node:http').ServerResponse, next: () => void): void => {
     if (req.url !== '/api/manual-images') {
@@ -295,6 +435,7 @@ export default defineConfig({
     quasar(),
     collectionApi(),
     bindersApi(),
+    personalDataApi(),
     manualImagesApi()
   ],
   server: {

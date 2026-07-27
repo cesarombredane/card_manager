@@ -10,6 +10,25 @@
       </div>
       <div class="col-auto row q-gutter-sm">
         <q-btn
+          flat
+          color="grey-3"
+          icon="download"
+          label="Export"
+          no-caps
+          :loading="exporting"
+          @click="exportPersonalData"
+        />
+        <q-btn
+          flat
+          color="grey-3"
+          icon="upload"
+          label="Import"
+          no-caps
+          :disable="importing"
+          @click="importFileInput?.click()"
+        />
+        <input ref="importFileInput" type="file" accept=".zip,application/zip" hidden @change="selectImportFile" />
+        <q-btn
           outline
           color="primary"
           icon="add_photo_alternate"
@@ -122,6 +141,30 @@
         </q-card-actions>
       </q-card>
     </q-dialog>
+
+    <q-dialog :model-value="importFile !== null" persistent>
+      <q-card class="bg-grey-10 text-white" style="width: 520px; max-width: 90vw">
+        <q-card-section>
+          <div class="text-h6">Import personal data?</div>
+          <div class="text-body2 text-grey-4 q-mt-sm">{{ importFile?.name }}</div>
+        </q-card-section>
+        <q-card-section>
+          <q-banner class="bg-red-10 text-white rounded-borders">
+            <template #avatar><q-icon name="warning" color="white" /></template>
+            This will permanently replace every collection, binder, manual card, proxy, decorative image, and personal card image currently stored in Card Manager.
+          </q-banner>
+          <div v-if="backupError" class="text-negative q-mt-md">{{ backupError }}</div>
+        </q-card-section>
+        <q-card-actions align="right">
+          <q-btn flat color="grey-4" label="Cancel" :disable="importing" @click="cancelImport" />
+          <q-btn color="negative" label="Overwrite and import" :loading="importing" @click="importPersonalData" />
+        </q-card-actions>
+      </q-card>
+    </q-dialog>
+
+    <q-banner v-if="backupError && !importFile" class="bg-red-10 text-white q-mt-lg rounded-borders">
+      {{ backupError }}
+    </q-banner>
   </q-page>
 </template>
 
@@ -139,6 +182,11 @@
   const editingFolder = ref<CollectionFolder | null>(null);
   const folderToDelete = ref<CollectionFolder | null>(null);
   const folderName = ref('');
+  const importFileInput = ref<HTMLInputElement | null>(null);
+  const importFile = ref<File | null>(null);
+  const importing = ref(false);
+  const exporting = ref(false);
+  const backupError = ref<string | null>(null);
 
   const entryValue = (setId: string, cardId: string, variantId: string): number => {
     if (setId === 'manual-collection') {
@@ -189,5 +237,66 @@
       collectionStore.deleteFolder(folderToDelete.value.id);
     }
     folderToDelete.value = null;
+  };
+
+  const responseError = async (response: Response, fallback: string): Promise<string> => {
+    try {
+      const body = await response.json() as { error?: string };
+      return body.error ?? fallback;
+    } catch {
+      return fallback;
+    }
+  };
+
+  const exportPersonalData = async (): Promise<void> => {
+    exporting.value = true;
+    backupError.value = null;
+    try {
+      const response = await fetch('/api/personal-data/export');
+      if (!response.ok) throw new Error(await responseError(response, 'Unable to export personal data'));
+      const blob = await response.blob();
+      const contentDisposition = response.headers.get('Content-Disposition') ?? '';
+      const filename = /filename="([^"]+)"/.exec(contentDisposition)?.[1] ?? 'card-manager-backup.zip';
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = filename;
+      link.click();
+      URL.revokeObjectURL(url);
+    } catch (error) {
+      backupError.value = error instanceof Error ? error.message : String(error);
+    } finally {
+      exporting.value = false;
+    }
+  };
+
+  const selectImportFile = (event: Event): void => {
+    const input = event.target as HTMLInputElement;
+    importFile.value = input.files?.[0] ?? null;
+    backupError.value = null;
+  };
+
+  const cancelImport = (): void => {
+    importFile.value = null;
+    if (importFileInput.value) importFileInput.value.value = '';
+    backupError.value = null;
+  };
+
+  const importPersonalData = async (): Promise<void> => {
+    if (!importFile.value) return;
+    importing.value = true;
+    backupError.value = null;
+    try {
+      const response = await fetch('/api/personal-data/import', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/zip' },
+        body: importFile.value
+      });
+      if (!response.ok) throw new Error(await responseError(response, 'Unable to import personal data'));
+      window.location.reload();
+    } catch (error) {
+      backupError.value = error instanceof Error ? error.message : String(error);
+      importing.value = false;
+    }
   };
 </script>
