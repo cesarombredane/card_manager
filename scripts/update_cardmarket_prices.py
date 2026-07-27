@@ -9,7 +9,7 @@ import sys
 from pathlib import Path
 from typing import Any
 
-from cardmarket_prices import download_price_guide, index_price_guide, normalized_price
+from cardmarket_prices import download_price_guide, index_price_guide, normalized_price, product_url
 
 
 def write_json_atomic(path: Path, value: Any) -> None:
@@ -54,7 +54,7 @@ def main() -> int:
                     row,
                     updated_at,
                     use_holo_fields=existing.get("price_kind") == "holo",
-                    url=existing.get("url"),
+                    url=product_url(product_id),
                 )
                 variants_priced += 1
                 if existing != refreshed:

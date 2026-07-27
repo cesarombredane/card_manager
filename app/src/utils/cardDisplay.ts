@@ -41,7 +41,9 @@ export type DisplayCard = {
 export const formatCardValue = (value: string): string => value.replaceAll('_', ' ');
 
 export const cardmarketDisplayPrice = (price: CardmarketPrice | null | undefined): number | null => {
-  return price?.trend ?? price?.average ?? price?.low ?? null;
+  if (!price) return null;
+  return [price.trend, price.average, price.low]
+    .find((value): value is number => typeof value === 'number' && value > 0) ?? null;
 };
 
 export const formatEuroPrice = (value: number): string => {

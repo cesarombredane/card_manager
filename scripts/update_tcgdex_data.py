@@ -527,9 +527,6 @@ def variant_identifier(variant: Any) -> str:
 def normalize_variants(
     card: dict[str, Any],
     language_ids: list[str],
-    card_number: str,
-    set_name: str,
-    set_abbreviation: str,
     cardmarket_updated_at: str,
     cardmarket_prices: dict[int, dict[str, Any]],
 ) -> list[dict[str, Any]]:
@@ -577,12 +574,7 @@ def normalize_variants(
         if isinstance(product_id, int):
             price_row = cardmarket_prices.get(product_id)
             use_holo_fields = variant_market_id is None and variant_type in {"holo", "reverse_holo"}
-            market_number = f"{set_abbreviation}{card_number}" if set_abbreviation and card_number.isdigit() else card_number
-            market_url = product_url(
-                set_name,
-                str((card.get("name") or {}).get("en") or first_localized_value(card.get("name")) or card_number),
-                market_number,
-            )
+            market_url = product_url(product_id)
             normalized["cardmarket"] = (
                 normalized_price(
                     product_id,
@@ -626,8 +618,6 @@ def normalize_card(
     language_ids: list[str],
     pokemon_aliases: dict[tuple[int, str, str], str],
     pokemon_name_aliases: dict[tuple[str, str], set[str]],
-    set_name: str,
-    set_abbreviation: str,
     cardmarket_updated_at: str,
     cardmarket_prices: dict[int, dict[str, Any]],
 ) -> dict[str, Any]:
@@ -675,9 +665,6 @@ def normalize_card(
         "variants": normalize_variants(
             raw_card,
             language_ids,
-            number,
-            set_name,
-            set_abbreviation,
             cardmarket_updated_at,
             cardmarket_prices,
         ),
@@ -1112,9 +1099,6 @@ def convert_source_folder(
             language_ids_seen.update(language_ids)
 
             cards = []
-            cardmarket_set_name = str(localized_names.get("en") or first_localized_value(raw_set.get("name")) or set_file.stem)
-            abbreviations = raw_set.get("abbreviations") or {}
-            cardmarket_set_abbreviation = str(abbreviations.get("official") or "")
             for card_file in sorted(set_folder.glob("*.ts"), key=lambda path: path.stem):
                 card = normalize_card(
                     card_file,
@@ -1122,8 +1106,6 @@ def convert_source_folder(
                     language_ids,
                     pokemon_aliases,
                     pokemon_name_aliases,
-                    cardmarket_set_name,
-                    cardmarket_set_abbreviation,
                     cardmarket_updated_at,
                     cardmarket_prices,
                 )

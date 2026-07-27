@@ -13,37 +13,12 @@
     </section>
 
     <section class="row q-col-gutter-md items-center q-mb-md">
-      <div v-if="internationalLanguageIds.length" class="col-auto">
-        <div class="text-caption text-grey-5 q-mb-xs">International card language</div>
-        <language-selector v-model="selectedInternationalLanguageId" :language-ids="internationalLanguageIds" />
-      </div>
-      <div v-if="asiaLanguageIds.length" class="col-auto">
-        <div class="text-caption text-grey-5 q-mb-xs">Asian card language</div>
-        <language-selector v-model="selectedAsiaLanguageId" :language-ids="asiaLanguageIds" />
-      </div>
-      <div class="col-auto">
+      <div class="col-12 col-sm-6 col-md-4">
         <q-input v-model="search" dark dense outlined clearable debounce="150" label="Search a card by name">
           <template #prepend>
             <q-icon name="search" />
           </template>
         </q-input>
-      </div>
-    </section>
-
-    <section class="row q-col-gutter-md items-center q-mb-md">
-      <div class="col-12 col-sm-6 col-md-4">
-        <q-select
-          v-model="selectedArtist"
-          :options="filteredArtistOptions"
-          dark
-          dense
-          outlined
-          clearable
-          use-input
-          input-debounce="0"
-          label="Artist"
-          @filter="filterArtists"
-        />
       </div>
       <div class="col-12 col-sm-6 col-md-4">
         <div class="row no-wrap items-center q-gutter-xs">
@@ -90,40 +65,99 @@
           </q-btn>
         </div>
       </div>
-      <div class="col-12 col-sm-6 col-md-4">
-        <q-select
-          v-model="selectedRarities"
-          :display-value="raritySelectionLabel"
-          :options="rarityOptions"
-          dark
-          dense
-          outlined
-          multiple
-          options-selected-class="text-primary"
-          label="Rarities"
-        >
-          <template #append>
-            <q-btn
-              aria-label="Clear all rarities"
-              :disable="selectedRarities.length === 0"
-              dense
-              flat
-              round
-              icon="deselect"
-              @click.stop="clearRarities"
-            >
-              <q-tooltip>Clear all rarities</q-tooltip>
-            </q-btn>
-          </template>
-        </q-select>
-      </div>
-      <div class="col-12 col-sm-6 col-md-4">
-        <card-sort-selector v-model="selectedSort" />
-      </div>
       <div class="col-12 col-sm-auto">
         <q-checkbox v-model="includeSpecialForms" dark label="Include regional and Mega forms" />
       </div>
+      <div class="col-12 col-sm-auto">
+        <q-btn
+          :icon="advancedFiltersOpen ? 'expand_less' : 'tune'"
+          :label="advancedFiltersOpen ? 'Hide advanced filters' : 'Advanced filters'"
+          color="primary"
+          flat
+          @click="advancedFiltersOpen = !advancedFiltersOpen"
+        />
+      </div>
     </section>
+
+    <q-slide-transition>
+      <section v-show="advancedFiltersOpen" class="row q-col-gutter-md items-center q-mb-md">
+        <div class="col-12">
+          <div class="text-caption text-grey-5 q-mb-xs">Card region</div>
+          <q-btn-toggle
+            v-model="selectedRegion"
+            :options="regionOptions"
+            color="grey-9"
+            text-color="grey-4"
+            toggle-color="primary"
+            toggle-text-color="black"
+            unelevated
+          />
+        </div>
+        <div v-if="selectedRegion !== 'asia' && internationalLanguageIds.length" class="col-auto">
+          <div class="text-caption text-grey-5 q-mb-xs">International card language</div>
+          <language-selector v-model="selectedInternationalLanguageId" :language-ids="internationalLanguageIds" />
+        </div>
+        <div v-if="selectedRegion !== 'intl' && asiaLanguageIds.length" class="col-auto">
+          <div class="text-caption text-grey-5 q-mb-xs">Asian card language</div>
+          <language-selector v-model="selectedAsiaLanguageId" :language-ids="asiaLanguageIds" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-4">
+          <q-select
+            v-model="selectedArtist"
+            :options="filteredArtistOptions"
+            dark
+            dense
+            outlined
+            clearable
+            use-input
+            input-debounce="0"
+            label="Artist"
+            @filter="filterArtists"
+          />
+        </div>
+        <div class="col-12 col-sm-6 col-md-4">
+          <q-select
+            v-model="selectedRarities"
+            :display-value="raritySelectionLabel"
+            :options="rarityOptions"
+            dark
+            dense
+            outlined
+            multiple
+            options-selected-class="text-primary"
+            label="Rarities"
+          >
+            <template #append>
+              <q-btn
+                aria-label="Clear all rarities"
+                :disable="selectedRarities.length === 0"
+                dense
+                flat
+                round
+                icon="deselect"
+                @click.stop="clearRarities"
+              >
+                <q-tooltip>Clear all rarities</q-tooltip>
+              </q-btn>
+            </template>
+          </q-select>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4">
+          <q-select
+            v-model="selectedEnergy"
+            :options="energyOptions"
+            dark
+            dense
+            outlined
+            clearable
+            label="Pokémon energy"
+          />
+        </div>
+        <div class="col-12 col-sm-6 col-md-4">
+          <card-sort-selector v-model="selectedSort" />
+        </div>
+      </section>
+    </q-slide-transition>
 
     <q-separator class="q-mb-md" />
 
@@ -157,7 +191,7 @@
   import { localizedValue } from '../utils/localization';
   import type { Card, Pokemon, Set } from '../utils/types';
   import { uniqueValues } from '../utils/arrayUtils';
-  import type { AppState } from '../store';
+  import type { AppState, CardSearchFilters, CardSearchRegion } from '../store';
   import type { CardSort } from '../utils/cardSorting';
 
 
@@ -189,8 +223,18 @@
   // Every rarity represented in the local card catalog.
   const rarityOptions: string[] = uniqueValues(cards.map((card) => card.rarity));
 
+  // Region choices for the complete catalog, International sets, or Asian sets.
+  const regionOptions: { label: string; value: CardSearchRegion }[] = [
+    { label: 'Both', value: 'all' },
+    { label: 'International', value: 'intl' },
+    { label: 'Asia', value: 'asia' }
+  ];
+
   // Release dates indexed once for efficient card sorting.
   const setReleaseDates = new Map<string, string>(sets.map((set) => [set.id, set.release_date]));
+  const asiaSetIds = new globalThis.Set<string>(
+    sets.filter((set) => set.series_id.startsWith('asia-')).map((set) => set.id)
+  );
   const pokedexByPokemonId = new Map<string, number>(pokemon.map((entry) => [entry.id, entry.pokedex_id]));
 
 
@@ -203,33 +247,45 @@
 
 
   /* reactive vars */
+  const storedFilters: CardSearchFilters = store.state.card_search_filters;
+
   // Preferred language for localized International labels and scans.
   const selectedInternationalLanguageId = ref<string>(
-    sets.some((set) => !set.series_id.startsWith('asia-') && set.language_ids.includes(store.state.selected_language_id))
-      ? store.state.selected_language_id
-      : 'en'
+    storedFilters.international_language_id
+      ?? (sets.some((set) => !set.series_id.startsWith('asia-') && set.language_ids.includes(store.state.selected_language_id))
+        ? store.state.selected_language_id
+        : 'en')
   );
 
   // Preferred language for localized Asian labels and scans.
-  const selectedAsiaLanguageId = ref<string>('ja');
+  const selectedAsiaLanguageId = ref<string>(storedFilters.asia_language_id);
 
   // Search text used to filter card names.
-  const search = ref<string>('');
+  const search = ref<string>(storedFilters.search);
 
   // Selected artist filter.
-  const selectedArtist = ref<string | null>(queryValue('artist'));
+  const selectedArtist = ref<string | null>(queryValue('artist') ?? storedFilters.artist);
 
   // Selected Pokemon filter.
-  const selectedPokemon = ref<string | null>(queryValue('pokemon'));
+  const selectedPokemon = ref<string | null>(queryValue('pokemon') ?? storedFilters.pokemon);
+
+  // Selected energy/type filter for Pokemon cards.
+  const selectedEnergy = ref<string | null>(queryValue('energy') ?? storedFilters.energy);
 
   // Selected rarity filters. The complete catalog is visible by default.
-  const selectedRarities = ref<string[]>([...rarityOptions]);
+  const selectedRarities = ref<string[]>(storedFilters.rarities ? [...storedFilters.rarities] : [...rarityOptions]);
 
   // Current result ordering, newest releases first by default.
-  const selectedSort = ref<CardSort>('release-desc');
+  const selectedSort = ref<CardSort>(storedFilters.sort);
 
   // Whether regional and Mega forms are available in Pokemon results.
-  const includeSpecialForms = ref<boolean>(false);
+  const includeSpecialForms = ref<boolean>(storedFilters.include_special_forms);
+
+  // Catalog region currently included in results.
+  const selectedRegion = ref<CardSearchRegion>(storedFilters.region);
+
+  // Whether the secondary search controls are visible.
+  const advancedFiltersOpen = ref<boolean>(storedFilters.advanced_filters_open);
 
   // Artist options matching the text currently typed in the select.
   const filteredArtistOptions = ref<string[]>([]);
@@ -244,6 +300,13 @@
   /* computed vars */
   // Artist filter options found across every card.
   const artistOptions = computed<string[]>(() => uniqueValues(cards.map((card) => card.illustrator ?? '')));
+
+  // Energy/type options represented by Pokemon cards in the catalog.
+  const energyOptions: string[] = uniqueValues(
+    cards
+      .filter((card) => card.category === 'pokemon')
+      .flatMap((card) => card.types ?? [])
+  );
 
   // Pokemon filter options found across every card.
   // Base-species options display English canonical names while retaining stable ids.
@@ -301,9 +364,12 @@
     const query: string = search.value.trim().toLowerCase();
 
     return allCards.value
+      .filter((card) => selectedRegion.value === 'all'
+        || (selectedRegion.value === 'asia' ? asiaSetIds.has(card.set_id) : !asiaSetIds.has(card.set_id)))
       .filter((card) => query === '' || card.display_name.toLowerCase().includes(query))
       .filter((card) => !selectedArtist.value || card.illustrator === selectedArtist.value)
       .filter((card) => !selectedPokemon.value || card.pokemon_names.some((pokemonId) => selectedPokemonIds.value.has(pokemonId)))
+      .filter((card) => !selectedEnergy.value || card.types.includes(selectedEnergy.value))
       .filter((card) => selectedRarities.value.includes(card.rarity))
       .sort((a, b) => {
         if (selectedSort.value === 'pokedex-asc' || selectedSort.value === 'pokedex-desc') {
@@ -370,6 +436,7 @@
   watch(() => route.query, (): void => {
     selectedArtist.value = queryValue('artist');
     selectedPokemon.value = queryValue('pokemon');
+    selectedEnergy.value = queryValue('energy');
   });
 
   // Keeps each preference valid as result filters change the represented sets.
@@ -392,12 +459,43 @@
     selectedAsiaLanguageId,
     selectedArtist,
     selectedPokemon,
+    selectedEnergy,
     selectedRarities,
     selectedSort,
-    includeSpecialForms
+    includeSpecialForms,
+    selectedRegion
   ], (): void => {
     visibleCardCount.value = initialVisibleCardCount;
   });
+
+  // Keeps all search preferences available when navigating away and returning.
+  watch([
+    search,
+    selectedInternationalLanguageId,
+    selectedAsiaLanguageId,
+    selectedArtist,
+    selectedPokemon,
+    selectedEnergy,
+    selectedRarities,
+    selectedSort,
+    includeSpecialForms,
+    selectedRegion,
+    advancedFiltersOpen
+  ], (): void => {
+    store.commit('set_card_search_filters', {
+      search: search.value,
+      artist: selectedArtist.value,
+      pokemon: selectedPokemon.value,
+      energy: selectedEnergy.value,
+      rarities: [...selectedRarities.value],
+      sort: selectedSort.value,
+      include_special_forms: includeSpecialForms.value,
+      region: selectedRegion.value,
+      international_language_id: selectedInternationalLanguageId.value,
+      asia_language_id: selectedAsiaLanguageId.value,
+      advanced_filters_open: advancedFiltersOpen.value
+    } satisfies CardSearchFilters);
+  }, { deep: true, immediate: true });
 
 
   /* methods */

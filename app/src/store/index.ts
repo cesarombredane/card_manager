@@ -1,12 +1,29 @@
 // import vuex
 import { createStore } from 'vuex';
+import type { CardSort } from '../utils/cardSorting';
 
+export type CardSearchRegion = 'all' | 'intl' | 'asia';
+
+export type CardSearchFilters = {
+  search: string;
+  artist: string | null;
+  pokemon: string | null;
+  energy: string | null;
+  rarities: string[] | null;
+  sort: CardSort;
+  include_special_forms: boolean;
+  region: CardSearchRegion;
+  international_language_id: string | null;
+  asia_language_id: string;
+  advanced_filters_open: boolean;
+};
 
 // define the shape of the application state
 export type AppState = {
   selected_region_id: string;
   selected_language_id: string;
   last_collection_folder_id: string;
+  card_search_filters: CardSearchFilters;
 };
 
 
@@ -16,7 +33,20 @@ export const store = createStore<AppState>({
     return {
       selected_region_id: 'INTL',
       selected_language_id: 'fr',
-      last_collection_folder_id: 'main'
+      last_collection_folder_id: 'main',
+      card_search_filters: {
+        search: '',
+        artist: null,
+        pokemon: null,
+        energy: null,
+        rarities: null,
+        sort: 'release-desc',
+        include_special_forms: false,
+        region: 'all',
+        international_language_id: null,
+        asia_language_id: 'ja',
+        advanced_filters_open: false
+      }
     };
   },
   mutations: {
@@ -33,6 +63,11 @@ export const store = createStore<AppState>({
     // Store the folder used for the most recent card addition.
     set_last_collection_folder_id(state: AppState, folder_id: string) {
       state.last_collection_folder_id = folder_id;
+    },
+
+    // Preserve card-search preferences while navigating around the application.
+    set_card_search_filters(state: AppState, filters: CardSearchFilters) {
+      state.card_search_filters = filters;
     }
   },
   actions: {}

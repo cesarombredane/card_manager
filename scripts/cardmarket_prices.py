@@ -4,8 +4,6 @@
 from __future__ import annotations
 
 import json
-import re
-import unicodedata
 from pathlib import Path
 from typing import Any
 from urllib.request import Request, urlopen
@@ -33,17 +31,9 @@ HOLO_FIELDS = {
 }
 
 
-def cardmarket_slug(value: str) -> str:
-    """Convert an English Cardmarket expansion or product label to a URL slug."""
-    ascii_value = unicodedata.normalize("NFKD", value).encode("ascii", "ignore").decode("ascii")
-    return re.sub(r"[^A-Za-z0-9]+", "-", ascii_value).strip("-")
-
-
-def product_url(expansion_name: str, card_name: str, card_number: str) -> str:
-    """Return Cardmarket's public slug-based Pokémon singles URL."""
-    expansion = cardmarket_slug(expansion_name)
-    product = cardmarket_slug(f"{card_name}-{card_number}")
-    return f"https://www.cardmarket.com/en/Pokemon/Products/Singles/{expansion}/{product}"
+def product_url(product_id: int) -> str:
+    """Return Cardmarket's stable numeric product redirect URL."""
+    return f"https://www.cardmarket.com/en/Pokemon/Products?idProduct={product_id}"
 
 
 def download_price_guide(cache_path: Path | None = None) -> dict[str, Any]:
