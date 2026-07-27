@@ -54,7 +54,15 @@ python3 scripts/update_tcgdex_images.py
 
 The data updater excludes Pokémon TCG Pocket and filters the supported regions
 and languages. The image updater uses the generated catalog to cache newly
-available images and fill empty image references.
+available images and fill empty image references. To update only set logos and
+symbols, without checking or downloading card scans, run:
+
+```sh
+python3 scripts/update_tcgdex_images.py --set-only
+```
+
+When several localized set logos are available, the image updater selects
+English first, French second, then the first available remaining language.
 
 By default, updates are append-only:
 

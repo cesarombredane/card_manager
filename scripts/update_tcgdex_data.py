@@ -927,6 +927,7 @@ def sync_assets(
     public_root: Path,
     workers: int,
     timeout: float,
+    set_only: bool = False,
 ) -> dict[str, int]:
     """Reuse cached assets, concurrently fetch missing ones, and update JSON URLs."""
     cards_root = public_root / "cards"
@@ -948,10 +949,8 @@ def sync_assets(
             upstream_series = str(set_row["tcgdex_series_id"])
             symbol_url = asset_url("univ", upstream_series, upstream_set, "symbol.webp")
             symbol_path = sets_root / set_id / "symbol.webp"
-            existing_symbol = str(set_row.get("symbol_image_url") or "")
-            has_webp_symbol = existing_symbol.lower().endswith(".webp")
             cached_symbol = existing_image(sets_root / set_id / "symbol")
-            if not cached_symbol and not has_webp_symbol and symbol_url not in missing:
+            if not cached_symbol and symbol_url not in missing:
                 tasks[symbol_url] = symbol_path
 
             for language_id in set_row["language_ids"]:
@@ -961,10 +960,11 @@ def sync_assets(
                     existing_image(sets_root / set_id / f"logo-{language_id}")
                     or existing_image(sets_root / set_id / "logo")
                 )
-                existing_logo = str(set_row.get("title_image_url") or "")
-                has_webp_logo = existing_logo.lower().endswith(".webp")
-                if not cached_logo and not has_webp_logo and logo_url not in missing:
+                if not cached_logo and logo_url not in missing:
                     tasks[logo_url] = logo_path
+
+            if set_only:
+                continue
 
             cards_path = sets_path.parent / f"cards_{set_id}.json"
             for card in json.loads(cards_path.read_text(encoding="utf-8")):
@@ -1017,14 +1017,28 @@ def sync_assets(
             if not set_row.get("symbol_image_url") and symbol_path:
                 set_row["symbol_image_url"] = f"/images/sets/{set_id}/{symbol_path.name}"
                 sets_changed = True
+            preferred_language_ids = [
+                language_id
+                for preferred in ("en", "fr")
+                for language_id in set_row["language_ids"]
+                if language_id == preferred
+            ] + [
+                language_id
+                for language_id in set_row["language_ids"]
+                if language_id not in {"en", "fr"}
+            ]
             logo_path = next((
                 existing_image(sets_root / set_id / f"logo-{language_id}")
-                for language_id in set_row["language_ids"]
+                for language_id in preferred_language_ids
                 if existing_image(sets_root / set_id / f"logo-{language_id}")
             ), None) or existing_image(sets_root / set_id / "logo")
-            if not set_row.get("title_image_url") and logo_path:
-                set_row["title_image_url"] = f"/images/sets/{set_id}/{logo_path.name}"
+            preferred_logo_url = f"/images/sets/{set_id}/{logo_path.name}" if logo_path else None
+            if preferred_logo_url and set_row.get("title_image_url") != preferred_logo_url:
+                set_row["title_image_url"] = preferred_logo_url
                 sets_changed = True
+
+            if set_only:
+                continue
 
             cards_path = sets_path.parent / f"cards_{set_id}.json"
             cards = json.loads(cards_path.read_text(encoding="utf-8"))

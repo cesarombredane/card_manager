@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import time
 from pathlib import Path
 
@@ -17,6 +18,11 @@ def parse_args() -> argparse.Namespace:
         "--overwrite",
         action="store_true",
         help="Recheck known-missing assets; existing cached image files remain reusable.",
+    )
+    parser.add_argument(
+        "--set-only",
+        action="store_true",
+        help="Download and update set logos and symbols without processing card images.",
     )
     return parser.parse_args()
 
@@ -34,13 +40,32 @@ def main() -> int:
 
     missing_status = public_root / ".tcgdex-missing-assets.json"
     if args.overwrite and missing_status.exists():
-        missing_status.unlink()
+        if args.set_only:
+            missing_assets = json.loads(missing_status.read_text(encoding="utf-8"))
+            card_assets = {
+                url: unavailable
+                for url, unavailable in missing_assets.items()
+                if not url.endswith(("/logo.webp", "/symbol.webp"))
+            }
+            missing_status.write_text(
+                json.dumps(card_assets, ensure_ascii=False, indent=2) + "\n",
+                encoding="utf-8",
+            )
+        else:
+            missing_status.unlink()
 
-    result = sync_assets(data_root, public_root, IMAGE_WORKERS, REQUEST_TIMEOUT)
+    result = sync_assets(
+        data_root,
+        public_root,
+        IMAGE_WORKERS,
+        REQUEST_TIMEOUT,
+        set_only=args.set_only,
+    )
     coverage = generate_coverage(data_root, data_root / "coverage.json")
 
     print("\nImage update complete")
     print(f"  Mode:                 {'recheck unavailable' if args.overwrite else 'missing only'}")
+    print(f"  Asset scope:          {'sets only' if args.set_only else 'sets and cards'}")
     print(f"  Missing assets checked: {result['candidates']}")
     print(f"  Images downloaded:      {result['downloaded']}")
     print(f"  References filled:      {result['filled_references']}")
