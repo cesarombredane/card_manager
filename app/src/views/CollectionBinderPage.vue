@@ -26,12 +26,13 @@
           <q-card-section>
             <div class="row items-center justify-between">
               <div class="text-h6">Binder items</div>
-              <q-btn v-if="selectorTab !== 'collection'" flat round dense color="primary" icon="add" @click="openAssetDialog(selectorTab)">
+              <q-btn v-if="selectorTab === 'proxies' || selectorTab === 'images'" flat round dense color="primary" icon="add" @click="openAssetDialog(selectorTab)">
                 <q-tooltip>Add {{ selectorTab === 'proxies' ? 'proxy' : 'image' }}</q-tooltip>
               </q-btn>
             </div>
             <q-tabs v-model="selectorTab" dense active-color="primary" indicator-color="primary" class="q-mt-sm">
               <q-tab name="collection" label="Cards" />
+              <q-tab name="wanted" label="Wanted" />
               <q-tab name="proxies" label="Proxies" />
               <q-tab name="images" label="Images" />
             </q-tabs>
@@ -39,15 +40,16 @@
             <q-input v-model="search" dark dense outlined clearable class="q-mt-sm" label="Search">
               <template #prepend><q-icon name="search" /></template>
             </q-input>
-            <card-sort-selector v-if="selectorTab === 'collection'" v-model="selectedCardSort" class="q-mt-sm" />
+            <card-sort-selector v-if="selectorTab === 'collection' || selectorTab === 'wanted'" v-model="selectedCardSort" class="q-mt-sm" />
           </q-card-section>
           <q-separator dark />
           <q-scroll-area style="height: 50vh">
-            <q-list v-if="selectorTab === 'collection'" separator>
+            <q-list v-if="selectorTab === 'collection' || selectorTab === 'wanted'" separator>
               <q-item v-for="row in availableRows" :key="row.entry.id" :draggable="row.available > 0"
                 :class="{ 'text-grey-6': row.available === 0, 'cursor-grab': row.available > 0 }" @dragstart="startEntryDrag(row.entry.id, $event)">
                 <q-item-section avatar>
-                  <q-img v-if="row.card.image_url" :src="row.card.image_url" fit="contain" width="54px" height="74px" />
+                  <q-img v-if="row.card.image_url" :src="row.card.image_url" fit="contain" width="54px" height="74px"
+                    :class="{ 'wanted-image': row.entry.wanted }" />
                   <q-icon v-else name="style" size="38px" />
                 </q-item-section>
                 <q-item-section>
@@ -126,6 +128,7 @@
                 :style="{ gridColumn: slot.column + 1, gridRow: slot.rowIndex + 1 }" @dragover.prevent @drop.prevent="dropOnSlot(slot.index, $event)">
                 <template v-if="slot.content">
                   <img v-if="slot.content.imageUrl" :src="slot.content.imageUrl" :alt="slot.content.name" draggable="true"
+                    :class="{ 'wanted-image': slot.content.wanted }"
                     @dragstart="startSlotDrag(slot.index, $event)" />
                   <div v-else class="full-height column items-center justify-center text-center q-pa-sm" draggable="true" @dragstart="startSlotDrag(slot.index, $event)">
                     <q-icon name="style" size="30px" color="grey-5" />
@@ -264,7 +267,7 @@
     pokedexNumber: number | null;
     price: number | null;
   };
-  type SelectorTab = 'collection' | 'proxies' | 'images';
+  type SelectorTab = 'collection' | 'wanted' | 'proxies' | 'images';
 
   const route = useRoute();
   const folderId = computed(() => String(route.params.folderId ?? ''));
@@ -364,6 +367,7 @@
   const availableRows = computed(() => {
     const query = search.value.trim().toLocaleLowerCase();
     return rows.value
+      .filter((row) => row.entry.wanted === (selectorTab.value === 'wanted'))
       .filter((row) =>
         !query || row.card.display_name.toLocaleLowerCase().includes(query) || row.card.set_name?.toLocaleLowerCase().includes(query)
       )
@@ -398,6 +402,7 @@
   const assetDimensions = computed(() => Array.from({ length: binderColumns.value }, (_, index) => index + 1));
   const selectorHelp = computed(() => ({
     collection: 'Drag owned cards into slots. Each copy can be placed once.',
+    wanted: 'Drag wanted cards into slots. They remain visually distinct in black and white.',
     proxies: 'Upload custom proxy cards and place each one in a card slot.',
     images: 'Upload background images that can span several slots.'
   }[selectorTab.value]));
@@ -431,15 +436,15 @@
     const asset = manualImageStore.find('binder-assets', folderId.value, assetId, kind);
     return asset ? `${asset.url}?v=${encodeURIComponent(asset.updated_at)}` : '';
   };
-  const slotContent = (slotValue: string | null): { name: string; imageUrl: string | null; } | null => {
+  const slotContent = (slotValue: string | null): { name: string; imageUrl: string | null; wanted: boolean; } | null => {
     if (!slotValue) return null;
     if (slotValue.startsWith('proxy:')) {
       const proxyId = slotValue.slice(6);
       const proxy = binder.value?.proxies.find((candidate) => candidate.id === proxyId);
-      return proxy ? { name: proxy.name, imageUrl: binderAssetUrl(proxy.id, 'proxy') } : null;
+      return proxy ? { name: proxy.name, imageUrl: binderAssetUrl(proxy.id, 'proxy'), wanted: false } : null;
     }
     const row = rows.value.find((candidate) => candidate.entry.id === slotValue);
-    return row ? { name: row.card.display_name, imageUrl: row.card.image_url } : null;
+    return row ? { name: row.card.display_name, imageUrl: row.card.image_url, wanted: row.entry.wanted } : null;
   };
   const slotsForSide = (sideIndex: number) => {
     if (!binder.value) return [];
@@ -724,6 +729,10 @@
     height: 100%;
     object-fit: contain;
     cursor: grab;
+  }
+
+  .wanted-image {
+    filter: grayscale(1);
   }
 
   .slot-remove {

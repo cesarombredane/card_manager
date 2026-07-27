@@ -8,6 +8,7 @@
         :selected="collectionEntries[index] ? selectedEntryIds.includes(collectionEntries[index].id) : false"
         @click="$emit('card-click', $event)"
         @add-to-collection="openCollectionDialog"
+        @add-to-want-list="openWantListDialog"
         @edit-entry="$emit('edit-entry', $event)"
         @delete-entry="$emit('delete-entry', $event)"
         @toggle-selection="$emit('toggle-selection', $event)"
@@ -24,11 +25,21 @@
     :language-id="selectedCard.language_id"
     :card-name="selectedCard.display_name"
   />
+  <add-to-want-list-dialog
+    v-if="selectedWantedCard"
+    v-model="showWantListDialog"
+    :set-id="selectedWantedCard.set_id"
+    :card-id="selectedWantedCard.card_id"
+    :variant-id="selectedWantedCard.variant_id"
+    :language-id="selectedWantedCard.language_id"
+    :card-name="selectedWantedCard.display_name"
+  />
 </template>
 
 <script setup lang="ts">
   import { ref } from 'vue';
   import AddToCollectionDialog from './AddToCollectionDialog.vue';
+  import AddToWantListDialog from './AddToWantListDialog.vue';
   import CardListItem from './CardListItem.vue';
   import type { DisplayCard } from '../utils/cardDisplay';
   import type { CollectionEntry } from '../utils/collection';
@@ -52,9 +63,16 @@
 
   const selectedCard = ref<DisplayCard | null>(null);
   const showCollectionDialog = ref(false);
+  const selectedWantedCard = ref<DisplayCard | null>(null);
+  const showWantListDialog = ref(false);
 
   const openCollectionDialog = (card: DisplayCard): void => {
     selectedCard.value = card;
     showCollectionDialog.value = true;
+  };
+
+  const openWantListDialog = (card: DisplayCard): void => {
+    selectedWantedCard.value = card;
+    showWantListDialog.value = true;
   };
 </script>

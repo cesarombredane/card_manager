@@ -181,7 +181,7 @@
   const ownedCardsBySet = computed<Map<string, number>>(() => {
     const variantsBySet = new Map<string, globalThis.Set<string>>();
     for (const entry of collectionStore.entries.value) {
-      if (entry.set_id === 'manual-collection') continue;
+      if (entry.wanted || entry.set_id === 'manual-collection') continue;
       if (!variantsBySet.has(entry.set_id)) variantsBySet.set(entry.set_id, new globalThis.Set());
       variantsBySet.get(entry.set_id)?.add(`${entry.card_id}:${entry.variant_id}`);
     }

@@ -91,6 +91,17 @@
                     :disable="!currentCard || !selectedVariant"
                     @click="showCollectionDialog = true"
                   />
+                  <q-btn
+                    class="q-ml-xs"
+                    flat
+                    round
+                    :color="isWanted ? 'red-5' : 'grey-5'"
+                    :icon="isWanted ? 'favorite' : 'favorite_border'"
+                    :disable="!currentCard || !selectedVariant"
+                    @click="showWantListDialog = true"
+                  >
+                    <q-tooltip>{{ isWanted ? 'Add another wanted copy' : 'Add to want list' }}</q-tooltip>
+                  </q-btn>
                   <q-badge v-if="ownedQuantity > 0" rounded color="primary" text-color="black" class="q-ml-sm">
                     ×{{ ownedQuantity }}
                     <q-tooltip>Owned in {{ selectedLanguageId }} across all collection folders</q-tooltip>
@@ -226,6 +237,15 @@
       :language-id="selectedLanguageId"
       :card-name="`${displayName} (${formatValue(selectedVariant.id)})`"
     />
+    <add-to-want-list-dialog
+      v-if="currentCard && selectedVariant"
+      v-model="showWantListDialog"
+      :set-id="setId"
+      :card-id="currentCard.id"
+      :variant-id="selectedVariant.id"
+      :language-id="selectedLanguageId"
+      :card-name="`${displayName} (${formatValue(selectedVariant.id)})`"
+    />
 
     <q-dialog v-model="showManualImageDialog">
       <q-card class="bg-grey-10 text-white" style="width: 520px; max-width: 90vw">
@@ -282,6 +302,7 @@
   // import components
   import LanguageSelector from '../components/LanguageSelector.vue';
   import AddToCollectionDialog from '../components/AddToCollectionDialog.vue';
+  import AddToWantListDialog from '../components/AddToWantListDialog.vue';
 
   // import utils
   import { getCardById, getPokemon, getSetById } from '../utils/dataManagement';
@@ -330,6 +351,7 @@
       : currentCard?.variants[0]?.id ?? 'normal'
   );
   const showCollectionDialog = ref(false);
+  const showWantListDialog = ref(false);
   const showManualImageDialog = ref(false);
   const manualImageFile = ref<File | null>(null);
   const manualImageDataUrl = ref<string | null>(null);
@@ -386,6 +408,8 @@
     if (!currentCard || !selectedVariant.value) return 0;
     return collectionStore.entries.value
       .filter((entry) =>
+        !entry.wanted
+        &&
         entry.set_id === setId
         && entry.card_id === currentCard.id
         && entry.variant_id === selectedVariant.value?.id
@@ -393,6 +417,15 @@
       )
       .reduce((total, entry) => total + entry.quantity, 0);
   });
+
+  const isWanted = computed<boolean>(() => Boolean(currentCard && selectedVariant.value)
+    && collectionStore.entries.value.some((entry) =>
+      entry.wanted
+      && entry.set_id === setId
+      && entry.card_id === currentCard?.id
+      && entry.variant_id === selectedVariant.value?.id
+      && entry.language_id === selectedLanguageId.value
+    ));
 
   // Localized card display name.
   const displayName = computed<string>(() => {

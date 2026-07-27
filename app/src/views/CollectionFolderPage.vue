@@ -5,12 +5,24 @@
       <div class="text-overline text-primary q-mt-sm">Collection folder</div>
       <div class="text-h4 text-weight-bold">{{ folder?.name ?? 'Unknown folder' }}</div>
       <div class="text-body2 text-grey-4">
-        {{ cardCount }} cards · Estimated collection value {{ formatEuroPrice(folderValue) }}
+        {{ cardCount }} owned cards · {{ wantedCount }} wanted · Estimated collection value {{ formatEuroPrice(folderValue) }}
       </div>
       <div class="text-caption text-grey-5 q-mt-xs">
         Catalog cards use current Cardmarket trend prices; manual cards use their entered estimated value.
       </div>
     </section>
+
+    <q-tabs
+      v-if="folder"
+      v-model="collectionTab"
+      align="left"
+      active-color="primary"
+      indicator-color="primary"
+      class="q-mb-md"
+    >
+      <q-tab name="owned" :label="`Owned (${cardCount})`" />
+      <q-tab name="wanted" :label="`Wanted (${wantedCount})`" />
+    </q-tabs>
 
     <section v-if="folder" class="row q-col-gutter-md items-center q-mb-md">
       <div class="col-12 col-sm-6 col-md-3">
@@ -85,8 +97,13 @@
       This collection folder does not exist.
     </q-banner>
 
-    <q-banner v-else-if="collectionRows.length === 0" class="bg-grey-10 text-grey-4">
-      This folder is empty. Add cards from a set, search result, or card detail page.
+    <q-banner v-else-if="activeRows.length === 0" class="bg-grey-10 text-grey-4">
+      <template v-if="collectionTab === 'wanted'">
+        This want list is empty. Use the heart button on a card to add it.
+      </template>
+      <template v-else>
+        This folder has no owned cards. Add cards from a set, search result, or card detail page.
+      </template>
     </q-banner>
 
     <q-banner v-else-if="displayedRows.length === 0" class="bg-grey-10 text-grey-4">
@@ -140,7 +157,7 @@
     <q-dialog v-model="showEditDialog">
       <q-card class="bg-grey-10 text-white" style="width: 720px; max-width: 94vw">
         <q-card-section>
-          <div class="text-h6">Edit collection card</div>
+          <div class="text-h6">{{ editingEntry?.entry.wanted ? 'Edit wanted card' : 'Edit collection card' }}</div>
           <div class="text-body2 text-grey-4">{{ editingEntry?.card.display_name }}</div>
         </q-card-section>
         <q-card-section class="row q-col-gutter-md q-row-gutter-md">
@@ -181,7 +198,7 @@
             <q-select v-model="editLanguageId" :options="editLanguageOptions" emit-value map-options dark outlined label="Language" />
           </div>
           <div v-if="editingManualCard" class="col-12 col-sm-6"><q-input v-model="editVariantId" dark outlined label="Variant" /></div>
-          <div class="col-12 col-sm-6">
+          <div v-if="!editingEntry?.entry.wanted" class="col-12 col-sm-6">
             <q-select v-model="editCondition" :options="conditionOptions" emit-value map-options dark outlined label="Condition" />
           </div>
           <div class="col-12" :class="{ 'col-sm-6': editingManualCard }">
@@ -206,8 +223,13 @@
         <q-card-section>
           <div class="text-h6">Remove this card?</div>
           <div class="text-body2 text-grey-4 q-mt-sm">
-            Remove {{ entryToDelete?.entry.quantity }} × {{ entryToDelete?.card.display_name }}
-            ({{ entryToDelete?.entry.condition }}) from this folder?
+            <template v-if="entryToDelete?.entry.wanted">
+              Remove {{ entryToDelete.card.display_name }} from this want list?
+            </template>
+            <template v-else>
+              Remove {{ entryToDelete?.entry.quantity }} × {{ entryToDelete?.card.display_name }}
+              ({{ entryToDelete?.entry.condition }}) from this folder?
+            </template>
           </div>
         </q-card-section>
         <q-card-actions align="right">
@@ -222,7 +244,7 @@
 </template>
 
 <script setup lang="ts">
-  import { computed, ref } from 'vue';
+  import { computed, ref, watch } from 'vue';
   import { useRoute, useRouter } from 'vue-router';
   import CardList from '../components/CardList.vue';
   import ManualCardDialog from '../components/ManualCardDialog.vue';
@@ -250,6 +272,7 @@
   const route = useRoute();
   const router = useRouter();
   const search = ref('');
+  const collectionTab = ref<'owned' | 'wanted'>('owned');
   const selectedLanguageId = ref<string | null>(null);
   const selectedSort = ref<CardSort>('release-desc');
   const selectionMode = ref(false);
@@ -385,7 +408,11 @@
       }];
     }));
 
-  const languageOptions = computed(() => [...new Set(collectionRows.value.map((row) => row.entry.language_id))]
+  const activeRows = computed<CollectionRow[]>(() =>
+    collectionRows.value.filter((row) => row.entry.wanted === (collectionTab.value === 'wanted'))
+  );
+
+  const languageOptions = computed(() => [...new Set(activeRows.value.map((row) => row.entry.language_id))]
     .map((languageId) => ({
       label: languageNames.get(languageId) ?? languageId.toUpperCase(),
       value: languageId
@@ -394,7 +421,7 @@
 
   const displayedRows = computed<CollectionRow[]>(() => {
     const query = search.value.trim().toLocaleLowerCase();
-    return collectionRows.value
+    return activeRows.value
       .filter((row) => query === '' || row.card.display_name.toLocaleLowerCase().includes(query))
       .filter((row) => !selectedLanguageId.value || row.entry.language_id === selectedLanguageId.value)
       .sort((left, right) => {
@@ -428,8 +455,15 @@
       });
   });
 
-  const cardCount = computed(() => collectionRows.value.reduce((total, row) => total + row.entry.quantity, 0));
-  const folderValue = computed(() => collectionRows.value.reduce((total, row) => total + row.totalValue, 0));
+  const cardCount = computed(() => collectionRows.value
+    .filter((row) => !row.entry.wanted)
+    .reduce((total, row) => total + row.entry.quantity, 0));
+  const wantedCount = computed(() => collectionRows.value
+    .filter((row) => row.entry.wanted)
+    .reduce((total, row) => total + row.entry.quantity, 0));
+  const folderValue = computed(() => collectionRows.value
+    .filter((row) => !row.entry.wanted)
+    .reduce((total, row) => total + row.totalValue, 0));
   const displayedEntryIds = computed(() => displayedRows.value.map((row) => row.entry.id));
   const allDisplayedSelected = computed(() =>
     displayedEntryIds.value.length > 0
@@ -438,6 +472,11 @@
   const someDisplayedSelected = computed(() =>
     displayedEntryIds.value.some((entryId) => selectedEntryIds.value.has(entryId))
   );
+
+  watch(collectionTab, () => {
+    selectedEntryIds.value = new Set();
+    selectedLanguageId.value = null;
+  });
 
   const toggleSelectionMode = (): void => {
     selectionMode.value = !selectionMode.value;

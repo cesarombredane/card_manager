@@ -67,7 +67,7 @@
               <div>
                 <div class="text-h6">{{ summary.folder.name }}</div>
                 <div class="text-caption text-grey-4">
-                  {{ summary.cards }} cards · {{ summary.entries }} distinct entries
+                  {{ summary.cards }} owned cards · {{ summary.wanted }} wanted · {{ summary.entries }} owned entries
                 </div>
               </div>
               <q-icon :name="summary.folder.id === mainFolderId ? 'inventory_2' : 'folder'" color="yellow-6" size="32px" />
@@ -197,11 +197,15 @@
   };
 
   const folderSummaries = computed(() => collectionStore.folders.value.map((folder) => {
-    const entries = collectionStore.entries.value.filter((entry) => entry.folder_id === folder.id);
+    const folderEntries = collectionStore.entries.value.filter((entry) => entry.folder_id === folder.id);
+    const entries = folderEntries.filter((entry) => !entry.wanted);
     return {
       folder,
       entries: entries.length,
       cards: entries.reduce((total, entry) => total + entry.quantity, 0),
+      wanted: folderEntries
+        .filter((entry) => entry.wanted)
+        .reduce((total, entry) => total + entry.quantity, 0),
       value: entries.reduce((total, entry) => total + entry.quantity * entryValue(entry.set_id, entry.card_id, entry.variant_id), 0)
     };
   }));

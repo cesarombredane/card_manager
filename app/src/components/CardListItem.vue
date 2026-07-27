@@ -3,7 +3,7 @@
     flat
     bordered
     class="bg-grey-10 text-white no-wrap cursor-pointer q-pa-none relative-position"
-    :class="{ 'selected-card': selected }"
+    :class="{ 'selected-card': selected, 'wanted-card': collectionEntry?.wanted }"
     @click="selectable && collectionEntry ? $emit('toggle-selection', collectionEntry) : $emit('click', card)"
   >
     <q-checkbox
@@ -59,9 +59,10 @@
         </template>
       </div>
       <div v-if="collectionEntry" class="row q-gutter-xs q-mt-xs">
-        <q-badge color="primary" text-color="black">×{{ collectionEntry.quantity }}</q-badge>
+        <q-badge v-if="collectionEntry.wanted" color="grey-5" text-color="black">Wanted ×{{ collectionEntry.quantity }}</q-badge>
+        <q-badge v-else color="primary" text-color="black">×{{ collectionEntry.quantity }}</q-badge>
         <q-badge color="grey-8" text-color="white">{{ collectionEntry.language_id.toUpperCase() }}</q-badge>
-        <q-badge color="grey-8" text-color="white">{{ collectionEntry.condition }}</q-badge>
+        <q-badge v-if="!collectionEntry.wanted" color="grey-8" text-color="white">{{ collectionEntry.condition }}</q-badge>
       </div>
       <div class="row no-wrap q-gutter-xs q-mt-auto overflow-hidden">
         <q-badge v-if="card.is_manual" color="deep-orange-8" text-color="white">
@@ -97,7 +98,7 @@
             icon="delete"
             @click.stop="$emit('delete-entry', collectionEntry)"
           >
-            <q-tooltip>Remove from collection</q-tooltip>
+            <q-tooltip>Remove from {{ collectionEntry.wanted ? 'want list' : 'collection' }}</q-tooltip>
           </q-btn>
         </template>
         <template v-else>
@@ -111,6 +112,16 @@
             no-caps
             @click.stop="$emit('add-to-collection', card)"
           />
+          <q-btn
+            dense
+            flat
+            round
+            :color="wanted ? 'red-5' : 'grey-5'"
+            :icon="wanted ? 'favorite' : 'favorite_border'"
+            @click.stop="$emit('add-to-want-list', card)"
+          >
+            <q-tooltip>{{ wanted ? 'Add another wanted copy' : 'Add to want list' }}</q-tooltip>
+          </q-btn>
           <q-badge v-if="ownedQuantity > 0" rounded color="primary" text-color="black" class="q-ml-xs">
             ×{{ ownedQuantity }}
             <q-tooltip>Owned across all collection folders</q-tooltip>
@@ -140,6 +151,7 @@
   defineEmits<{
     click: [card: DisplayCard];
     'add-to-collection': [card: DisplayCard];
+    'add-to-want-list': [card: DisplayCard];
     'edit-entry': [entry: CollectionEntry];
     'delete-entry': [entry: CollectionEntry];
     'toggle-selection': [entry: CollectionEntry];
@@ -150,11 +162,20 @@
   );
   const ownedQuantity = computed<number>(() => collectionStore.entries.value
     .filter((entry) =>
+      !entry.wanted
+      &&
       entry.set_id === props.card.set_id
       && entry.card_id === props.card.card_id
       && entry.variant_id === props.card.variant_id
     )
     .reduce((total, entry) => total + entry.quantity, 0));
+  const wanted = computed<boolean>(() => collectionStore.entries.value.some((entry) =>
+    entry.wanted
+    && entry.set_id === props.card.set_id
+    && entry.card_id === props.card.card_id
+    && entry.variant_id === props.card.variant_id
+    && entry.language_id === props.card.language_id
+  ));
 </script>
 
 <style scoped>
@@ -167,6 +188,11 @@
   .selected-card {
     outline: 2px solid var(--q-primary);
     outline-offset: -2px;
+  }
+
+  .wanted-card :deep(.q-img__image),
+  .wanted-card .q-responsive {
+    filter: grayscale(1);
   }
 
   .fallback-language-overlay {

@@ -28,6 +28,7 @@ export type CollectionEntry = {
   language_id: string;
   condition: CardCondition;
   quantity: number;
+  wanted: boolean;
   added_at: string;
   updated_at: string;
 };
@@ -80,7 +81,8 @@ const normalizeData = (parsed: Partial<CollectionData>): CollectionData => {
     : [defaultData().folders[0], ...parsed.folders];
   const entries = parsed.entries.map((entry) => ({
     ...entry,
-    language_id: entry.language_id || (entry.set_id.startsWith('asia-') ? 'ja' : 'en')
+    language_id: entry.language_id || (entry.set_id.startsWith('asia-') ? 'ja' : 'en'),
+    wanted: entry.wanted === true
   }));
   return {
     version: 2,
@@ -189,14 +191,52 @@ export const collectionStore = {
       && entry.variant_id === input.variant_id
       && entry.language_id === input.language_id
       && entry.condition === input.condition
+      && !entry.wanted
     );
     if (existing) {
       existing.quantity += quantity;
       existing.updated_at = new Date().toISOString();
     } else {
       const now = new Date().toISOString();
-      state.entries.push({ id: newId('entry'), ...input, quantity, added_at: now, updated_at: now });
+      state.entries.push({ id: newId('entry'), ...input, quantity, wanted: false, added_at: now, updated_at: now });
     }
+    persist();
+  },
+
+  addWanted(input: {
+    folder_id: string;
+    set_id: string;
+    card_id: string;
+    variant_id: string;
+    language_id: string;
+    quantity: number;
+  }): void {
+    if (!state.folders.some((folder) => folder.id === input.folder_id)) return;
+    const quantity = Math.max(1, Math.floor(input.quantity));
+    const existing = state.entries.find((entry) =>
+      entry.wanted
+      && entry.folder_id === input.folder_id
+      && entry.set_id === input.set_id
+      && entry.card_id === input.card_id
+      && entry.variant_id === input.variant_id
+      && entry.language_id === input.language_id
+    );
+    if (existing) {
+      existing.quantity += quantity;
+      existing.updated_at = new Date().toISOString();
+      persist();
+      return;
+    }
+    const now = new Date().toISOString();
+    state.entries.push({
+      id: newId('wanted'),
+      ...input,
+      condition: 'NM',
+      quantity,
+      wanted: true,
+      added_at: now,
+      updated_at: now
+    });
     persist();
   },
 
@@ -248,6 +288,7 @@ export const collectionStore = {
       language_id: input.language_id,
       condition: input.condition,
       quantity: Math.max(1, Math.floor(input.quantity)),
+      wanted: false,
       added_at: now,
       updated_at: now
     };
@@ -325,6 +366,7 @@ export const collectionStore = {
       && candidate.variant_id === entry.variant_id
       && candidate.language_id === input.language_id
       && candidate.condition === input.condition
+      && candidate.wanted === entry.wanted
     );
     if (matching) {
       matching.quantity += quantity;
@@ -362,6 +404,7 @@ export const collectionStore = {
         && candidate.variant_id === entry.variant_id
         && candidate.language_id === entry.language_id
         && candidate.condition === entry.condition
+        && candidate.wanted === entry.wanted
       );
       if (matching) {
         matching.quantity += entry.quantity;
