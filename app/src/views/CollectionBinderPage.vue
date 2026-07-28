@@ -26,10 +26,26 @@
           <q-card-section>
             <div class="row items-center justify-between">
               <div class="text-h6">Binder items</div>
-              <q-btn v-if="selectorTab === 'proxies' || selectorTab === 'images'" flat round dense color="primary" icon="add" @click="openAssetDialog(selectorTab)">
-                <q-tooltip>Add {{ selectorTab === 'proxies' ? 'proxy' : 'image' }}</q-tooltip>
-              </q-btn>
+              <div v-if="selectorTab === 'proxies' || selectorTab === 'images'" class="row no-wrap">
+                <q-btn
+                  v-if="selectorTab === 'images'"
+                  flat
+                  round
+                  dense
+                  color="primary"
+                  icon="picture_as_pdf"
+                  :disable="selectedImageIds.length === 0"
+                  :loading="imagesPdfSaving"
+                  @click="printSelectedImages"
+                >
+                  <q-tooltip>Download selected images at Vault X pocket size</q-tooltip>
+                </q-btn>
+                <q-btn flat round dense color="primary" icon="add" @click="openAssetDialog(selectorTab)">
+                  <q-tooltip>Add {{ selectorTab === 'proxies' ? 'proxy' : 'image' }}</q-tooltip>
+                </q-btn>
+              </div>
             </div>
+            <div v-if="imagesPdfError" class="text-negative text-caption q-mt-sm">{{ imagesPdfError }}</div>
             <q-tabs v-model="selectorTab" dense active-color="primary" indicator-color="primary" class="q-mt-sm">
               <q-tab name="collection" label="Cards" />
               <q-tab name="wanted" label="Wanted" />
@@ -83,6 +99,9 @@
             </q-list>
             <q-list v-else separator>
               <q-item v-for="image in filteredImages" :key="image.id" draggable="true" class="cursor-grab" @dragstart="startImageDrag(image.id, $event)">
+                <q-item-section side>
+                  <q-checkbox v-model="selectedImageIds" :val="image.id" color="primary" @click.stop />
+                </q-item-section>
                 <q-item-section avatar>
                   <q-img :src="binderAssetUrl(image.id, 'image')" fit="contain" width="64px" height="64px" />
                 </q-item-section>
@@ -293,6 +312,7 @@
   import CardSortSelector from '../components/CardSortSelector.vue';
   import type { CardSort } from '../utils/cardSorting';
   import { cardmarketDisplayPrice } from '../utils/cardDisplay';
+  import { downloadBinderImagesPdf } from '../utils/binderImagesPdf';
 
   type BinderRow = {
     entry: CollectionEntry;
@@ -329,6 +349,9 @@
   const assetPreview = ref<string | null>(null);
   const assetError = ref<string | null>(null);
   const assetSaving = ref(false);
+  const selectedImageIds = ref<string[]>([]);
+  const imagesPdfSaving = ref(false);
+  const imagesPdfError = ref<string | null>(null);
   const gotItTarget = ref<{ slotIndex: number; entryId: string } | null>(null);
   const gotItCondition = ref<CardCondition>('NM');
   const layoutOptions = [
@@ -473,6 +496,24 @@
   const binderAssetUrl = (assetId: string, kind: 'proxy' | 'image'): string => {
     const asset = manualImageStore.find('binder-assets', folderId.value, assetId, kind);
     return asset ? `${asset.url}?v=${encodeURIComponent(asset.updated_at)}` : '';
+  };
+
+  const printSelectedImages = async (): Promise<void> => {
+    if (!binder.value || !folder.value) return;
+    imagesPdfSaving.value = true;
+    imagesPdfError.value = null;
+    try {
+      await downloadBinderImagesPdf(
+        folder.value.name,
+        binder.value.images
+          .filter((image) => selectedImageIds.value.includes(image.id))
+          .map((image) => ({ ...image, url: binderAssetUrl(image.id, 'image') }))
+      );
+    } catch (error) {
+      imagesPdfError.value = error instanceof Error ? error.message : String(error);
+    } finally {
+      imagesPdfSaving.value = false;
+    }
   };
   const slotContent = (slotValue: string | null): {
     name: string;
