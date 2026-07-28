@@ -52,11 +52,14 @@
       <div class="text-caption text-grey-5 ellipsis overflow-hidden text-no-wrap">
         <span v-if="card.hp">{{ card.hp }} HP · </span>{{ card.illustrator ?? 'Unknown illustrator' }}
       </div>
-      <div v-if="displayPrice !== null" class="text-caption text-yellow-6 text-weight-bold">
-        {{ formatEuroPrice(displayPrice) }}
-        <template v-if="collectionEntry">
-          each · {{ formatEuroPrice(displayPrice * collectionEntry.quantity) }} total
+      <div class="text-caption text-yellow-6 text-weight-bold">
+        <template v-if="displayPrice !== null">
+          {{ formatEuroPrice(displayPrice) }}
+          <template v-if="collectionEntry">
+            each · {{ formatEuroPrice(displayPrice * collectionEntry.quantity) }} total
+          </template>
         </template>
+        <template v-else>No available price</template>
       </div>
       <div v-if="collectionEntry" class="row q-gutter-xs q-mt-xs">
         <q-badge v-if="collectionEntry.wanted" color="grey-5" text-color="black">Wanted ×{{ collectionEntry.quantity }}</q-badge>

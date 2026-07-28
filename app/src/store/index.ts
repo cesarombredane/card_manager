@@ -12,6 +12,7 @@ export type CardSearchFilters = {
   rarities: string[] | null;
   sort: CardSort;
   include_special_forms: boolean;
+  only_my_cards: boolean;
   region: CardSearchRegion;
   international_language_id: string | null;
   asia_language_id: string;
@@ -42,6 +43,7 @@ export const store = createStore<AppState>({
         rarities: null,
         sort: 'release-desc',
         include_special_forms: false,
+        only_my_cards: false,
         region: 'all',
         international_language_id: null,
         asia_language_id: 'ja',

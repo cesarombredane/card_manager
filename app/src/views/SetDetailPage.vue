@@ -9,7 +9,9 @@
         {{ currentSet ? localizedValue(currentSet.name, selectedLanguageId) ?? currentSet.id : 'Unknown set' }}
       </div>
       <div class="text-body2 text-secondary">
-        {{ currentSeries?.name ?? 'Unknown series' }} · {{ allCards.length }} total collectible cards including variants
+        {{ currentSeries?.name ?? 'Unknown series' }} · {{ allCards.length }} total collectible cards including variants ·
+        Released {{ currentSet ? formatFrenchDate(currentSet.release_date) : 'Unknown' }} ·
+        Estimated set value {{ formatEuroPrice(setValue) }}
       </div>
     </section>
 
@@ -26,6 +28,9 @@
       </div>
       <div class="col-auto">
         <q-toggle v-model="showVariants" dark color="yellow-7" label="Show variants" />
+      </div>
+      <div class="col-12 col-sm-auto" style="min-width: 250px">
+        <card-sort-selector v-model="selectedSort" include-set-order />
       </div>
     </section>
 
@@ -51,26 +56,48 @@
     <q-banner v-if="displayedCards.length === 0" class="bg-grey-10 text-grey-4">
       No card found for these filters.
     </q-banner>
+
+    <q-btn
+      v-show="showBackToTop"
+      class="fixed-bottom-right q-ma-lg z-top"
+      round
+      color="primary"
+      text-color="grey-10"
+      icon="arrow_upward"
+      aria-label="Return to top"
+      @click="scrollToTop"
+    >
+      <q-tooltip>Return to top</q-tooltip>
+    </q-btn>
   </q-page>
 </template>
 
 <script setup lang="ts">
   // import hooks
-  import { computed, ref } from 'vue';
+  import { computed, onBeforeUnmount, onMounted, ref } from 'vue';
   import { useRoute, useRouter } from 'vue-router';
   import { useStore } from 'vuex';
 
   // import components
   import LanguageSelector from '../components/LanguageSelector.vue';
   import CardList from '../components/CardList.vue';
+  import CardSortSelector from '../components/CardSortSelector.vue';
 
   // import utils
-  import { getCardsBySetId, getSetById, getSeriesById } from '../utils/dataManagement';
-  import { buildDisplayCard, compareCardNumbers, formatCardValue } from '../utils/cardDisplay';
+  import { getCardsBySetId, getPokemon, getSetById, getSeriesById } from '../utils/dataManagement';
+  import {
+    buildDisplayCard,
+    cardmarketDisplayPrice,
+    compareCardNumbers,
+    formatCardValue,
+    formatEuroPrice
+  } from '../utils/cardDisplay';
   import type { DisplayCard } from '../utils/cardDisplay';
   import { localizedValue } from '../utils/localization';
   import type { Card, Series, Set } from '../utils/types';
   import type { AppState } from '../store';
+  import type { CardSort } from '../utils/cardSorting';
+  import { formatFrenchDate } from '../utils/dates';
 
   /* constant vars */
   // Current route used to identify the selected set.
@@ -93,6 +120,9 @@
 
   // Cards belonging to the selected set.
   const cards: Card[] = getCardsBySetId(setId);
+
+  // Pokédex numbers used by the Pokédex sorting modes.
+  const pokedexByPokemonId = new Map(getPokemon().map((pokemon) => [pokemon.id, pokemon.pokedex_id]));
 
 
   /* reactive vars */
@@ -123,10 +153,22 @@
   // Whether every declared collectible variant is displayed.
   const showVariants = ref<boolean>(true);
 
+  // The printed card number order is the natural default inside a set.
+  const selectedSort = ref<CardSort>('set-order');
+
+  // Whether the floating return-to-top control should be visible.
+  const showBackToTop = ref<boolean>(false);
+
 
   /* computed vars */
   // Every card variant in this set as an individual display row.
   const allCards = computed<DisplayCard[]>(() => cards.flatMap((card) => card.variants.map((variant) => buildDisplayCard(card, variant, selectedLanguageId.value))));
+
+  // Combined current market value of one copy of every collectible variant.
+  const setValue = computed<number>(() => allCards.value.reduce(
+    (total, card) => total + (cardmarketDisplayPrice(card.cardmarket) ?? 0),
+    0
+  ));
 
   // Rarity filter options found in this set.
   const rarityOptions = computed<string[]>(() => uniqueValues(allCards.value.map((card) => card.rarity)));
@@ -164,7 +206,43 @@
       .filter((card) => !selectedType.value || card.types.includes(selectedType.value))
       .filter((card) => !selectedCategory.value || card.category === selectedCategory.value)
       .filter((card) => !showVariants.value || !selectedVariant.value || card.variant_id === selectedVariant.value)
-      .sort((a, b) => compareCardNumbers(a.number, b.number) || a.variant_id.localeCompare(b.variant_id));
+      .sort((a, b) => {
+        if (selectedSort.value === 'pokedex-asc' || selectedSort.value === 'pokedex-desc') {
+          const leftNumbers = a.pokemon_names
+            .map((pokemonId) => pokedexByPokemonId.get(pokemonId))
+            .filter((number): number is number => number !== undefined);
+          const rightNumbers = b.pokemon_names
+            .map((pokemonId) => pokedexByPokemonId.get(pokemonId))
+            .filter((number): number is number => number !== undefined);
+          const leftNumber = leftNumbers.length ? Math.min(...leftNumbers) : null;
+          const rightNumber = rightNumbers.length ? Math.min(...rightNumbers) : null;
+
+          if (leftNumber === null && rightNumber !== null) return 1;
+          if (leftNumber !== null && rightNumber === null) return -1;
+          if (leftNumber !== null && rightNumber !== null && leftNumber !== rightNumber) {
+            return selectedSort.value === 'pokedex-asc'
+              ? leftNumber - rightNumber
+              : rightNumber - leftNumber;
+          }
+        }
+
+        if (selectedSort.value === 'price-asc' || selectedSort.value === 'price-desc') {
+          const leftPrice = cardmarketDisplayPrice(a.cardmarket);
+          const rightPrice = cardmarketDisplayPrice(b.cardmarket);
+
+          if (leftPrice === null && rightPrice !== null) return 1;
+          if (leftPrice !== null && rightPrice === null) return -1;
+          if (leftPrice !== null && rightPrice !== null && leftPrice !== rightPrice) {
+            return selectedSort.value === 'price-asc'
+              ? leftPrice - rightPrice
+              : rightPrice - leftPrice;
+          }
+        }
+
+        // Every card in this view shares a release date, so release sorting
+        // intentionally falls back to the stable printed set order.
+        return compareCardNumbers(a.number, b.number) || a.variant_id.localeCompare(b.variant_id);
+      });
   });
 
 
@@ -177,6 +255,14 @@
   // Returns sorted unique string values.
   const uniqueValues = (values: string[]): string[] => {
     return [...new Set(values.filter(Boolean))].sort();
+  };
+
+  const updateBackToTopVisibility = (): void => {
+    showBackToTop.value = window.scrollY > 200;
+  };
+
+  const scrollToTop = (): void => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   // Stores the current set region and returns to the existing series history
@@ -200,4 +286,13 @@
   const goToCard = (card: DisplayCard): void => {
     router.push({ path: `/set/${setId}/card/${card.card_id}`, query: { variant: card.variant_id } });
   };
+
+  onMounted(() => {
+    updateBackToTopVisibility();
+    window.addEventListener('scroll', updateBackToTopVisibility, { passive: true });
+  });
+
+  onBeforeUnmount(() => {
+    window.removeEventListener('scroll', updateBackToTopVisibility);
+  });
 </script>

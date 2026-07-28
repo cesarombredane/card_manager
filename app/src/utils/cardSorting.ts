@@ -1,4 +1,5 @@
 export type CardSort =
+  | 'set-order'
   | 'release-desc'
   | 'release-asc'
   | 'pokedex-asc'
@@ -13,4 +14,9 @@ export const cardSortOptions: Array<{ label: string; value: CardSort }> = [
   { label: 'Pokédex number: highest first', value: 'pokedex-desc' },
   { label: 'Price: cheapest first', value: 'price-asc' },
   { label: 'Price: most expensive first', value: 'price-desc' }
+];
+
+export const setCardSortOptions: Array<{ label: string; value: CardSort }> = [
+  { label: 'Set order', value: 'set-order' },
+  ...cardSortOptions
 ];

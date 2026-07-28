@@ -1,7 +1,7 @@
 <template>
   <q-select
     :model-value="modelValue"
-    :options="cardSortOptions"
+    :options="options"
     emit-value
     map-options
     dark
@@ -13,9 +13,17 @@
 </template>
 
 <script setup lang="ts">
-  import { cardSortOptions } from '../utils/cardSorting';
+  import { computed } from 'vue';
+  import { cardSortOptions, setCardSortOptions } from '../utils/cardSorting';
   import type { CardSort } from '../utils/cardSorting';
 
-  defineProps<{ modelValue: CardSort }>();
+  const props = withDefaults(defineProps<{
+    modelValue: CardSort;
+    includeSetOrder?: boolean;
+  }>(), {
+    includeSetOrder: false
+  });
   defineEmits<{ 'update:modelValue': [value: CardSort] }>();
+
+  const options = computed(() => props.includeSetOrder ? setCardSortOptions : cardSortOptions);
 </script>

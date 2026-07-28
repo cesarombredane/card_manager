@@ -69,6 +69,9 @@
         <q-checkbox v-model="includeSpecialForms" dark label="Include regional and Mega forms" />
       </div>
       <div class="col-12 col-sm-auto">
+        <q-checkbox v-model="onlyMyCards" dark label="Only my cards" />
+      </div>
+      <div class="col-12 col-sm-auto">
         <q-btn
           :icon="advancedFiltersOpen ? 'expand_less' : 'tune'"
           :label="advancedFiltersOpen ? 'Hide advanced filters' : 'Advanced filters'"
@@ -128,6 +131,17 @@
             label="Rarities"
           >
             <template #append>
+              <q-btn
+                aria-label="Select all rarities"
+                :disable="selectedRarities.length === rarityOptions.length"
+                dense
+                flat
+                round
+                icon="select_all"
+                @click.stop="selectAllRarities"
+              >
+                <q-tooltip>Select all rarities</q-tooltip>
+              </q-btn>
               <q-btn
                 aria-label="Clear all rarities"
                 :disable="selectedRarities.length === 0"
@@ -193,6 +207,8 @@
   import { uniqueValues } from '../utils/arrayUtils';
   import type { AppState, CardSearchFilters, CardSearchRegion } from '../store';
   import type { CardSort } from '../utils/cardSorting';
+  import { collectionStore } from '../utils/collection';
+  import { manualImageStore } from '../utils/manualImages';
 
 
   /* constant vars */
@@ -236,6 +252,13 @@
     sets.filter((set) => set.series_id.startsWith('asia-')).map((set) => set.id)
   );
   const pokedexByPokemonId = new Map<string, number>(pokemon.map((entry) => [entry.id, entry.pokedex_id]));
+  const pokemonIdByName = new Map<string, string>(
+    pokemon.flatMap((entry) =>
+      [entry.name, ...Object.values(entry.names)]
+        .filter((name): name is string => Boolean(name))
+        .map((name) => [name.toLocaleLowerCase(), entry.id] as const)
+    )
+  );
 
 
   /* methods */
@@ -281,6 +304,9 @@
   // Whether regional and Mega forms are available in Pokemon results.
   const includeSpecialForms = ref<boolean>(storedFilters.include_special_forms);
 
+  // Whether results are limited to cards currently owned by the user.
+  const onlyMyCards = ref<boolean>(storedFilters.only_my_cards ?? false);
+
   // Catalog region currently included in results.
   const selectedRegion = ref<CardSearchRegion>(storedFilters.region);
 
@@ -318,6 +344,12 @@
       value: entry.id,
       searchNames: uniqueValues(Object.values(entry.names).filter((name): name is string => Boolean(name)))
     })));
+
+  // Keep the complete option objects available on initial/deep-linked loads so
+  // QSelect can resolve a stored Pokémon id to its human-readable label.
+  watch(pokemonOptions, (options): void => {
+    filteredPokemonOptions.value = options;
+  }, { immediate: true });
 
   // Index of the selected base species in Pokedex order.
   const selectedPokemonIndex = computed<number>(() => pokemonOptions.value.findIndex((option) => option.value === selectedPokemon.value));
@@ -359,18 +391,86 @@
     return card.variants.map((variant) => buildDisplayCard(card, variant, languageId, setName));
   }));
 
+  // Catalog variants represented by at least one owned (non-wanted) entry.
+  const ownedCatalogCardKeys = computed<globalThis.Set<string>>(() => new Set(
+    collectionStore.entries.value
+      .filter((entry) => !entry.wanted && entry.set_id !== 'manual-collection')
+      .map((entry) => `${entry.set_id}:${entry.card_id}:${entry.variant_id}`)
+  ));
+
+  // User-created cards have no catalog record, so build their search rows from
+  // the manual card and collection entry data.
+  const ownedManualCards = computed<DisplayCard[]>(() => {
+    const seen = new Set<string>();
+
+    return collectionStore.entries.value.flatMap((entry): DisplayCard[] => {
+      if (entry.wanted || entry.set_id !== 'manual-collection') return [];
+      const key = `${entry.card_id}:${entry.variant_id}:${entry.language_id}`;
+      if (seen.has(key)) return [];
+      seen.add(key);
+
+      const manualCard = collectionStore.manualCards.value.find((card) => card.id === entry.card_id);
+      if (!manualCard) return [];
+      const image = manualImageStore.find(
+        'manual-collection',
+        manualCard.id,
+        entry.variant_id,
+        entry.language_id
+      );
+
+      return [{
+        id: `manual-collection-${manualCard.id}-${entry.variant_id}-${entry.language_id}`,
+        card_id: manualCard.id,
+        set_id: 'manual-collection',
+        set_name: manualCard.set_name || null,
+        language_id: entry.language_id,
+        variant_id: entry.variant_id,
+        number: manualCard.number || '?',
+        display_name: manualCard.name,
+        category: manualCard.category,
+        rarity: manualCard.rarity,
+        hp: manualCard.hp,
+        illustrator: manualCard.illustrator || null,
+        types: manualCard.types,
+        pokemon_names: manualCard.pokemon_name
+          ? [pokemonIdByName.get(manualCard.pokemon_name.toLocaleLowerCase()) ?? manualCard.pokemon_name]
+          : [],
+        energy_costs: [],
+        image_url: image?.url ?? null,
+        image_language_id: image?.language_id ?? null,
+        image_is_fallback: false,
+        image_source: image ? 'manual' : null,
+        cardmarket: null,
+        is_manual: true,
+        estimated_value: manualCard.estimated_value
+      }];
+    });
+  });
+
   // Cards matching the search text and selected filters.
   const filteredCards = computed<DisplayCard[]>(() => {
     const query: string = search.value.trim().toLowerCase();
+    const searchableCards = onlyMyCards.value
+      ? [
+          ...allCards.value.filter((card) =>
+            ownedCatalogCardKeys.value.has(`${card.set_id}:${card.card_id}:${card.variant_id}`)
+          ),
+          ...ownedManualCards.value
+        ]
+      : allCards.value;
 
-    return allCards.value
+    return searchableCards
       .filter((card) => selectedRegion.value === 'all'
+        || card.is_manual
         || (selectedRegion.value === 'asia' ? asiaSetIds.has(card.set_id) : !asiaSetIds.has(card.set_id)))
       .filter((card) => query === '' || card.display_name.toLowerCase().includes(query))
       .filter((card) => !selectedArtist.value || card.illustrator === selectedArtist.value)
       .filter((card) => !selectedPokemon.value || card.pokemon_names.some((pokemonId) => selectedPokemonIds.value.has(pokemonId)))
       .filter((card) => !selectedEnergy.value || card.types.includes(selectedEnergy.value))
-      .filter((card) => selectedRarities.value.includes(card.rarity))
+      .filter((card) =>
+        selectedRarities.value.includes(card.rarity)
+        || (card.is_manual && !rarityOptions.includes(card.rarity))
+      )
       .sort((a, b) => {
         if (selectedSort.value === 'pokedex-asc' || selectedSort.value === 'pokedex-desc') {
           const leftNumbers = a.pokemon_names
@@ -390,8 +490,8 @@
           }
         }
         if (selectedSort.value === 'price-asc' || selectedSort.value === 'price-desc') {
-          const leftPrice = cardmarketDisplayPrice(a.cardmarket);
-          const rightPrice = cardmarketDisplayPrice(b.cardmarket);
+          const leftPrice = a.is_manual ? a.estimated_value ?? null : cardmarketDisplayPrice(a.cardmarket);
+          const rightPrice = b.is_manual ? b.estimated_value ?? null : cardmarketDisplayPrice(b.cardmarket);
           if (leftPrice === null && rightPrice !== null) return 1;
           if (leftPrice !== null && rightPrice === null) return -1;
           if (leftPrice !== null && rightPrice !== null && leftPrice !== rightPrice) {
@@ -463,6 +563,7 @@
     selectedRarities,
     selectedSort,
     includeSpecialForms,
+    onlyMyCards,
     selectedRegion
   ], (): void => {
     visibleCardCount.value = initialVisibleCardCount;
@@ -479,6 +580,7 @@
     selectedRarities,
     selectedSort,
     includeSpecialForms,
+    onlyMyCards,
     selectedRegion,
     advancedFiltersOpen
   ], (): void => {
@@ -490,6 +592,7 @@
       rarities: [...selectedRarities.value],
       sort: selectedSort.value,
       include_special_forms: includeSpecialForms.value,
+      only_my_cards: onlyMyCards.value,
       region: selectedRegion.value,
       international_language_id: selectedInternationalLanguageId.value,
       asia_language_id: selectedAsiaLanguageId.value,
@@ -542,6 +645,11 @@
     selectedRarities.value = [];
   };
 
+  // Selects every rarity represented in the card catalog.
+  const selectAllRarities = (): void => {
+    selectedRarities.value = [...rarityOptions];
+  };
+
   // Increases the number of rendered card results.
   const showMoreCards = (): void => {
     visibleCardCount.value += visibleCardStep;
@@ -549,6 +657,7 @@
 
   // Opens the detail page for a card from its set.
   const goToCard = (card: DisplayCard): void => {
+    if (card.is_manual) return;
     router.push({
       path: `/set/${card.set_id}/card/${card.card_id}`,
       query: { variant: card.variant_id, from: 'search' }

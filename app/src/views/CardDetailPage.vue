@@ -128,6 +128,9 @@
                       {{ localizedValue(currentSet.name, selectedLanguageId) ?? currentSet.id }}
                     </router-link>
                   </q-item-label>
+                  <q-item-label v-if="currentSet" caption class="text-grey-4">
+                    Released {{ formatFrenchDate(currentSet.release_date) }}
+                  </q-item-label>
                 </q-item-section>
               </q-item>
 
@@ -184,7 +187,7 @@
                   <q-item-label>
                     <template v-if="currentCard?.pokemon?.length">
                       <router-link v-for="(pokemon, index) in currentCard.pokemon" :key="pokemon" :to="{ path: '/cards/search', query: { pokemon } }" class="text-white">
-                        {{ pokemonName(pokemon) }}<span v-if="index < currentCard.pokemon.length - 1" class="text-white">, </span>
+                        {{ pokemonNames(pokemon) }}<span v-if="index < currentCard.pokemon.length - 1" class="text-white">, </span>
                       </router-link>
                     </template>
                     <span v-else>No linked Pokemon</span>
@@ -449,10 +452,14 @@
     return currentCard?.evolves_from ? localizedValue(currentCard.evolves_from, selectedLanguageId.value) : null;
   });
 
-  // Resolves a standardized Pokemon id for display in the selected language.
-  const pokemonName = (pokemonId: string): string => {
+  // Always displays both supported names so the species remains unambiguous
+  // regardless of the currently selected card language.
+  const pokemonNames = (pokemonId: string): string => {
     const pokemon = pokemonById.get(pokemonId);
-    return pokemon ? localizedValue(pokemon.names, selectedLanguageId.value) ?? pokemon.name : pokemonId;
+    if (!pokemon) return pokemonId;
+    const englishName = localizedValue(pokemon.names, 'en') ?? pokemon.name;
+    const frenchName = localizedValue(pokemon.names, 'fr') ?? 'Unavailable';
+    return `English: ${englishName} · French: ${frenchName}`;
   };
 
   // Localized trainer rules text.
