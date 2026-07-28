@@ -14,7 +14,16 @@
 
     <section class="row q-col-gutter-md items-center q-mb-md">
       <div class="col-12 col-sm-6 col-md-4">
-        <q-input v-model="search" dark dense outlined clearable debounce="150" label="Search a card by name">
+        <q-input
+          v-model="search"
+          dark
+          dense
+          outlined
+          clearable
+          debounce="150"
+          label="Search a card by name"
+          @clear="search = ''"
+        >
           <template #prepend>
             <q-icon name="search" />
           </template>
