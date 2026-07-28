@@ -179,11 +179,20 @@
     return [...new Set(values.filter(Boolean))].sort();
   };
 
-  // Stores the current set region and navigates back to the series page.
+  // Stores the current set region and returns to the existing series history
+  // entry so Vue Router can restore its saved scroll position.
   const goBackToSeries = (): void => {
     if (currentSeries) {
       store.commit('set_selected_region_id', currentSeries.region_id);
     }
+
+    const previousPath = window.history.state?.back;
+    if (typeof previousPath === 'string' && previousPath.split(/[?#]/, 1)[0] === '/series') {
+      router.back();
+      return;
+    }
+
+    // A directly opened or refreshed set page has no series entry to restore.
     router.push('/series');
   };
 
