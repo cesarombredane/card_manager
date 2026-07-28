@@ -19,7 +19,13 @@
         </div>
         <div class="col-12 col-sm-4"><q-input v-model.number="quantity" type="number" min="1" dark outlined label="Quantity" /></div>
         <div class="col-12 col-sm-4">
-          <q-select v-model="folderId" :options="folderOptions" emit-value map-options dark outlined label="Collection" />
+          <collection-folder-select
+            v-model="folderId"
+            :folders="collectionStore.folders.value"
+            dark
+            outlined
+            label="Collection"
+          />
         </div>
         <div class="col-12 col-sm-4"><q-select v-model="category" :options="categoryOptions" dark outlined label="Category" /></div>
         <div class="col-12 col-sm-4"><q-input v-model="rarity" dark outlined label="Rarity" /></div>
@@ -67,14 +73,15 @@
 
 <script setup lang="ts">
   import { computed, ref, watch } from 'vue';
-  import { cardConditions, collectionStore, mainFolderId } from '../utils/collection';
+  import { cardConditions, collectionStore } from '../utils/collection';
   import type { CardCondition, CollectionEntry, ManualCollectionCard } from '../utils/collection';
   import { getLanguages } from '../utils/dataManagement';
   import { manualImageStore } from '../utils/manualImages';
   import { parseFrenchDate } from '../utils/dates';
+  import CollectionFolderSelect from './CollectionFolderSelect.vue';
 
   const props = withDefaults(defineProps<{ modelValue: boolean; initialFolderId?: string }>(), {
-    initialFolderId: mainFolderId
+    initialFolderId: ''
   });
   const emit = defineEmits<{
     'update:modelValue': [value: boolean];
@@ -109,16 +116,16 @@
   const saving = ref(false);
   const pendingCreated = ref<{ card: ManualCollectionCard; entry: CollectionEntry } | null>(null);
 
-  const folderOptions = computed(() => collectionStore.folders.value.map((folder) => ({ label: folder.name, value: folder.id })));
   const languageOptions = getLanguages().map((language) => ({ label: language.name, value: language.id }));
   const conditionOptions = cardConditions.map((entry) => ({ ...entry }));
   const categoryOptions = ['pokemon', 'trainer', 'energy'];
 
   watch(isOpen, (open) => {
     if (!open) return;
+    const defaultFolder = collectionStore.ensureDefaultFolder();
     folderId.value = collectionStore.folders.value.some((folder) => folder.id === props.initialFolderId)
       ? props.initialFolderId
-      : mainFolderId;
+      : defaultFolder.id;
     saveError.value = null;
   });
 

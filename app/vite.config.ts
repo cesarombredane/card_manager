@@ -8,7 +8,7 @@ import AdmZip from 'adm-zip';
 const collectionPath = resolve(__dirname, 'data/collection.json');
 const emptyCollection = {
   version: 2,
-  folders: [{ id: 'main', name: 'Main collection', created_at: new Date().toISOString() }],
+  folders: [],
   entries: [],
   manual_cards: []
 };

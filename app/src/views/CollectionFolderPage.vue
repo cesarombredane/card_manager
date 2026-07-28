@@ -26,7 +26,16 @@
 
     <section v-if="folder" class="row q-col-gutter-md items-center q-mb-md">
       <div class="col-12 col-sm-6 col-md-3">
-        <q-input v-model="search" dark dense outlined clearable debounce="150" label="Search cards by name">
+        <q-input
+          v-model="search"
+          dark
+          dense
+          outlined
+          clearable
+          debounce="150"
+          label="Search cards by name"
+          @clear="search = ''"
+        >
           <template #prepend><q-icon name="search" /></template>
         </q-input>
       </div>
@@ -51,6 +60,7 @@
       </div>
       <div class="col-12 col-md-auto">
         <q-btn
+          v-if="folder.type === 'binder'"
           outline
           color="primary"
           icon="auto_stories"
@@ -113,7 +123,7 @@
         icon="drive_file_move"
         label="Move to collection"
         no-caps
-        :disable="selectedEntryIds.size === 0 || destinationOptions.length === 0"
+        :disable="selectedEntryIds.size === 0 || destinationFolders.length === 0"
         @click="openTransferDialog"
       />
     </section>
@@ -166,11 +176,9 @@
           </div>
         </q-card-section>
         <q-card-section>
-          <q-select
+          <collection-folder-select
             v-model="transferFolderId"
-            :options="destinationOptions"
-            emit-value
-            map-options
+            :folders="destinationFolders"
             dark
             outlined
             label="Destination collection"
@@ -270,7 +278,13 @@
             <q-select v-model="editCondition" :options="conditionOptions" emit-value map-options dark outlined label="Condition" />
           </div>
           <div class="col-12" :class="{ 'col-sm-6': editingManualCard }">
-            <q-select v-model="editFolderId" :options="folderOptions" emit-value map-options dark outlined label="Collection" />
+            <collection-folder-select
+              v-model="editFolderId"
+              :folders="collectionStore.folders.value"
+              dark
+              outlined
+              label="Collection"
+            />
           </div>
         </q-card-section>
         <q-card-actions align="right">
@@ -317,6 +331,7 @@
   import CardList from '../components/CardList.vue';
   import ManualCardDialog from '../components/ManualCardDialog.vue';
   import CardSortSelector from '../components/CardSortSelector.vue';
+  import CollectionFolderSelect from '../components/CollectionFolderSelect.vue';
   import { buildDisplayCard, cardmarketDisplayPrice, formatEuroPrice } from '../utils/cardDisplay';
   import type { DisplayCard } from '../utils/cardDisplay';
   import { getCardById, getLanguages, getPokemon, getSetById } from '../utils/dataManagement';
@@ -383,11 +398,9 @@
   const folder = computed<CollectionFolder | null>(() =>
     collectionStore.folders.value.find((candidate) => candidate.id === folderId.value) ?? null
   );
-  const folderOptions = computed(() => collectionStore.folders.value.map((candidate) => ({
-    label: candidate.name,
-    value: candidate.id
-  })));
-  const destinationOptions = computed(() => folderOptions.value.filter((option) => option.value !== folderId.value));
+  const destinationFolders = computed(() =>
+    collectionStore.folders.value.filter((candidate) => candidate.id !== folderId.value)
+  );
   const languageNames = new Map(getLanguages().map((language) => [language.id, language.name]));
   const allLanguageOptions = getLanguages().map((language) => ({
     label: language.name,
@@ -585,7 +598,7 @@
   };
 
   const openTransferDialog = (): void => {
-    transferFolderId.value = destinationOptions.value[0]?.value ?? '';
+    transferFolderId.value = destinationFolders.value[0]?.id ?? '';
     showTransferDialog.value = true;
   };
 

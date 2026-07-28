@@ -12,6 +12,9 @@
       {{ binderStore.saveError.value }}
     </q-banner>
     <q-banner v-if="!folder" class="bg-grey-10 text-grey-4">This collection does not exist.</q-banner>
+    <q-banner v-else-if="folder.type !== 'binder'" class="bg-grey-10 text-grey-4">
+      Binder options are only available for collections configured as binders.
+    </q-banner>
 
     <div v-else-if="binder" class="row q-col-gutter-lg items-start">
       <aside class="col-12 col-lg-3">
@@ -328,7 +331,9 @@
   const folderId = computed(() => String(route.params.folderId ?? ''));
   const folder = computed(() => collectionStore.folders.value.find((candidate) => candidate.id === folderId.value) ?? null);
   const binder = computed(() => binderStore.get(folderId.value));
-  const showCreateDialog = computed(() => Boolean(folder.value && binderStore.isReady.value && !binder.value));
+  const showCreateDialog = computed(() => Boolean(
+    folder.value?.type === 'binder' && binderStore.isReady.value && !binder.value
+  ));
   const showSettings = ref(false);
   const newPageCount = ref(20);
   const newLayout = ref<BinderLayout>('3x3');

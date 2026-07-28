@@ -16,11 +16,9 @@
       </q-card-section>
 
       <q-card-section class="column q-gutter-md">
-        <q-select
+        <collection-folder-select
           v-model="folderId"
-          :options="folderOptions"
-          emit-value
-          map-options
+          :folders="collectionStore.folders.value"
           dark
           outlined
           label="Collection"
@@ -54,7 +52,8 @@
 
 <script setup lang="ts">
   import { computed, ref, watch } from 'vue';
-  import { collectionStore, mainFolderId } from '../utils/collection';
+  import { collectionStore } from '../utils/collection';
+  import CollectionFolderSelect from './CollectionFolderSelect.vue';
 
   const props = defineProps<{
     modelValue: boolean;
@@ -73,18 +72,11 @@
     get: () => props.modelValue,
     set: (value: boolean) => emit('update:modelValue', value)
   });
-  const folderId = ref(mainFolderId);
+  const folderId = ref('');
   const quantity = ref(1);
-  const folderOptions = computed(() => collectionStore.folders.value.map((folder) => ({
-    label: folder.name,
-    value: folder.id
-  })));
-
   watch(isOpen, (open) => {
     if (!open) return;
-    folderId.value = collectionStore.folders.value.some((folder) => folder.id === mainFolderId)
-      ? mainFolderId
-      : collectionStore.folders.value[0]?.id ?? '';
+    folderId.value = collectionStore.ensureDefaultFolder().id;
     quantity.value = 1;
   }, { immediate: true });
 

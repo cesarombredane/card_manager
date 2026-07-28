@@ -16,14 +16,12 @@
       </q-card-section>
 
       <q-card-section class="column q-gutter-md">
-        <q-select
+        <collection-folder-select
           v-model="folderId"
-          :options="folderOptions"
-          emit-value
-          map-options
+          :folders="collectionStore.folders.value"
           dark
           outlined
-          label="Folder"
+          label="Collection"
           :disable="!collectionStore.isFileConnected.value"
         />
         <q-select
@@ -50,9 +48,10 @@
 <script setup lang="ts">
   import { computed, ref, watch } from 'vue';
   import { useStore } from 'vuex';
-  import { cardConditions, collectionStore, mainFolderId } from '../utils/collection';
+  import { cardConditions, collectionStore } from '../utils/collection';
   import type { CardCondition } from '../utils/collection';
   import type { AppState } from '../store';
+  import CollectionFolderSelect from './CollectionFolderSelect.vue';
 
   const props = defineProps<{
     modelValue: boolean;
@@ -76,10 +75,6 @@
   const condition = ref<CardCondition>('NM');
   const quantity = ref(1);
 
-  const folderOptions = computed(() => collectionStore.folders.value.map((folder) => ({
-    label: folder.name,
-    value: folder.id
-  })));
   const conditionOptions = cardConditions.map((entry) => ({ ...entry }));
 
   watch(
@@ -87,9 +82,10 @@
     ([open, connected]) => {
       if (!open || !connected) return;
       const rememberedFolderId = store.state.last_collection_folder_id;
+      const defaultFolder = collectionStore.ensureDefaultFolder();
       folderId.value = collectionStore.folders.value.some((folder) => folder.id === rememberedFolderId)
         ? rememberedFolderId
-        : mainFolderId;
+        : defaultFolder.id;
     },
     { immediate: true }
   );

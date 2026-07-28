@@ -13,9 +13,12 @@ export const cardConditions = [
 
 export type CardCondition = typeof cardConditions[number]['value'];
 
+export type CollectionFolderType = 'box' | 'binder';
+
 export type CollectionFolder = {
   id: string;
   name: string;
+  type: CollectionFolderType;
   created_at: string;
 };
 
@@ -58,11 +61,12 @@ type CollectionData = {
   manual_cards: ManualCollectionCard[];
 };
 
-export const mainFolderId = 'main';
+const legacyMainFolderId = 'main';
+const migratedDefaultFolderId = 'default-collection';
 
 const defaultData = (): CollectionData => ({
   version: 2,
-  folders: [{ id: mainFolderId, name: 'Main collection', created_at: new Date().toISOString() }],
+  folders: [],
   entries: [],
   manual_cards: []
 });
@@ -96,11 +100,25 @@ const normalizeData = (parsed: Partial<CollectionData>): CollectionData => {
   if (!Array.isArray(parsed.folders) || !Array.isArray(parsed.entries)) {
     throw new Error('The selected file is not a valid Card Manager collection');
   }
-  const folders = parsed.folders.some((folder) => folder.id === mainFolderId)
-    ? parsed.folders
-    : [defaultData().folders[0], ...parsed.folders];
+  const folders = parsed.folders
+    .filter((folder) => folder.id !== legacyMainFolderId)
+    .map((folder) => ({
+    ...folder,
+    type: folder.type === 'box' ? 'box' as const : 'binder' as const
+  }));
+  let defaultFolder = folders.find((folder) => folder.type === 'box') ?? folders[0];
+  if (parsed.entries.some((entry) => entry.folder_id === legacyMainFolderId) && !defaultFolder) {
+    defaultFolder = {
+      id: migratedDefaultFolderId,
+      name: 'Default collection',
+      type: 'box',
+      created_at: new Date().toISOString()
+    };
+    folders.push(defaultFolder);
+  }
   const entries = parsed.entries.map((entry) => ({
     ...entry,
+    folder_id: entry.folder_id === legacyMainFolderId ? defaultFolder?.id ?? entry.folder_id : entry.folder_id,
     language_id: entry.language_id || (entry.set_id.startsWith('asia-') ? 'ja' : 'en'),
     wanted: entry.wanted === true
   }));
@@ -163,10 +181,29 @@ const collectionDelta = (before: CollectionData, after: CollectionData): {
 const loadFile = async (): Promise<void> => {
   const response = await fetch('/api/collection');
   if (!response.ok) throw new Error(`Unable to load collection.json (${response.status})`);
-  replaceData(normalizeData(await response.json() as Partial<CollectionData>));
+  const parsed = await response.json() as Partial<CollectionData>;
+  const normalized = normalizeData(parsed);
+  const needsFolderMigration = JSON.stringify(parsed.folders) !== JSON.stringify(normalized.folders)
+    || JSON.stringify(parsed.entries) !== JSON.stringify(normalized.entries);
+  replaceData(normalized);
   queuedSnapshot = snapshot();
   isReady.value = true;
   saveError.value = null;
+
+  if (needsFolderMigration) {
+    const beforeMigration: CollectionData = {
+      ...normalized,
+      folders: parsed.folders as CollectionFolder[],
+      entries: parsed.entries as CollectionEntry[]
+    };
+    setTimeout(() => {
+      void writeOperation(beforeMigration, normalized)
+        .then(() => collectionChannel?.postMessage('changed'))
+        .catch((error: unknown) => {
+          saveError.value = error instanceof Error ? error.message : String(error);
+        });
+    }, 0);
+  }
 };
 
 const loadPromise = loadFile().catch((error: unknown) => {
@@ -235,10 +272,11 @@ export const collectionStore = {
     return wantedKeys.value.has(`${setId}:${cardId}:${variantId}:${languageId}`);
   },
 
-  createFolder(name: string): CollectionFolder {
+  createFolder(name: string, type: CollectionFolderType): CollectionFolder {
     const folder: CollectionFolder = {
       id: newId('folder'),
       name: name.trim(),
+      type,
       created_at: new Date().toISOString()
     };
     if (!folder.name) throw new Error('Folder name is required');
@@ -254,16 +292,34 @@ export const collectionStore = {
     persist();
   },
 
+  updateFolder(folderId: string, name: string, type: CollectionFolderType): void {
+    const folder = state.folders.find((candidate) => candidate.id === folderId);
+    if (!folder || !name.trim()) return;
+    folder.name = name.trim();
+    folder.type = type;
+    persist();
+  },
+
   deleteFolder(folderId: string): void {
-    if (folderId === mainFolderId) return;
     const folderIndex = state.folders.findIndex((folder) => folder.id === folderId);
     if (folderIndex === -1) return;
-    this.transferEntries(
-      state.entries.filter((candidate) => candidate.folder_id === folderId).map((entry) => entry.id),
-      mainFolderId
-    );
+    if (state.entries.some((candidate) => candidate.folder_id === folderId)) return;
     state.folders.splice(folderIndex, 1);
     persist();
+  },
+
+  ensureDefaultFolder(): CollectionFolder {
+    const existing = state.folders[0];
+    if (existing) return existing;
+    const folder: CollectionFolder = {
+      id: newId('folder'),
+      name: 'Default collection',
+      type: 'box',
+      created_at: new Date().toISOString()
+    };
+    state.folders.push(folder);
+    persist();
+    return folder;
   },
 
   addCards(input: {

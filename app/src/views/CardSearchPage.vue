@@ -177,6 +177,18 @@
           />
         </div>
         <div class="col-12 col-sm-6 col-md-4">
+          <q-input
+            v-model="setNumber"
+            dark
+            dense
+            outlined
+            clearable
+            label="Set number"
+            hint="For example: 25 or TG01"
+            @clear="setNumber = ''"
+          />
+        </div>
+        <div class="col-12 col-sm-6 col-md-4">
           <card-sort-selector v-model="selectedSort" />
         </div>
       </section>
@@ -303,6 +315,9 @@
 
   // Selected energy/type filter for Pokemon cards.
   const selectedEnergy = ref<string | null>(queryValue('energy') ?? storedFilters.energy);
+
+  // Exact printed card number filter.
+  const setNumber = ref<string>(storedFilters.set_number ?? '');
 
   // Selected rarity filters. The complete catalog is visible by default.
   const selectedRarities = ref<string[]>(storedFilters.rarities ? [...storedFilters.rarities] : [...rarityOptions]);
@@ -459,6 +474,7 @@
   // Cards matching the search text and selected filters.
   const filteredCards = computed<DisplayCard[]>(() => {
     const query: string = search.value.trim().toLowerCase();
+    const numberQuery: string = setNumber.value.trim().toLowerCase().replace(/^#/, '');
     const searchableCards = onlyMyCards.value
       ? [
           ...allCards.value.filter((card) =>
@@ -476,6 +492,7 @@
       .filter((card) => !selectedArtist.value || card.illustrator === selectedArtist.value)
       .filter((card) => !selectedPokemon.value || card.pokemon_names.some((pokemonId) => selectedPokemonIds.value.has(pokemonId)))
       .filter((card) => !selectedEnergy.value || card.types.includes(selectedEnergy.value))
+      .filter((card) => numberQuery === '' || card.number.toLowerCase().replace(/^#/, '') === numberQuery)
       .filter((card) =>
         selectedRarities.value.includes(card.rarity)
         || (card.is_manual && !rarityOptions.includes(card.rarity))
@@ -569,6 +586,7 @@
     selectedArtist,
     selectedPokemon,
     selectedEnergy,
+    setNumber,
     selectedRarities,
     selectedSort,
     includeSpecialForms,
@@ -586,6 +604,7 @@
     selectedArtist,
     selectedPokemon,
     selectedEnergy,
+    setNumber,
     selectedRarities,
     selectedSort,
     includeSpecialForms,
@@ -598,6 +617,7 @@
       artist: selectedArtist.value,
       pokemon: selectedPokemon.value,
       energy: selectedEnergy.value,
+      set_number: setNumber.value,
       rarities: [...selectedRarities.value],
       sort: selectedSort.value,
       include_special_forms: includeSpecialForms.value,
