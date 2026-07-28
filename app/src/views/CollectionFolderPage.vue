@@ -99,6 +99,15 @@
       <q-space />
       <span class="text-body2 text-grey-4">{{ selectedEntryIds.size }} selected</span>
       <q-btn
+        outline
+        color="primary"
+        icon="edit"
+        label="Edit selected"
+        no-caps
+        :disable="selectedEntryIds.size === 0"
+        @click="openBulkEditDialog"
+      />
+      <q-btn
         color="primary"
         text-color="black"
         icon="drive_file_move"
@@ -165,6 +174,39 @@
             label="Move cards"
             :disable="!transferFolderId"
             @click="confirmBulkTransfer"
+          />
+        </q-card-actions>
+      </q-card>
+    </q-dialog>
+
+    <q-dialog v-model="showBulkEditDialog">
+      <q-card class="bg-grey-10 text-white" style="width: 480px; max-width: 94vw">
+        <q-card-section>
+          <div class="text-h6">Edit selected cards</div>
+          <div class="text-body2 text-grey-4">
+            Change the language of {{ selectedEntryIds.size }} selected
+            {{ selectedEntryIds.size === 1 ? 'entry' : 'entries' }}.
+          </div>
+        </q-card-section>
+        <q-card-section>
+          <q-select
+            v-model="bulkEditLanguageId"
+            :options="allLanguageOptions"
+            emit-value
+            map-options
+            dark
+            outlined
+            label="Language"
+          />
+        </q-card-section>
+        <q-card-actions align="right">
+          <q-btn flat color="grey-4" label="Cancel" v-close-popup />
+          <q-btn
+            color="primary"
+            text-color="black"
+            label="Apply changes"
+            :disable="!bulkEditLanguageId"
+            @click="confirmBulkEdit"
           />
         </q-card-actions>
       </q-card>
@@ -296,6 +338,8 @@
   const selectedEntryIds = ref(new Set<string>());
   const showTransferDialog = ref(false);
   const transferFolderId = ref('');
+  const showBulkEditDialog = ref(false);
+  const bulkEditLanguageId = ref('');
   const entryToDelete = ref<CollectionRow | null>(null);
   const showManualCardDialog = ref(false);
   const showEditDialog = ref(false);
@@ -333,6 +377,10 @@
   })));
   const destinationOptions = computed(() => folderOptions.value.filter((option) => option.value !== folderId.value));
   const languageNames = new Map(getLanguages().map((language) => [language.id, language.name]));
+  const allLanguageOptions = getLanguages().map((language) => ({
+    label: language.name,
+    value: language.id
+  }));
   const pokemon = getPokemon();
   const pokedexByPokemonId = new Map(pokemon.map((entry) => [entry.id, entry.pokedex_id]));
   const pokedexByPokemonName = new Map(pokemon.flatMap((entry) =>
@@ -533,6 +581,22 @@
     transferFolderId.value = '';
   };
 
+  const openBulkEditDialog = (): void => {
+    const selectedEntries = collectionStore.entries.value.filter((entry) => selectedEntryIds.value.has(entry.id));
+    const selectedLanguages = new Set(selectedEntries.map((entry) => entry.language_id));
+    bulkEditLanguageId.value = selectedLanguages.size === 1 ? selectedEntries[0]?.language_id ?? '' : '';
+    showBulkEditDialog.value = true;
+  };
+
+  const confirmBulkEdit = (): void => {
+    if (!bulkEditLanguageId.value) return;
+    collectionStore.updateEntriesLanguage([...selectedEntryIds.value], bulkEditLanguageId.value);
+    selectedEntryIds.value = new Set();
+    selectionMode.value = false;
+    showBulkEditDialog.value = false;
+    bulkEditLanguageId.value = '';
+  };
+
   const openEditEntry = (row: CollectionRow): void => {
     editingEntry.value = row;
     editQuantity.value = row.entry.quantity;
@@ -599,7 +663,7 @@
     }
     void router.push({
       path: `/set/${card.set_id}/card/${card.card_id}`,
-      query: { variant: card.variant_id }
+      query: { variant: card.variant_id, from: 'collection', folder: folderId.value }
     });
   };
 

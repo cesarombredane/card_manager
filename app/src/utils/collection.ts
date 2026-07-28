@@ -458,6 +458,40 @@ export const collectionStore = {
     return entries.length;
   },
 
+  updateEntriesLanguage(entryIds: string[], languageId: string): number {
+    if (!languageId) return 0;
+    const requestedIds = new Set(entryIds);
+    const entries = state.entries.filter((entry) => requestedIds.has(entry.id));
+    if (entries.length === 0) return 0;
+
+    const now = new Date().toISOString();
+    for (const entry of entries) {
+      // A previous merge in this batch may already have removed this entry.
+      if (!state.entries.includes(entry)) continue;
+      const matching = state.entries.find((candidate) =>
+        candidate.id !== entry.id
+        && candidate.folder_id === entry.folder_id
+        && candidate.set_id === entry.set_id
+        && candidate.card_id === entry.card_id
+        && candidate.variant_id === entry.variant_id
+        && candidate.language_id === languageId
+        && candidate.condition === entry.condition
+        && candidate.wanted === entry.wanted
+      );
+
+      if (matching) {
+        matching.quantity += entry.quantity;
+        matching.updated_at = now;
+        state.entries.splice(state.entries.indexOf(entry), 1);
+      } else {
+        entry.language_id = languageId;
+        entry.updated_at = now;
+      }
+    }
+    persist();
+    return entries.length;
+  },
+
   removeEntry(entryId: string): void {
     const index = state.entries.findIndex((entry) => entry.id === entryId);
     if (index === -1) return;

@@ -7,7 +7,7 @@
           dense
           color="grey-4"
           icon="arrow_back"
-          :label="openedFromSearch ? 'Back to search' : 'Back to set'"
+          :label="backButtonLabel"
           no-caps
           class="q-mb-sm"
           @click="goBack"
@@ -347,6 +347,18 @@
   // Whether this card detail was opened from the card search page.
   const openedFromSearch: boolean = route.query.from === 'search';
 
+  // Collection folder that opened this card detail, when applicable.
+  const collectionFolderId: string | null = route.query.from === 'collection'
+    && typeof route.query.folder === 'string'
+    ? route.query.folder
+    : null;
+
+  const backButtonLabel: string = openedFromSearch
+    ? 'Back to search'
+    : collectionFolderId
+      ? 'Back to collection'
+      : 'Back to set';
+
   // Selected set metadata.
   const currentSet: Set | null = getSetById(setId);
 
@@ -553,7 +565,11 @@
 
   // Navigates back to the page that opened this card detail.
   const goBack = (): void => {
-    const destinationPath = openedFromSearch ? '/cards/search' : `/set/${setId}`;
+    const destinationPath = openedFromSearch
+      ? '/cards/search'
+      : collectionFolderId
+        ? `/collection/folder/${collectionFolderId}`
+        : `/set/${setId}`;
 
     // Preserve the originating page's filters and scroll position when possible.
     if (String(window.history.state?.back ?? '').startsWith(destinationPath)) {
