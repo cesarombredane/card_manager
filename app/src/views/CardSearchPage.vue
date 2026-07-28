@@ -549,6 +549,9 @@
 
   // Opens the detail page for a card from its set.
   const goToCard = (card: DisplayCard): void => {
-    router.push({ path: `/set/${card.set_id}/card/${card.card_id}`, query: { variant: card.variant_id } });
+    router.push({
+      path: `/set/${card.set_id}/card/${card.card_id}`,
+      query: { variant: card.variant_id, from: 'search' }
+    });
   };
 </script>

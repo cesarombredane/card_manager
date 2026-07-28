@@ -2,7 +2,16 @@
   <q-page class="bg-dark text-white q-pa-md q-pa-lg-xl">
     <div class="column q-gutter-lg">
       <div>
-        <q-btn flat dense color="grey-4" icon="arrow_back" label="Back to set" no-caps class="q-mb-sm" @click="goBackToSet" />
+        <q-btn
+          flat
+          dense
+          color="grey-4"
+          icon="arrow_back"
+          :label="openedFromSearch ? 'Back to search' : 'Back to set'"
+          no-caps
+          class="q-mb-sm"
+          @click="goBack"
+        />
         <div class="text-overline text-yellow-6">
           Card detail
         </div>
@@ -332,6 +341,9 @@
   // Current card id read from the route.
   const cardId: string = String(route.params.cardId ?? '');
 
+  // Whether this card detail was opened from the card search page.
+  const openedFromSearch: boolean = route.query.from === 'search';
+
   // Selected set metadata.
   const currentSet: Set | null = getSetById(setId);
 
@@ -532,17 +544,17 @@
     }
   };
 
-  // Navigates back to the current set detail page.
-  const goBackToSet = (): void => {
-    const setPath = `/set/${setId}`;
+  // Navigates back to the page that opened this card detail.
+  const goBack = (): void => {
+    const destinationPath = openedFromSearch ? '/cards/search' : `/set/${setId}`;
 
-    // Preserve the set page's scroll position when this card was opened from it.
-    if (window.history.state?.back === setPath) {
+    // Preserve the originating page's filters and scroll position when possible.
+    if (String(window.history.state?.back ?? '').startsWith(destinationPath)) {
       router.back();
       return;
     }
 
-    router.push(setPath);
+    router.push(destinationPath);
   };
 </script>
 
