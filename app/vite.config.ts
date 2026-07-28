@@ -90,7 +90,173 @@ const writeManualImages = async (data: ManualImagesData): Promise<void> => {
 };
 
 const collectionApi = () => {
+  type CollectionEntity = Record<string, unknown> & { id: string };
+  type CollectionDocument = {
+    version: number;
+    folders: CollectionEntity[];
+    entries: CollectionEntity[];
+    manual_cards: CollectionEntity[];
+  };
+  let collectionWriteQueue: Promise<void> = Promise.resolve();
+
+  const readCollection = async (): Promise<CollectionDocument> => {
+    try {
+      const parsed = JSON.parse(await readFile(collectionPath, 'utf-8')) as CollectionDocument;
+      if (!Array.isArray(parsed.folders) || !Array.isArray(parsed.entries) || !Array.isArray(parsed.manual_cards)) {
+        throw new Error('Invalid collection JSON');
+      }
+      return parsed;
+    } catch (error) {
+      if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error;
+      return structuredClone(emptyCollection) as CollectionDocument;
+    }
+  };
+
+  const writeCollection = async (data: CollectionDocument): Promise<void> => {
+    await mkdir(dirname(collectionPath), { recursive: true });
+    const temporary = `${collectionPath}.tmp`;
+    await writeFile(temporary, `${JSON.stringify(data, null, 2)}\n`, 'utf-8');
+    await rename(temporary, collectionPath);
+  };
+
+  const sameEntity = (left: CollectionEntity, right: CollectionEntity): boolean =>
+    JSON.stringify(left) === JSON.stringify(right);
+
+  const applyEntityChanges = (
+    latest: CollectionEntity[],
+    before: CollectionEntity[],
+    after: CollectionEntity[]
+  ): void => {
+    const beforeById = new Map(before.map((entity) => [entity.id, entity]));
+    const afterById = new Map(after.map((entity) => [entity.id, entity]));
+
+    for (const id of beforeById.keys()) {
+      if (afterById.has(id)) continue;
+      const index = latest.findIndex((entity) => entity.id === id);
+      if (index !== -1) latest.splice(index, 1);
+    }
+
+    for (const entity of after) {
+      const previous = beforeById.get(entity.id);
+      if (previous && sameEntity(previous, entity)) continue;
+      const index = latest.findIndex((candidate) => candidate.id === entity.id);
+      if (index === -1) latest.push(structuredClone(entity));
+      else {
+        const merged = structuredClone(latest[index]);
+        for (const [key, value] of Object.entries(entity)) {
+          if (!previous || JSON.stringify(value) !== JSON.stringify(previous[key])) {
+            merged[key] = structuredClone(value);
+          }
+        }
+        latest[index] = merged;
+      }
+    }
+  };
+
+  const entryIdentity = (entry: CollectionEntity): string => [
+    entry.folder_id,
+    entry.set_id,
+    entry.card_id,
+    entry.variant_id,
+    entry.language_id,
+    entry.condition,
+    entry.wanted === true
+  ].join(':');
+
+  const applyEntryChanges = (
+    latest: CollectionEntity[],
+    before: CollectionEntity[],
+    after: CollectionEntity[]
+  ): void => {
+    const beforeById = new Map(before.map((entry) => [entry.id, entry]));
+    const afterById = new Map(after.map((entry) => [entry.id, entry]));
+
+    for (const id of beforeById.keys()) {
+      if (afterById.has(id)) continue;
+      const index = latest.findIndex((entry) => entry.id === id);
+      if (index !== -1) latest.splice(index, 1);
+    }
+
+    for (const entry of after) {
+      const previous = beforeById.get(entry.id);
+      if (previous && sameEntity(previous, entry)) continue;
+      const latestIndex = latest.findIndex((candidate) => candidate.id === entry.id);
+
+      if (!previous) {
+        const matching = latest.find((candidate) => entryIdentity(candidate) === entryIdentity(entry));
+        if (matching) {
+          matching.quantity = Number(matching.quantity ?? 0) + Number(entry.quantity ?? 0);
+          matching.updated_at = entry.updated_at;
+        } else {
+          latest.push(structuredClone(entry));
+        }
+        continue;
+      }
+
+      if (latestIndex === -1) {
+        latest.push(structuredClone(entry));
+        continue;
+      }
+
+      const quantityDelta = Number(entry.quantity ?? 0) - Number(previous.quantity ?? 0);
+      const merged = structuredClone(latest[latestIndex]);
+      for (const [key, value] of Object.entries(entry)) {
+        if (key !== 'quantity' && JSON.stringify(value) !== JSON.stringify(previous[key])) {
+          merged[key] = structuredClone(value);
+        }
+      }
+      merged.quantity = Math.max(1, Number(latest[latestIndex].quantity ?? 0) + quantityDelta);
+      latest[latestIndex] = merged;
+    }
+
+    // Language edits and transfers may make two entries equivalent.
+    const entriesByIdentity = new Map<string, CollectionEntity>();
+    for (const entry of [...latest]) {
+      const identity = entryIdentity(entry);
+      const existing = entriesByIdentity.get(identity);
+      if (!existing) {
+        entriesByIdentity.set(identity, entry);
+        continue;
+      }
+      existing.quantity = Number(existing.quantity ?? 0) + Number(entry.quantity ?? 0);
+      existing.updated_at = entry.updated_at;
+      latest.splice(latest.indexOf(entry), 1);
+    }
+  };
+
+  const applyCollectionDelta = async (before: CollectionDocument, after: CollectionDocument): Promise<void> => {
+    const latest = await readCollection();
+    applyEntityChanges(latest.folders, before.folders, after.folders);
+    applyEntityChanges(latest.manual_cards, before.manual_cards, after.manual_cards);
+    applyEntryChanges(latest.entries, before.entries, after.entries);
+    latest.version = Math.max(Number(latest.version) || 2, Number(after.version) || 2);
+    await writeCollection(latest);
+  };
+
   const middleware = (req: import('node:http').IncomingMessage, res: import('node:http').ServerResponse, next: () => void): void => {
+    if (req.url === '/api/collection/operations' && req.method === 'POST') {
+      res.setHeader('Content-Type', 'application/json; charset=utf-8');
+      readRequestBody(req, 20_000_000).then((body) => {
+        const payload = JSON.parse(body) as { before?: CollectionDocument; after?: CollectionDocument };
+        if (
+          !payload.before || !payload.after
+          || !Array.isArray(payload.before.entries) || !Array.isArray(payload.after.entries)
+          || !Array.isArray(payload.before.folders) || !Array.isArray(payload.after.folders)
+          || !Array.isArray(payload.before.manual_cards) || !Array.isArray(payload.after.manual_cards)
+        ) throw new Error('Invalid collection operation');
+        collectionWriteQueue = collectionWriteQueue
+          .catch(() => undefined)
+          .then(() => applyCollectionDelta(payload.before!, payload.after!));
+        return collectionWriteQueue;
+      }).then(() => {
+        res.end(JSON.stringify({ ok: true }));
+      }).catch((error: unknown) => {
+        res.statusCode = 400;
+        res.end(JSON.stringify({ error: error instanceof Error ? error.message : String(error) }));
+      });
+      return;
+    }
+
     if (req.url !== '/api/collection') {
       next();
       return;
@@ -127,9 +293,10 @@ const collectionApi = () => {
           if (!Array.isArray(parsed.folders) || !Array.isArray(parsed.entries)) {
             throw new Error('Invalid collection JSON');
           }
-          const temporary = `${collectionPath}.tmp`;
-          await writeFile(temporary, `${JSON.stringify(parsed, null, 2)}\n`, 'utf-8');
-          await rename(temporary, collectionPath);
+          collectionWriteQueue = collectionWriteQueue
+            .catch(() => undefined)
+            .then(() => writeCollection(parsed as CollectionDocument));
+          await collectionWriteQueue;
           res.end(JSON.stringify({ ok: true }));
         } catch (error) {
           res.statusCode = 400;

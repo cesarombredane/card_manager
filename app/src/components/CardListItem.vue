@@ -163,21 +163,16 @@
   const displayPrice = computed<number | null>(() =>
     props.card.is_manual ? props.card.estimated_value ?? null : cardmarketDisplayPrice(props.card.cardmarket)
   );
-  const ownedQuantity = computed<number>(() => collectionStore.entries.value
-    .filter((entry) =>
-      !entry.wanted
-      &&
-      entry.set_id === props.card.set_id
-      && entry.card_id === props.card.card_id
-      && entry.variant_id === props.card.variant_id
-    )
-    .reduce((total, entry) => total + entry.quantity, 0));
-  const wanted = computed<boolean>(() => collectionStore.entries.value.some((entry) =>
-    entry.wanted
-    && entry.set_id === props.card.set_id
-    && entry.card_id === props.card.card_id
-    && entry.variant_id === props.card.variant_id
-    && entry.language_id === props.card.language_id
+  const ownedQuantity = computed<number>(() => collectionStore.ownedQuantity(
+    props.card.set_id,
+    props.card.card_id,
+    props.card.variant_id
+  ));
+  const wanted = computed<boolean>(() => collectionStore.isWanted(
+    props.card.set_id,
+    props.card.card_id,
+    props.card.variant_id,
+    props.card.language_id
   ));
 </script>
 

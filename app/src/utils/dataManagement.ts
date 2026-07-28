@@ -28,37 +28,43 @@ export const getRegions = (): Region[] => {
 
 // Eagerly loads every configured series from the local JSON catalog.
 const seriesModules = import.meta.glob<Series[]>('../../data/series.json', { eager: true, import: 'default' });
+const allSeries: Series[] = Object.values(seriesModules)[0] ?? [];
+const seriesById = new Map(allSeries.map((series) => [series.id, series]));
 
 // Returns all known series.
 export const getSeries = (): Series[] => {
-  return Object.values(seriesModules)[0] ?? [];
+  return allSeries;
 };
 
 // Returns one series by id if it exists.
 export const getSeriesById = (seriesId: string): Series | null => {
-  return getSeries().find((series) => series.id === seriesId) ?? null;
+  return seriesById.get(seriesId) ?? null;
 };
 
 
 // Eagerly loads each per-series set file from the local JSON catalog.
 const setModules = import.meta.glob<Set[]>('../../data/*/sets.json', { eager: true, import: 'default' });
+const allSets: Set[] = Object.values(setModules).flat();
+const setsById = new Map(allSets.map((set) => [set.id, set]));
 
 // Returns all known sets across every series folder.
 export const getSets = (): Set[] => {
-  return Object.values(setModules).flat();
+  return allSets;
 };
 
 // Returns one set by id if it exists.
 export const getSetById = (setId: string): Set | null => {
-  return getSets().find((set) => set.id === setId) ?? null;
+  return setsById.get(setId) ?? null;
 };
 
 // Eagerly loads each per-set card file from the local JSON catalog.
 const cardModules = import.meta.glob<Card[]>('../../data/*/cards_*.json', { eager: true, import: 'default' });
+const allCards: Card[] = Object.values(cardModules).flat();
+const cardsBySetAndId = new Map(allCards.map((card) => [`${card.set_id}:${card.id}`, card]));
 
 // Returns every card from every set, used by global search views.
 export const getCards = (): Card[] => {
-  return Object.values(cardModules).flat();
+  return allCards;
 };
 
 // Returns cards from the single JSON file that belongs to a specific set.
@@ -72,5 +78,5 @@ export const getCardsBySetId = (setId: string): Card[] => {
 
 // Returns one card from the single JSON file that belongs to its set.
 export const getCardById = (setId: string, cardId: string): Card | null => {
-  return getCardsBySetId(setId).find((card) => card.id === cardId) ?? null;
+  return cardsBySetAndId.get(`${setId}:${cardId}`) ?? null;
 };

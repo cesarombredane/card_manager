@@ -131,7 +131,7 @@
       </template>
     </q-banner>
 
-    <q-banner v-else-if="displayedRows.length === 0" class="bg-grey-10 text-grey-4">
+    <q-banner v-else-if="filteredRows.length === 0" class="bg-grey-10 text-grey-4">
       No card matches these filters.
     </q-banner>
 
@@ -146,6 +146,16 @@
       @delete-entry="setEntryToDelete"
       @toggle-selection="toggleEntrySelection"
     />
+
+    <div v-if="displayedRows.length < filteredRows.length" class="row justify-center q-mt-xl q-pb-md">
+      <q-btn
+        color="primary"
+        text-color="black"
+        unelevated
+        :label="`Show more (${filteredRows.length - displayedRows.length} remaining)`"
+        @click="visibleRowCount += collectionRowStep"
+      />
+    </div>
 
     <q-dialog v-model="showTransferDialog">
       <q-card class="bg-grey-10 text-white" style="width: 480px; max-width: 94vw">
@@ -334,6 +344,8 @@
   const collectionTab = ref<'owned' | 'wanted'>('owned');
   const selectedLanguageId = ref<string | null>(null);
   const selectedSort = ref<CardSort>('release-desc');
+  const collectionRowStep = 48;
+  const visibleRowCount = ref(collectionRowStep);
   const selectionMode = ref(false);
   const selectedEntryIds = ref(new Set<string>());
   const showTransferDialog = ref(false);
@@ -487,7 +499,7 @@
     }))
     .sort((left, right) => left.label.localeCompare(right.label)));
 
-  const displayedRows = computed<CollectionRow[]>(() => {
+  const filteredRows = computed<CollectionRow[]>(() => {
     const query = search.value.trim().toLocaleLowerCase();
     return activeRows.value
       .filter((row) => query === '' || row.card.display_name.toLocaleLowerCase().includes(query))
@@ -522,6 +534,7 @@
         return left.card.display_name.localeCompare(right.card.display_name);
       });
   });
+  const displayedRows = computed<CollectionRow[]>(() => filteredRows.value.slice(0, visibleRowCount.value));
 
   const cardCount = computed(() => collectionRows.value
     .filter((row) => !row.entry.wanted)
@@ -544,6 +557,10 @@
   watch(collectionTab, () => {
     selectedEntryIds.value = new Set();
     selectedLanguageId.value = null;
+    visibleRowCount.value = collectionRowStep;
+  });
+  watch([search, selectedLanguageId, selectedSort], () => {
+    visibleRowCount.value = collectionRowStep;
   });
 
   const toggleSelectionMode = (): void => {

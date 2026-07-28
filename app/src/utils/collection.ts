@@ -71,6 +71,26 @@ const state = reactive<CollectionData>(defaultData());
 const isReady = ref(false);
 const saveError = ref<string | null>(null);
 let pendingSave: Promise<void> = Promise.resolve();
+let queuedSnapshot: CollectionData | null = null;
+let pendingOperationCount = 0;
+let refreshAfterPendingOperations = false;
+const collectionChannel = typeof BroadcastChannel === 'undefined'
+  ? null
+  : new BroadcastChannel('card-manager-collection');
+const ownedQuantities = computed(() => {
+  const quantities = new Map<string, number>();
+  for (const entry of state.entries) {
+    if (entry.wanted) continue;
+    const key = `${entry.set_id}:${entry.card_id}:${entry.variant_id}`;
+    quantities.set(key, (quantities.get(key) ?? 0) + entry.quantity);
+  }
+  return quantities;
+});
+const wantedKeys = computed(() => new Set(
+  state.entries
+    .filter((entry) => entry.wanted)
+    .map((entry) => `${entry.set_id}:${entry.card_id}:${entry.variant_id}:${entry.language_id}`)
+));
 
 const normalizeData = (parsed: Partial<CollectionData>): CollectionData => {
   if (!Array.isArray(parsed.folders) || !Array.isArray(parsed.entries)) {
@@ -99,10 +119,52 @@ const replaceData = (data: CollectionData): void => {
   state.manual_cards.splice(0, state.manual_cards.length, ...data.manual_cards);
 };
 
+const snapshot = (): CollectionData => JSON.parse(JSON.stringify(state)) as CollectionData;
+
+const changedEntities = <T extends { id: string }>(before: T[], after: T[]): { before: T[]; after: T[] } => {
+  const beforeById = new Map(before.map((entity) => [entity.id, entity]));
+  const afterById = new Map(after.map((entity) => [entity.id, entity]));
+  const changedIds = new Set<string>();
+  for (const [id, entity] of beforeById) {
+    if (JSON.stringify(entity) !== JSON.stringify(afterById.get(id))) changedIds.add(id);
+  }
+  for (const [id, entity] of afterById) {
+    if (JSON.stringify(entity) !== JSON.stringify(beforeById.get(id))) changedIds.add(id);
+  }
+  return {
+    before: before.filter((entity) => changedIds.has(entity.id)),
+    after: after.filter((entity) => changedIds.has(entity.id))
+  };
+};
+
+const collectionDelta = (before: CollectionData, after: CollectionData): {
+  before: CollectionData;
+  after: CollectionData;
+} => {
+  const folders = changedEntities(before.folders, after.folders);
+  const entries = changedEntities(before.entries, after.entries);
+  const manualCards = changedEntities(before.manual_cards, after.manual_cards);
+  return {
+    before: {
+      version: before.version,
+      folders: folders.before,
+      entries: entries.before,
+      manual_cards: manualCards.before
+    },
+    after: {
+      version: after.version,
+      folders: folders.after,
+      entries: entries.after,
+      manual_cards: manualCards.after
+    }
+  };
+};
+
 const loadFile = async (): Promise<void> => {
   const response = await fetch('/api/collection');
   if (!response.ok) throw new Error(`Unable to load collection.json (${response.status})`);
   replaceData(normalizeData(await response.json() as Partial<CollectionData>));
+  queuedSnapshot = snapshot();
   isReady.value = true;
   saveError.value = null;
 };
@@ -111,25 +173,47 @@ const loadPromise = loadFile().catch((error: unknown) => {
   saveError.value = error instanceof Error ? error.message : String(error);
 });
 
-const writeFile = async (): Promise<void> => {
+const writeOperation = async (before: CollectionData, after: CollectionData): Promise<void> => {
   await loadPromise;
-  const response = await fetch('/api/collection', {
-    method: 'PUT',
+  const response = await fetch('/api/collection/operations', {
+    method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(state)
+    body: JSON.stringify(collectionDelta(before, after))
   });
-  if (!response.ok) throw new Error(`Unable to save collection.json (${response.status})`);
+  if (!response.ok) throw new Error(`Unable to save collection change (${response.status})`);
 };
 
 const persist = (): void => {
-  if (!isReady.value) return;
+  if (!isReady.value || !queuedSnapshot) return;
+  const before = queuedSnapshot;
+  const after = snapshot();
+  queuedSnapshot = after;
+  pendingOperationCount += 1;
   pendingSave = pendingSave
-    .then(writeFile)
-    .then(() => { saveError.value = null; })
+    .then(() => writeOperation(before, after))
+    .then(() => {
+      saveError.value = null;
+      collectionChannel?.postMessage('changed');
+    })
     .catch((error: unknown) => {
       saveError.value = error instanceof Error ? error.message : String(error);
+    })
+    .finally(() => {
+      pendingOperationCount -= 1;
+      if (pendingOperationCount === 0 && refreshAfterPendingOperations) {
+        refreshAfterPendingOperations = false;
+        void loadFile();
+      }
     });
 };
+
+collectionChannel?.addEventListener('message', () => {
+  if (pendingOperationCount > 0) {
+    refreshAfterPendingOperations = true;
+    return;
+  }
+  void loadFile();
+});
 
 const newId = (prefix: string): string => {
   return `${prefix}-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 9)}`;
@@ -142,6 +226,14 @@ export const collectionStore = {
   isFileConnected: computed(() => isReady.value),
   fileName: computed(() => 'collection.json'),
   saveError: computed(() => saveError.value),
+
+  ownedQuantity(setId: string, cardId: string, variantId: string): number {
+    return ownedQuantities.value.get(`${setId}:${cardId}:${variantId}`) ?? 0;
+  },
+
+  isWanted(setId: string, cardId: string, variantId: string, languageId: string): boolean {
+    return wantedKeys.value.has(`${setId}:${cardId}:${variantId}:${languageId}`);
+  },
 
   createFolder(name: string): CollectionFolder {
     const folder: CollectionFolder = {
