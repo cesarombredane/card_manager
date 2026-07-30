@@ -306,7 +306,7 @@
   import type { BinderLayout, BinderProxy } from '../utils/binders';
   import { cardConditions, collectionStore } from '../utils/collection';
   import type { CardCondition, CollectionEntry } from '../utils/collection';
-  import { buildDisplayCard } from '../utils/cardDisplay';
+  import { buildDisplayCard, compareCardReleaseAndNumber } from '../utils/cardDisplay';
   import type { DisplayCard } from '../utils/cardDisplay';
   import { getCardById, getPokemon, getSetById } from '../utils/dataManagement';
   import { localizedValue } from '../utils/localization';
@@ -454,12 +454,15 @@
             return selectedCardSort.value === 'price-asc' ? left.price - right.price : right.price - left.price;
           }
         }
-        if (left.releaseDate === null && right.releaseDate !== null) return 1;
-        if (left.releaseDate !== null && right.releaseDate === null) return -1;
-        if (left.releaseDate && right.releaseDate && left.releaseDate !== right.releaseDate) {
-          return selectedCardSort.value === 'release-asc'
-            ? left.releaseDate.localeCompare(right.releaseDate)
-            : right.releaseDate.localeCompare(left.releaseDate);
+        if (selectedCardSort.value === 'release-asc' || selectedCardSort.value === 'release-desc') {
+          const comparison = compareCardReleaseAndNumber(
+            left.releaseDate,
+            right.releaseDate,
+            left.card.number,
+            right.card.number,
+            selectedCardSort.value === 'release-asc' ? 'asc' : 'desc'
+          );
+          if (comparison !== 0) return comparison;
         }
         return left.card.display_name.localeCompare(right.card.display_name);
       });

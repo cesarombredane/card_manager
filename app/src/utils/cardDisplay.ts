@@ -12,6 +12,27 @@ export const compareCardNumbers = (left: string, right: string): number => {
   return cardNumberCollator.compare(left, right);
 };
 
+// Orders cards by release date and then by their naturally sorted printed
+// number. Missing dates remain at the end in both directions.
+export const compareCardReleaseAndNumber = (
+  leftDate: string | null | undefined,
+  rightDate: string | null | undefined,
+  leftNumber: string,
+  rightNumber: string,
+  direction: 'asc' | 'desc'
+): number => {
+  if (!leftDate && rightDate) return 1;
+  if (leftDate && !rightDate) return -1;
+
+  if (leftDate && rightDate) {
+    const dateComparison = leftDate.localeCompare(rightDate);
+    if (dateComparison !== 0) return direction === 'asc' ? dateComparison : -dateComparison;
+  }
+
+  const numberComparison = compareCardNumbers(leftNumber, rightNumber);
+  return direction === 'asc' ? numberComparison : -numberComparison;
+};
+
 // A flattened physical card variant shared by every card grid.
 export type DisplayCard = {
   id: string;

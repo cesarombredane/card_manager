@@ -167,6 +167,8 @@
       />
     </div>
 
+    <back-to-top-button />
+
     <q-dialog v-model="showTransferDialog">
       <q-card class="bg-grey-10 text-white" style="width: 480px; max-width: 94vw">
         <q-card-section>
@@ -331,8 +333,9 @@
   import CardList from '../components/CardList.vue';
   import ManualCardDialog from '../components/ManualCardDialog.vue';
   import CardSortSelector from '../components/CardSortSelector.vue';
+  import BackToTopButton from '../components/BackToTopButton.vue';
   import CollectionFolderSelect from '../components/CollectionFolderSelect.vue';
-  import { buildDisplayCard, cardmarketDisplayPrice, formatEuroPrice } from '../utils/cardDisplay';
+  import { buildDisplayCard, cardmarketDisplayPrice, compareCardReleaseAndNumber, formatEuroPrice } from '../utils/cardDisplay';
   import type { DisplayCard } from '../utils/cardDisplay';
   import { getCardById, getLanguages, getPokemon, getSetById } from '../utils/dataManagement';
   import { localizedValue } from '../utils/localization';
@@ -528,12 +531,14 @@
           }
         }
         if (selectedSort.value === 'release-desc' || selectedSort.value === 'release-asc') {
-          if (left.releaseDate === null && right.releaseDate !== null) return 1;
-          if (left.releaseDate !== null && right.releaseDate === null) return -1;
-          if (left.releaseDate !== null && right.releaseDate !== null) {
-            const comparison = left.releaseDate.localeCompare(right.releaseDate);
-            if (comparison !== 0) return selectedSort.value === 'release-asc' ? comparison : -comparison;
-          }
+          const comparison = compareCardReleaseAndNumber(
+            left.releaseDate,
+            right.releaseDate,
+            left.card.number,
+            right.card.number,
+            selectedSort.value === 'release-asc' ? 'asc' : 'desc'
+          );
+          if (comparison !== 0) return comparison;
         }
         if (selectedSort.value === 'pokedex-asc' || selectedSort.value === 'pokedex-desc') {
           if (left.pokedexNumber === null && right.pokedexNumber !== null) return 1;

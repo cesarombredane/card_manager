@@ -205,6 +205,8 @@
     <q-banner v-if="filteredCards.length === 0" class="bg-grey-10 text-grey-4">
       No card found for these filters.
     </q-banner>
+
+    <back-to-top-button />
   </q-page>
 </template>
 
@@ -218,10 +220,11 @@
   import LanguageSelector from '../components/LanguageSelector.vue';
   import CardList from '../components/CardList.vue';
   import CardSortSelector from '../components/CardSortSelector.vue';
+  import BackToTopButton from '../components/BackToTopButton.vue';
 
   // import utils
   import { getCards, getPokemon, getSetById, getSets } from '../utils/dataManagement';
-  import { buildDisplayCard, cardmarketDisplayPrice, compareCardNumbers } from '../utils/cardDisplay';
+  import { buildDisplayCard, cardmarketDisplayPrice, compareCardReleaseAndNumber } from '../utils/cardDisplay';
   import type { DisplayCard } from '../utils/cardDisplay';
   import { localizedValue } from '../utils/localization';
   import type { Card, Pokemon, Set } from '../utils/types';
@@ -527,12 +530,16 @@
           }
         }
 
-        const dateComparison: number = (setReleaseDates.get(a.set_id) ?? '').localeCompare(setReleaseDates.get(b.set_id) ?? '');
-        const directedDateComparison: number = selectedSort.value === 'release-asc' ? dateComparison : -dateComparison;
+        const releaseComparison = compareCardReleaseAndNumber(
+          setReleaseDates.get(a.set_id),
+          setReleaseDates.get(b.set_id),
+          a.number,
+          b.number,
+          selectedSort.value === 'release-asc' ? 'asc' : 'desc'
+        );
 
-        return directedDateComparison
+        return releaseComparison
           || (a.set_name ?? '').localeCompare(b.set_name ?? '')
-          || compareCardNumbers(a.number, b.number)
           || a.variant_id.localeCompare(b.variant_id);
       });
   });

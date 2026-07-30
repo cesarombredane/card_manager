@@ -57,24 +57,13 @@
       No card found for these filters.
     </q-banner>
 
-    <q-btn
-      v-show="showBackToTop"
-      class="fixed-bottom-right q-ma-lg z-top"
-      round
-      color="primary"
-      text-color="grey-10"
-      icon="arrow_upward"
-      aria-label="Return to top"
-      @click="scrollToTop"
-    >
-      <q-tooltip>Return to top</q-tooltip>
-    </q-btn>
+    <back-to-top-button />
   </q-page>
 </template>
 
 <script setup lang="ts">
   // import hooks
-  import { computed, onBeforeUnmount, onMounted, ref } from 'vue';
+  import { computed, ref } from 'vue';
   import { useRoute, useRouter } from 'vue-router';
   import { useStore } from 'vuex';
 
@@ -82,6 +71,7 @@
   import LanguageSelector from '../components/LanguageSelector.vue';
   import CardList from '../components/CardList.vue';
   import CardSortSelector from '../components/CardSortSelector.vue';
+  import BackToTopButton from '../components/BackToTopButton.vue';
 
   // import utils
   import { getCardsBySetId, getPokemon, getSetById, getSeriesById } from '../utils/dataManagement';
@@ -155,10 +145,6 @@
 
   // The printed card number order is the natural default inside a set.
   const selectedSort = ref<CardSort>('set-order');
-
-  // Whether the floating return-to-top control should be visible.
-  const showBackToTop = ref<boolean>(false);
-
 
   /* computed vars */
   // Every card variant in this set as an individual display row.
@@ -239,9 +225,12 @@
           }
         }
 
-        // Every card in this view shares a release date, so release sorting
-        // intentionally falls back to the stable printed set order.
-        return compareCardNumbers(a.number, b.number) || a.variant_id.localeCompare(b.variant_id);
+        const numberComparison = compareCardNumbers(a.number, b.number);
+        if (selectedSort.value === 'release-desc') {
+          return -numberComparison || a.variant_id.localeCompare(b.variant_id);
+        }
+
+        return numberComparison || a.variant_id.localeCompare(b.variant_id);
       });
   });
 
@@ -255,14 +244,6 @@
   // Returns sorted unique string values.
   const uniqueValues = (values: string[]): string[] => {
     return [...new Set(values.filter(Boolean))].sort();
-  };
-
-  const updateBackToTopVisibility = (): void => {
-    showBackToTop.value = window.scrollY > 200;
-  };
-
-  const scrollToTop = (): void => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   // Stores the current set region and returns to the existing series history
@@ -287,12 +268,4 @@
     router.push({ path: `/set/${setId}/card/${card.card_id}`, query: { variant: card.variant_id } });
   };
 
-  onMounted(() => {
-    updateBackToTopVisibility();
-    window.addEventListener('scroll', updateBackToTopVisibility, { passive: true });
-  });
-
-  onBeforeUnmount(() => {
-    window.removeEventListener('scroll', updateBackToTopVisibility);
-  });
 </script>
