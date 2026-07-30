@@ -110,6 +110,15 @@
       <span class="text-body2 text-grey-4">{{ selectedEntryIds.size }} selected</span>
       <q-btn
         outline
+        color="negative"
+        icon="delete"
+        label="Delete selected"
+        no-caps
+        :disable="selectedEntryIds.size === 0"
+        @click="showBulkDeleteDialog = true"
+      />
+      <q-btn
+        outline
         color="primary"
         icon="edit"
         label="Edit selected"
@@ -185,6 +194,44 @@
             outlined
             label="Destination collection"
           />
+          <q-list v-if="selectedTransferRows.length > 0" class="q-mt-md" separator>
+            <q-item v-for="row in selectedTransferRows" :key="row.entry.id" class="q-px-none">
+              <q-item-section>
+                <q-item-label>{{ row.card.display_name }}</q-item-label>
+                <q-item-label caption class="text-grey-5">
+                  {{ row.entry.language_id.toUpperCase() }} · {{ row.entry.condition }}
+                </q-item-label>
+              </q-item-section>
+              <q-item-section side>
+                <div v-if="row.entry.quantity > 1" class="row items-center no-wrap q-gutter-xs">
+                  <q-btn
+                    flat
+                    round
+                    dense
+                    icon="remove"
+                    color="grey-4"
+                    :disable="transferQuantities[row.entry.id] <= 1"
+                    aria-label="Move one fewer copy"
+                    @click="changeTransferQuantity(row.entry.id, -1, row.entry.quantity)"
+                  />
+                  <span class="text-body1 text-center" style="min-width: 24px">
+                    {{ transferQuantities[row.entry.id] }}
+                  </span>
+                  <q-btn
+                    flat
+                    round
+                    dense
+                    icon="add"
+                    color="primary"
+                    :disable="transferQuantities[row.entry.id] >= row.entry.quantity"
+                    aria-label="Move one more copy"
+                    @click="changeTransferQuantity(row.entry.id, 1, row.entry.quantity)"
+                  />
+                </div>
+                <span v-else class="text-caption text-grey-5">1 copy</span>
+              </q-item-section>
+            </q-item>
+          </q-list>
         </q-card-section>
         <q-card-actions align="right">
           <q-btn flat color="grey-4" label="Cancel" v-close-popup />
@@ -323,6 +370,22 @@
       </q-card>
     </q-dialog>
 
+    <q-dialog v-model="showBulkDeleteDialog">
+      <q-card class="bg-grey-10 text-white" style="width: 440px; max-width: 94vw">
+        <q-card-section>
+          <div class="text-h6">Delete selected cards?</div>
+          <div class="text-body2 text-grey-4 q-mt-sm">
+            This will remove all copies of the {{ selectedEntryIds.size }} selected
+            {{ selectedEntryIds.size === 1 ? 'entry' : 'entries' }} from this collection.
+          </div>
+        </q-card-section>
+        <q-card-actions align="right">
+          <q-btn flat color="grey-4" label="Cancel" v-close-popup />
+          <q-btn color="negative" icon="delete" label="Delete selected" @click="confirmBulkDelete" />
+        </q-card-actions>
+      </q-card>
+    </q-dialog>
+
     <manual-card-dialog v-model="showManualCardDialog" :initial-folder-id="folderId" />
   </q-page>
 </template>
@@ -368,7 +431,9 @@
   const selectedEntryIds = ref(new Set<string>());
   const showTransferDialog = ref(false);
   const transferFolderId = ref('');
+  const transferQuantities = ref<Record<string, number>>({});
   const showBulkEditDialog = ref(false);
+  const showBulkDeleteDialog = ref(false);
   const bulkEditLanguageId = ref('');
   const entryToDelete = ref<CollectionRow | null>(null);
   const showManualCardDialog = ref(false);
@@ -506,6 +571,9 @@
   const activeRows = computed<CollectionRow[]>(() =>
     collectionRows.value.filter((row) => row.entry.wanted === (collectionTab.value === 'wanted'))
   );
+  const selectedTransferRows = computed(() =>
+    collectionRows.value.filter((row) => selectedEntryIds.value.has(row.entry.id))
+  );
   const wantedRows = computed<CollectionRow[]>(() => collectionRows.value.filter((row) => row.entry.wanted));
 
   const languageOptions = computed(() => [...new Set(activeRows.value.map((row) => row.entry.language_id))]
@@ -604,16 +672,34 @@
 
   const openTransferDialog = (): void => {
     transferFolderId.value = destinationFolders.value[0]?.id ?? '';
+    transferQuantities.value = Object.fromEntries(
+      selectedTransferRows.value.map((row) => [row.entry.id, 1])
+    );
     showTransferDialog.value = true;
+  };
+
+  const changeTransferQuantity = (entryId: string, change: number, maximum: number): void => {
+    const current = transferQuantities.value[entryId] ?? 1;
+    transferQuantities.value[entryId] = Math.min(maximum, Math.max(1, current + change));
   };
 
   const confirmBulkTransfer = (): void => {
     if (!transferFolderId.value) return;
-    collectionStore.transferEntries([...selectedEntryIds.value], transferFolderId.value);
+    collectionStore.transferEntryQuantities(
+      selectedTransferRows.value.map((row) => ({
+        entryId: row.entry.id,
+        quantity: Math.min(
+          row.entry.quantity,
+          Math.max(1, Math.floor(Number(transferQuantities.value[row.entry.id]) || 1))
+        )
+      })),
+      transferFolderId.value
+    );
     selectedEntryIds.value = new Set();
     selectionMode.value = false;
     showTransferDialog.value = false;
     transferFolderId.value = '';
+    transferQuantities.value = {};
   };
 
   const openBulkEditDialog = (): void => {
@@ -630,6 +716,15 @@
     selectionMode.value = false;
     showBulkEditDialog.value = false;
     bulkEditLanguageId.value = '';
+  };
+
+  const confirmBulkDelete = (): void => {
+    for (const entryId of selectedEntryIds.value) {
+      collectionStore.removeEntry(entryId);
+    }
+    selectedEntryIds.value = new Set();
+    selectionMode.value = false;
+    showBulkDeleteDialog.value = false;
   };
 
   const openEditEntry = (row: CollectionRow): void => {

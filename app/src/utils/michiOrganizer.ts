@@ -1,15 +1,18 @@
 import type { BinderImage, BinderImagePlacement, BinderLayout } from './binders';
 
-export type MichiMode = 'date' | 'color';
+export type MichiMode = 'date' | 'color' | 'pokedex';
 
 export type MichiCardInput = {
-  slotValue: string;
+  slotValue: string | null;
   name: string;
   imageUrl: string | null;
   date: string | null;
   groupKey: string;
   setOrder: string;
   undatedFlexible: boolean;
+  pokedexOrder: number | null;
+  pokedexGroupKey: string | null;
+  isProxy: boolean;
   quantity: number;
 };
 
@@ -30,6 +33,7 @@ export type MichiOrganizerInput = {
   currentImagePlacements: BinderImagePlacement[];
   cards: MichiCardInput[];
   images: MichiImageInput[];
+  pokedexSlots: Array<{ key: string; order: number; name: string }>;
   options: MichiOptions;
 };
 
@@ -237,19 +241,6 @@ export const generateMichiLayout = async (input: MichiOrganizerInput): Promise<M
   if (unreadableCards || unreadableImages) {
     warnings.push(`${unreadableCards + unreadableImages} visual asset(s) could not be color-analyzed and were treated as neutral.`);
   }
-  if (instances.length && input.images.length / instances.length < 1 / 12) {
-    warnings.push(
-      `This binder has ${input.images.length} illustration${input.images.length === 1 ? '' : 's'} for ${instances.length} cards. `
-      + 'For a stronger Michi composition, add more illustrations (roughly one per 5–12 cards).'
-    );
-  } else if (!instances.length && input.images.length) {
-    warnings.push('This binder has illustrations but no cards. Add cards for a balanced Michi composition.');
-  } else if (instances.length && input.images.length / instances.length > 1 / 5) {
-    warnings.push(
-      `This binder has ${input.images.length} illustrations for only ${instances.length} card${instances.length === 1 ? '' : 's'}. `
-      + 'Consider adding more cards (roughly one illustration per 5–12 cards).'
-    );
-  }
 
   const slots: Array<string | null> = Array(totalSlots).fill(null);
   const preservedSideCount = options.preserveFirstPage ? sideSize : 0;
@@ -257,28 +248,70 @@ export const generateMichiLayout = async (input: MichiOrganizerInput): Promise<M
     slots.splice(0, sideSize, ...input.currentSlots.slice(0, sideSize));
   }
   let remainingCards = removePreservedInstances(instances, slots.slice(0, preservedSideCount));
+  const insertAtGroupBoundaries = (
+    orderedCards: CardInstance[],
+    flexibleCards: CardInstance[],
+    groupKey: (card: CardInstance) => string
+  ): CardInstance[] => {
+    const groupBoundaries = [
+      0,
+      ...orderedCards.flatMap((card, index) =>
+        index > 0 && groupKey(orderedCards[index - 1]) !== groupKey(card) ? [index] : []
+      ),
+      orderedCards.length
+    ];
+    const cardsAtBoundary = new Map<number, CardInstance[]>();
+    for (const card of flexibleCards) {
+      const boundary = groupBoundaries[Math.floor(random() * groupBoundaries.length)];
+      cardsAtBoundary.set(boundary, [...(cardsAtBoundary.get(boundary) ?? []), card]);
+    }
+    const result: CardInstance[] = [];
+    for (let index = 0; index <= orderedCards.length; index += 1) {
+      result.push(...(cardsAtBoundary.get(index) ?? []));
+      if (index < orderedCards.length) result.push(orderedCards[index]);
+    }
+    return result;
+  };
   if (options.mode === 'date') {
     const flexibleProxies = remainingCards.filter((card) => card.undatedFlexible);
     const datedCards = remainingCards.filter((card) => !card.undatedFlexible).sort(chronologicalCompare);
-    const groupBoundaries = [
-      0,
-      ...datedCards.flatMap((card, index) =>
-        index > 0 && datedCards[index - 1].groupKey !== card.groupKey ? [index] : []
-      ),
-      datedCards.length
-    ];
-    const proxiesAtBoundary = new Map<number, CardInstance[]>();
-    for (const proxy of flexibleProxies) {
-      const boundary = groupBoundaries[Math.floor(random() * groupBoundaries.length)];
-      const proxies = proxiesAtBoundary.get(boundary) ?? [];
-      proxies.push(proxy);
-      proxiesAtBoundary.set(boundary, proxies);
+    remainingCards = insertAtGroupBoundaries(datedCards, flexibleProxies, (card) => card.groupKey);
+  } else if (options.mode === 'pokedex') {
+    const proxies = remainingCards.filter((card) => card.isProxy);
+    const cardsByGroup = new Map<string, CardInstance[]>();
+    const ungroupedCards: CardInstance[] = [];
+    for (const card of remainingCards.filter((candidate) => !candidate.isProxy)) {
+      if (!card.pokedexGroupKey) {
+        ungroupedCards.push(card);
+        continue;
+      }
+      cardsByGroup.set(card.pokedexGroupKey, [...(cardsByGroup.get(card.pokedexGroupKey) ?? []), card]);
     }
-    remainingCards = [];
-    for (let index = 0; index <= datedCards.length; index += 1) {
-      remainingCards.push(...(proxiesAtBoundary.get(index) ?? []));
-      if (index < datedCards.length) remainingCards.push(datedCards[index]);
-    }
+    const orderedCards = input.pokedexSlots.flatMap((slot): CardInstance[] => {
+      const cards = cardsByGroup.get(slot.key);
+      if (cards?.length) return cards.sort(chronologicalCompare);
+      return [{
+        slotValue: null,
+        name: slot.name,
+        imageUrl: null,
+        date: null,
+        groupKey: slot.key,
+        setOrder: '',
+        undatedFlexible: false,
+        pokedexOrder: slot.order,
+        pokedexGroupKey: slot.key,
+        isProxy: false,
+        quantity: 1,
+        features: neutralFeatures,
+        ordinal: 0
+      }];
+    });
+    orderedCards.push(...ungroupedCards.sort(chronologicalCompare));
+    remainingCards = insertAtGroupBoundaries(
+      orderedCards,
+      proxies,
+      (card) => card.pokedexGroupKey ?? `other:${card.groupKey}`
+    );
   } else {
     remainingCards.sort((left, right) => left.features.hue - right.features.hue
       || left.features.lab[0] - right.features.lab[0]
@@ -450,9 +483,15 @@ export const generateMichiLayout = async (input: MichiOrganizerInput): Promise<M
   const usableIndices = (): number[] => Array.from({ length: totalSlots }, (_, index) => index)
     .filter((index) => !slots[index] && !reservedCells.has(index));
 
-  if (options.mode === 'date') {
+  if (options.mode === 'date' || options.mode === 'pokedex') {
     const available = usableIndices();
-    remainingCards.forEach((card, index) => placeCard(available[index], card));
+    remainingCards.forEach((card, index) => {
+      const slotIndex = available[index];
+      if (slotIndex === undefined) {
+        throw new Error(`No preview slot was available for “${card.name}”. Increase the binder capacity.`);
+      }
+      placeCard(slotIndex, card);
+    });
     remainingCards = [];
   } else {
     for (let slotIndex = 0; slotIndex < totalSlots && remainingCards.length; slotIndex += 1) {

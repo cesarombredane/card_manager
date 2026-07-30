@@ -573,16 +573,21 @@ export const collectionStore = {
     this.transferEntries([entryId], folderId);
   },
 
-  transferEntries(entryIds: string[], folderId: string): number {
+  transferEntryQuantities(
+    transfers: Array<{ entryId: string; quantity: number }>,
+    folderId: string
+  ): number {
     if (!state.folders.some((folder) => folder.id === folderId)) return 0;
-    const requestedIds = new Set(entryIds);
-    const entries = state.entries.filter((entry) =>
-      requestedIds.has(entry.id) && entry.folder_id !== folderId
-    );
-    if (entries.length === 0) return 0;
 
     const now = new Date().toISOString();
-    for (const entry of entries) {
+    let transferred = 0;
+    for (const transfer of transfers) {
+      const entry = state.entries.find((candidate) =>
+        candidate.id === transfer.entryId && candidate.folder_id !== folderId
+      );
+      if (!entry) continue;
+
+      const quantity = Math.min(entry.quantity, Math.max(1, Math.floor(transfer.quantity)));
       const matching = state.entries.find((candidate) =>
         candidate.id !== entry.id
         && candidate.folder_id === folderId
@@ -593,17 +598,49 @@ export const collectionStore = {
         && candidate.condition === entry.condition
         && candidate.wanted === entry.wanted
       );
-      if (matching) {
-        matching.quantity += entry.quantity;
-        matching.updated_at = now;
-        state.entries.splice(state.entries.indexOf(entry), 1);
+
+      if (quantity === entry.quantity) {
+        if (matching) {
+          matching.quantity += quantity;
+          matching.updated_at = now;
+          state.entries.splice(state.entries.indexOf(entry), 1);
+        } else {
+          entry.folder_id = folderId;
+          entry.updated_at = now;
+        }
       } else {
-        entry.folder_id = folderId;
+        entry.quantity -= quantity;
         entry.updated_at = now;
+        if (matching) {
+          matching.quantity += quantity;
+          matching.updated_at = now;
+        } else {
+          state.entries.push({
+            ...entry,
+            id: newId('entry'),
+            folder_id: folderId,
+            quantity,
+            added_at: now,
+            updated_at: now
+          });
+        }
       }
+      transferred += quantity;
     }
-    persist();
-    return entries.length;
+
+    if (transferred > 0) persist();
+    return transferred;
+  },
+
+  transferEntries(entryIds: string[], folderId: string): number {
+    const transfers = state.entries
+      .filter((entry) => entryIds.includes(entry.id) && entry.folder_id !== folderId)
+      .map((entry) => ({ entryId: entry.id, quantity: entry.quantity }));
+    this.transferEntryQuantities(
+      transfers,
+      folderId
+    );
+    return transfers.length;
   },
 
   updateEntriesLanguage(entryIds: string[], languageId: string): number {

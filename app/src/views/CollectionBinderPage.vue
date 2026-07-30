@@ -253,6 +253,11 @@
         <q-card-section class="michi-dialog-body">
           <div class="michi-options">
             <q-select v-model="michiMode" :options="michiModeOptions" emit-value map-options dark outlined label="Organization" />
+            <div v-if="michiMode === 'pokedex'">
+              <div class="text-caption text-grey-4 q-mb-xs">Regional forms</div>
+              <q-option-group v-model="michiPokedexForms" :options="michiPokedexFormOptions"
+                type="radio" color="primary" dense />
+            </div>
             <q-toggle v-model="michiPreserveFirstPage" color="primary" label="Preserve first page" />
             <q-input v-model.number="michiSeed" type="number" dark outlined label="Variation seed" />
             <q-btn color="primary" text-color="black" icon="auto_awesome" label="Generate preview"
@@ -568,6 +573,7 @@
   const showSettings = ref(false);
   const showMichiDialog = ref(false);
   const michiMode = ref<MichiMode>('date');
+  const michiPokedexForms = ref<'number' | 'regional'>('number');
   const michiPreserveFirstPage = ref(false);
   const michiSeed = ref(1);
   const michiGenerating = ref(false);
@@ -638,7 +644,12 @@
   ];
   const michiModeOptions = [
     { label: 'Date first', value: 'date' },
+    { label: 'Pokédex order', value: 'pokedex' },
     { label: 'Color first', value: 'color' }
+  ];
+  const michiPokedexFormOptions = [
+    { label: 'One slot per Pokédex number', value: 'number' },
+    { label: 'Separate regional forms', value: 'regional' }
   ];
   const conditionOptions = cardConditions.map((condition) => ({ ...condition }));
   const isValidProxyDate = (value: string): boolean => {
@@ -652,6 +663,7 @@
     return date.getUTCFullYear() === year && date.getUTCMonth() === month - 1 && date.getUTCDate() === day;
   };
   const pokemon = getPokemon();
+  const pokemonById = new Map(pokemon.map((entry) => [entry.id, entry]));
   const pokedexByPokemonId = new Map(pokemon.map((entry) => [entry.id, entry.pokedex_id]));
   const pokedexByPokemonName = new Map(pokemon.flatMap((entry) =>
     [entry.name, ...Object.values(entry.names).filter((name): name is string => Boolean(name))]
@@ -817,6 +829,45 @@
     michiError.value = null;
     showMichiDialog.value = true;
   };
+  const regionalForms = new Set(['alolan', 'galarian', 'hisuian', 'paldean']);
+  const pokedexGroupKeyForRow = (row: Omit<BinderRow, 'available'>): string | null => {
+    if (row.pokedexNumber === null) return null;
+    if (michiPokedexForms.value === 'number') return `pokemon:${row.pokedexNumber}`;
+    const matchingPokemon = row.card.pokemon_names
+      .map((pokemonId) => pokemonById.get(pokemonId))
+      .filter((entry) => entry?.pokedex_id === row.pokedexNumber)
+      .sort((left, right) => Number(Boolean(left?.form)) - Number(Boolean(right?.form)))[0];
+    const form = matchingPokemon?.form && regionalForms.has(matchingPokemon.form)
+      ? matchingPokemon.form
+      : 'base';
+    return `pokemon:${row.pokedexNumber}:${form}`;
+  };
+  const michiPokedexSlots = (): Array<{ key: string; order: number; name: string }> => {
+    const slots = new Map<string, { key: string; order: number; name: string }>();
+    for (const entry of pokemon) {
+      const form = michiPokedexForms.value === 'regional' && entry.form && regionalForms.has(entry.form)
+        ? entry.form
+        : 'base';
+      const key = michiPokedexForms.value === 'number'
+        ? `pokemon:${entry.pokedex_id}`
+        : `pokemon:${entry.pokedex_id}:${form}`;
+      if (!slots.has(key)) {
+        slots.set(key, {
+          key,
+          order: entry.pokedex_id,
+          name: form === 'base' ? entry.name : `${entry.name} (${form})`
+        });
+      }
+    }
+    return [...slots.values()].sort((left, right) => {
+      const pokedexDifference = left.order - right.order;
+      if (pokedexDifference) return pokedexDifference;
+      const leftIsBase = left.key.endsWith(':base');
+      const rightIsBase = right.key.endsWith(':base');
+      if (leftIsBase !== rightIsBase) return leftIsBase ? -1 : 1;
+      return left.key.localeCompare(right.key);
+    });
+  };
   const generateMichiProposal = async (nextVariation = false): Promise<void> => {
     if (!binder.value || michiGenerating.value) return;
     if (nextVariation) michiSeed.value += 1;
@@ -837,6 +888,9 @@
             groupKey: `${row.entry.set_id}:${row.releaseDate ?? 'unknown'}`,
             setOrder: row.card.number,
             undatedFlexible: false,
+            pokedexOrder: row.pokedexNumber,
+            pokedexGroupKey: pokedexGroupKeyForRow(row),
+            isProxy: false,
             quantity: row.entry.quantity
           })),
           ...binder.value.proxies.map((proxy) => ({
@@ -847,6 +901,9 @@
             groupKey: `proxy:${proxy.id}:${proxy.date ?? 'unknown'}`,
             setOrder: proxy.name,
             undatedFlexible: !proxy.date,
+            pokedexOrder: null,
+            pokedexGroupKey: null,
+            isProxy: true,
             quantity: proxy.quantity
           }))
         ],
@@ -854,6 +911,7 @@
           ...image,
           imageUrl: binderAssetUrl(image.id, 'image')
         })),
+        pokedexSlots: michiMode.value === 'pokedex' ? michiPokedexSlots() : [],
         options: {
           mode: michiMode.value,
           preserveFirstPage: michiPreserveFirstPage.value,

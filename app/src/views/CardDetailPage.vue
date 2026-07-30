@@ -119,6 +119,43 @@
               </div>
             </div>
 
+            <div v-if="ownedLocations.length > 0 || wantedLocations.length > 0" class="column q-gutter-sm">
+              <div v-if="ownedLocations.length > 0">
+                <div class="text-caption text-grey-5">In collection</div>
+                <div class="row q-gutter-xs">
+                  <q-chip
+                    v-for="location in ownedLocations"
+                    :key="`owned-${location.folderId}`"
+                    clickable
+                    :to="`/collection/folder/${location.folderId}`"
+                    dense
+                    color="grey-8"
+                    text-color="white"
+                    icon="inventory_2"
+                  >
+                    {{ location.folderName }} ×{{ location.quantity }}
+                  </q-chip>
+                </div>
+              </div>
+              <div v-if="wantedLocations.length > 0">
+                <div class="text-caption text-grey-5">Wanted in</div>
+                <div class="row q-gutter-xs">
+                  <q-chip
+                    v-for="location in wantedLocations"
+                    :key="`wanted-${location.folderId}`"
+                    clickable
+                    :to="`/collection/folder/${location.folderId}`"
+                    dense
+                    color="red-9"
+                    text-color="white"
+                    icon="favorite"
+                  >
+                    {{ location.folderName }} ×{{ location.quantity }}
+                  </q-chip>
+                </div>
+              </div>
+            </div>
+
             <q-list bordered separator class="bg-grey-10 rounded-borders">
               <q-item>
                 <q-item-section>
@@ -431,28 +468,44 @@
 
   const selectedCardmarketPrice = computed<number | null>(() => cardmarketDisplayPrice(selectedCardmarket.value));
 
-  const ownedQuantity = computed<number>(() => {
-    if (!currentCard || !selectedVariant.value) return 0;
-    return collectionStore.entries.value
+  type CardFolderLocation = {
+    folderId: string;
+    folderName: string;
+    quantity: number;
+  };
+
+  const cardLocations = (wanted: boolean): CardFolderLocation[] => {
+    if (!currentCard || !selectedVariant.value) return [];
+    const quantities = new Map<string, number>();
+    collectionStore.entries.value
       .filter((entry) =>
-        !entry.wanted
+        entry.wanted === wanted
         &&
         entry.set_id === setId
         && entry.card_id === currentCard.id
         && entry.variant_id === selectedVariant.value?.id
         && entry.language_id === selectedLanguageId.value
       )
-      .reduce((total, entry) => total + entry.quantity, 0);
-  });
+      .forEach((entry) => quantities.set(
+        entry.folder_id,
+        (quantities.get(entry.folder_id) ?? 0) + entry.quantity
+      ));
+    return [...quantities.entries()]
+      .map(([folderId, quantity]) => ({
+        folderId,
+        folderName: collectionStore.folders.value.find((folder) => folder.id === folderId)?.name ?? 'Unknown collection',
+        quantity
+      }))
+      .sort((left, right) => left.folderName.localeCompare(right.folderName));
+  };
 
-  const isWanted = computed<boolean>(() => Boolean(currentCard && selectedVariant.value)
-    && collectionStore.entries.value.some((entry) =>
-      entry.wanted
-      && entry.set_id === setId
-      && entry.card_id === currentCard?.id
-      && entry.variant_id === selectedVariant.value?.id
-      && entry.language_id === selectedLanguageId.value
-    ));
+  const ownedLocations = computed<CardFolderLocation[]>(() => cardLocations(false));
+  const wantedLocations = computed<CardFolderLocation[]>(() => cardLocations(true));
+  const ownedQuantity = computed<number>(() =>
+    ownedLocations.value.reduce((total, location) => total + location.quantity, 0)
+  );
+
+  const isWanted = computed<boolean>(() => wantedLocations.value.length > 0);
 
   // Localized card display name.
   const displayName = computed<string>(() => {
