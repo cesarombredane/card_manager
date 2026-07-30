@@ -8,7 +8,7 @@
             {{ cards }} owned cards · {{ wanted }} wanted · {{ entries }} owned entries
           </div>
         </div>
-        <q-icon :name="icon" color="yellow-6" size="32px" />
+        <q-icon :name="locked ? 'lock' : icon" color="yellow-6" size="32px" />
       </div>
       <div class="text-h5 text-yellow-6 text-weight-bold q-mt-md">
         {{ formatEuroPrice(value) }}
@@ -29,10 +29,11 @@
     </q-card-actions>
     <q-card-actions>
       <q-space />
-      <q-btn flat round dense color="grey-4" icon="edit" @click="$emit('settings', folder)">
+      <q-btn v-if="!locked" flat round dense color="grey-4" icon="edit" @click="$emit('settings', folder)">
         <q-tooltip>Collection settings</q-tooltip>
       </q-btn>
       <q-btn
+        v-if="!locked"
         flat
         round
         dense
@@ -57,6 +58,7 @@
     cards: number;
     wanted: number;
     value: number;
+    locked?: boolean;
   }>();
   defineEmits<{
     settings: [folder: CollectionFolder];

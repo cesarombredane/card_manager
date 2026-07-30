@@ -52,7 +52,9 @@
 
 <script setup lang="ts">
   import { computed, ref, watch } from 'vue';
+  import { useStore } from 'vuex';
   import { collectionStore } from '../utils/collection';
+  import type { AppState } from '../store';
   import CollectionFolderSelect from './CollectionFolderSelect.vue';
 
   const props = defineProps<{
@@ -72,13 +74,22 @@
     get: () => props.modelValue,
     set: (value: boolean) => emit('update:modelValue', value)
   });
-  const folderId = ref('');
+  const store = useStore<AppState>();
+  const folderId = ref(store.state.last_collection_folder_id);
   const quantity = ref(1);
-  watch(isOpen, (open) => {
-    if (!open) return;
-    folderId.value = collectionStore.ensureDefaultFolder().id;
-    quantity.value = 1;
-  }, { immediate: true });
+  watch(
+    [isOpen, collectionStore.isFileConnected],
+    ([open, connected]) => {
+      if (!open || !connected) return;
+      const rememberedFolderId = store.state.last_collection_folder_id;
+      const defaultFolder = collectionStore.ensureDefaultFolder();
+      folderId.value = collectionStore.folders.value.some((folder) => folder.id === rememberedFolderId)
+        ? rememberedFolderId
+        : defaultFolder.id;
+      quantity.value = 1;
+    },
+    { immediate: true }
+  );
 
   const addWanted = (): void => {
     collectionStore.addWanted({
@@ -89,6 +100,8 @@
       language_id: props.languageId,
       quantity: quantity.value
     });
+    store.commit('set_last_collection_folder_id', folderId.value);
+    quantity.value = 1;
     isOpen.value = false;
     emit('added');
   };

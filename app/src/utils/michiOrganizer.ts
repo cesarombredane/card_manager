@@ -7,6 +7,9 @@ export type MichiCardInput = {
   name: string;
   imageUrl: string | null;
   date: string | null;
+  groupKey: string;
+  setOrder: string;
+  undatedFlexible: boolean;
   quantity: number;
 };
 
@@ -16,10 +19,7 @@ export type MichiImageInput = BinderImage & {
 
 export type MichiOptions = {
   mode: MichiMode;
-  visualStrength: number;
   preserveFirstPage: boolean;
-  preserveImagePlacements: boolean;
-  allowEmptySlots: boolean;
   seed: number;
 };
 
@@ -191,7 +191,10 @@ const chronologicalCompare = (left: CardInstance, right: CardInstance): number =
   if (Number.isFinite(parseDate(left.date)) !== Number.isFinite(parseDate(right.date))) {
     return Number.isFinite(parseDate(left.date)) ? -1 : 1;
   }
-  return left.name.localeCompare(right.name) || left.ordinal - right.ordinal;
+  return left.groupKey.localeCompare(right.groupKey)
+    || left.setOrder.localeCompare(right.setOrder, undefined, { numeric: true, sensitivity: 'base' })
+    || left.name.localeCompare(right.name)
+    || left.ordinal - right.ordinal;
 };
 
 const removePreservedInstances = (
@@ -234,6 +237,19 @@ export const generateMichiLayout = async (input: MichiOrganizerInput): Promise<M
   if (unreadableCards || unreadableImages) {
     warnings.push(`${unreadableCards + unreadableImages} visual asset(s) could not be color-analyzed and were treated as neutral.`);
   }
+  if (instances.length && input.images.length / instances.length < 1 / 12) {
+    warnings.push(
+      `This binder has ${input.images.length} illustration${input.images.length === 1 ? '' : 's'} for ${instances.length} cards. `
+      + 'For a stronger Michi composition, add more illustrations (roughly one per 5–12 cards).'
+    );
+  } else if (!instances.length && input.images.length) {
+    warnings.push('This binder has illustrations but no cards. Add cards for a balanced Michi composition.');
+  } else if (instances.length && input.images.length / instances.length > 1 / 5) {
+    warnings.push(
+      `This binder has ${input.images.length} illustrations for only ${instances.length} card${instances.length === 1 ? '' : 's'}. `
+      + 'Consider adding more cards (roughly one illustration per 5–12 cards).'
+    );
+  }
 
   const slots: Array<string | null> = Array(totalSlots).fill(null);
   const preservedSideCount = options.preserveFirstPage ? sideSize : 0;
@@ -241,6 +257,46 @@ export const generateMichiLayout = async (input: MichiOrganizerInput): Promise<M
     slots.splice(0, sideSize, ...input.currentSlots.slice(0, sideSize));
   }
   let remainingCards = removePreservedInstances(instances, slots.slice(0, preservedSideCount));
+  if (options.mode === 'date') {
+    const flexibleProxies = remainingCards.filter((card) => card.undatedFlexible);
+    const datedCards = remainingCards.filter((card) => !card.undatedFlexible).sort(chronologicalCompare);
+    const groupBoundaries = [
+      0,
+      ...datedCards.flatMap((card, index) =>
+        index > 0 && datedCards[index - 1].groupKey !== card.groupKey ? [index] : []
+      ),
+      datedCards.length
+    ];
+    const proxiesAtBoundary = new Map<number, CardInstance[]>();
+    for (const proxy of flexibleProxies) {
+      const boundary = groupBoundaries[Math.floor(random() * groupBoundaries.length)];
+      const proxies = proxiesAtBoundary.get(boundary) ?? [];
+      proxies.push(proxy);
+      proxiesAtBoundary.set(boundary, proxies);
+    }
+    remainingCards = [];
+    for (let index = 0; index <= datedCards.length; index += 1) {
+      remainingCards.push(...(proxiesAtBoundary.get(index) ?? []));
+      if (index < datedCards.length) remainingCards.push(datedCards[index]);
+    }
+  } else {
+    remainingCards.sort((left, right) => left.features.hue - right.features.hue
+      || left.features.lab[0] - right.features.lab[0]
+      || left.name.localeCompare(right.name)
+      || left.ordinal - right.ordinal
+    );
+  }
+  const firstOrganizedSide = options.preserveFirstPage ? 1 : 0;
+  const pageColorAnchors = new Map<number, [number, number, number]>();
+  for (let offset = 0; offset < remainingCards.length; offset += sideSize) {
+    const pageCards = remainingCards.slice(offset, offset + sideSize);
+    const divisor = Math.max(1, pageCards.length);
+    pageColorAnchors.set(firstOrganizedSide + Math.floor(offset / sideSize), [
+      pageCards.reduce((total, card) => total + card.features.lab[0], 0) / divisor,
+      pageCards.reduce((total, card) => total + card.features.lab[1], 0) / divisor,
+      pageCards.reduce((total, card) => total + card.features.lab[2], 0) / divisor
+    ]);
+  }
 
   const placements: BinderImagePlacement[] = [];
   const occupiedImageCells = new Set<number>();
@@ -265,7 +321,7 @@ export const generateMichiLayout = async (input: MichiOrganizerInput): Promise<M
   };
 
   const fixedPlacements = input.currentImagePlacements.filter((placement) =>
-    options.preserveImagePlacements || (options.preserveFirstPage && placement.side_index === 0)
+    options.preserveFirstPage && placement.side_index === 0
   );
   for (const placement of fixedPlacements) {
     const image = input.images.find((candidate) => candidate.id === placement.image_id);
@@ -282,10 +338,27 @@ export const generateMichiLayout = async (input: MichiOrganizerInput): Promise<M
       }
       return random() - 0.5;
     });
+  const totalReservedImageCells = input.images.reduce(
+    (total, image) => total + image.width * image.height - image.card_slots.length,
+    0
+  );
+  const availableOrganizedSides = input.pageCount * 2 - firstOrganizedSide;
+  const estimatedActiveSideCount = Math.min(
+    availableOrganizedSides,
+    Math.max(1, Math.ceil((remainingCards.length + totalReservedImageCells) / sideSize))
+  );
 
-  for (const image of imagesToPlace) {
+  for (const [imageIndex, image] of imagesToPlace.entries()) {
+    const desiredSideOffset = imagesToPlace.length <= 1
+      ? Math.floor((estimatedActiveSideCount - 1) / 2)
+      : Math.round(imageIndex * (estimatedActiveSideCount - 1) / (imagesToPlace.length - 1));
+    const desiredSide = firstOrganizedSide + desiredSideOffset;
     const candidates: Array<{ side: number; row: number; column: number; score: number }> = [];
-    for (let side = options.preserveFirstPage ? 1 : 0; side < input.pageCount * 2; side += 1) {
+    const organizedSideLimit = Math.min(
+      input.pageCount * 2,
+      firstOrganizedSide + estimatedActiveSideCount
+    );
+    for (let side = options.preserveFirstPage ? 1 : 0; side < organizedSideLimit; side += 1) {
       for (let row = 0; row <= dimension - image.height; row += 1) {
         for (let column = 0; column <= dimension - image.width; column += 1) {
           const cells = Array.from({ length: image.width * image.height }, (_, index) => {
@@ -294,13 +367,41 @@ export const generateMichiLayout = async (input: MichiOrganizerInput): Promise<M
             return side * sideSize + (row + localRow) * dimension + column + localColumn;
           });
           if (cells.some((cell) => occupiedImageCells.has(cell))) continue;
+          const newReservedCells = cells.filter((_cell, index) => !image.card_slots.includes(index));
+          const totalSides = input.pageCount * 2;
+          const spreadStart = side === 0 ? null : side % 2 === 1 ? side : side - 1;
+          const isFacingSpread = spreadStart !== null && spreadStart + 1 < totalSides - 1;
+          if (isFacingSpread) {
+            const reservedOnSpread = [...reservedCells]
+              .filter((cell) => {
+                const cellSide = Math.floor(cell / sideSize);
+                return cellSide === spreadStart || cellSide === spreadStart + 1;
+              })
+              .length;
+            if (reservedOnSpread + newReservedCells.length >= sideSize * 2) continue;
+          }
           const centerDistance = Math.abs(column + image.width / 2 - dimension / 2)
             + Math.abs(row + image.height / 2 - dimension / 2);
+          const existingImageCells = [...occupiedImageCells]
+            .filter((cell) => Math.floor(cell / sideSize) === side)
+            .length;
+          const imageFeatures = analyzed.get(image.imageUrl) ?? neutralFeatures;
+          const pageAnchor = pageColorAnchors.get(side);
+          const pageColorDistance = pageAnchor
+            ? colorDistance(imageFeatures.lab, pageAnchor)
+            : 90;
+          const existingIllustrationPenalty = existingImageCells
+            ? (input.layout === '2x2' ? 75 : 50) + existingImageCells * 4
+            : 0;
           candidates.push({
             side,
             row,
             column,
-            score: side * 20 + centerDistance * 2 + random() * 8
+            score: Math.abs(side - desiredSide) * 90
+              + existingIllustrationPenalty
+              + pageColorDistance * 0.35
+              + centerDistance * 2
+              + random() * 8
           });
         }
       }
@@ -315,40 +416,47 @@ export const generateMichiLayout = async (input: MichiOrganizerInput): Promise<M
     });
   }
 
+  for (let spreadStart = 1; spreadStart + 1 < input.pageCount * 2 - 1; spreadStart += 2) {
+    const reservedOnSpread = [...reservedCells]
+      .filter((cell) => {
+        const side = Math.floor(cell / sideSize);
+        return side === spreadStart || side === spreadStart + 1;
+      })
+      .length;
+    if (reservedOnSpread >= sideSize * 2) {
+      throw new Error(
+        `Pages ${spreadStart + 1}–${spreadStart + 2} would contain only illustrations. `
+        + 'Every facing-page spread must contain at least one card.'
+      );
+    }
+  }
+
   const availableSlotCount = slots.reduce((count, value, index) =>
     count + (!value && !reservedCells.has(index) ? 1 : 0), 0);
   if (remainingCards.length > availableSlotCount) {
     const missing = remainingCards.length - availableSlotCount;
     throw new Error(`The binder needs ${missing} more usable slot${missing === 1 ? '' : 's'} to fit every card and illustration.`);
   }
-
-  remainingCards.sort(options.mode === 'date'
-    ? chronologicalCompare
-    : (left, right) => left.features.hue - right.features.hue
-      || left.features.lab[0] - right.features.lab[0]
-      || chronologicalCompare(left, right)
-  );
-
-  const targetGaps = options.allowEmptySlots
-    ? Math.min(input.pageCount * 2, availableSlotCount - remainingCards.length)
-    : 0;
-  const gapSlots = new Set<number>();
-  for (let side = 0; side < input.pageCount * 2 && gapSlots.size < targetGaps; side += 1) {
-    const sideStart = side * sideSize;
-    const candidates = Array.from({ length: sideSize }, (_, index) => sideStart + index)
-      .filter((index) => !slots[index] && !reservedCells.has(index));
-    const candidate = candidates[Math.floor(random() * candidates.length)];
-    if (candidate !== undefined) gapSlots.add(candidate);
-  }
-
   const placedFeatures = new Map<number, VisualFeatures>();
   const featureForPreserved = new Map(instances.map((card) => [card.slotValue, card.features]));
   slots.forEach((value, index) => {
     if (value) placedFeatures.set(index, featureForPreserved.get(value) ?? neutralFeatures);
   });
 
-  for (let slotIndex = 0; slotIndex < totalSlots && remainingCards.length; slotIndex += 1) {
-    if (slots[slotIndex] || reservedCells.has(slotIndex) || gapSlots.has(slotIndex)) continue;
+  const placeCard = (slotIndex: number, card: CardInstance): void => {
+    slots[slotIndex] = card.slotValue;
+    placedFeatures.set(slotIndex, card.features);
+  };
+  const usableIndices = (): number[] => Array.from({ length: totalSlots }, (_, index) => index)
+    .filter((index) => !slots[index] && !reservedCells.has(index));
+
+  if (options.mode === 'date') {
+    const available = usableIndices();
+    remainingCards.forEach((card, index) => placeCard(available[index], card));
+    remainingCards = [];
+  } else {
+    for (let slotIndex = 0; slotIndex < totalSlots && remainingCards.length; slotIndex += 1) {
+      if (slots[slotIndex] || reservedCells.has(slotIndex)) continue;
     const row = Math.floor((slotIndex % sideSize) / dimension);
     const column = slotIndex % dimension;
     const neighborFeatures = [
@@ -357,7 +465,7 @@ export const generateMichiLayout = async (input: MichiOrganizerInput): Promise<M
     ].filter((features): features is VisualFeatures => Boolean(features));
     const background = imageAtCell.get(slotIndex);
     const backgroundFeatures = background ? analyzed.get(background.imageUrl) : undefined;
-    const windowSize = Math.min(16, remainingCards.length);
+    const windowSize = remainingCards.length;
     let bestIndex = 0;
     let bestScore = Number.POSITIVE_INFINITY;
     for (let index = 0; index < windowSize; index += 1) {
@@ -369,19 +477,15 @@ export const generateMichiLayout = async (input: MichiOrganizerInput): Promise<M
       const backgroundDistance = backgroundFeatures
         ? colorDistance(candidate.features.lab, backgroundFeatures.lab)
         : 0;
-      const orderPenalty = index * (100 - options.visualStrength) / 18;
-      const score = adjacency * options.visualStrength / 100
-        + backgroundDistance * options.visualStrength / 140
-        + orderPenalty
-        + random() * 0.05;
+      const score = adjacency + backgroundDistance * 0.7 + random() * 0.05;
       if (score < bestScore) {
         bestIndex = index;
         bestScore = score;
       }
     }
     const [selected] = remainingCards.splice(bestIndex, 1);
-    slots[slotIndex] = selected.slotValue;
-    placedFeatures.set(slotIndex, selected.features);
+      placeCard(slotIndex, selected);
+    }
   }
 
   if (remainingCards.length) throw new Error('The layout could not place every card.');
@@ -408,7 +512,7 @@ export const generateMichiLayout = async (input: MichiOrganizerInput): Promise<M
     }
   }
   const averageDistance = comparisons ? totalDistance / comparisons : 0;
-  const score = Math.max(0, Math.round(1000 - averageDistance * 10 - gapSlots.size * 2));
+  const score = Math.max(0, Math.round(1000 - averageDistance * 10));
 
   return {
     slots,
