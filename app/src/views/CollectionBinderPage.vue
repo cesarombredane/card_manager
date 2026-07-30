@@ -22,7 +22,11 @@
           <q-btn flat dense color="grey-4" icon="arrow_back" label="Back to collection" no-caps :to="`/collection/folder/${folderId}`" />
           <div class="text-overline text-primary q-mt-sm">Binder organizer</div>
           <div class="text-h5 text-weight-bold">{{ folder.name }}</div>
-          <q-btn class="q-mt-md" outline color="primary" icon="settings" label="Binder settings" no-caps @click="openSettings" />
+          <div class="row q-gutter-sm q-mt-md">
+            <q-btn outline color="primary" icon="auto_awesome" label="Auto Michi" no-caps @click="openMichiDialog" />
+            <q-btn outline color="primary" icon="settings" label="Binder settings" no-caps @click="openSettings" />
+            <q-btn v-if="michiUndoSnapshot" flat color="grey-4" icon="undo" label="Undo auto layout" no-caps @click="undoMichiLayout" />
+          </div>
         </div>
 
         <q-card flat bordered class="bg-grey-10 text-white">
@@ -30,18 +34,12 @@
             <div class="row items-center justify-between">
               <div class="text-h6">Binder items</div>
               <div v-if="selectorTab === 'proxies' || selectorTab === 'images'" class="row no-wrap">
-                <q-btn
-                  v-if="selectorTab === 'images'"
-                  flat
-                  round
-                  dense
-                  color="primary"
-                  icon="picture_as_pdf"
-                  :disable="selectedImageIds.length === 0"
-                  :loading="imagesPdfSaving"
-                  @click="printSelectedImages"
-                >
+                <q-btn v-if="selectorTab === 'images'" flat round dense color="primary" icon="picture_as_pdf" :disable="selectedImageIds.length === 0"
+                  :loading="imagesPdfSaving" @click="printSelectedImages">
                   <q-tooltip>Download selected images at Vault X pocket size</q-tooltip>
+                </q-btn>
+                <q-btn v-if="selectorTab === 'images'" flat round dense color="primary" icon="add_photo_alternate" @click="openBulkImageDialog">
+                  <q-tooltip>Add multiple images automatically</q-tooltip>
                 </q-btn>
                 <q-btn flat round dense color="primary" icon="add" @click="openAssetDialog(selectorTab)">
                   <q-tooltip>Add {{ selectorTab === 'proxies' ? 'proxy' : 'image' }}</q-tooltip>
@@ -67,8 +65,7 @@
               <q-item v-for="row in availableRows" :key="row.entry.id" :draggable="row.available > 0"
                 :class="{ 'text-grey-6': row.available === 0, 'cursor-grab': row.available > 0 }" @dragstart="startEntryDrag(row.entry.id, $event)">
                 <q-item-section avatar>
-                  <q-img v-if="row.card.image_url" :src="row.card.image_url" fit="contain" width="54px" height="74px"
-                    :class="{ 'wanted-image': row.entry.wanted }" />
+                  <q-img v-if="row.card.image_url" :src="row.card.image_url" fit="contain" width="54px" height="74px" :class="{ 'wanted-image': row.entry.wanted }" />
                   <q-icon v-else name="style" size="38px" />
                 </q-item-section>
                 <q-item-section>
@@ -92,10 +89,18 @@
                 </q-item-section>
                 <q-item-section>
                   <q-item-label>{{ proxy.name }}</q-item-label>
-                  <q-item-label caption>{{ proxyAvailable(proxy) }} / {{ proxy.quantity }} available</q-item-label>
+                  <q-item-label caption>
+                    <span v-if="proxy.date">{{ proxy.date }} · </span>
+                    {{ proxyAvailable(proxy) }} / {{ proxy.quantity }} available
+                  </q-item-label>
                 </q-item-section>
                 <q-item-section side>
-                  <q-btn flat round dense color="negative" icon="delete" @click="deleteAsset('proxy', proxy.id)" />
+                  <div class="row no-wrap">
+                    <q-btn flat round dense color="grey-4" icon="edit" @click="openEditAsset('proxy', proxy.id)">
+                      <q-tooltip>Edit proxy</q-tooltip>
+                    </q-btn>
+                    <q-btn flat round dense color="negative" icon="delete" @click="requestDeleteAsset('proxy', proxy.id)" />
+                  </div>
                 </q-item-section>
               </q-item>
               <q-item v-if="filteredProxies.length === 0"><q-item-section class="text-grey-5">No proxies. Use + to upload one.</q-item-section></q-item>
@@ -114,11 +119,14 @@
                 </q-item-section>
                 <q-item-section side>
                   <div class="row no-wrap">
+                    <q-btn flat round dense color="grey-4" icon="edit" @click="openEditAsset('image', image.id)">
+                      <q-tooltip>Edit image</q-tooltip>
+                    </q-btn>
                     <q-btn v-if="placedImageIds.has(image.id)" flat round dense color="grey-4" icon="remove_circle"
                       @click="binderStore.removeImagePlacement(folderId, image.id)">
                       <q-tooltip>Remove from binder page</q-tooltip>
                     </q-btn>
-                    <q-btn flat round dense color="negative" icon="delete" @click="deleteAsset('image', image.id)" />
+                    <q-btn flat round dense color="negative" icon="delete" @click="requestDeleteAsset('image', image.id)" />
                   </div>
                 </q-item-section>
               </q-item>
@@ -145,13 +153,14 @@
               }">
                 <img :src="binderAssetUrl(decoration.image.id, 'image')" :alt="decoration.image.name" />
               </div>
-              <div v-for="slot in side.slots" :key="slot.index" class="binder-slot relative-position"
-                :class="{ 'binder-slot--filled': slot.content, 'binder-slot--decorated': slot.hasDecoration && !slot.content }"
-                :style="{ gridColumn: slot.column + 1, gridRow: slot.rowIndex + 1 }" @dragover.prevent @drop.prevent="dropOnSlot(slot.index, $event)">
+              <div v-for="slot in side.slots" :key="slot.index" class="binder-slot relative-position" :class="{
+                'binder-slot--filled': slot.content,
+                'binder-slot--decorated': slot.hasDecoration && !slot.content,
+                'binder-slot--image-reserved': slot.hasDecoration && !slot.acceptsCard
+              }" :style="{ gridColumn: slot.column + 1, gridRow: slot.rowIndex + 1 }" @dragover.prevent @drop.prevent="dropOnSlot(slot.index, $event)">
                 <template v-if="slot.content">
                   <img v-if="slot.content.imageUrl" :src="slot.content.imageUrl" :alt="slot.content.name" draggable="true"
-                    :class="{ 'wanted-image': slot.content.wanted }"
-                    @dragstart="startSlotDrag(slot.index, $event)" />
+                    :class="{ 'wanted-image': slot.content.wanted }" @dragstart="startSlotDrag(slot.index, $event)" />
                   <div v-else class="full-height column items-center justify-center text-center q-pa-sm" draggable="true" @dragstart="startSlotDrag(slot.index, $event)">
                     <q-icon name="style" size="30px" color="grey-5" />
                     <div class="text-caption q-mt-sm">{{ slot.content.name }}</div>
@@ -160,17 +169,8 @@
                     @click="binderStore.setSlot(folderId, slot.index, null)">
                     <q-tooltip>Remove from binder</q-tooltip>
                   </q-btn>
-                  <q-btn
-                    v-if="slot.content.wanted && slot.content.entryId"
-                    class="slot-got-it absolute-bottom q-ma-sm"
-                    color="primary"
-                    text-color="black"
-                    icon="check_circle"
-                    label="Got it"
-                    no-caps
-                    dense
-                    @click.stop="openGotIt(slot.index, slot.content.entryId)"
-                  />
+                  <q-btn v-if="slot.content.wanted && slot.content.entryId" class="slot-got-it absolute-bottom q-ma-sm" color="primary" text-color="black"
+                    icon="check_circle" label="Got it" no-caps dense @click.stop="openGotIt(slot.index, slot.content.entryId)" />
                 </template>
                 <div v-else-if="!slot.hasDecoration" class="full-height column items-center justify-center text-grey-6">
                   <q-icon name="add" size="24px" />
@@ -234,6 +234,85 @@
       </q-card>
     </q-dialog>
 
+    <q-dialog v-model="showMichiDialog">
+      <q-card class="bg-grey-10 text-white" style="width: 920px; max-width: 96vw; max-height: 92vh">
+        <q-card-section>
+          <div class="text-h6">Auto Michi layout</div>
+          <div class="text-body2 text-grey-4">
+            Build a complete proposal from every owned card, wanted card, proxy, and illustration.
+          </div>
+        </q-card-section>
+        <q-separator dark />
+        <q-card-section class="michi-dialog-body">
+          <div class="michi-options">
+            <q-select v-model="michiMode" :options="michiModeOptions" emit-value map-options dark outlined label="Organization" />
+            <div>
+              <div class="row justify-between text-caption">
+                <span>Visual matching strength</span><span>{{ michiVisualStrength }}%</span>
+              </div>
+              <q-slider v-model="michiVisualStrength" :min="0" :max="100" />
+            </div>
+            <q-toggle v-model="michiPreserveFirstPage" color="primary" label="Preserve first page" />
+            <q-toggle v-model="michiPreserveImages" color="primary" label="Preserve illustration placements" />
+            <q-toggle v-model="michiAllowEmptySlots" color="primary" label="Allow intentional empty slots" />
+            <q-input v-model.number="michiSeed" type="number" dark outlined label="Variation seed" />
+            <q-btn color="primary" text-color="black" icon="auto_awesome" label="Generate preview"
+              :loading="michiGenerating" @click="generateMichiProposal()" />
+            <q-btn v-if="michiProposal" outline color="primary" icon="shuffle" label="Try another variation"
+              :disable="michiGenerating" @click="generateMichiProposal(true)" />
+          </div>
+          <div class="michi-preview">
+            <q-banner v-if="michiError" class="bg-red-10 text-white rounded-borders q-mb-md">
+              {{ michiError }}
+            </q-banner>
+            <template v-if="michiProposal">
+              <div class="row q-col-gutter-sm q-mb-md">
+                <div class="col"><q-card flat class="bg-grey-9 q-pa-sm text-center"><div class="text-h6">{{ michiProposal.placedCards }}</div><div class="text-caption">Cards</div></q-card></div>
+                <div class="col"><q-card flat class="bg-grey-9 q-pa-sm text-center"><div class="text-h6">{{ michiProposal.placedImages }}</div><div class="text-caption">Images</div></q-card></div>
+                <div class="col"><q-card flat class="bg-grey-9 q-pa-sm text-center"><div class="text-h6">{{ michiProposal.score }}</div><div class="text-caption">Visual score</div></q-card></div>
+              </div>
+              <q-banner v-for="warning in michiProposal.warnings" :key="warning" class="bg-orange-10 text-white rounded-borders q-mb-sm">
+                {{ warning }}
+              </q-banner>
+              <div class="row items-center justify-between q-mb-sm">
+                <div class="text-subtitle2">{{ michiPreviewVersion === 'current' ? 'Current pages' : 'Proposed pages' }}</div>
+                <q-btn-toggle v-model="michiPreviewVersion" dense no-caps unelevated toggle-color="primary" text-color="grey-4"
+                  :options="[{ label: 'Before', value: 'current' }, { label: 'After', value: 'proposal' }]" />
+              </div>
+              <div class="michi-page-list">
+                <div v-for="side in michiPreviewSides" :key="side.sideIndex">
+                  <div class="text-caption text-center text-grey-4 q-mb-xs">Page {{ side.sideIndex + 1 }}</div>
+                  <div class="michi-page" :style="{ gridTemplateColumns: `repeat(${binderColumns}, 1fr)` }">
+                    <div v-for="decoration in side.decorations" :key="decoration.image.id" class="michi-decoration" :style="{
+                      gridColumn: `${decoration.placement.column + 1} / span ${decoration.image.width}`,
+                      gridRow: `${decoration.placement.row + 1} / span ${decoration.image.height}`
+                    }">
+                      <img :src="binderAssetUrl(decoration.image.id, 'image')" :alt="decoration.image.name" />
+                    </div>
+                    <div v-for="cell in side.cells" :key="cell.index" class="michi-cell"
+                      :style="{ gridColumn: cell.column + 1, gridRow: cell.row + 1 }">
+                      <img v-if="cell.imageUrl" :src="cell.imageUrl" :alt="cell.name" />
+                      <q-icon v-else-if="cell.name" name="style" color="grey-5" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </template>
+            <div v-else-if="!michiError" class="full-height column items-center justify-center text-grey-5 text-center q-pa-xl">
+              <q-icon name="auto_awesome" size="48px" />
+              <div class="q-mt-md">Choose the layout rules, then generate a non-destructive preview.</div>
+            </div>
+          </div>
+        </q-card-section>
+        <q-separator dark />
+        <q-card-actions align="right">
+          <q-btn flat color="grey-4" label="Cancel" v-close-popup />
+          <q-btn color="primary" text-color="black" icon="check" label="Apply layout"
+            :disable="!michiProposal || michiGenerating" @click="applyMichiProposal" />
+        </q-card-actions>
+      </q-card>
+    </q-dialog>
+
     <q-dialog v-model="showAssetDialog">
       <q-card class="bg-grey-10 text-white" style="width: 500px; max-width: 92vw">
         <q-card-section>
@@ -248,7 +327,11 @@
         </q-card-section>
         <q-card-section class="column q-gutter-md">
           <q-input v-model="assetName" dark outlined :label="assetKind === 'proxy' ? 'Proxy name' : 'Image name'" />
-          <q-input v-if="assetKind === 'proxy'" v-model.number="assetQuantity" type="number" min="1" step="1" dark outlined label="Quantity" />
+          <template v-if="assetKind === 'proxy'">
+            <q-input v-model="assetDate" dark outlined label="Date (optional)" mask="##/##/####" placeholder="DD/MM/YYYY" :error="!isValidProxyDate(assetDate)"
+              error-message="Use a valid DD/MM/YYYY date" />
+            <q-input v-model.number="assetQuantity" type="number" min="1" step="1" dark outlined label="Quantity" />
+          </template>
           <div v-if="assetKind === 'image'">
             <div class="row q-gutter-md no-wrap items-start">
               <div class="col">
@@ -262,13 +345,167 @@
           <q-file v-model="assetFile" dark outlined accept="image/jpeg,image/png,image/webp" label="Choose image" @update:model-value="prepareAssetImage">
             <template #prepend><q-icon name="image" /></template>
           </q-file>
-          <q-img v-if="assetPreview" :src="assetPreview" fit="contain" class="bg-grey-9 rounded-borders" style="max-height: 360px" />
+          <div v-if="assetPreview" class="crop-editor">
+            <div class="text-subtitle2">Crop and position</div>
+            <div class="text-caption text-grey-4 q-mb-sm">
+              The highlighted frame is the exact proportion used in the binder.
+            </div>
+            <div class="crop-frame" :style="cropFrameStyle">
+              <canvas ref="cropCanvas" class="crop-canvas" />
+            </div>
+            <q-slider v-model="cropZoom" :min="1" :max="3" :step="0.01" label label-always :label-value="`Zoom ${cropZoom.toFixed(2)}×`" />
+            <div class="crop-position-control">
+              <div class="row items-center no-wrap">
+                <q-icon name="swap_horiz" class="q-mr-sm" />
+                <span class="text-caption">Horizontal position</span>
+                <span v-if="!canCropX" class="text-caption text-grey-5 q-ml-auto">Zoom in to move</span>
+              </div>
+              <q-slider v-model="cropX" :min="-100" :max="100" :disable="!canCropX" />
+            </div>
+            <div class="crop-position-control">
+              <div class="row items-center no-wrap">
+                <q-icon name="swap_vert" class="q-mr-sm" />
+                <span class="text-caption">Vertical position</span>
+                <span v-if="!canCropY" class="text-caption text-grey-5 q-ml-auto">Zoom in to move</span>
+              </div>
+              <q-slider v-model="cropY" :min="-100" :max="100" :disable="!canCropY" />
+            </div>
+          </div>
           <div v-if="assetError" class="text-negative">{{ assetError }}</div>
         </q-card-section>
         <q-card-actions align="right">
           <q-btn flat color="grey-4" label="Cancel" v-close-popup />
-          <q-btn color="primary" text-color="black" label="Add" :disable="!assetName.trim() || !assetDataUrl || (assetKind === 'proxy' && assetQuantity < 1)"
-            :loading="assetSaving" @click="saveAsset" />
+          <q-btn color="primary" text-color="black" label="Add"
+            :disable="!assetName.trim() || !assetDataUrl || (assetKind === 'proxy' && (assetQuantity < 1 || !isValidProxyDate(assetDate)))" :loading="assetSaving"
+            @click="saveAsset" />
+        </q-card-actions>
+      </q-card>
+    </q-dialog>
+
+    <q-dialog v-model="showBulkImageDialog">
+      <q-card class="bg-grey-10 text-white" style="width: 560px; max-width: 92vw">
+        <q-card-section>
+          <div class="text-h6">Add multiple binder images</div>
+          <div class="text-body2 text-grey-4">Each image gets a generic name and the closest slot size for its proportions.</div>
+        </q-card-section>
+        <q-card-section class="column q-gutter-md">
+          <q-file v-model="bulkImageFiles" multiple dark outlined use-chips counter accept="image/jpeg,image/png,image/webp" label="Choose images"
+            :disable="bulkImageSaving" @update:model-value="prepareBulkImages">
+            <template #prepend><q-icon name="collections" /></template>
+          </q-file>
+          <q-list v-if="bulkImageRows.length" bordered separator class="rounded-borders">
+            <q-item v-for="row in bulkImageRows" :key="`${row.file.name}-${row.file.lastModified}`">
+              <q-item-section avatar>
+                <q-icon :name="row.status === 'done' ? 'check_circle' : row.status === 'error' ? 'error' : 'image'"
+                  :color="row.status === 'done' ? 'positive' : row.status === 'error' ? 'negative' : 'grey-4'" />
+              </q-item-section>
+              <q-item-section>
+                <q-item-label lines="1">{{ row.file.name }}</q-item-label>
+                <q-item-label caption>
+                  {{ row.width }} × {{ row.height }} slots
+                  <span v-if="row.status === 'uploading'"> · Uploading…</span>
+                  <span v-else-if="row.error" class="text-negative"> · {{ row.error }}</span>
+                </q-item-label>
+              </q-item-section>
+            </q-item>
+          </q-list>
+          <div v-if="bulkImageError" class="text-negative">{{ bulkImageError }}</div>
+        </q-card-section>
+        <q-card-actions align="right">
+          <q-btn flat color="grey-4" label="Cancel" :disable="bulkImageSaving" v-close-popup />
+          <q-btn color="primary" text-color="black" label="Add all" :disable="!bulkImageRows.some(row => row.status === 'ready') || bulkImagePreparing"
+            :loading="bulkImageSaving || bulkImagePreparing" @click="saveBulkImages" />
+        </q-card-actions>
+      </q-card>
+    </q-dialog>
+
+    <q-dialog v-model="showEditAssetDialog">
+      <q-card class="bg-grey-10 text-white" style="width: 600px; max-width: 92vw; max-height: 90vh; overflow-y: auto">
+        <q-card-section>
+          <div class="text-h6">Edit {{ editAssetKind === 'proxy' ? 'proxy' : 'image' }}</div>
+        </q-card-section>
+        <q-card-section class="column q-gutter-md">
+          <q-input v-model="editName" dark outlined label="Name" autofocus />
+          <template v-if="editAssetKind === 'proxy'">
+            <q-input v-model="editDate" dark outlined label="Date (optional)" mask="##/##/####" placeholder="DD/MM/YYYY" :error="!isValidProxyDate(editDate)"
+              error-message="Use a valid DD/MM/YYYY date" />
+            <q-input v-model.number="editQuantity" type="number" min="1" step="1" dark outlined label="Quantity" />
+          </template>
+          <div v-else>
+            <div class="row q-gutter-md no-wrap items-start">
+              <div class="col">
+                <q-select class="full-width" v-model="editWidth" :options="assetDimensions" dark outlined label="Width in slots"
+                  @update:model-value="resetEditCardSlots" />
+              </div>
+              <div class="col">
+                <q-select class="full-width" v-model="editHeight" :options="assetDimensions" dark outlined label="Height in slots"
+                  @update:model-value="resetEditCardSlots" />
+              </div>
+            </div>
+            <div>
+              <div class="text-subtitle2">Crop, position, and card areas</div>
+              <div class="text-caption text-grey-4 q-mb-sm">
+                Select the image areas where a card may be placed. Unselected areas remain reserved for the illustration.
+              </div>
+              <div class="crop-frame" :style="editCropFrameStyle">
+                <canvas ref="editCropCanvas" class="crop-canvas" />
+                <div class="crop-slot-grid" :style="{
+                  gridTemplateColumns: `repeat(${editWidth}, 1fr)`,
+                  gridTemplateRows: `repeat(${editHeight}, 1fr)`
+                }">
+                  <button v-for="index in editWidth * editHeight" :key="index" type="button" class="crop-slot-toggle"
+                    :class="{ 'crop-slot-toggle--selected': editCardSlots.includes(index - 1) }"
+                    :aria-label="`${editCardSlots.includes(index - 1) ? 'Disallow' : 'Allow'} card in image area ${index}`" @click="toggleEditCardSlot(index - 1)">
+                    <q-icon :name="editCardSlots.includes(index - 1) ? 'style' : 'block'" />
+                  </button>
+                </div>
+              </div>
+              <q-slider v-model="editCropZoom" :min="1" :max="3" :step="0.01" label label-always :label-value="`Zoom ${editCropZoom.toFixed(2)}×`" />
+              <div class="crop-position-control">
+                <div class="row items-center no-wrap">
+                  <q-icon name="swap_horiz" class="q-mr-sm" />
+                  <span class="text-caption">Horizontal position</span>
+                  <span v-if="!canEditCropX" class="text-caption text-grey-5 q-ml-auto">Zoom in to move</span>
+                </div>
+                <q-slider v-model="editCropX" :min="-100" :max="100" :disable="!canEditCropX" />
+              </div>
+              <div class="crop-position-control">
+                <div class="row items-center no-wrap">
+                  <q-icon name="swap_vert" class="q-mr-sm" />
+                  <span class="text-caption">Vertical position</span>
+                  <span v-if="!canEditCropY" class="text-caption text-grey-5 q-ml-auto">Zoom in to move</span>
+                </div>
+                <q-slider v-model="editCropY" :min="-100" :max="100" :disable="!canEditCropY" />
+              </div>
+            </div>
+            <div v-if="editAssetError" class="text-negative">{{ editAssetError }}</div>
+            <q-banner v-if="editReservedSlotConflicts" class="bg-red-10 text-white rounded-borders">
+              {{ editReservedSlotConflicts }} occupied card
+              {{ editReservedSlotConflicts === 1 ? 'slot is' : 'slots are' }} marked as illustration-only.
+              Remove those cards or allow cards in those areas before saving.
+            </q-banner>
+          </div>
+        </q-card-section>
+        <q-card-actions align="right">
+          <q-btn flat color="grey-4" label="Cancel" v-close-popup />
+          <q-btn color="primary" text-color="black" label="Save" :disable="!editName.trim() || editQuantity < 1 || editReservedSlotConflicts > 0
+            || (editAssetKind === 'proxy' && !isValidProxyDate(editDate))" :loading="editAssetSaving" @click="saveAssetEdits" />
+        </q-card-actions>
+      </q-card>
+    </q-dialog>
+
+    <q-dialog :model-value="deleteTarget !== null" @update:model-value="value => { if (!value) deleteTarget = null; }">
+      <q-card class="bg-grey-10 text-white" style="width: 420px; max-width: 90vw">
+        <q-card-section>
+          <div class="text-h6">Delete {{ deleteTarget?.kind === 'proxy' ? 'proxy' : 'image' }}?</div>
+          <div class="text-body2 text-grey-4 q-mt-sm">
+            “{{ deleteTarget?.name }}” will be permanently deleted
+            {{ deleteTarget?.kind === 'proxy' ? 'and removed from every binder slot.' : 'and removed from its binder page.' }}
+          </div>
+        </q-card-section>
+        <q-card-actions align="right">
+          <q-btn flat color="grey-4" label="Cancel" @click="deleteTarget = null" />
+          <q-btn color="negative" label="Delete" :loading="deleteSaving" @click="confirmDeleteAsset" />
         </q-card-actions>
       </q-card>
     </q-dialog>
@@ -280,15 +517,7 @@
           <div class="text-body2 text-grey-4">{{ gotItCardName }}</div>
         </q-card-section>
         <q-card-section>
-          <q-select
-            v-model="gotItCondition"
-            :options="conditionOptions"
-            emit-value
-            map-options
-            dark
-            outlined
-            label="Condition"
-          />
+          <q-select v-model="gotItCondition" :options="conditionOptions" emit-value map-options dark outlined label="Condition" />
         </q-card-section>
         <q-card-actions align="right">
           <q-btn flat color="grey-4" label="Cancel" @click="gotItTarget = null" />
@@ -300,10 +529,10 @@
 </template>
 
 <script setup lang="ts">
-  import { computed, ref, watchEffect } from 'vue';
+  import { computed, nextTick, ref, watch, watchEffect } from 'vue';
   import { useRoute } from 'vue-router';
   import { binderSlotsPerPage, binderStore } from '../utils/binders';
-  import type { BinderLayout, BinderProxy } from '../utils/binders';
+  import type { BinderImage, BinderLayout, BinderProxy } from '../utils/binders';
   import { cardConditions, collectionStore } from '../utils/collection';
   import type { CardCondition, CollectionEntry } from '../utils/collection';
   import { buildDisplayCard, compareCardReleaseAndNumber } from '../utils/cardDisplay';
@@ -316,6 +545,8 @@
   import type { CardSort } from '../utils/cardSorting';
   import { cardmarketDisplayPrice } from '../utils/cardDisplay';
   import { downloadBinderImagesPdf } from '../utils/binderImagesPdf';
+  import { generateMichiLayout } from '../utils/michiOrganizer';
+  import type { MichiLayoutProposal, MichiMode } from '../utils/michiOrganizer';
 
   type BinderRow = {
     entry: CollectionEntry;
@@ -326,6 +557,17 @@
     price: number | null;
   };
   type SelectorTab = 'collection' | 'wanted' | 'proxies' | 'images';
+  type BulkImageRow = {
+    file: File;
+    width: number;
+    height: number;
+    status: 'ready' | 'uploading' | 'done' | 'error';
+    error: string | null;
+  };
+  type MichiUndoSnapshot = {
+    slots: Array<string | null>;
+    imagePlacements: Array<{ image_id: string; side_index: number; row: number; column: number }>;
+  };
 
   const route = useRoute();
   const folderId = computed(() => String(route.params.folderId ?? ''));
@@ -335,6 +577,18 @@
     folder.value?.type === 'binder' && binderStore.isReady.value && !binder.value
   ));
   const showSettings = ref(false);
+  const showMichiDialog = ref(false);
+  const michiMode = ref<MichiMode>('date');
+  const michiVisualStrength = ref(55);
+  const michiPreserveFirstPage = ref(false);
+  const michiPreserveImages = ref(false);
+  const michiAllowEmptySlots = ref(false);
+  const michiSeed = ref(1);
+  const michiGenerating = ref(false);
+  const michiProposal = ref<MichiLayoutProposal | null>(null);
+  const michiPreviewVersion = ref<'current' | 'proposal'>('proposal');
+  const michiError = ref<string | null>(null);
+  const michiUndoSnapshot = ref<MichiUndoSnapshot | null>(null);
   const newPageCount = ref(20);
   const newLayout = ref<BinderLayout>('3x3');
   const settingsPageCount = ref(1);
@@ -347,6 +601,7 @@
   const assetKind = ref<'proxy' | 'image'>('proxy');
   const assetName = ref('');
   const assetQuantity = ref(1);
+  const assetDate = ref('');
   const assetWidth = ref(1);
   const assetHeight = ref(1);
   const assetFile = ref<File | null>(null);
@@ -354,16 +609,64 @@
   const assetPreview = ref<string | null>(null);
   const assetError = ref<string | null>(null);
   const assetSaving = ref(false);
+  const showBulkImageDialog = ref(false);
+  const bulkImageFiles = ref<File[] | null>(null);
+  const bulkImageRows = ref<BulkImageRow[]>([]);
+  const bulkImagePreparing = ref(false);
+  const bulkImageSaving = ref(false);
+  const bulkImageError = ref<string | null>(null);
+  const cropCanvas = ref<HTMLCanvasElement | null>(null);
+  const cropImage = ref<HTMLImageElement | null>(null);
+  const cropZoom = ref(1);
+  const cropX = ref(0);
+  const cropY = ref(0);
+  const showEditAssetDialog = ref(false);
+  const editAssetKind = ref<'proxy' | 'image'>('proxy');
+  const editAssetId = ref('');
+  const editName = ref('');
+  const editQuantity = ref(1);
+  const editDate = ref('');
+  const editWidth = ref(1);
+  const editHeight = ref(1);
+  const editOriginalWidth = ref(1);
+  const editOriginalHeight = ref(1);
+  const editCardSlots = ref<number[]>([]);
+  const editCropCanvas = ref<HTMLCanvasElement | null>(null);
+  const editCropImage = ref<HTMLImageElement | null>(null);
+  const editCropZoom = ref(1);
+  const editCropX = ref(0);
+  const editCropY = ref(0);
+  const editOriginalCropZoom = ref(1);
+  const editOriginalCropX = ref(0);
+  const editOriginalCropY = ref(0);
+  const editAssetSaving = ref(false);
+  const editAssetError = ref<string | null>(null);
+  const deleteTarget = ref<{ kind: 'proxy' | 'image'; id: string; name: string; } | null>(null);
+  const deleteSaving = ref(false);
   const selectedImageIds = ref<string[]>([]);
   const imagesPdfSaving = ref(false);
   const imagesPdfError = ref<string | null>(null);
-  const gotItTarget = ref<{ slotIndex: number; entryId: string } | null>(null);
+  const gotItTarget = ref<{ slotIndex: number; entryId: string; } | null>(null);
   const gotItCondition = ref<CardCondition>('NM');
   const layoutOptions = [
     { label: '2 × 2 — 4 cards per page', value: '2x2' },
     { label: '3 × 3 — 9 cards per page', value: '3x3' }
   ];
+  const michiModeOptions = [
+    { label: 'Date first', value: 'date' },
+    { label: 'Color first', value: 'color' }
+  ];
   const conditionOptions = cardConditions.map((condition) => ({ ...condition }));
+  const isValidProxyDate = (value: string): boolean => {
+    if (!value) return true;
+    const match = /^(\d{2})\/(\d{2})\/(\d{4})$/.exec(value);
+    if (!match) return false;
+    const day = Number(match[1]);
+    const month = Number(match[2]);
+    const year = Number(match[3]);
+    const date = new Date(Date.UTC(year, month - 1, day));
+    return date.getUTCFullYear() === year && date.getUTCMonth() === month - 1 && date.getUTCDate() === day;
+  };
   const pokemon = getPokemon();
   const pokedexByPokemonId = new Map(pokemon.map((entry) => [entry.id, entry.pokedex_id]));
   const pokedexByPokemonName = new Map(pokemon.flatMap((entry) =>
@@ -487,6 +790,25 @@
   const proxyAvailable = (proxy: BinderProxy): number =>
     Math.max(0, proxy.quantity - (usedProxyCounts.value.get(proxy.id) ?? 0));
   const placedImageIds = computed(() => new Set((binder.value?.image_placements ?? []).map((placement) => placement.image_id)));
+  const editReservedSlotConflicts = computed(() => {
+    if (editAssetKind.value !== 'image' || !binder.value) return 0;
+    const placement = binder.value.image_placements.find((candidate) => candidate.image_id === editAssetId.value);
+    if (!placement) return 0;
+    const dimension = binderColumns.value;
+    const placedRow = Math.min(placement.row, dimension - editHeight.value);
+    const placedColumn = Math.min(placement.column, dimension - editWidth.value);
+    let conflicts = 0;
+    for (let row = 0; row < editHeight.value; row += 1) {
+      for (let column = 0; column < editWidth.value; column += 1) {
+        if (editCardSlots.value.includes(row * editWidth.value + column)) continue;
+        const slotIndex = placement.side_index * binderSlotsPerPage(binder.value.layout)
+          + (placedRow + row) * dimension
+          + placedColumn + column;
+        if (binder.value.slots[slotIndex]) conflicts += 1;
+      }
+    }
+    return conflicts;
+  });
   const filteredProxies = computed(() => {
     const query = search.value.trim().toLocaleLowerCase();
     return (binder.value?.proxies ?? []).filter((proxy) => !query || proxy.name.toLocaleLowerCase().includes(query));
@@ -504,6 +826,115 @@
   const binderAssetUrl = (assetId: string, kind: 'proxy' | 'image'): string => {
     const asset = manualImageStore.find('binder-assets', folderId.value, assetId, kind);
     return asset ? `${asset.url}?v=${encodeURIComponent(asset.updated_at)}` : '';
+  };
+  const openMichiDialog = (): void => {
+    michiProposal.value = null;
+    michiError.value = null;
+    showMichiDialog.value = true;
+  };
+  const generateMichiProposal = async (nextVariation = false): Promise<void> => {
+    if (!binder.value || michiGenerating.value) return;
+    if (nextVariation) michiSeed.value += 1;
+    michiGenerating.value = true;
+    michiError.value = null;
+    try {
+      michiProposal.value = await generateMichiLayout({
+        pageCount: binder.value.page_count,
+        layout: binder.value.layout,
+        currentSlots: binder.value.slots,
+        currentImagePlacements: binder.value.image_placements,
+        cards: [
+          ...baseRows.value.map((row) => ({
+            slotValue: row.entry.id,
+            name: row.card.display_name,
+            imageUrl: row.card.image_url,
+            date: row.releaseDate,
+            quantity: row.entry.quantity
+          })),
+          ...binder.value.proxies.map((proxy) => ({
+            slotValue: `proxy:${proxy.id}`,
+            name: proxy.name,
+            imageUrl: binderAssetUrl(proxy.id, 'proxy') || null,
+            date: proxy.date ?? null,
+            quantity: proxy.quantity
+          }))
+        ],
+        images: binder.value.images.map((image) => ({
+          ...image,
+          imageUrl: binderAssetUrl(image.id, 'image')
+        })),
+        options: {
+          mode: michiMode.value,
+          visualStrength: michiVisualStrength.value,
+          preserveFirstPage: michiPreserveFirstPage.value,
+          preserveImagePlacements: michiPreserveImages.value,
+          allowEmptySlots: michiAllowEmptySlots.value,
+          seed: Math.floor(michiSeed.value) || 1
+        }
+      });
+      michiPreviewVersion.value = 'proposal';
+    } catch (error) {
+      michiProposal.value = null;
+      michiError.value = error instanceof Error ? error.message : String(error);
+    } finally {
+      michiGenerating.value = false;
+    }
+  };
+  const michiPreviewContent = (slotValue: string | null): { name: string; imageUrl: string | null } => {
+    if (!slotValue) return { name: '', imageUrl: null };
+    if (slotValue.startsWith('proxy:')) {
+      const proxyId = slotValue.slice(6);
+      const proxy = binder.value?.proxies.find((candidate) => candidate.id === proxyId);
+      return { name: proxy?.name ?? 'Proxy', imageUrl: binderAssetUrl(proxyId, 'proxy') || null };
+    }
+    const row = baseRows.value.find((candidate) => candidate.entry.id === slotValue);
+    return { name: row?.card.display_name ?? 'Card', imageUrl: row?.card.image_url ?? null };
+  };
+  const michiPreviewSides = computed(() => {
+    if (!binder.value || !michiProposal.value) return [];
+    const sideSize = binderSlotsPerPage(binder.value.layout);
+    const previewSlots = michiPreviewVersion.value === 'current'
+      ? binder.value.slots
+      : michiProposal.value.slots;
+    const previewPlacements = michiPreviewVersion.value === 'current'
+      ? binder.value.image_placements
+      : michiProposal.value.imagePlacements;
+    return Array.from({ length: binder.value.page_count * 2 }, (_, sideIndex) => ({
+      sideIndex,
+      cells: previewSlots
+        .slice(sideIndex * sideSize, (sideIndex + 1) * sideSize)
+        .map((slotValue, index) => ({
+          index,
+          row: Math.floor(index / binderColumns.value),
+          column: index % binderColumns.value,
+          ...michiPreviewContent(slotValue)
+        })),
+      decorations: previewPlacements
+        .filter((placement) => placement.side_index === sideIndex)
+        .flatMap((placement) => {
+          const image = binder.value?.images.find((candidate) => candidate.id === placement.image_id);
+          return image ? [{ image, placement }] : [];
+        })
+    }));
+  });
+  const applyMichiProposal = (): void => {
+    if (!binder.value || !michiProposal.value) return;
+    michiUndoSnapshot.value = {
+      slots: [...binder.value.slots],
+      imagePlacements: binder.value.image_placements.map((placement) => ({ ...placement }))
+    };
+    binderStore.applyLayout(folderId.value, michiProposal.value.slots, michiProposal.value.imagePlacements);
+    currentSpread.value = 0;
+    showMichiDialog.value = false;
+  };
+  const undoMichiLayout = (): void => {
+    if (!michiUndoSnapshot.value) return;
+    binderStore.applyLayout(
+      folderId.value,
+      michiUndoSnapshot.value.slots,
+      michiUndoSnapshot.value.imagePlacements
+    );
+    michiUndoSnapshot.value = null;
   };
 
   const printSelectedImages = async (): Promise<void> => {
@@ -549,22 +980,30 @@
     return binder.value.slots.slice(start, start + count).map((entryId, offset) => {
       const rowIndex = Math.floor(offset / binderColumns.value);
       const column = offset % binderColumns.value;
-      const hasDecoration = binder.value?.image_placements.some((placement) => {
-        if (placement.side_index !== sideIndex) return false;
+      const coveringDecorations = binder.value?.image_placements.flatMap((placement) => {
+        if (placement.side_index !== sideIndex) return [];
         const image = binder.value?.images.find((candidate) => candidate.id === placement.image_id);
-        return Boolean(
+        const coversSlot = Boolean(
           image
           && rowIndex >= placement.row
           && rowIndex < placement.row + image.height
           && column >= placement.column
           && column < placement.column + image.width
         );
-      }) ?? false;
+        return coversSlot && image ? [{ image, placement }] : [];
+      }) ?? [];
+      const hasDecoration = coveringDecorations.length > 0;
+      const acceptsCard = coveringDecorations.every(({ image, placement }) => {
+        const relativeRow = rowIndex - placement.row;
+        const relativeColumn = column - placement.column;
+        return image.card_slots.includes(relativeRow * image.width + relativeColumn);
+      });
       return {
         index: start + offset,
         rowIndex,
         column,
         hasDecoration,
+        acceptsCard,
         content: slotContent(entryId)
       };
     });
@@ -634,13 +1073,267 @@
     assetKind.value = tab === 'images' ? 'image' : 'proxy';
     assetName.value = '';
     assetQuantity.value = 1;
+    assetDate.value = '';
     assetWidth.value = 1;
     assetHeight.value = 1;
     assetFile.value = null;
     assetDataUrl.value = null;
     assetPreview.value = null;
     assetError.value = null;
+    cropImage.value = null;
+    cropZoom.value = 1;
+    cropX.value = 0;
+    cropY.value = 0;
     showAssetDialog.value = true;
+  };
+  const loadImageFile = (file: File): Promise<HTMLImageElement> => new Promise((resolveImage, reject) => {
+    const url = URL.createObjectURL(file);
+    const image = new Image();
+    image.onload = () => {
+      URL.revokeObjectURL(url);
+      resolveImage(image);
+    };
+    image.onerror = () => {
+      URL.revokeObjectURL(url);
+      reject(new Error('Unable to decode image'));
+    };
+    image.src = url;
+  });
+  const bestImageDimensions = (imageAspect: number): { width: number; height: number; } => {
+    let best = { width: 1, height: 1 };
+    let bestDifference = Number.POSITIVE_INFINITY;
+    for (const width of assetDimensions.value) {
+      for (const height of assetDimensions.value) {
+        const slotAspect = (width * 8) / (height * 11);
+        const difference = Math.abs(Math.log(imageAspect / slotAspect));
+        const sameDifference = Math.abs(difference - bestDifference) < 1e-9;
+        if (
+          (difference < bestDifference && !sameDifference)
+          || (sameDifference && width * height > best.width * best.height)
+        ) {
+          best = { width, height };
+          bestDifference = difference;
+        }
+      }
+    }
+    return best;
+  };
+  const openBulkImageDialog = (): void => {
+    bulkImageFiles.value = null;
+    bulkImageRows.value = [];
+    bulkImageError.value = null;
+    showBulkImageDialog.value = true;
+  };
+  const prepareBulkImages = async (files: File[] | null): Promise<void> => {
+    bulkImageRows.value = [];
+    bulkImageError.value = null;
+    if (!files?.length) return;
+    bulkImagePreparing.value = true;
+    const rows: BulkImageRow[] = [];
+    for (const file of files) {
+      if (!['image/jpeg', 'image/png', 'image/webp'].includes(file.type) || file.size > 15_000_000) {
+        rows.push({ file, width: 1, height: 1, status: 'error', error: 'Unsupported format or larger than 15 MB' });
+        continue;
+      }
+      try {
+        const image = await loadImageFile(file);
+        rows.push({
+          file,
+          ...bestImageDimensions(image.naturalWidth / image.naturalHeight),
+          status: 'ready',
+          error: null
+        });
+      } catch (error) {
+        rows.push({
+          file,
+          width: 1,
+          height: 1,
+          status: 'error',
+          error: error instanceof Error ? error.message : String(error)
+        });
+      }
+    }
+    bulkImageRows.value = rows;
+    bulkImagePreparing.value = false;
+  };
+  const centerCropImage = async (file: File, width: number, height: number): Promise<string> => {
+    const image = await loadImageFile(file);
+    const targetAspect = (width * 8) / (height * 11);
+    const imageAspect = image.naturalWidth / image.naturalHeight;
+    let sourceWidth = image.naturalWidth;
+    let sourceHeight = image.naturalHeight;
+    if (imageAspect > targetAspect) sourceWidth = image.naturalHeight * targetAspect;
+    else sourceHeight = image.naturalWidth / targetAspect;
+    const outputWidth = targetAspect >= 1 ? 900 : Math.round(900 * targetAspect);
+    const outputHeight = targetAspect >= 1 ? Math.round(900 / targetAspect) : 900;
+    const canvas = document.createElement('canvas');
+    canvas.width = outputWidth;
+    canvas.height = outputHeight;
+    canvas.getContext('2d')?.drawImage(
+      image,
+      (image.naturalWidth - sourceWidth) / 2,
+      (image.naturalHeight - sourceHeight) / 2,
+      sourceWidth,
+      sourceHeight,
+      0,
+      0,
+      outputWidth,
+      outputHeight
+    );
+    return canvas.toDataURL('image/jpeg', 0.92);
+  };
+  const optimizedImageSource = (image: HTMLImageElement): string => {
+    const scale = Math.min(1, 1800 / Math.max(image.naturalWidth, image.naturalHeight));
+    const canvas = document.createElement('canvas');
+    canvas.width = Math.max(1, Math.round(image.naturalWidth * scale));
+    canvas.height = Math.max(1, Math.round(image.naturalHeight * scale));
+    canvas.getContext('2d')?.drawImage(image, 0, 0, canvas.width, canvas.height);
+    return canvas.toDataURL('image/jpeg', 0.92);
+  };
+  const nextGenericImageNumber = (): number => {
+    const used = new Set((binder.value?.images ?? []).flatMap((image) => {
+      const match = /^Image (\d+)$/.exec(image.name);
+      return match ? [Number(match[1])] : [];
+    }));
+    let number = 1;
+    while (used.has(number)) number += 1;
+    return number;
+  };
+  const saveBulkImages = async (): Promise<void> => {
+    if (!binder.value || bulkImageSaving.value) return;
+    bulkImageSaving.value = true;
+    bulkImageError.value = null;
+    let genericNumber = nextGenericImageNumber();
+    let failed = bulkImageRows.value.filter((row) => row.status === 'error').length;
+    for (const row of bulkImageRows.value) {
+      if (row.status === 'error' || row.status === 'done') continue;
+      row.status = 'uploading';
+      const asset = binderStore.createImage(folderId.value, `Image ${genericNumber}`, row.width, row.height);
+      try {
+        const sourceImage = await loadImageFile(row.file);
+        const dataUrl = await centerCropImage(row.file, row.width, row.height);
+        await manualImageStore.upload({
+          set_id: 'binder-assets',
+          card_id: folderId.value,
+          variant_id: asset.id,
+          language_id: 'image-source',
+          data_url: optimizedImageSource(sourceImage)
+        });
+        await manualImageStore.upload({
+          set_id: 'binder-assets',
+          card_id: folderId.value,
+          variant_id: asset.id,
+          language_id: 'image',
+          data_url: dataUrl
+        });
+        row.status = 'done';
+        genericNumber += 1;
+      } catch (error) {
+        binderStore.removeAsset(folderId.value, 'image', asset.id);
+        await manualImageStore.remove('binder-assets', folderId.value, asset.id, 'image-source').catch(() => undefined);
+        row.status = 'error';
+        row.error = error instanceof Error ? error.message : String(error);
+        failed += 1;
+      }
+    }
+    bulkImageSaving.value = false;
+    if (failed) {
+      bulkImageError.value = `${failed} image${failed === 1 ? '' : 's'} could not be added.`;
+    } else {
+      showBulkImageDialog.value = false;
+    }
+  };
+  const cropAspect = computed(() => assetKind.value === 'proxy'
+    ? 8 / 11
+    : (assetWidth.value * 8) / (assetHeight.value * 11)
+  );
+  const cropFrameStyle = computed(() => ({
+    aspectRatio: String(cropAspect.value),
+    width: `min(100%, ${cropAspect.value * 360}px)`
+  }));
+  const cropSourceSize = computed(() => {
+    const image = cropImage.value;
+    if (!image) return { width: 0, height: 0 };
+    const imageAspect = image.naturalWidth / image.naturalHeight;
+    let width = image.naturalWidth;
+    let height = image.naturalHeight;
+    if (imageAspect > cropAspect.value) width = image.naturalHeight * cropAspect.value;
+    else height = image.naturalWidth / cropAspect.value;
+    return {
+      width: width / cropZoom.value,
+      height: height / cropZoom.value
+    };
+  });
+  const canCropX = computed(() => Boolean(
+    cropImage.value && cropImage.value.naturalWidth - cropSourceSize.value.width > 0.5
+  ));
+  const canCropY = computed(() => Boolean(
+    cropImage.value && cropImage.value.naturalHeight - cropSourceSize.value.height > 0.5
+  ));
+  const renderCrop = (): void => {
+    const canvas = cropCanvas.value;
+    const image = cropImage.value;
+    if (!canvas || !image) return;
+    const outputWidth = cropAspect.value >= 1 ? 900 : Math.round(900 * cropAspect.value);
+    const outputHeight = cropAspect.value >= 1 ? Math.round(900 / cropAspect.value) : 900;
+    canvas.width = outputWidth;
+    canvas.height = outputHeight;
+    const sourceWidth = cropSourceSize.value.width;
+    const sourceHeight = cropSourceSize.value.height;
+    const availableX = image.naturalWidth - sourceWidth;
+    const availableY = image.naturalHeight - sourceHeight;
+    const sourceX = availableX * ((cropX.value + 100) / 200);
+    const sourceY = availableY * ((cropY.value + 100) / 200);
+    const context = canvas.getContext('2d');
+    context?.clearRect(0, 0, outputWidth, outputHeight);
+    context?.drawImage(image, sourceX, sourceY, sourceWidth, sourceHeight, 0, 0, outputWidth, outputHeight);
+  };
+  watch([cropZoom, cropX, cropY, cropAspect], () => renderCrop());
+  const editCropAspect = computed(() => (editWidth.value * 8) / (editHeight.value * 11));
+  const editCropFrameStyle = computed(() => ({
+    aspectRatio: String(editCropAspect.value),
+    width: `min(100%, ${editCropAspect.value * 360}px)`
+  }));
+  const editCropSourceSize = computed(() => {
+    const image = editCropImage.value;
+    if (!image) return { width: 0, height: 0 };
+    const imageAspect = image.naturalWidth / image.naturalHeight;
+    let width = image.naturalWidth;
+    let height = image.naturalHeight;
+    if (imageAspect > editCropAspect.value) width = image.naturalHeight * editCropAspect.value;
+    else height = image.naturalWidth / editCropAspect.value;
+    return { width: width / editCropZoom.value, height: height / editCropZoom.value };
+  });
+  const canEditCropX = computed(() => Boolean(
+    editCropImage.value && editCropImage.value.naturalWidth - editCropSourceSize.value.width > 0.5
+  ));
+  const canEditCropY = computed(() => Boolean(
+    editCropImage.value && editCropImage.value.naturalHeight - editCropSourceSize.value.height > 0.5
+  ));
+  const renderEditCrop = (): void => {
+    const canvas = editCropCanvas.value;
+    const image = editCropImage.value;
+    if (!canvas || !image) return;
+    const outputWidth = editCropAspect.value >= 1 ? 900 : Math.round(900 * editCropAspect.value);
+    const outputHeight = editCropAspect.value >= 1 ? Math.round(900 / editCropAspect.value) : 900;
+    canvas.width = outputWidth;
+    canvas.height = outputHeight;
+    const sourceWidth = editCropSourceSize.value.width;
+    const sourceHeight = editCropSourceSize.value.height;
+    const sourceX = (image.naturalWidth - sourceWidth) * ((editCropX.value + 100) / 200);
+    const sourceY = (image.naturalHeight - sourceHeight) * ((editCropY.value + 100) / 200);
+    const context = canvas.getContext('2d');
+    context?.clearRect(0, 0, outputWidth, outputHeight);
+    context?.drawImage(image, sourceX, sourceY, sourceWidth, sourceHeight, 0, 0, outputWidth, outputHeight);
+  };
+  watch([editCropZoom, editCropX, editCropY, editCropAspect], () => renderEditCrop());
+  const resetEditCardSlots = (): void => {
+    editCardSlots.value = [];
+  };
+  const toggleEditCardSlot = (index: number): void => {
+    editCardSlots.value = editCardSlots.value.includes(index)
+      ? editCardSlots.value.filter((candidate) => candidate !== index)
+      : [...editCardSlots.value, index].sort((left, right) => left - right);
   };
   const prepareAssetImage = (file: File | null): void => {
     assetDataUrl.value = null;
@@ -655,36 +1348,177 @@
     reader.onload = () => {
       assetDataUrl.value = typeof reader.result === 'string' ? reader.result : null;
       assetPreview.value = assetDataUrl.value;
+      if (!assetDataUrl.value) return;
+      const image = new Image();
+      image.onload = () => {
+        cropImage.value = image;
+        void nextTick(renderCrop);
+      };
+      image.onerror = () => { assetError.value = 'Unable to decode the selected image.'; };
+      image.src = assetDataUrl.value;
     };
     reader.onerror = () => { assetError.value = 'Unable to read the selected image.'; };
     reader.readAsDataURL(file);
   };
   const saveAsset = async (): Promise<void> => {
-    if (!binder.value || !assetName.value.trim() || !assetDataUrl.value) return;
+    if (!binder.value || !assetName.value.trim() || !assetDataUrl.value || !cropCanvas.value) return;
     assetSaving.value = true;
     assetError.value = null;
     const asset = assetKind.value === 'proxy'
-      ? binderStore.createProxy(folderId.value, assetName.value, assetQuantity.value)
+      ? binderStore.createProxy(folderId.value, assetName.value, assetQuantity.value, assetDate.value)
       : binderStore.createImage(folderId.value, assetName.value, assetWidth.value, assetHeight.value);
     try {
+      const croppedDataUrl = cropCanvas.value.toDataURL('image/jpeg', 0.92);
+      if (assetKind.value === 'image' && cropImage.value) {
+        await manualImageStore.upload({
+          set_id: 'binder-assets',
+          card_id: folderId.value,
+          variant_id: asset.id,
+          language_id: 'image-source',
+          data_url: optimizedImageSource(cropImage.value)
+        });
+      }
       await manualImageStore.upload({
         set_id: 'binder-assets',
         card_id: folderId.value,
         variant_id: asset.id,
         language_id: assetKind.value,
-        data_url: assetDataUrl.value
+        data_url: croppedDataUrl
       });
+      if (assetKind.value === 'image') {
+        binderStore.updateImage(folderId.value, asset.id, {
+          name: assetName.value,
+          width: assetWidth.value,
+          height: assetHeight.value,
+          cardSlots: [],
+          cropZoom: cropZoom.value,
+          cropX: cropX.value,
+          cropY: cropY.value
+        });
+      }
       showAssetDialog.value = false;
     } catch (error) {
       binderStore.removeAsset(folderId.value, assetKind.value, asset.id);
+      if (assetKind.value === 'image') {
+        await manualImageStore.remove('binder-assets', folderId.value, asset.id, 'image-source').catch(() => undefined);
+      }
       assetError.value = error instanceof Error ? error.message : String(error);
     } finally {
       assetSaving.value = false;
     }
   };
-  const deleteAsset = async (kind: 'proxy' | 'image', assetId: string): Promise<void> => {
-    binderStore.removeAsset(folderId.value, kind, assetId);
-    await manualImageStore.remove('binder-assets', folderId.value, assetId, kind).catch(() => undefined);
+  const openEditAsset = (kind: 'proxy' | 'image', assetId: string): void => {
+    const asset = kind === 'proxy'
+      ? binder.value?.proxies.find((candidate) => candidate.id === assetId)
+      : binder.value?.images.find((candidate) => candidate.id === assetId);
+    if (!asset) return;
+    editAssetKind.value = kind;
+    editAssetId.value = assetId;
+    editName.value = asset.name;
+    editAssetError.value = null;
+    if (kind === 'proxy') {
+      const proxy = asset as BinderProxy;
+      editQuantity.value = proxy.quantity;
+      editDate.value = proxy.date ?? '';
+    } else {
+      const image = asset as BinderImage;
+      editWidth.value = image.width;
+      editHeight.value = image.height;
+      editOriginalWidth.value = image.width;
+      editOriginalHeight.value = image.height;
+      editCardSlots.value = [...image.card_slots];
+      editCropZoom.value = image.crop_zoom;
+      editCropX.value = image.crop_x;
+      editCropY.value = image.crop_y;
+      editOriginalCropZoom.value = image.crop_zoom;
+      editOriginalCropX.value = image.crop_x;
+      editOriginalCropY.value = image.crop_y;
+      editCropImage.value = null;
+      editQuantity.value = 1;
+    }
+    showEditAssetDialog.value = true;
+    if (kind === 'image') {
+      const source = new Image();
+      source.onload = () => {
+        editCropImage.value = source;
+        void nextTick(renderEditCrop);
+      };
+      source.onerror = () => { editAssetError.value = 'Unable to load the existing image for cropping.'; };
+      const original = manualImageStore.find('binder-assets', folderId.value, assetId, 'image-source');
+      source.src = original
+        ? `${original.url}?v=${encodeURIComponent(original.updated_at)}`
+        : binderAssetUrl(assetId, 'image');
+    }
+  };
+  const saveAssetEdits = async (): Promise<void> => {
+    if (!editName.value.trim()) return;
+    if (editAssetKind.value === 'proxy') {
+      binderStore.updateProxy(folderId.value, editAssetId.value, {
+        name: editName.value, quantity: editQuantity.value, date: editDate.value
+      });
+    } else {
+      editAssetSaving.value = true;
+      editAssetError.value = null;
+      try {
+        const needsRecrop = editWidth.value !== editOriginalWidth.value
+          || editHeight.value !== editOriginalHeight.value
+          || editCropZoom.value !== editOriginalCropZoom.value
+          || editCropX.value !== editOriginalCropX.value
+          || editCropY.value !== editOriginalCropY.value;
+        if (needsRecrop) {
+          if (!editCropCanvas.value || !editCropImage.value) throw new Error('The image is not ready for cropping.');
+          if (!manualImageStore.find('binder-assets', folderId.value, editAssetId.value, 'image-source')) {
+            await manualImageStore.upload({
+              set_id: 'binder-assets',
+              card_id: folderId.value,
+              variant_id: editAssetId.value,
+              language_id: 'image-source',
+              data_url: optimizedImageSource(editCropImage.value)
+            });
+          }
+          await manualImageStore.upload({
+            set_id: 'binder-assets',
+            card_id: folderId.value,
+            variant_id: editAssetId.value,
+            language_id: 'image',
+            data_url: editCropCanvas.value.toDataURL('image/jpeg', 0.92)
+          });
+        }
+        binderStore.updateImage(folderId.value, editAssetId.value, {
+          name: editName.value,
+          width: editWidth.value,
+          height: editHeight.value,
+          cardSlots: editCardSlots.value,
+          cropZoom: editCropZoom.value,
+          cropX: editCropX.value,
+          cropY: editCropY.value
+        });
+      } catch (error) {
+        editAssetError.value = error instanceof Error ? error.message : String(error);
+        editAssetSaving.value = false;
+        return;
+      }
+      editAssetSaving.value = false;
+    }
+    showEditAssetDialog.value = false;
+  };
+  const requestDeleteAsset = (kind: 'proxy' | 'image', assetId: string): void => {
+    const asset = kind === 'proxy'
+      ? binder.value?.proxies.find((candidate) => candidate.id === assetId)
+      : binder.value?.images.find((candidate) => candidate.id === assetId);
+    if (asset) deleteTarget.value = { kind, id: assetId, name: asset.name };
+  };
+  const confirmDeleteAsset = async (): Promise<void> => {
+    if (!deleteTarget.value) return;
+    deleteSaving.value = true;
+    const target = deleteTarget.value;
+    binderStore.removeAsset(folderId.value, target.kind, target.id);
+    await manualImageStore.remove('binder-assets', folderId.value, target.id, target.kind).catch(() => undefined);
+    if (target.kind === 'image') {
+      await manualImageStore.remove('binder-assets', folderId.value, target.id, 'image-source').catch(() => undefined);
+    }
+    deleteSaving.value = false;
+    deleteTarget.value = null;
   };
   const startEntryDrag = (entryId: string, event: DragEvent): void => {
     const row = rows.value.find((candidate) => candidate.entry.id === entryId);
@@ -714,8 +1548,31 @@
     event.dataTransfer.setData('text/plain', `image:${imageId}`);
     event.dataTransfer.effectAllowed = 'move';
   };
+  const cardAllowedAtSlot = (slotIndex: number): boolean => {
+    if (!binder.value) return false;
+    const count = binderSlotsPerPage(binder.value.layout);
+    const sideIndex = Math.floor(slotIndex / count);
+    const localIndex = slotIndex % count;
+    const row = Math.floor(localIndex / binderColumns.value);
+    const column = localIndex % binderColumns.value;
+    return binder.value.image_placements.every((placement) => {
+      if (placement.side_index !== sideIndex) return true;
+      const image = binder.value?.images.find((candidate) => candidate.id === placement.image_id);
+      if (
+        !image
+        || row < placement.row
+        || row >= placement.row + image.height
+        || column < placement.column
+        || column >= placement.column + image.width
+      ) return true;
+      return image.card_slots.includes(
+        (row - placement.row) * image.width + column - placement.column
+      );
+    });
+  };
   const dropOnSlot = (targetIndex: number, event: DragEvent): void => {
     const payload = event.dataTransfer?.getData('text/plain') ?? '';
+    if (!payload.startsWith('image:') && !cardAllowedAtSlot(targetIndex)) return;
     if (payload.startsWith('slot:')) {
       binderStore.moveSlot(folderId.value, Number(payload.slice(5)), targetIndex);
       return;
@@ -873,6 +1730,119 @@
 
   .cursor-grab {
     cursor: grab;
+  }
+
+  .crop-frame {
+    position: relative;
+    max-height: 360px;
+    margin-inline: auto;
+    overflow: hidden;
+    border: 2px solid var(--q-primary);
+    border-radius: 4px;
+    background: #212121;
+  }
+
+  .crop-canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .crop-slot-grid {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    gap: 3px;
+    padding: 3px;
+  }
+
+  .crop-slot-toggle {
+    display: grid;
+    min-width: 0;
+    min-height: 0;
+    place-items: center;
+    border: 2px dashed rgb(255 255 255 / 60%);
+    border-radius: 4px;
+    color: white;
+    background: rgb(0 0 0 / 35%);
+    cursor: pointer;
+  }
+
+  .crop-slot-toggle--selected {
+    border-style: solid;
+    border-color: var(--q-primary);
+    color: var(--q-primary);
+    background: rgb(0 0 0 / 12%);
+  }
+
+  .crop-position-control+.crop-position-control {
+    margin-top: 4px;
+  }
+
+  .michi-dialog-body {
+    display: grid;
+    grid-template-columns: 240px minmax(0, 1fr);
+    gap: 24px;
+    max-height: 68vh;
+    overflow: hidden;
+  }
+
+  .michi-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .michi-preview {
+    min-height: 360px;
+    overflow-y: auto;
+  }
+
+  .michi-page-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+    gap: 16px;
+  }
+
+  .michi-page {
+    display: grid;
+    gap: 3px;
+    padding: 5px;
+    border: 3px solid #171717;
+    background: #272727;
+  }
+
+  .michi-cell {
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    aspect-ratio: 8 / 11;
+    overflow: hidden;
+    border: 1px dashed rgb(255 255 255 / 18%);
+  }
+
+  .michi-cell img,
+  .michi-decoration img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .michi-decoration {
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  @media (max-width: 700px) {
+    .michi-dialog-body {
+      display: block;
+      overflow-y: auto;
+    }
+
+    .michi-preview {
+      margin-top: 24px;
+      overflow: visible;
+    }
   }
 
   @media (hover: none) {

@@ -6,6 +6,7 @@ export type BinderProxy = {
   id: string;
   name: string;
   quantity: number;
+  date?: string;
   created_at: string;
 };
 
@@ -14,6 +15,10 @@ export type BinderImage = {
   name: string;
   width: number;
   height: number;
+  card_slots: number[];
+  crop_zoom: number;
+  crop_x: number;
+  crop_y: number;
   created_at: string;
 };
 
@@ -45,6 +50,11 @@ const state = reactive<BindersData>({ version: 1, binders: [] });
 const isReady = ref(false);
 const saveError = ref<string | null>(null);
 let pendingSave: Promise<void> = Promise.resolve();
+const displayProxyDate = (value: unknown): string => {
+  const date = typeof value === 'string' ? value : '';
+  const isoMatch = /^(\d{4})-(\d{2})-(\d{2})$/.exec(date);
+  return isoMatch ? `${isoMatch[3]}/${isoMatch[2]}/${isoMatch[1]}` : date;
+};
 
 const loadPromise = fetch('/api/binders')
   .then(async (response) => {
@@ -59,9 +69,23 @@ const loadPromise = fetch('/api/binders')
           ? [...binder.slots, ...Array(expectedSlots - binder.slots.length).fill(null)]
           : binder.slots.slice(0, expectedSlots),
         proxies: Array.isArray(binder.proxies)
-          ? binder.proxies.map((proxy) => ({ ...proxy, quantity: Math.max(1, proxy.quantity ?? 1) }))
+          ? binder.proxies.map((proxy) => ({
+              ...proxy,
+              quantity: Math.max(1, proxy.quantity ?? 1),
+              date: displayProxyDate(proxy.date)
+            }))
           : [],
-        images: Array.isArray(binder.images) ? binder.images : [],
+        images: Array.isArray(binder.images)
+          ? binder.images.map((image) => ({
+              ...image,
+              card_slots: Array.isArray(image.card_slots)
+                ? image.card_slots
+                : Array.from({ length: image.width * image.height }, (_, index) => index),
+              crop_zoom: Math.min(3, Math.max(1, Number(image.crop_zoom) || 1)),
+              crop_x: Math.min(100, Math.max(-100, Number(image.crop_x) || 0)),
+              crop_y: Math.min(100, Math.max(-100, Number(image.crop_y) || 0))
+            }))
+          : [],
         image_placements: Array.isArray(binder.image_placements) ? binder.image_placements : []
       };
     });
@@ -136,11 +160,20 @@ export const binderStore = {
     binder.slots = Array(binder.page_count * 2 * slotsPerPage(layout)).fill(null);
     binder.image_placements = [];
     const dimension = layout === '2x2' ? 2 : 3;
-    binder.images = binder.images.map((image) => ({
-      ...image,
-      width: Math.min(dimension, image.width),
-      height: Math.min(dimension, image.height)
-    }));
+    binder.images = binder.images.map((image) => {
+      const width = Math.min(dimension, image.width);
+      const height = Math.min(dimension, image.height);
+      return {
+        ...image,
+        width,
+        height,
+        card_slots: image.card_slots.flatMap((index) => {
+          const row = Math.floor(index / image.width);
+          const column = index % image.width;
+          return row < height && column < width ? [row * width + column] : [];
+        })
+      };
+    });
     binder.updated_at = new Date().toISOString();
     persist();
   },
@@ -153,13 +186,14 @@ export const binderStore = {
     persist();
   },
 
-  createProxy(folderId: string, name: string, quantity: number): BinderProxy {
+  createProxy(folderId: string, name: string, quantity: number, date = ''): BinderProxy {
     const binder = this.get(folderId);
     if (!binder || !name.trim()) throw new Error('Proxy name is required');
     const proxy = {
       id: newAssetId('proxy'),
       name: name.trim(),
       quantity: Math.max(1, Math.floor(quantity)),
+      date,
       created_at: new Date().toISOString()
     };
     binder.proxies.push(proxy);
@@ -177,12 +211,77 @@ export const binderStore = {
       name: name.trim(),
       width: Math.min(limit, Math.max(1, Math.floor(width))),
       height: Math.min(limit, Math.max(1, Math.floor(height))),
+      card_slots: [],
+      crop_zoom: 1,
+      crop_x: 0,
+      crop_y: 0,
       created_at: new Date().toISOString()
     };
     binder.images.push(image);
     binder.updated_at = new Date().toISOString();
     persist();
     return image;
+  },
+
+  updateProxy(
+    folderId: string,
+    proxyId: string,
+    values: { name: string; quantity: number; date: string }
+  ): void {
+    const binder = this.get(folderId);
+    const proxy = binder?.proxies.find((candidate) => candidate.id === proxyId);
+    if (!binder || !proxy || !values.name.trim()) return;
+    proxy.name = values.name.trim();
+    proxy.quantity = Math.max(1, Math.floor(values.quantity));
+    proxy.date = values.date;
+    binder.updated_at = new Date().toISOString();
+    persist();
+  },
+
+  updateImage(
+    folderId: string,
+    imageId: string,
+    values: {
+      name: string;
+      width: number;
+      height: number;
+      cardSlots: number[];
+      cropZoom: number;
+      cropX: number;
+      cropY: number;
+    }
+  ): void {
+    const binder = this.get(folderId);
+    const image = binder?.images.find((candidate) => candidate.id === imageId);
+    if (!binder || !image || !values.name.trim()) return;
+    const limit = binder.layout === '2x2' ? 2 : 3;
+    const width = Math.min(limit, Math.max(1, Math.floor(values.width)));
+    const height = Math.min(limit, Math.max(1, Math.floor(values.height)));
+    image.name = values.name.trim();
+    image.width = width;
+    image.height = height;
+    image.card_slots = [...new Set(values.cardSlots)]
+      .filter((index) => Number.isInteger(index) && index >= 0 && index < width * height)
+      .sort((left, right) => left - right);
+    image.crop_zoom = Math.min(3, Math.max(1, values.cropZoom));
+    image.crop_x = Math.min(100, Math.max(-100, values.cropX));
+    image.crop_y = Math.min(100, Math.max(-100, values.cropY));
+    const placement = binder.image_placements.find((candidate) => candidate.image_id === imageId);
+    if (placement) {
+      placement.row = Math.min(placement.row, limit - image.height);
+      placement.column = Math.min(placement.column, limit - image.width);
+      for (let row = 0; row < image.height; row += 1) {
+        for (let column = 0; column < image.width; column += 1) {
+          if (image.card_slots.includes(row * image.width + column)) continue;
+          const slotIndex = placement.side_index * slotsPerPage(binder.layout)
+            + (placement.row + row) * limit
+            + placement.column + column;
+          binder.slots[slotIndex] = null;
+        }
+      }
+    }
+    binder.updated_at = new Date().toISOString();
+    persist();
   },
 
   removeAsset(folderId: string, kind: 'proxy' | 'image', assetId: string): void {
@@ -210,6 +309,17 @@ export const binderStore = {
       row: Math.min(Math.max(0, row), dimension - image.height),
       column: Math.min(Math.max(0, column), dimension - image.width)
     };
+    const conflictsWithCard = Array.from({ length: image.width * image.height }, (_, index) => index)
+      .some((index) => {
+        if (image.card_slots.includes(index)) return false;
+        const imageRow = Math.floor(index / image.width);
+        const imageColumn = index % image.width;
+        const slotIndex = sideIndex * slotsPerPage(binder.layout)
+          + (placement.row + imageRow) * dimension
+          + placement.column + imageColumn;
+        return binder.slots[slotIndex] !== null;
+      });
+    if (conflictsWithCard) return;
     binder.image_placements = [
       ...binder.image_placements.filter((candidate) => candidate.image_id !== imageId),
       placement
@@ -222,6 +332,19 @@ export const binderStore = {
     const binder = this.get(folderId);
     if (!binder) return;
     binder.image_placements = binder.image_placements.filter((placement) => placement.image_id !== imageId);
+    binder.updated_at = new Date().toISOString();
+    persist();
+  },
+
+  applyLayout(
+    folderId: string,
+    slots: Array<string | null>,
+    imagePlacements: BinderImagePlacement[]
+  ): void {
+    const binder = this.get(folderId);
+    if (!binder || slots.length !== binder.slots.length) return;
+    binder.slots = [...slots];
+    binder.image_placements = imagePlacements.map((placement) => ({ ...placement }));
     binder.updated_at = new Date().toISOString();
     persist();
   },
