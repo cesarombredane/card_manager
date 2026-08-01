@@ -68,6 +68,9 @@
               </template>
               Released {{ formatFrenchDate(set.release_date) }}
             </q-item-label>
+            <q-item-label caption class="text-grey-4">
+              Estimated set value {{ formatEuroPrice(setValue(set.id)) }}
+            </q-item-label>
             <div v-if="ownedCardCount(set.id) > 0" class="q-mt-sm" style="max-width: 420px">
               <div class="row justify-between text-caption text-grey-4 q-mb-xs">
                 <span>Collection completion</span>
@@ -94,6 +97,8 @@
     <q-banner v-if="visible_series.length === 0" class="bg-grey-10 text-grey-4">
       No set found for this region and search.
     </q-banner>
+
+    <back-to-top-button />
   </q-page>
 </template>
 
@@ -102,8 +107,12 @@
   import { computed, ref, watch } from 'vue';
   import { useStore } from 'vuex';
 
+  // import components
+  import BackToTopButton from '../components/BackToTopButton.vue';
+
   // import utils
-  import { getRegions, getSeries, getSets } from '../utils/dataManagement';
+  import { getCardsBySetId, getRegions, getSeries, getSets } from '../utils/dataManagement';
+  import { cardmarketDisplayPrice, formatEuroPrice } from '../utils/cardDisplay';
   import { localizedValue } from '../utils/localization';
   import type { Region, Series, Set } from '../utils/types';
   import type { AppState } from '../store';
@@ -136,13 +145,25 @@
   // All sets loaded from per-series JSON files.
   const sets: Set[] = getSets();
 
+  // Combined market value of one copy of every collectible variant per set.
+  const setValuesById = new Map(sets.map((set) => [
+    set.id,
+    getCardsBySetId(set.id).reduce(
+      (setTotal, card) => setTotal + card.variants.reduce(
+        (cardTotal, variant) => cardTotal + (cardmarketDisplayPrice(variant.cardmarket) ?? 0),
+        0
+      ),
+      0
+    )
+  ]));
+
   // Shared application state.
   const store = useStore<AppState>();
 
 
   /* reactive vars */
   // Search text used to filter set names in every available language.
-  const sets_search_input = ref<string>('');
+  const sets_search_input = ref<string>(store.state.sets_search_input);
 
   // Currently selected printing region. International is the default view.
   const selected_region_id = ref<string>(store.state.selected_region_id);
@@ -197,6 +218,8 @@
 
   const ownedCardCount = (setId: string): number => ownedCardsBySet.value.get(setId) ?? 0;
 
+  const setValue = (setId: string): number => setValuesById.get(setId) ?? 0;
+
   const setCompletion = (set: Set): number => {
     return set.card_count > 0 ? Math.min(ownedCardCount(set.id) / set.card_count, 1) : 0;
   };
@@ -206,5 +229,10 @@
   // Update the store when the selected region changes.
   watch(selected_region_id, (regionId): void => {
     store.commit('set_selected_region_id', regionId);
+  });
+
+  // Keep the current search available when this page is unmounted during navigation.
+  watch(sets_search_input, (search): void => {
+    store.commit('set_sets_search_input', search ?? '');
   });
 </script>

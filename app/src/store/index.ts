@@ -25,6 +25,7 @@ export type AppState = {
   selected_region_id: string;
   selected_language_id: string;
   last_collection_folder_id: string;
+  sets_search_input: string;
   card_search_filters: CardSearchFilters;
 };
 
@@ -36,6 +37,7 @@ export const store = createStore<AppState>({
       selected_region_id: 'INTL',
       selected_language_id: 'fr',
       last_collection_folder_id: '',
+      sets_search_input: '',
       card_search_filters: {
         search: '',
         artist: null,
@@ -57,6 +59,11 @@ export const store = createStore<AppState>({
     // Store the current region used on the series listing page.
     set_selected_region_id(state: AppState, region_id: string) {
       state.selected_region_id = region_id;
+    },
+
+    // Preserve the set-list search while visiting a set and navigating back.
+    set_sets_search_input(state: AppState, search: string) {
+      state.sets_search_input = search;
     },
 
     // Store the preferred language used on set pages.

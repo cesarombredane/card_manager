@@ -2,6 +2,7 @@
   <q-btn-toggle
     v-model="selectedLanguageId"
     :options="languageOptions"
+    :disable="disable"
     color="grey-9"
     padding="sm md"
     text-color="grey-4"
@@ -35,6 +36,7 @@
     modelValue: string;
     languageIds: string[];
     includeAll?: boolean;
+    disable?: boolean;
   }>();
 
   // Component event used by v-model.

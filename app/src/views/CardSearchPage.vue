@@ -105,13 +105,21 @@
             unelevated
           />
         </div>
-        <div v-if="selectedRegion !== 'asia' && internationalLanguageIds.length" class="col-auto">
+        <div class="col-auto">
           <div class="text-caption text-grey-5 q-mb-xs">International card language</div>
-          <language-selector v-model="selectedInternationalLanguageId" :language-ids="internationalLanguageIds" />
+          <language-selector
+            v-model="selectedInternationalLanguageId"
+            :language-ids="internationalLanguageIds.length ? internationalLanguageIds : allInternationalLanguageIds"
+            :disable="selectedRegion === 'asia' || internationalLanguageIds.length === 0"
+          />
         </div>
-        <div v-if="selectedRegion !== 'intl' && asiaLanguageIds.length" class="col-auto">
+        <div class="col-auto">
           <div class="text-caption text-grey-5 q-mb-xs">Asian card language</div>
-          <language-selector v-model="selectedAsiaLanguageId" :language-ids="asiaLanguageIds" />
+          <language-selector
+            v-model="selectedAsiaLanguageId"
+            :language-ids="asiaLanguageIds.length ? asiaLanguageIds : allAsiaLanguageIds"
+            :disable="selectedRegion === 'intl' || asiaLanguageIds.length === 0"
+          />
         </div>
         <div class="col-12 col-sm-6 col-md-4">
           <q-select
@@ -256,6 +264,14 @@
 
   // Every card in the local data catalog.
   const cards: Card[] = getCards();
+
+  // Regional language options retained when active filters have no matching cards.
+  const allInternationalLanguageIds: string[] = uniqueValues(sets
+    .filter((set) => !set.series_id.startsWith('asia-'))
+    .flatMap((set) => set.language_ids));
+  const allAsiaLanguageIds: string[] = uniqueValues(sets
+    .filter((set) => set.series_id.startsWith('asia-'))
+    .flatMap((set) => set.language_ids));
 
   // Standardized Pokemon species and form catalog.
   const pokemon: Pokemon[] = getPokemon();
