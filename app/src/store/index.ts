@@ -20,6 +20,13 @@ export type CardSearchFilters = {
   advanced_filters_open: boolean;
 };
 
+export type CollectionFolderFilters = {
+  search: string;
+  tab: 'owned' | 'wanted';
+  language_id: string | null;
+  sort: CardSort;
+};
+
 // define the shape of the application state
 export type AppState = {
   selected_region_id: string;
@@ -27,6 +34,7 @@ export type AppState = {
   last_collection_folder_id: string;
   sets_search_input: string;
   card_search_filters: CardSearchFilters;
+  collection_folder_filters: Record<string, CollectionFolderFilters>;
 };
 
 
@@ -38,6 +46,7 @@ export const store = createStore<AppState>({
       selected_language_id: 'fr',
       last_collection_folder_id: '',
       sets_search_input: '',
+      collection_folder_filters: {},
       card_search_filters: {
         search: '',
         artist: null,
@@ -79,6 +88,14 @@ export const store = createStore<AppState>({
     // Preserve card-search preferences while navigating around the application.
     set_card_search_filters(state: AppState, filters: CardSearchFilters) {
       state.card_search_filters = filters;
+    },
+
+    // Preserve each collection folder's list controls while viewing card details.
+    set_collection_folder_filters(
+      state: AppState,
+      payload: { folder_id: string; filters: CollectionFolderFilters }
+    ) {
+      state.collection_folder_filters[payload.folder_id] = payload.filters;
     }
   },
   actions: {}

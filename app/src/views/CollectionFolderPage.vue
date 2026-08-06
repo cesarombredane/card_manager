@@ -410,6 +410,8 @@
   import { binderStore } from '../utils/binders';
   import type { CardSort } from '../utils/cardSorting';
   import { downloadWantedPlaceholdersPdf } from '../utils/wantedPlaceholdersPdf';
+  import { store } from '../store';
+  import type { CollectionFolderFilters } from '../store';
 
   type CollectionRow = {
     entry: CollectionEntry;
@@ -421,10 +423,12 @@
   };
   const route = useRoute();
   const router = useRouter();
-  const search = ref('');
-  const collectionTab = ref<'owned' | 'wanted'>('owned');
-  const selectedLanguageId = ref<string | null>(null);
-  const selectedSort = ref<CardSort>('release-desc');
+  const initialFolderId = String(route.params.folderId ?? '');
+  const storedFilters = store.state.collection_folder_filters[initialFolderId];
+  const search = ref(storedFilters?.search ?? '');
+  const collectionTab = ref<'owned' | 'wanted'>(storedFilters?.tab ?? 'owned');
+  const selectedLanguageId = ref<string | null>(storedFilters?.language_id ?? null);
+  const selectedSort = ref<CardSort>(storedFilters?.sort ?? 'release-desc');
   const collectionRowStep = 48;
   const visibleRowCount = ref(collectionRowStep);
   const selectionMode = ref(false);
@@ -648,6 +652,17 @@
   watch([search, selectedLanguageId, selectedSort], () => {
     visibleRowCount.value = collectionRowStep;
   });
+  watch([folderId, search, collectionTab, selectedLanguageId, selectedSort], () => {
+    store.commit('set_collection_folder_filters', {
+      folder_id: folderId.value,
+      filters: {
+        search: search.value,
+        tab: collectionTab.value,
+        language_id: selectedLanguageId.value,
+        sort: selectedSort.value
+      } satisfies CollectionFolderFilters
+    });
+  }, { immediate: true });
 
   const toggleSelectionMode = (): void => {
     selectionMode.value = !selectionMode.value;
