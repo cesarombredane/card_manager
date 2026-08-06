@@ -11,10 +11,6 @@
     <q-banner v-if="binderStore.saveError.value" class="bg-red-10 text-negative q-mb-md rounded-borders">
       {{ binderStore.saveError.value }}
     </q-banner>
-    <div v-if="binder?.locked" class="inline-flex items-center bg-grey-9 text-grey-3 q-px-sm q-py-xs q-mb-sm rounded-borders">
-      <q-icon name="lock" color="primary" size="16px" class="q-mr-xs" />
-      <span class="text-caption">Binder locked · read-only</span>
-    </div>
     <q-banner v-if="!folder" class="bg-grey-10 text-grey-4">This collection does not exist.</q-banner>
     <q-banner v-else-if="folder.type !== 'binder'" class="bg-grey-10 text-grey-4">
       Binder options are only available for collections configured as binders.
@@ -27,10 +23,10 @@
           <div class="text-overline text-primary q-mt-sm">Binder organizer</div>
           <div class="text-h5 text-weight-bold">{{ folder.name }}</div>
           <div class="row q-gutter-sm q-mt-md">
-            <q-btn outline color="primary" icon="auto_awesome" label="Auto Michi" no-caps :disable="binder.locked" @click="openMichiDialog" />
-            <q-btn outline color="primary" icon="settings" label="Binder settings" no-caps :disable="binder.locked" @click="openSettings" />
-            <q-btn outline :color="binder.locked ? 'positive' : 'grey-4'" :icon="binder.locked ? 'lock_open' : 'lock'"
-              :label="binder.locked ? 'Unlock' : 'Lock'" no-caps @click="toggleBinderLock" />
+            <q-btn outline color="primary" icon="auto_awesome" label="Auto Michi" no-caps @click="openMichiDialog" />
+            <q-btn outline color="primary" icon="settings" label="Binder settings" no-caps :disable="binder.locked_pages.length > 0" @click="openSettings">
+              <q-tooltip v-if="binder.locked_pages.length">Unlock all pages before changing binder dimensions</q-tooltip>
+            </q-btn>
           </div>
         </div>
 
@@ -43,10 +39,10 @@
                   :loading="imagesPdfSaving" @click="printSelectedImages">
                   <q-tooltip>Download selected images at Vault X pocket size</q-tooltip>
                 </q-btn>
-                <q-btn v-if="selectorTab === 'images' && !binder.locked" flat round dense color="primary" icon="add_photo_alternate" @click="openBulkImageDialog">
+                <q-btn v-if="selectorTab === 'images'" flat round dense color="primary" icon="add_photo_alternate" @click="openBulkImageDialog">
                   <q-tooltip>Add multiple images automatically</q-tooltip>
                 </q-btn>
-                <q-btn v-if="!binder.locked" flat round dense color="primary" icon="add" @click="openAssetDialog(selectorTab)">
+                <q-btn flat round dense color="primary" icon="add" @click="openAssetDialog(selectorTab)">
                   <q-tooltip>Add {{ selectorTab === 'proxies' ? 'proxy' : 'image' }}</q-tooltip>
                 </q-btn>
               </div>
@@ -67,8 +63,8 @@
           <q-separator dark />
           <q-scroll-area style="height: 50vh">
             <q-list v-if="selectorTab === 'collection' || selectorTab === 'wanted'" separator>
-              <q-item v-for="row in availableRows" :key="row.entry.id" dense :draggable="!binder.locked && row.available > 0"
-                :class="{ 'text-grey-6': row.available === 0, 'cursor-grab': !binder.locked && row.available > 0 }" @dragstart="startEntryDrag(row.entry.id, $event)">
+              <q-item v-for="row in availableRows" :key="row.entry.id" dense :draggable="row.available > 0"
+                :class="{ 'text-grey-6': row.available === 0, 'cursor-grab': row.available > 0 }" @dragstart="startEntryDrag(row.entry.id, $event)">
                 <q-item-section avatar>
                   <q-img v-if="row.card.image_url" :src="row.card.image_url" fit="contain" width="44px" height="60px" :class="{ 'wanted-image': row.entry.wanted }" />
                   <q-icon v-else name="style" size="32px" />
@@ -87,8 +83,8 @@
               </q-item>
             </q-list>
             <q-list v-else-if="selectorTab === 'proxies'" separator>
-              <q-item v-for="proxy in filteredProxies" :key="proxy.id" dense :draggable="!binder.locked && proxyAvailable(proxy) > 0"
-                :class="{ 'text-grey-6': proxyAvailable(proxy) === 0, 'cursor-grab': !binder.locked && proxyAvailable(proxy) > 0 }" @dragstart="startProxyDrag(proxy.id, $event)">
+              <q-item v-for="proxy in filteredProxies" :key="proxy.id" dense :draggable="proxyAvailable(proxy) > 0"
+                :class="{ 'text-grey-6': proxyAvailable(proxy) === 0, 'cursor-grab': proxyAvailable(proxy) > 0 }" @dragstart="startProxyDrag(proxy.id, $event)">
                 <q-item-section avatar>
                   <q-img :src="binderAssetUrl(proxy.id, 'proxy')" fit="contain" width="44px" height="60px" />
                 </q-item-section>
@@ -100,7 +96,7 @@
                   </q-item-label>
                 </q-item-section>
                 <q-item-section side>
-                  <div v-if="!binder.locked" class="row no-wrap">
+                  <div v-if="!isAssetLocked('proxy', proxy.id)" class="row no-wrap">
                     <q-btn flat round dense color="grey-4" icon="edit" @click="openEditAsset('proxy', proxy.id)">
                       <q-tooltip>Edit proxy</q-tooltip>
                     </q-btn>
@@ -111,8 +107,8 @@
               <q-item v-if="filteredProxies.length === 0"><q-item-section class="text-grey-5">No proxies. Use + to upload one.</q-item-section></q-item>
             </q-list>
             <q-list v-else separator>
-              <q-item v-for="image in filteredImages" :key="image.id" dense :draggable="!binder.locked"
-                :class="{ 'cursor-grab': !binder.locked }" @dragstart="startImageDrag(image.id, $event)">
+              <q-item v-for="image in filteredImages" :key="image.id" dense :draggable="!isAssetLocked('image', image.id)"
+                :class="{ 'cursor-grab': !isAssetLocked('image', image.id) }" @dragstart="startImageDrag(image.id, $event)">
                 <q-item-section side>
                   <q-checkbox v-model="selectedImageIds" :val="image.id" color="primary" @click.stop />
                 </q-item-section>
@@ -124,7 +120,7 @@
                   <q-item-label caption>{{ image.width }} × {{ image.height }}</q-item-label>
                 </q-item-section>
                 <q-item-section side>
-                  <div v-if="!binder.locked" class="row no-wrap">
+                  <div v-if="!isAssetLocked('image', image.id)" class="row no-wrap">
                     <q-btn flat round dense color="grey-4" icon="edit" @click="openEditAsset('image', image.id)">
                       <q-tooltip>Edit image</q-tooltip>
                     </q-btn>
@@ -151,8 +147,17 @@
 
         <div class="binder-spread">
           <div v-for="side in visibleSides" :key="side.position" class="binder-leaf">
-            <div class="text-caption text-grey-4 text-center q-mb-xs">{{ side.label }}</div>
-            <div v-if="side.sideIndex !== null" class="binder-page q-pa-sm rounded-borders" :style="{ gridTemplateColumns: `repeat(${binderColumns}, minmax(0, 1fr))` }">
+            <div class="row items-center justify-center q-gutter-xs q-mb-xs">
+              <span class="text-caption text-grey-4">{{ side.label }}</span>
+              <q-btn v-if="side.sideIndex !== null" flat round dense size="sm" color="primary"
+                :icon="isPageLocked(side.sideIndex) ? 'lock' : 'lock_open'"
+                @click="togglePageLock(side.sideIndex)">
+                <q-tooltip>{{ isPageLocked(side.sideIndex) ? 'Unlock this page face' : 'Lock this page face' }}</q-tooltip>
+              </q-btn>
+            </div>
+            <div v-if="side.sideIndex !== null" class="binder-page q-pa-sm rounded-borders"
+              :class="{ 'binder-page--locked': isPageLocked(side.sideIndex) }"
+              :style="{ gridTemplateColumns: `repeat(${binderColumns}, minmax(0, 1fr))` }">
               <div v-for="decoration in side.decorations" :key="decoration.image.id" class="binder-decoration" :style="{
                 gridColumn: `${decoration.placement.column + 1} / span ${decoration.image.width}`,
                 gridRow: `${decoration.placement.row + 1} / span ${decoration.image.height}`
@@ -165,18 +170,18 @@
                 'binder-slot--image-reserved': slot.hasDecoration && !slot.acceptsCard
               }" :style="{ gridColumn: slot.column + 1, gridRow: slot.rowIndex + 1 }" @dragover.prevent @drop.prevent="dropOnSlot(slot.index, $event)">
                 <template v-if="slot.content">
-                  <img v-if="slot.content.imageUrl" :src="slot.content.imageUrl" :alt="slot.content.name" :draggable="!binder.locked"
+                  <img v-if="slot.content.imageUrl" :src="slot.content.imageUrl" :alt="slot.content.name" :draggable="!isSlotLocked(slot.index)"
                     :class="{ 'wanted-image': slot.content.wanted }" @dragstart="startSlotDrag(slot.index, $event)" />
                   <div v-else class="full-height column items-center justify-center text-center q-pa-sm"
-                    :draggable="!binder.locked" @dragstart="startSlotDrag(slot.index, $event)">
+                    :draggable="!isSlotLocked(slot.index)" @dragstart="startSlotDrag(slot.index, $event)">
                     <q-icon name="style" size="30px" color="grey-5" />
                     <div class="text-caption q-mt-sm">{{ slot.content.name }}</div>
                   </div>
-                  <q-btn v-if="!binder.locked" class="slot-remove absolute-top-right q-ma-xs" round dense size="xs" color="grey-10" icon="close"
+                  <q-btn v-if="!isSlotLocked(slot.index)" class="slot-remove absolute-top-right q-ma-xs" round dense size="xs" color="grey-10" icon="close"
                     @click="binderStore.setSlot(folderId, slot.index, null)">
                     <q-tooltip>Remove from binder</q-tooltip>
                   </q-btn>
-                  <q-btn v-if="!binder.locked && slot.content.wanted && slot.content.entryId" class="slot-got-it absolute-bottom q-ma-sm" color="primary" text-color="black"
+                  <q-btn v-if="!isSlotLocked(slot.index) && slot.content.wanted && slot.content.entryId" class="slot-got-it absolute-bottom q-ma-sm" color="primary" text-color="black"
                     icon="check_circle" label="Got it" no-caps dense @click.stop="openGotIt(slot.index, slot.content.entryId)" />
                 </template>
                 <div v-else-if="!slot.hasDecoration" class="full-height column items-center justify-center text-grey-6">
@@ -258,7 +263,6 @@
               <q-option-group v-model="michiPokedexForms" :options="michiPokedexFormOptions"
                 type="radio" color="primary" dense />
             </div>
-            <q-toggle v-model="michiPreserveFirstPage" color="primary" label="Preserve first page" />
             <q-input v-model.number="michiSeed" type="number" dark outlined label="Variation seed" />
             <q-btn color="primary" text-color="black" icon="auto_awesome" label="Generate preview"
               :loading="michiGenerating" @click="generateMichiProposal()" />
@@ -574,7 +578,6 @@
   const showMichiDialog = ref(false);
   const michiMode = ref<MichiMode>('date');
   const michiPokedexForms = ref<'number' | 'regional'>('number');
-  const michiPreserveFirstPage = ref(false);
   const michiSeed = ref(1);
   const michiGenerating = ref(false);
   const michiProposal = ref<MichiLayoutProposal | null>(null);
@@ -786,6 +789,19 @@
   const proxyAvailable = (proxy: BinderProxy): number =>
     Math.max(0, proxy.quantity - (usedProxyCounts.value.get(proxy.id) ?? 0));
   const placedImageIds = computed(() => new Set((binder.value?.image_placements ?? []).map((placement) => placement.image_id)));
+  const isPageLocked = (sideIndex: number): boolean => binder.value?.locked_pages.includes(sideIndex) ?? false;
+  const isSlotLocked = (slotIndex: number): boolean => Boolean(
+    binder.value && isPageLocked(Math.floor(slotIndex / binderSlotsPerPage(binder.value.layout)))
+  );
+  const isAssetLocked = (kind: 'proxy' | 'image', assetId: string): boolean => {
+    if (!binder.value) return false;
+    if (kind === 'image') {
+      return binder.value.image_placements.some((placement) =>
+        placement.image_id === assetId && isPageLocked(placement.side_index)
+      );
+    }
+    return binder.value.slots.some((slot, index) => slot === `proxy:${assetId}` && isSlotLocked(index));
+  };
   const editReservedSlotConflicts = computed(() => {
     if (editAssetKind.value !== 'image' || !binder.value) return 0;
     const placement = binder.value.image_placements.find((candidate) => candidate.image_id === editAssetId.value);
@@ -824,7 +840,6 @@
     return asset ? `${asset.url}?v=${encodeURIComponent(asset.updated_at)}` : '';
   };
   const openMichiDialog = (): void => {
-    if (binder.value?.locked) return;
     michiProposal.value = null;
     michiError.value = null;
     showMichiDialog.value = true;
@@ -914,7 +929,7 @@
         pokedexSlots: michiMode.value === 'pokedex' ? michiPokedexSlots() : [],
         options: {
           mode: michiMode.value,
-          preserveFirstPage: michiPreserveFirstPage.value,
+          lockedPages: binder.value.locked_pages,
           seed: Math.floor(michiSeed.value) || 1
         }
       });
@@ -977,7 +992,7 @@
     return spreads;
   });
   const applyMichiProposal = (): void => {
-    if (!binder.value || binder.value.locked || !michiProposal.value) return;
+    if (!binder.value || !michiProposal.value) return;
     binderStore.applyLayout(folderId.value, michiProposal.value.slots, michiProposal.value.imagePlacements);
     currentSpread.value = 0;
     showMichiDialog.value = false;
@@ -1103,34 +1118,22 @@
   const createBinder = (): void => {
     binderStore.create(folderId.value, newPageCount.value, newLayout.value);
   };
-  const toggleBinderLock = (): void => {
-    if (!binder.value) return;
-    const locked = !binder.value.locked;
-    binderStore.setLocked(folderId.value, locked);
-    if (locked) {
-      showSettings.value = false;
-      showMichiDialog.value = false;
-      showAssetDialog.value = false;
-      showBulkImageDialog.value = false;
-      showEditAssetDialog.value = false;
-      gotItTarget.value = null;
-      deleteTarget.value = null;
-    }
+  const togglePageLock = (sideIndex: number): void => {
+    binderStore.setPageLocked(folderId.value, sideIndex, !isPageLocked(sideIndex));
   };
   const openSettings = (): void => {
-    if (!binder.value || binder.value.locked) return;
+    if (!binder.value || binder.value.locked_pages.length) return;
     settingsPageCount.value = binder.value.page_count;
     settingsLayout.value = binder.value.layout;
     showSettings.value = true;
   };
   const saveSettings = (): void => {
-    if (binder.value?.locked || !settingsChanged.value || settingsPageCount.value < 1) return;
+    if (binder.value?.locked_pages.length || !settingsChanged.value || settingsPageCount.value < 1) return;
     binderStore.resetSettings(folderId.value, settingsPageCount.value, settingsLayout.value);
     currentSpread.value = 0;
     showSettings.value = false;
   };
   const openAssetDialog = (tab: SelectorTab): void => {
-    if (binder.value?.locked) return;
     assetKind.value = tab === 'images' ? 'image' : 'proxy';
     assetName.value = '';
     assetQuantity.value = 1;
@@ -1180,7 +1183,6 @@
     return best;
   };
   const openBulkImageDialog = (): void => {
-    if (binder.value?.locked) return;
     bulkImageFiles.value = null;
     bulkImageRows.value = [];
     bulkImageError.value = null;
@@ -1470,7 +1472,7 @@
     }
   };
   const openEditAsset = (kind: 'proxy' | 'image', assetId: string): void => {
-    if (binder.value?.locked) return;
+    if (isAssetLocked(kind, assetId)) return;
     const asset = kind === 'proxy'
       ? binder.value?.proxies.find((candidate) => candidate.id === assetId)
       : binder.value?.images.find((candidate) => candidate.id === assetId);
@@ -1514,7 +1516,7 @@
     }
   };
   const saveAssetEdits = async (): Promise<void> => {
-    if (!editName.value.trim()) return;
+    if (!editName.value.trim() || isAssetLocked(editAssetKind.value, editAssetId.value)) return;
     if (editAssetKind.value === 'proxy') {
       binderStore.updateProxy(folderId.value, editAssetId.value, {
         name: editName.value, quantity: editQuantity.value, date: editDate.value
@@ -1566,14 +1568,14 @@
     showEditAssetDialog.value = false;
   };
   const requestDeleteAsset = (kind: 'proxy' | 'image', assetId: string): void => {
-    if (binder.value?.locked) return;
+    if (isAssetLocked(kind, assetId)) return;
     const asset = kind === 'proxy'
       ? binder.value?.proxies.find((candidate) => candidate.id === assetId)
       : binder.value?.images.find((candidate) => candidate.id === assetId);
     if (asset) deleteTarget.value = { kind, id: assetId, name: asset.name };
   };
   const confirmDeleteAsset = async (): Promise<void> => {
-    if (!deleteTarget.value) return;
+    if (!deleteTarget.value || isAssetLocked(deleteTarget.value.kind, deleteTarget.value.id)) return;
     deleteSaving.value = true;
     const target = deleteTarget.value;
     binderStore.removeAsset(folderId.value, target.kind, target.id);
@@ -1585,10 +1587,6 @@
     deleteTarget.value = null;
   };
   const startEntryDrag = (entryId: string, event: DragEvent): void => {
-    if (binder.value?.locked) {
-      event.preventDefault();
-      return;
-    }
     const row = rows.value.find((candidate) => candidate.entry.id === entryId);
     if (!row || row.available < 1 || !event.dataTransfer) {
       event.preventDefault();
@@ -1598,7 +1596,7 @@
     event.dataTransfer.effectAllowed = 'copy';
   };
   const startSlotDrag = (slotIndex: number, event: DragEvent): void => {
-    if (binder.value?.locked) {
+    if (isSlotLocked(slotIndex)) {
       event.preventDefault();
       return;
     }
@@ -1607,10 +1605,6 @@
     event.dataTransfer.effectAllowed = 'move';
   };
   const startProxyDrag = (proxyId: string, event: DragEvent): void => {
-    if (binder.value?.locked) {
-      event.preventDefault();
-      return;
-    }
     const proxy = binder.value?.proxies.find((candidate) => candidate.id === proxyId);
     if (!proxy || proxyAvailable(proxy) < 1 || !event.dataTransfer) {
       event.preventDefault();
@@ -1620,7 +1614,7 @@
     event.dataTransfer.effectAllowed = 'copy';
   };
   const startImageDrag = (imageId: string, event: DragEvent): void => {
-    if (binder.value?.locked) {
+    if (isAssetLocked('image', imageId)) {
       event.preventDefault();
       return;
     }
@@ -1651,7 +1645,7 @@
     });
   };
   const dropOnSlot = (targetIndex: number, event: DragEvent): void => {
-    if (binder.value?.locked) return;
+    if (isSlotLocked(targetIndex)) return;
     const payload = event.dataTransfer?.getData('text/plain') ?? '';
     if (!payload.startsWith('image:') && !cardAllowedAtSlot(targetIndex)) return;
     if (payload.startsWith('slot:')) {
@@ -1686,7 +1680,7 @@
   };
 
   const openGotIt = (slotIndex: number, entryId: string): void => {
-    if (binder.value?.locked) return;
+    if (isSlotLocked(slotIndex)) return;
     gotItCondition.value = 'NM';
     gotItTarget.value = { slotIndex, entryId };
   };
@@ -1733,6 +1727,11 @@
     aspect-ratio: 8 / 11;
     border-style: dashed;
     background: #161616;
+  }
+
+  .binder-page--locked {
+    border-color: #8f7a18;
+    box-shadow: inset 0 0 0 2px rgb(255 214 0 / 22%);
   }
 
   .binder-slot {

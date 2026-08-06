@@ -33,7 +33,7 @@ export type CollectionBinder = {
   folder_id: string;
   page_count: number;
   layout: BinderLayout;
-  locked: boolean;
+  locked_pages: number[];
   slots: Array<string | null>;
   proxies: BinderProxy[];
   images: BinderImage[];
@@ -63,10 +63,13 @@ const loadPromise = fetch('/api/binders')
     const parsed = await response.json() as Partial<BindersData>;
     if (!Array.isArray(parsed.binders)) throw new Error('Invalid binders JSON');
     const binders = parsed.binders.map((binder) => {
+      const { locked: _legacyLocked, ...binderData } = binder as CollectionBinder & { locked?: boolean };
       const expectedSlots = binder.page_count * 2 * slotsPerPage(binder.layout);
       return {
-        ...binder,
-        locked: binder.locked === true,
+        ...binderData,
+        locked_pages: Array.isArray(binder.locked_pages)
+          ? [...new Set(binder.locked_pages)].filter((page) => Number.isInteger(page) && page >= 0 && page < binder.page_count * 2)
+          : [],
         slots: binder.slots.length < expectedSlots
           ? [...binder.slots, ...Array(expectedSlots - binder.slots.length).fill(null)]
           : binder.slots.slice(0, expectedSlots),
@@ -115,6 +118,21 @@ const persist = (): void => {
 };
 
 const slotsPerPage = (layout: BinderLayout): number => layout === '2x2' ? 4 : 9;
+const pageForSlot = (binder: CollectionBinder, slotIndex: number): number | null => {
+  const pageIndex = Math.floor(slotIndex / slotsPerPage(binder.layout));
+  return binder.locked_pages.includes(pageIndex) ? null : pageIndex;
+};
+const assetTouchesLockedPage = (
+  binder: CollectionBinder,
+  kind: 'proxy' | 'image',
+  assetId: string
+): boolean => kind === 'proxy'
+  ? binder.slots.some((slot, index) =>
+      slot === `proxy:${assetId}` && binder.locked_pages.includes(Math.floor(index / slotsPerPage(binder.layout)))
+    )
+  : binder.image_placements.some((placement) =>
+      placement.image_id === assetId && binder.locked_pages.includes(placement.side_index)
+    );
 const newAssetId = (prefix: string): string =>
   `${prefix}-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 9)}`;
 
@@ -135,7 +153,7 @@ export const binderStore = {
       folder_id: folderId,
       page_count: Math.max(1, Math.floor(pageCount)),
       layout,
-      locked: false,
+      locked_pages: [],
       slots: Array(Math.max(1, Math.floor(pageCount)) * 2 * slotsPerPage(layout)).fill(null),
       proxies: [],
       images: [],
@@ -150,26 +168,31 @@ export const binderStore = {
 
   remove(folderId: string): void {
     const index = state.binders.findIndex((binder) => binder.folder_id === folderId);
-    if (index === -1 || state.binders[index].locked) return;
+    if (index === -1) return;
     state.binders.splice(index, 1);
     persist();
   },
 
-  setLocked(folderId: string, locked: boolean): void {
+  setPageLocked(folderId: string, pageIndex: number, locked: boolean): void {
     const binder = this.get(folderId);
-    if (!binder || binder.locked === locked) return;
-    binder.locked = locked;
+    if (!binder || !Number.isInteger(pageIndex) || pageIndex < 0 || pageIndex >= binder.page_count * 2) return;
+    const currentlyLocked = binder.locked_pages.includes(pageIndex);
+    if (currentlyLocked === locked) return;
+    binder.locked_pages = locked
+      ? [...binder.locked_pages, pageIndex].sort((left, right) => left - right)
+      : binder.locked_pages.filter((candidate) => candidate !== pageIndex);
     binder.updated_at = new Date().toISOString();
     persist();
   },
 
   resetSettings(folderId: string, pageCount: number, layout: BinderLayout): void {
     const binder = this.get(folderId);
-    if (!binder || binder.locked) return;
+    if (!binder || binder.locked_pages.length) return;
     binder.page_count = Math.max(1, Math.floor(pageCount));
     binder.layout = layout;
     binder.slots = Array(binder.page_count * 2 * slotsPerPage(layout)).fill(null);
     binder.image_placements = [];
+    binder.locked_pages = [];
     const dimension = layout === '2x2' ? 2 : 3;
     binder.images = binder.images.map((image) => {
       const width = Math.min(dimension, image.width);
@@ -191,7 +214,7 @@ export const binderStore = {
 
   setSlot(folderId: string, slotIndex: number, entryId: string | null): void {
     const binder = this.get(folderId);
-    if (!binder || binder.locked || slotIndex < 0 || slotIndex >= binder.slots.length) return;
+    if (!binder || slotIndex < 0 || slotIndex >= binder.slots.length || pageForSlot(binder, slotIndex) === null) return;
     binder.slots[slotIndex] = entryId;
     binder.updated_at = new Date().toISOString();
     persist();
@@ -199,7 +222,7 @@ export const binderStore = {
 
   createProxy(folderId: string, name: string, quantity: number, date = ''): BinderProxy {
     const binder = this.get(folderId);
-    if (!binder || binder.locked || !name.trim()) throw new Error(binder?.locked ? 'Binder is locked' : 'Proxy name is required');
+    if (!binder || !name.trim()) throw new Error('Proxy name is required');
     const proxy = {
       id: newAssetId('proxy'),
       name: name.trim(),
@@ -215,7 +238,7 @@ export const binderStore = {
 
   createImage(folderId: string, name: string, width: number, height: number): BinderImage {
     const binder = this.get(folderId);
-    if (!binder || binder.locked || !name.trim()) throw new Error(binder?.locked ? 'Binder is locked' : 'Image name is required');
+    if (!binder || !name.trim()) throw new Error('Image name is required');
     const limit = binder.layout === '2x2' ? 2 : 3;
     const image = {
       id: newAssetId('image'),
@@ -241,7 +264,7 @@ export const binderStore = {
   ): void {
     const binder = this.get(folderId);
     const proxy = binder?.proxies.find((candidate) => candidate.id === proxyId);
-    if (!binder || binder.locked || !proxy || !values.name.trim()) return;
+    if (!binder || !proxy || !values.name.trim() || assetTouchesLockedPage(binder, 'proxy', proxyId)) return;
     proxy.name = values.name.trim();
     proxy.quantity = Math.max(1, Math.floor(values.quantity));
     proxy.date = values.date;
@@ -264,7 +287,7 @@ export const binderStore = {
   ): void {
     const binder = this.get(folderId);
     const image = binder?.images.find((candidate) => candidate.id === imageId);
-    if (!binder || binder.locked || !image || !values.name.trim()) return;
+    if (!binder || !image || !values.name.trim() || assetTouchesLockedPage(binder, 'image', imageId)) return;
     const limit = binder.layout === '2x2' ? 2 : 3;
     const width = Math.min(limit, Math.max(1, Math.floor(values.width)));
     const height = Math.min(limit, Math.max(1, Math.floor(values.height)));
@@ -297,7 +320,7 @@ export const binderStore = {
 
   removeAsset(folderId: string, kind: 'proxy' | 'image', assetId: string): void {
     const binder = this.get(folderId);
-    if (!binder || binder.locked) return;
+    if (!binder || assetTouchesLockedPage(binder, kind, assetId)) return;
     if (kind === 'proxy') {
       binder.proxies = binder.proxies.filter((proxy) => proxy.id !== assetId);
       binder.slots = binder.slots.map((slot) => slot === `proxy:${assetId}` ? null : slot);
@@ -312,7 +335,9 @@ export const binderStore = {
   placeImage(folderId: string, imageId: string, sideIndex: number, row: number, column: number): void {
     const binder = this.get(folderId);
     const image = binder?.images.find((candidate) => candidate.id === imageId);
-    if (!binder || binder.locked || !image) return;
+    if (!binder || !image || binder.locked_pages.includes(sideIndex)) return;
+    const currentPlacement = binder.image_placements.find((candidate) => candidate.image_id === imageId);
+    if (currentPlacement && binder.locked_pages.includes(currentPlacement.side_index)) return;
     const dimension = binder.layout === '2x2' ? 2 : 3;
     const placement: BinderImagePlacement = {
       image_id: imageId,
@@ -341,7 +366,8 @@ export const binderStore = {
 
   removeImagePlacement(folderId: string, imageId: string): void {
     const binder = this.get(folderId);
-    if (!binder || binder.locked) return;
+    const placement = binder?.image_placements.find((candidate) => candidate.image_id === imageId);
+    if (!binder || (placement && binder.locked_pages.includes(placement.side_index))) return;
     binder.image_placements = binder.image_placements.filter((placement) => placement.image_id !== imageId);
     binder.updated_at = new Date().toISOString();
     persist();
@@ -353,16 +379,26 @@ export const binderStore = {
     imagePlacements: BinderImagePlacement[]
   ): void {
     const binder = this.get(folderId);
-    if (!binder || binder.locked || slots.length !== binder.slots.length) return;
-    binder.slots = [...slots];
-    binder.image_placements = imagePlacements.map((placement) => ({ ...placement }));
+    if (!binder || slots.length !== binder.slots.length) return;
+    const sideSize = slotsPerPage(binder.layout);
+    const locked = new Set(binder.locked_pages);
+    binder.slots = slots.map((slot, index) => locked.has(Math.floor(index / sideSize)) ? binder.slots[index] : slot);
+    binder.image_placements = [
+      ...binder.image_placements.filter((placement) => locked.has(placement.side_index)),
+      ...imagePlacements.filter((placement) => !locked.has(placement.side_index)).map((placement) => ({ ...placement }))
+    ];
     binder.updated_at = new Date().toISOString();
     persist();
   },
 
   moveSlot(folderId: string, sourceIndex: number, targetIndex: number): void {
     const binder = this.get(folderId);
-    if (!binder || binder.locked || sourceIndex === targetIndex) return;
+    if (
+      !binder || sourceIndex === targetIndex
+      || sourceIndex < 0 || sourceIndex >= binder.slots.length
+      || targetIndex < 0 || targetIndex >= binder.slots.length
+      || pageForSlot(binder, sourceIndex) === null || pageForSlot(binder, targetIndex) === null
+    ) return;
     const source = binder.slots[sourceIndex] ?? null;
     const target = binder.slots[targetIndex] ?? null;
     binder.slots[sourceIndex] = target;
@@ -373,23 +409,26 @@ export const binderStore = {
 
   clean(folderId: string, validQuantities: Map<string, number>): void {
     const binder = this.get(folderId);
-    if (!binder || binder.locked) return;
+    if (!binder) return;
     const used = new Map<string, number>();
     const usedProxies = new Map<string, number>();
     let changed = false;
-    const nextSlots = binder.slots.map((entryId) => {
+    const nextSlots = binder.slots.map((entryId, slotIndex) => {
       if (!entryId) return null;
+      const locked = binder.locked_pages.includes(Math.floor(slotIndex / slotsPerPage(binder.layout)));
       if (entryId.startsWith('proxy:')) {
         const proxyId = entryId.slice(6);
         const proxy = binder.proxies.find((candidate) => candidate.id === proxyId);
         const nextCount = (usedProxies.get(proxyId) ?? 0) + 1;
         usedProxies.set(proxyId, nextCount);
+        if (locked) return entryId;
         if (proxy && nextCount <= proxy.quantity) return entryId;
         changed = true;
         return null;
       }
       const nextCount = (used.get(entryId) ?? 0) + 1;
       used.set(entryId, nextCount);
+      if (locked) return entryId;
       if (nextCount <= (validQuantities.get(entryId) ?? 0)) return entryId;
       changed = true;
       return null;

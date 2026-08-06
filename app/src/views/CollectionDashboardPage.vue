@@ -106,7 +106,6 @@
               v-for="summary in binderSummaries"
               :key="summary.folder.id"
               v-bind="summary"
-              :locked="binderStore.get(summary.folder.id)?.locked ?? false"
               @settings="openRenameFolder"
               @delete="openDeleteFolder"
             />

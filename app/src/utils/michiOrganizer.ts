@@ -22,7 +22,7 @@ export type MichiImageInput = BinderImage & {
 
 export type MichiOptions = {
   mode: MichiMode;
-  preserveFirstPage: boolean;
+  lockedPages: number[];
   seed: number;
 };
 
@@ -242,12 +242,19 @@ export const generateMichiLayout = async (input: MichiOrganizerInput): Promise<M
     warnings.push(`${unreadableCards + unreadableImages} visual asset(s) could not be color-analyzed and were treated as neutral.`);
   }
 
+  const lockedPages = new Set(options.lockedPages);
+  const lockedCells = new Set(Array.from(lockedPages).flatMap((pageIndex) =>
+    Array.from({ length: sideSize }, (_, offset) => pageIndex * sideSize + offset)
+  ));
   const slots: Array<string | null> = Array(totalSlots).fill(null);
-  const preservedSideCount = options.preserveFirstPage ? sideSize : 0;
-  if (preservedSideCount) {
-    slots.splice(0, sideSize, ...input.currentSlots.slice(0, sideSize));
+  for (const pageIndex of lockedPages) {
+    const start = pageIndex * sideSize;
+    slots.splice(start, sideSize, ...input.currentSlots.slice(start, start + sideSize));
   }
-  let remainingCards = removePreservedInstances(instances, slots.slice(0, preservedSideCount));
+  let remainingCards = removePreservedInstances(
+    instances,
+    slots.filter((_slot, index) => lockedPages.has(Math.floor(index / sideSize)))
+  );
   const insertAtGroupBoundaries = (
     orderedCards: CardInstance[],
     flexibleCards: CardInstance[],
@@ -319,7 +326,7 @@ export const generateMichiLayout = async (input: MichiOrganizerInput): Promise<M
       || left.ordinal - right.ordinal
     );
   }
-  const firstOrganizedSide = options.preserveFirstPage ? 1 : 0;
+  const firstOrganizedSide = 0;
   const pageColorAnchors = new Map<number, [number, number, number]>();
   for (let offset = 0; offset < remainingCards.length; offset += sideSize) {
     const pageCards = remainingCards.slice(offset, offset + sideSize);
@@ -353,9 +360,7 @@ export const generateMichiLayout = async (input: MichiOrganizerInput): Promise<M
     }
   };
 
-  const fixedPlacements = input.currentImagePlacements.filter((placement) =>
-    options.preserveFirstPage && placement.side_index === 0
-  );
+  const fixedPlacements = input.currentImagePlacements.filter((placement) => lockedPages.has(placement.side_index));
   for (const placement of fixedPlacements) {
     const image = input.images.find((candidate) => candidate.id === placement.image_id);
     if (image) registerPlacement(image, placement);
@@ -375,7 +380,7 @@ export const generateMichiLayout = async (input: MichiOrganizerInput): Promise<M
     (total, image) => total + image.width * image.height - image.card_slots.length,
     0
   );
-  const availableOrganizedSides = input.pageCount * 2 - firstOrganizedSide;
+  const availableOrganizedSides = input.pageCount * 2 - lockedPages.size;
   const estimatedActiveSideCount = Math.min(
     availableOrganizedSides,
     Math.max(1, Math.ceil((remainingCards.length + totalReservedImageCells) / sideSize))
@@ -387,11 +392,8 @@ export const generateMichiLayout = async (input: MichiOrganizerInput): Promise<M
       : Math.round(imageIndex * (estimatedActiveSideCount - 1) / (imagesToPlace.length - 1));
     const desiredSide = firstOrganizedSide + desiredSideOffset;
     const candidates: Array<{ side: number; row: number; column: number; score: number }> = [];
-    const organizedSideLimit = Math.min(
-      input.pageCount * 2,
-      firstOrganizedSide + estimatedActiveSideCount
-    );
-    for (let side = options.preserveFirstPage ? 1 : 0; side < organizedSideLimit; side += 1) {
+    for (let side = 0; side < input.pageCount * 2; side += 1) {
+      if (lockedPages.has(side)) continue;
       for (let row = 0; row <= dimension - image.height; row += 1) {
         for (let column = 0; column <= dimension - image.width; column += 1) {
           const cells = Array.from({ length: image.width * image.height }, (_, index) => {
@@ -465,7 +467,7 @@ export const generateMichiLayout = async (input: MichiOrganizerInput): Promise<M
   }
 
   const availableSlotCount = slots.reduce((count, value, index) =>
-    count + (!value && !reservedCells.has(index) ? 1 : 0), 0);
+    count + (!value && !reservedCells.has(index) && !lockedCells.has(index) ? 1 : 0), 0);
   if (remainingCards.length > availableSlotCount) {
     const missing = remainingCards.length - availableSlotCount;
     throw new Error(`The binder needs ${missing} more usable slot${missing === 1 ? '' : 's'} to fit every card and illustration.`);
@@ -481,7 +483,7 @@ export const generateMichiLayout = async (input: MichiOrganizerInput): Promise<M
     placedFeatures.set(slotIndex, card.features);
   };
   const usableIndices = (): number[] => Array.from({ length: totalSlots }, (_, index) => index)
-    .filter((index) => !slots[index] && !reservedCells.has(index));
+    .filter((index) => !slots[index] && !reservedCells.has(index) && !lockedCells.has(index));
 
   if (options.mode === 'date' || options.mode === 'pokedex') {
     const available = usableIndices();
@@ -495,7 +497,7 @@ export const generateMichiLayout = async (input: MichiOrganizerInput): Promise<M
     remainingCards = [];
   } else {
     for (let slotIndex = 0; slotIndex < totalSlots && remainingCards.length; slotIndex += 1) {
-      if (slots[slotIndex] || reservedCells.has(slotIndex)) continue;
+      if (slots[slotIndex] || reservedCells.has(slotIndex) || lockedCells.has(slotIndex)) continue;
     const row = Math.floor((slotIndex % sideSize) / dimension);
     const column = slotIndex % dimension;
     const neighborFeatures = [

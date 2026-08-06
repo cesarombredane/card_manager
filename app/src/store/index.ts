@@ -55,7 +55,7 @@ export const store = createStore<AppState>({
         set_number: '',
         rarities: null,
         sort: 'release-desc',
-        include_special_forms: false,
+        include_special_forms: true,
         only_my_cards: false,
         region: 'all',
         international_language_id: null,
