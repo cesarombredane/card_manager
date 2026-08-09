@@ -160,7 +160,8 @@ const collectionApi = () => {
     entry.variant_id,
     entry.language_id,
     entry.condition,
-    entry.wanted === true
+    entry.wanted === true,
+    entry.wanted === true && entry.strong_language === true
   ].join(':');
 
   const applyEntryChanges = (

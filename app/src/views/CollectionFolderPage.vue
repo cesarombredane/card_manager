@@ -326,6 +326,9 @@
           <div v-if="!editingEntry?.entry.wanted" class="col-12 col-sm-6">
             <q-select v-model="editCondition" :options="conditionOptions" emit-value map-options dark outlined label="Condition" />
           </div>
+          <div v-else class="col-12 col-sm-6 flex items-center">
+            <q-checkbox v-model="editStrongLanguage" dark label="Require this exact language" />
+          </div>
           <div class="col-12" :class="{ 'col-sm-6': editingManualCard }">
             <collection-folder-select
               v-model="editFolderId"
@@ -445,6 +448,7 @@
   const editingEntry = ref<CollectionRow | null>(null);
   const editQuantity = ref(1);
   const editLanguageId = ref('');
+  const editStrongLanguage = ref(false);
   const editCondition = ref<CardCondition>('NM');
   const editFolderId = ref('');
   const editVariantId = ref('normal');
@@ -746,6 +750,7 @@
     editingEntry.value = row;
     editQuantity.value = row.entry.quantity;
     editLanguageId.value = row.entry.language_id;
+    editStrongLanguage.value = row.entry.strong_language === true;
     editCondition.value = row.entry.condition;
     editFolderId.value = row.entry.folder_id;
     editVariantId.value = row.entry.variant_id;
@@ -857,7 +862,8 @@
       folder_id: editFolderId.value,
       language_id: editLanguageId.value,
       condition: editCondition.value,
-      quantity: editQuantity.value
+      quantity: editQuantity.value,
+      strong_language: editStrongLanguage.value
     });
     showEditDialog.value = false;
     editingEntry.value = null;

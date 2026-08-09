@@ -32,6 +32,7 @@ export type CollectionEntry = {
   condition: CardCondition;
   quantity: number;
   wanted: boolean;
+  strong_language?: boolean;
   added_at: string;
   updated_at: string;
 };
@@ -93,8 +94,41 @@ const ownedQuantities = computed(() => {
 const wantedKeys = computed(() => new Set(
   state.entries
     .filter((entry) => entry.wanted)
-    .map((entry) => `${entry.set_id}:${entry.card_id}:${entry.variant_id}:${entry.language_id}`)
+    .map((entry) => `${entry.set_id}:${entry.card_id}:${entry.variant_id}:${entry.strong_language === true ? entry.language_id : '*'}`)
 ));
+
+const consumeMatchingWanted = (
+  folderId: string,
+  setId: string,
+  cardId: string,
+  variantId: string,
+  languageId: string,
+  quantity: number,
+  now: string
+): void => {
+  let remaining = quantity;
+  const matchingWanted = state.entries
+    .filter((entry) =>
+      entry.wanted
+      && entry.folder_id === folderId
+      && entry.set_id === setId
+      && entry.card_id === cardId
+      && entry.variant_id === variantId
+      && (entry.strong_language !== true || entry.language_id === languageId)
+    )
+    .sort((left, right) => Number(right.strong_language === true) - Number(left.strong_language === true));
+  for (const wantedEntry of matchingWanted) {
+    if (remaining <= 0) break;
+    const fulfilled = Math.min(remaining, wantedEntry.quantity);
+    remaining -= fulfilled;
+    if (fulfilled === wantedEntry.quantity) {
+      state.entries.splice(state.entries.indexOf(wantedEntry), 1);
+    } else {
+      wantedEntry.quantity -= fulfilled;
+      wantedEntry.updated_at = now;
+    }
+  }
+};
 
 const normalizeData = (parsed: Partial<CollectionData>): CollectionData => {
   if (!Array.isArray(parsed.folders) || !Array.isArray(parsed.entries)) {
@@ -120,7 +154,8 @@ const normalizeData = (parsed: Partial<CollectionData>): CollectionData => {
     ...entry,
     folder_id: entry.folder_id === legacyMainFolderId ? defaultFolder?.id ?? entry.folder_id : entry.folder_id,
     language_id: entry.language_id || (entry.set_id.startsWith('asia-') ? 'ja' : 'en'),
-    wanted: entry.wanted === true
+    wanted: entry.wanted === true,
+    strong_language: entry.wanted === true ? entry.strong_language === true : undefined
   }));
   return {
     version: 2,
@@ -269,7 +304,8 @@ export const collectionStore = {
   },
 
   isWanted(setId: string, cardId: string, variantId: string, languageId: string): boolean {
-    return wantedKeys.value.has(`${setId}:${cardId}:${variantId}:${languageId}`);
+    return wantedKeys.value.has(`${setId}:${cardId}:${variantId}:${languageId}`)
+      || wantedKeys.value.has(`${setId}:${cardId}:${variantId}:*`);
   },
 
   createFolder(name: string, type: CollectionFolderType): CollectionFolder {
@@ -332,6 +368,7 @@ export const collectionStore = {
     quantity: number;
   }): void {
     const quantity = Math.max(1, Math.floor(input.quantity));
+    const now = new Date().toISOString();
     const existing = state.entries.find((entry) =>
       entry.folder_id === input.folder_id
       && entry.set_id === input.set_id
@@ -343,11 +380,11 @@ export const collectionStore = {
     );
     if (existing) {
       existing.quantity += quantity;
-      existing.updated_at = new Date().toISOString();
+      existing.updated_at = now;
     } else {
-      const now = new Date().toISOString();
       state.entries.push({ id: newId('entry'), ...input, quantity, wanted: false, added_at: now, updated_at: now });
     }
+    consumeMatchingWanted(input.folder_id, input.set_id, input.card_id, input.variant_id, input.language_id, quantity, now);
     persist();
   },
 
@@ -358,6 +395,7 @@ export const collectionStore = {
     variant_id: string;
     language_id: string;
     quantity: number;
+    strong_language?: boolean;
   }): void {
     if (!state.folders.some((folder) => folder.id === input.folder_id)) return;
     const quantity = Math.max(1, Math.floor(input.quantity));
@@ -368,6 +406,7 @@ export const collectionStore = {
       && entry.card_id === input.card_id
       && entry.variant_id === input.variant_id
       && entry.language_id === input.language_id
+      && entry.strong_language === (input.strong_language === true)
     );
     if (existing) {
       existing.quantity += quantity;
@@ -382,10 +421,56 @@ export const collectionStore = {
       condition: 'NM',
       quantity,
       wanted: true,
+      strong_language: input.strong_language === true,
       added_at: now,
       updated_at: now
     });
     persist();
+  },
+
+  addWantedEntries(inputs: Array<{
+    folder_id: string;
+    set_id: string;
+    card_id: string;
+    variant_id: string;
+    language_id: string;
+    quantity: number;
+    strong_language?: boolean;
+  }>): number {
+    const now = new Date().toISOString();
+    let added = 0;
+    for (const input of inputs) {
+      if (!state.folders.some((folder) => folder.id === input.folder_id)) continue;
+      const quantity = Math.max(1, Math.floor(input.quantity));
+      const strongLanguage = input.strong_language === true;
+      const existing = state.entries.find((entry) =>
+        entry.wanted
+        && entry.folder_id === input.folder_id
+        && entry.set_id === input.set_id
+        && entry.card_id === input.card_id
+        && entry.variant_id === input.variant_id
+        && entry.language_id === input.language_id
+        && entry.strong_language === strongLanguage
+      );
+      if (existing) {
+        existing.quantity += quantity;
+        existing.updated_at = now;
+      } else {
+        state.entries.push({
+          id: newId('wanted'),
+          ...input,
+          condition: 'NM',
+          quantity,
+          wanted: true,
+          strong_language: strongLanguage,
+          added_at: now,
+          updated_at: now
+        });
+      }
+      added += 1;
+    }
+    if (added > 0) persist();
+    return added;
   },
 
   fulfillWanted(entryId: string, condition: CardCondition): CollectionEntry | null {
@@ -411,6 +496,7 @@ export const collectionStore = {
         condition,
         quantity: 1,
         wanted: false,
+        strong_language: undefined,
         added_at: now,
         updated_at: now
       };
@@ -536,6 +622,7 @@ export const collectionStore = {
     language_id: string;
     condition: CardCondition;
     quantity: number;
+    strong_language?: boolean;
   }): void {
     const entry = state.entries.find((candidate) => candidate.id === entryId);
     const quantity = Math.max(1, Math.floor(input.quantity));
@@ -554,6 +641,7 @@ export const collectionStore = {
       && candidate.language_id === input.language_id
       && candidate.condition === input.condition
       && candidate.wanted === entry.wanted
+      && (!entry.wanted || candidate.strong_language === (input.strong_language === true))
     );
     if (matching) {
       matching.quantity += quantity;
@@ -564,7 +652,11 @@ export const collectionStore = {
       entry.language_id = input.language_id;
       entry.condition = input.condition;
       entry.quantity = quantity;
+      if (entry.wanted) entry.strong_language = input.strong_language === true;
       entry.updated_at = new Date().toISOString();
+    }
+    if (!entry.wanted) {
+      consumeMatchingWanted(input.folder_id, entry.set_id, entry.card_id, entry.variant_id, input.language_id, quantity, new Date().toISOString());
     }
     persist();
   },
@@ -597,6 +689,7 @@ export const collectionStore = {
         && candidate.language_id === entry.language_id
         && candidate.condition === entry.condition
         && candidate.wanted === entry.wanted
+        && (!entry.wanted || candidate.strong_language === entry.strong_language)
       );
 
       if (quantity === entry.quantity) {
@@ -624,6 +717,9 @@ export const collectionStore = {
             updated_at: now
           });
         }
+      }
+      if (!entry.wanted) {
+        consumeMatchingWanted(folderId, entry.set_id, entry.card_id, entry.variant_id, entry.language_id, quantity, now);
       }
       transferred += quantity;
     }

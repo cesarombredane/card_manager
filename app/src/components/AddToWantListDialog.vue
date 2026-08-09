@@ -34,6 +34,12 @@
           label="Quantity wanted"
           :disable="!collectionStore.isFileConnected.value"
         />
+        <q-checkbox
+          v-model="strongLanguage"
+          dark
+          label="Require this exact language"
+          :disable="!collectionStore.isFileConnected.value"
+        />
       </q-card-section>
 
       <q-card-actions align="right">
@@ -77,6 +83,7 @@
   const store = useStore<AppState>();
   const folderId = ref(store.state.last_collection_folder_id);
   const quantity = ref(1);
+  const strongLanguage = ref(false);
   watch(
     [isOpen, collectionStore.isFileConnected],
     ([open, connected]) => {
@@ -87,6 +94,7 @@
         ? rememberedFolderId
         : defaultFolder.id;
       quantity.value = 1;
+      strongLanguage.value = false;
     },
     { immediate: true }
   );
@@ -98,7 +106,8 @@
       card_id: props.cardId,
       variant_id: props.variantId,
       language_id: props.languageId,
-      quantity: quantity.value
+      quantity: quantity.value,
+      strong_language: strongLanguage.value
     });
     store.commit('set_last_collection_folder_id', folderId.value);
     quantity.value = 1;

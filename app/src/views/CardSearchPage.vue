@@ -14,16 +14,7 @@
 
     <section class="row q-col-gutter-md items-center q-mb-md">
       <div class="col-12 col-sm-6 col-md-4">
-        <q-input
-          v-model="search"
-          dark
-          dense
-          outlined
-          clearable
-          debounce="150"
-          label="Search a card by name"
-          @clear="search = ''"
-        >
+        <q-input v-model="search" dark dense outlined clearable debounce="150" label="Search a card by name" @clear="search = ''">
           <template #prepend>
             <q-icon name="search" />
           </template>
@@ -31,45 +22,12 @@
       </div>
       <div class="col-12 col-sm-6 col-md-4">
         <div class="row no-wrap items-center q-gutter-xs">
-          <q-btn
-            aria-label="Previous Pokemon"
-            :disable="!previousPokemon"
-            dark
-            dense
-            flat
-            round
-            icon="chevron_left"
-            @click="selectAdjacentPokemon(previousPokemon)"
-          >
+          <q-btn aria-label="Previous Pokemon" :disable="!previousPokemon" dark dense flat round icon="chevron_left" @click="selectAdjacentPokemon(previousPokemon)">
             <q-tooltip v-if="previousPokemon">Previous: {{ previousPokemon.label }}</q-tooltip>
           </q-btn>
-          <q-select
-            v-model="selectedPokemon"
-            class="col"
-            :options="filteredPokemonOptions"
-            emit-value
-            map-options
-            dark
-            dense
-            outlined
-            clearable
-            use-input
-            fill-input
-            hide-selected
-            input-debounce="0"
-            label="Pokemon"
-            @filter="filterPokemon"
-          />
-          <q-btn
-            aria-label="Next Pokemon"
-            :disable="!nextPokemon"
-            dark
-            dense
-            flat
-            round
-            icon="chevron_right"
-            @click="selectAdjacentPokemon(nextPokemon)"
-          >
+          <q-select v-model="selectedPokemon" class="col" :options="filteredPokemonOptions" emit-value map-options dark dense outlined clearable use-input fill-input
+            hide-selected input-debounce="0" label="Pokemon" @filter="filterPokemon" />
+          <q-btn aria-label="Next Pokemon" :disable="!nextPokemon" dark dense flat round icon="chevron_right" @click="selectAdjacentPokemon(nextPokemon)">
             <q-tooltip v-if="nextPokemon">Next: {{ nextPokemon.label }}</q-tooltip>
           </q-btn>
         </div>
@@ -81,13 +39,8 @@
         <q-checkbox v-model="onlyMyCards" dark label="Only my cards" />
       </div>
       <div class="col-12 col-sm-auto">
-        <q-btn
-          :icon="advancedFiltersOpen ? 'expand_less' : 'tune'"
-          :label="advancedFiltersOpen ? 'Hide advanced filters' : 'Advanced filters'"
-          color="primary"
-          flat
-          @click="advancedFiltersOpen = !advancedFiltersOpen"
-        />
+        <q-btn :icon="advancedFiltersOpen ? 'expand_less' : 'tune'" :label="advancedFiltersOpen ? 'Hide advanced filters' : 'Advanced filters'" color="primary" flat
+          @click="advancedFiltersOpen = !advancedFiltersOpen" />
       </div>
     </section>
 
@@ -95,106 +48,43 @@
       <section v-show="advancedFiltersOpen" class="row q-col-gutter-md items-center q-mb-md">
         <div class="col-12">
           <div class="text-caption text-grey-5 q-mb-xs">Card region</div>
-          <q-btn-toggle
-            v-model="selectedRegion"
-            :options="regionOptions"
-            color="grey-9"
-            text-color="grey-4"
-            toggle-color="primary"
-            toggle-text-color="black"
-            unelevated
-          />
+          <q-btn-toggle v-model="selectedRegion" :options="regionOptions" color="grey-9" text-color="grey-4" toggle-color="primary" toggle-text-color="black"
+            unelevated />
         </div>
         <div class="col-auto">
           <div class="text-caption text-grey-5 q-mb-xs">International card language</div>
-          <language-selector
-            v-model="selectedInternationalLanguageId"
+          <language-selector v-model="selectedInternationalLanguageId"
             :language-ids="internationalLanguageIds.length ? internationalLanguageIds : allInternationalLanguageIds"
-            :disable="selectedRegion === 'asia' || internationalLanguageIds.length === 0"
-          />
+            :disable="selectedRegion === 'asia' || internationalLanguageIds.length === 0" />
         </div>
         <div class="col-auto">
           <div class="text-caption text-grey-5 q-mb-xs">Asian card language</div>
-          <language-selector
-            v-model="selectedAsiaLanguageId"
-            :language-ids="asiaLanguageIds.length ? asiaLanguageIds : allAsiaLanguageIds"
-            :disable="selectedRegion === 'intl' || asiaLanguageIds.length === 0"
-          />
+          <language-selector v-model="selectedAsiaLanguageId" :language-ids="asiaLanguageIds.length ? asiaLanguageIds : allAsiaLanguageIds"
+            :disable="selectedRegion === 'intl' || asiaLanguageIds.length === 0" />
         </div>
         <div class="col-12 col-sm-6 col-md-4">
-          <q-select
-            v-model="selectedArtist"
-            :options="filteredArtistOptions"
-            dark
-            dense
-            outlined
-            clearable
-            use-input
-            input-debounce="0"
-            label="Artist"
-            @filter="filterArtists"
-          />
+          <q-select v-model="selectedArtist" :options="filteredArtistOptions" dark dense outlined clearable use-input input-debounce="0" label="Artist"
+            @filter="filterArtists" />
         </div>
         <div class="col-12 col-sm-6 col-md-4">
-          <q-select
-            v-model="selectedRarities"
-            :display-value="raritySelectionLabel"
-            :options="rarityOptions"
-            dark
-            dense
-            outlined
-            multiple
-            options-selected-class="text-primary"
-            label="Rarities"
-          >
+          <q-select v-model="selectedRarities" :display-value="raritySelectionLabel" :options="rarityOptions" dark dense outlined multiple
+            options-selected-class="text-primary" label="Rarities">
             <template #append>
-              <q-btn
-                aria-label="Select all rarities"
-                :disable="selectedRarities.length === rarityOptions.length"
-                dense
-                flat
-                round
-                icon="select_all"
-                @click.stop="selectAllRarities"
-              >
+              <q-btn aria-label="Select all rarities" :disable="selectedRarities.length === rarityOptions.length" dense flat round icon="select_all"
+                @click.stop="selectAllRarities">
                 <q-tooltip>Select all rarities</q-tooltip>
               </q-btn>
-              <q-btn
-                aria-label="Clear all rarities"
-                :disable="selectedRarities.length === 0"
-                dense
-                flat
-                round
-                icon="deselect"
-                @click.stop="clearRarities"
-              >
+              <q-btn aria-label="Clear all rarities" :disable="selectedRarities.length === 0" dense flat round icon="deselect" @click.stop="clearRarities">
                 <q-tooltip>Clear all rarities</q-tooltip>
               </q-btn>
             </template>
           </q-select>
         </div>
         <div class="col-12 col-sm-6 col-md-4">
-          <q-select
-            v-model="selectedEnergy"
-            :options="energyOptions"
-            dark
-            dense
-            outlined
-            clearable
-            label="Pokémon energy"
-          />
+          <q-select v-model="selectedEnergy" :options="energyOptions" dark dense outlined clearable label="Pokémon energy" />
         </div>
         <div class="col-12 col-sm-6 col-md-4">
-          <q-input
-            v-model="setNumber"
-            dark
-            dense
-            outlined
-            clearable
-            label="Set number"
-            hint="For example: 25 or TG01"
-            @clear="setNumber = ''"
-          />
+          <q-input v-model="setNumber" dark dense outlined clearable label="Set number" hint="For example: 25 or TG01" @clear="setNumber = ''" />
         </div>
         <div class="col-12 col-sm-6 col-md-4">
           <card-sort-selector v-model="selectedSort" />
@@ -280,7 +170,7 @@
   const rarityOptions: string[] = uniqueValues(cards.map((card) => card.rarity));
 
   // Region choices for the complete catalog, International sets, or Asian sets.
-  const regionOptions: { label: string; value: CardSearchRegion }[] = [
+  const regionOptions: { label: string; value: CardSearchRegion; }[] = [
     { label: 'Both', value: 'all' },
     { label: 'International', value: 'intl' },
     { label: 'Asia', value: 'asia' }
@@ -315,9 +205,9 @@
   // Preferred language for localized International labels and scans.
   const selectedInternationalLanguageId = ref<string>(
     storedFilters.international_language_id
-      ?? (sets.some((set) => !set.series_id.startsWith('asia-') && set.language_ids.includes(store.state.selected_language_id))
-        ? store.state.selected_language_id
-        : 'en')
+    ?? (sets.some((set) => !set.series_id.startsWith('asia-') && set.language_ids.includes(store.state.selected_language_id))
+      ? store.state.selected_language_id
+      : 'en')
   );
 
   // Preferred language for localized Asian labels and scans.
@@ -360,7 +250,7 @@
   const filteredArtistOptions = ref<string[]>([]);
 
   // Pokemon options matching the text currently typed in the select.
-  const filteredPokemonOptions = ref<{ label: string; value: string; searchNames: string[] }[]>([]);
+  const filteredPokemonOptions = ref<{ label: string; value: string; searchNames: string[]; }[]>([]);
 
   // Number of filtered cards currently visible.
   const visibleCardCount = ref<number>(initialVisibleCardCount);
@@ -379,7 +269,7 @@
 
   // Pokemon filter options found across every card.
   // Base-species options display English canonical names while retaining stable ids.
-  const pokemonOptions = computed<{ label: string; value: string; searchNames: string[] }[]>(() => pokemon
+  const pokemonOptions = computed<{ label: string; value: string; searchNames: string[]; }[]>(() => pokemon
     .filter((entry) => entry.form === null)
     .sort((a, b) => a.pokedex_id - b.pokedex_id)
     .map((entry) => ({
@@ -398,13 +288,13 @@
   const selectedPokemonIndex = computed<number>(() => pokemonOptions.value.findIndex((option) => option.value === selectedPokemon.value));
 
   // Base species immediately before the current selection in Pokedex order.
-  const previousPokemon = computed<{ label: string; value: string } | null>(() => {
+  const previousPokemon = computed<{ label: string; value: string; } | null>(() => {
     const index: number = selectedPokemonIndex.value;
     return index > 0 ? pokemonOptions.value[index - 1] : null;
   });
 
   // Base species immediately after the current selection in Pokedex order.
-  const nextPokemon = computed<{ label: string; value: string } | null>(() => {
+  const nextPokemon = computed<{ label: string; value: string; } | null>(() => {
     const index: number = selectedPokemonIndex.value;
     return index >= 0 && index < pokemonOptions.value.length - 1 ? pokemonOptions.value[index + 1] : null;
   });
@@ -496,11 +386,11 @@
     const numberQuery: string = setNumber.value.trim().toLowerCase().replace(/^#/, '');
     const searchableCards = onlyMyCards.value
       ? [
-          ...allCards.value.filter((card) =>
-            ownedCatalogCardKeys.value.has(`${card.set_id}:${card.card_id}:${card.variant_id}`)
-          ),
-          ...ownedManualCards.value
-        ]
+        ...allCards.value.filter((card) =>
+          ownedCatalogCardKeys.value.has(`${card.set_id}:${card.card_id}:${card.variant_id}`)
+        ),
+        ...ownedManualCards.value
+      ]
       : allCards.value;
 
     return searchableCards
@@ -658,7 +548,7 @@
   const filterSelectOptions = (
     inputValue: string,
     options: string[],
-    filteredOptions: { value: string[] },
+    filteredOptions: { value: string[]; },
     update: (callback: () => void) => void
   ): void => {
     const query: string = inputValue.trim().toLowerCase();
@@ -684,7 +574,7 @@
   };
 
   // Changes only the Pokemon filter, preserving every other search field.
-  const selectAdjacentPokemon = (option: { value: string } | null): void => {
+  const selectAdjacentPokemon = (option: { value: string; } | null): void => {
     if (!option) return;
 
     // Keep the selected id-to-label mapping available after a narrowed text search.

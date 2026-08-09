@@ -118,28 +118,102 @@
     </section>
 
     <q-dialog v-model="showFolderDialog">
-      <q-card class="bg-grey-10 text-white" style="width: 420px; max-width: 90vw">
+      <q-card class="bg-grey-10 text-white" style="width: 560px; max-width: 94vw">
         <q-card-section>
           <div class="text-h6">{{ editingFolder ? 'Collection settings' : 'Create collection' }}</div>
         </q-card-section>
         <q-card-section class="column q-gutter-md">
-          <q-input v-model="folderName" dark outlined autofocus label="Collection name" @keyup.enter="saveFolder" />
           <div>
             <div class="text-caption text-grey-4 q-mb-xs">Collection type</div>
-            <q-btn-toggle
-              v-model="folderType"
-              :options="folderTypeOptions"
-              color="grey-9"
-              text-color="grey-4"
-              toggle-color="primary"
-              toggle-text-color="black"
-              unelevated
-            />
+            <div class="row items-center no-wrap q-gutter-sm">
+              <q-btn-toggle
+                v-model="folderType"
+                :options="folderTypeOptions"
+                color="grey-9"
+                text-color="grey-4"
+                toggle-color="primary"
+                toggle-text-color="black"
+                unelevated
+              />
+              <q-btn
+                v-if="!editingFolder && folderType === 'binder'"
+                flat
+                dense
+                color="primary"
+                icon="auto_awesome"
+                label="Create from template"
+                no-caps
+                @click="openTemplateDialog"
+              />
+            </div>
           </div>
+          <q-input v-model="folderName" dark outlined autofocus label="Collection name" @keyup.enter="saveFolder" />
         </q-card-section>
         <q-card-actions align="right">
           <q-btn flat color="grey-4" label="Cancel" v-close-popup />
           <q-btn color="primary" text-color="black" label="Save" :disable="!folderName.trim()" @click="saveFolder" />
+        </q-card-actions>
+      </q-card>
+    </q-dialog>
+
+    <q-dialog v-model="showTemplateDialog">
+      <q-card class="bg-grey-10 text-white" style="width: 560px; max-width: 94vw">
+        <q-card-section>
+          <div class="text-h6">Create binder from template</div>
+          <div class="text-body2 text-grey-4">Build a complete wanted list automatically.</div>
+        </q-card-section>
+        <q-card-section class="column q-gutter-md">
+          <q-select
+            model-value="master-set"
+            :options="[{ label: 'Master Set', value: 'master-set' }]"
+            emit-value
+            map-options
+            dark
+            outlined
+            readonly
+            label="Template"
+          />
+          <q-select
+            v-model="templateSetId"
+            :options="setOptions"
+            emit-value
+            map-options
+            use-input
+            input-debounce="0"
+            dark
+            outlined
+            label="Set"
+            @filter="filterSetOptions"
+          />
+          <q-input v-model="templateName" dark outlined label="Collection name" />
+          <q-select
+            v-model="templateLanguageId"
+            :options="templateLanguageOptions"
+            emit-value
+            map-options
+            dark
+            outlined
+            label="Preferred language"
+            :disable="templateLanguageOptions.length <= 1"
+          />
+          <q-checkbox
+            v-model="templateStrongLanguage"
+            dark
+            label="Require wanted cards to be in this exact language"
+          />
+          <q-banner v-if="templateVariantCount" class="bg-grey-9 text-grey-3 rounded-borders">
+            {{ templateVariantCount }} card {{ templateVariantCount === 1 ? 'entry' : 'entries' }} will be added to the wanted list.
+          </q-banner>
+        </q-card-section>
+        <q-card-actions align="right">
+          <q-btn flat color="grey-4" label="Cancel" v-close-popup />
+          <q-btn
+            color="primary"
+            text-color="black"
+            label="Create Master Set"
+            :disable="!templateSetId || !templateName.trim() || !templateLanguageId"
+            @click="createMasterSet"
+          />
         </q-card-actions>
       </q-card>
     </q-dialog>
@@ -228,17 +302,19 @@
 </template>
 
 <script setup lang="ts">
-  import { computed, ref } from 'vue';
+  import { computed, ref, watch } from 'vue';
   import ManualCardDialog from '../components/ManualCardDialog.vue';
   import CollectionFolderSummaryCard from '../components/CollectionFolderSummaryCard.vue';
   import CollectionFolderSelect from '../components/CollectionFolderSelect.vue';
   import { cardmarketDisplayPrice, formatEuroPrice } from '../utils/cardDisplay';
-  import { getCardById } from '../utils/dataManagement';
+  import { getCardById, getCardsBySetId, getLanguages, getSets, getSetById } from '../utils/dataManagement';
+  import { localizedValue } from '../utils/localization';
   import { collectionStore } from '../utils/collection';
   import type { CollectionFolder, CollectionFolderType } from '../utils/collection';
   import { binderStore } from '../utils/binders';
 
   const showFolderDialog = ref(false);
+  const showTemplateDialog = ref(false);
   const showManualCardDialog = ref(false);
   const editingFolder = ref<CollectionFolder | null>(null);
   const folderToDelete = ref<CollectionFolder | null>(null);
@@ -262,6 +338,38 @@
   ];
   const showBinderConversionWarning = ref(false);
   const pendingBinderConversion = ref<CollectionFolder | null>(null);
+  const templateSetId = ref('');
+  const templateName = ref('');
+  const templateLanguageId = ref('');
+  const templateStrongLanguage = ref(false);
+  const languageNames = new Map(getLanguages().map((language) => [language.id, language.name]));
+  const allSetOptions = getSets()
+    .map((set) => ({
+      label: `${localizedValue(set.name, 'en') ?? Object.values(set.name)[0] ?? set.id} (${set.id})`,
+      value: set.id
+    }))
+    .sort((left, right) => left.label.localeCompare(right.label));
+  const setOptions = ref([...allSetOptions]);
+
+  const selectedTemplateSet = computed(() => getSetById(templateSetId.value));
+  const templateLanguageOptions = computed(() => (selectedTemplateSet.value?.language_ids ?? []).map((id) => ({
+    label: languageNames.get(id) ?? id,
+    value: id
+  })));
+  const templateVariantCount = computed(() => getCardsBySetId(templateSetId.value)
+    .reduce((total, card) => total + card.variants.length, 0));
+
+  watch(templateSetId, () => {
+    const set = selectedTemplateSet.value;
+    if (!set) {
+      templateName.value = '';
+      templateLanguageId.value = '';
+      return;
+    }
+    const preferredLanguage = set.language_ids.includes('en') ? 'en' : set.language_ids[0] ?? '';
+    templateLanguageId.value = preferredLanguage;
+    templateName.value = `${localizedValue(set.name, preferredLanguage) ?? localizedValue(set.name, 'en') ?? set.id} Master Set`;
+  });
 
   const entryValue = (setId: string, cardId: string, variantId: string): number => {
     if (setId === 'manual-collection') {
@@ -305,6 +413,42 @@
     folderName.value = '';
     folderType.value = 'box';
     showFolderDialog.value = true;
+  };
+
+  const filterSetOptions = (value: string, update: (callback: () => void) => void): void => {
+    update(() => {
+      const query = value.trim().toLocaleLowerCase();
+      setOptions.value = query
+        ? allSetOptions.filter((option) => option.label.toLocaleLowerCase().includes(query))
+        : [...allSetOptions];
+    });
+  };
+
+  const openTemplateDialog = (): void => {
+    showFolderDialog.value = false;
+    templateSetId.value = '';
+    templateName.value = '';
+    templateLanguageId.value = '';
+    templateStrongLanguage.value = false;
+    setOptions.value = [...allSetOptions];
+    showTemplateDialog.value = true;
+  };
+
+  const createMasterSet = (): void => {
+    if (!templateSetId.value || !templateName.value.trim() || !templateLanguageId.value) return;
+    const folder = collectionStore.createFolder(templateName.value, 'binder');
+    collectionStore.addWantedEntries(getCardsBySetId(templateSetId.value).flatMap((card) =>
+      card.variants.map((variant) => ({
+        folder_id: folder.id,
+        set_id: card.set_id,
+        card_id: card.id,
+        variant_id: variant.id,
+        language_id: templateLanguageId.value,
+        quantity: 1,
+        strong_language: templateStrongLanguage.value
+      }))
+    ));
+    showTemplateDialog.value = false;
   };
 
   const openRenameFolder = (folder: CollectionFolder): void => {
