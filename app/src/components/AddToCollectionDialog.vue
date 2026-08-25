@@ -35,11 +35,25 @@
           :disable="!collectionStore.isFileConnected.value"
         />
         <q-input v-model.number="quantity" type="number" min="1" step="1" dark outlined label="Quantity" :disable="!collectionStore.isFileConnected.value" />
+        <q-select
+          v-if="pokedexRequirementOptions.length > 1"
+          v-model="pokedexRequirementId"
+          :options="pokedexRequirementOptions"
+          emit-value
+          map-options
+          dark
+          outlined
+          label="Pokédex slot fulfilled by this card"
+        />
+        <q-banner v-else-if="isPokedexFolder && pokedexRequirementOptions.length === 0" class="bg-orange-10 text-orange-2 rounded-borders">
+          This card does not satisfy the current Pokédex binder constraints. It will still be added and marked as not fitting this binder.
+        </q-banner>
       </q-card-section>
 
       <q-card-actions align="right">
         <q-btn flat label="Cancel" color="grey-4" v-close-popup />
-        <q-btn color="primary" text-color="black" label="Add cards" :disable="quantity < 1 || !collectionStore.isFileConnected.value" @click="addCards" />
+        <q-btn color="primary" text-color="black" label="Add cards"
+          :disable="quantity < 1 || !collectionStore.isFileConnected.value || (pokedexRequirementOptions.length > 1 && !pokedexRequirementId)" @click="addCards" />
       </q-card-actions>
     </q-card>
   </q-dialog>
@@ -74,8 +88,23 @@
   const folderId = ref(store.state.last_collection_folder_id);
   const condition = ref<CardCondition>('NM');
   const quantity = ref(1);
+  const pokedexRequirementId = ref('');
 
   const conditionOptions = cardConditions.map((entry) => ({ ...entry }));
+  const isPokedexFolder = computed(() => Boolean(
+    collectionStore.folders.value.find((folder) => folder.id === folderId.value)?.pokedex_config
+  ));
+  const pokedexRequirementOptions = computed(() => collectionStore.matchingPokedexRequirements({
+    folder_id: folderId.value,
+    set_id: props.setId,
+    card_id: props.cardId,
+    variant_id: props.variantId,
+    language_id: props.languageId
+  }));
+
+  watch(pokedexRequirementOptions, (options) => {
+    pokedexRequirementId.value = options.length === 1 ? options[0].value : '';
+  }, { immediate: true });
 
   watch(
     [isOpen, collectionStore.isFileConnected],
@@ -98,7 +127,9 @@
       variant_id: props.variantId,
       language_id: props.languageId,
       condition: condition.value,
-      quantity: quantity.value
+      quantity: quantity.value,
+      pokedex_requirement_id: pokedexRequirementId.value
+        || (pokedexRequirementOptions.value.length === 1 ? pokedexRequirementOptions.value[0].value : undefined)
     });
     store.commit('set_last_collection_folder_id', folderId.value);
     quantity.value = 1;

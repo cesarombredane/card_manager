@@ -27,6 +27,7 @@
             <q-btn outline color="primary" icon="settings" label="Binder settings" no-caps :disable="binder.locked_pages.length > 0" @click="openSettings">
               <q-tooltip v-if="binder.locked_pages.length">Unlock all pages before changing binder dimensions</q-tooltip>
             </q-btn>
+            <q-btn v-if="folder.pokedex_config" outline color="primary" icon="filter_alt" label="Pokédex options" no-caps @click="openPokedexOptions" />
           </div>
         </div>
 
@@ -66,13 +67,19 @@
               <q-item v-for="row in availableRows" :key="row.entry.id" dense :draggable="row.available > 0"
                 :class="{ 'text-grey-6': row.available === 0, 'cursor-grab': row.available > 0 }" @dragstart="startEntryDrag(row.entry.id, $event)">
                 <q-item-section avatar>
-                  <q-img v-if="row.card.image_url" :src="row.card.image_url" fit="contain" width="44px" height="60px" :class="{ 'wanted-image': row.entry.wanted }" />
+                  <div v-if="row.card.preview_image_urls?.length" class="binder-preview-collage" :class="{ 'wanted-image': row.entry.wanted }">
+                    <div v-for="url in row.card.preview_image_urls" :key="url"><img :src="url" alt="" /></div>
+                  </div>
+                  <q-img v-else-if="row.card.image_url" :src="row.card.image_url" fit="contain" width="44px" height="60px" :class="{ 'wanted-image': row.entry.wanted }" />
                   <q-icon v-else name="style" size="32px" />
                 </q-item-section>
                 <q-item-section>
                   <q-item-label>{{ row.card.display_name }}</q-item-label>
                   <q-item-label caption class="text-grey-4">
                     {{ row.card.set_name }} · {{ row.entry.language_id.toUpperCase() }} · {{ row.entry.condition }}
+                  </q-item-label>
+                  <q-item-label v-if="collectionStore.pokedexEntryStatus(row.entry.id)" caption class="text-negative text-weight-bold">
+                    {{ collectionStore.pokedexEntryStatus(row.entry.id) }}
                   </q-item-label>
                 </q-item-section>
                 <q-item-section side>
@@ -177,11 +184,12 @@
                     <q-icon name="style" size="30px" color="grey-5" />
                     <div class="text-caption q-mt-sm">{{ slot.content.name }}</div>
                   </div>
+                  <div v-if="slot.content.status" class="slot-status-overlay">{{ slot.content.status }}</div>
                   <q-btn v-if="!isSlotLocked(slot.index)" class="slot-remove absolute-top-right q-ma-xs" round dense size="xs" color="grey-10" icon="close"
                     @click="binderStore.setSlot(folderId, slot.index, null)">
                     <q-tooltip>Remove from binder</q-tooltip>
                   </q-btn>
-                  <q-btn v-if="!isSlotLocked(slot.index) && slot.content.wanted && slot.content.entryId" class="slot-got-it absolute-bottom q-ma-sm" color="primary" text-color="black"
+                  <q-btn v-if="!isSlotLocked(slot.index) && slot.content.wanted && slot.content.entryId && !slot.content.pokedexRequirement" class="slot-got-it absolute-bottom q-ma-sm" color="primary" text-color="black"
                     icon="check_circle" label="Got it" no-caps dense @click.stop="openGotIt(slot.index, slot.content.entryId)" />
                 </template>
                 <div v-else-if="!slot.hasDecoration" class="full-height column items-center justify-center text-grey-6">
@@ -242,6 +250,17 @@
         <q-card-actions align="right">
           <q-btn flat color="grey-4" label="Cancel" v-close-popup />
           <q-btn color="negative" :label="settingsChanged ? 'Reset and save' : 'Save'" :disable="settingsPageCount < 1 || !settingsChanged" @click="saveSettings" />
+        </q-card-actions>
+      </q-card>
+    </q-dialog>
+
+    <q-dialog v-model="showPokedexOptions">
+      <q-card class="bg-grey-10 text-white" style="width: 1200px; max-width: 96vw">
+        <q-card-section><div class="text-h6">Pokédex binder options</div></q-card-section>
+        <q-card-section><pokedex-binder-options v-model="editingPokedexConfig" /></q-card-section>
+        <q-card-actions align="right">
+          <q-btn flat color="grey-4" label="Cancel" v-close-popup />
+          <q-btn color="primary" text-color="black" label="Save and recalculate" @click="savePokedexOptions" />
         </q-card-actions>
       </q-card>
     </q-dialog>
@@ -549,6 +568,9 @@
   import { downloadBinderImagesPdf } from '../utils/binderImagesPdf';
   import { generateMichiLayout } from '../utils/michiOrganizer';
   import type { MichiLayoutProposal, MichiMode } from '../utils/michiOrganizer';
+  import PokedexBinderOptions from '../components/PokedexBinderOptions.vue';
+  import type { PokedexBinderConfig } from '../utils/pokedexBinder';
+  import { copyPokedexBinderConfig, pokedexPlaceholderCard } from '../utils/pokedexBinder';
 
   type BinderRow = {
     entry: CollectionEntry;
@@ -575,6 +597,8 @@
     folder.value?.type === 'binder' && binderStore.isReady.value && !binder.value
   ));
   const showSettings = ref(false);
+  const showPokedexOptions = ref(false);
+  const editingPokedexConfig = ref<PokedexBinderConfig>({} as PokedexBinderConfig);
   const showMichiDialog = ref(false);
   const michiMode = ref<MichiMode>('date');
   const michiPokedexForms = ref<'number' | 'regional'>('number');
@@ -674,6 +698,14 @@
   ));
 
   const cardForEntry = (entry: CollectionEntry): DisplayCard | null => {
+    if (entry.set_id === 'pokedex-requirement' && entry.pokedex_requirement_id) {
+      return pokedexPlaceholderCard(
+        entry.pokedex_requirement_id,
+        entry.pokedex_candidate_count ?? 0,
+        folder.value?.pokedex_config?.international_language_id ?? 'en',
+        folder.value?.pokedex_config
+      );
+    }
     if (entry.set_id === 'manual-collection') {
       const manual = collectionStore.manualCards.value.find((card) => card.id === entry.card_id);
       if (!manual) return null;
@@ -1020,18 +1052,21 @@
     imageUrl: string | null;
     wanted: boolean;
     entryId: string | null;
+    status: string | null;
+    pokedexRequirement: boolean;
   } | null => {
     if (!slotValue) return null;
     if (slotValue.startsWith('proxy:')) {
       const proxyId = slotValue.slice(6);
       const proxy = binder.value?.proxies.find((candidate) => candidate.id === proxyId);
       return proxy
-        ? { name: proxy.name, imageUrl: binderAssetUrl(proxy.id, 'proxy'), wanted: false, entryId: null }
+        ? { name: proxy.name, imageUrl: binderAssetUrl(proxy.id, 'proxy'), wanted: false, entryId: null, status: null, pokedexRequirement: false }
         : null;
     }
     const row = rows.value.find((candidate) => candidate.entry.id === slotValue);
     return row
-      ? { name: row.card.display_name, imageUrl: row.card.image_url, wanted: row.entry.wanted, entryId: row.entry.id }
+      ? { name: row.card.display_name, imageUrl: row.card.image_url, wanted: row.entry.wanted, entryId: row.entry.id,
+        status: collectionStore.pokedexEntryStatus(row.entry.id), pokedexRequirement: Boolean(row.entry.pokedex_requirement_id) }
       : null;
   };
   const slotsForSide = (sideIndex: number) => {
@@ -1126,6 +1161,15 @@
     settingsPageCount.value = binder.value.page_count;
     settingsLayout.value = binder.value.layout;
     showSettings.value = true;
+  };
+  const openPokedexOptions = (): void => {
+    if (!folder.value?.pokedex_config) return;
+    editingPokedexConfig.value = copyPokedexBinderConfig(folder.value.pokedex_config);
+    showPokedexOptions.value = true;
+  };
+  const savePokedexOptions = (): void => {
+    collectionStore.updatePokedexConfig(folderId.value, editingPokedexConfig.value);
+    showPokedexOptions.value = false;
   };
   const saveSettings = (): void => {
     if (binder.value?.locked_pages.length || !settingsChanged.value || settingsPageCount.value < 1) return;
@@ -1782,6 +1826,45 @@
 
   .wanted-image {
     filter: grayscale(1);
+  }
+
+  .binder-preview-collage {
+    display: flex;
+    width: 44px;
+    height: 60px;
+    overflow: hidden;
+  }
+
+  .binder-preview-collage > div {
+    position: relative;
+    flex: 1 1 0;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .binder-preview-collage img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .slot-status-overlay {
+    position: absolute;
+    z-index: 3;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    background: rgb(80 20 20 / 62%);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    pointer-events: none;
   }
 
   .slot-remove {

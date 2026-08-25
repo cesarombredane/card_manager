@@ -160,6 +160,11 @@
       :collection-entries="displayedRows.map((row) => row.entry)"
       :selectable="selectionMode"
       :selected-entry-ids="[...selectedEntryIds]"
+      :protected-entry-ids="displayedRows.filter((row) => row.entry.wanted && row.entry.pokedex_requirement_id).map((row) => row.entry.id)"
+      :status-overlays="Object.fromEntries(displayedRows.flatMap((row) => {
+        const status = collectionStore.pokedexEntryStatus(row.entry.id);
+        return status ? [[row.entry.id, status]] : [];
+      }))"
       @card-click="openCard"
       @edit-entry="openEditEntryById"
       @delete-entry="setEntryToDelete"
@@ -201,6 +206,18 @@
                 <q-item-label caption class="text-grey-5">
                   {{ row.entry.language_id.toUpperCase() }} · {{ row.entry.condition }}
                 </q-item-label>
+                <q-select
+                  v-if="transferPokedexOptions(row).length > 1"
+                  v-model="transferPokedexRequirements[row.entry.id]"
+                  :options="transferPokedexOptions(row)"
+                  emit-value
+                  map-options
+                  dark
+                  dense
+                  outlined
+                  class="q-mt-sm"
+                  label="Pokédex slot"
+                />
               </q-item-section>
               <q-item-section side>
                 <div v-if="row.entry.quantity > 1" class="row items-center no-wrap q-gutter-xs">
@@ -239,7 +256,7 @@
             color="primary"
             text-color="black"
             label="Move cards"
-            :disable="!transferFolderId"
+            :disable="!transferFolderId || missingTransferPokedexChoices"
             @click="confirmBulkTransfer"
           />
         </q-card-actions>
@@ -415,6 +432,7 @@
   import { downloadWantedPlaceholdersPdf } from '../utils/wantedPlaceholdersPdf';
   import { store } from '../store';
   import type { CollectionFolderFilters } from '../store';
+  import { pokedexPlaceholderCard } from '../utils/pokedexBinder';
 
   type CollectionRow = {
     entry: CollectionEntry;
@@ -439,6 +457,7 @@
   const showTransferDialog = ref(false);
   const transferFolderId = ref('');
   const transferQuantities = ref<Record<string, number>>({});
+  const transferPokedexRequirements = ref<Record<string, string>>({});
   const showBulkEditDialog = ref(false);
   const showBulkDeleteDialog = ref(false);
   const bulkEditLanguageId = ref('');
@@ -513,6 +532,15 @@
   const collectionRows = computed<CollectionRow[]>(() => collectionStore.entries.value
     .filter((entry) => entry.folder_id === folderId.value)
     .flatMap((entry): CollectionRow[] => {
+      if (entry.set_id === 'pokedex-requirement' && entry.pokedex_requirement_id) {
+        const card = pokedexPlaceholderCard(
+          entry.pokedex_requirement_id,
+          entry.pokedex_candidate_count ?? 0,
+          folder.value?.pokedex_config?.international_language_id ?? 'en',
+          folder.value?.pokedex_config
+        );
+        return card ? [{ entry, card, releaseDate: null, pokedexNumber: Number(card.number), unitPrice: null, totalValue: 0 }] : [];
+      }
       if (entry.set_id === 'manual-collection') {
         const manualCard = collectionStore.manualCards.value.find((candidate) => candidate.id === entry.card_id);
         if (!manualCard) return [];
@@ -639,7 +667,9 @@
   const folderValue = computed(() => collectionRows.value
     .filter((row) => !row.entry.wanted)
     .reduce((total, row) => total + row.totalValue, 0));
-  const displayedEntryIds = computed(() => displayedRows.value.map((row) => row.entry.id));
+  const displayedEntryIds = computed(() => displayedRows.value
+    .filter((row) => !row.entry.pokedex_requirement_id || !row.entry.wanted)
+    .map((row) => row.entry.id));
   const allDisplayedSelected = computed(() =>
     displayedEntryIds.value.length > 0
     && displayedEntryIds.value.every((entryId) => selectedEntryIds.value.has(entryId))
@@ -674,6 +704,7 @@
   };
 
   const toggleEntrySelection = (entry: CollectionEntry): void => {
+    if (entry.wanted && entry.pokedex_requirement_id) return;
     const next = new Set(selectedEntryIds.value);
     next.has(entry.id) ? next.delete(entry.id) : next.add(entry.id);
     selectedEntryIds.value = next;
@@ -694,8 +725,22 @@
     transferQuantities.value = Object.fromEntries(
       selectedTransferRows.value.map((row) => [row.entry.id, 1])
     );
+    transferPokedexRequirements.value = {};
     showTransferDialog.value = true;
   };
+
+  const transferPokedexOptions = (row: CollectionRow): Array<{ label: string; value: string; }> =>
+    collectionStore.matchingPokedexRequirements({
+      folder_id: transferFolderId.value,
+      set_id: row.entry.set_id,
+      card_id: row.entry.card_id,
+      variant_id: row.entry.variant_id,
+      language_id: row.entry.language_id
+    });
+
+  const missingTransferPokedexChoices = computed(() => selectedTransferRows.value.some((row) =>
+    transferPokedexOptions(row).length > 1 && !transferPokedexRequirements.value[row.entry.id]
+  ));
 
   const changeTransferQuantity = (entryId: string, change: number, maximum: number): void => {
     const current = transferQuantities.value[entryId] ?? 1;
@@ -710,7 +755,9 @@
         quantity: Math.min(
           row.entry.quantity,
           Math.max(1, Math.floor(Number(transferQuantities.value[row.entry.id]) || 1))
-        )
+        ),
+        pokedex_requirement_id: transferPokedexRequirements.value[row.entry.id]
+          || (transferPokedexOptions(row).length === 1 ? transferPokedexOptions(row)[0].value : undefined)
       })),
       transferFolderId.value
     );
@@ -719,6 +766,7 @@
     showTransferDialog.value = false;
     transferFolderId.value = '';
     transferQuantities.value = {};
+    transferPokedexRequirements.value = {};
   };
 
   const openBulkEditDialog = (): void => {
@@ -806,6 +854,7 @@
   };
 
   const openCard = (card: DisplayCard): void => {
+    if (card.set_id === 'pokedex-requirement') return;
     if (card.is_manual) {
       const row = collectionRows.value.find((candidate) => candidate.entry.card_id === card.card_id);
       if (row) openEditEntry(row);

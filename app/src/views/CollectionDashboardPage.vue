@@ -9,43 +9,13 @@
         </div>
       </div>
       <div class="col-auto row q-gutter-sm">
-        <q-btn
-          flat
-          color="grey-3"
-          icon="download"
-          label="Export"
-          no-caps
-          :loading="exporting"
-          @click="exportPersonalData"
-        />
-        <q-btn
-          flat
-          color="grey-3"
-          icon="upload"
-          label="Import"
-          no-caps
-          :disable="importing"
-          @click="importFileInput?.click()"
-        />
+        <q-btn flat color="grey-3" icon="download" label="Export" no-caps :loading="exporting" @click="exportPersonalData" />
+        <q-btn flat color="grey-3" icon="upload" label="Import" no-caps :disable="importing" @click="importFileInput?.click()" />
         <input ref="importFileInput" type="file" accept=".zip,application/zip" hidden @change="selectImportFile" />
-        <q-btn
-          outline
-          color="primary"
-          icon="add_photo_alternate"
-          label="Add manual card"
-          no-caps
-          :disable="!collectionStore.isFileConnected.value"
-          @click="showManualCardDialog = true"
-        />
-        <q-btn
-          color="primary"
-          text-color="black"
-          icon="create_new_folder"
-          label="New collection"
-          no-caps
-          :disable="!collectionStore.isFileConnected.value"
-          @click="openCreateFolder"
-        />
+        <q-btn outline color="primary" icon="add_photo_alternate" label="Add manual card" no-caps :disable="!collectionStore.isFileConnected.value"
+          @click="showManualCardDialog = true" />
+        <q-btn color="primary" text-color="black" icon="create_new_folder" label="New collection" no-caps :disable="!collectionStore.isFileConnected.value"
+          @click="openCreateFolder" />
       </div>
     </section>
 
@@ -61,17 +31,7 @@
 
     <section>
       <div class="row justify-end q-mb-md">
-        <q-select
-          v-model="collectionSort"
-          :options="collectionSortOptions"
-          emit-value
-          map-options
-          dark
-          dense
-          outlined
-          label="Sort collections"
-          style="width: 240px"
-        />
+        <q-select v-model="collectionSort" :options="collectionSortOptions" emit-value map-options dark dense outlined label="Sort collections" style="width: 240px" />
       </div>
 
       <div class="row q-col-gutter-lg">
@@ -82,13 +42,8 @@
             <q-badge color="grey-8">{{ boxSummaries.length }}</q-badge>
           </div>
           <div class="column q-gutter-md">
-            <collection-folder-summary-card
-              v-for="summary in boxSummaries"
-              :key="summary.folder.id"
-              v-bind="summary"
-              @settings="openRenameFolder"
-              @delete="openDeleteFolder"
-            />
+            <collection-folder-summary-card v-for="summary in boxSummaries" :key="summary.folder.id" v-bind="summary" @settings="openRenameFolder"
+              @delete="openDeleteFolder" />
             <q-banner v-if="boxSummaries.length === 0" class="bg-grey-10 text-grey-4">
               No box collections.
             </q-banner>
@@ -102,13 +57,8 @@
             <q-badge color="grey-8">{{ binderSummaries.length }}</q-badge>
           </div>
           <div class="column q-gutter-md">
-            <collection-folder-summary-card
-              v-for="summary in binderSummaries"
-              :key="summary.folder.id"
-              v-bind="summary"
-              @settings="openRenameFolder"
-              @delete="openDeleteFolder"
-            />
+            <collection-folder-summary-card v-for="summary in binderSummaries" :key="summary.folder.id" v-bind="summary" @settings="openRenameFolder"
+              @delete="openDeleteFolder" />
             <q-banner v-if="binderSummaries.length === 0" class="bg-grey-10 text-grey-4">
               No binder collections.
             </q-banner>
@@ -126,25 +76,10 @@
           <div>
             <div class="text-caption text-grey-4 q-mb-xs">Collection type</div>
             <div class="row items-center no-wrap q-gutter-sm">
-              <q-btn-toggle
-                v-model="folderType"
-                :options="folderTypeOptions"
-                color="grey-9"
-                text-color="grey-4"
-                toggle-color="primary"
-                toggle-text-color="black"
-                unelevated
-              />
-              <q-btn
-                v-if="!editingFolder && folderType === 'binder'"
-                flat
-                dense
-                color="primary"
-                icon="auto_awesome"
-                label="Create from template"
-                no-caps
-                @click="openTemplateDialog"
-              />
+              <q-btn-toggle v-model="folderType" :options="folderTypeOptions" color="grey-9" text-color="grey-4" toggle-color="primary" toggle-text-color="black"
+                unelevated />
+              <q-btn v-if="!editingFolder && folderType === 'binder'" flat dense color="primary" icon="auto_awesome" label="Create from template" no-caps
+                @click="openTemplateDialog" />
             </div>
           </div>
           <q-input v-model="folderName" dark outlined autofocus label="Collection name" @keyup.enter="saveFolder" />
@@ -157,63 +92,29 @@
     </q-dialog>
 
     <q-dialog v-model="showTemplateDialog">
-      <q-card class="bg-grey-10 text-white" style="width: 560px; max-width: 94vw">
+      <q-card class="bg-grey-10 text-white" style="width: 1200px; max-width: 96vw">
         <q-card-section>
           <div class="text-h6">Create binder from template</div>
           <div class="text-body2 text-grey-4">Build a complete wanted list automatically.</div>
         </q-card-section>
         <q-card-section class="column q-gutter-md">
-          <q-select
-            model-value="master-set"
-            :options="[{ label: 'Master Set', value: 'master-set' }]"
-            emit-value
-            map-options
-            dark
-            outlined
-            readonly
-            label="Template"
-          />
-          <q-select
-            v-model="templateSetId"
-            :options="setOptions"
-            emit-value
-            map-options
-            use-input
-            input-debounce="0"
-            dark
-            outlined
-            label="Set"
-            @filter="filterSetOptions"
-          />
+          <q-select v-model="templateMode" :options="[{ label: 'Master Set', value: 'master-set' }, { label: 'Pokédex', value: 'pokedex' }]" emit-value map-options dark
+            outlined label="Template" />
+          <q-select v-if="templateMode === 'master-set'" v-model="templateSetId" :options="setOptions" emit-value map-options use-input input-debounce="0" dark outlined
+            label="Set" @filter="filterSetOptions" />
           <q-input v-model="templateName" dark outlined label="Collection name" />
-          <q-select
-            v-model="templateLanguageId"
-            :options="templateLanguageOptions"
-            emit-value
-            map-options
-            dark
-            outlined
-            label="Preferred language"
-            :disable="templateLanguageOptions.length <= 1"
-          />
-          <q-checkbox
-            v-model="templateStrongLanguage"
-            dark
-            label="Require wanted cards to be in this exact language"
-          />
-          <q-banner v-if="templateVariantCount" class="bg-grey-9 text-grey-3 rounded-borders">
+          <pokedex-binder-options v-if="templateMode === 'pokedex'" v-model="templatePokedexConfig" class="q-ml-xs q-mt-xs" />
+          <q-select v-if="templateMode === 'master-set'" v-model="templateLanguageId" :options="templateLanguageOptions" emit-value map-options dark outlined
+            label="Preferred language" :disable="templateLanguageOptions.length <= 1" />
+          <q-checkbox v-if="templateMode === 'master-set'" v-model="templateStrongLanguage" dark label="Require wanted cards to be in this exact language" />
+          <q-banner v-if="templateMode === 'master-set' && templateVariantCount" class="bg-grey-9 text-grey-3 rounded-borders">
             {{ templateVariantCount }} card {{ templateVariantCount === 1 ? 'entry' : 'entries' }} will be added to the wanted list.
           </q-banner>
         </q-card-section>
         <q-card-actions align="right">
           <q-btn flat color="grey-4" label="Cancel" v-close-popup />
-          <q-btn
-            color="primary"
-            text-color="black"
-            label="Create Master Set"
-            :disable="!templateSetId || !templateName.trim() || !templateLanguageId"
-            @click="createMasterSet"
-          />
+          <q-btn color="primary" text-color="black" :label="templateMode === 'pokedex' ? 'Create Pokédex binder' : 'Create Master Set'"
+            :disable="!templateName.trim() || (templateMode === 'master-set' && (!templateSetId || !templateLanguageId))" @click="createTemplate" />
         </q-card-actions>
       </q-card>
     </q-dialog>
@@ -255,22 +156,11 @@
           </div>
         </q-card-section>
         <q-card-section v-if="folderDeleteEntryCount > 0 && deleteDestinationFolders.length">
-          <collection-folder-select
-            v-model="deleteDestinationFolderId"
-            :folders="deleteDestinationFolders"
-            dark
-            outlined
-            label="Move cards to"
-          />
+          <collection-folder-select v-model="deleteDestinationFolderId" :folders="deleteDestinationFolders" dark outlined label="Move cards to" />
         </q-card-section>
         <q-card-actions align="right">
           <q-btn flat color="grey-4" label="Cancel" @click="folderToDelete = null" />
-          <q-btn
-            color="negative"
-            label="Delete collection"
-            :disable="folderDeleteEntryCount > 0 && !deleteDestinationFolderId"
-            @click="confirmDeleteFolder"
-          />
+          <q-btn color="negative" label="Delete collection" :disable="folderDeleteEntryCount > 0 && !deleteDestinationFolderId" @click="confirmDeleteFolder" />
         </q-card-actions>
       </q-card>
     </q-dialog>
@@ -306,12 +196,16 @@
   import ManualCardDialog from '../components/ManualCardDialog.vue';
   import CollectionFolderSummaryCard from '../components/CollectionFolderSummaryCard.vue';
   import CollectionFolderSelect from '../components/CollectionFolderSelect.vue';
+  import PokedexBinderOptions from '../components/PokedexBinderOptions.vue';
   import { cardmarketDisplayPrice, formatEuroPrice } from '../utils/cardDisplay';
   import { getCardById, getCardsBySetId, getLanguages, getSets, getSetById } from '../utils/dataManagement';
   import { localizedValue } from '../utils/localization';
   import { collectionStore } from '../utils/collection';
   import type { CollectionFolder, CollectionFolderType } from '../utils/collection';
   import { binderStore } from '../utils/binders';
+  import { defaultPokedexConfig } from '../utils/pokedexBinder';
+  import type { PokedexBinderConfig } from '../utils/pokedexBinder';
+  import { store } from '../store';
 
   const showFolderDialog = ref(false);
   const showTemplateDialog = ref(false);
@@ -342,6 +236,8 @@
   const templateName = ref('');
   const templateLanguageId = ref('');
   const templateStrongLanguage = ref(false);
+  const templateMode = ref<'master-set' | 'pokedex'>('master-set');
+  const templatePokedexConfig = ref<PokedexBinderConfig>(defaultPokedexConfig(store.state.selected_language_id));
   const languageNames = new Map(getLanguages().map((language) => [language.id, language.name]));
   const allSetOptions = getSets()
     .map((set) => ({
@@ -369,6 +265,10 @@
     const preferredLanguage = set.language_ids.includes('en') ? 'en' : set.language_ids[0] ?? '';
     templateLanguageId.value = preferredLanguage;
     templateName.value = `${localizedValue(set.name, preferredLanguage) ?? localizedValue(set.name, 'en') ?? set.id} Master Set`;
+  });
+
+  watch(templateMode, (mode) => {
+    if (mode === 'pokedex') templateName.value = 'National Pokédex';
   });
 
   const entryValue = (setId: string, cardId: string, variantId: string): number => {
@@ -430,6 +330,8 @@
     templateName.value = '';
     templateLanguageId.value = '';
     templateStrongLanguage.value = false;
+    templateMode.value = 'master-set';
+    templatePokedexConfig.value = defaultPokedexConfig(store.state.selected_language_id);
     setOptions.value = [...allSetOptions];
     showTemplateDialog.value = true;
   };
@@ -449,6 +351,16 @@
       }))
     ));
     showTemplateDialog.value = false;
+  };
+
+  const createTemplate = (): void => {
+    if (templateMode.value === 'pokedex') {
+      if (!templateName.value.trim()) return;
+      collectionStore.createPokedexFolder(templateName.value, templatePokedexConfig.value);
+      showTemplateDialog.value = false;
+      return;
+    }
+    createMasterSet();
   };
 
   const openRenameFolder = (folder: CollectionFolder): void => {
@@ -507,7 +419,7 @@
   const confirmDeleteFolder = (): void => {
     if (folderToDelete.value) {
       const entryIds = collectionStore.entries.value
-        .filter((entry) => entry.folder_id === folderToDelete.value?.id)
+        .filter((entry) => entry.folder_id === folderToDelete.value?.id && !(entry.wanted && entry.pokedex_requirement_id))
         .map((entry) => entry.id);
       if (entryIds.length > 0) {
         if (!deleteDestinationFolderId.value) return;
@@ -521,7 +433,9 @@
   };
 
   const folderDeleteEntryCount = computed(() => folderToDelete.value
-    ? collectionStore.entries.value.filter((entry) => entry.folder_id === folderToDelete.value?.id).length
+    ? collectionStore.entries.value.filter((entry) =>
+      entry.folder_id === folderToDelete.value?.id && !(entry.wanted && entry.pokedex_requirement_id)
+    ).length
     : 0
   );
   const deleteDestinationFolders = computed(() => collectionStore.folders.value
@@ -535,7 +449,7 @@
 
   const responseError = async (response: Response, fallback: string): Promise<string> => {
     try {
-      const body = await response.json() as { error?: string };
+      const body = await response.json() as { error?: string; };
       return body.error ?? fallback;
     } catch {
       return fallback;

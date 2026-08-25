@@ -52,6 +52,7 @@ export type DisplayCard = {
   pokemon_names: string[];
   energy_costs: string[];
   image_url: string | null;
+  preview_image_urls?: string[];
   image_language_id: string | null;
   image_is_fallback: boolean;
   image_source: 'automatic' | 'manual' | null;

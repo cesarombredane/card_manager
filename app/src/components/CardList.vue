@@ -6,6 +6,8 @@
         :collection-entry="collectionEntries[index]"
         :selectable="selectable"
         :selected="collectionEntries[index] ? selectedEntryIds.includes(collectionEntries[index].id) : false"
+        :protected-entry="collectionEntries[index] ? protectedEntryIds.includes(collectionEntries[index].id) : false"
+        :status-overlay="collectionEntries[index] ? statusOverlays[collectionEntries[index].id] : undefined"
         @click="$emit('card-click', $event)"
         @add-to-collection="openCollectionDialog"
         @add-to-want-list="openWantListDialog"
@@ -49,10 +51,14 @@
     collectionEntries?: CollectionEntry[];
     selectable?: boolean;
     selectedEntryIds?: string[];
+    protectedEntryIds?: string[];
+    statusOverlays?: Record<string, string>;
   }>(), {
     collectionEntries: () => [],
     selectable: false,
-    selectedEntryIds: () => []
+    selectedEntryIds: () => [],
+    protectedEntryIds: () => [],
+    statusOverlays: () => ({})
   });
   defineEmits<{
     'card-click': [card: DisplayCard];

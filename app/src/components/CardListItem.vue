@@ -4,10 +4,10 @@
     bordered
     class="bg-grey-10 text-white no-wrap cursor-pointer q-pa-none relative-position"
     :class="{ 'selected-card': selected, 'wanted-card': collectionEntry?.wanted }"
-    @click="selectable && collectionEntry ? $emit('toggle-selection', collectionEntry) : $emit('click', card)"
+    @click="selectable && collectionEntry && !protectedEntry ? $emit('toggle-selection', collectionEntry) : $emit('click', card)"
   >
     <q-checkbox
-      v-if="selectable && collectionEntry"
+      v-if="selectable && collectionEntry && !protectedEntry"
       :model-value="selected"
       class="selection-checkbox absolute-top-left q-ma-xs"
       color="primary"
@@ -16,7 +16,12 @@
       @update:model-value="$emit('toggle-selection', collectionEntry)"
     />
     <q-responsive :ratio="cardImageRatio" class="bg-grey-9 relative-position">
-      <q-img v-if="card.image_url" :src="card.image_url" fit="contain" class="full-height">
+      <div v-if="card.preview_image_urls?.length" class="preview-collage full-height full-width">
+        <div v-for="url in card.preview_image_urls" :key="url" class="preview-slice">
+          <img :src="url" alt="" />
+        </div>
+      </div>
+      <q-img v-else-if="card.image_url" :src="card.image_url" fit="contain" class="full-height">
         <template #error>
           <div class="column items-center justify-center full-height full-width text-grey-5">
             <q-icon name="image" size="28px" />
@@ -29,7 +34,8 @@
       >
         <span>{{ card.image_language_id }} fallback scan</span>
       </div>
-      <div v-if="!card.image_url" class="column items-center justify-center full-height full-width text-grey-5">
+      <div v-if="statusOverlay" class="status-overlay"><span>{{ statusOverlay }}</span></div>
+      <div v-if="!card.image_url && !card.preview_image_urls?.length" class="column items-center justify-center full-height full-width text-grey-5">
         <q-icon name="image" size="28px" />
       </div>
     </q-responsive>
@@ -82,7 +88,7 @@
         </q-badge>
       </div>
       <div v-if="!selectable" class="row items-center no-wrap q-mt-xs">
-        <template v-if="collectionEntry">
+        <template v-if="collectionEntry && !protectedEntry">
           <q-btn
             class="col"
             dense
@@ -104,7 +110,7 @@
             <q-tooltip>Remove from {{ collectionEntry.wanted ? 'want list' : 'collection' }}</q-tooltip>
           </q-btn>
         </template>
-        <template v-else>
+        <template v-else-if="!collectionEntry">
           <q-btn
             class="col"
             dense
@@ -147,9 +153,13 @@
     collectionEntry?: CollectionEntry;
     selectable?: boolean;
     selected?: boolean;
+    protectedEntry?: boolean;
+    statusOverlay?: string;
   }>(), {
     selectable: false,
-    selected: false
+    selected: false,
+    protectedEntry: false,
+    statusOverlay: ''
   });
   defineEmits<{
     click: [card: DisplayCard];
@@ -215,5 +225,47 @@
     border: 1px solid rgb(255 255 255 / 18%);
     border-radius: 5px;
     background: rgb(24 24 24 / 64%);
+  }
+
+  .preview-collage {
+    display: flex;
+    overflow: hidden;
+  }
+
+  .preview-slice {
+    position: relative;
+    flex: 1 1 0;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .preview-slice img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .status-overlay {
+    position: absolute;
+    z-index: 4;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(80 20 20 / 62%);
+    pointer-events: none;
+  }
+
+  .status-overlay span {
+    padding: 6px 10px;
+    border-radius: 6px;
+    background: rgb(20 20 20 / 88%);
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
   }
 </style>
