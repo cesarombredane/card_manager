@@ -41,6 +41,7 @@ export type DisplayCard = {
   set_name: string | null;
   language_id: string;
   variant_id: string;
+  variant_type?: string;
   number: string;
   display_name: string;
   category: string;
@@ -94,6 +95,7 @@ export const buildDisplayCard = (
     set_name: setName,
     language_id: languageId,
     variant_id: variant.id,
+    variant_type: variant.type ?? variant.id.split('-')[0],
     number: card.number,
     display_name: `${cardName}${variantSuffix}`,
     category: card.category,

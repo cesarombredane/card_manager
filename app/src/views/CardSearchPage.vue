@@ -81,6 +81,20 @@
           </q-select>
         </div>
         <div class="col-12 col-sm-6 col-md-4">
+          <q-select v-model="selectedVariantTypes" :display-value="variantSelectionLabel" :options="variantOptions" dark dense outlined multiple
+            emit-value map-options options-selected-class="text-primary" label="Variants">
+            <template #append>
+              <q-btn aria-label="Select all variants" :disable="selectedVariantTypes.length === variantOptions.length" dense flat round icon="select_all"
+                @click.stop="selectAllVariants">
+                <q-tooltip>Select all variants</q-tooltip>
+              </q-btn>
+              <q-btn aria-label="Clear all variants" :disable="selectedVariantTypes.length === 0" dense flat round icon="deselect" @click.stop="clearVariants">
+                <q-tooltip>Clear all variants</q-tooltip>
+              </q-btn>
+            </template>
+          </q-select>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4">
           <q-select v-model="selectedArtist" :options="filteredArtistOptions" dark dense outlined clearable use-input input-debounce="0" label="Artist"
             @filter="filterArtists" />
         </div>
@@ -190,6 +204,14 @@
   // Every rarity represented in the local card catalog.
   const rarityOptions: string[] = uniqueValues(cards.map((card) => card.rarity));
 
+  // Every broad physical variant type represented in the card catalog.
+  const variantTypes: string[] = uniqueValues(cards.flatMap((card) => card.variants
+    .map((variant) => variant.type ?? variant.id.split('-')[0])));
+  const variantOptions: { label: string; value: string; }[] = variantTypes.map((variantType) => ({
+    label: variantType.replaceAll('_', ' ').replace(/\b\w/g, (character) => character.toUpperCase()),
+    value: variantType
+  }));
+
   // Region choices for the complete catalog, International sets, or Asian sets.
   const regionOptions: { label: string; value: CardSearchRegion; }[] = [
     { label: 'Both', value: 'all' },
@@ -273,6 +295,11 @@
         || item.region_id === (selectedRegion.value === 'asia' ? 'ASIA' : 'INTL'));
     }));
 
+  // Broad physical variant types included in results.
+  const selectedVariantTypes = ref<string[]>(storedFilters.variant_types
+    ? storedFilters.variant_types.filter((variantType) => variantTypes.includes(variantType))
+    : [...variantTypes]);
+
   // Whether the secondary search controls are visible.
   const advancedFiltersOpen = ref<boolean>(storedFilters.advanced_filters_open);
 
@@ -350,6 +377,13 @@
     return `${selectedSeriesIds.value.length} series selected`;
   });
 
+  // Compact summary shown by the variant-type multi-select.
+  const variantSelectionLabel = computed<string>(() => {
+    if (selectedVariantTypes.value.length === variantOptions.length) return 'All variants';
+    if (selectedVariantTypes.value.length === 0) return 'No variants';
+    return `${selectedVariantTypes.value.length} variants selected`;
+  });
+
   // Selected catalog ids, broadened to requested forms sharing the same Pokedex number.
   const selectedPokemonIds = computed<globalThis.Set<string>>(() => {
     if (!selectedPokemon.value) return new Set();
@@ -402,6 +436,7 @@
         set_name: manualCard.set_name || null,
         language_id: entry.language_id,
         variant_id: entry.variant_id,
+        variant_type: entry.variant_id.split('-')[0],
         number: manualCard.number || '?',
         display_name: manualCard.name,
         category: manualCard.category,
@@ -442,6 +477,7 @@
         || card.is_manual
         || (selectedRegion.value === 'asia' ? asiaSetIds.has(card.set_id) : !asiaSetIds.has(card.set_id)))
       .filter((card) => card.is_manual || selectedSeriesIds.value.includes(seriesIdBySetId.get(card.set_id) ?? ''))
+      .filter((card) => selectedVariantTypes.value.includes(card.variant_type ?? card.variant_id.split('-')[0]))
       .filter((card) => query === '' || card.display_name.toLowerCase().includes(query))
       .filter((card) => !selectedArtist.value || card.illustrator === selectedArtist.value)
       .filter((card) => !selectedPokemon.value || card.pokemon_names.some((pokemonId) => selectedPokemonIds.value.has(pokemonId)))
@@ -551,6 +587,7 @@
     selectedEnergy,
     setNumber,
     selectedSeriesIds,
+    selectedVariantTypes,
     selectedRarities,
     selectedSort,
     includeSpecialForms,
@@ -570,6 +607,7 @@
     selectedEnergy,
     setNumber,
     selectedSeriesIds,
+    selectedVariantTypes,
     selectedRarities,
     selectedSort,
     includeSpecialForms,
@@ -584,6 +622,7 @@
       energy: selectedEnergy.value,
       set_number: setNumber.value,
       series_ids: [...selectedSeriesIds.value],
+      variant_types: [...selectedVariantTypes.value],
       rarities: [...selectedRarities.value],
       sort: selectedSort.value,
       include_special_forms: includeSpecialForms.value,
@@ -643,6 +682,16 @@
   // Selects every series belonging to the active card region.
   const selectAllSeries = (): void => {
     selectedSeriesIds.value = availableSeriesOptions.value.map((option) => option.value);
+  };
+
+  // Deselects every broad physical card variant type.
+  const clearVariants = (): void => {
+    selectedVariantTypes.value = [];
+  };
+
+  // Selects every broad physical card variant type in the catalog.
+  const selectAllVariants = (): void => {
+    selectedVariantTypes.value = [...variantTypes];
   };
 
   // Deselects every rarity so the user can rebuild the filter from scratch.
