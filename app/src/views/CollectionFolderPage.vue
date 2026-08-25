@@ -55,6 +55,13 @@
       <div class="col-12 col-sm-6 col-md-3">
         <card-sort-selector v-model="selectedSort" />
       </div>
+      <div v-if="folder.pokedex_config && collectionTab === 'owned'" class="col-12 col-md-auto">
+        <q-toggle
+          v-model="onlyNonFitting"
+          color="primary"
+          label="Only non-fitting cards"
+        />
+      </div>
       <div class="col-12 col-md-auto">
         <q-btn color="primary" text-color="black" icon="add_photo_alternate" label="Add manual card" no-caps @click="showManualCardDialog = true" />
       </div>
@@ -67,6 +74,16 @@
           :label="binderStore.get(folderId) ? 'Open binder' : 'Create binder'"
           no-caps
           :to="`/collection/folder/${folderId}/binder`"
+        />
+      </div>
+      <div v-if="folder.pokedex_config" class="col-12 col-md-auto">
+        <q-btn
+          outline
+          color="primary"
+          icon="filter_alt"
+          label="Pokédex options"
+          no-caps
+          @click="openPokedexOptions"
         />
       </div>
       <div v-if="collectionTab === 'wanted'" class="col-12 col-md-auto">
@@ -406,6 +423,17 @@
       </q-card>
     </q-dialog>
 
+    <q-dialog v-model="showPokedexOptions">
+      <q-card class="bg-grey-10 text-white" style="width: 1200px; max-width: 96vw">
+        <q-card-section><div class="text-h6">Pokédex binder options</div></q-card-section>
+        <q-card-section><pokedex-binder-options v-model="editingPokedexConfig" /></q-card-section>
+        <q-card-actions align="right">
+          <q-btn flat color="grey-4" label="Cancel" v-close-popup />
+          <q-btn color="primary" text-color="black" label="Save and recalculate" @click="savePokedexOptions" />
+        </q-card-actions>
+      </q-card>
+    </q-dialog>
+
     <manual-card-dialog v-model="showManualCardDialog" :initial-folder-id="folderId" />
   </q-page>
 </template>
@@ -418,6 +446,7 @@
   import CardSortSelector from '../components/CardSortSelector.vue';
   import BackToTopButton from '../components/BackToTopButton.vue';
   import CollectionFolderSelect from '../components/CollectionFolderSelect.vue';
+  import PokedexBinderOptions from '../components/PokedexBinderOptions.vue';
   import { buildDisplayCard, cardmarketDisplayPrice, compareCardReleaseAndNumber, formatEuroPrice } from '../utils/cardDisplay';
   import type { DisplayCard } from '../utils/cardDisplay';
   import { getCardById, getLanguages, getPokemon, getSetById } from '../utils/dataManagement';
@@ -432,7 +461,8 @@
   import { downloadWantedPlaceholdersPdf } from '../utils/wantedPlaceholdersPdf';
   import { store } from '../store';
   import type { CollectionFolderFilters } from '../store';
-  import { pokedexPlaceholderCard } from '../utils/pokedexBinder';
+  import type { PokedexBinderConfig } from '../utils/pokedexBinder';
+  import { copyPokedexBinderConfig, pokedexPlaceholderCard } from '../utils/pokedexBinder';
 
   type CollectionRow = {
     entry: CollectionEntry;
@@ -449,6 +479,7 @@
   const search = ref(storedFilters?.search ?? '');
   const collectionTab = ref<'owned' | 'wanted'>(storedFilters?.tab ?? 'owned');
   const selectedLanguageId = ref<string | null>(storedFilters?.language_id ?? null);
+  const onlyNonFitting = ref(storedFilters?.only_non_fitting ?? false);
   const selectedSort = ref<CardSort>(storedFilters?.sort ?? 'release-desc');
   const collectionRowStep = 48;
   const visibleRowCount = ref(collectionRowStep);
@@ -463,6 +494,8 @@
   const bulkEditLanguageId = ref('');
   const entryToDelete = ref<CollectionRow | null>(null);
   const showManualCardDialog = ref(false);
+  const showPokedexOptions = ref(false);
+  const editingPokedexConfig = ref<PokedexBinderConfig>({} as PokedexBinderConfig);
   const showEditDialog = ref(false);
   const editingEntry = ref<CollectionRow | null>(null);
   const editQuantity = ref(1);
@@ -493,6 +526,15 @@
   const folder = computed<CollectionFolder | null>(() =>
     collectionStore.folders.value.find((candidate) => candidate.id === folderId.value) ?? null
   );
+  const openPokedexOptions = (): void => {
+    if (!folder.value?.pokedex_config) return;
+    editingPokedexConfig.value = copyPokedexBinderConfig(folder.value.pokedex_config);
+    showPokedexOptions.value = true;
+  };
+  const savePokedexOptions = (): void => {
+    collectionStore.updatePokedexConfig(folderId.value, editingPokedexConfig.value);
+    showPokedexOptions.value = false;
+  };
   const destinationFolders = computed(() =>
     collectionStore.folders.value.filter((candidate) => candidate.id !== folderId.value)
   );
@@ -624,6 +666,8 @@
     return activeRows.value
       .filter((row) => query === '' || row.card.display_name.toLocaleLowerCase().includes(query))
       .filter((row) => !selectedLanguageId.value || row.entry.language_id === selectedLanguageId.value)
+      .filter((row) => !onlyNonFitting.value || !folder.value?.pokedex_config || collectionTab.value !== 'owned'
+        || collectionStore.pokedexEntryStatus(row.entry.id) === 'This card no longer fits this binder')
       .sort((left, right) => {
         if (selectedSort.value === 'price-asc' || selectedSort.value === 'price-desc') {
           if (left.unitPrice === null && right.unitPrice !== null) return 1;
@@ -681,18 +725,20 @@
   watch(collectionTab, () => {
     selectedEntryIds.value = new Set();
     selectedLanguageId.value = null;
+    onlyNonFitting.value = false;
     visibleRowCount.value = collectionRowStep;
   });
-  watch([search, selectedLanguageId, selectedSort], () => {
+  watch([search, selectedLanguageId, onlyNonFitting, selectedSort], () => {
     visibleRowCount.value = collectionRowStep;
   });
-  watch([folderId, search, collectionTab, selectedLanguageId, selectedSort], () => {
+  watch([folderId, search, collectionTab, selectedLanguageId, onlyNonFitting, selectedSort], () => {
     store.commit('set_collection_folder_filters', {
       folder_id: folderId.value,
       filters: {
         search: search.value,
         tab: collectionTab.value,
         language_id: selectedLanguageId.value,
+        only_non_fitting: onlyNonFitting.value,
         sort: selectedSort.value
       } satisfies CollectionFolderFilters
     });

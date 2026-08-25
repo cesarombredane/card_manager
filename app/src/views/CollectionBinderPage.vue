@@ -27,7 +27,6 @@
             <q-btn outline color="primary" icon="settings" label="Binder settings" no-caps :disable="binder.locked_pages.length > 0" @click="openSettings">
               <q-tooltip v-if="binder.locked_pages.length">Unlock all pages before changing binder dimensions</q-tooltip>
             </q-btn>
-            <q-btn v-if="folder.pokedex_config" outline color="primary" icon="filter_alt" label="Pokédex options" no-caps @click="openPokedexOptions" />
           </div>
         </div>
 
@@ -250,17 +249,6 @@
         <q-card-actions align="right">
           <q-btn flat color="grey-4" label="Cancel" v-close-popup />
           <q-btn color="negative" :label="settingsChanged ? 'Reset and save' : 'Save'" :disable="settingsPageCount < 1 || !settingsChanged" @click="saveSettings" />
-        </q-card-actions>
-      </q-card>
-    </q-dialog>
-
-    <q-dialog v-model="showPokedexOptions">
-      <q-card class="bg-grey-10 text-white" style="width: 1200px; max-width: 96vw">
-        <q-card-section><div class="text-h6">Pokédex binder options</div></q-card-section>
-        <q-card-section><pokedex-binder-options v-model="editingPokedexConfig" /></q-card-section>
-        <q-card-actions align="right">
-          <q-btn flat color="grey-4" label="Cancel" v-close-popup />
-          <q-btn color="primary" text-color="black" label="Save and recalculate" @click="savePokedexOptions" />
         </q-card-actions>
       </q-card>
     </q-dialog>
@@ -568,9 +556,7 @@
   import { downloadBinderImagesPdf } from '../utils/binderImagesPdf';
   import { generateMichiLayout } from '../utils/michiOrganizer';
   import type { MichiLayoutProposal, MichiMode } from '../utils/michiOrganizer';
-  import PokedexBinderOptions from '../components/PokedexBinderOptions.vue';
-  import type { PokedexBinderConfig } from '../utils/pokedexBinder';
-  import { copyPokedexBinderConfig, pokedexPlaceholderCard } from '../utils/pokedexBinder';
+  import { pokedexPlaceholderCard } from '../utils/pokedexBinder';
 
   type BinderRow = {
     entry: CollectionEntry;
@@ -597,8 +583,6 @@
     folder.value?.type === 'binder' && binderStore.isReady.value && !binder.value
   ));
   const showSettings = ref(false);
-  const showPokedexOptions = ref(false);
-  const editingPokedexConfig = ref<PokedexBinderConfig>({} as PokedexBinderConfig);
   const showMichiDialog = ref(false);
   const michiMode = ref<MichiMode>('date');
   const michiPokedexForms = ref<'number' | 'regional'>('number');
@@ -1161,15 +1145,6 @@
     settingsPageCount.value = binder.value.page_count;
     settingsLayout.value = binder.value.layout;
     showSettings.value = true;
-  };
-  const openPokedexOptions = (): void => {
-    if (!folder.value?.pokedex_config) return;
-    editingPokedexConfig.value = copyPokedexBinderConfig(folder.value.pokedex_config);
-    showPokedexOptions.value = true;
-  };
-  const savePokedexOptions = (): void => {
-    collectionStore.updatePokedexConfig(folderId.value, editingPokedexConfig.value);
-    showPokedexOptions.value = false;
   };
   const saveSettings = (): void => {
     if (binder.value?.locked_pages.length || !settingsChanged.value || settingsPageCount.value < 1) return;
