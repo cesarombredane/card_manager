@@ -10,6 +10,7 @@ export type CardSearchFilters = {
   pokemon: string | null;
   energy: string | null;
   set_number: string;
+  series_ids: string[] | null;
   rarities: string[] | null;
   sort: CardSort;
   include_special_forms: boolean;
@@ -53,6 +54,7 @@ export const store = createStore<AppState>({
         pokemon: null,
         energy: null,
         set_number: '',
+        series_ids: null,
         rarities: null,
         sort: 'release-desc',
         include_special_forms: true,

@@ -47,20 +47,38 @@
     <q-slide-transition>
       <section v-show="advancedFiltersOpen" class="row q-col-gutter-md items-center q-mb-md">
         <div class="col-12">
-          <div class="text-caption text-grey-5 q-mb-xs">Card region</div>
-          <q-btn-toggle v-model="selectedRegion" :options="regionOptions" color="grey-9" text-color="grey-4" toggle-color="primary" toggle-text-color="black"
-            unelevated />
+          <div class="row no-wrap q-col-gutter-md items-start">
+            <div class="col-auto">
+              <div class="text-caption text-grey-5 q-mb-xs">Card region</div>
+              <q-btn-toggle v-model="selectedRegion" :options="regionOptions" color="grey-9" text-color="grey-4" toggle-color="primary"
+                toggle-text-color="black" unelevated />
+            </div>
+            <div class="col-auto">
+              <div class="text-caption text-grey-5 q-mb-xs">International card language</div>
+              <language-selector v-model="selectedInternationalLanguageId"
+                :language-ids="internationalLanguageIds.length ? internationalLanguageIds : allInternationalLanguageIds"
+                :disable="selectedRegion === 'asia' || internationalLanguageIds.length === 0" />
+            </div>
+            <div class="col-auto">
+              <div class="text-caption text-grey-5 q-mb-xs">Asian card language</div>
+              <language-selector v-model="selectedAsiaLanguageId" :language-ids="asiaLanguageIds.length ? asiaLanguageIds : allAsiaLanguageIds"
+                :disable="selectedRegion === 'intl' || asiaLanguageIds.length === 0" />
+            </div>
+          </div>
         </div>
-        <div class="col-auto">
-          <div class="text-caption text-grey-5 q-mb-xs">International card language</div>
-          <language-selector v-model="selectedInternationalLanguageId"
-            :language-ids="internationalLanguageIds.length ? internationalLanguageIds : allInternationalLanguageIds"
-            :disable="selectedRegion === 'asia' || internationalLanguageIds.length === 0" />
-        </div>
-        <div class="col-auto">
-          <div class="text-caption text-grey-5 q-mb-xs">Asian card language</div>
-          <language-selector v-model="selectedAsiaLanguageId" :language-ids="asiaLanguageIds.length ? asiaLanguageIds : allAsiaLanguageIds"
-            :disable="selectedRegion === 'intl' || asiaLanguageIds.length === 0" />
+        <div class="col-12 col-sm-6 col-md-4">
+          <q-select v-model="selectedSeriesIds" :display-value="seriesSelectionLabel" :options="availableSeriesOptions" dark dense outlined multiple
+            emit-value map-options options-selected-class="text-primary" label="Series">
+            <template #append>
+              <q-btn aria-label="Select all series" :disable="selectedSeriesIds.length === availableSeriesOptions.length" dense flat round icon="select_all"
+                @click.stop="selectAllSeries">
+                <q-tooltip>Select all series</q-tooltip>
+              </q-btn>
+              <q-btn aria-label="Clear all series" :disable="selectedSeriesIds.length === 0" dense flat round icon="deselect" @click.stop="clearSeries">
+                <q-tooltip>Clear all series</q-tooltip>
+              </q-btn>
+            </template>
+          </q-select>
         </div>
         <div class="col-12 col-sm-6 col-md-4">
           <q-select v-model="selectedArtist" :options="filteredArtistOptions" dark dense outlined clearable use-input input-debounce="0" label="Artist"
@@ -84,7 +102,7 @@
           <q-select v-model="selectedEnergy" :options="energyOptions" dark dense outlined clearable label="Pokémon energy" />
         </div>
         <div class="col-12 col-sm-6 col-md-4">
-          <q-input v-model="setNumber" dark dense outlined clearable label="Set number" hint="For example: 25 or TG01" @clear="setNumber = ''" />
+          <q-input v-model="setNumber" dark dense outlined clearable label="Set number" @clear="setNumber = ''" />
         </div>
         <div class="col-12 col-sm-6 col-md-4">
           <card-sort-selector v-model="selectedSort" />
@@ -121,11 +139,11 @@
   import BackToTopButton from '../components/BackToTopButton.vue';
 
   // import utils
-  import { getCards, getPokemon, getSetById, getSets } from '../utils/dataManagement';
+  import { getCards, getPokemon, getSeries, getSetById, getSets } from '../utils/dataManagement';
   import { buildDisplayCard, cardmarketDisplayPrice, compareCardReleaseAndNumber } from '../utils/cardDisplay';
   import type { DisplayCard } from '../utils/cardDisplay';
   import { localizedValue } from '../utils/localization';
-  import type { Card, Pokemon, Set } from '../utils/types';
+  import type { Card, Pokemon, Series, Set } from '../utils/types';
   import { uniqueValues } from '../utils/arrayUtils';
   import type { AppState, CardSearchFilters, CardSearchRegion } from '../store';
   import type { CardSort } from '../utils/cardSorting';
@@ -151,6 +169,9 @@
 
   // Every set in the local data catalog.
   const sets: Set[] = getSets();
+
+  // Every release series in the local data catalog.
+  const series: Series[] = getSeries();
 
   // Every card in the local data catalog.
   const cards: Card[] = getCards();
@@ -178,6 +199,7 @@
 
   // Release dates indexed once for efficient card sorting.
   const setReleaseDates = new Map<string, string>(sets.map((set) => [set.id, set.release_date]));
+  const seriesIdBySetId = new Map<string, string>(sets.map((set) => [set.id, set.series_id]));
   const asiaSetIds = new globalThis.Set<string>(
     sets.filter((set) => set.series_id.startsWith('asia-')).map((set) => set.id)
   );
@@ -243,6 +265,14 @@
   // Catalog region currently included in results.
   const selectedRegion = ref<CardSearchRegion>(storedFilters.region);
 
+  // Series included in results, initially every series belonging to the active region.
+  const selectedSeriesIds = ref<string[]>((storedFilters.series_ids ?? series.map((item) => item.id))
+    .filter((seriesId) => {
+      const item = series.find((candidate) => candidate.id === seriesId);
+      return item && (selectedRegion.value === 'all'
+        || item.region_id === (selectedRegion.value === 'asia' ? 'ASIA' : 'INTL'));
+    }));
+
   // Whether the secondary search controls are visible.
   const advancedFiltersOpen = ref<boolean>(storedFilters.advanced_filters_open);
 
@@ -259,6 +289,13 @@
   /* computed vars */
   // Artist filter options found across every card.
   const artistOptions = computed<string[]>(() => uniqueValues(cards.map((card) => card.illustrator ?? '')));
+
+  // Series choices belonging to the currently selected card region.
+  const availableSeriesOptions = computed<{ label: string; value: string; }[]>(() => series
+    .filter((item) => selectedRegion.value === 'all'
+      || item.region_id === (selectedRegion.value === 'asia' ? 'ASIA' : 'INTL'))
+    .sort((a, b) => b.start_date.localeCompare(a.start_date))
+    .map((item) => ({ label: item.name, value: item.id })));
 
   // Energy/type options represented by Pokemon cards in the catalog.
   const energyOptions: string[] = uniqueValues(
@@ -304,6 +341,13 @@
     if (selectedRarities.value.length === rarityOptions.length) return 'All rarities';
     if (selectedRarities.value.length === 0) return 'No rarities';
     return `${selectedRarities.value.length} rarities selected`;
+  });
+
+  // Compact summary shown by the series multi-select.
+  const seriesSelectionLabel = computed<string>(() => {
+    if (selectedSeriesIds.value.length === availableSeriesOptions.value.length) return 'All series';
+    if (selectedSeriesIds.value.length === 0) return 'No series';
+    return `${selectedSeriesIds.value.length} series selected`;
   });
 
   // Selected catalog ids, broadened to requested forms sharing the same Pokedex number.
@@ -397,6 +441,7 @@
       .filter((card) => selectedRegion.value === 'all'
         || card.is_manual
         || (selectedRegion.value === 'asia' ? asiaSetIds.has(card.set_id) : !asiaSetIds.has(card.set_id)))
+      .filter((card) => card.is_manual || selectedSeriesIds.value.includes(seriesIdBySetId.get(card.set_id) ?? ''))
       .filter((card) => query === '' || card.display_name.toLowerCase().includes(query))
       .filter((card) => !selectedArtist.value || card.illustrator === selectedArtist.value)
       .filter((card) => !selectedPokemon.value || card.pokemon_names.some((pokemonId) => selectedPokemonIds.value.has(pokemonId)))
@@ -471,6 +516,11 @@
 
 
   /* watchers */
+  // A region change exposes and selects exactly the series belonging to that region.
+  watch(selectedRegion, (): void => {
+    selectedSeriesIds.value = availableSeriesOptions.value.map((option) => option.value);
+  });
+
   // Keeps route-driven filters in sync if the user opens a new search link while already on this page.
   watch(() => route.query, (): void => {
     selectedArtist.value = queryValue('artist');
@@ -500,6 +550,7 @@
     selectedPokemon,
     selectedEnergy,
     setNumber,
+    selectedSeriesIds,
     selectedRarities,
     selectedSort,
     includeSpecialForms,
@@ -518,6 +569,7 @@
     selectedPokemon,
     selectedEnergy,
     setNumber,
+    selectedSeriesIds,
     selectedRarities,
     selectedSort,
     includeSpecialForms,
@@ -531,6 +583,7 @@
       pokemon: selectedPokemon.value,
       energy: selectedEnergy.value,
       set_number: setNumber.value,
+      series_ids: [...selectedSeriesIds.value],
       rarities: [...selectedRarities.value],
       sort: selectedSort.value,
       include_special_forms: includeSpecialForms.value,
@@ -580,6 +633,16 @@
     // Keep the selected id-to-label mapping available after a narrowed text search.
     filteredPokemonOptions.value = pokemonOptions.value;
     selectedPokemon.value = option.value;
+  };
+
+  // Deselects every series in the active card region.
+  const clearSeries = (): void => {
+    selectedSeriesIds.value = [];
+  };
+
+  // Selects every series belonging to the active card region.
+  const selectAllSeries = (): void => {
+    selectedSeriesIds.value = availableSeriesOptions.value.map((option) => option.value);
   };
 
   // Deselects every rarity so the user can rebuild the filter from scratch.
