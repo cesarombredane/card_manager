@@ -92,7 +92,7 @@ CARD_NAME_SUFFIX_PATTERN = re.compile(
     r"(?:\s+|-)(?:ex|gx|v|vmax|vstar|break|lv\.?\s*x|star|δ)$",
     re.IGNORECASE,
 )
-APPENDED_CARD_SUFFIX_PATTERN = re.compile(r"(?:VMAX|VSTAR|GX|EX|V)$")
+APPENDED_CARD_SUFFIX_PATTERN = re.compile(r"(?:VMAX|VSTAR|GX|EX|V)$", re.IGNORECASE)
 POKEMON_OVERRIDES = {
     390: {"en": "Chimchar", "fr": "Ouisticram", "ja": "ヒコザル", "zh-CN": "小火焰猴"},
     391: {"en": "Monferno", "fr": "Chimpenfeu", "ja": "猛火猴", "zh-CN": "猛火猴"},
@@ -107,6 +107,25 @@ POKEMON_OVERRIDES = {
     904: {"en": "Overqwil", "fr": "Qwilpik", "ja": "ハリーマン", "zh-CN": "万针鱼"},
     980: {"en": "Clodsire", "fr": "Terraiste", "ja": "ドオー", "zh-CN": "土王"},
 }
+# Last-resort corrections for cards whose upstream metadata and localized names
+# cannot identify one Pokemon unambiguously. Values must be pokemon.json ids.
+CARD_POKEMON_OVERRIDES: dict[str, list[str]] = {}
+
+OWNED_POKEMON_PREFIX_PATTERNS = (
+    re.compile(r"^.+?[’']s\s+", re.IGNORECASE),
+    re.compile(r"^.+?の\s*"),
+    re.compile(r"^.+?的\s*"),
+    re.compile(r"^.+?ของ\s*"),
+)
+LOCALIZED_CARD_DECORATION_PATTERNS = (
+    re.compile(r"^(?:Radiant|Shining)\s+", re.IGNORECASE),
+    re.compile(r"^(?:かがやく|光輝|闪耀|閃耀)\s*"),
+)
+FORM_MARKER_PATTERN = re.compile(
+    r"(?:^|\s)(?:M|Mega|Alolan|Galarian|Hisuian|Paldean)(?:\s|$)|"
+    r"(?:メガ|アローラ|ガラル|ヒスイ|パルデア|阿羅拉|伽勒爾|洗翠|帕底亞|帕底亚)",
+    re.IGNORECASE,
+)
 
 
 def strip_comments(source: str) -> str:
@@ -368,6 +387,74 @@ def normalize_pokemon_name(value: str) -> str:
     return normalized
 
 
+def pokemon_name_candidates(value: str) -> list[str]:
+    """Return conservative name variants, from least to most transformed."""
+    normalized = normalize_pokemon_name(value)
+    undecorated = normalized
+    for pattern in LOCALIZED_CARD_DECORATION_PATTERNS:
+        undecorated = pattern.sub("", undecorated).strip()
+    unowned = undecorated
+    for pattern in OWNED_POKEMON_PREFIX_PATTERNS:
+        candidate = pattern.sub("", undecorated, count=1).strip()
+        if candidate != undecorated:
+            unowned = candidate
+            break
+    return [normalized, undecorated, unowned]
+
+
+def resolve_pokemon_ids(
+    card_id: str,
+    category: str,
+    dex_ids: list[Any],
+    localized_name: dict[str, str],
+    pokemon_aliases: dict[tuple[int, str, str], str],
+    pokemon_name_aliases: dict[tuple[str, str], set[str]],
+) -> tuple[list[str], str]:
+    """Resolve Pokemon ids without guessing when localized names disagree."""
+    if category != "pokemon":
+        return [], "not-pokemon"
+
+    resolved: list[str] = []
+    if dex_ids:
+        for dex_id_value in dex_ids:
+            dex_id = int(dex_id_value)
+            matches = {
+                match
+                for language_id, name in localized_name.items()
+                for candidate in pokemon_name_candidates(name)
+                if (match := pokemon_aliases.get((dex_id, language_id, candidate.casefold())))
+            }
+            if len(matches) > 1:
+                override = CARD_POKEMON_OVERRIDES.get(card_id)
+                return (list(dict.fromkeys(override)), "override") if override else ([], "ambiguous")
+            if len(matches) == 1:
+                resolved.append(next(iter(matches)))
+            elif any(FORM_MARKER_PATTERN.search(name) for name in localized_name.values()):
+                override = CARD_POKEMON_OVERRIDES.get(card_id)
+                return (list(dict.fromkeys(override)), "override") if override else ([], "unmapped")
+            else:
+                resolved.append(pokemon_entry_id(dex_id, "base"))
+        return list(dict.fromkeys(resolved)), "upstream-dex"
+
+    ambiguous = False
+    for candidate_index, stage in ((0, "exact-name"), (1, "normalized-name"), (2, "owned-name")):
+        matches = {
+            entry_id
+            for language_id, name in localized_name.items()
+            for candidate in pokemon_name_candidates(name)[candidate_index:candidate_index + 1]
+            for entry_id in pokemon_name_aliases.get((language_id, candidate.casefold()), set())
+        }
+        if len(matches) == 1:
+            return list(matches), stage
+        if len(matches) > 1:
+            ambiguous = True
+
+    override = CARD_POKEMON_OVERRIDES.get(card_id)
+    if override:
+        return list(dict.fromkeys(override)), "override"
+    return [], "ambiguous" if ambiguous else "unmapped"
+
+
 def pokemon_form_key(english_name: str) -> str:
     """Return the requested form distinction for an English Pokemon name."""
     lowered = english_name.lower()
@@ -620,6 +707,7 @@ def normalize_card(
     pokemon_name_aliases: dict[tuple[str, str], set[str]],
     cardmarket_updated_at: str,
     cardmarket_prices: dict[int, dict[str, Any]],
+    mapping_diagnostics: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     """Convert one upstream card file into the app card shape."""
     raw_card = parse_typescript_object(path)
@@ -630,30 +718,22 @@ def normalize_card(
     dex_ids = raw_card.get("dexId") or []
     if isinstance(dex_ids, int):
         dex_ids = [dex_ids]
-    pokemon_ids: list[str] = []
-    if category == "pokemon":
-        for dex_id in dex_ids:
-            matched_id = next((
-                pokemon_aliases.get((int(dex_id), language_id, normalize_pokemon_name(name).casefold()))
-                for language_id, name in localized_name.items()
-                if name and pokemon_aliases.get((int(dex_id), language_id, normalize_pokemon_name(name).casefold()))
-            ), None)
-            pokemon_ids.append(matched_id or pokemon_entry_id(int(dex_id), "base"))
-        if not dex_ids:
-            matched_ids = {
-                entry_id
-                for language_id, name in localized_name.items()
-                if name
-                for entry_id in pokemon_name_aliases.get(
-                    (language_id, normalize_pokemon_name(name).casefold()),
-                    set(),
-                )
-            }
-            if len(matched_ids) == 1:
-                pokemon_ids.extend(matched_ids)
+    card_id = f"{set_id}-{slugify(number)}"
+    pokemon_ids, mapping_status = resolve_pokemon_ids(
+        card_id,
+        category,
+        dex_ids,
+        localized_name,
+        pokemon_aliases,
+        pokemon_name_aliases,
+    )
+    if mapping_diagnostics is not None and category == "pokemon":
+        mapping_diagnostics["counts"][mapping_status] = mapping_diagnostics["counts"].get(mapping_status, 0) + 1
+        if mapping_status in {"ambiguous", "unmapped"}:
+            mapping_diagnostics[mapping_status].append({"id": card_id, "name": localized_name})
 
     card: dict[str, Any] = {
-        "id": f"{set_id}-{slugify(number)}",
+        "id": card_id,
         "set_id": set_id,
         "number": number,
         "category": category,
@@ -1064,6 +1144,7 @@ def convert_source_folder(
     pokemon_name_aliases: dict[tuple[str, str], set[str]],
     cardmarket_updated_at: str,
     cardmarket_prices: dict[int, dict[str, Any]],
+    mapping_diagnostics: dict[str, Any],
 ) -> tuple[list[dict[str, Any]], list[str]]:
     """Convert one TCGdex source folder into per-series app data."""
     source_config = SOURCE_FOLDERS[source_name]
@@ -1108,6 +1189,7 @@ def convert_source_folder(
                     pokemon_name_aliases,
                     cardmarket_updated_at,
                     cardmarket_prices,
+                    mapping_diagnostics,
                 )
                 restrict_card_languages(card, language_ids)
                 cards.append(card)
@@ -1182,6 +1264,15 @@ def build_catalog(args: argparse.Namespace, source_root: Path, commit_sha: str) 
     print("[1/3] Converting supported physical-card data")
     phase_started = time.monotonic()
     pokemon_catalog, pokemon_aliases, pokemon_name_aliases = build_pokemon_catalog(source_root)
+    pokemon_catalog_ids = {entry["id"] for entry in pokemon_catalog}
+    invalid_overrides = {
+        card_id: [pokemon_id for pokemon_id in pokemon_ids if pokemon_id not in pokemon_catalog_ids]
+        for card_id, pokemon_ids in CARD_POKEMON_OVERRIDES.items()
+        if any(pokemon_id not in pokemon_catalog_ids for pokemon_id in pokemon_ids)
+    }
+    if invalid_overrides:
+        raise ValueError(f"Card Pokemon overrides reference unknown Pokemon ids: {invalid_overrides}")
+    mapping_diagnostics: dict[str, Any] = {"counts": {}, "ambiguous": [], "unmapped": []}
     all_series: list[dict[str, Any]] = []
     all_language_ids: set[str] = set()
 
@@ -1194,6 +1285,7 @@ def build_catalog(args: argparse.Namespace, source_root: Path, commit_sha: str) 
             pokemon_name_aliases,
             cardmarket_updated_at,
             cardmarket_prices,
+            mapping_diagnostics,
         )
         all_series.extend(series_rows)
         all_language_ids.update(language_ids)
@@ -1212,10 +1304,53 @@ def build_catalog(args: argparse.Namespace, source_root: Path, commit_sha: str) 
     write_json(discovered_root / "series.json", sorted(all_series, key=lambda row: (row["region_id"], row["start_date"], row["name"])))
     write_json(discovered_root / "pokemon.json", pokemon_catalog)
     validate_generated_sets(discovered_root)
+    mapped_count = sum(
+        count for status, count in mapping_diagnostics["counts"].items()
+        if status not in {"ambiguous", "unmapped"}
+    )
+    print("\nPokemon mapping summary")
+    print(f"  Mapped:       {mapped_count}")
+    for status in ("upstream-dex", "exact-name", "normalized-name", "owned-name", "override"):
+        print(f"  {status:<13} {mapping_diagnostics['counts'].get(status, 0)}")
+    print(f"  Ambiguous:    {mapping_diagnostics['counts'].get('ambiguous', 0)}")
+    print(f"  Unmapped:     {mapping_diagnostics['counts'].get('unmapped', 0)}")
+    for status in ("ambiguous", "unmapped"):
+        if mapping_diagnostics[status]:
+            print(f"  Sample {status} cards:")
+            for card in mapping_diagnostics[status][:10]:
+                display_name = card["name"].get("en") or next(iter(card["name"].values()), "(unnamed)")
+                print(f"    {card['id']}: {display_name}")
     print(f"      Completed in {time.monotonic() - phase_started:.1f}s")
 
     existing_inventory = catalog_inventory(output_root)
     discovered_inventory = catalog_inventory(discovered_root)
+    missing_override_cards = sorted(CARD_POKEMON_OVERRIDES.keys() - discovered_inventory["cards"].keys())
+    if missing_override_cards:
+        print(f"Warning: {len(missing_override_cards)} Pokemon mapping overrides reference missing cards.", file=sys.stderr)
+    mapping_losses = [
+        card_id for card_id in existing_inventory["cards"].keys() & discovered_inventory["cards"].keys()
+        if existing_inventory["cards"][card_id].get("pokemon")
+        and not discovered_inventory["cards"][card_id].get("pokemon")
+    ]
+    if mapping_losses:
+        print(
+            f"Warning: {len(mapping_losses)} previously mapped Pokemon cards became unmapped "
+            f"(examples: {', '.join(sorted(mapping_losses)[:10])}).",
+            file=sys.stderr,
+        )
+    old_unmapped = sum(
+        row.get("category") == "pokemon" and not row.get("pokemon")
+        for row in existing_inventory["cards"].values()
+    )
+    new_unmapped = sum(
+        row.get("category") == "pokemon" and not row.get("pokemon")
+        for row in discovered_inventory["cards"].values()
+    )
+    if new_unmapped > old_unmapped:
+        print(
+            f"Warning: unmapped Pokemon cards increased from {old_unmapped} to {new_unmapped}.",
+            file=sys.stderr,
+        )
     changes = inventory_changes(existing_inventory, discovered_inventory)
     print_change_table(changes, args.overwrite)
 
