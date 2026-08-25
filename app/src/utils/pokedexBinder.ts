@@ -38,9 +38,13 @@ const pokemon = getPokemon();
 const sets = getSets();
 const cards = getCards();
 const cardBySetAndId = new Map(cards.map((card) => [`${card.set_id}:${card.id}`, card]));
+const pokemonById = new Map(pokemon.map((entry) => [entry.id, entry]));
 const basePokemonByNumber = new Map(
   pokemon.filter((entry) => entry.form === null).map((entry) => [entry.pokedex_id, entry])
 );
+const targetsCache = new Map<string, Pokemon[]>();
+const candidatesCache = new Map<string, Map<string, PokedexCandidate[]>>();
+const configCacheKey = (config: PokedexBinderConfig): string => JSON.stringify(config);
 
 export const pokedexSeriesOptions = getSeries()
   .map((item) => ({ label: item.name, value: item.id, region_id: item.region_id }));
@@ -113,10 +117,17 @@ export const pokedexPlaceholderCard = (
   };
 };
 
-export const pokedexTargets = (config: PokedexBinderConfig): Pokemon[] => pokemon
-  .filter((entry) => entry.form === null
-    || (entry.form === 'mega' ? config.include_mega_forms : config.include_regional_forms))
-  .sort((left, right) => left.pokedex_id - right.pokedex_id || left.name.localeCompare(right.name));
+export const pokedexTargets = (config: PokedexBinderConfig): Pokemon[] => {
+  const cacheKey = configCacheKey(config);
+  const cached = targetsCache.get(cacheKey);
+  if (cached) return cached;
+  const targets = pokemon
+    .filter((entry) => entry.form === null
+      || (entry.form === 'mega' ? config.include_mega_forms : config.include_regional_forms))
+    .sort((left, right) => left.pokedex_id - right.pokedex_id || left.name.localeCompare(right.name));
+  targetsCache.set(cacheKey, targets);
+  return targets;
+};
 
 const setMatches = (set: Set, config: PokedexBinderConfig): boolean => {
   const asia = set.series_id.startsWith('asia-');
@@ -135,7 +146,7 @@ const variantHasLanguage = (variant: CardVariant, set: Set, languageId: string):
 };
 
 const cardTargetIds = (card: Card, config: PokedexBinderConfig): string[] => uniqueValues((card.pokemon ?? []).flatMap((pokemonId) => {
-  const represented = pokemon.find((entry) => entry.id === pokemonId);
+  const represented = pokemonById.get(pokemonId);
   if (!represented || represented.form === null) return represented ? [represented.id] : [];
   const formIncluded = represented.form === 'mega' ? config.include_mega_forms : config.include_regional_forms;
   if (formIncluded) return [represented.id];
@@ -161,6 +172,9 @@ export const pokedexCandidates = (config: PokedexBinderConfig, targetPokemonId?:
 });
 
 export const pokedexCandidatesByTarget = (config: PokedexBinderConfig): Map<string, PokedexCandidate[]> => {
+  const cacheKey = configCacheKey(config);
+  const cached = candidatesCache.get(cacheKey);
+  if (cached) return cached;
   const targetIds = new Set(pokedexTargets(config).map((target) => target.id));
   const result = new Map<string, PokedexCandidate[]>();
   for (const card of cards) {
@@ -180,6 +194,7 @@ export const pokedexCandidatesByTarget = (config: PokedexBinderConfig): Map<stri
       }
     }
   }
+  candidatesCache.set(cacheKey, result);
   return result;
 };
 
@@ -190,7 +205,7 @@ export const matchingPokedexRequirementIds = (
   variantId: string,
   languageId: string
 ): string[] => {
-  const card = cards.find((candidate) => candidate.set_id === setId && candidate.id === cardId);
+  const card = cardBySetAndId.get(`${setId}:${cardId}`);
   const set = getSetById(setId);
   const variant = card?.variants.find((candidate) => candidate.id === variantId);
   if (!card || !set || !variant || !setMatches(set, config) || !config.rarities.includes(card.rarity)) return [];

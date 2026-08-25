@@ -186,27 +186,32 @@ const reconcilePokedexFolder = (folderId: string): void => {
   const now = new Date().toISOString();
   const targets = pokedexTargets(config);
   const targetIds = new Set(targets.map((target) => target.id));
+  const folderEntries = state.entries.filter((entry) => entry.folder_id === folderId);
+  const ownedEntries = folderEntries.filter((entry) => !entry.wanted);
+  const wantedByRequirement = new Map(
+    folderEntries
+      .filter((entry) => entry.wanted && entry.pokedex_requirement_id)
+      .map((entry) => [entry.pokedex_requirement_id as string, entry])
+  );
 
   // Transfers and legacy entries can arrive without an assignment. Resolve the
   // unambiguous cases automatically; multi-Pokémon cards still require a choice.
-  for (const entry of state.entries.filter((candidate) => candidate.folder_id === folderId && !candidate.wanted && !candidate.pokedex_requirement_id)) {
+  const fulfilledRequirements = new Set<string>();
+  for (const entry of ownedEntries) {
     if (entry.set_id === 'manual-collection') continue;
     const requirementIds = matchingPokedexRequirementIds(config, entry.set_id, entry.card_id, entry.variant_id, entry.language_id);
-    if (requirementIds.length === 1) entry.pokedex_requirement_id = requirementIds[0];
+    if (!entry.pokedex_requirement_id && requirementIds.length === 1) entry.pokedex_requirement_id = requirementIds[0];
+    if (entry.pokedex_requirement_id && requirementIds.includes(entry.pokedex_requirement_id)) {
+      fulfilledRequirements.add(entry.pokedex_requirement_id);
+    }
   }
 
   for (const target of targets) {
     const requirementId = pokedexRequirementId(target.id);
-    const fulfilled = state.entries.some((entry) =>
-      entry.folder_id === folderId && !entry.wanted && entry.pokedex_requirement_id === requirementId
-      && entry.set_id !== 'manual-collection'
-      && matchingPokedexRequirementIds(config, entry.set_id, entry.card_id, entry.variant_id, entry.language_id).includes(requirementId)
-    );
-    const existingWanted = state.entries.find((entry) =>
-      entry.folder_id === folderId && entry.wanted && entry.pokedex_requirement_id === requirementId
-    );
-    if (fulfilled) {
+    const existingWanted = wantedByRequirement.get(requirementId);
+    if (fulfilledRequirements.has(requirementId)) {
       if (existingWanted) state.entries.splice(state.entries.indexOf(existingWanted), 1);
+      wantedByRequirement.delete(requirementId);
       continue;
     }
     const candidates = candidatesByTarget.get(target.id) ?? [];
@@ -234,11 +239,11 @@ const reconcilePokedexFolder = (folderId: string): void => {
         updated_at: now
       });
     }
+    wantedByRequirement.delete(requirementId);
   }
 
-  for (const entry of [...state.entries]) {
-    if (entry.folder_id === folderId && entry.wanted && entry.pokedex_requirement_id
-      && !targetIds.has(pokemonIdFromRequirement(entry.pokedex_requirement_id))) {
+  for (const entry of wantedByRequirement.values()) {
+    if (!targetIds.has(pokemonIdFromRequirement(entry.pokedex_requirement_id as string))) {
       state.entries.splice(state.entries.indexOf(entry), 1);
     }
   }
@@ -849,12 +854,14 @@ export const collectionStore = {
 
     const now = new Date().toISOString();
     let transferred = 0;
+    const foldersToReconcile = new Set<string>([folderId]);
     for (const transfer of transfers) {
       const entry = state.entries.find((candidate) =>
         candidate.id === transfer.entryId && candidate.folder_id !== folderId
       );
       if (!entry) continue;
       const previousFolderId = entry.folder_id;
+      foldersToReconcile.add(previousFolderId);
       const automaticRequirements = !entry.wanted && destinationFolder.pokedex_config && entry.set_id !== 'manual-collection'
         ? matchingPokedexRequirementIds(
           destinationFolder.pokedex_config,
@@ -910,14 +917,16 @@ export const collectionStore = {
           });
         }
       }
-      if (!entry.wanted) {
+      if (!entry.wanted && !isPokedexFolder) {
         consumeMatchingWanted(folderId, entry.set_id, entry.card_id, entry.variant_id, entry.language_id, quantity, now);
       }
       transferred += quantity;
-      reconcilePokedexFolders(previousFolderId, folderId);
     }
 
-    if (transferred > 0) persist();
+    if (transferred > 0) {
+      reconcilePokedexFolders(...foldersToReconcile);
+      persist();
+    }
     return transferred;
   },
 

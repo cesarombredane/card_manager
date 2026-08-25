@@ -729,14 +729,17 @@
     showTransferDialog.value = true;
   };
 
-  const transferPokedexOptions = (row: CollectionRow): Array<{ label: string; value: string; }> =>
-    collectionStore.matchingPokedexRequirements({
+  const transferPokedexOptionsByEntry = computed<Record<string, Array<{ label: string; value: string; }>>>(() => Object.fromEntries(
+    selectedTransferRows.value.map((row) => [row.entry.id, collectionStore.matchingPokedexRequirements({
       folder_id: transferFolderId.value,
       set_id: row.entry.set_id,
       card_id: row.entry.card_id,
       variant_id: row.entry.variant_id,
       language_id: row.entry.language_id
-    });
+    })])
+  ));
+  const transferPokedexOptions = (row: CollectionRow): Array<{ label: string; value: string; }> =>
+    transferPokedexOptionsByEntry.value[row.entry.id] ?? [];
 
   const missingTransferPokedexChoices = computed(() => selectedTransferRows.value.some((row) =>
     transferPokedexOptions(row).length > 1 && !transferPokedexRequirements.value[row.entry.id]
