@@ -121,11 +121,13 @@ LOCALIZED_CARD_DECORATION_PATTERNS = (
     re.compile(r"^(?:Radiant|Shining)\s+", re.IGNORECASE),
     re.compile(r"^(?:かがやく|光輝|闪耀|閃耀)\s*"),
 )
-FORM_MARKER_PATTERN = re.compile(
-    r"(?:^|\s)(?:M|Mega|Alolan|Galarian|Hisuian|Paldean)(?:\s|$)|"
-    r"(?:メガ|アローラ|ガラル|ヒスイ|パルデア|阿羅拉|伽勒爾|洗翠|帕底亞|帕底亚)",
-    re.IGNORECASE,
-)
+FORM_MARKERS = {
+    "mega": ("mega", "メガ", "超級", "超级", "메가"),
+    "alolan": ("alolan", "alola", "アローラ", "阿羅拉", "阿罗拉", "알로라"),
+    "galarian": ("galarian", "galar", "ガラル", "伽勒爾", "伽勒尔", "가라르"),
+    "hisuian": ("hisuian", "hisui", "ヒスイ", "洗翠", "히스이"),
+    "paldean": ("paldean", "paldea", "パルデア", "帕底亞", "帕底亚", "팔데아"),
+}
 
 
 def strip_comments(source: str) -> str:
@@ -425,11 +427,16 @@ def resolve_pokemon_ids(
                 if (match := pokemon_aliases.get((dex_id, language_id, candidate.casefold())))
             }
             if len(matches) > 1:
+                base_id = pokemon_entry_id(dex_id, "base")
+                non_base_matches = matches - {base_id}
+                if localized_form_type(localized_name) != "base" and len(non_base_matches) == 1:
+                    resolved.append(next(iter(non_base_matches)))
+                    continue
                 override = CARD_POKEMON_OVERRIDES.get(card_id)
                 return (list(dict.fromkeys(override)), "override") if override else ([], "ambiguous")
             if len(matches) == 1:
                 resolved.append(next(iter(matches)))
-            elif any(FORM_MARKER_PATTERN.search(name) for name in localized_name.values()):
+            elif localized_form_type(localized_name) != "base":
                 override = CARD_POKEMON_OVERRIDES.get(card_id)
                 return (list(dict.fromkeys(override)), "override") if override else ([], "unmapped")
             else:
@@ -463,6 +470,19 @@ def pokemon_form_key(english_name: str) -> str:
     for prefix in REGIONAL_PREFIXES:
         if lowered.startswith(prefix):
             return prefix.strip() + "-" + slugify(english_name[len(prefix):])
+    return "base"
+
+
+def localized_form_type(names: dict[str, str]) -> str:
+    """Detect a supported Pokemon form marker in any localized name."""
+    english_name = names.get("en", "")
+    english_key = pokemon_form_key(english_name) if english_name else "base"
+    if english_key != "base":
+        return english_key.split("-", 1)[0]
+    normalized_names = [name.casefold() for name in names.values()]
+    for form_type, markers in FORM_MARKERS.items():
+        if any(marker.casefold() in name for marker in markers for name in normalized_names):
+            return form_type
     return "base"
 
 
@@ -505,12 +525,33 @@ def build_pokemon_catalog(
                 continue
             parsed_cards.append({"dex_ids": dex_ids, "names": names})
 
-            english_name = names.get("en", "")
-            form_key = pokemon_form_key(english_name) if english_name else "base"
-            for dex_id in dex_ids:
-                group = groups.setdefault((int(dex_id), form_key), {})
-                for language_id, name in names.items():
-                    group.setdefault(language_id, set()).add(name)
+    known_form_keys: dict[tuple[int, str], set[str]] = {}
+    for card in parsed_cards:
+        english_name = card["names"].get("en", "")
+        form_key = pokemon_form_key(english_name) if english_name else "base"
+        if form_key == "base":
+            continue
+        for dex_id in card["dex_ids"]:
+            known_form_keys.setdefault((int(dex_id), form_key.split("-", 1)[0]), set()).add(form_key)
+
+    for card in parsed_cards:
+        names = card["names"]
+        english_name = names.get("en", "")
+        form_type = localized_form_type(names)
+        for dex_id_value in card["dex_ids"]:
+            dex_id = int(dex_id_value)
+            if english_name:
+                form_key = pokemon_form_key(english_name)
+            elif form_type == "base":
+                form_key = "base"
+            else:
+                matching_keys = known_form_keys.get((dex_id, form_type), set())
+                if len(matching_keys) != 1:
+                    continue
+                form_key = next(iter(matching_keys))
+            group = groups.setdefault((dex_id, form_key), {})
+            for language_id, name in names.items():
+                group.setdefault(language_id, set()).add(name)
 
     alias_lookup: dict[tuple[int, str, str], str] = {}
     name_alias_lookup: dict[tuple[str, str], set[str]] = {}
@@ -953,6 +994,49 @@ def merge_append_only(existing_root: Path, discovered_root: Path, destination_ro
     return counts
 
 
+def preserve_image_references(existing_root: Path, generated_root: Path) -> dict[str, int]:
+    """Copy existing set and card image metadata into a regenerated catalog."""
+    existing = catalog_inventory(existing_root)
+    preserved = {"sets": 0, "variants": 0}
+    for sets_path in generated_root.glob("*/sets.json"):
+        sets = json.loads(sets_path.read_text(encoding="utf-8"))
+        sets_changed = False
+        for set_row in sets:
+            existing_set = existing["sets"].get(str(set_row["id"]))
+            if existing_set:
+                for field in ("title_image_url", "symbol_image_url"):
+                    if field in existing_set:
+                        set_row[field] = existing_set[field]
+                        sets_changed = True
+                preserved["sets"] += 1
+        if sets_changed:
+            write_json(sets_path, sets)
+
+        for set_row in sets:
+            cards_path = sets_path.parent / f"cards_{set_row['id']}.json"
+            if not cards_path.exists():
+                continue
+            cards = json.loads(cards_path.read_text(encoding="utf-8"))
+            cards_changed = False
+            for card in cards:
+                existing_card = existing["cards"].get(str(card["id"]))
+                if not existing_card:
+                    continue
+                existing_variants = {
+                    str(variant["id"]): variant for variant in existing_card.get("variants", [])
+                }
+                for variant in card.get("variants", []):
+                    existing_variant = existing_variants.get(str(variant["id"]))
+                    if existing_variant is None or "images" not in existing_variant:
+                        continue
+                    variant["images"] = json.loads(json.dumps(existing_variant["images"]))
+                    cards_changed = True
+                    preserved["variants"] += 1
+            if cards_changed:
+                write_json(cards_path, cards)
+    return preserved
+
+
 def run_command(command: list[str], cwd: Path | None = None) -> str:
     result = subprocess.run(command, cwd=cwd, check=True, text=True, capture_output=True)
     return result.stdout.strip()
@@ -1233,6 +1317,11 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Replace current catalog data with the latest filtered TCGdex data instead of appending.",
     )
+    parser.add_argument(
+        "--preserve-images",
+        action="store_true",
+        help="Keep existing set and card image references while regenerating catalog metadata.",
+    )
     return parser.parse_args()
 
 
@@ -1303,6 +1392,12 @@ def build_catalog(args: argparse.Namespace, source_root: Path, commit_sha: str) 
     write_json(discovered_root / "languages.json", languages)
     write_json(discovered_root / "series.json", sorted(all_series, key=lambda row: (row["region_id"], row["start_date"], row["name"])))
     write_json(discovered_root / "pokemon.json", pokemon_catalog)
+    if args.preserve_images:
+        preserved_images = preserve_image_references(output_root, discovered_root)
+        print(
+            f"      Preserved image references for {preserved_images['sets']} sets and "
+            f"{preserved_images['variants']} card variants"
+        )
     validate_generated_sets(discovered_root)
     mapped_count = sum(
         count for status, count in mapping_diagnostics["counts"].items()
