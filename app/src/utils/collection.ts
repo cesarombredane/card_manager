@@ -108,6 +108,38 @@ const wantedKeys = computed(() => new Set(
     .filter((entry) => entry.wanted)
     .map((entry) => `${entry.set_id}:${entry.card_id}:${entry.variant_id}:${entry.strong_language === true ? entry.language_id : '*'}`)
 ));
+const pokedexEntryStatuses = computed(() => {
+  const statuses = new Map<string, string>();
+  for (const folder of state.folders) {
+    const config = folder.pokedex_config;
+    if (!config) continue;
+    const validEntries: CollectionEntry[] = [];
+    const assignedQuantities = new Map<string, number>();
+    for (const entry of state.entries) {
+      if (entry.folder_id !== folder.id || entry.wanted) continue;
+      const requirementId = entry.pokedex_requirement_id;
+      const valid = Boolean(requirementId)
+        && entry.set_id !== 'manual-collection'
+        && matchingPokedexRequirementIds(config, entry.set_id, entry.card_id, entry.variant_id, entry.language_id)
+          .includes(requirementId as string);
+      if (!valid) {
+        statuses.set(entry.id, 'This card no longer fits this binder');
+        continue;
+      }
+      validEntries.push(entry);
+      assignedQuantities.set(
+        requirementId as string,
+        (assignedQuantities.get(requirementId as string) ?? 0) + entry.quantity
+      );
+    }
+    for (const entry of validEntries) {
+      if ((assignedQuantities.get(entry.pokedex_requirement_id as string) ?? 0) > 1) {
+        statuses.set(entry.id, 'Duplicate in this binder');
+      }
+    }
+  }
+  return statuses;
+});
 
 const consumeMatchingWanted = (
   folderId: string,
@@ -403,23 +435,7 @@ export const collectionStore = {
   },
 
   pokedexEntryStatus(entryId: string): string | null {
-    const entry = state.entries.find((candidate) => candidate.id === entryId);
-    if (!entry || entry.wanted) return null;
-    const config = state.folders.find((folder) => folder.id === entry.folder_id)?.pokedex_config;
-    if (!config) return null;
-    const valid = Boolean(entry.pokedex_requirement_id)
-      && entry.set_id !== 'manual-collection'
-      && matchingPokedexRequirementIds(config, entry.set_id, entry.card_id, entry.variant_id, entry.language_id)
-        .includes(entry.pokedex_requirement_id as string);
-    if (!valid) return 'This card no longer fits this binder';
-    const assignedQuantity = state.entries
-      .filter((candidate) => !candidate.wanted && candidate.folder_id === entry.folder_id
-        && candidate.pokedex_requirement_id === entry.pokedex_requirement_id
-        && candidate.set_id !== 'manual-collection'
-        && matchingPokedexRequirementIds(config, candidate.set_id, candidate.card_id, candidate.variant_id, candidate.language_id)
-          .includes(entry.pokedex_requirement_id as string))
-      .reduce((total, candidate) => total + candidate.quantity, 0);
-    return assignedQuantity > 1 ? 'Duplicate in this binder' : null;
+    return pokedexEntryStatuses.value.get(entryId) ?? null;
   },
 
   createFolder(name: string, type: CollectionFolderType): CollectionFolder {

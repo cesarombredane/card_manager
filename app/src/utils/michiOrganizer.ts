@@ -24,6 +24,7 @@ export type MichiOptions = {
   mode: MichiMode;
   lockedPages: number[];
   seed: number;
+  pokedexLineFocus?: boolean;
 };
 
 export type MichiOrganizerInput = {
@@ -33,7 +34,7 @@ export type MichiOrganizerInput = {
   currentImagePlacements: BinderImagePlacement[];
   cards: MichiCardInput[];
   images: MichiImageInput[];
-  pokedexSlots: Array<{ key: string; order: number; name: string }>;
+  pokedexSlots: Array<{ key: string; order: number; name: string; generation: number; lineKey?: string }>;
   options: MichiOptions;
 };
 
@@ -201,17 +202,18 @@ const chronologicalCompare = (left: CardInstance, right: CardInstance): number =
     || left.ordinal - right.ordinal;
 };
 
-const removePreservedInstances = (
+const partitionPreservedInstances = (
   instances: CardInstance[],
   preservedSlots: Array<string | null>
-): CardInstance[] => {
+): { remaining: CardInstance[]; preserved: CardInstance[] } => {
   const remaining = [...instances];
+  const preserved: CardInstance[] = [];
   for (const value of preservedSlots) {
     if (!value) continue;
     const index = remaining.findIndex((candidate) => candidate.slotValue === value);
-    if (index !== -1) remaining.splice(index, 1);
+    if (index !== -1) preserved.push(...remaining.splice(index, 1));
   }
-  return remaining;
+  return { remaining, preserved };
 };
 
 export const generateMichiLayout = async (input: MichiOrganizerInput): Promise<MichiLayoutProposal> => {
@@ -238,7 +240,7 @@ export const generateMichiLayout = async (input: MichiOrganizerInput): Promise<M
   );
   const unreadableCards = instances.filter((card) => !card.features.readable).length;
   const unreadableImages = input.images.filter((image) => !(analyzed.get(image.imageUrl)?.readable)).length;
-  if (unreadableCards || unreadableImages) {
+  if (options.mode === 'color' && (unreadableCards || unreadableImages)) {
     warnings.push(`${unreadableCards + unreadableImages} visual asset(s) could not be color-analyzed and were treated as neutral.`);
   }
 
@@ -251,10 +253,11 @@ export const generateMichiLayout = async (input: MichiOrganizerInput): Promise<M
     const start = pageIndex * sideSize;
     slots.splice(start, sideSize, ...input.currentSlots.slice(start, start + sideSize));
   }
-  let remainingCards = removePreservedInstances(
+  const preservedPartition = partitionPreservedInstances(
     instances,
     slots.filter((_slot, index) => lockedPages.has(Math.floor(index / sideSize)))
   );
+  let remainingCards = preservedPartition.remaining;
   const insertAtGroupBoundaries = (
     orderedCards: CardInstance[],
     flexibleCards: CardInstance[],
@@ -285,6 +288,9 @@ export const generateMichiLayout = async (input: MichiOrganizerInput): Promise<M
     remainingCards = insertAtGroupBoundaries(datedCards, flexibleProxies, (card) => card.groupKey);
   } else if (options.mode === 'pokedex') {
     const proxies = remainingCards.filter((card) => card.isProxy);
+    const preservedPokedexGroups = new Set(preservedPartition.preserved.flatMap((card) =>
+      card.pokedexGroupKey ? [card.pokedexGroupKey] : []
+    ));
     const cardsByGroup = new Map<string, CardInstance[]>();
     const ungroupedCards: CardInstance[] = [];
     for (const card of remainingCards.filter((candidate) => !candidate.isProxy)) {
@@ -294,31 +300,87 @@ export const generateMichiLayout = async (input: MichiOrganizerInput): Promise<M
       }
       cardsByGroup.set(card.pokedexGroupKey, [...(cardsByGroup.get(card.pokedexGroupKey) ?? []), card]);
     }
-    const orderedCards = input.pokedexSlots.flatMap((slot): CardInstance[] => {
+    const orderedCards: CardInstance[] = [];
+    let previousLineKey: string | undefined;
+    let previousGeneration: number | undefined;
+    const focusedLineSizes = new Map<string, number>();
+    if (options.pokedexLineFocus) {
+      for (const slot of input.pokedexSlots) {
+        if (!slot.lineKey) continue;
+        if (!cardsByGroup.get(slot.key)?.length && preservedPokedexGroups.has(slot.key)) continue;
+        focusedLineSizes.set(
+          slot.lineKey,
+          (focusedLineSizes.get(slot.lineKey) ?? 0) + (cardsByGroup.get(slot.key)?.length || 1)
+        );
+      }
+    }
+    for (const slot of input.pokedexSlots) {
       const cards = cardsByGroup.get(slot.key);
-      if (cards?.length) return cards.sort(chronologicalCompare);
-      return [{
-        slotValue: null,
-        name: slot.name,
-        imageUrl: null,
-        date: null,
-        groupKey: slot.key,
-        setOrder: '',
-        undatedFlexible: false,
-        pokedexOrder: slot.order,
-        pokedexGroupKey: slot.key,
-        isProxy: false,
-        quantity: 1,
-        features: neutralFeatures,
-        ordinal: 0
-      }];
-    });
+      if (!cards?.length && preservedPokedexGroups.has(slot.key)) continue;
+      if (previousGeneration !== undefined && slot.generation !== previousGeneration) {
+        while (orderedCards.length % sideSize !== 0) {
+          orderedCards.push({
+            slotValue: null,
+            name: '',
+            imageUrl: null,
+            date: null,
+            groupKey: `generation-padding:${previousGeneration}`,
+            setOrder: '',
+            undatedFlexible: false,
+            pokedexOrder: slot.order,
+            pokedexGroupKey: `generation-padding:${previousGeneration}`,
+            isProxy: false,
+            quantity: 1,
+            features: neutralFeatures,
+            ordinal: 0
+          });
+        }
+      }
+      if (options.pokedexLineFocus && previousLineKey && slot.lineKey !== previousLineKey) {
+        const usedColumns = orderedCards.length % dimension;
+        const nextLineSize = slot.lineKey ? focusedLineSizes.get(slot.lineKey) ?? 1 : 1;
+        while (usedColumns > 0 && nextLineSize > dimension - usedColumns && orderedCards.length % dimension !== 0) {
+          orderedCards.push({
+            slotValue: null,
+            name: '',
+            imageUrl: null,
+            date: null,
+            groupKey: `line-padding:${previousLineKey}`,
+            setOrder: '',
+            undatedFlexible: false,
+            pokedexOrder: slot.order,
+            pokedexGroupKey: `line-padding:${previousLineKey}`,
+            isProxy: false,
+            quantity: 1,
+            features: neutralFeatures,
+            ordinal: 0
+          });
+        }
+      }
+      orderedCards.push(...(cards?.length ? cards.sort(chronologicalCompare) : [{
+          slotValue: null,
+          name: slot.name,
+          imageUrl: null,
+          date: null,
+          groupKey: slot.key,
+          setOrder: '',
+          undatedFlexible: false,
+          pokedexOrder: slot.order,
+          pokedexGroupKey: slot.key,
+          isProxy: false,
+          quantity: 1,
+          features: neutralFeatures,
+          ordinal: 0
+        }]));
+      previousLineKey = slot.lineKey;
+      previousGeneration = slot.generation;
+    }
+    const oversizedLines = [...focusedLineSizes.values()].filter((size) => size > dimension).length;
+    if (oversizedLines) {
+      warnings.push(`${oversizedLines} evolution line(s) contain more than ${dimension} cards and continue on the next row.`);
+    }
     orderedCards.push(...ungroupedCards.sort(chronologicalCompare));
-    remainingCards = insertAtGroupBoundaries(
-      orderedCards,
-      proxies,
-      (card) => card.pokedexGroupKey ?? `other:${card.groupKey}`
-    );
+    remainingCards = [...orderedCards, ...proxies];
   } else {
     remainingCards.sort((left, right) => left.features.hue - right.features.hue
       || left.features.lab[0] - right.features.lab[0]

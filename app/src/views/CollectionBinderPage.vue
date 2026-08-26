@@ -61,9 +61,15 @@
             <card-sort-selector v-if="selectorTab === 'collection' || selectorTab === 'wanted'" v-model="selectedCardSort" class="q-mt-sm" />
           </q-card-section>
           <q-separator dark />
-          <q-scroll-area style="height: 50vh">
-            <q-list v-if="selectorTab === 'collection' || selectorTab === 'wanted'" separator>
-              <q-item v-for="row in availableRows" :key="row.entry.id" dense :draggable="row.available > 0"
+          <q-virtual-scroll
+            v-if="selectorTab === 'collection' || selectorTab === 'wanted'"
+            v-slot="{ item: row }"
+            :items="availableRows"
+            virtual-scroll-item-size="72"
+            separator
+            style="height: 50vh"
+          >
+              <q-item :key="row.entry.id" dense :draggable="row.available > 0"
                 :class="{ 'text-grey-6': row.available === 0, 'cursor-grab': row.available > 0 }" @dragstart="startEntryDrag(row.entry.id, $event)">
                 <q-item-section avatar>
                   <div v-if="row.card.preview_image_urls?.length" class="binder-preview-collage" :class="{ 'wanted-image': row.entry.wanted }">
@@ -87,8 +93,9 @@
                   </q-badge>
                 </q-item-section>
               </q-item>
-            </q-list>
-            <q-list v-else-if="selectorTab === 'proxies'" separator>
+          </q-virtual-scroll>
+          <q-scroll-area v-else style="height: 50vh">
+            <q-list v-if="selectorTab === 'proxies'" separator>
               <q-item v-for="proxy in filteredProxies" :key="proxy.id" dense :draggable="proxyAvailable(proxy) > 0"
                 :class="{ 'text-grey-6': proxyAvailable(proxy) === 0, 'cursor-grab': proxyAvailable(proxy) > 0 }" @dragstart="startProxyDrag(proxy.id, $event)">
                 <q-item-section avatar>
@@ -265,11 +272,18 @@
         <q-card-section class="michi-dialog-body">
           <div class="michi-options">
             <q-select v-model="michiMode" :options="michiModeOptions" emit-value map-options dark outlined label="Organization" />
-            <div v-if="michiMode === 'pokedex'">
-              <div class="text-caption text-grey-4 q-mb-xs">Regional forms</div>
-              <q-option-group v-model="michiPokedexForms" :options="michiPokedexFormOptions"
-                type="radio" color="primary" dense />
-            </div>
+            <q-toggle
+              v-if="michiMode === 'pokedex'"
+              v-model="michiEvolutionOrder"
+              color="primary"
+              label="Override order with evolution line"
+            />
+            <q-toggle
+              v-if="michiMode === 'pokedex' && michiEvolutionOrder && binderColumns >= 3"
+              v-model="michiLineFocus"
+              color="primary"
+              label="Per-line focus"
+            />
             <q-input v-model.number="michiSeed" type="number" dark outlined label="Variation seed" />
             <q-btn color="primary" text-color="black" icon="auto_awesome" label="Generate preview"
               :loading="michiGenerating" @click="generateMichiProposal()" />
@@ -541,7 +555,7 @@
   import { computed, nextTick, ref, watch, watchEffect } from 'vue';
   import { useRoute } from 'vue-router';
   import { binderSlotsPerPage, binderStore } from '../utils/binders';
-  import type { BinderImage, BinderLayout, BinderProxy } from '../utils/binders';
+  import type { BinderImage, BinderImagePlacement, BinderLayout, BinderProxy } from '../utils/binders';
   import { cardConditions, collectionStore } from '../utils/collection';
   import type { CardCondition, CollectionEntry } from '../utils/collection';
   import { buildDisplayCard, compareCardReleaseAndNumber } from '../utils/cardDisplay';
@@ -556,7 +570,12 @@
   import { downloadBinderImagesPdf } from '../utils/binderImagesPdf';
   import { generateMichiLayout } from '../utils/michiOrganizer';
   import type { MichiLayoutProposal, MichiMode } from '../utils/michiOrganizer';
-  import { pokedexPlaceholderCard } from '../utils/pokedexBinder';
+  import {
+    groupPokemonByEvolution,
+    pokedexPlaceholderCard,
+    pokedexRequirementId,
+    pokedexTargets
+  } from '../utils/pokedexBinder';
 
   type BinderRow = {
     entry: CollectionEntry;
@@ -585,7 +604,8 @@
   const showSettings = ref(false);
   const showMichiDialog = ref(false);
   const michiMode = ref<MichiMode>('date');
-  const michiPokedexForms = ref<'number' | 'regional'>('number');
+  const michiEvolutionOrder = ref(false);
+  const michiLineFocus = ref(false);
   const michiSeed = ref(1);
   const michiGenerating = ref(false);
   const michiProposal = ref<MichiLayoutProposal | null>(null);
@@ -658,10 +678,6 @@
     { label: 'Pokédex order', value: 'pokedex' },
     { label: 'Color first', value: 'color' }
   ];
-  const michiPokedexFormOptions = [
-    { label: 'One slot per Pokédex number', value: 'number' },
-    { label: 'Separate regional forms', value: 'regional' }
-  ];
   const conditionOptions = cardConditions.map((condition) => ({ ...condition }));
   const isValidProxyDate = (value: string): boolean => {
     if (!value) return true;
@@ -674,7 +690,6 @@
     return date.getUTCFullYear() === year && date.getUTCMonth() === month - 1 && date.getUTCDate() === day;
   };
   const pokemon = getPokemon();
-  const pokemonById = new Map(pokemon.map((entry) => [entry.id, entry]));
   const pokedexByPokemonId = new Map(pokemon.map((entry) => [entry.id, entry.pokedex_id]));
   const pokedexByPokemonName = new Map(pokemon.flatMap((entry) =>
     [entry.name, ...Object.values(entry.names).filter((name): name is string => Boolean(name))]
@@ -748,6 +763,7 @@
     ...row,
     available: Math.max(0, row.entry.quantity - (usedCounts.value.get(row.entry.id) ?? 0))
   })));
+  const rowsByEntryId = computed(() => new Map(rows.value.map((row) => [row.entry.id, row])));
   const availableRows = computed(() => {
     const query = search.value.trim().toLocaleLowerCase();
     return rows.value
@@ -756,6 +772,10 @@
         !query || row.card.display_name.toLocaleLowerCase().includes(query) || row.card.set_name?.toLocaleLowerCase().includes(query)
       )
       .sort((left, right) => {
+        const leftIsPlaced = left.available === 0;
+        const rightIsPlaced = right.available === 0;
+        if (leftIsPlaced !== rightIsPlaced) return leftIsPlaced ? 1 : -1;
+
         if (selectedCardSort.value === 'pokedex-asc' || selectedCardSort.value === 'pokedex-desc') {
           if (left.pokedexNumber === null && right.pokedexNumber !== null) return 1;
           if (left.pokedexNumber !== null && right.pokedexNumber === null) return -1;
@@ -805,6 +825,15 @@
   const proxyAvailable = (proxy: BinderProxy): number =>
     Math.max(0, proxy.quantity - (usedProxyCounts.value.get(proxy.id) ?? 0));
   const placedImageIds = computed(() => new Set((binder.value?.image_placements ?? []).map((placement) => placement.image_id)));
+  const binderImagesById = computed(() => new Map((binder.value?.images ?? []).map((image) => [image.id, image])));
+  const imagePlacementsBySide = computed(() => {
+    const placements = new Map<number, BinderImagePlacement[]>();
+    for (const placement of binder.value?.image_placements ?? []) {
+      if (!placements.has(placement.side_index)) placements.set(placement.side_index, []);
+      placements.get(placement.side_index)?.push(placement);
+    }
+    return placements;
+  });
   const isPageLocked = (sideIndex: number): boolean => binder.value?.locked_pages.includes(sideIndex) ?? false;
   const isSlotLocked = (slotIndex: number): boolean => Boolean(
     binder.value && isPageLocked(Math.floor(slotIndex / binderSlotsPerPage(binder.value.layout)))
@@ -860,44 +889,57 @@
     michiError.value = null;
     showMichiDialog.value = true;
   };
-  const regionalForms = new Set(['alolan', 'galarian', 'hisuian', 'paldean']);
   const pokedexGroupKeyForRow = (row: Omit<BinderRow, 'available'>): string | null => {
+    if (folder.value?.pokedex_config) return row.entry.pokedex_requirement_id ?? null;
     if (row.pokedexNumber === null) return null;
-    if (michiPokedexForms.value === 'number') return `pokemon:${row.pokedexNumber}`;
-    const matchingPokemon = row.card.pokemon_names
-      .map((pokemonId) => pokemonById.get(pokemonId))
-      .filter((entry) => entry?.pokedex_id === row.pokedexNumber)
-      .sort((left, right) => Number(Boolean(left?.form)) - Number(Boolean(right?.form)))[0];
-    const form = matchingPokemon?.form && regionalForms.has(matchingPokemon.form)
-      ? matchingPokemon.form
-      : 'base';
-    return `pokemon:${row.pokedexNumber}:${form}`;
+    return `pokemon:${row.pokedexNumber}`;
   };
-  const michiPokedexSlots = (): Array<{ key: string; order: number; name: string }> => {
-    const slots = new Map<string, { key: string; order: number; name: string }>();
-    for (const entry of pokemon) {
-      const form = michiPokedexForms.value === 'regional' && entry.form && regionalForms.has(entry.form)
-        ? entry.form
-        : 'base';
-      const key = michiPokedexForms.value === 'number'
-        ? `pokemon:${entry.pokedex_id}`
-        : `pokemon:${entry.pokedex_id}:${form}`;
-      if (!slots.has(key)) {
-        slots.set(key, {
-          key,
-          order: entry.pokedex_id,
-          name: form === 'base' ? entry.name : `${entry.name} (${form})`
-        });
-      }
+  const pokedexGeneration = (number: number): number => {
+    const generationEnds = [151, 251, 386, 493, 649, 721, 809, 905, 1025];
+    const generationIndex = generationEnds.findIndex((end) => number <= end);
+    return generationIndex === -1 ? generationEnds.length + 1 : generationIndex + 1;
+  };
+  const michiPokedexSlots = (): Array<{ key: string; order: number; name: string; generation: number; lineKey?: string }> => {
+    const config = folder.value?.pokedex_config;
+    if (config) {
+      const targets = pokedexTargets(config);
+      const evolutionGroups = michiEvolutionOrder.value ? groupPokemonByEvolution(targets) : [];
+      const orderedTargets = evolutionGroups.length ? evolutionGroups.flat() : targets;
+      const lineKeys = new Map(
+        evolutionGroups
+          .flatMap((group, groupIndex) => group.map((entry) => [entry.id, `evolution-line:${groupIndex}`] as const))
+      );
+      const generations = new Map(evolutionGroups.flatMap((group) => {
+        const generation = pokedexGeneration(Math.min(...group.map((entry) => entry.pokedex_id)));
+        return group.map((entry) => [entry.id, generation] as const);
+      }));
+      return orderedTargets.map((entry, index) => ({
+        key: pokedexRequirementId(entry.id),
+        order: index,
+        name: entry.name,
+        generation: generations.get(entry.id) ?? pokedexGeneration(entry.pokedex_id),
+        lineKey: lineKeys.get(entry.id)
+      }));
     }
-    return [...slots.values()].sort((left, right) => {
-      const pokedexDifference = left.order - right.order;
-      if (pokedexDifference) return pokedexDifference;
-      const leftIsBase = left.key.endsWith(':base');
-      const rightIsBase = right.key.endsWith(':base');
-      if (leftIsBase !== rightIsBase) return leftIsBase ? -1 : 1;
-      return left.key.localeCompare(right.key);
-    });
+    const targets = pokemon.filter((entry) => entry.form === null);
+    const evolutionGroups = michiEvolutionOrder.value ? groupPokemonByEvolution(targets) : [];
+    const orderedTargets = evolutionGroups.length ? evolutionGroups.flat() : targets;
+    const lineKeys = new Map(
+      evolutionGroups
+        .flatMap((group, groupIndex) => group.map((entry) => [entry.id, `evolution-line:${groupIndex}`] as const))
+    );
+    const generations = new Map(evolutionGroups.flatMap((group) => {
+      const generation = pokedexGeneration(Math.min(...group.map((entry) => entry.pokedex_id)));
+      return group.map((entry) => [entry.id, generation] as const);
+    }));
+    return orderedTargets
+      .map((entry, index) => ({
+        key: `pokemon:${entry.pokedex_id}`,
+        order: index,
+        name: entry.name,
+        generation: generations.get(entry.id) ?? pokedexGeneration(entry.pokedex_id),
+        lineKey: lineKeys.get(entry.id)
+      }));
   };
   const generateMichiProposal = async (nextVariation = false): Promise<void> => {
     if (!binder.value || michiGenerating.value) return;
@@ -946,7 +988,8 @@
         options: {
           mode: michiMode.value,
           lockedPages: binder.value.locked_pages,
-          seed: Math.floor(michiSeed.value) || 1
+          seed: Math.floor(michiSeed.value) || 1,
+          pokedexLineFocus: michiLineFocus.value && binderColumns.value >= 3
         }
       });
     } catch (error) {
@@ -1047,7 +1090,7 @@
         ? { name: proxy.name, imageUrl: binderAssetUrl(proxy.id, 'proxy'), wanted: false, entryId: null, status: null, pokedexRequirement: false }
         : null;
     }
-    const row = rows.value.find((candidate) => candidate.entry.id === slotValue);
+    const row = rowsByEntryId.value.get(slotValue);
     return row
       ? { name: row.card.display_name, imageUrl: row.card.image_url, wanted: row.entry.wanted, entryId: row.entry.id,
         status: collectionStore.pokedexEntryStatus(row.entry.id), pokedexRequirement: Boolean(row.entry.pokedex_requirement_id) }
@@ -1060,9 +1103,8 @@
     return binder.value.slots.slice(start, start + count).map((entryId, offset) => {
       const rowIndex = Math.floor(offset / binderColumns.value);
       const column = offset % binderColumns.value;
-      const coveringDecorations = binder.value?.image_placements.flatMap((placement) => {
-        if (placement.side_index !== sideIndex) return [];
-        const image = binder.value?.images.find((candidate) => candidate.id === placement.image_id);
+      const coveringDecorations = (imagePlacementsBySide.value.get(sideIndex) ?? []).flatMap((placement) => {
+        const image = binderImagesById.value.get(placement.image_id);
         const coversSlot = Boolean(
           image
           && rowIndex >= placement.row
@@ -1071,7 +1113,7 @@
           && column < placement.column + image.width
         );
         return coversSlot && image ? [{ image, placement }] : [];
-      }) ?? [];
+      });
       const hasDecoration = coveringDecorations.length > 0;
       const acceptsCard = coveringDecorations.every(({ image, placement }) => {
         const relativeRow = rowIndex - placement.row;
@@ -1090,10 +1132,9 @@
   };
   const decorationsForSide = (sideIndex: number) => {
     if (!binder.value) return [];
-    return binder.value.image_placements
-      .filter((placement) => placement.side_index === sideIndex)
+    return (imagePlacementsBySide.value.get(sideIndex) ?? [])
       .flatMap((placement) => {
-        const image = binder.value?.images.find((candidate) => candidate.id === placement.image_id);
+        const image = binderImagesById.value.get(placement.image_id);
         return image ? [{ placement, image }] : [];
       });
   };

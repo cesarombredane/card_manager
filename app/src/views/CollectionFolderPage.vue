@@ -57,9 +57,16 @@
       </div>
       <div v-if="folder.pokedex_config && collectionTab === 'owned'" class="col-12 col-md-auto">
         <q-toggle
-          v-model="onlyNonFitting"
+          :model-value="onlyNonFitting"
           color="primary"
           label="Only non-fitting cards"
+          @update:model-value="setOnlyNonFitting"
+        />
+        <q-toggle
+          :model-value="onlyDuplicates"
+          color="primary"
+          label="Only duplicate cards"
+          @update:model-value="setOnlyDuplicates"
         />
       </div>
       <div v-if="folder.pokedex_config && collectionTab === 'wanted'" class="col-12 col-md-auto">
@@ -509,6 +516,7 @@
   const collectionTab = ref<'owned' | 'wanted'>(storedFilters?.tab ?? 'owned');
   const selectedLanguageId = ref<string | null>(storedFilters?.language_id ?? null);
   const onlyNonFitting = ref(storedFilters?.only_non_fitting ?? false);
+  const onlyDuplicates = ref(storedFilters?.only_duplicates ?? false);
   const onlyAvailableWanted = ref(storedFilters?.only_available_wanted ?? false);
   const selectedSort = ref<CardSort>(storedFilters?.sort ?? 'release-desc');
   const collectionRowStep = 48;
@@ -714,6 +722,8 @@
       .filter((row) => !selectedLanguageId.value || row.entry.language_id === selectedLanguageId.value)
       .filter((row) => !onlyNonFitting.value || !folder.value?.pokedex_config || collectionTab.value !== 'owned'
         || collectionStore.pokedexEntryStatus(row.entry.id) === 'This card no longer fits this binder')
+      .filter((row) => !onlyDuplicates.value || !folder.value?.pokedex_config || collectionTab.value !== 'owned'
+        || collectionStore.pokedexEntryStatus(row.entry.id) === 'Duplicate in this binder')
       .filter((row) => !onlyAvailableWanted.value || !folder.value?.pokedex_config || collectionTab.value !== 'wanted'
         || row.entry.set_id !== 'pokedex-requirement' || (row.entry.pokedex_candidate_count ?? 0) > 0)
       .sort((left, right) => {
@@ -774,12 +784,13 @@
     selectedEntryIds.value = new Set();
     selectedLanguageId.value = null;
     onlyNonFitting.value = false;
+    onlyDuplicates.value = false;
     visibleRowCount.value = collectionRowStep;
   });
-  watch([search, selectedLanguageId, onlyNonFitting, onlyAvailableWanted, selectedSort], () => {
+  watch([search, selectedLanguageId, onlyNonFitting, onlyDuplicates, onlyAvailableWanted, selectedSort], () => {
     visibleRowCount.value = collectionRowStep;
   });
-  watch([folderId, search, collectionTab, selectedLanguageId, onlyNonFitting, onlyAvailableWanted, selectedSort], () => {
+  watch([folderId, search, collectionTab, selectedLanguageId, onlyNonFitting, onlyDuplicates, onlyAvailableWanted, selectedSort], () => {
     store.commit('set_collection_folder_filters', {
       folder_id: folderId.value,
       filters: {
@@ -787,11 +798,22 @@
         tab: collectionTab.value,
         language_id: selectedLanguageId.value,
         only_non_fitting: onlyNonFitting.value,
+        only_duplicates: onlyDuplicates.value,
         only_available_wanted: onlyAvailableWanted.value,
         sort: selectedSort.value
       } satisfies CollectionFolderFilters
     });
   }, { immediate: true });
+
+  const setOnlyNonFitting = (enabled: boolean): void => {
+    onlyNonFitting.value = enabled;
+    if (enabled) onlyDuplicates.value = false;
+  };
+
+  const setOnlyDuplicates = (enabled: boolean): void => {
+    onlyDuplicates.value = enabled;
+    if (enabled) onlyNonFitting.value = false;
+  };
 
   const toggleSelectionMode = (): void => {
     selectionMode.value = !selectionMode.value;
