@@ -28,7 +28,11 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Skip image processing and preserve all existing catalog image references.",
     )
-    parser.add_argument("--skip-prices", action="store_true", help="Skip the dedicated price refresh.")
+    parser.add_argument(
+        "--skip-prices",
+        action="store_true",
+        help="Skip all price processing and preserve existing Cardmarket data.",
+    )
     parser.add_argument("--skip-validation", action="store_true", help="Skip the final app typecheck.")
     return parser.parse_args()
 
@@ -68,6 +72,8 @@ def main() -> int:
         catalog_command.append("--overwrite")
     if args.skip_images:
         catalog_command.append("--preserve-images")
+    if args.skip_prices:
+        catalog_command.append("--preserve-prices")
     stages.append(("2. Updating catalog data", catalog_command, PROJECT_ROOT))
 
     if not args.skip_prices:

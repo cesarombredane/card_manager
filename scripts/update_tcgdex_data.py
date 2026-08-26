@@ -1037,6 +1037,35 @@ def preserve_image_references(existing_root: Path, generated_root: Path) -> dict
     return preserved
 
 
+def preserve_price_data(existing_root: Path, generated_root: Path) -> int:
+    """Copy existing Cardmarket metadata into matching regenerated variants."""
+    existing_cards = catalog_inventory(existing_root)["cards"]
+    preserved = 0
+    for cards_path in generated_root.glob("*/cards_*.json"):
+        cards = json.loads(cards_path.read_text(encoding="utf-8"))
+        changed = False
+        for card in cards:
+            existing_card = existing_cards.get(str(card["id"]))
+            if not existing_card:
+                continue
+            existing_variants = {
+                str(variant["id"]): variant for variant in existing_card.get("variants", [])
+            }
+            for variant in card.get("variants", []):
+                existing_variant = existing_variants.get(str(variant["id"]))
+                if existing_variant is None:
+                    continue
+                if "cardmarket" in existing_variant:
+                    variant["cardmarket"] = json.loads(json.dumps(existing_variant["cardmarket"]))
+                else:
+                    variant.pop("cardmarket", None)
+                changed = True
+                preserved += 1
+        if changed:
+            write_json(cards_path, cards)
+    return preserved
+
+
 def run_command(command: list[str], cwd: Path | None = None) -> str:
     result = subprocess.run(command, cwd=cwd, check=True, text=True, capture_output=True)
     return result.stdout.strip()
@@ -1322,6 +1351,11 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Keep existing set and card image references while regenerating catalog metadata.",
     )
+    parser.add_argument(
+        "--preserve-prices",
+        action="store_true",
+        help="Keep existing Cardmarket data and skip downloading prices during catalog generation.",
+    )
     return parser.parse_args()
 
 
@@ -1340,15 +1374,19 @@ def build_catalog(args: argparse.Namespace, source_root: Path, commit_sha: str) 
             shutil.rmtree(temporary_root)
     discovered_root.mkdir(parents=True)
 
-    print("Loading Cardmarket price guide")
-    cache_path = project_root / "tcgdex_data" / "cardmarket-price-guide.json"
-    try:
-        price_guide = download_price_guide(cache_path)
-        cardmarket_updated_at, cardmarket_prices = index_price_guide(price_guide)
-        print(f"      Loaded {len(cardmarket_prices)} products ({cardmarket_updated_at or 'unknown date'})")
-    except Exception as error:
+    if args.preserve_prices:
         cardmarket_updated_at, cardmarket_prices = "", {}
-        print(f"      Price guide unavailable; generating links without prices: {error}", file=sys.stderr)
+        print("Skipping Cardmarket price guide and preserving existing prices")
+    else:
+        print("Loading Cardmarket price guide")
+        cache_path = project_root / "tcgdex_data" / "cardmarket-price-guide.json"
+        try:
+            price_guide = download_price_guide(cache_path)
+            cardmarket_updated_at, cardmarket_prices = index_price_guide(price_guide)
+            print(f"      Loaded {len(cardmarket_prices)} products ({cardmarket_updated_at or 'unknown date'})")
+        except Exception as error:
+            cardmarket_updated_at, cardmarket_prices = "", {}
+            print(f"      Price guide unavailable; generating links without prices: {error}", file=sys.stderr)
 
     print("[1/3] Converting supported physical-card data")
     phase_started = time.monotonic()
@@ -1398,6 +1436,9 @@ def build_catalog(args: argparse.Namespace, source_root: Path, commit_sha: str) 
             f"      Preserved image references for {preserved_images['sets']} sets and "
             f"{preserved_images['variants']} card variants"
         )
+    if args.preserve_prices:
+        preserved_prices = preserve_price_data(output_root, discovered_root)
+        print(f"      Preserved Cardmarket data for {preserved_prices} card variants")
     validate_generated_sets(discovered_root)
     mapped_count = sum(
         count for status, count in mapping_diagnostics["counts"].items()
