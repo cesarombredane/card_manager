@@ -27,6 +27,7 @@ export type CollectionFolderFilters = {
   tab: 'owned' | 'wanted';
   language_id: string | null;
   only_non_fitting?: boolean;
+  only_available_wanted?: boolean;
   sort: CardSort;
 };
 

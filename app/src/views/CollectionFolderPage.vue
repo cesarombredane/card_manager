@@ -62,6 +62,13 @@
           label="Only non-fitting cards"
         />
       </div>
+      <div v-if="folder.pokedex_config && collectionTab === 'wanted'" class="col-12 col-md-auto">
+        <q-toggle
+          v-model="onlyAvailableWanted"
+          color="primary"
+          label="Only existing cards"
+        />
+      </div>
       <div class="col-12 col-md-auto">
         <q-btn color="primary" text-color="black" icon="add_photo_alternate" label="Add manual card" no-caps @click="showManualCardDialog = true" />
       </div>
@@ -199,6 +206,23 @@
     </div>
 
     <back-to-top-button />
+
+    <q-dialog v-model="showPokedexCandidates">
+      <q-card class="bg-grey-10 text-white" style="width: 1200px; max-width: 96vw; max-height: 92vh">
+        <q-card-section class="row items-center">
+          <div>
+            <div class="text-h6">Possible cards</div>
+            <div class="text-body2 text-grey-4">{{ selectedPokedexPlaceholder?.display_name }}</div>
+          </div>
+          <q-space />
+          <q-btn flat round dense icon="close" color="grey-4" v-close-popup />
+        </q-card-section>
+        <q-separator dark />
+        <q-card-section class="scroll" style="max-height: calc(92vh - 90px)">
+          <card-list :cards="selectedPokedexCandidates" @card-click="openPokedexCandidate" />
+        </q-card-section>
+      </q-card>
+    </q-dialog>
 
     <q-dialog v-model="showTransferDialog">
       <q-card class="bg-grey-10 text-white" style="width: 480px; max-width: 94vw">
@@ -462,7 +486,12 @@
   import { store } from '../store';
   import type { CollectionFolderFilters } from '../store';
   import type { PokedexBinderConfig } from '../utils/pokedexBinder';
-  import { copyPokedexBinderConfig, pokedexPlaceholderCard } from '../utils/pokedexBinder';
+  import {
+    copyPokedexBinderConfig,
+    pokedexCandidatesByTarget,
+    pokedexPlaceholderCard,
+    pokemonIdFromRequirement
+  } from '../utils/pokedexBinder';
 
   type CollectionRow = {
     entry: CollectionEntry;
@@ -480,6 +509,7 @@
   const collectionTab = ref<'owned' | 'wanted'>(storedFilters?.tab ?? 'owned');
   const selectedLanguageId = ref<string | null>(storedFilters?.language_id ?? null);
   const onlyNonFitting = ref(storedFilters?.only_non_fitting ?? false);
+  const onlyAvailableWanted = ref(storedFilters?.only_available_wanted ?? false);
   const selectedSort = ref<CardSort>(storedFilters?.sort ?? 'release-desc');
   const collectionRowStep = 48;
   const visibleRowCount = ref(collectionRowStep);
@@ -496,6 +526,8 @@
   const showManualCardDialog = ref(false);
   const showPokedexOptions = ref(false);
   const editingPokedexConfig = ref<PokedexBinderConfig>({} as PokedexBinderConfig);
+  const showPokedexCandidates = ref(false);
+  const selectedPokedexPlaceholder = ref<DisplayCard | null>(null);
   const showEditDialog = ref(false);
   const editingEntry = ref<CollectionRow | null>(null);
   const editQuantity = ref(1);
@@ -526,6 +558,20 @@
   const folder = computed<CollectionFolder | null>(() =>
     collectionStore.folders.value.find((candidate) => candidate.id === folderId.value) ?? null
   );
+  const selectedPokedexCandidates = computed<DisplayCard[]>(() => {
+    const config = folder.value?.pokedex_config;
+    const placeholder = selectedPokedexPlaceholder.value;
+    if (!config || !placeholder || placeholder.set_id !== 'pokedex-requirement') return [];
+    const pokemonId = pokemonIdFromRequirement(placeholder.id);
+    return (pokedexCandidatesByTarget(config).get(pokemonId) ?? []).flatMap((candidate) => {
+      const card = getCardById(candidate.set_id, candidate.card_id);
+      const set = getSetById(candidate.set_id);
+      const variant = card?.variants.find((item) => item.id === candidate.variant_id);
+      if (!card || !variant) return [];
+      const setName = set ? localizedValue(set.name, candidate.language_id) ?? set.id : null;
+      return [buildDisplayCard(card, variant, candidate.language_id, setName)];
+    });
+  });
   const openPokedexOptions = (): void => {
     if (!folder.value?.pokedex_config) return;
     editingPokedexConfig.value = copyPokedexBinderConfig(folder.value.pokedex_config);
@@ -668,6 +714,8 @@
       .filter((row) => !selectedLanguageId.value || row.entry.language_id === selectedLanguageId.value)
       .filter((row) => !onlyNonFitting.value || !folder.value?.pokedex_config || collectionTab.value !== 'owned'
         || collectionStore.pokedexEntryStatus(row.entry.id) === 'This card no longer fits this binder')
+      .filter((row) => !onlyAvailableWanted.value || !folder.value?.pokedex_config || collectionTab.value !== 'wanted'
+        || row.entry.set_id !== 'pokedex-requirement' || (row.entry.pokedex_candidate_count ?? 0) > 0)
       .sort((left, right) => {
         if (selectedSort.value === 'price-asc' || selectedSort.value === 'price-desc') {
           if (left.unitPrice === null && right.unitPrice !== null) return 1;
@@ -728,10 +776,10 @@
     onlyNonFitting.value = false;
     visibleRowCount.value = collectionRowStep;
   });
-  watch([search, selectedLanguageId, onlyNonFitting, selectedSort], () => {
+  watch([search, selectedLanguageId, onlyNonFitting, onlyAvailableWanted, selectedSort], () => {
     visibleRowCount.value = collectionRowStep;
   });
-  watch([folderId, search, collectionTab, selectedLanguageId, onlyNonFitting, selectedSort], () => {
+  watch([folderId, search, collectionTab, selectedLanguageId, onlyNonFitting, onlyAvailableWanted, selectedSort], () => {
     store.commit('set_collection_folder_filters', {
       folder_id: folderId.value,
       filters: {
@@ -739,6 +787,7 @@
         tab: collectionTab.value,
         language_id: selectedLanguageId.value,
         only_non_fitting: onlyNonFitting.value,
+        only_available_wanted: onlyAvailableWanted.value,
         sort: selectedSort.value
       } satisfies CollectionFolderFilters
     });
@@ -903,12 +952,25 @@
   };
 
   const openCard = (card: DisplayCard): void => {
-    if (card.set_id === 'pokedex-requirement') return;
+    if (card.set_id === 'pokedex-requirement') {
+      if (card.variant_id !== 'multiple') return;
+      selectedPokedexPlaceholder.value = card;
+      showPokedexCandidates.value = true;
+      return;
+    }
     if (card.is_manual) {
       const row = collectionRows.value.find((candidate) => candidate.entry.card_id === card.card_id);
       if (row) openEditEntry(row);
       return;
     }
+    void router.push({
+      path: `/set/${card.set_id}/card/${card.card_id}`,
+      query: { variant: card.variant_id, from: 'collection', folder: folderId.value }
+    });
+  };
+
+  const openPokedexCandidate = (card: DisplayCard): void => {
+    showPokedexCandidates.value = false;
     void router.push({
       path: `/set/${card.set_id}/card/${card.card_id}`,
       query: { variant: card.variant_id, from: 'collection', folder: folderId.value }
