@@ -5,6 +5,7 @@
     "number": "001",
     "category": "pokemon",
     "name": {
+      "ja": "バチュル",
       "zh-TW": "電電蟲"
     },
     "pokemon": [
@@ -20,6 +21,19 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773750,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.03,
+          "low": 0.02,
+          "trend": 0.04,
+          "average_1d": 0.05,
+          "average_7d": 0.04,
+          "average_30d": 0.03,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773750"
         }
       }
     ],
@@ -31,6 +45,7 @@
     "attacks": [
       {
         "name": {
+          "ja": "はねてかわす",
           "zh-TW": "躍起閃避"
         },
         "cost": [
@@ -38,6 +53,7 @@
         ],
         "damage": "10",
         "text": {
+          "ja": "コインを1回投げオモテなら、次の相手の番、このポケモンはワザのダメージや効果を受けない。",
           "zh-TW": "擲1次硬幣若為正面，則在下個對手的回合，這隻寶可夢不會受到招式的傷害與效果的影響。"
         }
       }
@@ -50,6 +66,7 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
+      "ja": "ポケモンの 体に くっついて 静電気を 吸い取る。 自分では 電気を つくることが できない。",
       "zh-TW": "會附在寶可夢的身上 吸收靜電。自身並沒有 製造電的能力。"
     }
   },
@@ -59,6 +76,7 @@
     "number": "002",
     "category": "pokemon",
     "name": {
+      "ja": "デンチュラ",
       "zh-TW": "電蜘蛛"
     },
     "pokemon": [
@@ -74,6 +92,19 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773751,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.04,
+          "low": 0.02,
+          "trend": 0.03,
+          "average_1d": 0.02,
+          "average_7d": 0.03,
+          "average_30d": 0.03,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773751"
         }
       }
     ],
@@ -82,20 +113,14 @@
       "grass"
     ],
     "stage": "stage1",
+    "evolves_from": {
+      "ja": "バチュル"
+    },
     "attacks": [
       {
         "name": {
+          "ja": "ビリビリウェブ",
           "zh-TW": "‌[特性]複眼"
-        },
-        "cost": [],
-        "damage": "",
-        "text": {
-          "zh-TW": "這隻寶可夢使用的招式，對對手的戰鬥場的擁有特性的寶可夢造成的傷害「+50」點。"
-        }
-      },
-      {
-        "name": {
-          "zh-TW": "麻麻羅網"
         },
         "cost": [
           "grass",
@@ -103,7 +128,8 @@
         ],
         "damage": "50+",
         "text": {
-          "zh-TW": "若這隻寶可夢身上附有【雷】能量卡，則增加80點傷害。"
+          "ja": "このポケモンに[L]エネルギーがついているなら、80ダメージ追加。",
+          "zh-TW": "這隻寶可夢使用的招式，對對手的戰鬥場的擁有特性的寶可夢造成的傷害「+50」點。"
         }
       }
     ],
@@ -115,6 +141,7 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
+      "ja": "電気を 帯びた お腹の 毛を 飛ばして 攻撃。 毛が 刺さると 三日三晩 全身が 痺れる。",
       "zh-TW": "發射腹部帶電的毛來攻擊。 要是被牠的毛刺中， 就會全身麻痺三天三夜。"
     }
   },
@@ -124,9 +151,12 @@
     "number": "003",
     "category": "pokemon",
     "name": {
+      "ja": "モクロー",
       "zh-TW": "木木梟"
     },
-    "pokemon": [],
+    "pokemon": [
+      "0722"
+    ],
     "illustrator": "Yoshimi Miyoshi",
     "rarity": "common",
     "regulation_mark": "H",
@@ -137,6 +167,19 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773752,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.04,
+          "low": 0.02,
+          "trend": 0.06,
+          "average_1d": 0.02,
+          "average_7d": 0.08,
+          "average_30d": 0.05,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773752"
         }
       }
     ],
@@ -148,6 +191,7 @@
     "attacks": [
       {
         "name": {
+          "ja": "くわえる",
           "zh-TW": "叼"
         },
         "cost": [
@@ -155,11 +199,13 @@
         ],
         "damage": "",
         "text": {
+          "ja": "自分の山札を1枚引く。",
           "zh-TW": "從自己的牌庫抽出1張卡。"
         }
       },
       {
         "name": {
+          "ja": "このは",
           "zh-TW": "樹葉"
         },
         "cost": [
@@ -177,6 +223,7 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
+      "ja": "飛行しながら 切れ味 鋭い 羽根を 飛ばし 近距離では 強烈な キックを 叩きこむ。",
       "zh-TW": "一邊飛行一邊射出 刀刃般銳利的羽毛， 距離近時會使出猛烈的踢擊。"
     }
   },
@@ -186,9 +233,12 @@
     "number": "004",
     "category": "pokemon",
     "name": {
+      "ja": "フクスロー",
       "zh-TW": "投羽梟"
     },
-    "pokemon": [],
+    "pokemon": [
+      "0723"
+    ],
     "illustrator": "Tetsu Kayama",
     "rarity": "common",
     "regulation_mark": "H",
@@ -199,6 +249,19 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773753,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.03,
+          "low": 0.02,
+          "trend": 0.03,
+          "average_1d": 0.02,
+          "average_7d": 0.03,
+          "average_30d": 0.03,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773753"
         }
       }
     ],
@@ -207,9 +270,13 @@
       "grass"
     ],
     "stage": "stage1",
+    "evolves_from": {
+      "ja": "モクロー"
+    },
     "attacks": [
       {
         "name": {
+          "ja": "だんけつのつばさ",
           "zh-TW": "團結之翼"
         },
         "cost": [
@@ -217,11 +284,13 @@
         ],
         "damage": "20×",
         "text": {
+          "ja": "自分のトラッシュにある、ワザ「だんけつのつばさ」を持つポケモンの枚数×20ダメージ。",
           "zh-TW": "造成自己的棄牌區的，持有「團結之翼」招式的寶可夢卡的張數×20點傷害。"
         }
       },
       {
         "name": {
+          "ja": "カッターウインド",
           "zh-TW": "利刃之風"
         },
         "cost": [
@@ -239,6 +308,7 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
+      "ja": "刃羽根 と 呼ばれる ナイフのような 羽根を 立て続けに 投げて 敵の 急所を 確実に つらぬく。",
       "zh-TW": "連續投出被稱為是 刃羽的刀般銳利羽毛， 能精準地貫穿敵人要害。"
     }
   },
@@ -248,9 +318,12 @@
     "number": "005",
     "category": "pokemon",
     "name": {
+      "ja": "ジュナイパー",
       "zh-TW": "狙射樹梟"
     },
-    "pokemon": [],
+    "pokemon": [
+      "0724"
+    ],
     "illustrator": "DOM",
     "rarity": "uncommon",
     "regulation_mark": "H",
@@ -261,6 +334,19 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773754,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.04,
+          "low": 0.02,
+          "trend": 0.04,
+          "average_1d": 0.04,
+          "average_7d": 0.04,
+          "average_30d": 0.04,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773754"
         }
       }
     ],
@@ -269,9 +355,13 @@
       "grass"
     ],
     "stage": "stage2",
+    "evolves_from": {
+      "ja": "フクスロー"
+    },
     "attacks": [
       {
         "name": {
+          "ja": "フェザーストック",
           "zh-TW": "羽毛庫存"
         },
         "cost": [
@@ -279,11 +369,13 @@
         ],
         "damage": "",
         "text": {
+          "ja": "自分の手札が7枚になるように、山札を引く。",
           "zh-TW": "從牌庫抽卡直到自己的手牌滿7張為止。"
         }
       },
       {
         "name": {
+          "ja": "ストロングショット",
           "zh-TW": "強力射擊"
         },
         "cost": [
@@ -291,6 +383,7 @@
         ],
         "damage": "170",
         "text": {
+          "ja": "自分の手札から「基本[G]エネルギー」を1枚トラッシュする。トラッシュできないなら、このワザは失敗。",
           "zh-TW": "從自己的手牌將1張「基本【草】能量」卡丟棄。若無法丟棄，則這個招式失敗。"
         }
       }
@@ -303,6 +396,7 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
+      "ja": "翼に 仕込まれた 矢羽根を 弓矢のように つがえて 放つ。 狙った 的は 外さない。",
       "zh-TW": "會像射箭那樣射出 藏在自己翅膀裡的箭羽。 只要瞄準目標就絕不會射偏。"
     }
   },
@@ -312,19 +406,35 @@
     "number": "006",
     "category": "pokemon",
     "name": {
+      "ja": "カプ・ブルル",
       "zh-TW": "卡璞・哞哞"
     },
-    "pokemon": [],
+    "pokemon": [
+      "0787"
+    ],
     "illustrator": "GOSSAN",
     "rarity": "rare",
     "regulation_mark": "H",
     "variants": [
       {
-        "id": "normal",
-        "type": "normal",
+        "id": "holo",
+        "type": "holo",
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773755,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.24,
+          "low": 0.02,
+          "trend": 0.12,
+          "average_1d": 0.02,
+          "average_7d": 0.13,
+          "average_30d": 0.08,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773755"
         }
       }
     ],
@@ -336,6 +446,7 @@
     "attacks": [
       {
         "name": {
+          "ja": "ウッドハンマー",
           "zh-TW": "木槌"
         },
         "cost": [
@@ -346,6 +457,7 @@
         ],
         "damage": "220",
         "text": {
+          "ja": "このポケモンにも30ダメージ。",
           "zh-TW": "這隻寶可夢也受到30點傷害。"
         }
       }
@@ -358,6 +470,7 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
+      "ja": "大木を 引き抜き ブンブン 振り回す。 草木を 茂らせて そのエネルギーを 吸収する。",
       "zh-TW": "拔出巨大的樹木，轟轟地來回揮舞。 會讓草木茂盛生長，再吸收其中的能量。"
     }
   },
@@ -367,6 +480,7 @@
     "number": "007",
     "category": "pokemon",
     "name": {
+      "ja": "デルビル",
       "zh-TW": "戴魯比"
     },
     "pokemon": [
@@ -382,6 +496,19 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773756,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.11,
+          "low": 0.02,
+          "trend": 0.08,
+          "average_1d": 0.28,
+          "average_7d": 0.07,
+          "average_30d": 0.03,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773756"
         }
       }
     ],
@@ -393,6 +520,7 @@
     "attacks": [
       {
         "name": {
+          "ja": "かじる",
           "zh-TW": "咬"
         },
         "cost": [
@@ -404,6 +532,7 @@
       },
       {
         "name": {
+          "ja": "うしろげり",
           "zh-TW": "後踢"
         },
         "cost": [
@@ -423,6 +552,7 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
+      "ja": "仲間に 連絡するときと 獲物を 追いつめるときでは 鳴き声の 種類が 違うのだ。",
       "zh-TW": "聯絡夥伴和追趕獵物 的時候，會分別發出 不同種類的叫聲。"
     }
   },
@@ -432,6 +562,7 @@
     "number": "008",
     "category": "pokemon",
     "name": {
+      "ja": "ヘルガー",
       "zh-TW": "黑魯加"
     },
     "pokemon": [
@@ -447,6 +578,19 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773757,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.02,
+          "low": 0.02,
+          "trend": 0.03,
+          "average_1d": 0.09,
+          "average_7d": 0.04,
+          "average_30d": 0.03,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773757"
         }
       }
     ],
@@ -455,9 +599,13 @@
       "fire"
     ],
     "stage": "stage1",
+    "evolves_from": {
+      "ja": "デルビル"
+    },
     "attacks": [
       {
         "name": {
+          "ja": "かみつく",
           "zh-TW": "咬住"
         },
         "cost": [
@@ -469,6 +617,7 @@
       },
       {
         "name": {
+          "ja": "バークアウト",
           "zh-TW": "大聲咆哮"
         },
         "cost": [
@@ -478,6 +627,7 @@
         ],
         "damage": "100",
         "text": {
+          "ja": "次の相手の番、このワザを受けたポケモンが使うワザのダメージは「-100」される。",
           "zh-TW": "在下個對手的回合，受到這個招式的寶可夢使用招式的傷害「-100」點。"
         }
       }
@@ -490,6 +640,7 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
+      "ja": "不気味な 遠吠えを 聞いた ポケモンは 震え 一目散に 自分の 巣に 戻る。",
       "zh-TW": "聽見牠恐怖長嚎的 寶可夢會渾身發抖， 一溜煙地回到自己的巢裡。"
     }
   },
@@ -499,6 +650,7 @@
     "number": "009",
     "category": "pokemon",
     "name": {
+      "ja": "テツノドクガ",
       "zh-TW": "鐵毒蛾"
     },
     "pokemon": [
@@ -514,6 +666,19 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773758,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.08,
+          "low": 0.02,
+          "trend": 0.07,
+          "average_1d": 0.1,
+          "average_7d": 0.06,
+          "average_30d": 0.07,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773758"
         }
       }
     ],
@@ -525,6 +690,7 @@
     "attacks": [
       {
         "name": {
+          "ja": "きゅういん",
           "zh-TW": "吸納"
         },
         "cost": [
@@ -533,11 +699,13 @@
         ],
         "damage": "30",
         "text": {
+          "ja": "相手のバトルポケモンに与えたダメージぶん、このポケモンのHPを回復する。",
           "zh-TW": "將這隻寶可夢恢復對對手的戰鬥寶可夢造成的傷害相同數值的HP。"
         }
       },
       {
         "name": {
+          "ja": "ワイルドリジェクター",
           "zh-TW": "瘋狂拒絕"
         },
         "cost": [
@@ -547,6 +715,7 @@
         ],
         "damage": "120",
         "text": {
+          "ja": "次の相手の番、このポケモンは「古代」のポケモンからワザのダメージを受けない。",
           "zh-TW": "在下個對手的回合，這隻寶可夢不會受到「古代」寶可夢招式的傷害。"
         }
       }
@@ -559,6 +728,7 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
+      "ja": "捕獲例は ゼロ。 データ不足。 古い 書物に 記された 物体と 特徴が 一致。",
       "zh-TW": "無捕獲紀錄。資料不足。 其特徵與古書裡 所記載的物體一致。"
     }
   },
@@ -568,6 +738,7 @@
     "number": "010",
     "category": "pokemon",
     "name": {
+      "ja": "タッツー",
       "zh-TW": "墨海馬"
     },
     "pokemon": [
@@ -583,6 +754,19 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773759,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.04,
+          "low": 0.02,
+          "trend": 0.04,
+          "average_1d": 0.05,
+          "average_7d": 0.04,
+          "average_30d": 0.03,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773759"
         }
       }
     ],
@@ -594,6 +778,7 @@
     "attacks": [
       {
         "name": {
+          "ja": "じっとする",
           "zh-TW": "紋絲不動"
         },
         "cost": [
@@ -601,11 +786,13 @@
         ],
         "damage": "",
         "text": {
+          "ja": "このポケモンのHPを「30」回復する。",
           "zh-TW": "將這隻寶可夢恢復「30」HP。"
         }
       },
       {
         "name": {
+          "ja": "ひれカッター",
           "zh-TW": "鰭快刀"
         },
         "cost": [
@@ -624,6 +811,7 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
+      "ja": "潮の 流れが 穏やかな 海に 棲む。 襲われると 真っ黒な 墨を吐いて その隙に 逃げだす。",
       "zh-TW": "棲息在海流平穩的海域。 被襲擊時會吐出漆黑的 墨汁，然後趁機逃走。"
     }
   },
@@ -633,6 +821,7 @@
     "number": "011",
     "category": "pokemon",
     "name": {
+      "ja": "シードラ",
       "zh-TW": "海刺龍"
     },
     "pokemon": [
@@ -648,6 +837,19 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773760,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.04,
+          "low": 0.02,
+          "trend": 0.03,
+          "average_1d": 0.02,
+          "average_7d": 0.03,
+          "average_30d": 0.03,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773760"
         }
       }
     ],
@@ -656,9 +858,13 @@
       "water"
     ],
     "stage": "stage1",
+    "evolves_from": {
+      "ja": "タッツー"
+    },
     "attacks": [
       {
         "name": {
+          "ja": "えんぐん",
           "zh-TW": "援軍"
         },
         "cost": [
@@ -666,11 +872,13 @@
         ],
         "damage": "",
         "text": {
+          "ja": "自分の山札からポケモンを3枚まで選び、相手に見せて、手札に加える。そして山札を切る。",
           "zh-TW": "從自己的牌庫選擇最多3張寶可夢卡，在給對手看過後加入手牌。並且重洗牌庫。"
         }
       },
       {
         "name": {
+          "ja": "するどいひれ",
           "zh-TW": "銳利鰭"
         },
         "cost": [
@@ -689,6 +897,7 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
+      "ja": "オスが 子どもを 育てる。 子育て中は 背中の トゲの 毒素が 強く 濃くなるのだ。",
       "zh-TW": "是由雄性來養育孩子。 在育兒時，背上刺的 毒素會變得更強更濃。"
     }
   },
@@ -698,19 +907,35 @@
     "number": "012",
     "category": "pokemon",
     "name": {
+      "ja": "キングドラex",
       "zh-TW": "刺龍王ex"
     },
-    "pokemon": [],
+    "pokemon": [
+      "0230"
+    ],
     "illustrator": "toriyufu",
     "rarity": "double_rare",
     "regulation_mark": "H",
     "variants": [
       {
-        "id": "normal",
-        "type": "normal",
+        "id": "holo",
+        "type": "holo",
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773761,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.28,
+          "low": 0.05,
+          "trend": 0.41,
+          "average_1d": 0.23,
+          "average_7d": 0.33,
+          "average_30d": 0.29,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773761"
         }
       }
     ],
@@ -719,10 +944,14 @@
       "water"
     ],
     "stage": "stage2",
+    "evolves_from": {
+      "ja": "シードラ"
+    },
     "rule_box": "EX",
     "attacks": [
       {
         "name": {
+          "ja": "おうのごうれい",
           "zh-TW": "王之號召"
         },
         "cost": [
@@ -730,11 +959,13 @@
         ],
         "damage": "",
         "text": {
+          "ja": "自分のトラッシュから[W]ポケモンを3枚まで選び、ベンチに出す。",
           "zh-TW": "從自己的棄牌區選擇最多3張【水】寶可夢卡，放置於備戰區。"
         }
       },
       {
         "name": {
+          "ja": "ハイドロポンプ",
           "zh-TW": "水炮"
         },
         "cost": [
@@ -743,6 +974,7 @@
         ],
         "damage": "50+",
         "text": {
+          "ja": "このポケモンについている[W]エネルギーの数×50ダメージ追加。",
           "zh-TW": "增加這隻寶可夢身上附加的【水】能量的數量×50點傷害。"
         }
       }
@@ -761,6 +993,7 @@
     "number": "013",
     "category": "pokemon",
     "name": {
+      "ja": "ニューラ",
       "zh-TW": "狃拉"
     },
     "pokemon": [
@@ -776,6 +1009,19 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773762,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.05,
+          "low": 0.02,
+          "trend": 0.07,
+          "average_1d": 0.02,
+          "average_7d": 0.08,
+          "average_30d": 0.04,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773762"
         }
       }
     ],
@@ -787,6 +1033,7 @@
     "attacks": [
       {
         "name": {
+          "ja": "いあいぎり",
           "zh-TW": "居合斬"
         },
         "cost": [
@@ -797,6 +1044,7 @@
       },
       {
         "name": {
+          "ja": "つめよる",
           "zh-TW": "逼近"
         },
         "cost": [
@@ -805,6 +1053,7 @@
         ],
         "damage": "30",
         "text": {
+          "ja": "次の相手の番、このワザを受けたポケモンは、にげられない。",
           "zh-TW": "在下個對手的回合，受到這個招式的寶可夢無法撤退。"
         }
       }
@@ -817,6 +1066,7 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
+      "ja": "ずる賢く １匹が 親を 誘き寄せ もう１匹が タマゴを 取るという チームプレーも 見せる。",
       "zh-TW": "會透過團隊合作，一隻負責 引開雙親的注意，一隻負責 偷走蛋，非常地狡猾奸詐。"
     }
   },
@@ -826,6 +1076,7 @@
     "number": "014",
     "category": "pokemon",
     "name": {
+      "ja": "マニューラ",
       "zh-TW": "瑪狃拉"
     },
     "pokemon": [
@@ -841,6 +1092,19 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773763,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.04,
+          "low": 0.02,
+          "trend": 0.08,
+          "average_1d": 0.03,
+          "average_7d": 0.07,
+          "average_30d": 0.05,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773763"
         }
       }
     ],
@@ -849,9 +1113,13 @@
       "water"
     ],
     "stage": "stage1",
+    "evolves_from": {
+      "ja": "ニューラ"
+    },
     "attacks": [
       {
         "name": {
+          "ja": "きりさく",
           "zh-TW": "劈開"
         },
         "cost": [
@@ -862,6 +1130,7 @@
       },
       {
         "name": {
+          "ja": "ヘイルクロー",
           "zh-TW": "冰雹爪"
         },
         "cost": [
@@ -870,6 +1139,7 @@
         ],
         "damage": "70",
         "text": {
+          "ja": "このポケモンについているエネルギーをすべてトラッシュし、相手のバトルポケモンをマヒにする。",
           "zh-TW": "將這隻寶可夢身上附加的能量卡全部丟棄，將對手的戰鬥寶可夢【麻痺】。"
         }
       }
@@ -882,6 +1152,7 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
+      "ja": "４～５匹の グループで 行動。 岩や 樹木に サインを 残し 連係して 獲物を 仕留める。",
       "zh-TW": "４～５隻一組行動。 在岩石和樹木上留下記號， 以團隊合作捕殺獵物。"
     }
   },
@@ -891,19 +1162,35 @@
     "number": "015",
     "category": "pokemon",
     "name": {
+      "ja": "ブロロロームex",
       "zh-TW": "普隆隆姆ex"
     },
-    "pokemon": [],
+    "pokemon": [
+      "0966"
+    ],
     "illustrator": "PLANETA Mochizuki",
     "rarity": "double_rare",
     "regulation_mark": "H",
     "variants": [
       {
-        "id": "normal",
-        "type": "normal",
+        "id": "holo",
+        "type": "holo",
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773764,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.19,
+          "low": 0.03,
+          "trend": 0.14,
+          "average_1d": 0.26,
+          "average_7d": 0.19,
+          "average_30d": 0.2,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773764"
         }
       }
     ],
@@ -912,10 +1199,14 @@
       "lightning"
     ],
     "stage": "stage1",
+    "evolves_from": {
+      "ja": "ブロロン"
+    },
     "rule_box": "EX",
     "attacks": [
       {
         "name": {
+          "ja": "アクセルフラッシュ",
           "zh-TW": "暴衝閃光"
         },
         "cost": [
@@ -923,11 +1214,13 @@
         ],
         "damage": "20+",
         "text": {
+          "ja": "この番、このポケモンがベンチからバトル場に出ていたなら、120ダメージ追加。",
           "zh-TW": "在這個回合，若從備戰區將這隻寶可夢放置於戰鬥場，則增加120點傷害。"
         }
       },
       {
         "name": {
+          "ja": "スピードブレイク",
           "zh-TW": "高速破壞"
         },
         "cost": [
@@ -937,6 +1230,7 @@
         ],
         "damage": "250",
         "text": {
+          "ja": "このポケモンと、ついているすべてのカードを、トラッシュする。",
           "zh-TW": "將這隻寶可夢與附加的卡全部丟棄。"
         }
       }
@@ -955,6 +1249,7 @@
     "number": "016",
     "category": "pokemon",
     "name": {
+      "ja": "スリープ",
       "zh-TW": "催眠貘"
     },
     "pokemon": [
@@ -970,6 +1265,19 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773765,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.03,
+          "low": 0.02,
+          "trend": 0.02,
+          "average_1d": 0.02,
+          "average_7d": 0.04,
+          "average_30d": 0.03,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773765"
         }
       }
     ],
@@ -981,6 +1289,7 @@
     "attacks": [
       {
         "name": {
+          "ja": "ぶきみなしせん",
           "zh-TW": "不祥視線"
         },
         "cost": [
@@ -988,6 +1297,7 @@
         ],
         "damage": "10",
         "text": {
+          "ja": "相手の手札を見る。",
           "zh-TW": "查看對手的手牌。"
         }
       }
@@ -1006,6 +1316,7 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
+      "ja": "突き出た 鼻を ひくひくさせると どこの だれが どんな 夢を 見ているのか 全部 わかるという。",
       "zh-TW": "據說當牠抽動凸出的鼻子， 無論是誰在哪裡做著什麼夢， 都會被牠知道得一清二楚。"
     }
   },
@@ -1015,6 +1326,7 @@
     "number": "017",
     "category": "pokemon",
     "name": {
+      "ja": "スリーパー",
       "zh-TW": "引夢貘人"
     },
     "pokemon": [
@@ -1030,6 +1342,19 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773766,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.02,
+          "low": 0.02,
+          "trend": 0.04,
+          "average_1d": 0.03,
+          "average_7d": 0.03,
+          "average_30d": 0.03,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773766"
         }
       }
     ],
@@ -1038,9 +1363,13 @@
       "psychic"
     ],
     "stage": "stage1",
+    "evolves_from": {
+      "ja": "スリープ"
+    },
     "attacks": [
       {
         "name": {
+          "ja": "はくちゅうむ",
           "zh-TW": "白日夢"
         },
         "cost": [
@@ -1049,6 +1378,7 @@
         ],
         "damage": "80",
         "text": {
+          "ja": "次の相手の番、このワザを受けたポケモンに、相手が手札からエネルギーをつけたなら、相手の番は終わる。",
           "zh-TW": "在下個對手的回合，若對手從手牌將能量卡附於受到這個招式的寶可夢身上，則對手的回合結束。"
         }
       }
@@ -1067,6 +1397,7 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
+      "ja": "どんなときでも 持っている 振り子を 決まったリズムで 揺らしている。 近寄ると なぜか 眠くなる。",
       "zh-TW": "會以固定的節奏擺動著 形影不離的鐘擺。一靠近牠 就會不由自主地昏昏欲睡。"
     }
   },
@@ -1076,6 +1407,7 @@
     "number": "018",
     "category": "pokemon",
     "name": {
+      "ja": "ヨマワル",
       "zh-TW": "夜巡靈"
     },
     "pokemon": [
@@ -1091,6 +1423,19 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773767,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.03,
+          "low": 0.02,
+          "trend": 0.04,
+          "average_1d": 0.02,
+          "average_7d": 0.04,
+          "average_30d": 0.03,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773767"
         }
       }
     ],
@@ -1102,6 +1447,7 @@
     "attacks": [
       {
         "name": {
+          "ja": "むかえにいく",
           "zh-TW": "前往渡魂"
         },
         "cost": [
@@ -1109,11 +1455,13 @@
         ],
         "damage": "",
         "text": {
+          "ja": "自分のトラッシュから「ヨマワル」を3枚まで選び、ベンチに出す。",
           "zh-TW": "從自己的棄牌區選擇最多3張「夜巡靈」，放置於備戰區。"
         }
       },
       {
         "name": {
+          "ja": "つぶやく",
           "zh-TW": "囈語"
         },
         "cost": [
@@ -1138,6 +1486,7 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
+      "ja": "真っ赤な ひとつ目で 睨みつけられ 生体エネルギーを 吸われるとき ひどい 寒気に 襲われる。",
       "zh-TW": "遭到牠鮮紅的獨眼瞪視 並且被吸取生物能量時， 會受到嚴重的寒氣侵襲。"
     }
   },
@@ -1147,6 +1496,7 @@
     "number": "019",
     "category": "pokemon",
     "name": {
+      "ja": "サマヨール",
       "zh-TW": "彷徨夜靈"
     },
     "pokemon": [
@@ -1162,6 +1512,19 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773768,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.03,
+          "low": 0.02,
+          "trend": 0.06,
+          "average_1d": 0.17,
+          "average_7d": 0.07,
+          "average_30d": 0.04,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773768"
         }
       }
     ],
@@ -1170,20 +1533,14 @@
       "psychic"
     ],
     "stage": "stage1",
+    "evolves_from": {
+      "ja": "ヨマワル"
+    },
     "attacks": [
       {
         "name": {
+          "ja": "おにび",
           "zh-TW": "‌[特性]咒詛炸彈"
-        },
-        "cost": [],
-        "damage": "",
-        "text": {
-          "zh-TW": "在自己的回合時可使用1次，若使用，則將這隻寶可夢【昏厥】。在對手的1隻寶可夢身上放置5個傷害指示物。"
-        }
-      },
-      {
-        "name": {
-          "zh-TW": "鬼火"
         },
         "cost": [
           "psychic",
@@ -1207,6 +1564,7 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
+      "ja": "体の中で 燃えている 真っ赤な ひとつ目が サマヨールの 本体と いわれるが 誰も 見ていない。",
       "zh-TW": "據說在體內燃燒著的鮮紅獨眼 是彷徨夜靈的本體， 但沒有人親眼見過。"
     }
   },
@@ -1216,6 +1574,7 @@
     "number": "020",
     "category": "pokemon",
     "name": {
+      "ja": "ヨノワール",
       "zh-TW": "黑夜魔靈"
     },
     "pokemon": [
@@ -1226,11 +1585,24 @@
     "regulation_mark": "H",
     "variants": [
       {
-        "id": "normal",
-        "type": "normal",
+        "id": "holo",
+        "type": "holo",
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773769,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.12,
+          "low": 0.02,
+          "trend": 0.07,
+          "average_1d": 0.02,
+          "average_7d": 0.09,
+          "average_30d": 0.07,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773769"
         }
       }
     ],
@@ -1239,20 +1611,14 @@
       "psychic"
     ],
     "stage": "stage2",
+    "evolves_from": {
+      "ja": "サマヨール"
+    },
     "attacks": [
       {
         "name": {
+          "ja": "かげしばり",
           "zh-TW": "‌[特性]咒詛炸彈"
-        },
-        "cost": [],
-        "damage": "",
-        "text": {
-          "zh-TW": "在自己的回合時可使用1次，若使用，則將這隻寶可夢【昏厥】。在對手的1隻寶可夢身上放置13個傷害指示物。"
-        }
-      },
-      {
-        "name": {
-          "zh-TW": "影子束縛"
         },
         "cost": [
           "psychic",
@@ -1261,7 +1627,8 @@
         ],
         "damage": "150",
         "text": {
-          "zh-TW": "在下個對手的回合，受到這個招式的寶可夢無法撤退。"
+          "ja": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+          "zh-TW": "在自己的回合時可使用1次，若使用，則將這隻寶可夢【昏厥】。在對手的1隻寶可夢身上放置13個傷害指示物。"
         }
       }
     ],
@@ -1279,6 +1646,7 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
+      "ja": "この世と あの世を 行ったり来たり。 さまよう 魂を 吸い込んで 運ぶと いわれ 恐れられている。",
       "zh-TW": "在這個世界與另一個世界間往返。 據說會吸入並帶走遊蕩的靈魂， 因此遭到人們畏懼。"
     }
   },
@@ -1288,6 +1656,7 @@
     "number": "021",
     "category": "pokemon",
     "name": {
+      "ja": "クレセリア",
       "zh-TW": "克雷色利亞"
     },
     "pokemon": [
@@ -1298,11 +1667,24 @@
     "regulation_mark": "H",
     "variants": [
       {
-        "id": "normal",
-        "type": "normal",
+        "id": "holo",
+        "type": "holo",
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773770,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.05,
+          "low": 0.02,
+          "trend": 0.19,
+          "average_1d": 0.05,
+          "average_7d": 0.18,
+          "average_30d": 0.13,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773770"
         }
       }
     ],
@@ -1314,6 +1696,7 @@
     "attacks": [
       {
         "name": {
+          "ja": "いやしのまい",
           "zh-TW": "治癒之舞"
         },
         "cost": [
@@ -1321,11 +1704,13 @@
         ],
         "damage": "",
         "text": {
+          "ja": "自分のポケモン全員のHPを、それぞれ「20」回復する。",
           "zh-TW": "將自己的所有寶可夢各恢復「20」HP。"
         }
       },
       {
         "name": {
+          "ja": "クレセントパージ",
           "zh-TW": "弦月光芒"
         },
         "cost": [
@@ -1335,6 +1720,7 @@
         ],
         "damage": "80+",
         "text": {
+          "ja": "のぞむなら、ウラになっている自分のサイドを1枚選び、オモテにする。その場合、80ダメージ追加。（対戦が終わるまで、そのサイドはオモテのまま。）",
           "zh-TW": "若希望，選擇1張自己的反面朝上的獎賞卡，翻到正面。這個情況下，增加80點傷害。（在對戰結束前，那張獎賞卡維持正面朝上。）"
         }
       }
@@ -1353,6 +1739,7 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
+      "ja": "飛行するときは ベールのような 羽から 光る 粒子を 出す。 三日月の化身と 呼ばれている。",
       "zh-TW": "飛行時，會從薄紗般的翅膀 發出閃亮的粒子。 被稱為新月的化身。"
     }
   },
@@ -1362,6 +1749,7 @@
     "number": "022",
     "category": "pokemon",
     "name": {
+      "ja": "ニンフィア",
       "zh-TW": "仙子伊布"
     },
     "pokemon": [
@@ -1377,6 +1765,19 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773771,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.1,
+          "low": 0.02,
+          "trend": 0.14,
+          "average_1d": 0.02,
+          "average_7d": 0.1,
+          "average_30d": 0.11,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773771"
         }
       }
     ],
@@ -1385,9 +1786,13 @@
       "psychic"
     ],
     "stage": "stage1",
+    "evolves_from": {
+      "ja": "イーブイ"
+    },
     "attacks": [
       {
         "name": {
+          "ja": "ミスティックリターン",
           "zh-TW": "奧密迴旋"
         },
         "cost": [
@@ -1395,11 +1800,13 @@
         ],
         "damage": "",
         "text": {
+          "ja": "コインを1回投げオモテなら、相手のベンチポケモンを1匹選び、そのポケモンと、ついているすべてのカードを、相手の山札にもどして切る。",
           "zh-TW": "擲1次硬幣若為正面，則選擇1隻對手的備戰寶可夢，將那隻寶可夢與附加的卡全部放回對手的牌庫並重洗。"
         }
       },
       {
         "name": {
+          "ja": "チャームボイス",
           "zh-TW": "魅惑之聲"
         },
         "cost": [
@@ -1409,6 +1816,7 @@
         ],
         "damage": "90",
         "text": {
+          "ja": "相手のバトルポケモンをこんらんにする。",
           "zh-TW": "將對手的戰鬥寶可夢【混亂】。"
         }
       }
@@ -1421,6 +1829,7 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
+      "ja": "触角を なびかせ 軽やかに 舞う 姿は 優雅だが 技は 鋭く 急所を 狙う。",
       "zh-TW": "搖曳著觸角跳著輕快 舞蹈的樣子相當優雅， 但招式卻會直搗對手要害。"
     }
   },
@@ -1430,6 +1839,7 @@
     "number": "023",
     "category": "pokemon",
     "name": {
+      "ja": "グレッグル",
       "zh-TW": "不良蛙"
     },
     "pokemon": [
@@ -1445,6 +1855,19 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773772,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.02,
+          "low": 0.02,
+          "trend": 0.03,
+          "average_1d": 0.02,
+          "average_7d": 0.04,
+          "average_30d": 0.03,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773772"
         }
       }
     ],
@@ -1456,6 +1879,7 @@
     "attacks": [
       {
         "name": {
+          "ja": "なぐる",
           "zh-TW": "打擊"
         },
         "cost": [
@@ -1466,6 +1890,7 @@
       },
       {
         "name": {
+          "ja": "かえるとび",
           "zh-TW": "蛙跳"
         },
         "cost": [
@@ -1474,6 +1899,7 @@
         ],
         "damage": "20+",
         "text": {
+          "ja": "コインを1回投げオモテなら、20ダメージ追加。",
           "zh-TW": "擲1次硬幣若為正面，則增加20點傷害。"
         }
       }
@@ -1486,6 +1912,7 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
+      "ja": "正々堂々と 戦うことは 少ないが それも 生き延びるため。 マスコットとして 人気が 高い。",
       "zh-TW": "很少會堂堂正正地戰鬥， 但那都是為了要生存下去。 作為吉祥物非常受歡迎。"
     }
   },
@@ -1495,6 +1922,7 @@
     "number": "024",
     "category": "pokemon",
     "name": {
+      "ja": "ドクロッグ",
       "zh-TW": "毒骷蛙"
     },
     "pokemon": [
@@ -1510,6 +1938,19 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773773,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.02,
+          "low": 0.02,
+          "trend": 0.03,
+          "average_1d": 0.02,
+          "average_7d": 0.03,
+          "average_30d": 0.02,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773773"
         }
       }
     ],
@@ -1518,9 +1959,13 @@
       "fighting"
     ],
     "stage": "stage1",
+    "evolves_from": {
+      "ja": "グレッグル"
+    },
     "attacks": [
       {
         "name": {
+          "ja": "どつく",
           "zh-TW": "推擊"
         },
         "cost": [
@@ -1532,6 +1977,7 @@
       },
       {
         "name": {
+          "ja": "クリーンヒット",
           "zh-TW": "俐落一擊"
         },
         "cost": [
@@ -1541,6 +1987,7 @@
         ],
         "damage": "90+",
         "text": {
+          "ja": "相手のバトルポケモンが進化ポケモンなら、90ダメージ追加。",
           "zh-TW": "若對手的戰鬥寶可夢為進化寶可夢，則增加90點傷害。"
         }
       }
@@ -1553,6 +2000,7 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
+      "ja": "のど元に 毒袋を 持つ。 のどを 鳴らすと 溜まった 毒は 練りこまれ 強力になる。",
       "zh-TW": "喉嚨處有著毒囊。 從喉嚨發出鳴叫時， 積存的毒素就會被煉製得更加強勁。"
     }
   },
@@ -1562,6 +2010,7 @@
     "number": "025",
     "category": "pokemon",
     "name": {
+      "ja": "ガチグマ アカツキ",
       "zh-TW": "月月熊 赫月"
     },
     "pokemon": [
@@ -1572,11 +2021,24 @@
     "regulation_mark": "H",
     "variants": [
       {
-        "id": "normal",
-        "type": "normal",
+        "id": "holo",
+        "type": "holo",
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773774,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.16,
+          "low": 0.02,
+          "trend": 0.1,
+          "average_1d": 0.05,
+          "average_7d": 0.04,
+          "average_30d": 0.08,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773774"
         }
       }
     ],
@@ -1588,6 +2050,7 @@
     "attacks": [
       {
         "name": {
+          "ja": "マッドバイト",
           "zh-TW": "瘋狂啃咬"
         },
         "cost": [
@@ -1597,6 +2060,7 @@
         ],
         "damage": "100+",
         "text": {
+          "ja": "相手のバトルポケモンにのっているダメカンの数×30ダメージ追加。",
           "zh-TW": "增加對手的戰鬥寶可夢身上放置的傷害指示物的數量×30點傷害。"
         }
       }
@@ -1609,6 +2073,7 @@
     ],
     "retreat_cost": 4,
     "flavor_text": {
+      "ja": "鉄のように 硬い 泥で 身を 守り 闇を 見通す 左目を 持つ 特別な ガチグマ。",
       "zh-TW": "會用堅硬如鐵的泥巴保護身體， 且擁有能夠看穿黑暗的左眼。 是特別的月月熊。"
     }
   },
@@ -1618,6 +2083,7 @@
     "number": "026",
     "category": "pokemon",
     "name": {
+      "ja": "チヲハウハネ",
       "zh-TW": "爬地翅"
     },
     "pokemon": [
@@ -1633,6 +2099,19 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773775,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.05,
+          "low": 0.02,
+          "trend": 0.04,
+          "average_1d": 0.1,
+          "average_7d": 0.04,
+          "average_30d": 0.06,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773775"
         }
       }
     ],
@@ -1644,6 +2123,7 @@
     "attacks": [
       {
         "name": {
+          "ja": "てつつぶし",
           "zh-TW": "鐵碎"
         },
         "cost": [
@@ -1652,11 +2132,13 @@
         ],
         "damage": "20+",
         "text": {
+          "ja": "相手の場に「未来」のポケモンがいるなら、120ダメージ追加。",
           "zh-TW": "若對手的場上有「未來」寶可夢，則增加120點傷害。"
         }
       },
       {
         "name": {
+          "ja": "スマッシュウイング",
           "zh-TW": "粉碎之翼"
         },
         "cost": [
@@ -1666,6 +2148,7 @@
         ],
         "damage": "130",
         "text": {
+          "ja": "このポケモンについているエネルギーを2個選び、トラッシュする。",
           "zh-TW": "選擇2個這隻寶可夢身上附加的能量，將其丟棄。"
         }
       }
@@ -1678,6 +2161,7 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
+      "ja": "古い 本で チヲハウハネと 紹介されている 生物に 似た点が ある 謎のポケモン。",
       "zh-TW": "與古老書籍裡介紹的一種 叫做爬地翅的生物有著 相似點的神秘寶可夢。"
     }
   },
@@ -1687,6 +2171,7 @@
     "number": "027",
     "category": "pokemon",
     "name": {
+      "ja": "ズバット",
       "zh-TW": "超音蝠"
     },
     "pokemon": [
@@ -1702,6 +2187,19 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773776,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.02,
+          "low": 0.02,
+          "trend": 0.04,
+          "average_1d": 0.05,
+          "average_7d": 0.03,
+          "average_30d": 0.03,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773776"
         }
       }
     ],
@@ -1713,6 +2211,7 @@
     "attacks": [
       {
         "name": {
+          "ja": "みちびく",
           "zh-TW": "引路"
         },
         "cost": [
@@ -1720,11 +2219,13 @@
         ],
         "damage": "",
         "text": {
+          "ja": "自分の山札からサポートを1枚選び、相手に見せて、手札に加える。そして山札を切る。",
           "zh-TW": "從自己的牌庫選擇1張支援者卡，在給對手看過後加入手牌。並且重洗牌庫。"
         }
       },
       {
         "name": {
+          "ja": "やみのキバ",
           "zh-TW": "暗之牙"
         },
         "cost": [
@@ -1748,6 +2249,7 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
+      "ja": "口から 出す 超音波で まわりの 様子を 探る。 狭い 洞窟も 器用に 飛びまわる。",
       "zh-TW": "會利用從口中發出的超音波 探查周圍的狀況。在狹窄的 洞窟裡也能靈巧地飛來飛去。"
     }
   },
@@ -1757,6 +2259,7 @@
     "number": "028",
     "category": "pokemon",
     "name": {
+      "ja": "ゴルバット",
       "zh-TW": "大嘴蝠"
     },
     "pokemon": [
@@ -1772,6 +2275,19 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773777,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.03,
+          "low": 0.02,
+          "trend": 0.03,
+          "average_1d": 0.02,
+          "average_7d": 0.02,
+          "average_30d": 0.05,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773777"
         }
       }
     ],
@@ -1780,9 +2296,13 @@
       "dark"
     ],
     "stage": "stage1",
+    "evolves_from": {
+      "ja": "ズバット"
+    },
     "attacks": [
       {
         "name": {
+          "ja": "スピードひこう",
           "zh-TW": "高速飛行"
         },
         "cost": [
@@ -1793,6 +2313,7 @@
       },
       {
         "name": {
+          "ja": "しっこくのやいば",
           "zh-TW": "漆黑利刃"
         },
         "cost": [
@@ -1801,6 +2322,7 @@
         ],
         "damage": "80",
         "text": {
+          "ja": "次の自分の番、このポケモンはワザが使えない。",
           "zh-TW": "在下個自己的回合，這隻寶可夢無法使用招式。"
         }
       }
@@ -1819,6 +2341,7 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
+      "ja": "生き物の 血液が 好物。 腹ペコの 仲間に 吸った 血を 分け与えることも あるという。",
       "zh-TW": "喜歡吸食生物的血液。 據說還會將吸來的血 分給空腹的夥伴。"
     }
   },
@@ -1828,6 +2351,7 @@
     "number": "029",
     "category": "pokemon",
     "name": {
+      "ja": "クロバット",
       "zh-TW": "叉字蝠"
     },
     "pokemon": [
@@ -1843,6 +2367,19 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773778,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.05,
+          "low": 0.02,
+          "trend": 0.06,
+          "average_1d": 0.05,
+          "average_7d": 0.05,
+          "average_30d": 0.04,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773778"
         }
       }
     ],
@@ -1851,9 +2388,13 @@
       "dark"
     ],
     "stage": "stage2",
+    "evolves_from": {
+      "ja": "ゴルバット"
+    },
     "attacks": [
       {
         "name": {
+          "ja": "どくどくのキバ",
           "zh-TW": "劇毒牙"
         },
         "cost": [
@@ -1862,6 +2403,7 @@
         ],
         "damage": "120",
         "text": {
+          "ja": "相手のバトルポケモンをどくにする。このどくでのせるダメカンの数は2個になる。",
           "zh-TW": "將對手的戰鬥寶可夢【中毒】。因這個【中毒】而放置的傷害指示物的數量改為2個。"
         }
       }
@@ -1880,6 +2422,7 @@
     ],
     "retreat_cost": 0,
     "flavor_text": {
+      "ja": "両足が 羽に 変化。 音を たてずに 高速で 飛び 獲物の うなじに キバを たてる。",
       "zh-TW": "雙腳變成了翅膀。 能夠無聲無息地高速飛行， 用獠牙咬住獵物的後頸。"
     }
   },
@@ -1889,6 +2432,7 @@
     "number": "030",
     "category": "pokemon",
     "name": {
+      "ja": "アブソル",
       "zh-TW": "阿勃梭魯"
     },
     "pokemon": [
@@ -1904,6 +2448,19 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773779,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.03,
+          "low": 0.02,
+          "trend": 0.05,
+          "average_1d": 0.05,
+          "average_7d": 0.05,
+          "average_30d": 0.04,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773779"
         }
       }
     ],
@@ -1915,6 +2472,7 @@
     "attacks": [
       {
         "name": {
+          "ja": "バッドフォール",
           "zh-TW": "惡棍墜落"
         },
         "cost": [
@@ -1922,6 +2480,7 @@
         ],
         "damage": "20+",
         "text": {
+          "ja": "自分の場に[D]エネルギーが3個以上あるなら、50ダメージ追加。",
           "zh-TW": "若自己的場上的【惡】能量有3個以上，則增加50點傷害。"
         }
       }
@@ -1934,6 +2493,7 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
+      "ja": "風のように 野山を 駆けぬける。 弓なりの ツノは 自然災害の 予兆を 敏感に 感じとる。",
       "zh-TW": "如風般地奔馳在山野中。 形狀如弓的角能夠敏銳 感應到自然災害的預兆。"
     }
   },
@@ -1943,6 +2503,7 @@
     "number": "031",
     "category": "pokemon",
     "name": {
+      "ja": "ゾロア",
       "zh-TW": "索羅亞"
     },
     "pokemon": [
@@ -1958,6 +2519,19 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773780,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.03,
+          "low": 0.02,
+          "trend": 0.04,
+          "average_1d": 0.02,
+          "average_7d": 0.03,
+          "average_30d": 0.03,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773780"
         }
       }
     ],
@@ -1969,6 +2543,7 @@
     "attacks": [
       {
         "name": {
+          "ja": "ふむ",
           "zh-TW": "踩"
         },
         "cost": [
@@ -1979,6 +2554,7 @@
       },
       {
         "name": {
+          "ja": "ダブルひっかき",
           "zh-TW": "雙重抓"
         },
         "cost": [
@@ -1987,6 +2563,7 @@
         ],
         "damage": "20×",
         "text": {
+          "ja": "コインを2回投げ、オモテの数×20ダメージ。",
           "zh-TW": "擲2次硬幣，造成正面出現的次數×20點傷害。"
         }
       }
@@ -1999,6 +2576,7 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
+      "ja": "人や ほかの ポケモンに 化ける。 自分の 正体を 隠すことで 危険から 身を 守っているのだ。",
       "zh-TW": "會化為人類或其他的寶可夢。 透過隱藏自己原本的面貌， 保護自己不遇危險。"
     }
   },
@@ -2008,6 +2586,7 @@
     "number": "032",
     "category": "pokemon",
     "name": {
+      "ja": "ゾロアーク",
       "zh-TW": "索羅亞克"
     },
     "pokemon": [
@@ -2018,11 +2597,24 @@
     "regulation_mark": "H",
     "variants": [
       {
-        "id": "normal",
-        "type": "normal",
+        "id": "holo",
+        "type": "holo",
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773781,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.21,
+          "low": 0.02,
+          "trend": 0.15,
+          "average_1d": 0.25,
+          "average_7d": 0.16,
+          "average_30d": 0.1,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773781"
         }
       }
     ],
@@ -2031,9 +2623,13 @@
       "dark"
     ],
     "stage": "stage1",
+    "evolves_from": {
+      "ja": "ゾロア"
+    },
     "attacks": [
       {
         "name": {
+          "ja": "げんえいジャック",
           "zh-TW": "幻影劫持"
         },
         "cost": [
@@ -2042,11 +2638,13 @@
         ],
         "damage": "60×",
         "text": {
+          "ja": "相手の場の「ポケモンex・V」の数×60ダメージ。",
           "zh-TW": "造成對手的場上的「寶可夢【ex】・【V】」的數量×60點傷害。"
         }
       },
       {
         "name": {
+          "ja": "ツメできりさく",
           "zh-TW": "利爪劈擊"
         },
         "cost": [
@@ -2066,6 +2664,7 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
+      "ja": "いっぺんに 大勢の 人を 化かす 力を 持つ。 幻の 景色を 見せて 棲み処を 守る。",
       "zh-TW": "有著一口氣迷惑許多人的力量。 會讓人看見虛幻的景色， 以保護自己的居所。"
     }
   },
@@ -2075,6 +2674,7 @@
     "number": "033",
     "category": "pokemon",
     "name": {
+      "ja": "マーイーカ",
       "zh-TW": "好啦魷"
     },
     "pokemon": [
@@ -2090,6 +2690,19 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773782,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.04,
+          "low": 0.02,
+          "trend": 0.05,
+          "average_1d": 0.02,
+          "average_7d": 0.05,
+          "average_30d": 0.03,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773782"
         }
       }
     ],
@@ -2101,6 +2714,7 @@
     "attacks": [
       {
         "name": {
+          "ja": "いたずらしょくしゅ",
           "zh-TW": "惡作劇觸手"
         },
         "cost": [
@@ -2108,11 +2722,13 @@
         ],
         "damage": "",
         "text": {
+          "ja": "相手の山札を上から1枚見て、もとにもどす。のぞむなら、その山札を切る。",
           "zh-TW": "查看對手的牌庫上方1張卡，回復原樣。若希望，重洗那個牌庫。"
         }
       },
       {
         "name": {
+          "ja": "つつく",
           "zh-TW": "啄"
         },
         "cost": [
@@ -2130,6 +2746,7 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
+      "ja": "回転しながら 発光体を 点滅。 光の パターンで 仲間と コミュニケーションする。",
       "zh-TW": "旋轉著閃爍自己的發光體。 透過改變閃爍的方式 來和其他夥伴交流。"
     }
   },
@@ -2139,6 +2756,7 @@
     "number": "034",
     "category": "pokemon",
     "name": {
+      "ja": "カラマネロ",
       "zh-TW": "烏賊王"
     },
     "pokemon": [
@@ -2154,6 +2772,19 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773783,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.05,
+          "low": 0.02,
+          "trend": 0.03,
+          "average_1d": 0.02,
+          "average_7d": 0.03,
+          "average_30d": 0.03,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773783"
         }
       }
     ],
@@ -2162,9 +2793,13 @@
       "dark"
     ],
     "stage": "stage1",
+    "evolves_from": {
+      "ja": "マーイーカ"
+    },
     "attacks": [
       {
         "name": {
+          "ja": "けったくテンタクル",
           "zh-TW": "勾結觸手"
         },
         "cost": [
@@ -2172,11 +2807,13 @@
         ],
         "damage": "",
         "text": {
+          "ja": "相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。その後、新しく出てきたポケモンに120ダメージ。この番、手札から「クセロシキのたくらみ」を出して使っていないなら、このワザは失敗。",
           "zh-TW": "選擇1隻對手的備戰寶可夢，與戰鬥寶可夢互換。然後，新上場的寶可夢受到120點傷害。在這個回合，若沒有從手牌使出「‌‌庫瑟洛斯奇的企圖」，則這個招式失敗。"
         }
       },
       {
         "name": {
+          "ja": "かいてんアタック",
           "zh-TW": "迴轉攻擊"
         },
         "cost": [
@@ -2196,6 +2833,7 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
+      "ja": "発光体の 光を 見つめると たちまち 催眠状態になり カラマネロに 操られてしまう。",
       "zh-TW": "要是盯著牠的發光體看， 就會馬上陷入催眠狀態， 並且受到牠的控制。"
     }
   },
@@ -2205,6 +2843,7 @@
     "number": "035",
     "category": "pokemon",
     "name": {
+      "ja": "イベルタル",
       "zh-TW": "伊裴爾塔爾"
     },
     "pokemon": [
@@ -2220,6 +2859,19 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773784,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.03,
+          "low": 0.02,
+          "trend": 0.02,
+          "average_1d": 0.03,
+          "average_7d": 0.03,
+          "average_30d": 0.04,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773784"
         }
       }
     ],
@@ -2231,6 +2883,7 @@
     "attacks": [
       {
         "name": {
+          "ja": "むしばむかぜ",
           "zh-TW": "侵蝕之風"
         },
         "cost": [
@@ -2238,11 +2891,13 @@
         ],
         "damage": "",
         "text": {
+          "ja": "ダメカンがのっている相手のポケモン全員に、それぞれダメカンを2個のせる。",
           "zh-TW": "在對手的身上放置有傷害指示物的所有寶可夢身上，各放置2個傷害指示物。"
         }
       },
       {
         "name": {
+          "ja": "はかいビーム",
           "zh-TW": "破壞光束"
         },
         "cost": [
@@ -2252,6 +2907,7 @@
         ],
         "damage": "100",
         "text": {
+          "ja": "コインを1回投げオモテなら、相手のバトルポケモンについているエネルギーを1個選び、トラッシュする。",
           "zh-TW": "擲1次硬幣若為正面，則選擇1個對手的戰鬥寶可夢身上附加的能量，將其丟棄。"
         }
       }
@@ -2270,6 +2926,7 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
+      "ja": "翼と 尾羽を 広げて 赤く 輝くとき 生き物の 命を 吸い取る 伝説の ポケモン。",
       "zh-TW": "傳說的寶可夢。據說當牠 展開的翅膀與尾羽閃耀紅色光芒時， 就會吸走生物的生命。"
     }
   },
@@ -2279,19 +2936,35 @@
     "number": "036",
     "category": "pokemon",
     "name": {
+      "ja": "イイネイヌex",
       "zh-TW": "夠讚狗ex"
     },
-    "pokemon": [],
+    "pokemon": [
+      "1014"
+    ],
     "illustrator": "takuyoa",
     "rarity": "double_rare",
     "regulation_mark": "H",
     "variants": [
       {
-        "id": "normal",
-        "type": "normal",
+        "id": "holo",
+        "type": "holo",
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773785,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.27,
+          "low": 0.02,
+          "trend": 0.25,
+          "average_1d": 0.22,
+          "average_7d": 0.23,
+          "average_30d": 0.24,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773785"
         }
       }
     ],
@@ -2304,6 +2977,7 @@
     "attacks": [
       {
         "name": {
+          "ja": "ポイズンマッスル",
           "zh-TW": "猛毒筋力"
         },
         "cost": [
@@ -2311,11 +2985,13 @@
         ],
         "damage": "",
         "text": {
+          "ja": "自分の山札から「基本[D]エネルギー」を2枚まで選び、このポケモンにつける。そして山札を切る。つけた場合、このポケモンをどくにする。",
           "zh-TW": "從自己的牌庫選擇最多2張「基本【惡】能量」卡，附於這隻寶可夢身上。並且重洗牌庫。附上卡的情況下，將這隻寶可夢【中毒】。"
         }
       },
       {
         "name": {
+          "ja": "クレイジーチェーン",
           "zh-TW": "瘋狂連鎖"
         },
         "cost": [
@@ -2325,6 +3001,7 @@
         ],
         "damage": "130+",
         "text": {
+          "ja": "このポケモンがどくなら、130ダメージ追加。",
           "zh-TW": "若這隻寶可夢【中毒】，則增加130點傷害。"
         }
       }
@@ -2343,19 +3020,35 @@
     "number": "037",
     "category": "pokemon",
     "name": {
+      "ja": "マシマシラex",
       "zh-TW": "願增猿ex"
     },
-    "pokemon": [],
+    "pokemon": [
+      "1015"
+    ],
     "illustrator": "takuyoa",
     "rarity": "double_rare",
     "regulation_mark": "H",
     "variants": [
       {
-        "id": "normal",
-        "type": "normal",
+        "id": "holo",
+        "type": "holo",
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773786,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.26,
+          "low": 0.04,
+          "trend": 0.23,
+          "average_1d": 0.24,
+          "average_7d": 0.22,
+          "average_30d": 0.24,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773786"
         }
       }
     ],
@@ -2368,17 +3061,8 @@
     "attacks": [
       {
         "name": {
+          "ja": "ダーティヘッド",
           "zh-TW": "‌[特性]鬆口氣"
-        },
-        "cost": [],
-        "damage": "",
-        "text": {
-          "zh-TW": "這隻寶可夢受到對手的寶可夢招式的傷害而【昏厥】時，若自己的場上有「桃歹郎ex」，則被獲得的獎賞卡減少1張。"
-        }
-      },
-      {
-        "name": {
-          "zh-TW": "惡劣頭擊"
         },
         "cost": [
           "dark",
@@ -2387,7 +3071,8 @@
         ],
         "damage": "190",
         "text": {
-          "zh-TW": "在下個自己的回合，這隻寶可夢無法使用「惡劣頭擊」。"
+          "ja": "次の自分の番、このポケモンは「ダーティヘッド」が使えない。",
+          "zh-TW": "這隻寶可夢受到對手的寶可夢招式的傷害而【昏厥】時，若自己的場上有「桃歹郎ex」，則被獲得的獎賞卡減少1張。"
         }
       }
     ],
@@ -2405,19 +3090,35 @@
     "number": "038",
     "category": "pokemon",
     "name": {
+      "ja": "キチキギスex",
       "zh-TW": "吉雉雞ex"
     },
-    "pokemon": [],
+    "pokemon": [
+      "1016"
+    ],
     "illustrator": "takuyoa",
     "rarity": "double_rare",
     "regulation_mark": "H",
     "variants": [
       {
-        "id": "normal",
-        "type": "normal",
+        "id": "holo",
+        "type": "holo",
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773787,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.26,
+          "low": 0.02,
+          "trend": 0.39,
+          "average_1d": 1.25,
+          "average_7d": 0.36,
+          "average_30d": 0.26,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773787"
         }
       }
     ],
@@ -2430,17 +3131,8 @@
     "attacks": [
       {
         "name": {
+          "ja": "クルーエルアロー",
           "zh-TW": "‌‌[特性]扭轉乾坤"
-        },
-        "cost": [],
-        "damage": "",
-        "text": {
-          "zh-TW": "在上個對手的回合，若自己的寶可夢【昏厥】了，則在自己的回合時可使用1次。從自己的牌庫抽出3張卡。在這個回合，若已經使出了其他的「扭轉乾坤」，則這個特性無法使用。"
-        }
-      },
-      {
-        "name": {
-          "zh-TW": "殘酷箭"
         },
         "cost": [
           "normal",
@@ -2449,7 +3141,8 @@
         ],
         "damage": "",
         "text": {
-          "zh-TW": "對手的1隻寶可夢受到100點傷害。[在備戰區不計算弱點・抵抗力。]"
+          "ja": "相手のポケモン1匹に、100ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+          "zh-TW": "在上個對手的回合，若自己的寶可夢【昏厥】了，則在自己的回合時可使用1次。從自己的牌庫抽出3張卡。在這個回合，若已經使出了其他的「扭轉乾坤」，則這個特性無法使用。"
         }
       }
     ],
@@ -2467,19 +3160,35 @@
     "number": "039",
     "category": "pokemon",
     "name": {
+      "ja": "モモワロウex",
       "zh-TW": "桃歹郎ex"
     },
-    "pokemon": [],
+    "pokemon": [
+      "1025"
+    ],
     "illustrator": "aky CG Works",
     "rarity": "double_rare",
     "regulation_mark": "H",
     "variants": [
       {
-        "id": "normal",
-        "type": "normal",
+        "id": "holo",
+        "type": "holo",
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773788,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.28,
+          "low": 0.03,
+          "trend": 0.21,
+          "average_1d": 0.06,
+          "average_7d": 0.21,
+          "average_30d": 0.27,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773788"
         }
       }
     ],
@@ -2492,17 +3201,8 @@
     "attacks": [
       {
         "name": {
+          "ja": "イライラバースト",
           "zh-TW": "‌‌[特性]支配鎖鏈"
-        },
-        "cost": [],
-        "damage": "",
-        "text": {
-          "zh-TW": "在自己的回合時可使用1次。選擇1隻自己的備戰區的【惡】寶可夢（「桃歹郎ex」除外），與戰鬥寶可夢互換。然後，將新的戰鬥寶可夢【中毒】。在這個回合，若已經使出了其他的「支配鎖鏈」，則這個特性無法使用。"
-        }
-      },
-      {
-        "name": {
-          "zh-TW": "煩煩爆炸"
         },
         "cost": [
           "dark",
@@ -2510,7 +3210,8 @@
         ],
         "damage": "60×",
         "text": {
-          "zh-TW": "造成對手已經獲得的獎賞卡的張數×60點傷害。"
+          "ja": "相手がすでにとったサイドの枚数×60ダメージ。",
+          "zh-TW": "在自己的回合時可使用1次。選擇1隻自己的備戰區的【惡】寶可夢（「桃歹郎ex」除外），與戰鬥寶可夢互換。然後，將新的戰鬥寶可夢【中毒】。在這個回合，若已經使出了其他的「支配鎖鏈」，則這個特性無法使用。"
         }
       }
     ],
@@ -2528,9 +3229,12 @@
     "number": "040",
     "category": "pokemon",
     "name": {
+      "ja": "ゲノセクト",
       "zh-TW": "蓋諾賽克特"
     },
-    "pokemon": [],
+    "pokemon": [
+      "0649"
+    ],
     "illustrator": "Kazumasa Yasukuni",
     "rarity": "uncommon",
     "regulation_mark": "H",
@@ -2541,6 +3245,19 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773789,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.1,
+          "low": 0.02,
+          "trend": 0.06,
+          "average_1d": 0.02,
+          "average_7d": 0.06,
+          "average_30d": 0.04,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773789"
         }
       }
     ],
@@ -2552,17 +3269,8 @@
     "attacks": [
       {
         "name": {
+          "ja": "マグネブラスト",
           "zh-TW": "‌‌[特性]ACE消弭"
-        },
-        "cost": [],
-        "damage": "",
-        "text": {
-          "zh-TW": "若這隻寶可夢附有「寶可夢道具」卡，則對手無法從手牌使出「【ACE SPEC】」卡。"
-        }
-      },
-      {
-        "name": {
-          "zh-TW": "磁力爆破"
         },
         "cost": [
           "metal",
@@ -2587,6 +3295,7 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
+      "ja": "プラズマ団によって 改造された 古代の むしポケモン。 背中の 大砲が パワーアップした。",
       "zh-TW": "被等離子隊改造過的 古代的蟲寶可夢。 背上的大砲力量得到了提升。"
     }
   },
@@ -2596,6 +3305,7 @@
     "number": "041",
     "category": "pokemon",
     "name": {
+      "ja": "ゾウドウ",
       "zh-TW": "銅象"
     },
     "pokemon": [
@@ -2611,6 +3321,19 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773790,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.02,
+          "low": 0.02,
+          "trend": 0.05,
+          "average_1d": 0.03,
+          "average_7d": 0.03,
+          "average_30d": 0.03,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773790"
         }
       }
     ],
@@ -2622,6 +3345,7 @@
     "attacks": [
       {
         "name": {
+          "ja": "たいあたり",
           "zh-TW": "撞擊"
         },
         "cost": [
@@ -2633,6 +3357,7 @@
       },
       {
         "name": {
+          "ja": "がちんこ",
           "zh-TW": "正面對決"
         },
         "cost": [
@@ -2658,6 +3383,7 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
+      "ja": "５トンの 荷物を 持ち上げられる。 朝になると 群れで 洞窟へと 向かい エサの 鉱石を 探す。",
       "zh-TW": "能夠舉起重達５噸的貨物。 天一亮就會成群結隊 前往洞窟找礦石來吃。"
     }
   },
@@ -2667,19 +3393,35 @@
     "number": "042",
     "category": "pokemon",
     "name": {
+      "ja": "ダイオウドウ",
       "zh-TW": "大王銅象"
     },
-    "pokemon": [],
+    "pokemon": [
+      "0879"
+    ],
     "illustrator": "kawayoo",
     "rarity": "rare",
     "regulation_mark": "H",
     "variants": [
       {
-        "id": "normal",
-        "type": "normal",
+        "id": "holo",
+        "type": "holo",
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773791,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.11,
+          "low": 0.02,
+          "trend": 0.14,
+          "average_1d": 0.03,
+          "average_7d": 0.13,
+          "average_30d": 0.1,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773791"
         }
       }
     ],
@@ -2688,20 +3430,14 @@
       "metal"
     ],
     "stage": "stage1",
+    "evolves_from": {
+      "ja": "ゾウドウ"
+    },
     "attacks": [
       {
         "name": {
+          "ja": "ノーズラリアット",
           "zh-TW": "‌‌[特性]爆大身軀"
-        },
-        "cost": [],
-        "damage": "",
-        "text": {
-          "zh-TW": "只要這隻寶可夢在戰鬥場上，對手無法從手牌使出競技場卡。"
-        }
-      },
-      {
-        "name": {
-          "zh-TW": "鼻之金勾臂"
         },
         "cost": [
           "metal",
@@ -2711,7 +3447,8 @@
         ],
         "damage": "130+",
         "text": {
-          "zh-TW": "若希望，增加100點傷害。這個情況下，在下個自己的回合，這隻寶可夢無法使用招式。"
+          "ja": "のぞむなら、100ダメージ追加。その場合、次の自分の番、このポケモンはワザが使えない。",
+          "zh-TW": "只要這隻寶可夢在戰鬥場上，對手無法從手牌使出競技場卡。"
         }
       }
     ],
@@ -2729,6 +3466,7 @@
     ],
     "retreat_cost": 4,
     "flavor_text": {
+      "ja": "プライドが 高く 気難しい。 鮮やかな 緑の 皮膚の ものが 仲間の 尊敬を 集める。",
       "zh-TW": "自尊心強，脾氣刁鑽。 皮膚的綠色越是鮮豔， 就越受到同伴的尊敬。"
     }
   },
@@ -2738,6 +3476,7 @@
     "number": "043",
     "category": "pokemon",
     "name": {
+      "ja": "ブロロン",
       "zh-TW": "噗隆隆"
     },
     "pokemon": [
@@ -2753,6 +3492,19 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773792,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.04,
+          "low": 0.02,
+          "trend": 0.03,
+          "average_1d": 0.02,
+          "average_7d": 0.04,
+          "average_30d": 0.02,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773792"
         }
       }
     ],
@@ -2764,6 +3516,7 @@
     "attacks": [
       {
         "name": {
+          "ja": "こうちょく",
           "zh-TW": "硬化"
         },
         "cost": [
@@ -2771,11 +3524,13 @@
         ],
         "damage": "",
         "text": {
+          "ja": "次の相手の番、このポケモンが受けるワザのダメージは「-30」される。",
           "zh-TW": "在下個對手的回合，這隻寶可夢受到招式的傷害「-30」點。"
         }
       },
       {
         "name": {
+          "ja": "とびだしヘッド",
           "zh-TW": "魯莽頭擊"
         },
         "cost": [
@@ -2800,6 +3555,7 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
+      "ja": "鋼の 体が 本体。 岩に 張りつき その成分を エネルギーに 変えて 活動する。",
       "zh-TW": "鋼鐵身軀才是本體。 會貼在岩石上將其成分 轉換成活動用的能量。"
     }
   },
@@ -2809,9 +3565,12 @@
     "number": "044",
     "category": "pokemon",
     "name": {
+      "ja": "キバゴ",
       "zh-TW": "牙牙"
     },
-    "pokemon": [],
+    "pokemon": [
+      "0610"
+    ],
     "illustrator": "Orca",
     "rarity": "common",
     "regulation_mark": "H",
@@ -2822,6 +3581,19 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773793,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.03,
+          "low": 0.02,
+          "trend": 0.04,
+          "average_1d": 0.02,
+          "average_7d": 0.03,
+          "average_30d": 0.03,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773793"
         }
       }
     ],
@@ -2833,6 +3605,7 @@
     "attacks": [
       {
         "name": {
+          "ja": "ひっかく",
           "zh-TW": "抓"
         },
         "cost": [
@@ -2843,6 +3616,7 @@
       },
       {
         "name": {
+          "ja": "するどいキバ",
           "zh-TW": "銳利之牙"
         },
         "cost": [
@@ -2855,6 +3629,7 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
+      "ja": "岩や 樹木に 独特の 歯形を 見かけたら 近くに キバゴが 棲んでいるはずだ。",
       "zh-TW": "如果在岩石或樹木上 發現了獨特的齒痕， 附近一定棲息著牙牙。"
     }
   },
@@ -2864,9 +3639,12 @@
     "number": "045",
     "category": "pokemon",
     "name": {
+      "ja": "オノンド",
       "zh-TW": "斧牙龍"
     },
-    "pokemon": [],
+    "pokemon": [
+      "0611"
+    ],
     "illustrator": "Uninori",
     "rarity": "common",
     "regulation_mark": "H",
@@ -2877,6 +3655,19 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773794,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.04,
+          "low": 0.02,
+          "trend": 0.1,
+          "average_1d": 0.19,
+          "average_7d": 0.11,
+          "average_30d": 0.05,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773794"
         }
       }
     ],
@@ -2885,9 +3676,13 @@
       "dragon"
     ],
     "stage": "stage1",
+    "evolves_from": {
+      "ja": "キバゴ"
+    },
     "attacks": [
       {
         "name": {
+          "ja": "りゅうのはどう",
           "zh-TW": "龍之波動"
         },
         "cost": [
@@ -2896,12 +3691,14 @@
         ],
         "damage": "80",
         "text": {
+          "ja": "自分の山札を上から1枚トラッシュする。",
           "zh-TW": "將自己的牌庫上方1張卡丟棄。"
         }
       }
     ],
     "retreat_cost": 2,
     "flavor_text": {
+      "ja": "太い キバを 使って 獲物を きれいに 捌いて 食べるものと 保存する ものに 分けるのだ。",
       "zh-TW": "會使用粗壯的牙齒俐落地 分解獵物，然後把當下 要吃的份與存糧的份分開。"
     }
   },
@@ -2911,19 +3708,35 @@
     "number": "046",
     "category": "pokemon",
     "name": {
+      "ja": "オノノクス",
       "zh-TW": "雙斧戰龍"
     },
-    "pokemon": [],
+    "pokemon": [
+      "0612"
+    ],
     "illustrator": "Tsuyoshi Nagano",
     "rarity": "rare",
     "regulation_mark": "H",
     "variants": [
       {
-        "id": "normal",
-        "type": "normal",
+        "id": "holo",
+        "type": "holo",
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773795,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.28,
+          "low": 0.02,
+          "trend": 0.13,
+          "average_1d": 0.07,
+          "average_7d": 0.17,
+          "average_30d": 0.1,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773795"
         }
       }
     ],
@@ -2932,9 +3745,13 @@
       "dragon"
     ],
     "stage": "stage2",
+    "evolves_from": {
+      "ja": "オノンド"
+    },
     "attacks": [
       {
         "name": {
+          "ja": "アックスダウン",
           "zh-TW": "斧擊在地"
         },
         "cost": [
@@ -2942,11 +3759,13 @@
         ],
         "damage": "",
         "text": {
+          "ja": "相手のバトルポケモンに特殊エネルギーがついているなら、そのポケモンをきぜつさせる。",
           "zh-TW": "若對手的戰鬥寶可夢身上附有特殊能量卡，則將那隻寶可夢【昏厥】。"
         }
       },
       {
         "name": {
+          "ja": "りゅうのはどう",
           "zh-TW": "龍之波動"
         },
         "cost": [
@@ -2955,12 +3774,14 @@
         ],
         "damage": "230",
         "text": {
+          "ja": "自分の山札を上から3枚トラッシュする。",
           "zh-TW": "將自己的牌庫上方3張卡丟棄。"
         }
       }
     ],
     "retreat_cost": 2,
     "flavor_text": {
+      "ja": "自慢の キバで 敵を 圧倒。 鉄塔を 一刀のもとに 切り捨てる 切れ味を 誇る。",
       "zh-TW": "會以自傲的牙齒壓制敵人。 牙齒的鋒利程度無與倫比， 就連鐵塔都能夠一斬而斷。"
     }
   },
@@ -2970,9 +3791,12 @@
     "number": "047",
     "category": "pokemon",
     "name": {
+      "ja": "キュレム",
       "zh-TW": "酋雷姆"
     },
-    "pokemon": [],
+    "pokemon": [
+      "0646"
+    ],
     "illustrator": "Shiburingaru",
     "rarity": "uncommon",
     "regulation_mark": "H",
@@ -2983,6 +3807,19 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773796,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.03,
+          "low": 0.02,
+          "trend": 0.04,
+          "average_1d": 0.03,
+          "average_7d": 0.03,
+          "average_30d": 0.04,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773796"
         }
       }
     ],
@@ -2994,17 +3831,8 @@
     "attacks": [
       {
         "name": {
+          "ja": "トライフロスト",
           "zh-TW": "‌‌[特性]反等離子"
-        },
-        "cost": [],
-        "damage": "",
-        "text": {
-          "zh-TW": "若對手的棄牌區有‌名稱中有「‌阿克羅瑪」的卡，則這隻寶可夢使用「‌三重冰霜」所需的能量，改為1個【無】能量。"
-        }
-      },
-      {
-        "name": {
-          "zh-TW": "三重冰霜"
         },
         "cost": [
           "water",
@@ -3015,12 +3843,14 @@
         ],
         "damage": "",
         "text": {
-          "zh-TW": "將這隻寶可夢身上附加的能量卡全部丟棄，對手的3隻寶可夢各受到110點傷害。[在備戰區不計算弱點・抵抗力。]"
+          "ja": "このポケモンについているエネルギーをすべてトラッシュし、相手のポケモン3匹に、それぞれ110ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+          "zh-TW": "若對手的棄牌區有‌名稱中有「‌阿克羅瑪」的卡，則這隻寶可夢使用「‌三重冰霜」所需的能量，改為1個【無】能量。"
         }
       }
     ],
     "retreat_cost": 2,
     "flavor_text": {
+      "ja": "レシラムと ゼクロムを 凌ぐほどの 力を もつが 極低温の 冷気で 封じられてしまっている。",
       "zh-TW": "雖然擁有凌駕於萊希拉姆和 捷克羅姆之上的力量，但是那 力量已被極低溫冷氣封住了。"
     }
   },
@@ -3030,6 +3860,7 @@
     "number": "048",
     "category": "pokemon",
     "name": {
+      "ja": "ニャース",
       "zh-TW": "喵喵"
     },
     "pokemon": [
@@ -3045,6 +3876,19 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773797,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.03,
+          "low": 0.02,
+          "trend": 0.03,
+          "average_1d": 0.05,
+          "average_7d": 0.03,
+          "average_30d": 0.03,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773797"
         }
       }
     ],
@@ -3056,6 +3900,7 @@
     "attacks": [
       {
         "name": {
+          "ja": "みだれひっかき",
           "zh-TW": "亂抓"
         },
         "cost": [
@@ -3064,6 +3909,7 @@
         ],
         "damage": "20×",
         "text": {
+          "ja": "コインを3回投げ、オモテの数×20ダメージ。",
           "zh-TW": "擲3次硬幣，造成正面出現的次數×20點傷害。"
         }
       }
@@ -3076,6 +3922,7 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
+      "ja": "眩しく 光るものが 大好き。 光るものを 見つけたとき なぜか 額の小判も 輝く。",
       "zh-TW": "非常喜歡耀眼的發光物。 找到發光物時，不知為何 額頭的金幣也會跟著發光。"
     }
   },
@@ -3085,6 +3932,7 @@
     "number": "049",
     "category": "pokemon",
     "name": {
+      "ja": "ペルシアン",
       "zh-TW": "貓老大"
     },
     "pokemon": [
@@ -3100,6 +3948,19 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773798,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.05,
+          "low": 0.02,
+          "trend": 0.04,
+          "average_1d": 0.05,
+          "average_7d": 0.04,
+          "average_30d": 0.03,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773798"
         }
       }
     ],
@@ -3108,9 +3969,13 @@
       "normal"
     ],
     "stage": "stage1",
+    "evolves_from": {
+      "ja": "ニャース"
+    },
     "attacks": [
       {
         "name": {
+          "ja": "みだれひっかき",
           "zh-TW": "亂抓"
         },
         "cost": [
@@ -3119,11 +3984,13 @@
         ],
         "damage": "50×",
         "text": {
+          "ja": "コインを3回投げ、オモテの数×50ダメージ。",
           "zh-TW": "擲3次硬幣，造成正面出現的次數×50點傷害。"
         }
       },
       {
         "name": {
+          "ja": "スラッシュクロー",
           "zh-TW": "利爪揮砍"
         },
         "cost": [
@@ -3143,6 +4010,7 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
+      "ja": "気性が 激しく 尻尾を まっすぐ 立てたら 要注意。 とびかかって 噛みつく 前触れだ。",
       "zh-TW": "性情凶暴，豎起尾巴時 要多加小心。那是牠將 飛撲過來咬你的前兆。"
     }
   },
@@ -3152,6 +4020,7 @@
     "number": "050",
     "category": "pokemon",
     "name": {
+      "ja": "イーブイ",
       "zh-TW": "伊布"
     },
     "pokemon": [
@@ -3167,6 +4036,19 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773799,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.05,
+          "low": 0.02,
+          "trend": 0.04,
+          "average_1d": 0.03,
+          "average_7d": 0.06,
+          "average_30d": 0.06,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773799"
         }
       }
     ],
@@ -3178,6 +4060,7 @@
     "attacks": [
       {
         "name": {
+          "ja": "カラフルキャッチ",
           "zh-TW": "鮮豔捕捉"
         },
         "cost": [
@@ -3185,11 +4068,13 @@
         ],
         "damage": "",
         "text": {
+          "ja": "自分の山札から、それぞれちがうタイプの基本エネルギーを3枚まで選び、相手に見せて、手札に加える。そして山札を切る。",
           "zh-TW": "從自己的牌庫選擇最多3張各不同屬性的基本能量卡，在給對手看過後加入手牌。並且重洗牌庫。"
         }
       },
       {
         "name": {
+          "ja": "ずつき",
           "zh-TW": "頭錘"
         },
         "cost": [
@@ -3208,6 +4093,7 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
+      "ja": "不規則な 遺伝子を 持つ。 石から出る 放射線によって 体が 突然変異を 起こす。",
       "zh-TW": "有著不規則的基因。 石頭散發出的放射線， 會使牠的身體發生突變。"
     }
   },
@@ -3217,6 +4103,7 @@
     "number": "051",
     "category": "pokemon",
     "name": {
+      "ja": "トリミアン",
       "zh-TW": "多麗米亞"
     },
     "pokemon": [
@@ -3232,6 +4119,19 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773800,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": null,
+          "low": 0.02,
+          "trend": 0.03,
+          "average_1d": 0.02,
+          "average_7d": 0.03,
+          "average_30d": 0.03,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773800"
         }
       }
     ],
@@ -3243,6 +4143,7 @@
     "attacks": [
       {
         "name": {
+          "ja": "エネアシスト",
           "zh-TW": "能量支援"
         },
         "cost": [
@@ -3250,6 +4151,7 @@
         ],
         "damage": "30",
         "text": {
+          "ja": "自分のトラッシュから基本エネルギーを1枚選び、ベンチポケモンにつける。",
           "zh-TW": "從自己的棄牌區選擇1張基本能量卡，附於備戰寶可夢身上。"
         }
       }
@@ -3262,6 +4164,7 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
+      "ja": "ボサボサの 体毛を 刈りこむと 姿が 美しくなる だけでなく 身体の キレが 良くなるのだ。",
       "zh-TW": "修整好蓬亂的體毛後， 不只是模樣變得美麗， 就連身體也會變得更敏捷。"
     }
   },
@@ -3271,9 +4174,12 @@
     "number": "052",
     "category": "pokemon",
     "name": {
+      "ja": "ヌイコグマ",
       "zh-TW": "童偶熊"
     },
-    "pokemon": [],
+    "pokemon": [
+      "0759"
+    ],
     "illustrator": "ryoma uratsuka",
     "rarity": "common",
     "regulation_mark": "H",
@@ -3284,6 +4190,19 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773801,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.04,
+          "low": 0.02,
+          "trend": 0.06,
+          "average_1d": 0.09,
+          "average_7d": 0.06,
+          "average_30d": 0.04,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773801"
         }
       }
     ],
@@ -3295,6 +4214,7 @@
     "attacks": [
       {
         "name": {
+          "ja": "とっしん",
           "zh-TW": "猛撞"
         },
         "cost": [
@@ -3302,6 +4222,7 @@
         ],
         "damage": "30",
         "text": {
+          "ja": "このポケモンにも10ダメージ。",
           "zh-TW": "這隻寶可夢也受到10點傷害。"
         }
       }
@@ -3314,6 +4235,7 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
+      "ja": "ふわふわの 毛並みは 触り心地が 抜群だが うかつに 手を だすと 手痛い 反撃を 受けてしまう。",
       "zh-TW": "毛茸茸的毛皮摸起來觸感超群， 但粗心大意地向牠伸出手的人 基本上都會遭到牠的劇烈反擊。"
     }
   },
@@ -3323,9 +4245,12 @@
     "number": "053",
     "category": "pokemon",
     "name": {
+      "ja": "キテルグマ",
       "zh-TW": "穿著熊"
     },
-    "pokemon": [],
+    "pokemon": [
+      "0760"
+    ],
     "illustrator": "Takeshi Nakamura",
     "rarity": "common",
     "regulation_mark": "H",
@@ -3336,6 +4261,19 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773802,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.03,
+          "low": 0.02,
+          "trend": 0.03,
+          "average_1d": 0.03,
+          "average_7d": 0.03,
+          "average_30d": 0.03,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773802"
         }
       }
     ],
@@ -3344,9 +4282,13 @@
       "normal"
     ],
     "stage": "stage1",
+    "evolves_from": {
+      "ja": "ヌイコグマ"
+    },
     "attacks": [
       {
         "name": {
+          "ja": "パワーチャージ",
           "zh-TW": "力量充能"
         },
         "cost": [
@@ -3354,11 +4296,13 @@
         ],
         "damage": "30",
         "text": {
+          "ja": "自分の山札から基本エネルギーを1枚選び、このポケモンにつける。そして山札を切る。",
           "zh-TW": "從自己的牌庫選擇1張基本能量卡，附於這隻寶可夢身上。並且重洗牌庫。"
         }
       },
       {
         "name": {
+          "ja": "ぶちかます",
           "zh-TW": "頭突"
         },
         "cost": [
@@ -3378,6 +4322,7 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
+      "ja": "仲間と 認めると 愛情を 示すために 抱きしめようとするが 骨を 砕かれるので 危険。",
       "zh-TW": "如果牠認定你是牠的夥伴， 便會試著擁抱你來表示喜愛。 但這會弄碎你的骨頭，非常危險。"
     }
   },
@@ -3387,6 +4332,7 @@
     "number": "054",
     "category": "trainer",
     "name": {
+      "ja": "デンジャラス光線",
       "zh-TW": "危險光線"
     },
     "pokemon": [],
@@ -3395,16 +4341,30 @@
     "regulation_mark": "H",
     "variants": [
       {
-        "id": "normal",
-        "type": "normal",
+        "id": "holo",
+        "type": "holo",
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773803,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.19,
+          "low": 0.02,
+          "trend": 0.2,
+          "average_1d": 0.2,
+          "average_7d": 0.23,
+          "average_30d": 0.22,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773803"
         }
       }
     ],
     "trainer_type": "item",
     "rules_text": {
+      "ja": "相手のバトルポケモンをやけどとこんらんにする。",
       "zh-TW": "將對手的戰鬥寶可夢【灼傷】與【混亂】。"
     }
   },
@@ -3414,6 +4374,7 @@
     "number": "055",
     "category": "trainer",
     "name": {
+      "ja": "ポケバイタルA",
       "zh-TW": "寶可生機劑A"
     },
     "pokemon": [],
@@ -3422,16 +4383,30 @@
     "regulation_mark": "H",
     "variants": [
       {
-        "id": "normal",
-        "type": "normal",
+        "id": "holo",
+        "type": "holo",
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773804,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.22,
+          "low": 0.02,
+          "trend": 0.14,
+          "average_1d": 0.13,
+          "average_7d": 0.18,
+          "average_30d": 0.38,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773804"
         }
       }
     ],
     "trainer_type": "item",
     "rules_text": {
+      "ja": "自分のポケモン1匹のHPを「150」回復する。このカードは、トラッシュにあるかぎり、手札に加えられず、山札にもどせない。",
       "zh-TW": "將自己的1隻寶可夢恢復「150」HP。 這張卡只要在棄牌區，無法加入手牌，無法放回牌庫。"
     }
   },
@@ -3441,6 +4416,7 @@
     "number": "056",
     "category": "trainer",
     "name": {
+      "ja": "夜のタンカ",
       "zh-TW": "夜間擔架"
     },
     "pokemon": [],
@@ -3454,11 +4430,25 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773805,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.07,
+          "low": 0.02,
+          "trend": 0.06,
+          "average_1d": 0.1,
+          "average_7d": 0.07,
+          "average_30d": 0.06,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773805"
         }
       }
     ],
     "trainer_type": "item",
     "rules_text": {
+      "ja": "自分のトラッシュからポケモンまたは基本エネルギーを1枚選び、相手に見せて、手札に加える。",
       "zh-TW": "從自己的棄牌區選擇1張寶可夢卡或者基本能量卡，在給對手看過後加入手牌。"
     }
   },
@@ -3468,6 +4458,7 @@
     "number": "057",
     "category": "trainer",
     "name": {
+      "ja": "くさりもち",
       "zh-TW": "鎖鏈糬"
     },
     "pokemon": [],
@@ -3481,11 +4472,25 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773806,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.07,
+          "low": 0.02,
+          "trend": 0.03,
+          "average_1d": 0.02,
+          "average_7d": 0.04,
+          "average_30d": 0.03,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773806"
         }
       }
     ],
     "trainer_type": "tool",
     "rules_text": {
+      "ja": "このカードをつけているどくのポケモンが使うワザの、相手のバトルポケモンへのダメージは「+40」される。",
       "zh-TW": "附有這張卡的【中毒】的寶可夢使用的招式，對對手的戰鬥寶可夢造成的傷害「+40」點。"
     }
   },
@@ -3495,6 +4500,7 @@
     "number": "058",
     "category": "trainer",
     "name": {
+      "ja": "力の砂時計",
       "zh-TW": "力之沙漏"
     },
     "pokemon": [],
@@ -3508,11 +4514,25 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773807,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.04,
+          "low": 0.02,
+          "trend": 0.04,
+          "average_1d": 0.02,
+          "average_7d": 0.03,
+          "average_30d": 0.03,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773807"
         }
       }
     ],
     "trainer_type": "tool",
     "rules_text": {
+      "ja": "自分の番の終わりに、このカードをつけているポケモンがバトル場にいるなら、自分のトラッシュから基本エネルギーを1枚選び、そのポケモンにつけてよい。",
       "zh-TW": "在自己的回合結束時，若附有這張卡的寶可夢在戰鬥場上，則可從自己的棄牌區選擇1張基本能量卡，附於那隻寶可夢身上。"
     }
   },
@@ -3522,6 +4542,7 @@
     "number": "059",
     "category": "trainer",
     "name": {
+      "ja": "アクロマの執念",
       "zh-TW": "阿克羅瑪的執著"
     },
     "pokemon": [],
@@ -3535,11 +4556,25 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773808,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.05,
+          "low": 0.02,
+          "trend": 0.04,
+          "average_1d": 0.03,
+          "average_7d": 0.04,
+          "average_30d": 0.03,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773808"
         }
       }
     ],
     "trainer_type": "supporter",
     "rules_text": {
+      "ja": "自分の山札からスタジアムとエネルギーを1枚ずつ選び、相手に見せて、手札に加える。そして山札を切る。",
       "zh-TW": "從自己的牌庫選擇競技場卡與能量卡各1張，在給對手看過後加入手牌。並且重洗牌庫。"
     }
   },
@@ -3549,6 +4584,7 @@
     "number": "060",
     "category": "trainer",
     "name": {
+      "ja": "アンズの秘技",
       "zh-TW": "阿杏的秘招"
     },
     "pokemon": [],
@@ -3562,11 +4598,25 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773809,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.02,
+          "low": 0.02,
+          "trend": 0.03,
+          "average_1d": 0.06,
+          "average_7d": 0.04,
+          "average_30d": 0.03,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773809"
         }
       }
     ],
     "trainer_type": "supporter",
     "rules_text": {
+      "ja": "自分の[D]ポケモンを2匹まで選び、自分の山札から「基本[D]エネルギー」を1枚ずつつける。そして山札を切る。バトルポケモンにつけた場合、そのポケモンをどくにする。",
       "zh-TW": "選擇最多2隻自己的【惡】寶可夢，從自己的牌庫附給那些寶可夢各1張「基本【惡】能量」卡。並且重洗牌庫。附於戰鬥寶可夢身上的情況下，將那隻寶可夢【中毒】。"
     }
   },
@@ -3576,6 +4626,7 @@
     "number": "061",
     "category": "trainer",
     "name": {
+      "ja": "カシオペア",
       "zh-TW": "仙后"
     },
     "pokemon": [],
@@ -3589,11 +4640,25 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773810,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.02,
+          "low": 0.02,
+          "trend": 0.04,
+          "average_1d": 0.02,
+          "average_7d": 0.04,
+          "average_30d": 0.03,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773810"
         }
       }
     ],
     "trainer_type": "supporter",
     "rules_text": {
+      "ja": "このカードは、自分の手札がこのカード1枚だけのときにしか使えない。自分の山札から好きなカードを2枚まで選び、手札に加える。そして山札を切る。",
       "zh-TW": "這張卡只有在自己的手牌只有這1張時才可使用。 從自己的牌庫任意選擇最多2張卡加入手牌。並且重洗牌庫。"
     }
   },
@@ -3603,6 +4668,7 @@
     "number": "062",
     "category": "trainer",
     "name": {
+      "ja": "クセロシキのたくらみ",
       "zh-TW": "庫瑟洛斯奇的企圖"
     },
     "pokemon": [],
@@ -3616,11 +4682,25 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773811,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.03,
+          "low": 0.02,
+          "trend": 0.03,
+          "average_1d": 0.02,
+          "average_7d": 0.03,
+          "average_30d": 0.04,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773811"
         }
       }
     ],
     "trainer_type": "supporter",
     "rules_text": {
+      "ja": "相手は相手自身の手札を、3枚になるようにトラッシュする。",
       "zh-TW": "對手將對手自己的手牌丟棄直到變為3張為止。"
     }
   },
@@ -3630,6 +4710,7 @@
     "number": "063",
     "category": "trainer",
     "name": {
+      "ja": "ニュートラルセンター",
       "zh-TW": "中立中心"
     },
     "pokemon": [],
@@ -3638,16 +4719,30 @@
     "regulation_mark": "H",
     "variants": [
       {
-        "id": "normal",
-        "type": "normal",
+        "id": "holo",
+        "type": "holo",
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773812,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.35,
+          "low": 0.05,
+          "trend": 0.47,
+          "average_1d": 0.99,
+          "average_7d": 0.41,
+          "average_30d": 0.39,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773812"
         }
       }
     ],
     "trainer_type": "stadium",
     "rules_text": {
+      "ja": "おたがいのポケモン（「ルールを持つポケモン」をのぞく）全員は、相手の「ポケモンex・V」からワザのダメージを受けない。このカードは、トラッシュにあるかぎり、手札に加えられず、山札にもどせない。",
       "zh-TW": "雙方的所有寶可夢（「擁有規則的寶可夢」除外），不會受到對手的「寶可夢【ex】・【V】」招式的傷害。 這張卡只要在棄牌區，無法加入手牌，無法放回牌庫。"
     }
   },
@@ -3657,6 +4752,7 @@
     "number": "064",
     "category": "trainer",
     "name": {
+      "ja": "夜のアカデミー",
       "zh-TW": "夜間學院"
     },
     "pokemon": [],
@@ -3670,11 +4766,25 @@
         "images": {
           "ja": "",
           "zh-TW": ""
+        },
+        "cardmarket": {
+          "product_id": 773813,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.05,
+          "low": 0.02,
+          "trend": 0.04,
+          "average_1d": 0.02,
+          "average_7d": 0.05,
+          "average_30d": 0.03,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=773813"
         }
       }
     ],
     "trainer_type": "stadium",
     "rules_text": {
+      "ja": "おたがいのプレイヤーは、自分の番ごとに1回、自分の手札を1枚選び、山札の上にもどしてよい。",
       "zh-TW": "雙方玩家在每個自己的回合時，可使用1次，可選擇1張自己的手牌，放回牌庫上方。"
     }
   },

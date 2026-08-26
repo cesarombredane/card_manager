@@ -101,7 +101,7 @@
           "es": "Perenne GX",
           "it": "Sempreverde GX",
           "pt-BR": "Perene GX",
-          "de": "Immergrün GX"
+          "de": "Immergrün-GX"
         },
         "cost": [
           "grass",
@@ -116,7 +116,7 @@
           "es": "Cura todos los puntos de daño a este Pokémon. Si este Pokémon tiene por lo menos 1 Energía Grass adicional unida a él (además de las del coste de este ataque), pon todas las cartas de tu pila de descartes en tu baraja y barájalas todas. (No puedes usar más de 1 ataque GX en una partida).",
           "it": "Cura questo Pokémon da tutti i danni. Se questo Pokémon ha almeno un’Energia Grass extra assegnata, in aggiunta a quelle del costo di questo attacco, rimischia tutte le carte dalla tua pila degli scarti nel tuo mazzo. Non puoi usare più di un attacco GX a partita.",
           "pt-BR": "Cure todo o dano deste Pokémon. Se este Pokémon tiver pelo menos 1 Energia Grass adicional ligada a ele (além do custo deste ataque), embaralhe todas as cartas da sua pilha de descarte no seu baralho (você não pode usar mais de 1 ataque GX por partida).",
-          "de": "Heile allen Schaden bei diesem Pokémon. Wenn an dieses Pokémon mindestens 1 extra Grass-Energie angelegt ist (zusätzlich zu den Kosten dieser Attacke), mische alle Karten aus deinem Ablagestapel in dein Deck. (Du kannst pro Spiel nur 1 GX-Attacke einsetzen.)"
+          "de": "Heile allen Schaden bei diesem Pokémon. Wenn an dieses Pokémon mindestens 1 extra {G}-Energie angelegt ist (zusätzlich zu den Kosten dieser Attacke), mische alle Karten aus deinem Ablagestapel in dein Deck. (Du kannst pro Spiel nur 1 GX-Attacke einsetzen.)"
         }
       }
     ],
@@ -202,19 +202,6 @@
           "pt-BR": "Este ataque causa 30 pontos de dano vezes a quantidade de Energia básica ligada a todos os seus Pokémon.",
           "de": "Diese Attacke fügt 30 Schadenspunkte mal der Anzahl der an alle deine Pokémon angelegten Basis-Energien zu."
         }
-      },
-      {
-        "name": {
-          "fr": "Tempête de Fleurs"
-        },
-        "cost": [
-          "grass",
-          "grass"
-        ],
-        "damage": "30×",
-        "text": {
-          "fr": "Cette attaque inflige 30 dégâts multipliés par le nombre d’Énergies de base attachées à tous vos Pokémon."
-        }
       }
     ],
     "weaknesses": [
@@ -225,7 +212,8 @@
     ],
     "retreat_cost": 0,
     "flavor_text": {
-      "en": "The blooming of Gracidea flowers confers the power of flight upon it. Feelings of gratitude are the message it delivers."
+      "en": "The blooming of Gracidea flowers confers the power of flight upon it. Feelings of gratitude are the message it delivers.",
+      "de": "Es heißt, wenn die Gracidea blühen, drückt es seine Dankbarkeit aus, indem es hoch in die Lüfte fliegt."
     }
   },
   {
@@ -311,7 +299,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Implements shaped like it were discovered in ancient tombs. It is unknown if they are related."
+      "en": "Implements shaped like it were discovered in ancient tombs. It is unknown if they are related.",
+      "de": "Sein Körper sieht aus, als seien Teile davon in alten Gräbern gefunden worden."
     }
   },
   {
@@ -367,7 +356,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Bronzor",
-      "fr": "Archéomire"
+      "fr": "Archéomire",
+      "de": "Bronzel"
     },
     "attacks": [
       {
@@ -409,7 +399,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "Ancient people believed that petitioning Bronzong for rain was the way to make crops grow."
+      "en": "Ancient people believed that petitioning Bronzong for rain was the way to make crops grow.",
+      "de": "Früher verehrten die Menschen die Bronzong, weil sie sich davon Regen oder gute Ernten erhofften."
     }
   },
   {
@@ -501,7 +492,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "It absorbs the iron it finds in the rock while clinging to the ceiling. It shoots spikes when in danger."
+      "en": "It absorbs the iron it finds in the rock while clinging to the ceiling. It shoots spikes when in danger.",
+      "de": "Hakt sich an der Decke von Höhlen fest und saugt die Mineralien aus dem Gestein. Bei Gefahr feuert es Dornen ab."
     }
   },
   {
@@ -557,7 +549,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Ferroseed",
-      "fr": "Grindur"
+      "fr": "Grindur",
+      "de": "Kastadur"
     },
     "attacks": [
       {
@@ -603,7 +596,7 @@
           "es": "Este ataque hace 20 puntos de daño por cada Energía Metal unida a este Pokémon a 1 de los Pokémon en Banca de tu rival. No puedes hacer más de 100 puntos de daño a 1 Pokémon en Banca de esta manera. (No apliques Debilidad y Resistencia a los Pokémon en Banca).",
           "it": "Questo attacco infligge 20 danni a uno dei Pokémon nella panchina del tuo avversario per ogni Energia Metal assegnata a questo Pokémon. Non puoi infliggere più di 100 danni a un Pokémon in panchina in questo modo. Ricorda che non puoi applicare debolezza e resistenza ai Pokémon in panchina.",
           "pt-BR": "Este ataque causa 20 pontos de dano vezes a quantidade de Energia Metal ligada a este Pokémon a 1 dos Pokémon no Banco do seu oponente. Você não pode causar mais de 100 pontos de dano a um Pokémon no Banco desta forma (não aplique Fraqueza e Resistência aos Pokémon no Banco).",
-          "de": "Diese Attacke fügt 1 Pokémon auf der Bank deines Gegners 20 Schadenspunkte mal der Anzahl der an dieses Pokémon angelegten Metal-Energien zu. Du kannst einem Pokémon auf der Bank auf diese Weise höchstens 100 Schadenspunkte zufügen. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
+          "de": "Diese Attacke fügt 1 Pokémon auf der Bank deines Gegners 20 Schadenspunkte mal der Anzahl der an dieses Pokémon angelegten {M}-Energien zu. Du kannst einem Pokémon auf der Bank auf diese Weise höchstens 100 Schadenspunkte zufügen. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
         }
       }
     ],
@@ -621,7 +614,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "They attach themselves to cave ceilings, firing steel spikes at targets passing beneath them."
+      "en": "They attach themselves to cave ceilings, firing steel spikes at targets passing beneath them.",
+      "de": "Es setzt sich an der Decke von Höhlen fest und wirft seine dornengespickten Schlingen auf vorbeigehende Beute ab."
     }
   },
   {
@@ -729,7 +723,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Ignoring their injuries, groups attack by sinking the blades that cover their bodies into their prey."
+      "en": "Ignoring their injuries, groups attack by sinking the blades that cover their bodies into their prey.",
+      "de": "Selbst wenn sie verletzt sind, greifen sie ihren Gegner unbeirrt in der Gruppe an, indem sie ihre Klingen in ihn hineinrammen."
     }
   },
   {
@@ -785,7 +780,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Pawniard",
-      "fr": "Scalpion"
+      "fr": "Scalpion",
+      "de": "Gladiantri"
     },
     "attacks": [
       {
@@ -842,7 +838,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "Bisharp pursues prey in the company of a large group of Pawniard. Then Bisharp finishes off the prey."
+      "en": "Bisharp pursues prey in the company of a large group of Pawniard. Then Bisharp finishes off the prey.",
+      "de": "Es rückt seinen Opfern mit einer Schar von Gladiantri im Gefolge auf den Pelz. Den letzten Hieb übernimmt es selbst."
     }
   },
   {
@@ -1046,7 +1043,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "If anyone dares to grab its hilt, it wraps a blue cloth around that person's arm and drains that person's life energy completely."
+      "en": "If anyone dares to grab its hilt, it wraps a blue cloth around that person's arm and drains that person's life energy completely.",
+      "de": "Es wickelt ein blaues Tuch um den Arm von Menschen, die seinen Schwertgriff ergreifen, und absorbiert deren Lebensenergie, bis sie zusammenbrechen."
     }
   },
   {
@@ -1102,7 +1100,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Honedge",
-      "fr": "Monorpale"
+      "fr": "Monorpale",
+      "de": "Gramokles"
     },
     "attacks": [
       {
@@ -1143,7 +1142,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "The complex attack patterns of its two swords are unstoppable, even for an opponent greatly accomplished at swordplay."
+      "en": "The complex attack patterns of its two swords are unstoppable, even for an opponent greatly accomplished at swordplay.",
+      "de": "Nicht einmal ein Meister des Schwertkampfs kann den komplizierten aufeinanderfolgenden Angriffen der zwei Schwerter ausweichen."
     }
   },
   {
@@ -1199,7 +1199,8 @@
     "stage": "stage2",
     "evolves_from": {
       "en": "Doublade",
-      "fr": "Dimoclès"
+      "fr": "Dimoclès",
+      "de": "Duokles"
     },
     "attacks": [
       {
@@ -1241,7 +1242,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "Apparently, it can detect the innate qualities of leadership. According to legend, whoever it recognizes is destined to become king."
+      "en": "Apparently, it can detect the innate qualities of leadership. According to legend, whoever it recognizes is destined to become king.",
+      "de": "Angeblich erkennt es jene Menschen, die Potenzial zum Herrscher haben. Es heißt, von ihm anerkannte Personen seien bald darauf Könige geworden."
     }
   },
   {
@@ -1343,7 +1345,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "The flame on its tail indicates Charmander's life force. If it is healthy, the flame burns brightly."
+      "en": "The flame on its tail indicates Charmander's life force. If it is healthy, the flame burns brightly.",
+      "de": "Die Flamme auf seiner Schweifspitze zeigt die Lebensenergie an. Ist es gesund, leuchtet sie hell."
     }
   },
   {
@@ -1429,7 +1432,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It never lets go of a key that it likes, so people give it the keys to vaults and safes as a way to prevent crime."
+      "en": "It never lets go of a key that it likes, so people give it the keys to vaults and safes as a way to prevent crime.",
+      "de": "Seinen Fortsatz steckt es gerne in metallene Zwischenräume, um Metall-Ionen abzusaugen. Sammelt aus unerfindlichen Gründen Schlüssel."
     }
   },
   {
@@ -1485,7 +1489,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Alolan Vulpix",
-      "fr": "Goupix d’Alola"
+      "fr": "Goupix d’Alola",
+      "de": "Alola-Vulpix"
     },
     "attacks": [
       {
@@ -1514,7 +1519,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It creates drops of ice in its coat and showers them over its enemies. Anyone who angers it will be frozen stiff in an instant."
+      "en": "It creates drops of ice in its coat and showers them over its enemies. Anyone who angers it will be frozen stiff in an instant.",
+      "de": "Es greift seine Feinde mittels Eiskristallen an, die es mit seinem Fell erzeugt. Wer es wütend macht, wird in Sekundenschnelle tiefgefroren."
     }
   },
   {
@@ -1617,7 +1623,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Its actual appearance is unknown. A scholar who saw what was under its rag was overwhelmed by terror and died from the shock."
+      "en": "Its actual appearance is unknown. A scholar who saw what was under its rag was overwhelmed by terror and died from the shock.",
+      "de": "Niemand weiß, wie es wirklich aussieht. Ein Forscher, der unter seinen Lumpen blickte, soll sich buchstäblich zu Tode erschreckt haben."
     }
   },
   {
@@ -1705,7 +1712,7 @@
           "es": "Unidad Aérea GX",
           "it": "Unità Aerea GX",
           "pt-BR": "Unidade Aérea GX",
-          "de": "Luftstaffel GX"
+          "de": "Luftstaffel-GX"
         },
         "cost": [
           "psychic"
@@ -1782,7 +1789,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Exeggcute",
-      "fr": "Noeunoeuf"
+      "fr": "Noeunoeuf",
+      "de": "Owei"
     },
     "attacks": [
       {
@@ -1816,7 +1824,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "As it grew taller and taller, it outgrew its reliance on psychic powers, while within it awakened the power of the sleeping dragon."
+      "en": "As it grew taller and taller, it outgrew its reliance on psychic powers, while within it awakened the power of the sleeping dragon.",
+      "de": "Der Wachstumsschub machte seine Psycho-Kräfte überflüssig. Stattdessen wurden die in ihm schlafenden Drachen-Kräfte geweckt."
     }
   },
   {
@@ -1872,7 +1881,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Exeggcute",
-      "fr": "Noeunoeuf"
+      "fr": "Noeunoeuf",
+      "de": "Owei"
     },
     "attacks": [
       {
@@ -1927,7 +1937,8 @@
     ],
     "retreat_cost": 4,
     "flavor_text": {
-      "en": "Exeggutor is the pride of the Alolan people. Its image is carved into historical buildings and murals."
+      "en": "Exeggutor is the pride of the Alolan people. Its image is carved into historical buildings and murals.",
+      "de": "Alola-Kokowei ist der ganze Stolz der Einwohner Alolas. Deshalb ziert sein Abbild auch sehr viele geschichtsträchtige Gemälde und Gebäude."
     }
   },
   {
@@ -2013,7 +2024,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "It's still weak, so it lurks on the floor of bodies of water, eating whatever food sinks down and living a quiet life."
+      "en": "It's still weak, so it lurks on the floor of bodies of water, eating whatever food sinks down and living a quiet life.",
+      "de": "Dratini ist noch schwach und lebt daher ruhig und verborgen in tiefen Gewässern. Es ernährt sich von allem, was über ihm versinkt."
     }
   },
   {
@@ -2092,7 +2104,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "It's still weak, so it lurks on the floor of bodies of water, eating whatever food sinks down and living a quiet life."
+      "en": "It's still weak, so it lurks on the floor of bodies of water, eating whatever food sinks down and living a quiet life.",
+      "de": "Dratini ist noch schwach und lebt daher ruhig und verborgen in tiefen Gewässern. Es ernährt sich von allem, was über ihm versinkt."
     }
   },
   {
@@ -2148,7 +2161,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Dratini",
-      "fr": "Minidraco"
+      "fr": "Minidraco",
+      "de": "Dratini"
     },
     "attacks": [
       {
@@ -2183,7 +2197,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "Lakes where Dragonair live are filled with offerings from people, because they believe this Pokémon is able to control the weather."
+      "en": "Lakes where Dragonair live are filled with offerings from people, because they believe this Pokémon is able to control the weather.",
+      "de": "Aufgrund der Annahme, es könne das Wetter beeinflussen, finden sich an Seen, die es bewohnt, viele Opfergaben."
     }
   },
   {
@@ -2239,7 +2254,8 @@
     "stage": "stage2",
     "evolves_from": {
       "en": "Dragonair",
-      "fr": "Draco"
+      "fr": "Draco",
+      "de": "Dragonir"
     },
     "attacks": [
       {
@@ -2268,7 +2284,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "It flies over raging seas as if they were nothing. Observing this, a ship's captain dubbed this Pokémon \"the sea incarnate.\""
+      "en": "It flies over raging seas as if they were nothing. Observing this, a ship's captain dubbed this Pokémon \"the sea incarnate.\"",
+      "de": "Es fliegt ohne Bedenken selbst über tosende Meere. Ein Schiffskapitän nannte es nach diesem Anblick die „Inkarnation des Meeres“."
     }
   },
   {
@@ -2354,7 +2371,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "The flame on its tail indicates Charmander's life force. If it is healthy, the flame burns brightly."
+      "en": "The flame on its tail indicates Charmander's life force. If it is healthy, the flame burns brightly.",
+      "de": "Die Flamme auf seiner Schweifspitze zeigt die Lebensenergie an. Ist es gesund, leuchtet sie hell."
     }
   },
   {
@@ -2464,7 +2482,7 @@
           "es": "Amigos Megatón GX",
           "it": "Amici Megatonici GX",
           "pt-BR": "Amigos Megaton GX",
-          "de": "Megatonnen-Freunde GX"
+          "de": "Megatonnen-Freunde-GX"
         },
         "cost": [
           "normal",
@@ -2596,7 +2614,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "A common sight in forests and woods. It flaps its wings at ground level to kick up blinding sand."
+      "en": "A common sight in forests and woods. It flaps its wings at ground level to kick up blinding sand.",
+      "de": "Ein vorwiegend in Wäldern lebendes Pokémon, das zur Verteidigung mit den Flügeln Sand aufwirbelt."
     }
   },
   {
@@ -2688,7 +2707,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "A common sight in forests and woods. It flaps its wings at ground level to kick up blinding sand."
+      "en": "A common sight in forests and woods. It flaps its wings at ground level to kick up blinding sand.",
+      "de": "Ein vorwiegend in Wäldern lebendes Pokémon, das zur Verteidigung mit den Flügeln Sand aufwirbelt."
     }
   },
   {
@@ -2744,7 +2764,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Pidgey",
-      "fr": "Roucool"
+      "fr": "Roucool",
+      "de": "Taubsi"
     },
     "attacks": [
       {
@@ -2778,7 +2799,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "The claws on its feet are well developed. It can carry prey such as an Exeggcute to its nest over 60 miles away."
+      "en": "The claws on its feet are well developed. It can carry prey such as an Exeggcute to its nest over 60 miles away.",
+      "de": "Die Krallen an seinen Füßen sind sehr ausgeprägt. Es kann sogar ein Owei zu seinem Nest in 100 km Entfernung tragen."
     }
   },
   {
@@ -2834,7 +2856,8 @@
     "stage": "stage2",
     "evolves_from": {
       "en": "Pidgeotto",
-      "fr": "Roucoups"
+      "fr": "Roucoups",
+      "de": "Tauboga"
     },
     "attacks": [
       {
@@ -2899,7 +2922,8 @@
     ],
     "retreat_cost": 0,
     "flavor_text": {
-      "en": "When hunting, it skims the surface of water at high speed to pick off unwary prey such as Magikarp."
+      "en": "When hunting, it skims the surface of water at high speed to pick off unwary prey such as Magikarp.",
+      "de": "Dieses Pokémon schnellt bei der Jagd blitzschnell unter Wasser, um seine ahnungslose Beute zu fangen."
     }
   },
   {
@@ -2994,7 +3018,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "When visiting a junkyard, you may catch sight of it having an intense fight with Murkrow over shiny objects."
+      "en": "When visiting a junkyard, you may catch sight of it having an intense fight with Murkrow over shiny objects.",
+      "de": "Auf Müllhalden wird man oft Zeuge davon, wie es sich einen heftigen Streit mit Kramurx um glänzende Gegenstände liefert."
     }
   },
   {
@@ -3050,7 +3075,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Meowth",
-      "fr": "Miaouss"
+      "fr": "Miaouss",
+      "de": "Mauzi"
     },
     "attacks": [
       {
@@ -3107,7 +3133,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Although the jewel on its forehead appears to be a different color than those of Alolan Persian, it's mostly made of the same material."
+      "en": "Although the jewel on its forehead appears to be a different color than those of Alolan Persian, it's mostly made of the same material.",
+      "de": "Das Juwel auf seiner Stirn hat eine andere Farbe als jenes von Snobilikat aus Alola, doch die Zusammensetzung ist großteils gleich."
     }
   },
   {
@@ -3208,7 +3235,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "The plant stalk it holds is its weapon. The stalk is used like a sword to cut all sorts of things."
+      "en": "The plant stalk it holds is its weapon. The stalk is used like a sword to cut all sorts of things.",
+      "de": "Dieses Pokémon nutzt eine Lauchstange als Waffe. Es setzt sie wie ein Schwert ein."
     }
   },
   {
@@ -3311,7 +3339,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "Kangaskhan protects its child by keeping it in its pouch. It has zero forgiveness for those who harm its child and will beat them down."
+      "en": "Kangaskhan protects its child by keeping it in its pouch. It has zero forgiveness for those who harm its child and will beat them down.",
+      "de": "Sein Junges beschützt es in seinem Beutel. Wer dieses verwundet, den erwarten Kangamas Groll und eine rücksichtslose Tracht Prügel."
     }
   },
   {
@@ -3398,7 +3427,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "They live in groups. The one with the longest, thickest, and most-scarred horns is the boss of the herd."
+      "en": "They live in groups. The one with the longest, thickest, and most-scarred horns is the boss of the herd.",
+      "de": "Sie leben in Herden. Ihr Anführer ist das Tauros mit den kräftigsten und längsten Hörnern sowie den meisten Kampfspuren darauf."
     }
   },
   {
@@ -3454,7 +3484,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Charmander",
-      "fr": "Salamèche"
+      "fr": "Salamèche",
+      "de": "Glumanda"
     },
     "attacks": [
       {
@@ -3489,7 +3520,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "It lashes about with its tail to knock down its foe. It then tears up the fallen opponent with sharp claws."
+      "en": "It lashes about with its tail to knock down its foe. It then tears up the fallen opponent with sharp claws.",
+      "de": "Es schlägt im Kampf mit seinem Schwanz nach seinen Gegnern. Anschließend zerfetzt es die Gegner mit seinen scharfen Klauen."
     }
   },
   {
@@ -3545,7 +3577,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Unidentified Fossil",
-      "fr": "Fossile Inconnu"
+      "fr": "Fossile Inconnu",
+      "de": "Unbekanntes Fossil"
     },
     "attacks": [
       {
@@ -3609,7 +3642,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Restored from DNA found in amber, this Pokémon exhibited ferocity that was greater than expected. Some casualties resulted."
+      "en": "Restored from DNA found in amber, this Pokémon exhibited ferocity that was greater than expected. Some casualties resulted.",
+      "de": "Ein grausames Pokémon, das vielen das Leben schwer gemacht hat. Es wurde aus Genmaterial reproduziert, das in Bernstein enthalten war."
     }
   },
   {
@@ -3719,7 +3753,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "It is said to be the guardian of the seas. It is rumored to have been seen on the night of a storm."
+      "en": "It is said to be the guardian of the seas. It is rumored to have been seen on the night of a storm.",
+      "de": "Man berichtet, es sei der Wächter der Meere und man habe es im Herzen eines tosenden Sturmes gesehen."
     }
   },
   {
@@ -3821,7 +3856,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Its fur would all stand on end if it smelled a Seviper nearby. Its sharp claws tear up its foes."
+      "en": "Its fur would all stand on end if it smelled a Seviper nearby. Its sharp claws tear up its foes.",
+      "de": "Vipitis’ Geruch lässt ihm alle Haare zu Berge stehen. Mit seinen scharfen Klauen kratzt es seine Feinde."
     }
   },
   {
@@ -3862,7 +3898,7 @@
       "es": "Mira las 7 primeras cartas de tu baraja. Puedes enseñar hasta 2 cartas de Entrenador que encuentres entre ellas y ponerlas en tu mano. Pon el resto de cartas de nuevo en tu baraja y barájalas todas.",
       "it": "Guarda le prime sette carte del tuo mazzo. Puoi mostrare fino a due carte Allenatore presenti tra esse e aggiungerle alle carte che hai in mano. Poi rimischia le altre carte nel tuo mazzo.",
       "pt-BR": "Olhe as 7 primeiras cartas do seu baralho. Você poderá revelar até 2 cartas de Treinador que encontrar lá e colocá-las na sua mão. Embaralhe as demais cartas de volta no seu baralho.",
-      "de": "Schau dir die obersten 7 Karten deines Decks an. Du kannst bis zu 2 Trainerkarten, die du dort findest, deinem Gegner zeigen und auf deine Hand nehmen. Mische die anderen Karten zurück in dein Deck."
+      "de": "Schau dir die obersten 7 Karten deines Decks an. Du kannst bis zu 2 Trainerkarten, die du dort findest, deinem Gegner zeigen und auf deine Hand nehmen. Mische die anderen Karten zurück in dein Deck. Du kannst während deines Zuges (bevor du angreifst) nur 1 Unterstützerkarte spielen."
     }
   },
   {
@@ -3916,7 +3952,7 @@
       "es": "Cuando 1 Pokémon Darkness (tuyo o de tu rival) que tenga unida alguna Energía Darkness quede Fuera de Combate por el daño de un ataque del rival, ese jugador coge 1 carta de Premio menos.\n\nCada vez que algún jugador juegue 1 carta de Objeto o de Partidario de su mano, evita todos los efectos de esa carta infligidos a esta carta de Estadio.",
       "it": "Quando un Pokémon Darkness, sia tuo che del tuo avversario, che ha delle Energie Darkness assegnate, viene messo KO dai danni di un attacco dell’avversario, quel giocatore prende una carta Premio in meno.\n\nOgni volta che un giocatore gioca una delle carte Strumento o Aiuto che ha in mano, previeni tutti gli effetti di quella carta su questa carta Stadio.",
       "pt-BR": "Quando um Pokémon Darkness (seu ou do seu oponente) que tem alguma Energia Darkness ligada a ele é Nocauteado pelo dano do ataque de um oponente, aquele jogador pega 1 carta de Prêmio a menos.\n\nSempre que algum jogador jogar uma carta de Item ou Apoiador da própria mão, prevenirá todos os efeitos daquela carta causados a esta carta de Estádio.",
-      "de": "Wenn ein Darkness-Pokémon (deins oder das deines Gegners), an das mindestens 1 Darkness-Energie angelegt ist, durch den Schaden einer Attacke des Gegners kampfunfähig wird, nimmt jener Spieler 1 Preiskarte weniger. \n\nVerhindere jedes Mal, wenn ein Spieler eine Item- oder Unterstützerkarte aus seiner Hand spielt, alle Effekte jener Karte, die dieser Stadionkarte zugefügt werden."
+      "de": "Du kannst nicht mehr als 1 ◇-Karte mit demselben Namen in deinem Deck haben. Wenn 1 ◇-Karte auf deinen Ablagestapel gelegt würde, lege sie stattdessen ins Nirgendwo. Wenn ein {D}-Pokémon (deins oder das deines Gegners), an das mindestens 1 {D}-Energie angelegt ist, durch den Schaden einer Attacke des Gegners kampfunfähig wird, nimmt jener Spieler 1 Preiskarte weniger. Verhindere jedes Mal, wenn ein Spieler eine Item- oder Unterstützerkarte aus seiner Hand spielt, alle Effekte jener Karte, die dieser Stadionkarte zugefügt werden. Diese Karte bleibt im Spiel, wenn du sie spielst. Lege diese Karte ab, sobald eine weitere Stadionkarte ins Spiel kommt. Wenn eine andere Karte mit dem gleichen Namen im Spiel ist, kannst du diese Karte nicht spielen."
     }
   },
   {
@@ -3957,7 +3993,7 @@
       "es": "Pon 6 cartas de Pokémon y de Energía Básica, en cualquier combinación, de tu pila de descartes en tu baraja y barájalas todas.",
       "it": "Rimischia sei carte Pokémon e Energia base, in qualsiasi combinazione, dalla tua pila degli scarti nel tuo mazzo.",
       "pt-BR": "Embaralhe 6 cartas de Pokémon e de Energia básica da sua pilha de descarte no seu baralho em qualquer combinação.",
-      "de": "Mische eine beliebige Kombination aus 6 Pokémon und Basis-Energiekarten aus deinem Ablagestapel in dein Deck."
+      "de": "Mische eine beliebige Kombination aus 6 Pokémon und Basis-Energiekarten aus deinem Ablagestapel in dein Deck. Du kannst während deines Zuges (bevor du angreifst) nur 1 Unterstützerkarte spielen."
     }
   },
   {
@@ -4011,7 +4047,7 @@
       "es": "Si el Pokémon al que está unida esta carta tiene un Coste de Retirada de exactamente 4, obtiene 50 PS más.",
       "it": "Se il costo di ritirata del Pokémon a cui è assegnata questa carta è esattamente pari a quattro, quel Pokémon ha 50 PS in più.",
       "pt-BR": "Se o Pokémon ao qual esta carta está ligada tiver um custo de Recuo de exatamente 4, receberá 50 PS a mais.",
-      "de": "Wenn das Pokémon, an das diese Karte angelegt ist, Rückzugskosten von genau 4 hat, erhält es 50 KP mehr."
+      "de": "Lege 1 Pokémon-Ausrüstung an 1 deiner Pokémon an, an das noch keine Pokémon-Ausrüstung angelegt ist. Wenn das Pokémon, an das diese Karte angelegt ist, Rückzugskosten von genau 4 hat, erhält es 50 KP mehr. Du kannst während deines Zuges (bevor du angreifst) beliebig viele Itemkarten spielen."
     }
   },
   {
@@ -4065,7 +4101,7 @@
       "es": "Puedes jugar esta carta solo si el Pokémon Activo de tu rival es un Pokémon de Fase 2.\n\nBusca en tu baraja hasta 2 cartas y ponlas en tu mano. Después, baraja las cartas de tu baraja.",
       "it": "Puoi giocare questa carta solo se il Pokémon attivo del tuo avversario è un Pokémon di Fase 2.\n\nCerca nel tuo mazzo fino a due carte e aggiungile alle carte che hai in mano. Poi rimischia le carte del tuo mazzo.",
       "pt-BR": "Você só pode jogar esta carta se o Pokémon Ativo do seu oponente for um Pokémon Estágio 2.\n\nProcure por até 2 cartas no seu baralho e coloque-as na sua mão. Em seguida, embaralhe o seu baralho.",
-      "de": "Du kannst diese Karte nur spielen, wenn das Aktive Pokémon deines Gegners ein Phase-2-Pokémon ist.\n\nDurchsuche dein Deck nach bis zu 2 Karten und nimm sie auf deine Hand. Mische anschließend dein Deck."
+      "de": "Du kannst diese Karte nur spielen, wenn das Aktive Pokémon deines Gegners ein Phase-2-Pokémon ist. Durchsuche dein Deck nach bis zu 2 Karten und nimm sie auf deine Hand. Mische anschließend dein Deck. Du kannst während deines Zuges (bevor du angreifst) nur 1 Unterstützerkarte spielen."
     }
   },
   {
@@ -4119,7 +4155,7 @@
       "es": "Puedes jugar esta carta solo si descartas 1 Pokémon Darkness de tu mano.\n\nDescarta 1 carta de Herramienta Pokémon o 1 carta de Energía Especial de 1 de los Pokémon de tu rival, o descarta cualquier carta de Estadio en juego.",
       "it": "Puoi giocare questa carta solo se scarti un Pokémon Darkness che hai in mano.\n\nScarta una carta Oggetto Pokémon o Energia speciale assegnata a uno dei Pokémon del tuo avversario oppure scarta una carta Stadio qualsiasi in gioco.",
       "pt-BR": "Você só pode jogar esta carta se descartar 1 Pokémon Darkness da sua mão.\n\nDescarte 1 carta de Ferramenta Pokémon ou de Energia Especial de 1 dos Pokémon do seu oponente ou descarte qualquer carta de Estádio em jogo.",
-      "de": "Du kannst diese Karte nur spielen, wenn du 1 Darkness-Pokémon aus deiner Hand auf deinen Ablagestapel legst.\n\nLege 1 Pokémon-Ausrüstung oder Spezial-Energiekarte von 1 Pokémon deines Gegners auf seinen Ablagestapel oder lege 1 beliebige Stadionkarte im Spiel auf den Ablagestapel."
+      "de": "Du kannst diese Karte nur spielen, wenn du 1 {D}-Pokémon aus deiner Hand auf deinen Ablagestapel legst. Lege 1 Pokémon-Ausrüstung oder Spezial-Energiekarte von 1 Pokémon deines Gegners auf seinen Ablagestapel oder lege 1 beliebige Stadionkarte im Spiel auf den Ablagestapel. Du kannst während deines Zuges (bevor du angreifst) beliebig viele Itemkarten spielen."
     }
   },
   {
@@ -4173,7 +4209,7 @@
       "es": "Lanza 2 monedas. Por cada cara, pon 1 carta de Electropoder de tu pila de descartes en tu baraja y barájalas todas.",
       "it": "Lancia due volte una moneta. Ogni volta che esce testa, rimischia una carta Potenziatore Elettrico dalla tua pila degli scarti e aggiungila al tuo mazzo.",
       "pt-BR": "Jogue 2 moedas. Para cada cara, embaralhe 1 carta Eletropoder da sua pilha de descarte no seu baralho.",
-      "de": "Wirf 2 Münzen. Mische pro Kopf 1 Elektrokraft-Karte aus deinem Ablagestapel in dein Deck."
+      "de": "Wirf 2 Münzen. Mische pro Kopf 1 Elektrokraft-Karte aus deinem Ablagestapel in dein Deck. Du kannst während deines Zuges (bevor du angreifst) beliebig viele Itemkarten spielen."
     }
   },
   {
@@ -4229,7 +4265,8 @@
     "stage": "stage2",
     "evolves_from": {
       "en": "Charmeleon",
-      "fr": "Reptincel"
+      "fr": "Reptincel",
+      "de": "Glutexo"
     },
     "attacks": [
       {
@@ -4252,7 +4289,7 @@
           "es": "Descarta todas las Energías Fire de este Pokémon. Este ataque hace 50 puntos de daño más por cada carta que hayas descartado de esta manera.",
           "it": "Scarta tutte le Energie Fire assegnate a questo Pokémon. Questo attacco infligge 50 danni in più per ogni carta che hai scartato in questo modo.",
           "pt-BR": "Descarte todas as Energias Fire deste Pokémon. Este ataque causa 50 pontos de dano a mais para cada carta descartada desta forma.",
-          "de": "Lege alle Fire-Energien von diesem Pokémon auf deinen Ablagestapel. Diese Attacke fügt 50 Schadenspunkte mehr mal der Anzahl der auf diese Weise auf deinen Ablagestapel gelegten Karten zu."
+          "de": "Lege alle {R}-Energien von diesem Pokémon auf deinen Ablagestapel. Diese Attacke fügt 50 Schadenspunkte mehr mal der Anzahl der auf diese Weise auf deinen Ablagestapel gelegten Karten zu."
         }
       }
     ],
@@ -4264,7 +4301,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "When expelling a blast of superhot fire, the red flame at the tip of its tail burns more intensely."
+      "en": "When expelling a blast of superhot fire, the red flame at the tip of its tail burns more intensely.",
+      "de": "Wenn dieses Pokémon einen Strahl glühenden Feuers speit, leuchtet seine Schwanzspitze auf."
     }
   },
   {
@@ -4305,7 +4343,7 @@
       "es": "Puedes jugar esta carta solo si tienes otras 4 cartas o menos en tu mano.\n\nRoba 1 carta por cada uno de los Pokémon en juego de tu rival.",
       "it": "Puoi giocare questa carta solo se hai quattro o meno altre carte in mano.\n\nPesca una carta per ogni Pokémon del tuo avversario in gioco.",
       "pt-BR": "Você só pode jogar esta carta se tiver 4 ou menos outras cartas na sua mão.\n\nCompre 1 carta para cada um dos Pokémon do seu oponente em jogo.",
-      "de": "Du kannst diese Karte nur spielen, wenn du 4 oder weniger andere Karten auf deiner Hand hast.\n\n\nZiehe 1 Karte für jedes Pokémon deines Gegners im Spiel."
+      "de": "Du kannst diese Karte nur spielen, wenn du 4 oder weniger andere Karten auf deiner Hand hast. Ziehe 1 Karte für jedes Pokémon deines Gegners im Spiel. Du kannst während deines Zuges (bevor du angreifst) nur 1 Unterstützerkarte spielen."
     }
   },
   {
@@ -4359,7 +4397,7 @@
       "es": "Puedes jugar esta carta solo si el Pokémon Activo de tu rival es un Pokémon de Fase 1.\n\nRoba 4 cartas.",
       "it": "Puoi giocare questa carta solo se il Pokémon attivo del tuo avversario è un Pokémon di Fase 1.\n\nPesca quattro carte.",
       "pt-BR": "Você só pode jogar esta carta se o Pokémon Ativo do seu oponente for um Pokémon Estágio 1.\n\nCompre 4 cartas.",
-      "de": "Du kannst diese Karte nur spielen, wenn das Aktive Pokémon deines Gegners ein Phase-1-Pokémon ist.\n\nZiehe 4 Karten."
+      "de": "Du kannst diese Karte nur spielen, wenn das Aktive Pokémon deines Gegners ein Phase-1-Pokémon ist. Ziehe 4 Karten. Du kannst während deines Zuges (bevor du angreifst) nur 1 Unterstützerkarte spielen."
     }
   },
   {
@@ -4413,7 +4451,7 @@
       "es": "Evita todo el daño infligido al Pokémon Fairy al que esté unida esta carta por ataques de los Pokémon-GX Ultraentes y Pokémon-EX Ultraentes de tu rival.",
       "it": "Previeni tutti i danni inflitti al Pokémon Fairy a cui è assegnata questa carta dagli attacchi dei Pokémon-GX Ultracreatura e dei Pokémon-EX Ultracreatura del tuo avversario.",
       "pt-BR": "Previne todo o dano causado ao Pokémon Fairy ao qual esta carta está ligada por ataques dos Pokémon-GX Ultracriaturas e Pokémon-EX Ultracriaturas do seu oponente.",
-      "de": "Verhindere allen Schaden, der dem Fairy-Pokémon, an das diese Karte angelegt ist, durch Attacken von Ultrabestien-Pokémon-GX und Ultrabestien-Pokémon-EX deines Gegners zugefügt wird."
+      "de": "Lege 1 Pokémon-Ausrüstung an 1 deiner Pokémon an, an das noch keine Pokémon-Ausrüstung angelegt ist. Verhindere allen Schaden, der dem {FAIRY}-Pokémon, an das diese Karte angelegt ist, durch Attacken von Ultrabestien-Pokémon-GX und Ultrabestien-Pokémon-EX deines Gegners zugefügt wird. Du kannst während deines Zuges (bevor du angreifst) beliebig viele Itemkarten spielen."
     }
   },
   {
@@ -4467,7 +4505,7 @@
       "es": "El Silvally-GX al que esté unida esta carta es un Pokémon Grass.",
       "it": "Il Silvally-GX a cui è assegnata questa carta è di tipo Grass.",
       "pt-BR": "O Pokémon Silvally-GX ao qual esta carta está ligada é um Pokémon Grass.",
-      "de": "Das Amigento-GX, an das diese Karte angelegt ist, ist ein Grass-Pokémon."
+      "de": "Lege 1 Pokémon-Ausrüstung an 1 deiner Pokémon an, an das noch keine Pokémon-Ausrüstung angelegt ist. Das Amigento-GX, an das diese Karte angelegt ist, ist ein {G}-Pokémon. Du kannst während deines Zuges (bevor du angreifst) beliebig viele Itemkarten spielen."
     }
   },
   {
@@ -4521,7 +4559,7 @@
       "es": "Mira la primera carta de tu baraja y elige 1 opción:\n\n• Descarta las cartas de tu mano y roba 5 cartas.\n• Descarta las cartas de tu mano y roba 5 cartas de la parte inferior de tu baraja.",
       "it": "Guarda la prima carta del tuo mazzo e poi scegli:\n\n• Scarta le carte che hai in mano e pesca cinque carte. \n• Scarta le carte che hai in mano e pesca cinque carte in fondo al tuo mazzo.",
       "pt-BR": "Olhe a primeira carta do seu baralho e escolha 1:\n\n• Descarte a sua mão e compre 5 cartas.\n• Descarte a sua mão e compre as 5 últimas cartas do seu baralho.",
-      "de": "Schau dir die oberste Karte deines Decks an und wähle 1 aus:\n\n• Lege deine Handkarten auf deinen Ablagestapel und ziehe 5 Karten.\n• Lege deine Handkarten auf deinen Ablagestapel und ziehe 5 Karten von unten aus deinem Deck."
+      "de": "Schau dir die oberste Karte deines Decks an und wähle 1 aus: Lege deine Handkarten auf deinen Ablagestapel und ziehe 5 Karten. Du kannst während deines Zuges (bevor du angreifst) nur 1 Unterstützerkarte spielen. Lege deine Handkarten auf deinen Ablagestapel und ziehe 5 Karten von unten aus deinem Deck."
     }
   },
   {
@@ -4575,7 +4613,7 @@
       "es": "Busca en tu baraja 1 Pokémon Metal, enséñalo y ponlo en tu mano. Si sales segundo y es tu primer turno, busca 5 Pokémon Metal en vez de 1. Después, baraja las cartas de tu baraja.",
       "it": "Cerca nel tuo mazzo un Pokémon Metal, mostralo e aggiungilo alle carte che hai in mano. Se inizi per secondo e se è il tuo primo turno, cerca cinque Pokémon Metal invece di uno. Poi rimischia le carte del tuo mazzo.",
       "pt-BR": "Procure por 1 Pokémon Metal no seu baralho, revele-o e coloque-o na sua mão. Se você for o segundo a jogar e esta for a sua primeira vez de jogar, procure por 5 Pokémon Metal ao invés de 1. Em seguida, embaralhe o seu baralho.",
-      "de": "Durchsuche dein Deck nach 1 Metal-Pokémon, zeige es deinem Gegner und nimm es auf deine Hand. Wenn du als Zweiter am Zug bist und es dein erster Zug ist, durchsuche dein Deck nach 5 Metal-Pokémon anstelle von 1. Mische anschließend dein Deck."
+      "de": "Durchsuche dein Deck nach 1 {M}-Pokémon, zeige es deinem Gegner und nimm es auf deine Hand. Wenn du als Zweiter am Zug bist und es dein erster Zug ist, durchsuche dein Deck nach 5 {M}-Pokémon anstelle von 1. Mische anschließend dein Deck. Du kannst während deines Zuges (bevor du angreifst) nur 1 Unterstützerkarte spielen."
     }
   },
   {
@@ -4629,7 +4667,7 @@
       "es": "Elige 1 opción:\n\n• Roba 1 carta.\n• Pon 1 carta de Juez de tu pila de descartes en tu mano.",
       "it": "Scegli:\n\n• Pesca una carta.\n• Prendi una carta Arbitro dalla tua pila degli scarti e aggiungila alle carte che hai in mano.",
       "pt-BR": "Escolha 1:\n\n• Compre 1 carta.\n• Coloque 1 carta Juiz da sua pilha de descarte na sua mão.",
-      "de": "Wähle 1 aus:\n\n• Ziehe 1 Karte.\n• Nimm 1 Richter-Karte aus deinem Ablagestapel auf deine Hand."
+      "de": "Wähle 1 aus: Ziehe 1 Karte. Du kannst während deines Zuges (bevor du angreifst) beliebig viele Itemkarten spielen. Nimm 1 Richter-Karte aus deinem Ablagestapel auf deine Hand."
     }
   },
   {
@@ -4683,7 +4721,7 @@
       "es": "Una vez durante el turno de cada jugador, ese jugador puede hacer que su rival enseñe las cartas de su mano.",
       "it": "Una sola volta durante il turno di ciascun giocatore, quel giocatore può far mostrare al suo avversario le carte che ha in mano.",
       "pt-BR": "Uma vez durante a vez de jogar de cada jogador, aquele jogador pode fazer com que o oponente dele(a) revele a própria mão.",
-      "de": "Einmal während des Zuges jedes Spielers kann der Spieler seinen Gegner dazu veranlassen, seine Handkarten zu zeigen."
+      "de": "Einmal während des Zuges jedes Spielers kann der Spieler seinen Gegner dazu veranlassen, seine Handkarten zu zeigen. Diese Karte bleibt im Spiel, wenn du sie spielst. Lege diese Karte ab, sobald eine weitere Stadionkarte ins Spiel kommt. Wenn eine andere Karte mit dem gleichen Namen im Spiel ist, kannst du diese Karte nicht spielen."
     }
   },
   {
@@ -4737,7 +4775,7 @@
       "es": "Los ataques de tu rival hacen 30 puntos de daño menos al Pokémon Metal al que esté unida esta carta (después de aplicar Debilidad y Resistencia), y los ataques y las habilidades de tu rival no pueden poner contadores de daño sobre él.",
       "it": "Il Pokémon Metal a cui è assegnata questa carta subisce 30 danni in meno dagli attacchi del tuo avversario, dopo aver applicato debolezza e resistenza, e gli attacchi e le abilità del tuo avversario non possono assegnargli segnalini danno.",
       "pt-BR": "O Pokémon Metal ao qual esta carta está ligada recebe 30 pontos de dano a menos dos ataques do seu oponente (após a aplicação de Fraqueza e Resistência) e os ataques e as Habilidades do seu oponente não poderão colocar contadores de dano nele.",
-      "de": "Dem Metal-Pokémon, an das diese Karte angelegt ist, werden durch Attacken deines Gegners 30 Schadenspunkte weniger zugefügt (nachdem Schwäche und Resistenz verrechnet wurden), und durch Attacken und Fähigkeiten deines Gegners können keine Schadensmarken auf jenes Pokémon gelegt werden."
+      "de": "Lege 1 Pokémon-Ausrüstung an 1 deiner Pokémon an, an das noch keine Pokémon-Ausrüstung angelegt ist. Dem {M}-Pokémon, an das diese Karte angelegt ist, werden durch Attacken deines Gegners 30 Schadenspunkte weniger zugefügt (nachdem Schwäche und Resistenz verrechnet wurden), und durch Attacken und Fähigkeiten deines Gegners können keine Schadensmarken auf jenes Pokémon gelegt werden. Du kannst während deines Zuges (bevor du angreifst) beliebig viele Itemkarten spielen."
     }
   },
   {
@@ -4791,7 +4829,7 @@
       "es": "Puedes jugar esta carta solo si descartas las cartas de Meridia, Vésper y Nocta de tu mano.\n\nMira las 12 primeras cartas de tu baraja y une cualquier cantidad de cartas de Energía que encuentres entre ellas a tus Pokémon de la manera que desees. Pon el resto de cartas de nuevo en tu baraja y barájalas todas.",
       "it": "Puoi giocare questa carta solo se scarti Meridia, Vespera e Notturna dalla tua mano.\n\nGuarda le prime 12 carte del tuo mazzo e assegna a piacimento un numero qualsiasi di carte Energia presenti tra esse ai tuoi Pokémon. Poi rimischia le altre carte nel tuo mazzo.",
       "pt-BR": "Você só pode jogar esta carta se descartar Diana, Véspera e Anita da sua mão.\n\nOlhe as 12 primeiras cartas do seu baralho e ligue qualquer número de cartas de Energia que encontrar lá aos seus Pokémon como desejar. Embaralhe as demais cartas de volta no seu baralho.",
-      "de": "Du kannst diese Karte nur spielen, wenn du Journée, Soir und Nuit aus deiner Hand auf deinen Ablagestapel legst.\n\nSchau dir die obersten 12 Karten deines Decks an und lege beliebig viele Energiekarten, die du dort findest, beliebig an deine Pokémon an. Mische die anderen Karten zurück in dein Deck."
+      "de": "Du kannst diese Karte nur spielen, wenn du Journée, Soir und Nuit aus deiner Hand auf deinen Ablagestapel legst. Schau dir die obersten 12 Karten deines Decks an und lege beliebig viele Energiekarten, die du dort findest, beliebig an deine Pokémon an. Mische die anderen Karten zurück in dein Deck. Du kannst während deines Zuges (bevor du angreifst) nur 1 Unterstützerkarte spielen."
     }
   },
   {
@@ -4877,7 +4915,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Its beautiful tails have made it very popular. However, if it's not brushed diligently, it will be a mass of tangles before you know it."
+      "en": "Its beautiful tails have made it very popular. However, if it's not brushed diligently, it will be a mass of tangles before you know it.",
+      "de": "Dank seiner hübschen Schweife erfreut es sich großer Beliebtheit. Wird es aber nicht regelmäßig gebürstet, ist es sofort voller Fellknäuel."
     }
   },
   {
@@ -4931,7 +4970,7 @@
       "es": "Elige 1 Pokémon Darkness Básico de tu pila de descartes. Cámbialo por 1 de tus Pokémon en juego. Todas las cartas unidas a este Pokémon, los contadores de daño, las Condiciones Especiales, los turnos de juego y todos los demás efectos permanecen en el nuevo Pokémon.",
       "it": "Scegli un Pokémon Base Darkness dalla tua pila degli scarti. Scambialo con uno dei tuoi Pokémon in gioco. Le carte assegnate, i segnalini danno, le condizioni speciali, il numero di turni da cui è in gioco e qualsiasi altro effetto restano sul nuovo Pokémon.",
       "pt-BR": "Escolha 1 Pokémon Darkness Básico da sua pilha de descarte. Troque-o por 1 dos seus Pokémon em jogo. Quaisquer cartas ligadas, contadores de dano, Condições Especiais, vezes em jogo e quaisquer outros efeitos permanecem no novo Pokémon.",
-      "de": "Wähle 1 Darkness-Basis-Pokémon aus deinem Ablagestapel. Tausche es gegen 1 deiner Pokémon im Spiel aus. Alle an es angelegten Karten, Schadensmarken, Speziellen Zustände, Spielzüge sowie alle anderen Effekte verbleiben auf dem neuen Pokémon."
+      "de": "Wähle 1 {D}-Basis-Pokémon aus deinem Ablagestapel. Tausche es gegen 1 deiner Pokémon im Spiel aus. Alle an es angelegten Karten, Schadensmarken, Speziellen Zustände, Spielzüge sowie alle anderen Effekte verbleiben auf dem neuen Pokémon. Du kannst während deines Zuges (bevor du angreifst) nur 1 Unterstützerkarte spielen."
     }
   },
   {
@@ -4985,7 +5024,7 @@
       "es": "Puedes jugar esta carta solo si el Pokémon Activo de tu rival es un Pokémon Básico.\n\nPon 1 Energía del Pokémon Activo de tu rival en la parte superior de su baraja.",
       "it": "Puoi giocare questa carta solo se il Pokémon attivo del tuo avversario è un Pokémon Base.\n\nPrendi un’Energia dal Pokémon attivo del tuo avversario e mettila in cima al suo mazzo.",
       "pt-BR": "Você só pode jogar esta carta se o Pokémon Ativo do seu oponente for um Pokémon Básico.\n\nColoque 1 Energia do Pokémon Ativo do seu oponente como a primeira carta do baralho dele(a).",
-      "de": "Du kannst diese Karte nur spielen, wenn das Aktive Pokémon deines Gegners ein Basis-Pokémon ist.\n\nLege 1 Energie vom Aktiven Pokémon deines Gegners oben auf sein Deck."
+      "de": "Du kannst diese Karte nur spielen, wenn das Aktive Pokémon deines Gegners ein Basis-Pokémon ist. Lege 1 Energie vom Aktiven Pokémon deines Gegners oben auf sein Deck. Du kannst während deines Zuges (bevor du angreifst) nur 1 Unterstützerkarte spielen."
     }
   },
   {
@@ -5039,7 +5078,7 @@
       "es": "Enseña 1 Pokémon de tu mano y ponlo en tu baraja. Si lo haces, busca en tu baraja 1 Pokémon, enséñalo y ponlo en tu mano. Después, baraja las cartas de tu baraja.",
       "it": "Mostra un Pokémon che hai in mano e mettilo nel tuo mazzo. Se lo fai, cerca nel tuo mazzo un Pokémon, mostralo e aggiungilo alle carte che hai in mano. Poi rimischia le carte del tuo mazzo.",
       "pt-BR": "Revele 1 Pokémon da sua mão e coloque-o no seu baralho. Se fizer isto, procure por 1 Pokémon no seu baralho, revele-o e coloque-o na sua mão. Em seguida, embaralhe o seu baralho.",
-      "de": "Zeige deinem Gegner 1 Pokémon, das du auf deiner Hand hast, und lege es in dein Deck. Wenn du das machst, durchsuche dein Deck nach 1 Pokémon, zeige es deinem Gegner und nimm es auf deine Hand. Mische anschließend dein Deck."
+      "de": "Zeige deinem Gegner 1 Pokémon, das du auf deiner Hand hast, und lege es in dein Deck. Wenn du das machst, durchsuche dein Deck nach 1 Pokémon, zeige es deinem Gegner und nimm es auf deine Hand. Mische anschließend dein Deck. Du kannst während deines Zuges (vor deinem Angriff) beliebig viele Itemkarten spielen."
     }
   },
   {
@@ -5093,7 +5132,7 @@
       "es": "Pon 1 carta de la pila de descartes de tu rival en la parte inferior de su baraja.",
       "it": "Prendi una carta dalla pila degli scarti del tuo avversario e mettila in fondo al suo mazzo.",
       "pt-BR": "Coloque 1 carta da pilha de descarte do seu oponente como a última carta do baralho dele(a).",
-      "de": "Lege 1 Karte aus dem Ablagestapel deines Gegners unter sein Deck."
+      "de": "Lege 1 Karte aus dem Ablagestapel deines Gegners unter sein Deck. Du kannst während deines Zuges (bevor du angreifst) beliebig viele Itemkarten spielen."
     }
   },
   {
@@ -5134,7 +5173,7 @@
       "es": "Tu rival enseña las cartas de su mano. Puedes elegir 1 carta de Partidario que encuentres entre ellas y usar el efecto de esa carta como efecto de este ataque.",
       "it": "Il tuo avversario mostra le carte che ha in mano. Puoi scegliere una carta Aiuto presente tra esse e usare l’effetto di quella carta come effetto di questa carta.",
       "pt-BR": "Seu oponente revela a própria mão. Você pode escolher 1 carta de Apoiador que encontrar lá e usar o efeito daquela carta como o efeito desta carta.",
-      "de": "Dein Gegner zeigt dir seine Handkarten. Du kannst 1 Unterstützerkarte, die du dort findest, wählen und den Effekt jener Karte als Effekt dieser Karte einsetzen."
+      "de": "Dein Gegner zeigt dir seine Handkarten. Du kannst 1 Unterstützerkarte, die du dort findest, wählen und den Effekt jener Karte als Effekt dieser Karte einsetzen. Du kannst während deines Zuges (bevor du angreifst) nur 1 Unterstützerkarte spielen."
     }
   },
   {
@@ -5189,7 +5228,7 @@
       "es": "Juega esta carta como si fuera un Pokémon Básico Colorless de 60 PS. En cualquier momento durante tu turno (antes de tu ataque), puedes descartar esta carta del juego.\n\nEsta carta no puede retirarse.",
       "it": "Gioca questa carta come se fosse un Pokémon Base Colorless da 60 PS. Durante il tuo turno, in qualsiasi momento, prima di attaccare, puoi scartare questa carta dal gioco.\n\nNon puoi far ritirare questa carta.",
       "pt-BR": "Jogue esta carta como se fosse um Pokémon Colorless Básico com PS 60. A qualquer momento, durante a sua vez de jogar (antes de atacar), você pode descartar esta carta do jogo.\n\nEsta carta não pode recuar.",
-      "de": "Spiele diese Karte, als ob sie ein Colorless-Basis-Pokémon mit 60 KP wäre. Du kannst diese Karte jederzeit während deines Zuges (bevor du angreifst) aus dem Spiel nehmen und auf deinen Ablagestapel legen.\n\nDiese Karte kann sich nicht zurückziehen."
+      "de": "Spiele diese Karte, als ob sie ein {C}-Basis-Pokémon mit 60 KP wäre. Du kannst diese Karte jederzeit während deines Zuges (bevor du angreifst) aus dem Spiel nehmen und auf deinen Ablagestapel legen. Diese Karte kann sich nicht zurückziehen. Du kannst während deines Zuges (bevor du angreifst) beliebig viele Itemkarten spielen."
     }
   },
   {
@@ -5243,7 +5282,7 @@
       "es": "Una vez durante el turno de cada jugador, ese jugador puede descartar 1 carta de su mano. Si lo hace, ese jugador busca en su baraja 1 carta de Energía Básica, la enseña y la pone en su mano. Después, ese jugador baraja las cartas de su baraja.",
       "it": "Una sola volta durante il turno di ciascun giocatore, quel giocatore può scartare una carta che ha in mano. Se lo fa, cerca nel suo mazzo una carta Energia base, la mostra e la aggiunge alle carte che ha in mano. Poi rimischia le carte del suo mazzo.",
       "pt-BR": "Uma vez durante a vez de jogar de cada jogador, aquele jogador pode descartar 1 carta da própria mão. Se fizer isto, aquele jogador irá procurar por 1 carta de Energia básica no próprio baralho, revelá-la e colocá-la na própria mão. Em seguida, aquele jogador embaralha o próprio baralho.",
-      "de": "Einmal während des Zuges jedes Spielers kann der Spieler 1 Karte aus seiner Hand auf seinen Ablagestapel legen. Wenn er das macht, durchsucht jener Spieler sein Deck nach 1 Basis-Energiekarte, zeigt sie seinem Gegner und nimmt sie auf seine Hand. Anschließend mischt jener Spieler sein Deck."
+      "de": "Einmal während des Zuges jedes Spielers kann der Spieler 1 Karte aus seiner Hand auf seinen Ablagestapel legen. Wenn er das macht, durchsucht jener Spieler sein Deck nach 1 Basis-Energiekarte, zeigt sie seinem Gegner und nimmt sie auf seine Hand. Anschließend mischt jener Spieler sein Deck. Diese Karte bleibt im Spiel, wenn du sie spielst. Lege diese Karte ab, sobald eine weitere Stadionkarte ins Spiel kommt. Wenn eine andere Karte mit dem gleichen Namen im Spiel ist, kannst du diese Karte nicht spielen."
     }
   },
   {
@@ -5297,7 +5336,7 @@
       "es": "El Silvally-GX al que esté unida esta carta es un Pokémon Water.",
       "it": "Il Silvally-GX a cui è assegnata questa carta è di tipo Water.",
       "pt-BR": "O Pokémon Silvally-GX ao qual esta carta está ligada é um Pokémon Water.",
-      "de": "Das Amigento-GX, an das diese Karte angelegt ist, ist ein Water-Pokémon."
+      "de": "Lege 1 Pokémon-Ausrüstung an 1 deiner Pokémon an, an das noch keine Pokémon-Ausrüstung angelegt ist. Das Amigento-GX, an das diese Karte angelegt ist, ist ein {W}-Pokémon. Du kannst während deines Zuges (bevor du angreifst) beliebig viele Itemkarten spielen."
     }
   },
   {
@@ -5351,7 +5390,7 @@
       "es": "Los ataques de los Pokémon no Fairy (tanto tuyos como de tu rival) cuestan Colorless más.\n\nCada vez que algún jugador juegue 1 carta de Objeto o de Partidario de su mano, evita todos los efectos de esa carta infligidos a esta carta de Estadio.",
       "it": "Gli attacchi dei Pokémon non di tipo Fairy, sia tuoi che del tuo avversario, costano Colorless in più.\n\nOgni volta che un giocatore gioca una delle carte Strumento o Aiuto che ha in mano, previeni tutti gli effetti di quella carta su questa carta Stadio.",
       "pt-BR": "Os ataques dos Pokémon que não são Pokémon Fairy (seus e do seu oponente) custam Colorless a mais.\n\nSempre que algum jogador jogar uma carta de Item ou de Apoiador da própria mão, prevenirá todos os efeitos daquela carta causados a esta carta de Estádio.",
-      "de": "Die Kosten der Attacken der Pokémon (deiner und der deines Gegners), die keine Fairy-Pokémon sind, erhöhen sich um Colorless.\n\nVerhindere jedes Mal, wenn ein Spieler eine Item- oder Unterstützerkarte aus seiner Hand spielt, alle Effekte jener Karte, die dieser Stadionkarte zugefügt werden."
+      "de": "Du kannst nicht mehr als 1 ◇-Karte mit demselben Namen in deinem Deck haben. Wenn 1 ◇-Karte auf deinen Ablagestapel gelegt würde, lege sie stattdessen ins Nirgendwo. Die Kosten der Attacken der Pokémon (deiner und der deines Gegners), die keine {FAIRY}-Pokémon sind, erhöhen sich um {C}. Verhindere jedes Mal, wenn ein Spieler eine Item- oder Unterstützerkarte aus seiner Hand spielt, alle Effekte jener Karte, die dieser Stadionkarte zugefügt werden. Diese Karte bleibt im Spiel, wenn du sie spielst. Lege diese Karte ab, sobald eine weitere Stadionkarte ins Spiel kommt. Wenn eine andere Karte mit dem gleichen Namen im Spiel ist, kannst du diese Karte nicht spielen."
     }
   },
   {
@@ -5456,7 +5495,7 @@
           "es": "Perenne GX",
           "it": "Sempreverde GX",
           "pt-BR": "Perene GX",
-          "de": "Immergrün GX"
+          "de": "Immergrün-GX"
         },
         "cost": [
           "grass",
@@ -5471,7 +5510,7 @@
           "es": "Cura todos los puntos de daño a este Pokémon. Si este Pokémon tiene por lo menos 1 Energía Grass adicional unida a él (además de las del coste de este ataque), pon todas las cartas de tu pila de descartes en tu baraja y barájalas todas. (No puedes usar más de 1 ataque GX en una partida).",
           "it": "Cura questo Pokémon da tutti i danni. Se questo Pokémon ha almeno un’Energia Grass extra assegnata, in aggiunta a quelle del costo di questo attacco, rimischia tutte le carte dalla tua pila degli scarti nel tuo mazzo. Non puoi usare più di un attacco GX a partita.",
           "pt-BR": "Cure todo o dano deste Pokémon. Se este Pokémon tiver pelo menos 1 Energia Grass adicional ligada a ele (além do custo deste ataque), embaralhe todas as cartas da sua pilha de descarte no seu baralho (você não pode usar mais de 1 ataque GX por partida).",
-          "de": "Heile allen Schaden bei diesem Pokémon. Wenn an dieses Pokémon mindestens 1 extra Grass-Energie angelegt ist (zusätzlich zu den Kosten dieser Attacke), mische alle Karten aus deinem Ablagestapel in dein Deck. (Du kannst pro Spiel nur 1 GX-Attacke einsetzen.)"
+          "de": "Heile allen Schaden bei diesem Pokémon. Wenn an dieses Pokémon mindestens 1 extra {G}-Energie angelegt ist (zusätzlich zu den Kosten dieser Attacke), mische alle Karten aus deinem Ablagestapel in dein Deck. (Du kannst pro Spiel nur 1 GX-Attacke einsetzen.)"
         }
       }
     ],
@@ -5536,7 +5575,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Vulpix",
-      "fr": "Goupix"
+      "fr": "Goupix",
+      "de": "Vulpix"
     },
     "attacks": [
       {
@@ -5565,7 +5605,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It is vindictive and relentless by nature. Those who cross it even once will be cursed for a thousand years, along with their descendants."
+      "en": "It is vindictive and relentless by nature. Those who cross it even once will be cursed for a thousand years, along with their descendants.",
+      "de": "Dieses Pokémon ist sehr rachsüchtig. Wer seinen Groll provoziert, den verfolgt bis in seine Nachkommenschaft ein tausendjähriger Fluch."
     }
   },
   {
@@ -5647,7 +5688,7 @@
           "es": "Salpicadura Imponente GX",
           "it": "Splash Anomalo GX",
           "pt-BR": "Borrifada Gigantesca GX",
-          "de": "Turmhoher Platscher GX"
+          "de": "Turmhoher Platscher-GX"
         },
         "cost": [
           "water"
@@ -5659,7 +5700,7 @@
           "es": "Si este Pokémon tiene por lo menos 7 Energías Water adicionales unidas a él (además de las del coste de este ataque), este ataque hace 100 puntos de daño a cada uno de los Pokémon en Banca de tu rival. (No apliques Debilidad y Resistencia a los Pokémon en Banca). (No puedes usar más de 1 ataque GX en una partida).",
           "it": "Se questo Pokémon ha almeno sette Energie Water extra assegnate, in aggiunta a quelle del costo di questo attacco, questo attacco infligge 100 danni a ciascun Pokémon nella panchina del tuo avversario. Ricorda che non puoi applicare debolezza e resistenza ai Pokémon in panchina. Non puoi usare più di un attacco GX a partita.",
           "pt-BR": "Se este Pokémon tiver pelo menos 7 Energias Water adicionais ligadas a ele (além do custo deste ataque), este ataque causará 100 pontos de dano a cada um dos Pokémon no Banco do seu oponente (não aplique Fraqueza e Resistência aos Pokémon no Banco). (Você não pode usar mais de 1 ataque GX por partida.)",
-          "de": "Wenn an dieses Pokémon mindestens 7 extra Water-Energien angelegt sind (zusätzlich zu den Kosten dieser Attacke), fügt diese Attacke jedem Pokémon auf der Bank deines Gegners 100 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.) (Du kannst pro Spiel nur 1 GX-Attacke einsetzen.)"
+          "de": "Wenn an dieses Pokémon mindestens 7 extra {W}-Energien angelegt sind (zusätzlich zu den Kosten dieser Attacke), fügt diese Attacke jedem Pokémon auf der Bank deines Gegners 100 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.) (Du kannst pro Spiel nur 1 GX-Attacke einsetzen.)"
         }
       }
     ],
@@ -5750,7 +5791,7 @@
           "es": "Salpicadura Imponente GX",
           "it": "Splash Anomalo GX",
           "pt-BR": "Borrifada Gigantesca GX",
-          "de": "Turmhoher Platscher GX"
+          "de": "Turmhoher Platscher-GX"
         },
         "cost": [
           "water"
@@ -5762,7 +5803,7 @@
           "es": "Si este Pokémon tiene por lo menos 7 Energías Water adicionales unidas a él (además de las del coste de este ataque), este ataque hace 100 puntos de daño a cada uno de los Pokémon en Banca de tu rival. (No apliques Debilidad y Resistencia a los Pokémon en Banca). (No puedes usar más de 1 ataque GX en una partida).",
           "it": "Se questo Pokémon ha almeno sette Energie Water extra assegnate, in aggiunta a quelle del costo di questo attacco, questo attacco infligge 100 danni a ciascun Pokémon nella panchina del tuo avversario. Ricorda che non puoi applicare debolezza e resistenza ai Pokémon in panchina. Non puoi usare più di un attacco GX a partita.",
           "pt-BR": "Se este Pokémon tiver pelo menos 7 Energias Water adicionais ligadas a ele (além do custo deste ataque), este ataque causará 100 pontos de dano a cada um dos Pokémon no Banco do seu oponente (não aplique Fraqueza e Resistência aos Pokémon no Banco). (Você não pode usar mais de 1 ataque GX por partida.)",
-          "de": "Wenn an dieses Pokémon mindestens 7 extra Water-Energien angelegt sind (zusätzlich zu den Kosten dieser Attacke), fügt diese Attacke jedem Pokémon auf der Bank deines Gegners 100 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.) (Du kannst pro Spiel nur 1 GX-Attacke einsetzen.)"
+          "de": "Wenn an dieses Pokémon mindestens 7 extra {W}-Energien angelegt sind (zusätzlich zu den Kosten dieser Attacke), fügt diese Attacke jedem Pokémon auf der Bank deines Gegners 100 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.) (Du kannst pro Spiel nur 1 GX-Attacke einsetzen.)"
         }
       }
     ],
@@ -5848,7 +5889,7 @@
           "es": "Busca en tu baraja hasta 3 cartas de Energía Lightning y únelas a 1 de tus Pokémon. Después, baraja las cartas de tu baraja.",
           "it": "Cerca nel tuo mazzo fino a tre carte Energia Lightning e assegnale a uno dei tuoi Pokémon. Poi rimischia le carte del tuo mazzo.",
           "pt-BR": "Procure por até 3 cartas de Energia Lightning no seu baralho e ligue-as a 1 dos seus Pokémon. Em seguida, embaralhe o seu baralho.",
-          "de": "Durchsuche dein Deck nach bis zu 3 Lightning-Energiekarten und lege sie an 1 deiner Pokémon an. Mische anschließend dein Deck."
+          "de": "Durchsuche dein Deck nach bis zu 3 {L}-Energiekarten und lege sie an 1 deiner Pokémon an. Mische anschließend dein Deck."
         }
       },
       {
@@ -5858,7 +5899,7 @@
           "es": "Rayo Relevo GX",
           "it": "Bolide Alleato GX",
           "pt-BR": "Relâmpago de Aliados GX",
-          "de": "Doppel-Blitzschlag GX"
+          "de": "Doppel-Blitzschlag-GX"
         },
         "cost": [
           "lightning",
@@ -5872,7 +5913,7 @@
           "es": "Si este Pokémon tiene por lo menos 3 Energías Lightning adicionales unidas a él (además de las del coste de este ataque), este ataque hace 170 puntos de daño a 1 de los Pokémon en Banca de tu rival. (No apliques Debilidad y Resistencia a los Pokémon en Banca). (No puedes usar más de 1 ataque GX en una partida).",
           "it": "Se questo Pokémon ha almeno tre Energie Lightning extra assegnate, in aggiunta a quelle del costo di questo attacco, questo attacco infligge 170 danni a uno dei Pokémon nella panchina del tuo avversario. Ricorda che non puoi applicare debolezza e resistenza ai Pokémon in panchina. Non puoi usare più di un attacco GX a partita.",
           "pt-BR": "Se este Pokémon tiver pelo menos 3 Energias Lightning adicionais ligadas a ele (além do custo deste ataque), este ataque causará 170 pontos de dano a 1 dos Pokémon no Banco do seu oponente (não aplique Fraqueza e Resistência aos Pokémon no Banco). (Você não pode usar mais de 1 ataque GX por partida.)",
-          "de": "Wenn an dieses Pokémon mindestens 3 extra Lightning-Energien angelegt sind (zusätzlich zu den Kosten dieser Attacke), fügt diese Attacke 1 Pokémon auf der Bank deines Gegners 170 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.) (Du kannst pro Spiel nur 1 GX-Attacke einsetzen.)"
+          "de": "Wenn an dieses Pokémon mindestens 3 extra {L}-Energien angelegt sind (zusätzlich zu den Kosten dieser Attacke), fügt diese Attacke 1 Pokémon auf der Bank deines Gegners 170 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.) (Du kannst pro Spiel nur 1 GX-Attacke einsetzen.)"
         }
       }
     ],
@@ -5942,7 +5983,8 @@
     ],
     "evolves_from": {
       "en": "Flaaffy",
-      "fr": "Lainergie"
+      "fr": "Lainergie",
+      "de": "Waaty"
     },
     "rule_box": "GX",
     "attacks": [
@@ -5988,7 +6030,7 @@
           "es": "Descarta todas las Energías Lightning de este Pokémon.",
           "it": "Scarta tutte le Energie Lightning assegnate a questo Pokémon.",
           "pt-BR": "Descarte todas as Energias Lightning deste Pokémon.",
-          "de": "Lege alle Lightning-Energien von diesem Pokémon auf deinen Ablagestapel."
+          "de": "Lege alle {L}-Energien von diesem Pokémon auf deinen Ablagestapel."
         }
       },
       {
@@ -5998,7 +6040,7 @@
           "es": "Eléctrico GX",
           "it": "Scossa GX",
           "pt-BR": "Carga Elétrica GX",
-          "de": "Elektrisch GX"
+          "de": "Elektrisch-GX"
         },
         "cost": [
           "lightning"
@@ -6111,7 +6153,7 @@
           "es": "Casa del Terror GX",
           "it": "Casa degli Orrori GX",
           "pt-BR": "Casa do Horror GX",
-          "de": "Spukhaus GX"
+          "de": "Spukhaus-GX"
         },
         "cost": [
           "psychic"
@@ -6123,7 +6165,7 @@
           "es": "Tu rival no puede jugar ninguna carta de su mano durante su próximo turno. Si este Pokémon tiene por lo menos 1 Energía Psychic adicional unida a él (además de las del coste de este ataque), cada jugador roba cartas hasta tener 7 cartas en su mano. (No puedes usar más de 1 ataque GX en una partida).",
           "it": "Il tuo avversario non può giocare le carte che ha in mano durante il suo prossimo turno. Se questo Pokémon ha almeno un’Energia Psychic extra assegnata, in aggiunta a quelle del costo di questo attacco, ciascun giocatore pesca fino ad avere sette carte in mano. Non puoi usare più di un attacco GX a partita.",
           "pt-BR": "Seu oponente não poderá jogar nenhuma carta da própria mão durante a próxima vez dele(a) jogar. Se este Pokémon tiver pelo menos 1 Energia Psychic adicional ligada a ele (além do custo deste ataque), cada jogador comprará cartas até ter 7 cartas na própria mão (você não pode usar mais de 1 ataque GX por partida).",
-          "de": "Dein Gegner kann während seines nächsten Zuges keine Karten aus seiner Hand spielen. Wenn an dieses Pokémon mindestens 1 extra Psychic-Energie angelegt ist (zusätzlich zu den Kosten dieser Attacke), zieht jeder Spieler so lang Karten, bis er 7 Karten auf seiner Hand hat. (Du kannst pro Spiel nur 1 GX-Attacke einsetzen.)"
+          "de": "Dein Gegner kann während seines nächsten Zuges keine Karten aus seiner Hand spielen. Wenn an dieses Pokémon mindestens 1 extra {P}-Energie angelegt ist (zusätzlich zu den Kosten dieser Attacke), zieht jeder Spieler so lang Karten, bis er 7 Karten auf seiner Hand hat. (Du kannst pro Spiel nur 1 GX-Attacke einsetzen.)"
         }
       }
     ],
@@ -6224,7 +6266,7 @@
           "es": "Casa del Terror GX",
           "it": "Casa degli Orrori GX",
           "pt-BR": "Casa do Horror GX",
-          "de": "Spukhaus GX"
+          "de": "Spukhaus-GX"
         },
         "cost": [
           "psychic"
@@ -6236,7 +6278,7 @@
           "es": "Tu rival no puede jugar ninguna carta de su mano durante su próximo turno. Si este Pokémon tiene por lo menos 1 Energía Psychic adicional unida a él (además de las del coste de este ataque), cada jugador roba cartas hasta tener 7 cartas en su mano. (No puedes usar más de 1 ataque GX en una partida).",
           "it": "Il tuo avversario non può giocare le carte che ha in mano durante il suo prossimo turno. Se questo Pokémon ha almeno un’Energia Psychic extra assegnata, in aggiunta a quelle del costo di questo attacco, ciascun giocatore pesca fino ad avere sette carte in mano. Non puoi usare più di un attacco GX a partita.",
           "pt-BR": "Seu oponente não poderá jogar nenhuma carta da própria mão durante a próxima vez dele(a) jogar. Se este Pokémon tiver pelo menos 1 Energia Psychic adicional ligada a ele (além do custo deste ataque), cada jogador comprará cartas até ter 7 cartas na própria mão (você não pode usar mais de 1 ataque GX por partida).",
-          "de": "Dein Gegner kann während seines nächsten Zuges keine Karten aus seiner Hand spielen. Wenn an dieses Pokémon mindestens 1 extra Psychic-Energie angelegt ist (zusätzlich zu den Kosten dieser Attacke), zieht jeder Spieler so lang Karten, bis er 7 Karten auf seiner Hand hat. (Du kannst pro Spiel nur 1 GX-Attacke einsetzen.)"
+          "de": "Dein Gegner kann während seines nächsten Zuges keine Karten aus seiner Hand spielen. Wenn an dieses Pokémon mindestens 1 extra {P}-Energie angelegt ist (zusätzlich zu den Kosten dieser Attacke), zieht jeder Spieler so lang Karten, bis er 7 Karten auf seiner Hand hat. (Du kannst pro Spiel nur 1 GX-Attacke einsetzen.)"
         }
       }
     ],
@@ -6359,7 +6401,7 @@
           "es": "Manos Diabólicas GX",
           "it": "Braccia Malefiche GX",
           "pt-BR": "Mãos Malignas GX",
-          "de": "Teufelshände GX"
+          "de": "Teufelshände-GX"
         },
         "cost": [
           "dark",
@@ -6443,7 +6485,8 @@
     ],
     "evolves_from": {
       "en": "Torracat",
-      "fr": "Matoufeu"
+      "fr": "Matoufeu",
+      "de": "Miezunder"
     },
     "rule_box": "GX",
     "attacks": [
@@ -6478,7 +6521,7 @@
           "es": "Tornado Oscuro GX",
           "it": "Tornado Plumbeo GX",
           "pt-BR": "Tornado Escuro GX",
-          "de": "Finstertornado GX"
+          "de": "Finstertornado-GX"
         },
         "cost": [
           "normal",
@@ -6707,7 +6750,7 @@
           "es": "Unidad Aérea GX",
           "it": "Unità Aerea GX",
           "pt-BR": "Unidade Aérea GX",
-          "de": "Luftstaffel GX"
+          "de": "Luftstaffel-GX"
         },
         "cost": [
           "psychic"
@@ -6830,7 +6873,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "As a newborn, it can barely stand. However, through galloping, its legs are made tougher and faster."
+      "en": "As a newborn, it can barely stand. However, through galloping, its legs are made tougher and faster.",
+      "de": "Neugeboren kann es kaum stehen. Durch das Galoppieren werden seine Beine aber schneller und kräftiger."
     }
   },
   {
@@ -6918,7 +6962,7 @@
           "es": "Unidad Aérea GX",
           "it": "Unità Aerea GX",
           "pt-BR": "Unidade Aérea GX",
-          "de": "Luftstaffel GX"
+          "de": "Luftstaffel-GX"
         },
         "cost": [
           "psychic"
@@ -7049,7 +7093,7 @@
           "es": "Amigos Megatón GX",
           "it": "Amici Megatonici GX",
           "pt-BR": "Amigos Megaton GX",
-          "de": "Megatonnen-Freunde GX"
+          "de": "Megatonnen-Freunde-GX"
         },
         "cost": [
           "normal",
@@ -7114,7 +7158,7 @@
       "es": "Pon 6 cartas de Pokémon y de Energía Básica, en cualquier combinación, de tu pila de descartes en tu baraja y barájalas todas.",
       "it": "Rimischia sei carte Pokémon e Energia base, in qualsiasi combinazione, dalla tua pila degli scarti nel tuo mazzo.",
       "pt-BR": "Embaralhe 6 cartas de Pokémon e de Energia básica da sua pilha de descarte no seu baralho em qualquer combinação.",
-      "de": "Mische eine beliebige Kombination aus 6 Pokémon und Basis-Energiekarten aus deinem Ablagestapel in dein Deck."
+      "de": "Mische eine beliebige Kombination aus 6 Pokémon und Basis-Energiekarten aus deinem Ablagestapel in dein Deck. Du kannst während deines Zuges (bevor du angreifst) nur 1 Unterstützerkarte spielen."
     }
   },
   {
@@ -7168,7 +7212,7 @@
       "es": "Puedes jugar esta carta solo si el Pokémon Activo de tu rival es un Pokémon de Fase 2.\n\nBusca en tu baraja hasta 2 cartas y ponlas en tu mano. Después, baraja las cartas de tu baraja.",
       "it": "Puoi giocare questa carta solo se il Pokémon attivo del tuo avversario è un Pokémon di Fase 2.\n\nCerca nel tuo mazzo fino a due carte e aggiungile alle carte che hai in mano. Poi rimischia le carte del tuo mazzo.",
       "pt-BR": "Você só pode jogar esta carta se o Pokémon Ativo do seu oponente for um Pokémon Estágio 2.\n\nProcure por até 2 cartas no seu baralho e coloque-as na sua mão. Em seguida, embaralhe o seu baralho.",
-      "de": "Du kannst diese Karte nur spielen, wenn das Aktive Pokémon deines Gegners ein Phase-2-Pokémon ist.\n\nDurchsuche dein Deck nach bis zu 2 Karten und nimm sie auf deine Hand. Mische anschließend dein Deck."
+      "de": "Du kannst diese Karte nur spielen, wenn das Aktive Pokémon deines Gegners ein Phase-2-Pokémon ist. Durchsuche dein Deck nach bis zu 2 Karten und nimm sie auf deine Hand. Mische anschließend dein Deck. Du kannst während deines Zuges (bevor du angreifst) nur 1 Unterstützerkarte spielen."
     }
   },
   {
@@ -7209,7 +7253,7 @@
       "es": "Puedes jugar esta carta solo si tienes otras 4 cartas o menos en tu mano.\n\nRoba 1 carta por cada uno de los Pokémon en juego de tu rival.",
       "it": "Puoi giocare questa carta solo se hai quattro o meno altre carte in mano.\n\nPesca una carta per ogni Pokémon del tuo avversario in gioco.",
       "pt-BR": "Você só pode jogar esta carta se tiver 4 ou menos outras cartas na sua mão.\n\nCompre 1 carta para cada um dos Pokémon do seu oponente em jogo.",
-      "de": "Du kannst diese Karte nur spielen, wenn du 4 oder weniger andere Karten auf deiner Hand hast.\n\n\nZiehe 1 Karte für jedes Pokémon deines Gegners im Spiel."
+      "de": "Du kannst diese Karte nur spielen, wenn du 4 oder weniger andere Karten auf deiner Hand hast. Ziehe 1 Karte für jedes Pokémon deines Gegners im Spiel. Du kannst während deines Zuges (bevor du angreifst) nur 1 Unterstützerkarte spielen."
     }
   },
   {
@@ -7263,7 +7307,7 @@
       "es": "Puedes jugar esta carta solo si el Pokémon Activo de tu rival es un Pokémon de Fase 1.\n\nRoba 4 cartas.",
       "it": "Puoi giocare questa carta solo se il Pokémon attivo del tuo avversario è un Pokémon di Fase 1.\n\nPesca quattro carte.",
       "pt-BR": "Você só pode jogar esta carta se o Pokémon Ativo do seu oponente for um Pokémon Estágio 1.\n\nCompre 4 cartas.",
-      "de": "Du kannst diese Karte nur spielen, wenn das Aktive Pokémon deines Gegners ein Phase-1-Pokémon ist.\n\nZiehe 4 Karten."
+      "de": "Du kannst diese Karte nur spielen, wenn das Aktive Pokémon deines Gegners ein Phase-1-Pokémon ist. Ziehe 4 Karten. Du kannst während deines Zuges (bevor du angreifst) nur 1 Unterstützerkarte spielen."
     }
   },
   {
@@ -7317,7 +7361,7 @@
       "es": "Mira la primera carta de tu baraja y elige 1 opción:\n\n• Descarta las cartas de tu mano y roba 5 cartas.\n• Descarta las cartas de tu mano y roba 5 cartas de la parte inferior de tu baraja.",
       "it": "Guarda la prima carta del tuo mazzo e poi scegli:\n\n• Scarta le carte che hai in mano e pesca cinque carte. \n• Scarta le carte che hai in mano e pesca cinque carte in fondo al tuo mazzo.",
       "pt-BR": "Olhe a primeira carta do seu baralho e escolha 1:\n\n• Descarte a sua mão e compre 5 cartas.\n• Descarte a sua mão e compre as 5 últimas cartas do seu baralho.",
-      "de": "Schau dir die oberste Karte deines Decks an und wähle 1 aus:\n\n• Lege deine Handkarten auf deinen Ablagestapel und ziehe 5 Karten.\n• Lege deine Handkarten auf deinen Ablagestapel und ziehe 5 Karten von unten aus deinem Deck."
+      "de": "Schau dir die oberste Karte deines Decks an und wähle 1 aus: Lege deine Handkarten auf deinen Ablagestapel und ziehe 5 Karten. Du kannst während deines Zuges (bevor du angreifst) nur 1 Unterstützerkarte spielen. Lege deine Handkarten auf deinen Ablagestapel und ziehe 5 Karten von unten aus deinem Deck."
     }
   },
   {
@@ -7371,7 +7415,7 @@
       "es": "Busca en tu baraja 1 Pokémon Metal, enséñalo y ponlo en tu mano. Si sales segundo y es tu primer turno, busca 5 Pokémon Metal en vez de 1. Después, baraja las cartas de tu baraja.",
       "it": "Cerca nel tuo mazzo un Pokémon Metal, mostralo e aggiungilo alle carte che hai in mano. Se inizi per secondo e se è il tuo primo turno, cerca cinque Pokémon Metal invece di uno. Poi rimischia le carte del tuo mazzo.",
       "pt-BR": "Procure por 1 Pokémon Metal no seu baralho, revele-o e coloque-o na sua mão. Se você for o segundo a jogar e esta for a sua primeira vez de jogar, procure por 5 Pokémon Metal ao invés de 1. Em seguida, embaralhe o seu baralho.",
-      "de": "Durchsuche dein Deck nach 1 Metal-Pokémon, zeige es deinem Gegner und nimm es auf deine Hand. Wenn du als Zweiter am Zug bist und es dein erster Zug ist, durchsuche dein Deck nach 5 Metal-Pokémon anstelle von 1. Mische anschließend dein Deck."
+      "de": "Durchsuche dein Deck nach 1 {M}-Pokémon, zeige es deinem Gegner und nimm es auf deine Hand. Wenn du als Zweiter am Zug bist und es dein erster Zug ist, durchsuche dein Deck nach 5 {M}-Pokémon anstelle von 1. Mische anschließend dein Deck. Du kannst während deines Zuges (bevor du angreifst) nur 1 Unterstützerkarte spielen."
     }
   },
   {
@@ -7425,7 +7469,7 @@
       "es": "Puedes jugar esta carta solo si descartas las cartas de Meridia, Vésper y Nocta de tu mano.\n\nMira las 12 primeras cartas de tu baraja y une cualquier cantidad de cartas de Energía que encuentres entre ellas a tus Pokémon de la manera que desees. Pon el resto de cartas de nuevo en tu baraja y barájalas todas.",
       "it": "Puoi giocare questa carta solo se scarti Meridia, Vespera e Notturna dalla tua mano.\n\nGuarda le prime 12 carte del tuo mazzo e assegna a piacimento un numero qualsiasi di carte Energia presenti tra esse ai tuoi Pokémon. Poi rimischia le altre carte nel tuo mazzo.",
       "pt-BR": "Você só pode jogar esta carta se descartar Diana, Véspera e Anita da sua mão.\n\nOlhe as 12 primeiras cartas do seu baralho e ligue qualquer número de cartas de Energia que encontrar lá aos seus Pokémon como desejar. Embaralhe as demais cartas de volta no seu baralho.",
-      "de": "Du kannst diese Karte nur spielen, wenn du Journée, Soir und Nuit aus deiner Hand auf deinen Ablagestapel legst.\n\nSchau dir die obersten 12 Karten deines Decks an und lege beliebig viele Energiekarten, die du dort findest, beliebig an deine Pokémon an. Mische die anderen Karten zurück in dein Deck."
+      "de": "Du kannst diese Karte nur spielen, wenn du Journée, Soir und Nuit aus deiner Hand auf deinen Ablagestapel legst. Schau dir die obersten 12 Karten deines Decks an und lege beliebig viele Energiekarten, die du dort findest, beliebig an deine Pokémon an. Mische die anderen Karten zurück in dein Deck. Du kannst während deines Zuges (bevor du angreifst) nur 1 Unterstützerkarte spielen."
     }
   },
   {
@@ -7479,7 +7523,7 @@
       "es": "Elige 1 Pokémon Darkness Básico de tu pila de descartes. Cámbialo por 1 de tus Pokémon en juego. Todas las cartas unidas a este Pokémon, los contadores de daño, las Condiciones Especiales, los turnos de juego y todos los demás efectos permanecen en el nuevo Pokémon.",
       "it": "Scegli un Pokémon Base Darkness dalla tua pila degli scarti. Scambialo con uno dei tuoi Pokémon in gioco. Le carte assegnate, i segnalini danno, le condizioni speciali, il numero di turni da cui è in gioco e qualsiasi altro effetto restano sul nuovo Pokémon.",
       "pt-BR": "Escolha 1 Pokémon Darkness Básico da sua pilha de descarte. Troque-o por 1 dos seus Pokémon em jogo. Quaisquer cartas ligadas, contadores de dano, Condições Especiais, vezes em jogo e quaisquer outros efeitos permanecem no novo Pokémon.",
-      "de": "Wähle 1 Darkness-Basis-Pokémon aus deinem Ablagestapel. Tausche es gegen 1 deiner Pokémon im Spiel aus. Alle an es angelegten Karten, Schadensmarken, Speziellen Zustände, Spielzüge sowie alle anderen Effekte verbleiben auf dem neuen Pokémon."
+      "de": "Wähle 1 {D}-Basis-Pokémon aus deinem Ablagestapel. Tausche es gegen 1 deiner Pokémon im Spiel aus. Alle an es angelegten Karten, Schadensmarken, Speziellen Zustände, Spielzüge sowie alle anderen Effekte verbleiben auf dem neuen Pokémon. Du kannst während deines Zuges (bevor du angreifst) nur 1 Unterstützerkarte spielen."
     }
   },
   {
@@ -7535,7 +7579,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Ponyta",
-      "fr": "Ponyta"
+      "fr": "Ponyta",
+      "de": "Ponita"
     },
     "attacks": [
       {
@@ -7592,7 +7637,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Very competitive, this Pokémon will chase anything that moves fast in the hopes of racing it."
+      "en": "Very competitive, this Pokémon will chase anything that moves fast in the hopes of racing it.",
+      "de": "Dieses Pokémon verfolgt schnelle Objekte in der Hoffnung, ein Wettrennen gegen sie zu gewinnen."
     }
   },
   {
@@ -7646,7 +7692,7 @@
       "es": "Puedes jugar esta carta solo si el Pokémon Activo de tu rival es un Pokémon Básico.\n\nPon 1 Energía del Pokémon Activo de tu rival en la parte superior de su baraja.",
       "it": "Puoi giocare questa carta solo se il Pokémon attivo del tuo avversario è un Pokémon Base.\n\nPrendi un’Energia dal Pokémon attivo del tuo avversario e mettila in cima al suo mazzo.",
       "pt-BR": "Você só pode jogar esta carta se o Pokémon Ativo do seu oponente for um Pokémon Básico.\n\nColoque 1 Energia do Pokémon Ativo do seu oponente como a primeira carta do baralho dele(a).",
-      "de": "Du kannst diese Karte nur spielen, wenn das Aktive Pokémon deines Gegners ein Basis-Pokémon ist.\n\nLege 1 Energie vom Aktiven Pokémon deines Gegners oben auf sein Deck."
+      "de": "Du kannst diese Karte nur spielen, wenn das Aktive Pokémon deines Gegners ein Basis-Pokémon ist. Lege 1 Energie vom Aktiven Pokémon deines Gegners oben auf sein Deck. Du kannst während deines Zuges (bevor du angreifst) nur 1 Unterstützerkarte spielen."
     }
   },
   {
@@ -7687,7 +7733,7 @@
       "es": "Tu rival enseña las cartas de su mano. Puedes elegir 1 carta de Partidario que encuentres entre ellas y usar el efecto de esa carta como efecto de este ataque.",
       "it": "Il tuo avversario mostra le carte che ha in mano. Puoi scegliere una carta Aiuto presente tra esse e usare l’effetto di quella carta come effetto di questa carta.",
       "pt-BR": "Seu oponente revela a própria mão. Você pode escolher 1 carta de Apoiador que encontrar lá e usar o efeito daquela carta como o efeito desta carta.",
-      "de": "Dein Gegner zeigt dir seine Handkarten. Du kannst 1 Unterstützerkarte, die du dort findest, wählen und den Effekt jener Karte als Effekt dieser Karte einsetzen."
+      "de": "Dein Gegner zeigt dir seine Handkarten. Du kannst 1 Unterstützerkarte, die du dort findest, wählen und den Effekt jener Karte als Effekt dieser Karte einsetzen. Du kannst während deines Zuges (bevor du angreifst) nur 1 Unterstützerkarte spielen."
     }
   },
   {
@@ -7792,7 +7838,7 @@
           "es": "Perenne GX",
           "it": "Sempreverde GX",
           "pt-BR": "Perene GX",
-          "de": "Immergrün GX"
+          "de": "Immergrün-GX"
         },
         "cost": [
           "grass",
@@ -7807,7 +7853,7 @@
           "es": "Cura todos los puntos de daño a este Pokémon. Si este Pokémon tiene por lo menos 1 Energía Grass adicional unida a él (además de las del coste de este ataque), pon todas las cartas de tu pila de descartes en tu baraja y barájalas todas. (No puedes usar más de 1 ataque GX en una partida).",
           "it": "Cura questo Pokémon da tutti i danni. Se questo Pokémon ha almeno un’Energia Grass extra assegnata, in aggiunta a quelle del costo di questo attacco, rimischia tutte le carte dalla tua pila degli scarti nel tuo mazzo. Non puoi usare più di un attacco GX a partita.",
           "pt-BR": "Cure todo o dano deste Pokémon. Se este Pokémon tiver pelo menos 1 Energia Grass adicional ligada a ele (além do custo deste ataque), embaralhe todas as cartas da sua pilha de descarte no seu baralho (você não pode usar mais de 1 ataque GX por partida).",
-          "de": "Heile allen Schaden bei diesem Pokémon. Wenn an dieses Pokémon mindestens 1 extra Grass-Energie angelegt ist (zusätzlich zu den Kosten dieser Attacke), mische alle Karten aus deinem Ablagestapel in dein Deck. (Du kannst pro Spiel nur 1 GX-Attacke einsetzen.)"
+          "de": "Heile allen Schaden bei diesem Pokémon. Wenn an dieses Pokémon mindestens 1 extra {G}-Energie angelegt ist (zusätzlich zu den Kosten dieser Attacke), mische alle Karten aus deinem Ablagestapel in dein Deck. (Du kannst pro Spiel nur 1 GX-Attacke einsetzen.)"
         }
       }
     ],
@@ -7898,7 +7944,7 @@
           "es": "Salpicadura Imponente GX",
           "it": "Splash Anomalo GX",
           "pt-BR": "Borrifada Gigantesca GX",
-          "de": "Turmhoher Platscher GX"
+          "de": "Turmhoher Platscher-GX"
         },
         "cost": [
           "water"
@@ -7910,7 +7956,7 @@
           "es": "Si este Pokémon tiene por lo menos 7 Energías Water adicionales unidas a él (además de las del coste de este ataque), este ataque hace 100 puntos de daño a cada uno de los Pokémon en Banca de tu rival. (No apliques Debilidad y Resistencia a los Pokémon en Banca). (No puedes usar más de 1 ataque GX en una partida).",
           "it": "Se questo Pokémon ha almeno sette Energie Water extra assegnate, in aggiunta a quelle del costo di questo attacco, questo attacco infligge 100 danni a ciascun Pokémon nella panchina del tuo avversario. Ricorda che non puoi applicare debolezza e resistenza ai Pokémon in panchina. Non puoi usare più di un attacco GX a partita.",
           "pt-BR": "Se este Pokémon tiver pelo menos 7 Energias Water adicionais ligadas a ele (além do custo deste ataque), este ataque causará 100 pontos de dano a cada um dos Pokémon no Banco do seu oponente (não aplique Fraqueza e Resistência aos Pokémon no Banco). (Você não pode usar mais de 1 ataque GX por partida.)",
-          "de": "Wenn an dieses Pokémon mindestens 7 extra Water-Energien angelegt sind (zusätzlich zu den Kosten dieser Attacke), fügt diese Attacke jedem Pokémon auf der Bank deines Gegners 100 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.) (Du kannst pro Spiel nur 1 GX-Attacke einsetzen.)"
+          "de": "Wenn an dieses Pokémon mindestens 7 extra {W}-Energien angelegt sind (zusätzlich zu den Kosten dieser Attacke), fügt diese Attacke jedem Pokémon auf der Bank deines Gegners 100 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.) (Du kannst pro Spiel nur 1 GX-Attacke einsetzen.)"
         }
       }
     ],
@@ -7996,7 +8042,7 @@
           "es": "Busca en tu baraja hasta 3 cartas de Energía Lightning y únelas a 1 de tus Pokémon. Después, baraja las cartas de tu baraja.",
           "it": "Cerca nel tuo mazzo fino a tre carte Energia Lightning e assegnale a uno dei tuoi Pokémon. Poi rimischia le carte del tuo mazzo.",
           "pt-BR": "Procure por até 3 cartas de Energia Lightning no seu baralho e ligue-as a 1 dos seus Pokémon. Em seguida, embaralhe o seu baralho.",
-          "de": "Durchsuche dein Deck nach bis zu 3 Lightning-Energiekarten und lege sie an 1 deiner Pokémon an. Mische anschließend dein Deck."
+          "de": "Durchsuche dein Deck nach bis zu 3 {L}-Energiekarten und lege sie an 1 deiner Pokémon an. Mische anschließend dein Deck."
         }
       },
       {
@@ -8006,7 +8052,7 @@
           "es": "Rayo Relevo GX",
           "it": "Bolide Alleato GX",
           "pt-BR": "Relâmpago de Aliados GX",
-          "de": "Doppel-Blitzschlag GX"
+          "de": "Doppel-Blitzschlag-GX"
         },
         "cost": [
           "lightning",
@@ -8020,7 +8066,7 @@
           "es": "Si este Pokémon tiene por lo menos 3 Energías Lightning adicionales unidas a él (además de las del coste de este ataque), este ataque hace 170 puntos de daño a 1 de los Pokémon en Banca de tu rival. (No apliques Debilidad y Resistencia a los Pokémon en Banca). (No puedes usar más de 1 ataque GX en una partida).",
           "it": "Se questo Pokémon ha almeno tre Energie Lightning extra assegnate, in aggiunta a quelle del costo di questo attacco, questo attacco infligge 170 danni a uno dei Pokémon nella panchina del tuo avversario. Ricorda che non puoi applicare debolezza e resistenza ai Pokémon in panchina. Non puoi usare più di un attacco GX a partita.",
           "pt-BR": "Se este Pokémon tiver pelo menos 3 Energias Lightning adicionais ligadas a ele (além do custo deste ataque), este ataque causará 170 pontos de dano a 1 dos Pokémon no Banco do seu oponente (não aplique Fraqueza e Resistência aos Pokémon no Banco). (Você não pode usar mais de 1 ataque GX por partida.)",
-          "de": "Wenn an dieses Pokémon mindestens 3 extra Lightning-Energien angelegt sind (zusätzlich zu den Kosten dieser Attacke), fügt diese Attacke 1 Pokémon auf der Bank deines Gegners 170 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.) (Du kannst pro Spiel nur 1 GX-Attacke einsetzen.)"
+          "de": "Wenn an dieses Pokémon mindestens 3 extra {L}-Energien angelegt sind (zusätzlich zu den Kosten dieser Attacke), fügt diese Attacke 1 Pokémon auf der Bank deines Gegners 170 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.) (Du kannst pro Spiel nur 1 GX-Attacke einsetzen.)"
         }
       }
     ],
@@ -8090,7 +8136,8 @@
     ],
     "evolves_from": {
       "en": "Flaaffy",
-      "fr": "Lainergie"
+      "fr": "Lainergie",
+      "de": "Waaty"
     },
     "rule_box": "GX",
     "attacks": [
@@ -8136,7 +8183,7 @@
           "es": "Descarta todas las Energías Lightning de este Pokémon.",
           "it": "Scarta tutte le Energie Lightning assegnate a questo Pokémon.",
           "pt-BR": "Descarte todas as Energias Lightning deste Pokémon.",
-          "de": "Lege alle Lightning-Energien von diesem Pokémon auf deinen Ablagestapel."
+          "de": "Lege alle {L}-Energien von diesem Pokémon auf deinen Ablagestapel."
         }
       },
       {
@@ -8146,7 +8193,7 @@
           "es": "Eléctrico GX",
           "it": "Scossa GX",
           "pt-BR": "Carga Elétrica GX",
-          "de": "Elektrisch GX"
+          "de": "Elektrisch-GX"
         },
         "cost": [
           "lightning"
@@ -8259,7 +8306,7 @@
           "es": "Casa del Terror GX",
           "it": "Casa degli Orrori GX",
           "pt-BR": "Casa do Horror GX",
-          "de": "Spukhaus GX"
+          "de": "Spukhaus-GX"
         },
         "cost": [
           "psychic"
@@ -8271,7 +8318,7 @@
           "es": "Tu rival no puede jugar ninguna carta de su mano durante su próximo turno. Si este Pokémon tiene por lo menos 1 Energía Psychic adicional unida a él (además de las del coste de este ataque), cada jugador roba cartas hasta tener 7 cartas en su mano. (No puedes usar más de 1 ataque GX en una partida).",
           "it": "Il tuo avversario non può giocare le carte che ha in mano durante il suo prossimo turno. Se questo Pokémon ha almeno un’Energia Psychic extra assegnata, in aggiunta a quelle del costo di questo attacco, ciascun giocatore pesca fino ad avere sette carte in mano. Non puoi usare più di un attacco GX a partita.",
           "pt-BR": "Seu oponente não poderá jogar nenhuma carta da própria mão durante a próxima vez dele(a) jogar. Se este Pokémon tiver pelo menos 1 Energia Psychic adicional ligada a ele (além do custo deste ataque), cada jogador comprará cartas até ter 7 cartas na própria mão (você não pode usar mais de 1 ataque GX por partida).",
-          "de": "Dein Gegner kann während seines nächsten Zuges keine Karten aus seiner Hand spielen. Wenn an dieses Pokémon mindestens 1 extra Psychic-Energie angelegt ist (zusätzlich zu den Kosten dieser Attacke), zieht jeder Spieler so lang Karten, bis er 7 Karten auf seiner Hand hat. (Du kannst pro Spiel nur 1 GX-Attacke einsetzen.)"
+          "de": "Dein Gegner kann während seines nächsten Zuges keine Karten aus seiner Hand spielen. Wenn an dieses Pokémon mindestens 1 extra {P}-Energie angelegt ist (zusätzlich zu den Kosten dieser Attacke), zieht jeder Spieler so lang Karten, bis er 7 Karten auf seiner Hand hat. (Du kannst pro Spiel nur 1 GX-Attacke einsetzen.)"
         }
       }
     ],
@@ -8394,7 +8441,7 @@
           "es": "Manos Diabólicas GX",
           "it": "Braccia Malefiche GX",
           "pt-BR": "Mãos Malignas GX",
-          "de": "Teufelshände GX"
+          "de": "Teufelshände-GX"
         },
         "cost": [
           "dark",
@@ -8478,7 +8525,8 @@
     ],
     "evolves_from": {
       "en": "Torracat",
-      "fr": "Matoufeu"
+      "fr": "Matoufeu",
+      "de": "Miezunder"
     },
     "rule_box": "GX",
     "attacks": [
@@ -8513,7 +8561,7 @@
           "es": "Tornado Oscuro GX",
           "it": "Tornado Plumbeo GX",
           "pt-BR": "Tornado Escuro GX",
-          "de": "Finstertornado GX"
+          "de": "Finstertornado-GX"
         },
         "cost": [
           "normal",
@@ -8728,7 +8776,7 @@
           "es": "Descarta todas las Energías Fire de este Pokémon. Después, descarta 1 carta de la parte superior de la baraja de tu rival por cada Energía que hayas descartado de esta manera.",
           "it": "Scarta tutte le Energie Fire assegnate a questo Pokémon. Poi scarta una carta dalla cima del mazzo del tuo avversario per ogni Energia che hai scartato in questo modo.",
           "pt-BR": "Descarte todas as Energias Fire deste Pokémon. Em seguida, descarte a primeira carta do baralho do seu oponente para cada Energia descartada desta forma.",
-          "de": "Lege alle Fire-Energien von diesem Pokémon auf deinen Ablagestapel. Lege anschließend für jede auf diese Weise auf deinen Ablagestapel gelegte Energie 1 Karte vom Deck deines Gegners auf seinen Ablagestapel."
+          "de": "Lege alle {R}-Energien von diesem Pokémon auf deinen Ablagestapel. Lege anschließend für jede auf diese Weise auf deinen Ablagestapel gelegte Energie 1 Karte vom Deck deines Gegners auf seinen Ablagestapel."
         }
       },
       {
@@ -8771,7 +8819,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "It is said to be the legendary bird Pokémon of fire. Every flap of its wings creates a dazzling flare of flames."
+      "en": "It is said to be the legendary bird Pokémon of fire. Every flap of its wings creates a dazzling flare of flames.",
+      "de": "Dieses Pokémon ist der Legendäre Feuervogel. Sein Flügelschlag entfacht ein helles Feuermeer."
     }
   },
   {
@@ -8859,7 +8908,7 @@
           "es": "Unidad Aérea GX",
           "it": "Unità Aerea GX",
           "pt-BR": "Unidade Aérea GX",
-          "de": "Luftstaffel GX"
+          "de": "Luftstaffel-GX"
         },
         "cost": [
           "psychic"
@@ -8990,7 +9039,7 @@
           "es": "Amigos Megatón GX",
           "it": "Amici Megatonici GX",
           "pt-BR": "Amigos Megaton GX",
-          "de": "Megatonnen-Freunde GX"
+          "de": "Megatonnen-Freunde-GX"
         },
         "cost": [
           "normal",
@@ -9068,7 +9117,7 @@
       "es": "Puedes jugar esta carta solo si descartas 1 Pokémon Darkness de tu mano.\n\nDescarta 1 carta de Herramienta Pokémon o 1 carta de Energía Especial de 1 de los Pokémon de tu rival, o descarta cualquier carta de Estadio en juego.",
       "it": "Puoi giocare questa carta solo se scarti un Pokémon Darkness che hai in mano.\n\nScarta una carta Oggetto Pokémon o Energia speciale assegnata a uno dei Pokémon del tuo avversario oppure scarta una carta Stadio qualsiasi in gioco.",
       "pt-BR": "Você só pode jogar esta carta se descartar 1 Pokémon Darkness da sua mão.\n\nDescarte 1 carta de Ferramenta Pokémon ou de Energia Especial de 1 dos Pokémon do seu oponente ou descarte qualquer carta de Estádio em jogo.",
-      "de": "Du kannst diese Karte nur spielen, wenn du 1 Darkness-Pokémon aus deiner Hand auf deinen Ablagestapel legst.\n\nLege 1 Pokémon-Ausrüstung oder Spezial-Energiekarte von 1 Pokémon deines Gegners auf seinen Ablagestapel oder lege 1 beliebige Stadionkarte im Spiel auf den Ablagestapel."
+      "de": "Du kannst diese Karte nur spielen, wenn du 1 {D}-Pokémon aus deiner Hand auf deinen Ablagestapel legst. Lege 1 Pokémon-Ausrüstung oder Spezial-Energiekarte von 1 Pokémon deines Gegners auf seinen Ablagestapel oder lege 1 beliebige Stadionkarte im Spiel auf den Ablagestapel. Du kannst während deines Zuges (bevor du angreifst) beliebig viele Itemkarten spielen."
     }
   },
   {
@@ -9122,7 +9171,7 @@
       "es": "Lanza 2 monedas. Por cada cara, pon 1 carta de Electropoder de tu pila de descartes en tu baraja y barájalas todas.",
       "it": "Lancia due volte una moneta. Ogni volta che esce testa, rimischia una carta Potenziatore Elettrico dalla tua pila degli scarti e aggiungila al tuo mazzo.",
       "pt-BR": "Jogue 2 moedas. Para cada cara, embaralhe 1 carta Eletropoder da sua pilha de descarte no seu baralho.",
-      "de": "Wirf 2 Münzen. Mische pro Kopf 1 Elektrokraft-Karte aus deinem Ablagestapel in dein Deck."
+      "de": "Wirf 2 Münzen. Mische pro Kopf 1 Elektrokraft-Karte aus deinem Ablagestapel in dein Deck. Du kannst während deines Zuges (bevor du angreifst) beliebig viele Itemkarten spielen."
     }
   },
   {
@@ -9176,7 +9225,7 @@
       "es": "Elige 1 opción:\n\n• Roba 1 carta.\n• Pon 1 carta de Juez de tu pila de descartes en tu mano.",
       "it": "Scegli:\n\n• Pesca una carta.\n• Prendi una carta Arbitro dalla tua pila degli scarti e aggiungila alle carte che hai in mano.",
       "pt-BR": "Escolha 1:\n\n• Compre 1 carta.\n• Coloque 1 carta Juiz da sua pilha de descarte na sua mão.",
-      "de": "Wähle 1 aus:\n\n• Ziehe 1 Karte.\n• Nimm 1 Richter-Karte aus deinem Ablagestapel auf deine Hand."
+      "de": "Wähle 1 aus: Ziehe 1 Karte. Du kannst während deines Zuges (bevor du angreifst) beliebig viele Itemkarten spielen. Nimm 1 Richter-Karte aus deinem Ablagestapel auf deine Hand."
     }
   },
   {
@@ -9230,7 +9279,7 @@
       "es": "Los ataques de tu rival hacen 30 puntos de daño menos al Pokémon Metal al que esté unida esta carta (después de aplicar Debilidad y Resistencia), y los ataques y las habilidades de tu rival no pueden poner contadores de daño sobre él.",
       "it": "Il Pokémon Metal a cui è assegnata questa carta subisce 30 danni in meno dagli attacchi del tuo avversario, dopo aver applicato debolezza e resistenza, e gli attacchi e le abilità del tuo avversario non possono assegnargli segnalini danno.",
       "pt-BR": "O Pokémon Metal ao qual esta carta está ligada recebe 30 pontos de dano a menos dos ataques do seu oponente (após a aplicação de Fraqueza e Resistência) e os ataques e as Habilidades do seu oponente não poderão colocar contadores de dano nele.",
-      "de": "Dem Metal-Pokémon, an das diese Karte angelegt ist, werden durch Attacken deines Gegners 30 Schadenspunkte weniger zugefügt (nachdem Schwäche und Resistenz verrechnet wurden), und durch Attacken und Fähigkeiten deines Gegners können keine Schadensmarken auf jenes Pokémon gelegt werden."
+      "de": "Lege 1 Pokémon-Ausrüstung an 1 deiner Pokémon an, an das noch keine Pokémon-Ausrüstung angelegt ist. Dem {M}-Pokémon, an das diese Karte angelegt ist, werden durch Attacken deines Gegners 30 Schadenspunkte weniger zugefügt (nachdem Schwäche und Resistenz verrechnet wurden), und durch Attacken und Fähigkeiten deines Gegners können keine Schadensmarken auf jenes Pokémon gelegt werden. Du kannst während deines Zuges (bevor du angreifst) beliebig viele Itemkarten spielen."
     }
   },
   {
@@ -9385,7 +9434,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Often found in forests and grasslands. It has a sharp, toxic barb of around two inches on top of its head."
+      "en": "Often found in forests and grasslands. It has a sharp, toxic barb of around two inches on top of its head.",
+      "de": "Es lebt bevorzugt in Wäldern und in hohem Gras. Auf dem Kopf trägt es einen circa 5 cm langen, spitzen, giftigen Stachel."
     }
   },
   {
@@ -9471,7 +9521,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It doesn't allow its emotions to be easily seen. Earning its trust takes time. It prefers solitude."
+      "en": "It doesn't allow its emotions to be easily seen. Earning its trust takes time. It prefers solitude.",
+      "de": "Es zeigt nie seine Gefühle und ist am liebsten allein. Sein Zutrauen zu gewinnen, kann einige Zeit in Anspruch nehmen."
     }
   },
   {
@@ -9527,7 +9578,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Litten",
-      "fr": "Flamiaou"
+      "fr": "Flamiaou",
+      "de": "Flamiau"
     },
     "attacks": [
       {
@@ -9578,7 +9630,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "It boasts powerful front legs. With a single punch, it can bend an iron bar right over."
+      "en": "It boasts powerful front legs. With a single punch, it can bend an iron bar right over.",
+      "de": "Dieses Pokémon ist sehr stolz auf seine starken Vorderbeine. Außerdem kann es mit nur einem Schlag eine Eisenstange verbiegen."
     }
   },
   {
@@ -9658,7 +9711,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It shelters itself in its shell, then strikes back with spouts of water at every opportunity."
+      "en": "It shelters itself in its shell, then strikes back with spouts of water at every opportunity.",
+      "de": "Es zieht sich in seinen Panzer zurück und greift dann mit Wasserstrahlen seine Gegner an."
     }
   },
   {
@@ -9753,7 +9807,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It shelters itself in its shell, then strikes back with spouts of water at every opportunity."
+      "en": "It shelters itself in its shell, then strikes back with spouts of water at every opportunity.",
+      "de": "Es zieht sich in seinen Panzer zurück und greift dann mit Wasserstrahlen seine Gegner an."
     }
   },
   {
@@ -9809,7 +9864,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Squirtle",
-      "fr": "Carapuce"
+      "fr": "Carapuce",
+      "de": "Schiggy"
     },
     "attacks": [
       {
@@ -9854,7 +9910,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "When tapped, this Pokémon will pull in its head, but its tail will still stick out a little bit."
+      "en": "When tapped, this Pokémon will pull in its head, but its tail will still stick out a little bit.",
+      "de": "Bei Gefahr zieht dieses Pokémon seinen Kopf ein. Die Schwanzspitze ragt jedoch aus dem Panzer heraus."
     }
   },
   {
@@ -9910,7 +9967,8 @@
     "stage": "stage2",
     "evolves_from": {
       "en": "Wartortle",
-      "fr": "Carabaffe"
+      "fr": "Carabaffe",
+      "de": "Schillok"
     },
     "attacks": [
       {
@@ -9946,7 +10004,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "It crushes its foe under its heavy body to cause fainting. In a pinch, it will withdraw inside its shell."
+      "en": "It crushes its foe under its heavy body to cause fainting. In a pinch, it will withdraw inside its shell.",
+      "de": "Es begräbt seine Gegner mit seinem enormen Körpergewicht. Wenn es in einer aussichtslosen Lage steckt, zieht es sich in seinen Panzer zurück."
     }
   },
   {
@@ -10032,7 +10091,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "Using psychokinesis gives it a headache, so it normally passes the time spacing out and doing as little as possible."
+      "en": "Using psychokinesis gives it a headache, so it normally passes the time spacing out and doing as little as possible.",
+      "de": "Wenn es seine Psycho-Kräfte einsetzt, bekommt es Kopfschmerzen. Deshalb steht es lieber untätig und geistesabwesend herum."
     }
   },
   {
@@ -10088,7 +10148,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Psyduck",
-      "fr": "Psykokwak"
+      "fr": "Psykokwak",
+      "de": "Enton"
     },
     "attacks": [
       {
@@ -10134,7 +10195,7 @@
           "es": "Si alguno de los Pokémon de tu rival tiene alguna Energía Water unida a él, puedes hacer 90 puntos de daño a 1 de los Pokémon en Banca de tu rival en vez de a su Pokémon Activo. (No apliques Debilidad y Resistencia a los Pokémon en Banca).",
           "it": "Se uno qualsiasi dei Pokémon del tuo avversario ha delle Energie Water assegnate, puoi infliggere 90 danni a uno dei Pokémon nella panchina del tuo avversario invece che al suo Pokémon attivo. Ricorda che non puoi applicare debolezza e resistenza ai Pokémon in panchina.",
           "pt-BR": "Se algum dos Pokémon do seu oponente tiver alguma Energia Water ligada a ele, você poderá causar 90 pontos de dano a 1 dos Pokémon no Banco do seu oponente ao invés de causar dano ao Pokémon Ativo dele(a) (não aplique Fraqueza e Resistência aos Pokémon no Banco).",
-          "de": "Wenn an die Pokémon deines Gegners mindestens 1 Water-Energie angelegt ist, kannst du 1 Pokémon auf der Bank deines Gegners anstelle seines Aktiven Pokémon 90 Schadenspunkte zufügen. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
+          "de": "Wenn an die Pokémon deines Gegners mindestens 1 {W}-Energie angelegt ist, kannst du 1 Pokémon auf der Bank deines Gegners anstelle seines Aktiven Pokémon 90 Schadenspunkte zufügen. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
         }
       }
     ],
@@ -10146,7 +10207,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Even fast-swimming fish Pokémon can be disabled by Golduck. It brings them to a standstill and seizes them."
+      "en": "Even fast-swimming fish Pokémon can be disabled by Golduck. It brings them to a standstill and seizes them.",
+      "de": "Es bringt selbst schnelle Fisch-Pokémon zum Stillstand und ergreift sie anschließend mit Leichtigkeit."
     }
   },
   {
@@ -10232,7 +10294,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "In many places, there are folktales of stardust falling into the ocean and becoming Staryu."
+      "en": "In many places, there are folktales of stardust falling into the ocean and becoming Staryu.",
+      "de": "Einer weitverbreiteten Volkssage zufolge ist Sterndu aus Sternennebel entstanden, der ins Meer gefallen war."
     }
   },
   {
@@ -10318,7 +10381,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "In the distant past, they were fairly strong, but they have become gradually weaker over time."
+      "en": "In the distant past, they were fairly strong, but they have become gradually weaker over time.",
+      "de": "Vor langer, langer Zeit war es anscheinend ziemlich stark, doch es wurde zusehends schwächer und schwächer."
     }
   },
   {
@@ -10404,7 +10468,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Often found in forests and grasslands. It has a sharp, toxic barb of around two inches on top of its head."
+      "en": "Often found in forests and grasslands. It has a sharp, toxic barb of around two inches on top of its head.",
+      "de": "Es lebt bevorzugt in Wäldern und in hohem Gras. Auf dem Kopf trägt es einen circa 5 cm langen, spitzen, giftigen Stachel."
     }
   },
   {
@@ -10460,7 +10525,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Magikarp",
-      "fr": "Magicarpe"
+      "fr": "Magicarpe",
+      "de": "Karpador"
     },
     "attacks": [
       {
@@ -10482,7 +10548,7 @@
           "es": "Enseña las 7 primeras cartas de tu baraja. Este ataque hace 30 puntos de daño más por cada Energía Water que encuentres entre ellas. Después, pon esas cartas de Energía de nuevo en tu baraja, barájalas todas y descarta el resto de cartas.",
           "it": "Mostra le prime sette carte del tuo mazzo. Questo attacco infligge 30 danni in più per ogni Energia Water presente tra quelle carte. Poi rimischia quelle carte Energia nel tuo mazzo e scarta le altre carte.",
           "pt-BR": "Revele as 7 primeiras cartas do seu baralho. Este ataque causa 30 pontos de dano a mais vezes a quantidade de Energia Water que encontrar lá. Em seguida, embaralhe aquelas cartas de Energia de volta no seu baralho e descarte as demais cartas.",
-          "de": "Zeige deinem Gegner die obersten 7 Karten deines Decks. Diese Attacke fügt 30 Schadenspunkte mehr mal der Anzahl der Water-Energien zu, die du dort findest. Mische anschließend jene Energiekarten zurück in dein Deck und lege die anderen Karten auf deinen Ablagestapel."
+          "de": "Zeige deinem Gegner die obersten 7 Karten deines Decks. Diese Attacke fügt 30 Schadenspunkte mehr mal der Anzahl der {W}-Energien zu, die du dort findest. Mische anschließend jene Energiekarten zurück in dein Deck und lege die anderen Karten auf deinen Ablagestapel."
         }
       },
       {
@@ -10518,7 +10584,8 @@
     ],
     "retreat_cost": 4,
     "flavor_text": {
-      "en": "It fires hyper beams in all directions, burning the surrounding area to ash. There are some regions where it's called \"the deity of destruction.\""
+      "en": "It fires hyper beams in all directions, burning the surrounding area to ash. There are some regions where it's called \"the deity of destruction.\"",
+      "de": "Mit seinem Hyperstrahl legt es die Umgebung in Schutt und Asche. Manchmal wird es auch als „Gottheit der Zerstörung“ bezeichnet."
     }
   },
   {
@@ -10614,7 +10681,7 @@
           "es": "Este ataque hace 30 puntos de daño más por cada Energía Water unida a este Pokémon.",
           "it": "Questo attacco infligge 30 danni in più per ogni Energia Water assegnata a questo Pokémon.",
           "pt-BR": "Este ataque causa 30 pontos de dano a mais vezes a quantidade de Energia Water ligada a este Pokémon.",
-          "de": "Diese Attacke fügt 30 Schadenspunkte mehr mal der Anzahl der an dieses Pokémon angelegten Water-Energien zu."
+          "de": "Diese Attacke fügt 30 Schadenspunkte mehr mal der Anzahl der an dieses Pokémon angelegten {W}-Energien zu."
         }
       }
     ],
@@ -10626,7 +10693,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "It likes swimming around with people on its back. In the Alola region, it's an important means of transportation over water."
+      "en": "It likes swimming around with people on its back. In the Alola region, it's an important means of transportation over water.",
+      "de": "Da es liebend gerne beim Schwimmen Menschen auf seinem Rücken trägt, gilt es in Alola als bedeutendes Transportmittel."
     }
   },
   {
@@ -10701,7 +10769,7 @@
           "es": "Mueve 2 Energías Water de este Pokémon a 1 de tus Pokémon en Banca.",
           "it": "Sposta due Energie Water da questo Pokémon a uno di quelli nella tua panchina.",
           "pt-BR": "Mova 2 Energias Water deste Pokémon para 1 dos seus Pokémon no Banco.",
-          "de": "Verschiebe 2 Water-Energien von diesem Pokémon auf 1 Pokémon auf deiner Bank."
+          "de": "Verschiebe 2 {W}-Energien von diesem Pokémon auf 1 Pokémon auf deiner Bank."
         }
       }
     ],
@@ -10719,7 +10787,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "A legendary bird Pokémon. It can create blizzards by freezing moisture in the air."
+      "en": "A legendary bird Pokémon. It can create blizzards by freezing moisture in the air.",
+      "de": "Ein Legendäres Vogel-Pokémon. Es kann Blizzards verursachen, indem es Feuchtigkeit gefriert."
     }
   },
   {
@@ -10796,7 +10865,7 @@
           "es": "Busca en tu baraja hasta 3 cartas de Energía Lightning y únelas a 1 de tus Pokémon. Después, baraja las cartas de tu baraja.",
           "it": "Cerca nel tuo mazzo fino a tre carte Energia Lightning e assegnale a uno dei tuoi Pokémon. Poi rimischia le carte del tuo mazzo.",
           "pt-BR": "Procure por até 3 cartas de Energia Lightning no seu baralho e ligue-as a 1 dos seus Pokémon. Em seguida, embaralhe o seu baralho.",
-          "de": "Durchsuche dein Deck nach bis zu 3 Lightning-Energiekarten und lege sie an 1 deiner Pokémon an. Mische anschließend dein Deck."
+          "de": "Durchsuche dein Deck nach bis zu 3 {L}-Energiekarten und lege sie an 1 deiner Pokémon an. Mische anschließend dein Deck."
         }
       },
       {
@@ -10806,7 +10875,7 @@
           "es": "Rayo Relevo GX",
           "it": "Bolide Alleato GX",
           "pt-BR": "Relâmpago de Aliados GX",
-          "de": "Doppel-Blitzschlag GX"
+          "de": "Doppel-Blitzschlag-GX"
         },
         "cost": [
           "lightning",
@@ -10820,7 +10889,7 @@
           "es": "Si este Pokémon tiene por lo menos 3 Energías Lightning adicionales unidas a él (además de las del coste de este ataque), este ataque hace 170 puntos de daño a 1 de los Pokémon en Banca de tu rival. (No apliques Debilidad y Resistencia a los Pokémon en Banca). (No puedes usar más de 1 ataque GX en una partida).",
           "it": "Se questo Pokémon ha almeno tre Energie Lightning extra assegnate, in aggiunta a quelle del costo di questo attacco, questo attacco infligge 170 danni a uno dei Pokémon nella panchina del tuo avversario. Ricorda che non puoi applicare debolezza e resistenza ai Pokémon in panchina. Non puoi usare più di un attacco GX a partita.",
           "pt-BR": "Se este Pokémon tiver pelo menos 3 Energias Lightning adicionais ligadas a ele (além do custo deste ataque), este ataque causará 170 pontos de dano a 1 dos Pokémon no Banco do seu oponente (não aplique Fraqueza e Resistência aos Pokémon no Banco). (Você não pode usar mais de 1 ataque GX por partida.)",
-          "de": "Wenn an dieses Pokémon mindestens 3 extra Lightning-Energien angelegt sind (zusätzlich zu den Kosten dieser Attacke), fügt diese Attacke 1 Pokémon auf der Bank deines Gegners 170 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.) (Du kannst pro Spiel nur 1 GX-Attacke einsetzen.)"
+          "de": "Wenn an dieses Pokémon mindestens 3 extra {L}-Energien angelegt sind (zusätzlich zu den Kosten dieser Attacke), fügt diese Attacke 1 Pokémon auf der Bank deines Gegners 170 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.) (Du kannst pro Spiel nur 1 GX-Attacke einsetzen.)"
         }
       }
     ],
@@ -10928,7 +10997,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "If you mistake it for a rock and step on it, it will headbutt you in anger. In addition to the pain, it will also zap you with a shock."
+      "en": "If you mistake it for a rock and step on it, it will headbutt you in anger. In addition to the pain, it will also zap you with a shock.",
+      "de": "Verwechselt man es mit einem Felsbrocken und tritt darauf, erwarten einen eine schmerzhafte Kopfnuss gepaart mit einem Stromschlag."
     }
   },
   {
@@ -11000,7 +11070,7 @@
           "es": "Busca en tu baraja hasta 2 cartas de Energía Lightning y únelas a este Pokémon. Después, baraja las cartas de tu baraja.",
           "it": "Cerca nel tuo mazzo fino a due carte Energia Lightning e assegnale a questo Pokémon. Poi rimischia le carte del tuo mazzo.",
           "pt-BR": "Procure por até 2 cartas de Energia Lightning no seu baralho e ligue-as a este Pokémon. Em seguida, embaralhe o seu baralho.",
-          "de": "Durchsuche dein Deck nach bis zu 2 Lightning-Energiekarten und lege sie an dieses Pokémon an. Mische anschließend dein Deck."
+          "de": "Durchsuche dein Deck nach bis zu 2 {L}-Energiekarten und lege sie an dieses Pokémon an. Mische anschließend dein Deck."
         }
       },
       {
@@ -11042,7 +11112,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "If you mistake it for a rock and step on it, it will headbutt you in anger. In addition to the pain, it will also zap you with a shock."
+      "en": "If you mistake it for a rock and step on it, it will headbutt you in anger. In addition to the pain, it will also zap you with a shock.",
+      "de": "Verwechselt man es mit einem Felsbrocken und tritt darauf, erwarten einen eine schmerzhafte Kopfnuss gepaart mit einem Stromschlag."
     }
   },
   {
@@ -11098,7 +11169,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Alolan Geodude",
-      "fr": "Racaillou d’Alola"
+      "fr": "Racaillou d’Alola",
+      "de": "Alola-Kleinstein"
     },
     "attacks": [
       {
@@ -11147,7 +11219,8 @@
     ],
     "retreat_cost": 4,
     "flavor_text": {
-      "en": "When two Graveler fight each other, it fills the surroundings with flashes of light and sound. People call it the \"fireworks of the earth.\""
+      "en": "When two Graveler fight each other, it fills the surroundings with flashes of light and sound. People call it the \"fireworks of the earth.\"",
+      "de": "Streiten sie sich untereinander, erzeugen sie ein lautes Knallen und grelles Leuchten, das von Einheimischen „Felsenfeuerwerk“ genannt wird."
     }
   },
   {
@@ -11203,7 +11276,8 @@
     "stage": "stage2",
     "evolves_from": {
       "en": "Alolan Graveler",
-      "fr": "Gravalanch d’Alola"
+      "fr": "Gravalanch d’Alola",
+      "de": "Alola-Georok"
     },
     "attacks": [
       {
@@ -11223,7 +11297,7 @@
           "es": "Mueve cualquier cantidad de Energías Lightning de tus Pokémon en Banca a este Pokémon. Este ataque hace 20 puntos de daño por cada carta de Energía que hayas movido de esta manera.",
           "it": "Sposta un numero qualsiasi di Energie Lightning dai tuoi Pokémon in panchina a questo Pokémon. Questo attacco infligge 20 danni per ogni carta Energia che hai spostato in questo modo.",
           "pt-BR": "Mova qualquer número de Energia Lightning dos seus Pokémon no Banco para este Pokémon. Este ataque causa 20 pontos de dano para cada carta de Energia movida desta forma.",
-          "de": "Verschiebe beliebig viele Lightning-Energien von den Pokémon auf deiner Bank auf dieses Pokémon. Diese Attacke fügt 20 Schadenspunkte mal der Anzahl der von dir auf diese Weise verschobenen Energiekarten zu."
+          "de": "Verschiebe beliebig viele {L}-Energien von den Pokémon auf deiner Bank auf dieses Pokémon. Diese Attacke fügt 20 Schadenspunkte mal der Anzahl der von dir auf diese Weise verschobenen Energiekarten zu."
         }
       },
       {
@@ -11267,7 +11341,8 @@
     ],
     "retreat_cost": 4,
     "flavor_text": {
-      "en": "It's grumpy and stubborn. If you upset it, it discharges electricity from the surface of its body and growls with a voice like thunder."
+      "en": "It's grumpy and stubborn. If you upset it, it discharges electricity from the surface of its body and growls with a voice like thunder.",
+      "de": "Ein dickköpfiges und mürrisches Pokémon. Wenn man es verärgert, stößt es aus seinem Körper Strom aus und heult mit donnernder Stimme auf."
     }
   },
   {
@@ -11352,7 +11427,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It was discovered when Poké Balls were introduced. It is said that there is some connection."
+      "en": "It was discovered when Poké Balls were introduced. It is said that there is some connection.",
+      "de": "Es wurde entdeckt, als man Pokébälle einführte. Es scheint, als gäbe es da einen Zusammenhang."
     }
   },
   {
@@ -11408,7 +11484,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Voltorb",
-      "fr": "Voltorbe"
+      "fr": "Voltorbe",
+      "de": "Voltobal"
     },
     "attacks": [
       {
@@ -11442,7 +11519,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It explodes in response to even minor stimuli. It is feared, with the nickname of \"The Bomb Ball.\""
+      "en": "It explodes in response to even minor stimuli. It is feared, with the nickname of \"The Bomb Ball.\"",
+      "de": "Es explodiert schon bei kleinsten Reizen. Sein Spitzname „Die Bombenkugel“ spiegelt die Furcht der Menschen wider."
     }
   },
   {
@@ -11489,6 +11567,31 @@
           "average_30d": 0.39,
           "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=368937"
         }
+      },
+      {
+        "id": "reverse_holo",
+        "type": "reverse_holo",
+        "images": {
+          "de": "/images/cards/intl-sm9/de/4.webp",
+          "en": "/images/cards/intl-sm9/en/4.webp",
+          "es": "/images/cards/intl-sm9/es/4.webp",
+          "fr": "/images/cards/intl-sm9/fr/4.webp",
+          "it": "/images/cards/intl-sm9/it/4.webp",
+          "pt-BR": ""
+        },
+        "cardmarket": {
+          "product_id": 368937,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.4,
+          "low": 0.02,
+          "trend": 0.52,
+          "average_1d": 0.25,
+          "average_7d": 0.44,
+          "average_30d": 0.39,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=368937"
+        }
       }
     ],
     "hp": 80,
@@ -11498,7 +11601,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Weedle",
-      "fr": "Aspicot"
+      "fr": "Aspicot",
+      "de": "Hornliu"
     },
     "attacks": [
       {
@@ -11526,7 +11630,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "Almost incapable of moving, this Pokémon can only harden its shell to protect itself when it is in danger."
+      "en": "Almost incapable of moving, this Pokémon can only harden its shell to protect itself when it is in danger.",
+      "de": "Dieses Pokémon kann sich kaum bewegen. Bei drohender Gefahr verhärtet es seinen Panzer."
     }
   },
   {
@@ -11618,7 +11723,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "A legendary Pokémon that is said to live in thunderclouds. It freely controls lightning bolts."
+      "en": "A legendary Pokémon that is said to live in thunderclouds. It freely controls lightning bolts.",
+      "de": "Ein Legendäres Vogel-Pokémon, das in Gewitterwolken leben soll. Es kontrolliert Blitze."
     }
   },
   {
@@ -11692,7 +11798,7 @@
           "es": "Descarta todas las Energías Lightning de este Pokémon.",
           "it": "Scarta tutte le Energie Lightning assegnate a questo Pokémon.",
           "pt-BR": "Descarte todas as Energias Lightning deste Pokémon.",
-          "de": "Lege alle Lightning-Energien von diesem Pokémon auf deinen Ablagestapel."
+          "de": "Lege alle {L}-Energien von diesem Pokémon auf deinen Ablagestapel."
         }
       }
     ],
@@ -11710,7 +11816,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It stores lots of air in its soft fur, allowing it to stay cool in summer and warm in winter."
+      "en": "It stores lots of air in its soft fur, allowing it to stay cool in summer and warm in winter.",
+      "de": "Es speichert viel Luft in seinem weichen Pelz. Dadurch ist es im Sommer kalt und im Winter warm."
     }
   },
   {
@@ -11766,7 +11873,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Mareep",
-      "fr": "Wattouat"
+      "fr": "Wattouat",
+      "de": "Voltilamm"
     },
     "attacks": [
       {
@@ -11804,7 +11912,7 @@
           "es": "Descarta todas las Energías Lightning de este Pokémon.",
           "it": "Scarta tutte le Energie Lightning assegnate a questo Pokémon.",
           "pt-BR": "Descarte todas as Energias Lightning deste Pokémon.",
-          "de": "Lege alle Lightning-Energien von diesem Pokémon auf deinen Ablagestapel."
+          "de": "Lege alle {L}-Energien von diesem Pokémon auf deinen Ablagestapel."
         }
       }
     ],
@@ -11822,7 +11930,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "If its coat becomes fully charged with electricity, its tail lights up. It fires hair that zaps on impact."
+      "en": "If its coat becomes fully charged with electricity, its tail lights up. It fires hair that zaps on impact.",
+      "de": "Hat es sich mit Elektrizität aufgeladen, leuchtet sein Schweif und es feuert Haare ab, die sich entladen."
     }
   },
   {
@@ -11877,7 +11986,8 @@
     ],
     "evolves_from": {
       "en": "Flaaffy",
-      "fr": "Lainergie"
+      "fr": "Lainergie",
+      "de": "Waaty"
     },
     "rule_box": "GX",
     "attacks": [
@@ -11923,7 +12033,7 @@
           "es": "Descarta todas las Energías Lightning de este Pokémon.",
           "it": "Scarta tutte le Energie Lightning assegnate a questo Pokémon.",
           "pt-BR": "Descarte todas as Energias Lightning deste Pokémon.",
-          "de": "Lege alle Lightning-Energien von diesem Pokémon auf deinen Ablagestapel."
+          "de": "Lege alle {L}-Energien von diesem Pokémon auf deinen Ablagestapel."
         }
       },
       {
@@ -11933,7 +12043,7 @@
           "es": "Eléctrico GX",
           "it": "Scossa GX",
           "pt-BR": "Carga Elétrica GX",
-          "de": "Elektrisch GX"
+          "de": "Elektrisch-GX"
         },
         "cost": [
           "lightning"
@@ -12068,7 +12178,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Its mane shines when it discharges electricity. They use the frequency and rhythm of these flashes to communicate."
+      "en": "Its mane shines when it discharges electricity. They use the frequency and rhythm of these flashes to communicate.",
+      "de": "Um mit Artgenossen zu kommunizieren, nutzt es das Aufblitzen seiner Mähne beim Entladen von Strom als Morsecode."
     }
   },
   {
@@ -12124,7 +12235,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Blitzle",
-      "fr": "Zébibron"
+      "fr": "Zébibron",
+      "de": "Elezeba"
     },
     "attacks": [
       {
@@ -12182,7 +12294,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "They have lightning-like movements. When Zebstrika run at full speed, the sound of thunder reverberates."
+      "en": "They have lightning-like movements. When Zebstrika run at full speed, the sound of thunder reverberates.",
+      "de": "Es ist explosiv wie ein Blitz. Galoppiert es mit voller Geschwindigkeit drauflos, kann man Donnerhall vernehmen."
     }
   },
   {
@@ -12274,7 +12387,8 @@
     ],
     "retreat_cost": 0,
     "flavor_text": {
-      "en": "It grills berries and bug Pokémon with electric shocks and makes a meal of them. It usually nests in the holes gouged in trees by Pikipek."
+      "en": "It grills berries and bug Pokémon with electric shocks and makes a meal of them. It usually nests in the holes gouged in trees by Pikipek.",
+      "de": "Mit Strom röstet es Beeren und Käfer-Pokémon, bevor es sie frisst. Es lebt hauptsächlich in Baumhöhlen, die von Peppeck gemeißelt wurden."
     }
   },
   {
@@ -12366,7 +12480,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "They attach themselves to large-bodied Pokémon and absorb static electricity, which they store in an electric pouch."
+      "en": "They attach themselves to large-bodied Pokémon and absorb static electricity, which they store in an electric pouch.",
+      "de": "Es pflanzt sich an großen Pokémon fest und zapft ihnen elektrische Energie ab. Diese hortet es in seinen Ladetaschen."
     }
   },
   {
@@ -12422,7 +12537,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Joltik",
-      "fr": "Statitik"
+      "fr": "Statitik",
+      "de": "Wattzapf"
     },
     "attacks": [
       {
@@ -12462,7 +12578,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "When attacked, they create an electric barrier by spitting out many electrically charged threads."
+      "en": "When attacked, they create an electric barrier by spitting out many electrically charged threads.",
+      "de": "Wird es angegriffen, spuckt es mit vielen elektrisch geladenen Fäden um sich und baut sich eine Elektrobarriere."
     }
   },
   {
@@ -12564,7 +12681,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "The frills on either side of its head have cells that generate electricity when exposed to sunlight."
+      "en": "The frills on either side of its head have cells that generate electricity when exposed to sunlight.",
+      "de": "Die Zellen der Hautlappen, die sich beidseitig an seinem Kopf befinden, erzeugen Strom, wenn sie von Sonnenstrahlen beschienen werden."
     }
   },
   {
@@ -12620,7 +12738,8 @@
     "stage": "stage2",
     "evolves_from": {
       "en": "Kakuna",
-      "fr": "Coconfort"
+      "fr": "Coconfort",
+      "de": "Kokuna"
     },
     "attacks": [
       {
@@ -12677,7 +12796,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It has three poisonous stingers on its forelegs and its tail. They are used to jab its enemy repeatedly."
+      "en": "It has three poisonous stingers on its forelegs and its tail. They are used to jab its enemy repeatedly.",
+      "de": "Dieses Pokémon verfügt über drei Giftstachel. Es kann seine Gegner damit wiederholt stechen."
     }
   },
   {
@@ -12733,7 +12853,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Helioptile",
-      "fr": "Galvaran"
+      "fr": "Galvaran",
+      "de": "Eguana"
     },
     "attacks": [
       {
@@ -12779,7 +12900,7 @@
           "es": "Cambia este Pokémon por 1 de tus Pokémon Lightning en Banca.",
           "it": "Scambia questo Pokémon con un Pokémon Lightning della tua panchina.",
           "pt-BR": "Troque este Pokémon por 1 dos seus Pokémon Lightning no Banco.",
-          "de": "Tausche dieses Pokémon gegen 1 Lightning-Pokémon auf deiner Bank aus."
+          "de": "Tausche dieses Pokémon gegen 1 {L}-Pokémon auf deiner Bank aus."
         }
       }
     ],
@@ -12797,7 +12918,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It stimulates its muscles with electricity, boosting the strength in its legs and enabling it to run 100 yards in five seconds."
+      "en": "It stimulates its muscles with electricity, boosting the strength in its legs and enabling it to run 100 yards in five seconds.",
+      "de": "Es stimuliert seine Beinmuskulatur mit Strom, wodurch es ihm gelingt, 100 m in fünf Sekunden zurückzulegen."
     }
   },
   {
@@ -12855,18 +12977,6 @@
         ],
         "damage": "120",
         "text": {}
-      },
-      {
-        "name": {
-          "fr": "Éclair Fulgurant"
-        },
-        "cost": [
-          "lightning",
-          "lightning",
-          "normal"
-        ],
-        "damage": "120",
-        "text": {}
       }
     ],
     "weaknesses": [
@@ -12883,7 +12993,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It confuses its enemies by flying too quickly for the eye to follow. It has a hair-trigger temper but forgets what made it angry an instant later."
+      "en": "It confuses its enemies by flying too quickly for the eye to follow. It has a hair-trigger temper but forgets what made it angry an instant later.",
+      "de": "Mit atemberaubendem Tempo bringt es Gegner aus dem Konzept. Es ist aufbrausend, vergisst aber sofort, warum es so wütend geworden ist."
     }
   },
   {
@@ -12992,7 +13103,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It electrifies its claws and tears its opponents apart with them. Even if they dodge its attack, they'll be electrocuted by the flying sparks."
+      "en": "It electrifies its claws and tears its opponents apart with them. Even if they dodge its attack, they'll be electrocuted by the flying sparks.",
+      "de": "Mit seinen elektrisierten Krallen reißt es Gegner in Stücke. Selbst wenn sie ausweichen, werden sie von elektrisch geladenen Funken getroffen."
     }
   },
   {
@@ -13078,7 +13190,7 @@
           "es": "Casa del Terror GX",
           "it": "Casa degli Orrori GX",
           "pt-BR": "Casa do Horror GX",
-          "de": "Spukhaus GX"
+          "de": "Spukhaus-GX"
         },
         "cost": [
           "psychic"
@@ -13090,7 +13202,7 @@
           "es": "Tu rival no puede jugar ninguna carta de su mano durante su próximo turno. Si este Pokémon tiene por lo menos 1 Energía Psychic adicional unida a él (además de las del coste de este ataque), cada jugador roba cartas hasta tener 7 cartas en su mano. (No puedes usar más de 1 ataque GX en una partida).",
           "it": "Il tuo avversario non può giocare le carte che ha in mano durante il suo prossimo turno. Se questo Pokémon ha almeno un’Energia Psychic extra assegnata, in aggiunta a quelle del costo di questo attacco, ciascun giocatore pesca fino ad avere sette carte in mano. Non puoi usare più di un attacco GX a partita.",
           "pt-BR": "Seu oponente não poderá jogar nenhuma carta da própria mão durante a próxima vez dele(a) jogar. Se este Pokémon tiver pelo menos 1 Energia Psychic adicional ligada a ele (além do custo deste ataque), cada jogador comprará cartas até ter 7 cartas na própria mão (você não pode usar mais de 1 ataque GX por partida).",
-          "de": "Dein Gegner kann während seines nächsten Zuges keine Karten aus seiner Hand spielen. Wenn an dieses Pokémon mindestens 1 extra Psychic-Energie angelegt ist (zusätzlich zu den Kosten dieser Attacke), zieht jeder Spieler so lang Karten, bis er 7 Karten auf seiner Hand hat. (Du kannst pro Spiel nur 1 GX-Attacke einsetzen.)"
+          "de": "Dein Gegner kann während seines nächsten Zuges keine Karten aus seiner Hand spielen. Wenn an dieses Pokémon mindestens 1 extra {P}-Energie angelegt ist (zusätzlich zu den Kosten dieser Attacke), zieht jeder Spieler so lang Karten, bis er 7 Karten auf seiner Hand hat. (Du kannst pro Spiel nur 1 GX-Attacke einsetzen.)"
         }
       }
     ],
@@ -13194,7 +13306,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Although small, its venomous barbs render this Pokémon dangerous. The female has smaller horns."
+      "en": "Although small, its venomous barbs render this Pokémon dangerous. The female has smaller horns.",
+      "de": "Dieses Pokémon ist sehr klein, verfügt aber über starke Gifte. Das Weibchen hat ein kleineres Horn."
     }
   },
   {
@@ -13250,7 +13363,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Nidoran♀",
-      "fr": "Nidoran♀"
+      "fr": "Nidoran♀",
+      "de": "Nidoran♀"
     },
     "attacks": [
       {
@@ -13272,7 +13386,7 @@
           "es": "Pon 5 Pokémon Psychic de tu pila de descartes en tu baraja y baraja todas las cartas.",
           "it": "Rimischia cinque Pokémon Psychic dalla tua pila degli scarti nel tuo mazzo.",
           "pt-BR": "Embaralhe 5 Pokémon Psychic da sua pilha de descarte no seu baralho.",
-          "de": "Mische 5 Psychic-Pokémon aus deinem Ablagestapel in dein Deck."
+          "de": "Mische 5 {P}-Pokémon aus deinem Ablagestapel in dein Deck."
         }
       },
       {
@@ -13300,7 +13414,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "The female has a gentle temperament. It emits ultrasonic cries that have the power to befuddle foes."
+      "en": "The female has a gentle temperament. It emits ultrasonic cries that have the power to befuddle foes.",
+      "de": "Das Weibchen ist ausgeglichener. Es stößt Schreie im Ultraschallwellenbereich aus, die den Gegner verwirren können."
     }
   },
   {
@@ -13356,7 +13471,8 @@
     "stage": "stage2",
     "evolves_from": {
       "en": "Nidorina",
-      "fr": "Nidorina"
+      "fr": "Nidorina",
+      "de": "Nidorina"
     },
     "attacks": [
       {
@@ -13392,7 +13508,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "It uses its scaly, rugged body to seal the entrance of its nest and protect its young from predators."
+      "en": "It uses its scaly, rugged body to seal the entrance of its nest and protect its young from predators.",
+      "de": "Es benutzt seinen schuppigen Körper, um den Höhleneingang als Schutz für seine Jungen zu sperren."
     }
   },
   {
@@ -13474,7 +13591,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It scans its surroundings by raising its ears out of the grass. Its toxic horn is for protection."
+      "en": "It scans its surroundings by raising its ears out of the grass. Its toxic horn is for protection.",
+      "de": "Es untersucht die Umgebung, indem es die Ohren spitzt und lauscht. Sein giftiges Horn schützt es."
     }
   },
   {
@@ -13530,7 +13648,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Nidoran♂",
-      "fr": "Nidoran♂"
+      "fr": "Nidoran♂",
+      "de": "Nidoran♂"
     },
     "attacks": [
       {
@@ -13574,7 +13693,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "It raises its big ears to check its surroundings. If it senses anything, it attacks immediately."
+      "en": "It raises its big ears to check its surroundings. If it senses anything, it attacks immediately.",
+      "de": "Es überwacht mit seinen riesigen Ohren die Umgebung. Registriert es eine Bewegung, greift es an."
     }
   },
   {
@@ -13630,7 +13750,8 @@
     "stage": "stage2",
     "evolves_from": {
       "en": "Nidorino",
-      "fr": "Nidorino"
+      "fr": "Nidorino",
+      "de": "Nidorino"
     },
     "attacks": [
       {
@@ -13689,7 +13810,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "It is recognized by its rock-hard hide and its extended horn. Be careful with the horn, as it contains venom."
+      "en": "It is recognized by its rock-hard hide and its extended horn. Be careful with the horn, as it contains venom.",
+      "de": "Seine steinharte Haut und sein ausgeprägtes Horn sind seine Markenzeichen. Achte auf das Horn, denn es enthält Gift."
     }
   },
   {
@@ -13784,7 +13906,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Whether it's due to a lack of moisture or a lack of nutrients, in Alola the mushrooms on Paras don't grow up quite right."
+      "en": "Whether it's due to a lack of moisture or a lack of nutrients, in Alola the mushrooms on Paras don't grow up quite right.",
+      "de": "In Alola sind Paras’ Pilze etwas unterentwickelt. Vielleicht mangelt es ihm hier an Feuchtigkeit oder Nährstoffen."
     }
   },
   {
@@ -13870,7 +13993,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It drifts through the sea searching for prey. Its poisonous tentacles break off sometimes, but after a while, they grow back."
+      "en": "It drifts through the sea searching for prey. Its poisonous tentacles break off sometimes, but after a while, they grow back.",
+      "de": "Es treibt in Küstennähe im Wasser und sucht nach Beute. Seine giftigen Tentakel fallen ab und zu ab, wachsen aber mit der Zeit wieder nach."
     }
   },
   {
@@ -13926,7 +14050,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Tentacool",
-      "fr": "Tentacool"
+      "fr": "Tentacool",
+      "de": "Tentacha"
     },
     "attacks": [
       {
@@ -13984,7 +14109,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It fires off ultrasonic waves from its red orbs to weaken its prey, and then it wraps them up in its 80 tentacles."
+      "en": "It fires off ultrasonic waves from its red orbs to weaken its prey, and then it wraps them up in its 80 tentacles.",
+      "de": "Mit Ultraschallwellen aus seinen roten Kugeln schwächt es zunächst seine Beute, um sie dann mit seinen 80 Tentakeln fest zu umwickeln."
     }
   },
   {
@@ -14063,7 +14189,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "It was born from sludge on the ocean floor. In a sterile environment, the germs within its body can't multiply, and it dies."
+      "en": "It was born from sludge on the ocean floor. In a sterile environment, the germs within its body can't multiply, and it dies.",
+      "de": "Sleima ist aus dem Schlamm am Meeresgrund entstanden. An sterilen Orten kann es seine Bakterien nicht kultivieren und stirbt."
     }
   },
   {
@@ -14119,7 +14246,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Grimer",
-      "fr": "Tadmorv"
+      "fr": "Tadmorv",
+      "de": "Sleima"
     },
     "attacks": [
       {
@@ -14153,7 +14281,8 @@
     ],
     "retreat_cost": 4,
     "flavor_text": {
-      "en": "Their food sources have decreased, and their numbers have declined sharply. Sludge ponds are being built to prevent their extinction."
+      "en": "Their food sources have decreased, and their numbers have declined sharply. Sludge ponds are being built to prevent their extinction.",
+      "de": "Aufgrund von Futtermangel sieht man es immer seltener. Um es vom Aussterben zu bewahren, werden nun künstliche Schlammteiche angelegt."
     }
   },
   {
@@ -14209,7 +14338,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Cubone",
-      "fr": "Osselait"
+      "fr": "Osselait",
+      "de": "Tragosso"
     },
     "attacks": [
       {
@@ -14270,7 +14400,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "Its custom is to mourn its lost companions. Mounds of dirt by the side of the road mark the graves of the Marowak."
+      "en": "Its custom is to mourn its lost companions. Mounds of dirt by the side of the road mark the graves of the Marowak.",
+      "de": "Es hält Trauerfeiern für verstorbene Knogga ab. Findet sich ein Haufen Erde am Straßenrand, so handelt es sich um das Grab eines Knogga."
     }
   },
   {
@@ -14326,7 +14457,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Staryu",
-      "fr": "Stari"
+      "fr": "Stari",
+      "de": "Sterndu"
     },
     "attacks": [
       {
@@ -14348,7 +14480,7 @@
           "es": "Busca en tu baraja hasta 3 cartas de Energía Water y Psychic, en cualquier combinación, y únelas a 1 de tus Pokémon en Banca. Después, baraja las cartas de tu baraja.",
           "it": "Cerca nel tuo mazzo fino a tre carte Energia Water e Psychic in qualsiasi combinazione e assegnale a uno dei tuoi Pokémon in panchina. Poi rimischia le carte del tuo mazzo.",
           "pt-BR": "Procure por até 3 cartas de Energia Water e Psychic no seu baralho em qualquer combinação e ligue-as a 1 dos seus Pokémon no Banco. Em seguida, embaralhe o seu baralho.",
-          "de": "Durchsuche dein Deck nach einer beliebigen Kombination aus bis zu 3 Water- und Psychic-Energiekarten und lege sie an 1 Pokémon auf deiner Bank an. Mische anschließend dein Deck."
+          "de": "Durchsuche dein Deck nach einer beliebigen Kombination aus bis zu 3 {W}- und {P}-Energiekarten und lege sie an 1 Pokémon auf deiner Bank an. Mische anschließend dein Deck."
         }
       }
     ],
@@ -14360,7 +14492,8 @@
     ],
     "retreat_cost": 0,
     "flavor_text": {
-      "en": "Its sparkling core is called \"the gem of the sea.\" This core can be made into high-priced accessories that are traded in secret."
+      "en": "Its sparkling core is called \"the gem of the sea.\" This core can be made into high-priced accessories that are traded in secret.",
+      "de": "Sein leuchtender Kern, das „Juwel des Meeres“, ist so wertvoll, dass manche ihn zu Schmuck verarbeiten und unter der Hand verkaufen."
     }
   },
   {
@@ -14447,7 +14580,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Its pantomime skills are wonderful. You may become enraptured while watching it, but next thing you know, Mr. Mime has made a real wall."
+      "en": "Its pantomime skills are wonderful. You may become enraptured while watching it, but next thing you know, Mr. Mime has made a real wall.",
+      "de": "Sein Können als Pantomime ist verblüffend. Vor lauter Bewunderung merkt man gar nicht, wie plötzlich eine echte Wand vor einem erscheint."
     }
   },
   {
@@ -14532,7 +14666,7 @@
           "es": "Truco Vital GX",
           "it": "Trucco Vitale GX",
           "pt-BR": "Truque Revigorante GX",
-          "de": "Lebenstrick GX"
+          "de": "Lebenstrick-GX"
         },
         "cost": [
           "normal"
@@ -14656,7 +14790,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It sways its hips to a rhythm all its own. The precise movements of Jynx living in Alola are truly wonderful."
+      "en": "It sways its hips to a rhythm all its own. The precise movements of Jynx living in Alola are truly wonderful.",
+      "de": "Es bewegt seine Hüften in einem eigentümlichen Rhythmus. Rossana in Alola beherrschen einen besonders anmutigen Hüftschwung."
     }
   },
   {
@@ -14735,7 +14870,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "In ages past, it was called the child of the stars. It's said to be a Pokémon from another world, but no specific details are known."
+      "en": "In ages past, it was called the child of the stars. It's said to be a Pokémon from another world, but no specific details are known.",
+      "de": "Vor langer Zeit nannte man es „Kind der Sterne“. Es soll aus einer anderen Welt stammen, doch niemand weiß Genaueres darüber."
     }
   },
   {
@@ -14791,7 +14927,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Paras",
-      "fr": "Paras"
+      "fr": "Paras",
+      "de": "Paras"
     },
     "attacks": [
       {
@@ -14826,7 +14963,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "The bug is mostly dead, with the mushroom on its back having become the main body. If the mushroom comes off, the bug stops moving."
+      "en": "The bug is mostly dead, with the mushroom on its back having become the main body. If the mushroom comes off, the bug stops moving.",
+      "de": "Der Pilz auf seinem Rücken ist sein wichtigstes Körperteil. Der Rest ist quasi leblos und kann sich ohne den Pilz nicht bewegen."
     }
   },
   {
@@ -14882,7 +15020,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Cosmog",
-      "fr": "Cosmog"
+      "fr": "Cosmog",
+      "de": "Cosmog"
     },
     "attacks": [
       {
@@ -14916,7 +15055,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "There's something accumulating around the black core within its hard shell. People think this Pokémon may come from another world."
+      "en": "There's something accumulating around the black core within its hard shell. People think this Pokémon may come from another world.",
+      "de": "Unter seiner harten Schale häuft sich unaufhörlich etwas in seinem schwarzen Kern an. Es soll aus einer anderen Welt stammen."
     }
   },
   {
@@ -15018,7 +15158,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "The smallest of things could cause it to lose its temper. Because it doesn't hold in its stress, this Pokémon can live a long time."
+      "en": "The smallest of things could cause it to lose its temper. Because it doesn't hold in its stress, this Pokémon can live a long time.",
+      "de": "Selbst Kleinigkeiten regen es sofort auf. Da es Stress aber nicht in sich hineinfrisst, erfreut es sich eines langen Lebens."
     }
   },
   {
@@ -15074,7 +15215,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Mankey",
-      "fr": "Férosinge"
+      "fr": "Férosinge",
+      "de": "Menki"
     },
     "attacks": [
       {
@@ -15125,7 +15267,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It will never forgive opponents who have angered it. Even after it has beaten them down until they can't move, it never ever forgives."
+      "en": "It will never forgive opponents who have angered it. Even after it has beaten them down until they can't move, it never ever forgives.",
+      "de": "Wer es nervt, wird auf ewig verfolgt. Selbst nachdem es seinen Gegner zu Boden gebracht hat, kann es ihm noch nicht verzeihen."
     }
   },
   {
@@ -15228,7 +15371,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "The legs freely contract and stretch. The stretchy legs allow it to hit a distant foe with a rising kick."
+      "en": "The legs freely contract and stretch. The stretchy legs allow it to hit a distant foe with a rising kick.",
+      "de": "Die Beine ziehen und strecken sich unabhängig voneinander. Mit seinen dehnbaren Beinen kann es einen entfernten Gegner treffen."
     }
   },
   {
@@ -15331,7 +15475,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "The arm-twisting punches it throws pulverize even concrete. It rests after three minutes of fighting."
+      "en": "The arm-twisting punches it throws pulverize even concrete. It rests after three minutes of fighting.",
+      "de": "Die Schläge, die es austeilt, können Beton pulverisieren. Es muss sich im Kampf alle drei Minuten ausruhen."
     }
   },
   {
@@ -15387,7 +15532,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Unidentified Fossil",
-      "fr": "Fossile Inconnu"
+      "fr": "Fossile Inconnu",
+      "de": "Unbekanntes Fossil"
     },
     "attacks": [
       {
@@ -15421,7 +15567,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Omanyte lived in the seas of antiquity. Its fossils have been found bearing bite marks from Archeops, so apparently Archeops preyed on it."
+      "en": "Omanyte lived in the seas of antiquity. Its fossils have been found bearing bite marks from Archeops, so apparently Archeops preyed on it.",
+      "de": "Es lebte im urzeitlichen Meer. Bissspuren auf seinen Fossilien deuten darauf hin, dass es damals von Aeropteryx gejagt wurde."
     }
   },
   {
@@ -15477,7 +15624,8 @@
     "stage": "stage2",
     "evolves_from": {
       "en": "Omanyte",
-      "fr": "Amonita"
+      "fr": "Amonita",
+      "de": "Amonitas"
     },
     "attacks": [
       {
@@ -15505,7 +15653,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "Its heavy shell is thought to be the reason this ancient Pokémon died out. It's apparently a distant ancestor of Octillery."
+      "en": "Its heavy shell is thought to be the reason this ancient Pokémon died out. It's apparently a distant ancestor of Octillery.",
+      "de": "Diesem prähistorischen Pokémon wurde wohl das Gewicht seines Gehäuses zum Verhängnis. Es ist ein ferner Vorfahre von Octillery."
     }
   },
   {
@@ -15561,7 +15710,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Unidentified Fossil",
-      "fr": "Fossile Inconnu"
+      "fr": "Fossile Inconnu",
+      "de": "Unbekanntes Fossil"
     },
     "attacks": [
       {
@@ -15595,7 +15745,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "This Pokémon thrived 300 million years ago. It's said that living specimens can still be seen in a certain region—a rare sight."
+      "en": "This Pokémon thrived 300 million years ago. It's said that living specimens can still be seen in a certain region—a rare sight.",
+      "de": "Kabuto erlebte seine Blütezeit vor 300 Millionen Jahren. Doch in einer bestimmten Region gibt es angeblich noch einige lebende Exemplare."
     }
   },
   {
@@ -15651,7 +15802,8 @@
     "stage": "stage2",
     "evolves_from": {
       "en": "Kabuto",
-      "fr": "Kabuto"
+      "fr": "Kabuto",
+      "de": "Kabuto"
     },
     "attacks": [
       {
@@ -15687,7 +15839,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "Its body had begun to change so it could function on land. But it didn't adapt in time and went extinct."
+      "en": "Its body had begun to change so it could function on land. But it didn't adapt in time and went extinct.",
+      "de": "Dieses Pokémon hatte begonnen, sich an das Leben an Land anzupassen, starb aber aus, bevor es den Wandel vollziehen konnte."
     }
   },
   {
@@ -15774,7 +15927,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "Born deep underground, it comes aboveground and becomes a pupa once it has finished eating the surrounding soil."
+      "en": "Born deep underground, it comes aboveground and becomes a pupa once it has finished eating the surrounding soil.",
+      "de": "Sie schlüpfen tief unter der Erde und fressen sich durch das Erdreich bis zur Oberfläche durch, wo sie sich verpuppen."
     }
   },
   {
@@ -15860,7 +16014,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Six of them form a single Pokémon. Should one of the six be lost, the next morning there will once more be six."
+      "en": "Six of them form a single Pokémon. Should one of the six be lost, the next morning there will once more be six.",
+      "de": "Dieses Pokémon besteht aus sechs Individuen. Geht eines verloren, sind es am nächsten Morgen trotzdem auf jeden Fall wieder sechs."
     }
   },
   {
@@ -15916,7 +16071,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Larvitar",
-      "fr": "Embrylex"
+      "fr": "Embrylex",
+      "de": "Larvitar"
     },
     "attacks": [
       {
@@ -15951,7 +16107,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Its shell is as hard as sheet rock, and it is also very strong. Its thrashing can topple a mountain."
+      "en": "Its shell is as hard as sheet rock, and it is also very strong. Its thrashing can topple a mountain.",
+      "de": "Es ist sehr stark und sein Panzer ist steinhart. Setzt es Fuchtler ein, kann es einen Berg umstürzen."
     }
   },
   {
@@ -16038,7 +16195,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "There's no point to the leaf in its mouth, aside from an effort to look cool. It's mischievous, so it's not well suited to inexperienced Trainers."
+      "en": "There's no point to the leaf in its mouth, aside from an effort to look cool. It's mischievous, so it's not well suited to inexperienced Trainers.",
+      "de": "Das Kauen auf einem Blatt ist sein Markenzeichen. Dieses sehr ungezogene Pokémon dürfte frischgebackene Trainer überfordern."
     }
   },
   {
@@ -16093,7 +16251,8 @@
     ],
     "evolves_from": {
       "en": "Rockruff",
-      "fr": "Rocabot"
+      "fr": "Rocabot",
+      "de": "Wuffels"
     },
     "rule_box": "GX",
     "attacks": [
@@ -16121,7 +16280,7 @@
           "es": "Fragmentos Rocosos GX",
           "it": "Schegge Radiali GX",
           "pt-BR": "Estilhaços Afiados GX",
-          "de": "Splitterregen GX"
+          "de": "Splitterregen-GX"
         },
         "cost": [
           "fighting"
@@ -16235,7 +16394,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "The crystals on Grimer's body are lumps of toxins. If one falls off, lethal poisons leak out."
+      "en": "The crystals on Grimer's body are lumps of toxins. If one falls off, lethal poisons leak out.",
+      "de": "Seine Kristalle bestehen aus verklumpten Toxinen. Fallen sie von seinem Körper ab, entweichen die tödlichen Giftstoffe."
     }
   },
   {
@@ -16291,7 +16451,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Alolan Grimer",
-      "fr": "Tadmorv d’Alola"
+      "fr": "Tadmorv d’Alola",
+      "de": "Alola-Sleima"
     },
     "attacks": [
       {
@@ -16333,7 +16494,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "While it's unexpectedly quiet and friendly, if it's not fed any trash for a while, it will smash its Trainer's furnishings and eat up the fragments."
+      "en": "While it's unexpectedly quiet and friendly, if it's not fed any trash for a while, it will smash its Trainer's furnishings and eat up the fragments.",
+      "de": "Es kann sich unerwartet zahm verhalten, aber wenn man ihm lange keinen Müll zu fressen gibt, zerstört und verschlingt es die Möbel im Haus."
     }
   },
   {
@@ -16389,7 +16551,8 @@
     "stage": "stage2",
     "evolves_from": {
       "en": "Pupitar",
-      "fr": "Ymphect"
+      "fr": "Ymphect",
+      "de": "Pupitar"
     },
     "attacks": [
       {
@@ -16456,7 +16619,8 @@
     ],
     "retreat_cost": 4,
     "flavor_text": {
-      "en": "If it rampages, it knocks down mountains and buries rivers. Maps must be redrawn afterward."
+      "en": "If it rampages, it knocks down mountains and buries rivers. Maps must be redrawn afterward.",
+      "de": "Bei einem Tobsuchtsanfall zerstört es ganze Gebirge und legt Flüsse trocken."
     }
   },
   {
@@ -16530,7 +16694,7 @@
           "es": "Busca en tu baraja hasta 2 Pokémon Darkness, enséñalos y ponlos en tu mano. Después, baraja las cartas de tu baraja.",
           "it": "Cerca nel tuo mazzo fino a due Pokémon Darkness, mostrali e aggiungili alle carte che hai in mano. Poi rimischia le carte del tuo mazzo.",
           "pt-BR": "Procure por até 2 Pokémon Darkness no seu baralho, revele-os e coloque-os na sua mão. Em seguida, embaralhe o seu baralho.",
-          "de": "Durchsuche dein Deck nach bis zu 2 Darkness-Pokémon, zeige sie deinem Gegner und nimm sie auf deine Hand. Mische anschließend dein Deck."
+          "de": "Durchsuche dein Deck nach bis zu 2 {D}-Pokémon, zeige sie deinem Gegner und nimm sie auf deine Hand. Mische anschließend dein Deck."
         }
       },
       {
@@ -16563,7 +16727,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It has a very tenacious nature. Its acute sense of smell lets it chase a chosen prey without ever losing track."
+      "en": "It has a very tenacious nature. Its acute sense of smell lets it chase a chosen prey without ever losing track.",
+      "de": "Es hat ein hartnäckiges Wesen. Sein präziser Geruchssinn ermöglicht ihm, seiner Beute nachzujagen, ohne die Fährte zu verlieren."
     }
   },
   {
@@ -16619,7 +16784,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Poochyena",
-      "fr": "Medhyèna"
+      "fr": "Medhyèna",
+      "de": "Fiffyen"
     },
     "attacks": [
       {
@@ -16675,7 +16841,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It chases down prey in a pack of around ten. They defeat foes with perfectly coordinated teamwork."
+      "en": "It chases down prey in a pack of around ten. They defeat foes with perfectly coordinated teamwork.",
+      "de": "Es jagt in Rudeln von ungefähr zehn Magnayen. Beim Einkreisen der Beute arbeiten sie perfekt zusammen."
     }
   },
   {
@@ -16751,7 +16918,7 @@
           "es": "Este ataque hace 30 puntos de daño más por cada Colorless en el Coste de Retirada del Pokémon Activo de tu rival.",
           "it": "Questo attacco infligge 30 danni in più per ogni Colorless nel costo di ritirata del Pokémon attivo del tuo avversario.",
           "pt-BR": "Este ataque causa 30 pontos de dano a mais para cada Colorless no custo de Recuo do Pokémon Ativo do seu oponente.",
-          "de": "Diese Attacke fügt 30 Schadenspunkte mehr mal der Anzahl der Colorless in den Rückzugskosten des Aktiven Pokémon deines Gegners zu."
+          "de": "Diese Attacke fügt 30 Schadenspunkte mehr mal der Anzahl der {C} in den Rückzugskosten des Aktiven Pokémon deines Gegners zu."
         }
       }
     ],
@@ -16769,7 +16936,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Although it's said to bring disaster, in actuality, this Pokémon possesses a calm disposition and warns people of any crises that loom."
+      "en": "Although it's said to bring disaster, in actuality, this Pokémon possesses a calm disposition and warns people of any crises that loom.",
+      "de": "Es heißt, Absol sei ein Unheilsbote, doch in Wahrheit hat es ein sanftes Wesen. Es warnt die Menschen vor drohenden Katastrophen."
     }
   },
   {
@@ -16864,7 +17032,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It was bound to a fissure in an odd keystone as punishment for misdeeds 500 years ago"
+      "en": "It was bound to a fissure in an odd keystone as punishment for misdeeds 500 years ago",
+      "de": "Es wurde in einen Spalt eines Steins gebannt, als Sühne für Untaten, die es vor 500 Jahren begangen hatte."
     }
   },
   {
@@ -16975,7 +17144,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "It gets into territorial disputes with Vikavolt. For some reason, it apparently gets along well with Heracross in Alola."
+      "en": "It gets into territorial disputes with Vikavolt. For some reason, it apparently gets along well with Heracross in Alola.",
+      "de": "Es liefert sich Revierkämpfe mit Donarion. Aus noch unbekannten Gründen versteht es sich in Alola ausgesprochen gut mit Skaraborn."
     }
   },
   {
@@ -17067,7 +17237,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "To protect themselves from danger, they hide their true identities by transforming into people and Pokémon."
+      "en": "To protect themselves from danger, they hide their true identities by transforming into people and Pokémon.",
+      "de": "Es tarnt sich als Mensch oder als andere Pokémon. Es schützt sich vor Gefahren, indem es seine wahre Gestalt geheim hält."
     }
   },
   {
@@ -17123,7 +17294,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Zorua",
-      "fr": "Zorua"
+      "fr": "Zorua",
+      "de": "Zorua"
     },
     "attacks": [
       {
@@ -17187,7 +17359,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "Bonds between these Pokémon are very strong. It protects the safety of its pack by tricking its opponents."
+      "en": "Bonds between these Pokémon are very strong. It protects the safety of its pack by tricking its opponents.",
+      "de": "Seit jeher beschützt es das Rudel, indem es die Gestalt des Feindes annimmt. Es ist sehr loyal zu seinen Artgenossen."
     }
   },
   {
@@ -17294,7 +17467,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It can't fly yet and must wait until its wings have developed more. Since it's still at a playful age, it hops around friskily."
+      "en": "It can't fly yet and must wait until its wings have developed more. Since it's still at a playful age, it hops around friskily.",
+      "de": "Dieses Pokémon ist noch sehr verspielt. Seine Flügel sind noch zu klein zum Fliegen, es kann sich also nur hüpfend fortbewegen."
     }
   },
   {
@@ -17350,7 +17524,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Vullaby",
-      "fr": "Vostourno"
+      "fr": "Vostourno",
+      "de": "Skallyk"
     },
     "attacks": [
       {
@@ -17414,7 +17589,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "It circles in the sky, keeping a keen eye out for Pokémon in a weakened state. Its choicest food is Cubone."
+      "en": "It circles in the sky, keeping a keen eye out for Pokémon in a weakened state. Its choicest food is Cubone.",
+      "de": "Es überblickt das Areal aus der Luft und stürzt sich auf geschwächte Pokémon. Tragosso ist seine bevorzugte Beute."
     }
   },
   {
@@ -17470,7 +17646,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Pancham",
-      "fr": "Pandespiègle"
+      "fr": "Pandespiègle",
+      "de": "Pam-Pam"
     },
     "attacks": [
       {
@@ -17537,7 +17714,8 @@
     ],
     "retreat_cost": 4,
     "flavor_text": {
-      "en": "From the slight twitches of its bamboo leaf, it deduces its opponent's movements. It's eager to tussle but kindhearted toward its companions."
+      "en": "From the slight twitches of its bamboo leaf, it deduces its opponent's movements. It's eager to tussle but kindhearted toward its companions.",
+      "de": "Mit seinem Blatt erspürt es die Bewegungen des Gegners. Es ist sehr grob und streitlustig, hält aber stets zu seinen Artgenossen."
     }
   },
   {
@@ -17652,7 +17830,8 @@
     ],
     "retreat_cost": 0,
     "flavor_text": {
-      "en": "When its life comes to an end, it absorbs the life energy of every living thing and turns into a cocoon once more."
+      "en": "When its life comes to an end, it absorbs the life energy of every living thing and turns into a cocoon once more.",
+      "de": "Neigt sich seine Lebensspanne dem Ende zu, entzieht es anderen Lebewesen deren Energie und verwandelt sich zurück in einen Kokon."
     }
   },
   {
@@ -17760,7 +17939,7 @@
           "es": "Manos Diabólicas GX",
           "it": "Braccia Malefiche GX",
           "pt-BR": "Mãos Malignas GX",
-          "de": "Teufelshände GX"
+          "de": "Teufelshände-GX"
         },
         "cost": [
           "dark",
@@ -17844,7 +18023,8 @@
     ],
     "evolves_from": {
       "en": "Torracat",
-      "fr": "Matoufeu"
+      "fr": "Matoufeu",
+      "de": "Miezunder"
     },
     "rule_box": "GX",
     "attacks": [
@@ -17879,7 +18059,7 @@
           "es": "Tornado Oscuro GX",
           "it": "Tornado Plumbeo GX",
           "pt-BR": "Tornado Escuro GX",
-          "de": "Finstertornado GX"
+          "de": "Finstertornado-GX"
         },
         "cost": [
           "normal",
@@ -18025,7 +18205,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Its metal body is sturdy, but it does rust rather easily. So on rainy days, this Pokémon prefers to stay put in its nest."
+      "en": "Its metal body is sturdy, but it does rust rather easily. So on rainy days, this Pokémon prefers to stay put in its nest.",
+      "de": "Sein stählerner Körper ist robust, aber anfällig für Rost. Regnerische Tage verbringt es daher geduldig in seinem Nest."
     }
   },
   {
@@ -18111,7 +18292,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It is said to have the ability to grant any wish for just one week every thousand years."
+      "en": "It is said to have the ability to grant any wish for just one week every thousand years.",
+      "de": "Man sagt, es kann alle 1 000 Jahre für eine Woche jeden Wunsch erfüllen."
     }
   }
 ]

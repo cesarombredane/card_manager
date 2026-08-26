@@ -6,7 +6,8 @@
     "category": "pokemon",
     "name": {
       "en": "Bulbasaur",
-      "fr": "Bulbizarre"
+      "fr": "Bulbizarre",
+      "de": "Bisasam"
     },
     "pokemon": [
       "0001"
@@ -79,7 +80,8 @@
       {
         "name": {
           "en": "Razor Leaf",
-          "fr": "Tranch'Herbe"
+          "fr": "Tranch'Herbe",
+          "de": "Rasierblatt"
         },
         "cost": [
           "grass",
@@ -97,7 +99,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "A strange seed was planted on its back at birth. The plant sprouts and grows with this Pokémon."
+      "en": "A strange seed was planted on its back at birth. The plant sprouts and grows with this Pokémon.",
+      "de": "Dieses Pokémon trägt von Geburt an einen Samen auf dem Rücken, der mit ihm keimt und wächst."
     }
   },
   {
@@ -107,7 +110,8 @@
     "category": "pokemon",
     "name": {
       "en": "Cyndaquil",
-      "fr": "Héricendre"
+      "fr": "Héricendre",
+      "de": "Feurigel"
     },
     "pokemon": [
       "0155"
@@ -180,7 +184,8 @@
       {
         "name": {
           "en": "Hammer In",
-          "fr": "Enfoncement"
+          "fr": "Enfoncement",
+          "de": "Einhämmern"
         },
         "cost": [
           "normal",
@@ -198,7 +203,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It has a timid nature. If it is startled, the flames on its back burn more vigorously."
+      "en": "It has a timid nature. If it is startled, the flames on its back burn more vigorously.",
+      "de": "Erschrickt sich dieses scheue Pokémon, lodern die Flammen auf seinem Rücken kräftiger."
     }
   },
   {
@@ -208,7 +214,8 @@
     "category": "pokemon",
     "name": {
       "en": "Torchic",
-      "fr": "Poussifeu"
+      "fr": "Poussifeu",
+      "de": "Flemmli"
     },
     "pokemon": [
       "0255"
@@ -281,7 +288,8 @@
       {
         "name": {
           "en": "Ember",
-          "fr": "Flammèche"
+          "fr": "Flammèche",
+          "de": "Glut"
         },
         "cost": [
           "fire"
@@ -289,7 +297,8 @@
         "damage": "20",
         "text": {
           "en": "Flip a coin. If tails, discard a Fire Energy attached to this Pokémon.",
-          "fr": "Lancez une pièce. Si c'est pile, défaussez une Énergie Fire attachée à ce Pokémon."
+          "fr": "Lancez une pièce. Si c'est pile, défaussez une Énergie Fire attachée à ce Pokémon.",
+          "de": "Wirf 1 Münze. Lege bei „Zahl“ 1 an dieses Pokémon angelegte {R}-Energie auf deinen Ablagestapel."
         }
       }
     ],
@@ -301,7 +310,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "A fire burns inside, so it feels very warm to hug. It launches fireballs of 1,800 degrees Fahrenheit."
+      "en": "A fire burns inside, so it feels very warm to hug. It launches fireballs of 1,800 degrees Fahrenheit.",
+      "de": "In seinem Inneren lodert ein Feuer. Es schleudert 1 000 °C heiße Feuerbälle."
     }
   },
   {
@@ -311,7 +321,8 @@
     "category": "pokemon",
     "name": {
       "en": "Chimchar",
-      "fr": "Chimpenfeu"
+      "fr": "Chimpenfeu",
+      "de": "Panflam"
     },
     "pokemon": [
       "0391"
@@ -380,15 +391,12 @@
       "fire"
     ],
     "stage": "basic",
-    "evolves_from": {
-      "en": "Chimchar",
-      "fr": "Ouisticram"
-    },
     "attacks": [
       {
         "name": {
           "en": "Fury Swipes",
-          "fr": "Super Roussi"
+          "fr": "Super Roussi",
+          "de": "Kratzfurie"
         },
         "cost": [
           "fire"
@@ -396,7 +404,8 @@
         "damage": "10×",
         "text": {
           "en": "Flip 3 coins. This attack does 10 damage for each heads.",
-          "fr": "Le Pokémon Actif de votre adversaire est maintenant Brûlé."
+          "fr": "Le Pokémon Actif de votre adversaire est maintenant Brûlé.",
+          "de": "Wirf 3 Münzen. Diese Attacke fügt 10 Schadenspunkte pro Kopf zu."
         }
       }
     ],
@@ -408,7 +417,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "The gas made in its belly burns from its rear end. The fire burns weakly when it feels sick."
+      "en": "The gas made in its belly burns from its rear end. The fire burns weakly when it feels sick.",
+      "de": "An seinem Rücken verbrennt es die Gase aus seinem Bauch. Geht es ihm schlecht, leuchtet es weniger hell."
     }
   },
   {
@@ -418,7 +428,8 @@
     "category": "pokemon",
     "name": {
       "en": "Tepig",
-      "fr": "Gruikui"
+      "fr": "Gruikui",
+      "de": "Floink"
     },
     "pokemon": [
       "0498"
@@ -491,7 +502,8 @@
       {
         "name": {
           "en": "Ember",
-          "fr": "Flammèche"
+          "fr": "Flammèche",
+          "de": "Glut"
         },
         "cost": [
           "fire",
@@ -500,7 +512,8 @@
         "damage": "30",
         "text": {
           "en": "Discard an Energy attached to this Pokémon.",
-          "fr": "Défaussez une Énergie attachée à ce Pokémon."
+          "fr": "Défaussez une Énergie attachée à ce Pokémon.",
+          "de": "Lege 1 an dieses Pokémon angelegte Energie auf deinen Ablagestapel."
         }
       }
     ],
@@ -512,7 +525,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "It blows fire through its nose. When it catches a cold, the fire becomes pitch-black smoke instead."
+      "en": "It blows fire through its nose. When it catches a cold, the fire becomes pitch-black smoke instead.",
+      "de": "Es schießt Flammen aus seinem Rüssel. Ist es erkältet, kommt statt Feuer aber nur pechschwarzer Rauch zum Vorschein."
     }
   },
   {
@@ -522,7 +536,8 @@
     "category": "pokemon",
     "name": {
       "en": "Fennekin",
-      "fr": "Feunnec"
+      "fr": "Feunnec",
+      "de": "Fynx"
     },
     "pokemon": [
       "0653"
@@ -595,7 +610,8 @@
       {
         "name": {
           "en": "Scratch",
-          "fr": "Griffe"
+          "fr": "Griffe",
+          "de": "Kratzer"
         },
         "cost": [
           "fire"
@@ -606,7 +622,8 @@
       {
         "name": {
           "en": "Live Coal",
-          "fr": "Charbon Mutant"
+          "fr": "Charbon Mutant",
+          "de": "Glühende Kohlen"
         },
         "cost": [
           "fire",
@@ -624,7 +641,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Eating a twig fills it with energy, and its roomy ears give vent to air hotter than 390 degrees Fahrenheit."
+      "en": "Eating a twig fills it with energy, and its roomy ears give vent to air hotter than 390 degrees Fahrenheit.",
+      "de": "Wenn es Zweige frisst, fasst es neue Kraft und stößt über seine Ohren über 200 °C heiße Luft aus."
     }
   },
   {
@@ -634,7 +652,8 @@
     "category": "pokemon",
     "name": {
       "en": "Litten",
-      "fr": "Flamiaou"
+      "fr": "Flamiaou",
+      "de": "Flamiau"
     },
     "pokemon": [
       "0725"
@@ -707,7 +726,8 @@
       {
         "name": {
           "en": "Bite",
-          "fr": "Morsure"
+          "fr": "Morsure",
+          "de": "Biss"
         },
         "cost": [
           "fire"
@@ -718,7 +738,8 @@
       {
         "name": {
           "en": "Flare",
-          "fr": "Flamboiement"
+          "fr": "Flamboiement",
+          "de": "Flackern"
         },
         "cost": [
           "fire",
@@ -736,7 +757,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "While grooming itself, it builds up fur inside its stomach. It sets the fur alight and spews fiery attacks, which change based on how it coughs."
+      "en": "While grooming itself, it builds up fur inside its stomach. It sets the fur alight and spews fiery attacks, which change based on how it coughs.",
+      "de": "Es verbrennt Haare, die es bei der Körperpflege verschluckt hat, indem es Feuer speit. Die Flammen variieren je nach Art des Speiens."
     }
   },
   {
@@ -746,7 +768,8 @@
     "category": "pokemon",
     "name": {
       "en": "Scorbunny",
-      "fr": "Flambino"
+      "fr": "Flambino",
+      "de": "Hopplo"
     },
     "pokemon": [
       "0813"
@@ -819,7 +842,8 @@
       {
         "name": {
           "en": "Super Singe",
-          "fr": "Super Roussi"
+          "fr": "Super Roussi",
+          "de": "Super-Versengung"
         },
         "cost": [
           "fire"
@@ -827,7 +851,8 @@
         "damage": "10",
         "text": {
           "en": "Flip a coin. If heads, your opponent’s Active Pokémon is now Burned.",
-          "fr": "Lancez une pièce. Si c'est face, le Pokémon Actif de votre adversaire est maintenant Brûlé."
+          "fr": "Lancez une pièce. Si c'est face, le Pokémon Actif de votre adversaire est maintenant Brûlé.",
+          "de": "Wirf 1 Münze. Bei Kopf ist das Aktive Pokémon deines Gegners jetzt verbrannt."
         }
       }
     ],
@@ -839,7 +864,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "A warm-up of running around gets fire energy coursing through this Pokémon’s body. Once that happens, it’s ready to fight at full power."
+      "en": "A warm-up of running around gets fire energy coursing through this Pokémon’s body. Once that happens, it’s ready to fight at full power.",
+      "de": "Erhöht es durch Rennen seine Körpertemperatur, strömt Feuer-Energie durch seinen Körper. Dann kann es seine wahre Kraft entfesseln."
     }
   },
   {
@@ -849,7 +875,8 @@
     "category": "pokemon",
     "name": {
       "en": "Squirtle",
-      "fr": "Carapuce"
+      "fr": "Carapuce",
+      "de": "Schiggy"
     },
     "pokemon": [
       "0007"
@@ -922,7 +949,8 @@
       {
         "name": {
           "en": "Bubble",
-          "fr": "Écume"
+          "fr": "Écume",
+          "de": "Blubber"
         },
         "cost": [
           "water"
@@ -930,7 +958,8 @@
         "damage": "10",
         "text": {
           "en": "Flip a coin. If heads, your opponent’s Active Pokémon is now Paralyzed.",
-          "fr": "Lancez une pièce. Si c’est face, le Pokémon Actif de votre adversaire est maintenant Paralysé."
+          "fr": "Lancez une pièce. Si c’est face, le Pokémon Actif de votre adversaire est maintenant Paralysé.",
+          "de": "Wirf 1 Münze. Bei Kopf ist das Aktive Pokémon deines Gegners jetzt paralysiert."
         }
       }
     ],
@@ -942,7 +971,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It shelters itself in its shell, then strikes back with spouts of water at every opportunity."
+      "en": "It shelters itself in its shell, then strikes back with spouts of water at every opportunity.",
+      "de": "Es zieht sich in seinen Panzer zurück und greift dann mit Wasserstrahlen seine Gegner an."
     }
   },
   {
@@ -952,7 +982,8 @@
     "category": "pokemon",
     "name": {
       "en": "Totodile",
-      "fr": "Kaiminus"
+      "fr": "Kaiminus",
+      "de": "Karnimani"
     },
     "pokemon": [
       "0158"
@@ -1025,7 +1056,8 @@
       {
         "name": {
           "en": "Fury Strikes",
-          "fr": "Attaques Furieuses"
+          "fr": "Attaques Furieuses",
+          "de": "Zornschläge"
         },
         "cost": [
           "water"
@@ -1033,7 +1065,8 @@
         "damage": "10×",
         "text": {
           "en": "Flip 3 coins. This attack does 10 damage times the number of heads.",
-          "fr": "Lancez 3 pièces. Cette attaque inflige 10 dégâts multipliés par le nombre de côtés face."
+          "fr": "Lancez 3 pièces. Cette attaque inflige 10 dégâts multipliés par le nombre de côtés face.",
+          "de": "Wirf 3 Münzen. Dieser Angriff fügt 10 Schadenspunkte mal der Anzahl „Kopf“ zu."
         }
       }
     ],
@@ -1045,7 +1078,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It is small but rough and tough. It won’t hesitate to take a bite out of anything that moves."
+      "en": "It is small but rough and tough. It won’t hesitate to take a bite out of anything that moves.",
+      "de": "Es ist klein, aber zäh und stark. Es zögert nicht, jeden anzugreifen, wenn dieser ihm zu nahe kommt."
     }
   },
   {
@@ -1055,7 +1089,8 @@
     "category": "pokemon",
     "name": {
       "en": "Mudkip",
-      "fr": "Gobou"
+      "fr": "Gobou",
+      "de": "Hydropi"
     },
     "pokemon": [
       "0258"
@@ -1128,7 +1163,8 @@
       {
         "name": {
           "en": "Tackle",
-          "fr": "Charge"
+          "fr": "Charge",
+          "de": "Tackle"
         },
         "cost": [
           "water"
@@ -1139,7 +1175,8 @@
       {
         "name": {
           "en": "Mud-Slap",
-          "fr": "Coud'Boue"
+          "fr": "Coud'Boue",
+          "de": "Lehmschelle"
         },
         "cost": [
           "water",
@@ -1157,7 +1194,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "To alert it, the fin on its head senses the flow of water. It has the strength to heft boulders."
+      "en": "To alert it, the fin on its head senses the flow of water. It has the strength to heft boulders.",
+      "de": "Die Flosse auf seinem Kopf prüft die Strömung des Wassers. Dieses Pokémon kann Felsen heben."
     }
   },
   {
@@ -1167,7 +1205,8 @@
     "category": "pokemon",
     "name": {
       "en": "Chikorita",
-      "fr": "Germignon"
+      "fr": "Germignon",
+      "de": "Endivie"
     },
     "pokemon": [
       "0152"
@@ -1240,7 +1279,8 @@
       {
         "name": {
           "en": "Mini Drain",
-          "fr": "Mini-Assèchement"
+          "fr": "Mini-Assèchement",
+          "de": "Minisauger"
         },
         "cost": [
           "grass"
@@ -1248,7 +1288,8 @@
         "damage": "10",
         "text": {
           "en": "Heal 10 damage from this Pokémon.",
-          "fr": "Soignez 10 dégâts à ce Pokémon."
+          "fr": "Soignez 10 dégâts à ce Pokémon.",
+          "de": "Heile 10 Schadenspunkte bei diesem Pokémon."
         }
       }
     ],
@@ -1260,7 +1301,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It uses the leaf on its head to determine the temperature and humidity. It loves to sunbathe."
+      "en": "It uses the leaf on its head to determine the temperature and humidity. It loves to sunbathe.",
+      "de": "Mit dem Blatt auf seinem Kopf bestimmt es die Temperatur und Feuchtigkeit. Es liebt Sonnenbäder."
     }
   },
   {
@@ -1270,7 +1312,8 @@
     "category": "pokemon",
     "name": {
       "en": "Piplup",
-      "fr": "Tiplouf"
+      "fr": "Tiplouf",
+      "de": "Plinfa"
     },
     "pokemon": [
       "0393"
@@ -1343,7 +1386,8 @@
       {
         "name": {
           "en": "Peck",
-          "fr": "Picpic"
+          "fr": "Picpic",
+          "de": "Schnabel"
         },
         "cost": [
           "normal"
@@ -1354,7 +1398,8 @@
       {
         "name": {
           "en": "Wave Splash",
-          "fr": "Grosse Vague"
+          "fr": "Grosse Vague",
+          "de": "Wellenplatscher"
         },
         "cost": [
           "water",
@@ -1372,7 +1417,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Because it is very proud, it hates accepting food from people. Its thick down guards it from cold."
+      "en": "Because it is very proud, it hates accepting food from people. Its thick down guards it from cold.",
+      "de": "Es ist sehr stolz und nimmt daher kein Futter von anderen an. Seine dicken Daunen schützen vor Kälte."
     }
   },
   {
@@ -1382,7 +1428,8 @@
     "category": "pokemon",
     "name": {
       "en": "Oshawott",
-      "fr": "Moustillon"
+      "fr": "Moustillon",
+      "de": "Ottaro"
     },
     "pokemon": [
       "0501"
@@ -1455,7 +1502,8 @@
       {
         "name": {
           "en": "Water Pulse",
-          "fr": "Vibraqua"
+          "fr": "Vibraqua",
+          "de": "Aquawelle"
         },
         "cost": [
           "water",
@@ -1464,7 +1512,8 @@
         "damage": "20",
         "text": {
           "en": "Flip a coin. If heads, the Defending Pokémon is now Asleep.",
-          "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Endormi."
+          "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Endormi.",
+          "de": "Wirf 1 Münze. Bei „Kopf“ schläft das Verteidigende Pokémon jetzt."
         }
       }
     ],
@@ -1476,7 +1525,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It fights using the scalchop on its stomach. In response to an attack, it retaliates immediately by slashing."
+      "en": "It fights using the scalchop on its stomach. In response to an attack, it retaliates immediately by slashing.",
+      "de": "Kämpft mit der Muschel auf seinem Bauch. Pariert es einen Angriff, schlägt es sofort mit einer Schnitt-Attacke zurück."
     }
   },
   {
@@ -1486,7 +1536,8 @@
     "category": "pokemon",
     "name": {
       "en": "Froakie",
-      "fr": "Grenousse"
+      "fr": "Grenousse",
+      "de": "Froxy"
     },
     "pokemon": [
       "0656"
@@ -1559,7 +1610,8 @@
       {
         "name": {
           "en": "Pound",
-          "fr": "Écras'Face"
+          "fr": "Écras'Face",
+          "de": "Pfund"
         },
         "cost": [
           "water"
@@ -1570,7 +1622,8 @@
       {
         "name": {
           "en": "Water Drip",
-          "fr": "Goutte à Goutte"
+          "fr": "Goutte à Goutte",
+          "de": "Spritzwasser"
         },
         "cost": [
           "water",
@@ -1588,7 +1641,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It secretes flexible bubbles from its chest and back. The bubbles reduce the damage it would otherwise take when attacked."
+      "en": "It secretes flexible bubbles from its chest and back. The bubbles reduce the damage it would otherwise take when attacked.",
+      "de": "Es stößt aus Brust und Rücken elastische Blasen aus, mit denen es gegnerische Angriffe abfängt und so den erlittenen Schaden verringert."
     }
   },
   {
@@ -1598,7 +1652,8 @@
     "category": "pokemon",
     "name": {
       "en": "Popplio",
-      "fr": "Otaquin"
+      "fr": "Otaquin",
+      "de": "Robball"
     },
     "pokemon": [
       "0728"
@@ -1671,7 +1726,8 @@
       {
         "name": {
           "en": "Pound",
-          "fr": "Écras’Face"
+          "fr": "Écras’Face",
+          "de": "Pfund"
         },
         "cost": [
           "water"
@@ -1682,7 +1738,8 @@
       {
         "name": {
           "en": "Water Gun",
-          "fr": "Pistolet à O"
+          "fr": "Pistolet à O",
+          "de": "Aquaknarre"
         },
         "cost": [
           "water",
@@ -1700,7 +1757,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "This Pokémon snorts body fluids from its nose, blowing balloons to smash into its foes. It’s famous for being a hard worker."
+      "en": "This Pokémon snorts body fluids from its nose, blowing balloons to smash into its foes. It’s famous for being a hard worker.",
+      "de": "Dieses Pokémon ist für seine Willensstärke bekannt. Bläst es Körperflüssigkeit durch die Nase, entsteht eine Blase, die als Waffe fungiert."
     }
   },
   {
@@ -1710,7 +1768,8 @@
     "category": "pokemon",
     "name": {
       "en": "Sobble",
-      "fr": "Larméléon"
+      "fr": "Larméléon",
+      "de": "Memmeon"
     },
     "pokemon": [
       "0816"
@@ -1783,7 +1842,8 @@
       {
         "name": {
           "en": "Bind",
-          "fr": "Étreinte"
+          "fr": "Étreinte",
+          "de": "Klammergriff"
         },
         "cost": [
           "water",
@@ -1792,7 +1852,8 @@
         "damage": "20",
         "text": {
           "en": "Flip a coin. If heads, your opponent’s Active Pokémon is now Paralyzed.",
-          "fr": "Lancez une pièce. Si c'est face, le Pokémon Actif de votre adversaire est maintenant Paralysé."
+          "fr": "Lancez une pièce. Si c'est face, le Pokémon Actif de votre adversaire est maintenant Paralysé.",
+          "de": "Wirf 1 Münze. Bei Kopf ist das Aktive Pokémon deines Gegners jetzt paralysiert."
         }
       }
     ],
@@ -1804,7 +1865,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "When scared, this Pokémon cries. Its tears pack the chemical punch of 100 onions, and attackers won’t be able to resist weeping."
+      "en": "When scared, this Pokémon cries. Its tears pack the chemical punch of 100 onions, and attackers won’t be able to resist weeping.",
+      "de": "Hat es Angst, vergießt es Tränen, die Reizstoffe enthalten, welche andere ebenfalls zum Weinen bringen. Sie sind so stark wie 100 Zwiebeln."
     }
   },
   {
@@ -1814,7 +1876,8 @@
     "category": "pokemon",
     "name": {
       "en": "Pikachu",
-      "fr": "Pikachu"
+      "fr": "Pikachu",
+      "de": "Pikachu"
     },
     "pokemon": [
       "0025"
@@ -1887,7 +1950,8 @@
       {
         "name": {
           "en": "Meal Time",
-          "fr": "À Belles Dents"
+          "fr": "À Belles Dents",
+          "de": "Mahlzeit"
         },
         "cost": [
           "lightning"
@@ -1895,13 +1959,15 @@
         "damage": "",
         "text": {
           "en": "Flip a coin until you get tails. For each heads, draw a card.",
-          "fr": "Lancez une pièce jusqu’à ce que vous obteniez un côté pile. Pour chaque côté face, piochez une carte."
+          "fr": "Lancez une pièce jusqu’à ce que vous obteniez un côté pile. Pour chaque côté face, piochez une carte.",
+          "de": "Wirf so lang 1 Münze, bis zum ersten Mal das Ergebnis Zahl kommt. Ziehe pro Kopf 1 Karte."
         }
       },
       {
         "name": {
           "en": "Gnaw",
-          "fr": "Ronge"
+          "fr": "Ronge",
+          "de": "Nagen"
         },
         "cost": [
           "lightning",
@@ -1925,7 +1991,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Its nature is to store up electricity. Forests where nests of Pikachu live are dangerous, since the trees are so often struck by lightning."
+      "en": "Its nature is to store up electricity. Forests where nests of Pikachu live are dangerous, since the trees are so often struck by lightning.",
+      "de": "Es liegt in seiner Natur, konstant Elektrizität zu speichern. Die Wälder, in denen Pikachu leben, bergen stets die Gefahr eines Blitzgewitters."
     }
   },
   {
@@ -1935,7 +2002,8 @@
     "category": "pokemon",
     "name": {
       "en": "Treecko",
-      "fr": "Arcko"
+      "fr": "Arcko",
+      "de": "Geckarbor"
     },
     "pokemon": [
       "0252"
@@ -2008,7 +2076,8 @@
       {
         "name": {
           "en": "Quick Attack",
-          "fr": "Vive-Attaque"
+          "fr": "Vive-Attaque",
+          "de": "Ruckzuckhieb"
         },
         "cost": [
           "grass",
@@ -2017,7 +2086,8 @@
         "damage": "10+",
         "text": {
           "en": "Flip a coin. If heads, this attack does 10 more damage.",
-          "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 10 dégâts supplémentaires."
+          "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 10 dégâts supplémentaires.",
+          "de": "Wirf 1 Münze. Bei „Kopf“ fügt dieser Angriff 10 weitere Schadenspunkte zu."
         }
       }
     ],
@@ -2029,7 +2099,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Small hooks on the bottom of its feet catch on walls and ceilings. That is how it can hang from above."
+      "en": "Small hooks on the bottom of its feet catch on walls and ceilings. That is how it can hang from above.",
+      "de": "Dank seiner mit winzigen Stacheln besetzten Sohlen haftet es sogar kopfüber an Wänden und Decken."
     }
   },
   {
@@ -2039,7 +2110,8 @@
     "category": "pokemon",
     "name": {
       "en": "Turtwig",
-      "fr": "Tortipouss"
+      "fr": "Tortipouss",
+      "de": "Chelast"
     },
     "pokemon": [
       "0387"
@@ -2112,7 +2184,8 @@
       {
         "name": {
           "en": "Tackle",
-          "fr": "Charge"
+          "fr": "Charge",
+          "de": "Tackle"
         },
         "cost": [
           "normal",
@@ -2124,7 +2197,8 @@
       {
         "name": {
           "en": "Razor Leaf",
-          "fr": "Tranch'Herbe"
+          "fr": "Tranch'Herbe",
+          "de": "Rasierblatt"
         },
         "cost": [
           "grass",
@@ -2143,7 +2217,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "It undertakes photosynthesis with its body, making oxygen. The leaf on its head wilts if it is thirsty."
+      "en": "It undertakes photosynthesis with its body, making oxygen. The leaf on its head wilts if it is thirsty.",
+      "de": "Sein Körper lebt von der Photosynthese, die Sauerstoff freisetzt. Ist es durstig, welkt sein Blatt."
     }
   },
   {
@@ -2153,7 +2228,8 @@
     "category": "pokemon",
     "name": {
       "en": "Snivy",
-      "fr": "Vipélierre"
+      "fr": "Vipélierre",
+      "de": "Serpifeu"
     },
     "pokemon": [
       "0495"
@@ -2226,7 +2302,8 @@
       {
         "name": {
           "en": "Slam",
-          "fr": "Souplesse"
+          "fr": "Souplesse",
+          "de": "Slam"
         },
         "cost": [
           "grass",
@@ -2235,7 +2312,8 @@
         "damage": "20×",
         "text": {
           "en": "Flip 2 coins. This attack does 20 damage times the number of heads.",
-          "fr": "Lancez 2 pièces. Cette attaque inflige 20 dégâts multipliés par le nombre de côtés face."
+          "fr": "Lancez 2 pièces. Cette attaque inflige 20 dégâts multipliés par le nombre de côtés face.",
+          "de": "Wirf 2 Münzen. Dieser Angriff fügt 20 Schadenspunkte mal der Anzahl „Kopf“ zu."
         }
       }
     ],
@@ -2253,7 +2331,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It is very intelligent and calm. Being exposed to lots of sunlight makes its movements swifter."
+      "en": "It is very intelligent and calm. Being exposed to lots of sunlight makes its movements swifter.",
+      "de": "Eine kühle Denkernatur. Bekommt es genügend Sonnenlicht ab, erhöht sich die Geschwindigkeit seiner Bewegungen."
     }
   },
   {
@@ -2263,7 +2342,8 @@
     "category": "pokemon",
     "name": {
       "en": "Chespin",
-      "fr": "Marisson"
+      "fr": "Marisson",
+      "de": "Igamaro"
     },
     "pokemon": [
       "0650"
@@ -2336,7 +2416,8 @@
       {
         "name": {
           "en": "Vine Whip",
-          "fr": "Fouet Lianes"
+          "fr": "Fouet Lianes",
+          "de": "Rankenhieb"
         },
         "cost": [
           "grass"
@@ -2347,7 +2428,8 @@
       {
         "name": {
           "en": "Seed Bomb",
-          "fr": "Canon Graine"
+          "fr": "Canon Graine",
+          "de": "Samenbomben"
         },
         "cost": [
           "grass",
@@ -2365,7 +2447,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "The quills on its head are usually soft. When it flexes them, the points become so hard and sharp that they can pierce rock."
+      "en": "The quills on its head are usually soft. When it flexes them, the points become so hard and sharp that they can pierce rock.",
+      "de": "Wenn es seine Kraft auf die sonst eher weichen Stacheln auf seinem Kopf konzentriert, werden diese robust genug, um damit Steine zu zertrümmern."
     }
   },
   {
@@ -2375,7 +2458,8 @@
     "category": "pokemon",
     "name": {
       "en": "Rowlet",
-      "fr": "Brindibou"
+      "fr": "Brindibou",
+      "de": "Bauz"
     },
     "pokemon": [
       "0722"
@@ -2448,7 +2532,8 @@
       {
         "name": {
           "en": "Tackle",
-          "fr": "Charge"
+          "fr": "Charge",
+          "de": "Tackle"
         },
         "cost": [
           "normal"
@@ -2459,7 +2544,8 @@
       {
         "name": {
           "en": "Leafage",
-          "fr": "Feuillage"
+          "fr": "Feuillage",
+          "de": "Blattwerk"
         },
         "cost": [
           "grass",
@@ -2477,7 +2563,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "This wary Pokémon uses photosynthesis to store up energy during the day, while becoming active at night."
+      "en": "This wary Pokémon uses photosynthesis to store up energy during the day, while becoming active at night.",
+      "de": "Ein wachsames und nachtaktives Pokémon. Tagsüber sammelt es per Photosynthese Kräfte, um fit für die Nacht zu sein."
     }
   },
   {
@@ -2487,7 +2574,8 @@
     "category": "pokemon",
     "name": {
       "en": "Grookey",
-      "fr": "Ouistempo"
+      "fr": "Ouistempo",
+      "de": "Chimpep"
     },
     "pokemon": [
       "0810"
@@ -2560,7 +2648,8 @@
       {
         "name": {
           "en": "Branch Poke",
-          "fr": "Tapotige"
+          "fr": "Tapotige",
+          "de": "Zweigstoß"
         },
         "cost": [
           "grass",
@@ -2578,7 +2667,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "When it uses its special stick to strike up a beat, the sound waves produced carry revitalizing energy to the plants and flowers in the area."
+      "en": "When it uses its special stick to strike up a beat, the sound waves produced carry revitalizing energy to the plants and flowers in the area.",
+      "de": "Der Rhythmus, den es mit seinem besonderen Schlägel erzeugt, verbreitet Schallwellen, die Pflanzen neue Vitalität verleihen können."
     }
   },
   {
@@ -2588,7 +2678,8 @@
     "category": "pokemon",
     "name": {
       "en": "Charmander",
-      "fr": "Salamèche"
+      "fr": "Salamèche",
+      "de": "Glumanda"
     },
     "pokemon": [
       "0004"
@@ -2661,7 +2752,8 @@
       {
         "name": {
           "en": "Scratch",
-          "fr": "Griffe"
+          "fr": "Griffe",
+          "de": "Kratzer"
         },
         "cost": [
           "normal"
@@ -2672,7 +2764,8 @@
       {
         "name": {
           "en": "Flame Tail",
-          "fr": "Queue de Flammes"
+          "fr": "Queue de Flammes",
+          "de": "Flammenschweif"
         },
         "cost": [
           "fire",
@@ -2690,7 +2783,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "The flame on its tail indicates Charmander’s life force. If it is healthy, the flame burns brightly."
+      "en": "The flame on its tail indicates Charmander’s life force. If it is healthy, the flame burns brightly.",
+      "de": "Die Flamme auf seiner Schweifspitze zeigt die Lebensenergie an. Ist es gesund, leuchtet sie hell."
     }
   }
 ]

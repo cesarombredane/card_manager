@@ -116,7 +116,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "There is a plant seed on its back right from the day this Pokémon is born. The seed slowly grows larger."
+      "en": "There is a plant seed on its back right from the day this Pokémon is born. The seed slowly grows larger.",
+      "de": "Dieses Pokémon trägt von Geburt an einen Samen auf dem Rücken, der im Laufe der Zeit keimt und wächst."
     }
   },
   {
@@ -252,7 +253,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "When the bulb on its back grows large, it appears to lose the ability to stand on its hind legs."
+      "en": "When the bulb on its back grows large, it appears to lose the ability to stand on its hind legs.",
+      "de": "Sobald die Knospe auf seinem Rücken groß wird, kann Bisaknosp nicht mehr auf zwei Beinen stehen."
     }
   },
   {
@@ -367,7 +369,8 @@
     ],
     "retreat_cost": 4,
     "flavor_text": {
-      "en": "Its plant blooms when it is absorbing solar energy. It stays on the move to seek sunlight."
+      "en": "Its plant blooms when it is absorbing solar energy. It stays on the move to seek sunlight.",
+      "de": "Es nutzt Solarenergie als Nahrung und bringt so seine große Blume zum Blühen. Es geht dorthin, wo die Sonne scheint."
     }
   },
   {
@@ -455,7 +458,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "Its plant blooms when it is absorbing solar energy. It stays on the move to seek sunlight."
+      "en": "Its plant blooms when it is absorbing solar energy. It stays on the move to seek sunlight.",
+      "de": "Es nutzt Solarenergie als Nahrung und bringt so seine große Blume zum Blühen. Es geht dorthin, wo die Sonne scheint."
     }
   },
   {
@@ -471,9 +475,7 @@
       "pt-BR": "Exeggutor de Alola V",
       "de": "Alola-Kokowei V"
     },
-    "pokemon": [
-      "0103-alolan-exeggutor"
-    ],
+    "pokemon": [],
     "illustrator": "MUGENUP",
     "rarity": "holo_rare_v",
     "regulation_mark": "F",
@@ -530,7 +532,7 @@
           "es": "Lanza 1 moneda. Si sale cara, busca en tu baraja hasta 5 cartas de Energía Grass y únelas a tus Pokémon de la manera que desees. Después, baraja las cartas de tu baraja.",
           "it": "Lancia una moneta. Se esce testa, cerca nel tuo mazzo fino a cinque carte Energia Grass e assegnale ai tuoi Pokémon nel modo che preferisci. Poi rimischia le carte del tuo mazzo.",
           "pt-BR": "Jogue 1 moeda. Se sair cara, procure por até 5 cartas de Energia Grass no seu baralho e ligue-as aos seus Pokémon como desejar. Em seguida, embaralhe o seu baralho.",
-          "de": "Wirf 1 Münze. Durchsuche bei Kopf dein Deck nach bis zu 5 Grass-Energiekarten und lege sie beliebig an deine Pokémon an. Mische anschließend dein Deck."
+          "de": "Wirf 1 Münze. Durchsuche bei Kopf dein Deck nach bis zu 5 {G}-Energiekarten und lege sie beliebig an deine Pokémon an. Mische anschließend dein Deck."
         }
       },
       {
@@ -554,7 +556,7 @@
           "es": "Este ataque hace 30 puntos de daño a 1 de los Pokémon de tu rival por cada Energía Grass unida a este Pokémon. (No apliques Debilidad y Resistencia a los Pokémon en Banca).",
           "it": "Questo attacco infligge 30 danni a uno dei Pokémon del tuo avversario per ogni Energia Grass assegnata a questo Pokémon. Non applicare debolezza e resistenza ai Pokémon in panchina.",
           "pt-BR": "Este ataque causa 30 pontos de dano a 1 dos Pokémon do seu oponente para cada Energia Grass ligada a este Pokémon (não aplique Fraqueza e Resistência aos Pokémon no Banco).",
-          "de": "Diese Attacke fügt für jede an dieses Pokémon angelegte Grass-Energie 1 Pokémon deines Gegners 30 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
+          "de": "Diese Attacke fügt für jede an dieses Pokémon angelegte {G}-Energie 1 Pokémon deines Gegners 30 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
         }
       }
     ],
@@ -635,6 +637,19 @@
           "average_30d": 0.17,
           "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=665655"
         }
+      },
+      {
+        "id": "reverse_holo-peelable_ditto",
+        "type": "reverse_holo",
+        "images": {
+          "de": "/images/cards/intl-swsh10-5/de/006.webp",
+          "en": "/images/cards/intl-swsh10-5/en/006.webp",
+          "es": "/images/cards/intl-swsh10-5/es/006.webp",
+          "fr": "/images/cards/intl-swsh10-5/fr/006.webp",
+          "it": "/images/cards/intl-swsh10-5/it/006.webp",
+          "pt-BR": ""
+        },
+        "subtype": "peelable-ditto"
       }
     ],
     "hp": 60,
@@ -674,7 +689,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Although the poison from its fangs isn't that strong, it's potent enough to weaken prey that gets caught in its web."
+      "en": "Although the poison from its fangs isn't that strong, it's potent enough to weaken prey that gets caught in its web.",
+      "de": "Das Gift an seinen Mundwerkzeugen ist nicht sonderlich stark, jedoch ausreichend, um Beute zu schwächen, die ihm ins Netz gegangen ist."
     }
   },
   {
@@ -816,7 +832,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It spews threads from its mouth to catch its prey. When night falls, it leaves its web to go hunt aggressively."
+      "en": "It spews threads from its mouth to catch its prey. When night falls, it leaves its web to go hunt aggressively.",
+      "de": "Seine Beute ergreift es mit einem Seidenfaden. Bei Anbruch der Nacht verlässt es sein Netz und macht sich auf die Jagd."
     }
   },
   {
@@ -915,7 +932,7 @@
           "es": "Busca en tu baraja 1 carta de Energía Fire y únela a este Pokémon. Después, baraja las cartas de tu baraja.",
           "it": "Cerca nel tuo mazzo una carta Energia Fire e assegnala a questo Pokémon. Poi rimischia le carte del tuo mazzo.",
           "pt-BR": "Procure por 1 carta de Energia Fire no seu baralho e ligue-a a este Pokémon. Em seguida, embaralhe o seu baralho.",
-          "de": "Durchsuche dein Deck nach 1 Fire-Energiekarte und lege sie an dieses Pokémon an. Mische anschließend dein Deck."
+          "de": "Durchsuche dein Deck nach 1 {R}-Energiekarte und lege sie an dieses Pokémon an. Mische anschließend dein Deck."
         }
       }
     ],
@@ -927,7 +944,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It has a preference for hot things. When it rains, steam is said to spout from the tip of its tail."
+      "en": "It has a preference for hot things. When it rains, steam is said to spout from the tip of its tail.",
+      "de": "Dieses Pokémon bevorzugt heiße Dinge. Bei Regen soll seine Schwanzspitze dampfen."
     }
   },
   {
@@ -1053,7 +1071,7 @@
           "es": "Descarta 1 Energía Fire de este Pokémon.",
           "it": "Scarta un'Energia Fire da questo Pokémon.",
           "pt-BR": "Descarte 1 Energia Fire deste Pokémon.",
-          "de": "Lege 1 Fire-Energie von diesem Pokémon auf deinen Ablagestapel."
+          "de": "Lege 1 {R}-Energie von diesem Pokémon auf deinen Ablagestapel."
         }
       }
     ],
@@ -1065,7 +1083,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "It has a barbaric nature. In battle, it whips its fiery tail around and slashes away with sharp claws."
+      "en": "It has a barbaric nature. In battle, it whips its fiery tail around and slashes away with sharp claws.",
+      "de": "Es ist brutal veranlagt. Im Kampf schlägt es mit seinem brennenden Schweif um sich und schlitzt Gegner mit seinen scharfen Klauen auf."
     }
   },
   {
@@ -1175,7 +1194,7 @@
           "es": "Descarta todas las Energías Fire de este Pokémon.",
           "it": "Scarta tutte le Energie Fire da questo Pokémon.",
           "pt-BR": "Descarte todas as Energias Fire deste Pokémon.",
-          "de": "Lege alle Fire-Energien von diesem Pokémon auf deinen Ablagestapel."
+          "de": "Lege alle {R}-Energien von diesem Pokémon auf deinen Ablagestapel."
         }
       }
     ],
@@ -1187,7 +1206,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "It spits fire that is hot enough to melt boulders. It may cause forest fires by blowing flames."
+      "en": "It spits fire that is hot enough to melt boulders. It may cause forest fires by blowing flames.",
+      "de": "Dieses Pokémon kann mit seinem Feueratem Felsen schmelzen. Es verursacht ab und zu Waldbrände."
     }
   },
   {
@@ -1277,7 +1297,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "It spits fire that is hot enough to melt boulders. It may cause forest fires by blowing flames."
+      "en": "It spits fire that is hot enough to melt boulders. It may cause forest fires by blowing flames.",
+      "de": "Dieses Pokémon kann mit seinem Feueratem Felsen schmelzen. Es verursacht ab und zu Waldbrände."
     }
   },
   {
@@ -1383,7 +1404,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "It's one of the legendary bird Pokémon. When Moltres flaps its flaming wings, they glimmer with a dazzling red glow."
+      "en": "It's one of the legendary bird Pokémon. When Moltres flaps its flaming wings, they glimmer with a dazzling red glow.",
+      "de": "Schlägt dieses Legendäre Vogel-Pokémon mit den Flügeln, so leuchten die Flammen an seinen Schwingen in einem bezaubernden Rot."
     }
   },
   {
@@ -1455,6 +1477,19 @@
           "average_30d": 0.16,
           "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=665657"
         }
+      },
+      {
+        "id": "reverse_holo-peelable_ditto",
+        "type": "reverse_holo",
+        "images": {
+          "de": "/images/cards/intl-swsh10-5/de/013.webp",
+          "en": "/images/cards/intl-swsh10-5/en/013.webp",
+          "es": "/images/cards/intl-swsh10-5/es/013.webp",
+          "fr": "/images/cards/intl-swsh10-5/fr/013.webp",
+          "it": "/images/cards/intl-swsh10-5/it/013.webp",
+          "pt-BR": ""
+        },
+        "subtype": "peelable-ditto"
       }
     ],
     "hp": 80,
@@ -1512,7 +1547,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "The magma in its body reaches 2,200 degrees Fahrenheit. Its hump gets smaller when it uses Fire-type moves."
+      "en": "The magma in its body reaches 2,200 degrees Fahrenheit. Its hump gets smaller when it uses Fire-type moves.",
+      "de": "In seinem Körper fließt 1 200 °C heißes Magma. Nach Einsatz einer Feuer-Attacke schrumpft sein Höcker."
     }
   },
   {
@@ -1649,7 +1685,8 @@
     ],
     "retreat_cost": 4,
     "flavor_text": {
-      "en": "If angered, the humps on its back erupt in a shower of molten lava. It lives in the craters of volcanoes."
+      "en": "If angered, the humps on its back erupt in a shower of molten lava. It lives in the craters of volcanoes.",
+      "de": "Wenn es wütend ist, regnet es aus den Höckern auf seinem Rücken flüssige Lava. Es lebt in den Kratern von Vulkanen."
     }
   },
   {
@@ -1753,7 +1790,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "When it retracts its long neck into its shell, it squirts out water with vigorous force."
+      "en": "When it retracts its long neck into its shell, it squirts out water with vigorous force.",
+      "de": "Zieht es seinen langen Hals in seinen Panzer zurück, verspritzt es Wasser mit unbändiger Kraft."
     }
   },
   {
@@ -1877,7 +1915,7 @@
           "es": "Este ataque hace 10 puntos de daño más por cada Energía Water unida a este Pokémon.",
           "it": "Questo attacco infligge 10 danni in più per ogni Energia Water assegnata a questo Pokémon.",
           "pt-BR": "Este ataque causa 10 pontos de dano a mais para cada Energia Water ligada a este Pokémon.",
-          "de": "Diese Attacke fügt für jede an dieses Pokémon angelegte Water-Energie 10 Schadenspunkte mehr zu."
+          "de": "Diese Attacke fügt für jede an dieses Pokémon angelegte {W}-Energie 10 Schadenspunkte mehr zu."
         }
       }
     ],
@@ -1889,7 +1927,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "It is recognized as a symbol of longevity. If its shell has algae on it, that Wartortle is very old."
+      "en": "It is recognized as a symbol of longevity. If its shell has algae on it, that Wartortle is very old.",
+      "de": "Es gilt als Symbol für Langlebigkeit. Sehr alte Exemplare erkennt man daran, dass ihr Panzer mit Algen übersät ist."
     }
   },
   {
@@ -1999,7 +2038,7 @@
           "es": "Este ataque hace 30 puntos de daño más por cada Energía Water unida a este Pokémon.",
           "it": "Questo attacco infligge 30 danni in più per ogni Energia Water assegnata a questo Pokémon.",
           "pt-BR": "Este ataque causa 30 pontos de dano a mais para cada Energia Water ligada a este Pokémon.",
-          "de": "Diese Attacke fügt für jede an dieses Pokémon angelegte Water-Energie 30 Schadenspunkte mehr zu."
+          "de": "Diese Attacke fügt für jede an dieses Pokémon angelegte {W}-Energie 30 Schadenspunkte mehr zu."
         }
       }
     ],
@@ -2011,7 +2050,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "It crushes its foe under its heavy body to cause fainting. In a pinch, it will withdraw inside its shell."
+      "en": "It crushes its foe under its heavy body to cause fainting. In a pinch, it will withdraw inside its shell.",
+      "de": "Es begräbt seine Gegner mit seinem enormen Körpergewicht. Wenn es in einer aussichtslosen Lage steckt, zieht es sich in seinen Panzer zurück."
     }
   },
   {
@@ -2099,7 +2139,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "It crushes its foe under its heavy body to cause fainting. In a pinch, it will withdraw inside its shell."
+      "en": "It crushes its foe under its heavy body to cause fainting. In a pinch, it will withdraw inside its shell.",
+      "de": "Es begräbt seine Gegner mit seinem enormen Körpergewicht. Wenn es in einer aussichtslosen Lage steckt, zieht es sich in seinen Panzer zurück."
     }
   },
   {
@@ -2232,7 +2273,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "Slow-witted and oblivious, this Pokémon won't feel any pain if its tail gets eaten. It won't notice when its tail grows back, either."
+      "en": "Slow-witted and oblivious, this Pokémon won't feel any pain if its tail gets eaten. It won't notice when its tail grows back, either.",
+      "de": "Es ist so träge und unempfindlich, dass es keinen Schmerz verspürt, wenn seine Rute gegessen wird. Es bemerkt nicht einmal, dass sie nachwächst."
     }
   },
   {
@@ -2374,7 +2416,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "Slowpoke became Slowbro when a Shellder bit on to its tail. Sweet flavors seeping from the tail make the Shellder feel as if its life is a dream."
+      "en": "Slowpoke became Slowbro when a Shellder bit on to its tail. Sweet flavors seeping from the tail make the Shellder feel as if its life is a dream.",
+      "de": "Es entwickelte sich, als ein Muschas in seine Rute biss. Das süße Aroma, das aus der Rute strömt, hat Muschas in eine Art Trance versetzt."
     }
   },
   {
@@ -2508,7 +2551,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It is virtually worthless in terms of both power and speed. It is the most weak and pathetic Pokémon in the world."
+      "en": "It is virtually worthless in terms of both power and speed. It is the most weak and pathetic Pokémon in the world.",
+      "de": "Es ist nutzlos, was Kraft und Geschwindigkeit angeht. Dieses Pokémon ist das schwächste und erbärmlichste der Welt."
     }
   },
   {
@@ -2652,7 +2696,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "It has an extremely aggressive nature. The Hyper Beam it shoots from its mouth totally incinerates all targets."
+      "en": "It has an extremely aggressive nature. The Hyper Beam it shoots from its mouth totally incinerates all targets.",
+      "de": "Es ist von Natur aus sehr aggressiv. Der Hyperstrahl, den es aus seinem Maul verschießt, äschert seine Gegner ein."
     }
   },
   {
@@ -2780,7 +2825,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "A smart and kindhearted Pokémon, it glides across the surface of the sea while its beautiful song echoes around it."
+      "en": "A smart and kindhearted Pokémon, it glides across the surface of the sea while its beautiful song echoes around it.",
+      "de": "Ein intelligentes und herzensgutes Pokémon. Während es auf dem Meer schwimmt, lässt es seinen herrlichen Gesang erklingen."
     }
   },
   {
@@ -2886,7 +2932,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "It's said that this Pokémon's beautiful blue wings are made of ice. Articuno flies over snowy mountains, its long tail fluttering along behind it."
+      "en": "It's said that this Pokémon's beautiful blue wings are made of ice. Articuno flies over snowy mountains, its long tail fluttering along behind it.",
+      "de": "Seine wunderschönen blauen Flügel sollen aus Eis bestehen. Es fliegt über schneebedeckte Berge, während sein langer Schweif hinter ihm flattert."
     }
   },
   {
@@ -2990,7 +3037,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "It's nature's cleaner—it eats anything and everything, including garbage and rotten things. The ground near its nest is always clean."
+      "en": "It's nature's cleaner—it eats anything and everything, including garbage and rotten things. The ground near its nest is always clean.",
+      "de": "Sie sind natürliche Reinigungskräfte und fressen alles, inklusive vergammeltem Essen und Müll. In der Nähe ihrer Nester ist es immer sauber."
     }
   },
   {
@@ -3126,7 +3174,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "It will do anything to win, taking advantage of every opening and finishing opponents off with the small claws on its front legs."
+      "en": "It will do anything to win, taking advantage of every opening and finishing opponents off with the small claws on its front legs.",
+      "de": "Es schreckt vor nichts zurück, um zu gewinnen. Sieht es eine Chance, schlägt es zu und gibt dem Opfer mit seinen Klauen schließlich den Rest."
     }
   },
   {
@@ -3198,6 +3247,32 @@
           "average_30d": 0.13,
           "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=665260"
         }
+      },
+      {
+        "id": "holo-cosmos",
+        "type": "holo",
+        "images": {
+          "de": "/images/cards/intl-swsh10-5/de/027.webp",
+          "en": "/images/cards/intl-swsh10-5/en/027.webp",
+          "es": "/images/cards/intl-swsh10-5/es/027.webp",
+          "fr": "/images/cards/intl-swsh10-5/fr/027.webp",
+          "it": "/images/cards/intl-swsh10-5/it/027.webp",
+          "pt-BR": ""
+        },
+        "foil": "cosmos",
+        "cardmarket": {
+          "product_id": 669496,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 4.65,
+          "low": 1.41,
+          "trend": 6.12,
+          "average_1d": 3.74,
+          "average_7d": 4.7,
+          "average_30d": 4.47,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=669496"
+        }
       }
     ],
     "hp": 60,
@@ -3239,7 +3314,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Pikachu that can generate powerful electricity have cheek sacs that are extra soft and super stretchy."
+      "en": "Pikachu that can generate powerful electricity have cheek sacs that are extra soft and super stretchy.",
+      "de": "Je stärker die Elektrizität ist, die Pikachu produziert, desto weicher und elastischer sind seine Backentaschen."
     }
   },
   {
@@ -3352,7 +3428,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Pikachu that can generate powerful electricity have cheek sacs that are extra soft and super stretchy."
+      "en": "Pikachu that can generate powerful electricity have cheek sacs that are extra soft and super stretchy.",
+      "de": "Je stärker die Elektrizität ist, die Pikachu produziert, desto weicher und elastischer sind seine Backentaschen."
     }
   },
   {
@@ -3424,6 +3501,34 @@
           "average_30d": 0.45,
           "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=665264"
         }
+      },
+      {
+        "id": "stamped-jesse_parker",
+        "type": "stamped",
+        "images": {
+          "de": "/images/cards/intl-swsh10-5/de/029.webp",
+          "en": "/images/cards/intl-swsh10-5/en/029.webp",
+          "es": "/images/cards/intl-swsh10-5/es/029.webp",
+          "fr": "/images/cards/intl-swsh10-5/fr/029.webp",
+          "it": "/images/cards/intl-swsh10-5/it/029.webp",
+          "pt-BR": ""
+        },
+        "stamps": [
+          "jesse-parker"
+        ],
+        "cardmarket": {
+          "product_id": 815464,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 4.56,
+          "low": 8.5,
+          "trend": 2.5,
+          "average_1d": 4.68,
+          "average_7d": 2.38,
+          "average_30d": 1.5,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=815464"
+        }
       }
     ],
     "hp": 120,
@@ -3458,7 +3563,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "This Pokémon has complete control over electricity. There are tales of Zapdos nesting in the dark depths of pitch-black thunderclouds."
+      "en": "This Pokémon has complete control over electricity. There are tales of Zapdos nesting in the dark depths of pitch-black thunderclouds.",
+      "de": "Zapdos kann Elektrizität manipulieren. Überlieferungen nach soll sein Nest inmitten pechschwarzer Gewitterwolken liegen."
     }
   },
   {
@@ -3504,6 +3610,34 @@
           "average_7d": 4.5,
           "average_30d": 4.38,
           "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=665266"
+        }
+      },
+      {
+        "id": "stamped-player_rewards_program",
+        "type": "stamped",
+        "images": {
+          "de": "/images/cards/intl-swsh10-5/de/030.webp",
+          "en": "/images/cards/intl-swsh10-5/en/030.webp",
+          "es": "/images/cards/intl-swsh10-5/es/030.webp",
+          "fr": "/images/cards/intl-swsh10-5/fr/030.webp",
+          "it": "/images/cards/intl-swsh10-5/it/030.webp",
+          "pt-BR": ""
+        },
+        "stamps": [
+          "player-rewards-program"
+        ],
+        "cardmarket": {
+          "product_id": 728200,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 36.15,
+          "low": 17.89,
+          "trend": 41.53,
+          "average_1d": 19.99,
+          "average_7d": 34.48,
+          "average_30d": 37.4,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=728200"
         }
       }
     ],
@@ -3650,7 +3784,7 @@
           "es": "Descarta hasta 3 Energías Psychic de tus Pokémon. Este ataque hace 90 puntos de daño por cada carta que hayas descartado de esta manera.",
           "it": "Scarta fino a tre Energie Psychic dai tuoi Pokémon. Questo attacco infligge 90 danni per ogni carta che hai scartato in questo modo.",
           "pt-BR": "Descarte até 3 Energias Psychic dos seus Pokémon. Este ataque causa 90 pontos de dano para cada carta descartada desta forma.",
-          "de": "Lege bis zu 3 Psychic-Energien von deinen Pokémon auf deinen Ablagestapel. Diese Attacke fügt für jede auf diese Weise abgelegte Karte 90 Schadenspunkte zu."
+          "de": "Lege bis zu 3 {P}-Energien von deinen Pokémon auf deinen Ablagestapel. Diese Attacke fügt für jede auf diese Weise abgelegte Karte 90 Schadenspunkte zu."
         }
       },
       {
@@ -3821,7 +3955,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It is extremely good at climbing tree trunks and likes to eat the new sprouts on the trees."
+      "en": "It is extremely good at climbing tree trunks and likes to eat the new sprouts on the trees.",
+      "de": "Es ist ein hervorragender Kletterer. Besonders gern steigt es auf Bäume und frisst die jungen Triebe ab."
     }
   },
   {
@@ -3969,7 +4104,8 @@
     ],
     "retreat_cost": 0,
     "flavor_text": {
-      "en": "They say that it stays still and quiet because it is seeing both the past and future at the same time."
+      "en": "They say that it stays still and quiet because it is seeing both the past and future at the same time.",
+      "de": "Man sagt, es sei so still und in sich gekehrt, weil es die Zukunft und die Vergangenheit parallel sieht."
     }
   },
   {
@@ -4092,7 +4228,7 @@
           "es": "Este ataque hace 30 puntos de daño más por cada Energía Psychic unida a este Pokémon.",
           "it": "Questo attacco infligge 30 danni in più per ogni Energia Psychic assegnata a questo Pokémon.",
           "pt-BR": "Este ataque causa 30 pontos de dano a mais para cada Energia Psychic ligada a este Pokémon.",
-          "de": "Diese Attacke fügt für jede an dieses Pokémon angelegte Psychic-Energie 30 Schadenspunkte mehr zu."
+          "de": "Diese Attacke fügt für jede an dieses Pokémon angelegte {P}-Energie 30 Schadenspunkte mehr zu."
         }
       }
     ],
@@ -4110,7 +4246,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "The phase of the moon apparently has some effect on its power. It's active on the night of a full moon."
+      "en": "The phase of the moon apparently has some effect on its power. It's active on the night of a full moon.",
+      "de": "Anscheinend steht die Zunahme seiner Kraft mit den Mondphasen in Verbindung, da es bei Vollmond aktiv wird."
     }
   },
   {
@@ -4241,7 +4378,7 @@
           "es": "Si el Pokémon Activo de tu rival es un Pokémon Dragon, este ataque hace 90 puntos de daño más.",
           "it": "Se il Pokémon attivo del tuo avversario è un Pokémon Dragon, questo attacco infligge 90 danni in più.",
           "pt-BR": "Se o Pokémon Ativo do seu oponente for um Pokémon Dragon, este ataque causará 90 pontos de dano a mais.",
-          "de": "Wenn das Aktive Pokémon deines Gegners ein Dragon-Pokémon ist, fügt diese Attacke 90 Schadenspunkte mehr zu."
+          "de": "Wenn das Aktive Pokémon deines Gegners ein {N}-Pokémon ist, fügt diese Attacke 90 Schadenspunkte mehr zu."
         }
       }
     ],
@@ -4253,7 +4390,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "By releasing enmity-erasing waves from its ribbonlike feelers, Sylveon stops any conflict."
+      "en": "By releasing enmity-erasing waves from its ribbonlike feelers, Sylveon stops any conflict.",
+      "de": "Mit seinen bandförmigen Fühlern sendet es Wellen aus, die feindselige Gefühle verklingen lassen. So legt es Streitereien bei."
     }
   },
   {
@@ -4391,7 +4529,8 @@
     ],
     "retreat_cost": 4,
     "flavor_text": {
-      "en": "As it digs through the ground, it absorbs many hard objects. This is what makes its body so solid."
+      "en": "As it digs through the ground, it absorbs many hard objects. This is what makes its body so solid.",
+      "de": "Wenn es sich durch die Erde gräbt, nimmt es viele harte Gegenstände auf, die seinen Körper erhärten."
     }
   },
   {
@@ -4502,7 +4641,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Born deep underground, it comes aboveground and becomes a pupa once it has finished eating the surrounding soil."
+      "en": "Born deep underground, it comes aboveground and becomes a pupa once it has finished eating the surrounding soil.",
+      "de": "Sie schlüpfen tief unter der Erde und fressen sich durch das Erdreich bis zur Oberfläche durch, wo sie sich verpuppen."
     }
   },
   {
@@ -4638,7 +4778,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Even sealed in its shell, it can move freely. Hard and fast, it has outstanding destructive power."
+      "en": "Even sealed in its shell, it can move freely. Hard and fast, it has outstanding destructive power.",
+      "de": "Trotz seiner harten Schale kann es sich frei bewegen. Es ist flink und äußerst zerstörerisch."
     }
   },
   {
@@ -4743,7 +4884,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "When it rotates itself, it gives off light similar to the sun, thus blinding its foes."
+      "en": "When it rotates itself, it gives off light similar to the sun, thus blinding its foes.",
+      "de": "Es rotiert um die eigene Achse und strahlt dabei sonnengleiches Licht aus, mit dem es den Gegner blendet."
     }
   },
   {
@@ -4963,7 +5105,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Night after night, they sneak into people's homes seeking food. A massive outbreak of them has become an issue of public concern."
+      "en": "Night after night, they sneak into people's homes seeking food. A massive outbreak of them has become an issue of public concern.",
+      "de": "Sie schleichen sich jede Nacht auf der Suche nach Futter in Wohnhäuser. Ihre massenhafte Verbreitung führt zu weitreichenden Problemen."
     }
   },
   {
@@ -5106,7 +5249,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "It commands a nest of Rattata. Different nests don't get along, whipping up severe fights over feeding grounds."
+      "en": "It commands a nest of Rattata. Different nests don't get along, whipping up severe fights over feeding grounds.",
+      "de": "Es schart eine Gruppe von Rattfratz um sich. Die verschiedenen Rudel vertragen sich jedoch nicht und streiten stets um Futterstellen."
     }
   },
   {
@@ -5251,7 +5395,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "Its body can't be harmed by any sort of attack, so it is very eager to make challenges against enemies."
+      "en": "Its body can't be harmed by any sort of attack, so it is very eager to make challenges against enemies.",
+      "de": "Dank seines starken Körpers fürchtet es sich vor keiner Form von Angriff. Deshalb zettelt es ununterbrochen Kämpfe an."
     }
   },
   {
@@ -5403,7 +5548,8 @@
     ],
     "retreat_cost": 4,
     "flavor_text": {
-      "en": "It is said that if an Onix lives for over 100 years, its composition changes to become diamond-like."
+      "en": "It is said that if an Onix lives for over 100 years, its composition changes to become diamond-like.",
+      "de": "Es heißt, dass der Körper von Onix so hart wie ein Diamant werde, wenn es mehr als 100 Jahre lebt."
     }
   },
   {
@@ -5521,7 +5667,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "It melts particles of iron and other metals found in the subsoil, so it can absorb them into its body of molten steel."
+      "en": "It melts particles of iron and other metals found in the subsoil, so it can absorb them into its body of molten steel.",
+      "de": "Sein Körper besteht aus geschmolzenem Stahl. Es bringt Eisen und andere Metalle im Boden zum Schmelzen, um sie dann zu absorbieren."
     }
   },
   {
@@ -5664,7 +5811,8 @@
     ],
     "retreat_cost": 4,
     "flavor_text": {
-      "en": "Revered long ago for its capacity to create iron from nothing, for some reason it has come back to life after 3,000 years."
+      "en": "Revered long ago for its capacity to create iron from nothing, for some reason it has come back to life after 3,000 years.",
+      "de": "Einst wurde es für seine Fähigkeit verehrt, Eisen erschaffen zu können. Nach 3 000 Jahren ist es aus einem unerfindlichen Grund wieder erwacht."
     }
   },
   {
@@ -5740,7 +5888,7 @@
           "es": "Puedes unir 1 carta de Energía Metal de tu mano a este Pokémon.",
           "it": "Puoi assegnare a questo Pokémon una carta Energia Metal dalla tua mano.",
           "pt-BR": "Você pode ligar 1 carta de Energia Metal da sua mão a este Pokémon.",
-          "de": "Du kannst 1 Metal-Energiekarte aus deiner Hand an dieses Pokémon anlegen."
+          "de": "Du kannst 1 {M}-Energiekarte aus deiner Hand an dieses Pokémon anlegen."
         }
       },
       {
@@ -5856,7 +6004,7 @@
           "es": "Este ataque hace 60 puntos de daño más por cada Energía Metal adicional unida a este Pokémon (además de las del coste de este ataque). No puedes añadir más de 120 puntos de daño de esta manera.",
           "it": "Questo attacco infligge 60 danni in più per ogni Energia Metal extra assegnata a questo Pokémon, in aggiunta a quelle del costo di questo attacco. Non puoi aggiungere più di 120 danni in questo modo.",
           "pt-BR": "Este ataque causa 60 pontos de dano a mais para cada Energia Metal adicional ligada a este Pokémon (além do custo deste ataque). Você não pode adicionar mais de 120 pontos de dano desta forma.",
-          "de": "Diese Attacke fügt für jede an dieses Pokémon angelegte extra Metal-Energie (zusätzlich zu den Kosten dieser Attacke) 60 Schadenspunkte mehr zu. Du kannst auf diese Weise höchstens 120 Schadenspunkte mehr zufügen."
+          "de": "Diese Attacke fügt für jede an dieses Pokémon angelegte extra {M}-Energie (zusätzlich zu den Kosten dieser Attacke) 60 Schadenspunkte mehr zu. Du kannst auf diese Weise höchstens 120 Schadenspunkte mehr zufügen."
         }
       }
     ],
@@ -6075,7 +6223,7 @@
           "es": "Mira las 12 primeras cartas de tu baraja y une cualquier cantidad de cartas de Energía Water o Lightning que encuentres entre ellas a tus Pokémon de la manera que desees. Pon el resto de las cartas de nuevo en tu baraja y barájalas todas. (No puedes usar más de 1 Poder V-ASTRO en una partida).",
           "it": "Guarda le prime 12 carte del tuo mazzo e assegna un numero qualsiasi di carte Energia Water o Lightning presenti tra esse ai tuoi Pokémon nel modo che preferisci. Poi rimischia le altre carte nel tuo mazzo. Non puoi usare più di un Potere V ASTRO a partita.",
           "pt-BR": "Olhe as 12 cartas de cima do seu baralho e ligue qualquer número de cartas de Energia Water ou Lightning que encontrar lá aos seus Pokémon como desejar. Embaralhe as demais cartas de volta no seu baralho (você não pode usar mais de 1 Poder V-ASTRO por partida).",
-          "de": "Schau dir die obersten 12 Karten deines Decks an und lege beliebig viele Water- oder Lightning-Energiekarten, die du dort findest, beliebig an deine Pokémon an. Mische die anderen Karten zurück in dein Deck. (Du kannst pro Spiel nur 1 VSTAR-Power einsetzen.)"
+          "de": "Schau dir die obersten 12 Karten deines Decks an und lege beliebig viele {W}- oder {L}-Energiekarten, die du dort findest, beliebig an deine Pokémon an. Mische die anderen Karten zurück in dein Deck. (Du kannst pro Spiel nur 1 VSTAR-Power einsetzen.)"
         }
       }
     ],
@@ -6205,7 +6353,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "The egg Chansey carries is not only delicious but also packed with nutrition. It's used as a high-class cooking ingredient."
+      "en": "The egg Chansey carries is not only delicious but also packed with nutrition. It's used as a high-class cooking ingredient.",
+      "de": "Seine Eier sind äußerst nahrhaft und schmecken köstlich, weshalb sie als erlesene Kochzutat gelten."
     }
   },
   {
@@ -6277,6 +6426,32 @@
           "average_30d": 0.22,
           "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=665274"
         }
+      },
+      {
+        "id": "holo-cosmos",
+        "type": "holo",
+        "images": {
+          "de": "/images/cards/intl-swsh10-5/de/052.webp",
+          "en": "/images/cards/intl-swsh10-5/en/052.webp",
+          "es": "/images/cards/intl-swsh10-5/es/052.webp",
+          "fr": "/images/cards/intl-swsh10-5/fr/052.webp",
+          "it": "/images/cards/intl-swsh10-5/it/052.webp",
+          "pt-BR": ""
+        },
+        "foil": "cosmos",
+        "cardmarket": {
+          "product_id": 669498,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 2.12,
+          "low": 0.1,
+          "trend": 2.34,
+          "average_1d": 3.17,
+          "average_7d": 2.5,
+          "average_30d": 2.1,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=669498"
+        }
       }
     ],
     "hp": 200,
@@ -6341,7 +6516,8 @@
     ],
     "retreat_cost": 4,
     "flavor_text": {
-      "en": "Whenever a Blissey finds a weakened Pokémon, it will share its egg and offer its care until the other Pokémon is all better."
+      "en": "Whenever a Blissey finds a weakened Pokémon, it will share its egg and offer its care until the other Pokémon is all better.",
+      "de": "Stößt Heiteira auf geschwächte Pokémon, teilt es sein Ei mit ihnen und pflegt sie wieder gesund."
     }
   },
   {
@@ -6403,7 +6579,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It can reconstitute its entire cellular structure to change into what it sees, but it returns to normal when it relaxes."
+      "en": "It can reconstitute its entire cellular structure to change into what it sees, but it returns to normal when it relaxes.",
+      "de": "Es modifiziert seine Zellstruktur, um sich in alles zu verwandeln, was es sieht. Im entspannten Zustand nimmt es wieder seine Ausgangsform an."
     }
   },
   {
@@ -6530,7 +6707,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It has the ability to alter the composition of its body to suit its surrounding environment."
+      "en": "It has the ability to alter the composition of its body to suit its surrounding environment.",
+      "de": "Es ist imstande, seinen Körper perfekt an die jeweilige Umgebung anzupassen."
     }
   },
   {
@@ -6644,7 +6822,8 @@
     ],
     "retreat_cost": 4,
     "flavor_text": {
-      "en": "It is not satisfied unless it eats over 880 pounds of food every day. When it is done eating, it goes promptly to sleep."
+      "en": "It is not satisfied unless it eats over 880 pounds of food every day. When it is done eating, it goes promptly to sleep.",
+      "de": "Es muss über 400 kg Nahrung am Tag fressen, um satt zu werden. Ist es mit dem Essen fertig, schläft es sofort ein."
     }
   },
   {
@@ -6772,7 +6951,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It searches for prey from the tops of trees. When it spots its favorite food, Bounsweet, Aipom gets excited and pounces."
+      "en": "It searches for prey from the tops of trees. When it spots its favorite food, Bounsweet, Aipom gets excited and pounces.",
+      "de": "Es sitzt in Baumwipfeln und hält Ausschau nach Beute. Sieht es ein Frubberl, sein Leibgericht, stürzt es begeistert auf es herab."
     }
   },
   {
@@ -6891,7 +7071,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It uses its tails for everything. If it wraps both of its tails around you and gives you a squeeze, that's proof it really likes you."
+      "en": "It uses its tails for everything. If it wraps both of its tails around you and gives you a squeeze, that's proof it really likes you.",
+      "de": "Es benutzt seine zwei Schweife für alles, was es tut. Wenn es jemanden mit ihnen umarmt, ist das ein Beweis seiner Zuneigung."
     }
   },
   {
@@ -6937,6 +7118,34 @@
           "average_7d": 0.71,
           "average_30d": 0.74,
           "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=665677"
+        }
+      },
+      {
+        "id": "stamped-gabriel_fernandez",
+        "type": "stamped",
+        "images": {
+          "de": "/images/cards/intl-swsh10-5/de/058.webp",
+          "en": "/images/cards/intl-swsh10-5/en/058.webp",
+          "es": "/images/cards/intl-swsh10-5/es/058.webp",
+          "fr": "/images/cards/intl-swsh10-5/fr/058.webp",
+          "it": "/images/cards/intl-swsh10-5/it/058.webp",
+          "pt-BR": ""
+        },
+        "stamps": [
+          "gabriel-fernandez"
+        ],
+        "cardmarket": {
+          "product_id": 833048,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 2.38,
+          "low": 1,
+          "trend": 1.39,
+          "average_1d": 1.8,
+          "average_7d": 1.99,
+          "average_30d": 1.94,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=833048"
         }
       }
     ],
@@ -7043,6 +7252,19 @@
           "average_30d": 0.28,
           "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=665282"
         }
+      },
+      {
+        "id": "reverse_holo-peelable_ditto",
+        "type": "reverse_holo",
+        "images": {
+          "de": "/images/cards/intl-swsh10-5/de/059.webp",
+          "en": "/images/cards/intl-swsh10-5/en/059.webp",
+          "es": "/images/cards/intl-swsh10-5/es/059.webp",
+          "fr": "/images/cards/intl-swsh10-5/fr/059.webp",
+          "it": "/images/cards/intl-swsh10-5/it/059.webp",
+          "pt-BR": ""
+        },
+        "subtype": "peelable-ditto"
       }
     ],
     "hp": 70,
@@ -7084,7 +7306,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "It constantly gnaws on logs and rocks to whittle down its front teeth. It nests alongside water."
+      "en": "It constantly gnaws on logs and rocks to whittle down its front teeth. It nests alongside water.",
+      "de": "Es knabbert ständig an Holz und Steinen, um seine Vorderzähne zu kürzen. Es nistet am Wasser."
     }
   },
   {
@@ -7198,7 +7421,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "It makes its nest by damming streams with bark and mud. It is known as an industrious worker."
+      "en": "It makes its nest by damming streams with bark and mud. It is known as an industrious worker.",
+      "de": "Es baut sein Nest, indem es in Flüssen Dämme aus Schlamm und Ästen baut. Ein fleißiger Arbeiter."
     }
   },
   {
@@ -7331,7 +7555,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Where people go, these Pokémon follow. If you're scattering food for them, be careful— several hundred of them can gather at once."
+      "en": "Where people go, these Pokémon follow. If you're scattering food for them, be careful— several hundred of them can gather at once.",
+      "de": "Es taucht dort auf, wo Menschen leben. Beim Füttern muss man vorsichtig sein, da sich sonst schnell hunderte von ihnen versammeln können."
     }
   },
   {
@@ -7472,7 +7697,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It can fly moderately quickly. No matter how far it travels, it can always find its way back to its master and its nest."
+      "en": "It can fly moderately quickly. No matter how far it travels, it can always find its way back to its master and its nest.",
+      "de": "Navitaub kann einigermaßen schnell fliegen. Es findet immer zu seinem Trainer und seinem Nest zurück, egal, wie weit entfernt es von ihnen ist."
     }
   },
   {
@@ -7613,7 +7839,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Unfezant are exceptional fliers. The females are known for their stamina, while the males outclass them in terms of speed."
+      "en": "Unfezant are exceptional fliers. The females are known for their stamina, while the males outclass them in terms of speed.",
+      "de": "Sie verfügen über exzellente Flugfertigkeiten. Weibchen können länger fliegen, aber dafür erreichen Männchen ein höheres Flugtempo."
     }
   },
   {
@@ -7692,7 +7919,7 @@
       "es": "Roba 2 cartas. Si has robado alguna carta de esta manera, lanza 1 moneda. Si sale cara, une 1 carta de Energía Water de tu pila de descartes a 1 de tus Pokémon en Banca.",
       "it": "Pesca due carte. Se hai pescato delle carte in questo modo, lancia una moneta. Se esce testa, assegna a uno dei tuoi Pokémon in panchina una carta Energia Water dalla tua pila degli scarti.",
       "pt-BR": "Compre 2 cartas. Se você comprar qualquer carta desta forma, jogue 1 moeda. Se sair cara, ligue 1 carta de Energia Water da sua pilha de descarte a 1 dos seus Pokémon no Banco.",
-      "de": "Ziehe 2 Karten. Wenn du auf diese Weise mindestens 1 Karte gezogen hast, wirf 1 Münze. Lege bei Kopf 1 Water-Energiekarte aus deinem Ablagestapel an 1 Pokémon auf deiner Bank an."
+      "de": "Ziehe 2 Karten. Wenn du auf diese Weise mindestens 1 Karte gezogen hast, wirf 1 Münze. Lege bei Kopf 1 {W}-Energiekarte aus deinem Ablagestapel an 1 Pokémon auf deiner Bank an. Du kannst während deines Zuges nur 1 Unterstützerkarte spielen."
     }
   },
   {
@@ -7771,7 +7998,7 @@
       "es": "Roba 2 cartas. Si has robado alguna carta de esta manera, lanza 1 moneda. Si sale cara, une 1 carta de Energía Fire de tu pila de descartes a 1 de tus Pokémon en Banca.",
       "it": "Pesca due carte. Se hai pescato delle carte in questo modo, lancia una moneta. Se esce testa, assegna a uno dei tuoi Pokémon in panchina una carta Energia Fire dalla tua pila degli scarti.",
       "pt-BR": "Compre 2 cartas. Se você comprar qualquer carta desta forma, jogue 1 moeda. Se sair cara, ligue 1 carta de Energia Fire da sua pilha de descarte a 1 dos seus Pokémon no Banco.",
-      "de": "Ziehe 2 Karten. Wenn du auf diese Weise mindestens 1 Karte gezogen hast, wirf 1 Münze. Lege bei Kopf 1 Fire-Energiekarte aus deinem Ablagestapel an 1 Pokémon auf deiner Bank an."
+      "de": "Ziehe 2 Karten. Wenn du auf diese Weise mindestens 1 Karte gezogen hast, wirf 1 Münze. Lege bei Kopf 1 {R}-Energiekarte aus deinem Ablagestapel an 1 Pokémon auf deiner Bank an. Du kannst während deines Zuges nur 1 Unterstützerkarte spielen."
     }
   },
   {
@@ -7850,7 +8077,7 @@
       "es": "Lanza 1 moneda. Si sale cara, busca en tu baraja 1 Pokémon Básico, ponlo en tu Banca y baraja las cartas de tu baraja. Si sale cruz, pon esta Incubadora en la parte inferior de tu baraja en vez de en la pila de descartes.",
       "it": "Lancia una moneta. Se esce testa, cerca nel tuo mazzo un Pokémon Base, mettilo nella tua panchina e rimischia le carte del tuo mazzo. Se esce croce, metti questa Incubatrice Uova in fondo al tuo mazzo invece che nella pila degli scarti.",
       "pt-BR": "Jogue 1 moeda. Se sair cara, procure por 1 Pokémon Básico no seu baralho, coloque-o no seu Banco e embaralhe o seu baralho. Se sair coroa, coloque esta Incubadora de Ovo como a carta de baixo do seu baralho ao invés da pilha de descarte.",
-      "de": "Wirf 1 Münze. Durchsuche bei Kopf dein Deck nach 1 Basis-Pokémon, lege es auf deine Bank und mische dein Deck. Lege bei Zahl diese Ei-Brutmaschine unter dein Deck, anstatt sie auf deinen Ablagestapel zu legen."
+      "de": "Wirf 1 Münze. Durchsuche bei Kopf dein Deck nach 1 Basis-Pokémon, lege es auf deine Bank und mische dein Deck. Lege bei Zahl diese Ei-Brutmaschine unter dein Deck, anstatt sie auf deinen Ablagestapel zu legen. Du kannst während deines Zuges beliebig viele Itemkarten spielen."
     }
   },
   {
@@ -7929,7 +8156,7 @@
       "es": "Cada jugador enseña las 3 primeras cartas de su baraja y pone todos los Pokémon que encuentre entre ellas en su mano. Después, cada jugador pone el resto de las cartas de nuevo en su baraja y las baraja todas.",
       "it": "Ciascun giocatore mostra le prime tre carte del proprio mazzo e aggiunge i Pokémon presenti tra esse alle carte che ha in mano. Poi ciascun giocatore rimischia le altre carte nel proprio mazzo.",
       "pt-BR": "Cada jogador revela as 3 cartas de cima do próprio baralho e coloca todos os Pokémon que encontrar lá na própria mão. Em seguida, cada jogador embaralha as demais cartas de volta no próprio baralho.",
-      "de": "Jeder Spieler zeigt die obersten 3 Karten seines Decks und nimmt alle Pokémon, die er dort findet, auf seine Hand. Anschließend mischt jeder Spieler die anderen Karten zurück in sein Deck."
+      "de": "Jeder Spieler zeigt die obersten 3 Karten seines Decks und nimmt alle Pokémon, die er dort findet, auf seine Hand. Anschließend mischt jeder Spieler die anderen Karten zurück in sein Deck. Du kannst während deines Zuges beliebig viele Itemkarten spielen."
     }
   },
   {
@@ -7999,6 +8226,62 @@
           "average_30d": 0.11,
           "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=665288"
         }
+      },
+      {
+        "id": "stamped-shao_tong_yen",
+        "type": "stamped",
+        "images": {
+          "de": "/images/cards/intl-swsh10-5/de/068.webp",
+          "en": "/images/cards/intl-swsh10-5/en/068.webp",
+          "es": "/images/cards/intl-swsh10-5/es/068.webp",
+          "fr": "/images/cards/intl-swsh10-5/fr/068.webp",
+          "it": "/images/cards/intl-swsh10-5/it/068.webp",
+          "pt-BR": ""
+        },
+        "stamps": [
+          "shao-tong-yen"
+        ],
+        "cardmarket": {
+          "product_id": 833226,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 2.28,
+          "low": 0.5,
+          "trend": 3.12,
+          "average_1d": 0.35,
+          "average_7d": 3.23,
+          "average_30d": 1.82,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=833226"
+        }
+      },
+      {
+        "id": "stamped-sakuya_ota",
+        "type": "stamped",
+        "images": {
+          "de": "/images/cards/intl-swsh10-5/de/068.webp",
+          "en": "/images/cards/intl-swsh10-5/en/068.webp",
+          "es": "/images/cards/intl-swsh10-5/es/068.webp",
+          "fr": "/images/cards/intl-swsh10-5/fr/068.webp",
+          "it": "/images/cards/intl-swsh10-5/it/068.webp",
+          "pt-BR": ""
+        },
+        "stamps": [
+          "sakuya-ota"
+        ],
+        "cardmarket": {
+          "product_id": 815426,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.34,
+          "low": 0.19,
+          "trend": 0.27,
+          "average_1d": 0.49,
+          "average_7d": 0.28,
+          "average_30d": 0.42,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=815426"
+        }
       }
     ],
     "trainer_type": "stadium",
@@ -8008,7 +8291,7 @@
       "es": "Una vez durante el turno de cada jugador, ese jugador puede descartar 3 cartas de la parte superior de su baraja. Si algún jugador ha descartado alguna carta de Objeto de esta manera, pone esas cartas de Objeto en su mano.",
       "it": "Una sola volta durante il turno di ciascun giocatore, quel giocatore può scartare tre carte dalla cima del proprio mazzo. Se un giocatore ha scartato delle carte Strumento in questo modo, aggiunge quelle carte Strumento alle carte che ha in mano.",
       "pt-BR": "Uma vez durante o turno de cada jogador, aquele jogador poderá descartar as 3 cartas de cima do próprio baralho. Se um jogador descartou qualquer carta de Item desta forma, colocará aquelas cartas de Item na própria mão.",
-      "de": "Einmal während des Zuges jedes Spielers kann jener Spieler die obersten 3 Karten seines Decks auf den Ablagestapel legen. Wenn ein Spieler auf diese Weise mindestens 1 Itemkarte auf den Ablagestapel gelegt hat, nimmt jener Spieler jene Itemkarten auf seine Hand."
+      "de": "Einmal während des Zuges jedes Spielers kann jener Spieler die obersten 3 Karten seines Decks auf den Ablagestapel legen. Wenn ein Spieler auf diese Weise mindestens 1 Itemkarte auf den Ablagestapel gelegt hat, nimmt jener Spieler jene Itemkarten auf seine Hand. Diese Karte bleibt im Spiel, wenn du sie spielst. Lege diese Karte ab, sobald eine weitere Stadionkarte ins Spiel kommt. Wenn eine andere Karte mit dem gleichen Namen im Spiel ist, kannst du diese Karte nicht spielen."
     }
   },
   {
@@ -8087,7 +8370,7 @@
       "es": "Elige 1 de tus Pokémon Básicos en juego. Si tienes en tu mano 1 carta de Fase 2 que evolucione de ese Pokémon, pon esa carta sobre el Pokémon Básico para hacerlo evolucionar, saltándote la Fase 1. No puedes usar esta carta durante tu primer turno o sobre un Pokémon Básico que se haya puesto en juego en este turno.",
       "it": "Scegli uno dei tuoi Pokémon Base in gioco. Se hai in mano una carta di Fase 2 che si evolve da quel Pokémon, metticela sopra per farlo evolvere, saltando la Fase 1. Non puoi usare questa carta durante il tuo primo turno o su un Pokémon Base che hai messo in gioco nel turno in corso.",
       "pt-BR": "Escolha 1 dos seus Pokémon Básicos em jogo. Se você tiver uma carta de Estágio 2 na sua mão que evolua daquele Pokémon, coloque-a sobre o Pokémon Básico para evoluí-lo, pulando o Estágio 1. Você não pode usar esta carta durante o seu primeiro turno ou em um Pokémon Básico que foi colocado em jogo neste turno.",
-      "de": "Wähle 1 deiner Basis-Pokémon im Spiel. Wenn du eine Phase-2-Karte auf deiner Hand hast, die sich aus jenem Pokémon entwickelt, lege sie auf das Basis-Pokémon, um es zu entwickeln und Phase 1 zu überspringen. Du kannst diese Karte nicht während deines ersten Zuges oder für ein Basis-Pokémon, das während dieses Zuges ins Spiel gebracht wurde, verwenden."
+      "de": "Wähle 1 deiner Basis-Pokémon im Spiel. Wenn du eine Phase-2-Karte auf deiner Hand hast, die sich aus jenem Pokémon entwickelt, lege sie auf das Basis-Pokémon, um es zu entwickeln und Phase 1 zu überspringen. Du kannst diese Karte nicht während deines ersten Zuges oder für ein Basis-Pokémon, das während dieses Zuges ins Spiel gebracht wurde, verwenden. Du kannst während deines Zuges beliebig viele Itemkarten spielen."
     }
   },
   {
@@ -8166,7 +8449,7 @@
       "es": "Roba 2 cartas. Si has robado alguna carta de esta manera, lanza 1 moneda. Si sale cara, une 1 carta de Energía Lightning de tu pila de descartes a 1 de tus Pokémon en Banca.",
       "it": "Pesca due carte. Se hai pescato delle carte in questo modo, lancia una moneta. Se esce testa, assegna a uno dei tuoi Pokémon in panchina una carta Energia Lightning dalla tua pila degli scarti.",
       "pt-BR": "Compre 2 cartas. Se você comprar qualquer carta desta forma, jogue 1 moeda. Se sair cara, ligue 1 carta de Energia Lightning da sua pilha de descarte a 1 dos seus Pokémon no Banco.",
-      "de": "Ziehe 2 Karten. Wenn du auf diese Weise mindestens 1 Karte gezogen hast, wirf 1 Münze. Lege bei Kopf 1 Lightning-Energiekarte aus deinem Ablagestapel an 1 Pokémon auf deiner Bank an."
+      "de": "Ziehe 2 Karten. Wenn du auf diese Weise mindestens 1 Karte gezogen hast, wirf 1 Münze. Lege bei Kopf 1 {L}-Energiekarte aus deinem Ablagestapel an 1 Pokémon auf deiner Bank an. Du kannst während deines Zuges nur 1 Unterstützerkarte spielen."
     }
   },
   {
@@ -8182,9 +8465,7 @@
       "pt-BR": "Exeggutor de Alola V",
       "de": "Alola-Kokowei V"
     },
-    "pokemon": [
-      "0103-alolan-exeggutor"
-    ],
+    "pokemon": [],
     "illustrator": "MUGENUP",
     "rarity": "ultra_rare",
     "regulation_mark": "F",
@@ -8241,7 +8522,7 @@
           "es": "Lanza 1 moneda. Si sale cara, busca en tu baraja hasta 5 cartas de Energía Grass y únelas a tus Pokémon de la manera que desees. Después, baraja las cartas de tu baraja.",
           "it": "Lancia una moneta. Se esce testa, cerca nel tuo mazzo fino a cinque carte Energia Grass e assegnale ai tuoi Pokémon nel modo che preferisci. Poi rimischia le carte del tuo mazzo.",
           "pt-BR": "Jogue 1 moeda. Se sair cara, procure por até 5 cartas de Energia Grass no seu baralho e ligue-as aos seus Pokémon como desejar. Em seguida, embaralhe o seu baralho.",
-          "de": "Wirf 1 Münze. Durchsuche bei Kopf dein Deck nach bis zu 5 Grass-Energiekarten und lege sie beliebig an deine Pokémon an. Mische anschließend dein Deck."
+          "de": "Wirf 1 Münze. Durchsuche bei Kopf dein Deck nach bis zu 5 {G}-Energiekarten und lege sie beliebig an deine Pokémon an. Mische anschließend dein Deck."
         }
       },
       {
@@ -8265,7 +8546,7 @@
           "es": "Este ataque hace 30 puntos de daño a 1 de los Pokémon de tu rival por cada Energía Grass unida a este Pokémon. (No apliques Debilidad y Resistencia a los Pokémon en Banca).",
           "it": "Questo attacco infligge 30 danni a uno dei Pokémon del tuo avversario per ogni Energia Grass assegnata a questo Pokémon. Non applicare debolezza e resistenza ai Pokémon in panchina.",
           "pt-BR": "Este ataque causa 30 pontos de dano a 1 dos Pokémon do seu oponente para cada Energia Grass ligada a este Pokémon (não aplique Fraqueza e Resistência aos Pokémon no Banco).",
-          "de": "Diese Attacke fügt für jede an dieses Pokémon angelegte Grass-Energie 1 Pokémon deines Gegners 30 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
+          "de": "Diese Attacke fügt für jede an dieses Pokémon angelegte {G}-Energie 1 Pokémon deines Gegners 30 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
         }
       }
     ],
@@ -8674,7 +8955,7 @@
           "es": "Puedes unir 1 carta de Energía Metal de tu mano a este Pokémon.",
           "it": "Puoi assegnare a questo Pokémon una carta Energia Metal dalla tua mano.",
           "pt-BR": "Você pode ligar 1 carta de Energia Metal da sua mão a este Pokémon.",
-          "de": "Du kannst 1 Metal-Energiekarte aus deiner Hand an dieses Pokémon anlegen."
+          "de": "Du kannst 1 {M}-Energiekarte aus deiner Hand an dieses Pokémon anlegen."
         }
       },
       {
@@ -8936,7 +9217,7 @@
       "es": "Descarta las cartas de tu mano y roba 7 cartas.",
       "it": "Scarta le carte che hai in mano e pesca sette carte.",
       "pt-BR": "Descarte a sua mão e compre 7 cartas.",
-      "de": "Lege deine Handkarten auf deinen Ablagestapel und ziehe 7 Karten."
+      "de": "Lege deine Handkarten auf deinen Ablagestapel und ziehe 7 Karten. Du kannst während deines Zuges nur 1 Unterstützerkarte spielen."
     }
   },
   {
@@ -8997,7 +9278,7 @@
       "es": "Mewtwo V",
       "it": "Mewtwo-V",
       "pt-BR": "Mewtwo V",
-      "de": "Mewtu-V"
+      "de": "Mewtu VSTAR"
     },
     "rule_box": "V",
     "attacks": [
@@ -9021,7 +9302,7 @@
           "es": "Descarta hasta 3 Energías Psychic de tus Pokémon. Este ataque hace 90 puntos de daño por cada carta que hayas descartado de esta manera.",
           "it": "Scarta fino a tre Energie Psychic dai tuoi Pokémon. Questo attacco infligge 90 danni per ogni carta che hai scartato in questo modo.",
           "pt-BR": "Descarte até 3 Energias Psychic dos seus Pokémon. Este ataque causa 90 pontos de dano para cada carta descartada desta forma.",
-          "de": "Lege bis zu 3 Psychic-Energien von deinen Pokémon auf deinen Ablagestapel. Diese Attacke fügt für jede auf diese Weise abgelegte Karte 90 Schadenspunkte zu."
+          "de": "Lege bis zu 3 {P}-Energien von deinen Pokémon auf deinen Ablagestapel. Diese Attacke fügt für jede auf diese Weise abgelegte Karte 90 Schadenspunkte zu."
         }
       },
       {
@@ -9144,7 +9425,7 @@
           "es": "Este ataque hace 60 puntos de daño más por cada Energía Metal adicional unida a este Pokémon (además de las del coste de este ataque). No puedes añadir más de 120 puntos de daño de esta manera.",
           "it": "Questo attacco infligge 60 danni in più per ogni Energia Metal extra assegnata a questo Pokémon, in aggiunta a quelle del costo di questo attacco. Non puoi aggiungere più di 120 danni in questo modo.",
           "pt-BR": "Este ataque causa 60 pontos de dano a mais para cada Energia Metal adicional ligada a este Pokémon (além do custo deste ataque). Você não pode adicionar mais de 120 pontos de dano desta forma.",
-          "de": "Diese Attacke fügt für jede an dieses Pokémon angelegte extra Metal-Energie (zusätzlich zu den Kosten dieser Attacke) 60 Schadenspunkte mehr zu. Du kannst auf diese Weise höchstens 120 Schadenspunkte mehr zufügen."
+          "de": "Diese Attacke fügt für jede an dieses Pokémon angelegte extra {M}-Energie (zusätzlich zu den Kosten dieser Attacke) 60 Schadenspunkte mehr zu. Du kannst auf diese Weise höchstens 120 Schadenspunkte mehr zufügen."
         }
       }
     ],
@@ -9268,7 +9549,7 @@
           "es": "Mira las 12 primeras cartas de tu baraja y une cualquier cantidad de cartas de Energía Water o Lightning que encuentres entre ellas a tus Pokémon de la manera que desees. Pon el resto de las cartas de nuevo en tu baraja y barájalas todas. (No puedes usar más de 1 Poder V-ASTRO en una partida).",
           "it": "Guarda le prime 12 carte del tuo mazzo e assegna un numero qualsiasi di carte Energia Water o Lightning presenti tra esse ai tuoi Pokémon nel modo che preferisci. Poi rimischia le altre carte nel tuo mazzo. Non puoi usare più di un Potere V ASTRO a partita.",
           "pt-BR": "Olhe as 12 cartas de cima do seu baralho e ligue qualquer número de cartas de Energia Water ou Lightning que encontrar lá aos seus Pokémon como desejar. Embaralhe as demais cartas de volta no seu baralho (você não pode usar mais de 1 Poder V-ASTRO por partida).",
-          "de": "Schau dir die obersten 12 Karten deines Decks an und lege beliebig viele Water- oder Lightning-Energiekarten, die du dort findest, beliebig an deine Pokémon an. Mische die anderen Karten zurück in dein Deck. (Du kannst pro Spiel nur 1 VSTAR-Power einsetzen.)"
+          "de": "Schau dir die obersten 12 Karten deines Decks an und lege beliebig viele {W}- oder {L}-Energiekarten, die du dort findest, beliebig an deine Pokémon an. Mische die anderen Karten zurück in dein Deck. (Du kannst pro Spiel nur 1 VSTAR-Power einsetzen.)"
         }
       }
     ],
@@ -9326,7 +9607,7 @@
       "es": "Roba 2 cartas. Si has robado alguna carta de esta manera, lanza 1 moneda. Si sale cara, une 1 carta de Energía Water de tu pila de descartes a 1 de tus Pokémon en Banca.",
       "it": "Pesca due carte. Se hai pescato delle carte in questo modo, lancia una moneta. Se esce testa, assegna a uno dei tuoi Pokémon in panchina una carta Energia Water dalla tua pila degli scarti.",
       "pt-BR": "Compre 2 cartas. Se você comprar qualquer carta desta forma, jogue 1 moeda. Se sair cara, ligue 1 carta de Energia Water da sua pilha de descarte a 1 dos seus Pokémon no Banco.",
-      "de": "Ziehe 2 Karten. Wenn du auf diese Weise mindestens 1 Karte gezogen hast, wirf 1 Münze. Lege bei Kopf 1 Water-Energiekarte aus deinem Ablagestapel an 1 Pokémon auf deiner Bank an."
+      "de": "Ziehe 2 Karten. Wenn du auf diese Weise mindestens 1 Karte gezogen hast, wirf 1 Münze. Lege bei Kopf 1 {W}-Energiekarte aus deinem Ablagestapel an 1 Pokémon auf deiner Bank an. Du kannst während deines Zuges nur 1 Unterstützerkarte spielen."
     }
   },
   {
@@ -9381,7 +9662,7 @@
       "es": "Roba 2 cartas. Si has robado alguna carta de esta manera, lanza 1 moneda. Si sale cara, une 1 carta de Energía Fire de tu pila de descartes a 1 de tus Pokémon en Banca.",
       "it": "Pesca due carte. Se hai pescato delle carte in questo modo, lancia una moneta. Se esce testa, assegna a uno dei tuoi Pokémon in panchina una carta Energia Fire dalla tua pila degli scarti.",
       "pt-BR": "Compre 2 cartas. Se você comprar qualquer carta desta forma, jogue 1 moeda. Se sair cara, ligue 1 carta de Energia Fire da sua pilha de descarte a 1 dos seus Pokémon no Banco.",
-      "de": "Ziehe 2 Karten. Wenn du auf diese Weise mindestens 1 Karte gezogen hast, wirf 1 Münze. Lege bei Kopf 1 Fire-Energiekarte aus deinem Ablagestapel an 1 Pokémon auf deiner Bank an."
+      "de": "Ziehe 2 Karten. Wenn du auf diese Weise mindestens 1 Karte gezogen hast, wirf 1 Münze. Lege bei Kopf 1 {R}-Energiekarte aus deinem Ablagestapel an 1 Pokémon auf deiner Bank an. Du kannst während deines Zuges nur 1 Unterstützerkarte spielen."
     }
   },
   {
@@ -9436,7 +9717,7 @@
       "es": "Descarta las cartas de tu mano y roba 7 cartas.",
       "it": "Scarta le carte che hai in mano e pesca sette carte.",
       "pt-BR": "Descarte a sua mão e compre 7 cartas.",
-      "de": "Lege deine Handkarten auf deinen Ablagestapel und ziehe 7 Karten."
+      "de": "Lege deine Handkarten auf deinen Ablagestapel und ziehe 7 Karten. Du kannst während deines Zuges nur 1 Unterstützerkarte spielen."
     }
   },
   {
@@ -9491,7 +9772,7 @@
       "es": "Roba 2 cartas. Si has robado alguna carta de esta manera, lanza 1 moneda. Si sale cara, une 1 carta de Energía Lightning de tu pila de descartes a 1 de tus Pokémon en Banca.",
       "it": "Pesca due carte. Se hai pescato delle carte in questo modo, lancia una moneta. Se esce testa, assegna a uno dei tuoi Pokémon in panchina una carta Energia Lightning dalla tua pila degli scarti.",
       "pt-BR": "Compre 2 cartas. Se você comprar qualquer carta desta forma, jogue 1 moeda. Se sair cara, ligue 1 carta de Energia Lightning da sua pilha de descarte a 1 dos seus Pokémon no Banco.",
-      "de": "Ziehe 2 Karten. Wenn du auf diese Weise mindestens 1 Karte gezogen hast, wirf 1 Münze. Lege bei Kopf 1 Lightning-Energiekarte aus deinem Ablagestapel an 1 Pokémon auf deiner Bank an."
+      "de": "Ziehe 2 Karten. Wenn du auf diese Weise mindestens 1 Karte gezogen hast, wirf 1 Münze. Lege bei Kopf 1 {L}-Energiekarte aus deinem Ablagestapel an 1 Pokémon auf deiner Bank an. Du kannst während deines Zuges nur 1 Unterstützerkarte spielen."
     }
   },
   {
@@ -9576,7 +9857,7 @@
           "es": "Descarta hasta 3 Energías Psychic de tus Pokémon. Este ataque hace 90 puntos de daño por cada carta que hayas descartado de esta manera.",
           "it": "Scarta fino a tre Energie Psychic dai tuoi Pokémon. Questo attacco infligge 90 danni per ogni carta che hai scartato in questo modo.",
           "pt-BR": "Descarte até 3 Energias Psychic dos seus Pokémon. Este ataque causa 90 pontos de dano para cada carta descartada desta forma.",
-          "de": "Lege bis zu 3 Psychic-Energien von deinen Pokémon auf deinen Ablagestapel. Diese Attacke fügt für jede auf diese Weise abgelegte Karte 90 Schadenspunkte zu."
+          "de": "Lege bis zu 3 {P}-Energien von deinen Pokémon auf deinen Ablagestapel. Diese Attacke fügt für jede auf diese Weise abgelegte Karte 90 Schadenspunkte zu."
         }
       },
       {
@@ -9669,7 +9950,7 @@
       "es": "Lanza 1 moneda. Si sale cara, busca en tu baraja 1 Pokémon Básico, ponlo en tu Banca y baraja las cartas de tu baraja. Si sale cruz, pon esta Incubadora en la parte inferior de tu baraja en vez de en la pila de descartes.",
       "it": "Lancia una moneta. Se esce testa, cerca nel tuo mazzo un Pokémon Base, mettilo nella tua panchina e rimischia le carte del tuo mazzo. Se esce croce, metti questa Incubatrice Uova in fondo al tuo mazzo invece che nella pila degli scarti.",
       "pt-BR": "Jogue 1 moeda. Se sair cara, procure por 1 Pokémon Básico no seu baralho, coloque-o no seu Banco e embaralhe o seu baralho. Se sair coroa, coloque esta Incubadora de Ovo como a carta de baixo do seu baralho ao invés da pilha de descarte.",
-      "de": "Wirf 1 Münze. Durchsuche bei Kopf dein Deck nach 1 Basis-Pokémon, lege es auf deine Bank und mische dein Deck. Lege bei Zahl diese Ei-Brutmaschine unter dein Deck, anstatt sie auf deinen Ablagestapel zu legen."
+      "de": "Wirf 1 Münze. Durchsuche bei Kopf dein Deck nach 1 Basis-Pokémon, lege es auf deine Bank und mische dein Deck. Lege bei Zahl diese Ei-Brutmaschine unter dein Deck, anstatt sie auf deinen Ablagestapel zu legen. Du kannst während deines Zuges beliebig viele Itemkarten spielen."
     }
   },
   {
@@ -9724,7 +10005,7 @@
       "es": "Cada jugador enseña las 3 primeras cartas de su baraja y pone todos los Pokémon que encuentre entre ellas en su mano. Después, cada jugador pone el resto de las cartas de nuevo en su baraja y las baraja todas.",
       "it": "Ciascun giocatore mostra le prime tre carte del proprio mazzo e aggiunge i Pokémon presenti tra esse alle carte che ha in mano. Poi ciascun giocatore rimischia le altre carte nel proprio mazzo.",
       "pt-BR": "Cada jogador revela as 3 cartas de cima do próprio baralho e coloca todos os Pokémon que encontrar lá na própria mão. Em seguida, cada jogador embaralha as demais cartas de volta no próprio baralho.",
-      "de": "Jeder Spieler zeigt die obersten 3 Karten seines Decks und nimmt alle Pokémon, die er dort findet, auf seine Hand. Anschließend mischt jeder Spieler die anderen Karten zurück in sein Deck."
+      "de": "Jeder Spieler zeigt die obersten 3 Karten seines Decks und nimmt alle Pokémon, die er dort findet, auf seine Hand. Anschließend mischt jeder Spieler die anderen Karten zurück in sein Deck. Du kannst während deines Zuges beliebig viele Itemkarten spielen."
     }
   }
 ]

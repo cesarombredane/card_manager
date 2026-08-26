@@ -6,7 +6,7 @@
     "category": "pokemon",
     "name": {
       "en": "Blaziken",
-      "fr": "Brasegali",
+      "fr": "Braségali",
       "de": "Lohgock"
     },
     "pokemon": [
@@ -72,7 +72,8 @@
     "stage": "stage2",
     "evolves_from": {
       "en": "Combusken",
-      "fr": "Galifeu"
+      "fr": "Galifeu",
+      "de": "Jungglut"
     },
     "attacks": [
       {
@@ -88,7 +89,7 @@
         "text": {
           "en": "Search your discard pile for a Fire Energy card and attach it to 1 of your Pokémon.",
           "fr": "Choisissez dans votre pile de défausse une carte Énergie Fire et attachez-la à 1 de vos Pokémon.",
-          "de": "Durchsuche deinen Ablagestapel nach einer -Energiekarte und lege sie an 1 deiner Pokémon an."
+          "de": "Durchsuche deinen Ablagestapel nach einer {R}-Energiekarte und lege sie an 1 deiner Pokémon an."
         }
       },
       {
@@ -106,7 +107,7 @@
         "text": {
           "en": "Discard 2 Fire Energy attached to Blaziken. This attack does 80 damage to 1 of your opponent's Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
           "fr": "Défaussez 2 Énergies Fire attachées à Brasegali. Cette attaque inflige 80 dégâts à 1 des Pokémon de votre adversaire. (Vous ne pouvez pas appliquer la Faiblesse ou la Résistance aux Pokémon de Banc).",
-          "de": "Entferne 2 -Energien von Lohgock und lege sie auf deinen Ablagestapel. Dieser Angriff fügt 1 Pokémon deines Gegners 80 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
+          "de": "Entferne 2 {R}-Energien von Lohgock und lege sie auf deinen Ablagestapel. Dieser Angriff fügt 1 Pokémon deines Gegners 80 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
         }
       }
     ],
@@ -118,7 +119,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Flames spout from its wrists, enveloping its knuckles. Its punches scorch its foes."
+      "en": "Flames spout from its wrists, enveloping its knuckles. Its punches scorch its foes.",
+      "de": "Aus seinen Handgelenken kommt Feuer, das seine Knöchel umhüllt. Schläge verbrennen den Gegner."
     }
   },
   {
@@ -194,7 +196,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Tangela",
-      "fr": "Saquedeneu"
+      "fr": "Saquedeneu",
+      "de": "Tangela"
     },
     "attacks": [
       {
@@ -247,7 +250,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "It ensnares prey by extending arms made of vines. Losing arms to predators does not trouble it."
+      "en": "It ensnares prey by extending arms made of vines. Losing arms to predators does not trouble it.",
+      "de": "Es umwickelt Beute, indem es seine Arme, die aus Ranken bestehen, verlängert."
     }
   },
   {
@@ -372,7 +376,7 @@
     "rules_text": {
       "en": "This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card. The Retreat Cost for each Psychic and Darkness Pokémon (both yours and your opponent's) is 0.",
       "fr": "Le Coût de retraite de chaque Pokémon Psy et Obscurité (les vôtres et ceux de votre adversaire) est de 0.",
-      "de": "Jedes - und jedes -Pokémon im Spiel (deine und die deines Gegners) hat Rückzugskosten 0."
+      "de": "Diese Karte bleibt im Spiel, wenn du sie spielst. Lege diese Karte ab, sobald eine weitere Stadion-Karte ins Spiel kommt. Wenn eine andere Karte mit dem gleichen Namen im Spiel ist, kannst du diese Karte nicht spielen. Jedes {P}- und jedes {D}-Pokémon im Spiel (deine und die deines Gegners) hat Rückzugskosten 0."
     }
   },
   {
@@ -796,7 +800,7 @@
         "text": {
           "en": "The Defending Pokémon is now Asleep. Flip 2 coins instead of 1 between turns. If either of them is tails, the Defending Pokémon is still Asleep. If both of them are tails, the Defending Pokémon is Knocked Out.",
           "fr": "Le Pokémon Défenseur est maintenant Endormi. Lancez 2 pièces au lieu d'1 entre deux tours. Si l'une d'elles est pile, le Pokémon Défenseur reste Endormi. Si ce sont deux piles, le Pokémon Défenseur est mis K.O.",
-          "de": "Das Verteidigende Pokémon schläft jetzt. Wirf zwischen den Zügen 2 Münzen anstelle von 1 Münze. Wenn eine Münze \"Zahl\" gezeigt hat, schläft das Verteidigende Pokémon weiter. Wenn beide \"Zahl\" gezeigt haben, ist das Verteidigende Pokémon jetzt kampfunfähig."
+          "de": "Das Verteidigende Pokémon schläft jetzt. Wirf zwischen den Zügen 2 Münzen anstelle von 1 Münze. Wenn eine Münze „Zahl“ gezeigt hat, schläft das Verteidigende Pokémon weiter. Wenn beide „Zahl“ gezeigt haben, ist das Verteidigende Pokémon jetzt kampfunfähig."
         }
       }
     ],
@@ -1050,7 +1054,8 @@
     "stage": "stage2",
     "evolves_from": {
       "en": "Togetic",
-      "fr": "Togetic"
+      "fr": "Togetic",
+      "de": "Togetic"
     },
     "attacks": [
       {
@@ -1068,7 +1073,7 @@
         "text": {
           "en": "Flip a coin. If heads, this attack does 40 damage plus 30 more damage. If tails, remove 3 damage counters from Togekiss.",
           "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 40 dégâts plus 30 dégâts supplémentaires. Si c'est pile, retirez à Togekiss 3 marqueurs de dégât.",
-          "de": "Wirf 1 Münze. Bei \"Kopf\" fügt dieser Angriff 40 Schadenspunkte plus 30 weitere Schadenspunkte zu. Bei \"Zahl\" entferne 3 Schadensmarken von Togekiss."
+          "de": "Wirf 1 Münze. Bei „Kopf“ fügt dieser Angriff 40 Schadenspunkte plus 30 weitere Schadenspunkte zu. Bei „Zahl“ entferne 3 Schadensmarken von Togekiss."
         }
       }
     ],
@@ -1086,7 +1091,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It will never appear where there is strife. Its sightings have become rare recently."
+      "en": "It will never appear where there is strife. Its sightings have become rare recently.",
+      "de": "Es zeigt sich niemals dort, wo es Streitigkeiten gibt. In letzter Zeit wurde es nur selten gesehen."
     }
   },
   {
@@ -1162,7 +1168,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Swablu",
-      "fr": "Tylton"
+      "fr": "Tylton",
+      "de": "Wablu"
     },
     "attacks": [
       {
@@ -1178,7 +1185,7 @@
         "text": {
           "en": "Flip a coin. If tails, this attack does nothing. If heads, the Defending Pokémon is now Paralyzed.",
           "fr": "Lancez une pièce. Si c'est pile, cette attaque est sans effet. Si c'est face, le Pokémon Défenseur est maintenant Paralysé.",
-          "de": "Wirf 1 Münze. Bei \"Zahl\" hat dieser Angriff keine Auswirkungen. Bei \"Kopf\" ist das Verteidigende Pokémon jetzt gelähmt."
+          "de": "Wirf 1 Münze. Bei „Zahl“ hat dieser Angriff keine Auswirkungen. Bei „Kopf“ ist das Verteidigende Pokémon jetzt gelähmt."
         }
       },
       {
@@ -1214,7 +1221,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It looks like a fluffy cloud when it is in flight. It hums with its soprano voice."
+      "en": "It looks like a fluffy cloud when it is in flight. It hums with its soprano voice.",
+      "de": "Im Flug sieht es aus wie eine watteweiche Wolke. Es singt mit einer Sopranstimme."
     }
   },
   {
@@ -1317,7 +1325,8 @@
     "stage": "stage2",
     "evolves_from": {
       "en": "Kakuna",
-      "fr": "Coconfort"
+      "fr": "Coconfort",
+      "de": "Kokuna"
     },
     "attacks": [
       {
@@ -1351,7 +1360,7 @@
         "text": {
           "en": "Flip 2 coins. This attack does 50 damage times the number of heads.",
           "fr": "Lancez 2 pièces. Cette attaque inflige 50 dégâts multipliés par le nombre de faces.",
-          "de": "Wirf 2 Münzen. Dieser Angriff fügt 50 Schadenspunkte mal der Anzahl \"Kopf\" zu."
+          "de": "Wirf 2 Münzen. Dieser Angriff fügt 50 Schadenspunkte mal der Anzahl „Kopf“ zu."
         }
       }
     ],
@@ -1362,7 +1371,8 @@
       }
     ],
     "flavor_text": {
-      "en": "Its best attack involves flying around at high speed, striking with poison needles, then flying off."
+      "en": "Its best attack involves flying around at high speed, striking with poison needles, then flying off.",
+      "de": "Sein bester Angriff: Schnell auf den Gegner zufliegen, mit Giftstacheln zustechen und davonfliegen."
     }
   },
   {
@@ -1438,7 +1448,8 @@
     "stage": "stage2",
     "evolves_from": {
       "en": "Metapod",
-      "fr": "Chrysacier"
+      "fr": "Chrysacier",
+      "de": "Safcon"
     },
     "attacks": [
       {
@@ -1472,7 +1483,7 @@
         "text": {
           "en": "Flip a coin. If heads, the Defending Pokémon is now Asleep. If tails, the Defending Pokémon is now Poisoned.",
           "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Endormi. Si c'est pile, le Pokémon Défenseur est maintenant Empoisonné.",
-          "de": "Wirf 1 Münze. Bei \"Kopf\" schläft das Verteidigende Pokémon jetzt. Bei \"Zahl\" ist das Verteidigende Pokémon jetzt vergiftet."
+          "de": "Wirf 1 Münze. Bei „Kopf“ schläft das Verteidigende Pokémon jetzt. Bei „Zahl“ ist das Verteidigende Pokémon jetzt vergiftet."
         }
       }
     ],
@@ -1483,7 +1494,8 @@
       }
     ],
     "flavor_text": {
-      "en": "It loves the honey of flowers and can locate flower patches that have even tiny amounts of pollen."
+      "en": "It loves the honey of flowers and can locate flower patches that have even tiny amounts of pollen.",
+      "de": "Es liebt Blütenhonig. Es findet selbst Blumen, die sehr wenig Pollen haben."
     }
   },
   {
@@ -1773,7 +1785,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Baltoy",
-      "fr": "Balbuto"
+      "fr": "Balbuto",
+      "de": "Puppance"
     },
     "attacks": [
       {
@@ -1798,7 +1811,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "An ancient clay figurine that came to life as a Pokémon from exposure to a mysterious ray of light."
+      "en": "An ancient clay figurine that came to life as a Pokémon from exposure to a mysterious ray of light.",
+      "de": "Eine antike Lehmstatue, die durch ein mysteriöses Licht zum Leben erwacht ist."
     }
   },
   {
@@ -1974,7 +1988,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "It has the power to control time. It appears in Sinnoh-region myths as an ancient deity."
+      "en": "It has the power to control time. It appears in Sinnoh-region myths as an ancient deity.",
+      "de": "Es besitzt die Macht, die Zeit zu kontrollieren. In den Mythen von Sinnoh erscheint es als Gottheit."
     }
   },
   {
@@ -2050,7 +2065,8 @@
     "stage": "stage2",
     "evolves_from": {
       "en": "Loudred",
-      "fr": "Ramboum"
+      "fr": "Ramboum",
+      "de": "Krakeelo"
     },
     "attacks": [
       {
@@ -2067,7 +2083,7 @@
         "text": {
           "en": "Flip 2 coins. If the first coin is heads, this attack does 50 damage to the Defending Pokémon. If the first coin is tails, this attack does 20 damage to each of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.) If the second coin is heads, the Defending Pokémon is now Confused. If the second coin is tails, your opponent can't play any Trainer, Supporter, or Stadium cards from his or her hand during your opponent's next turn.",
           "fr": "Lancez 2 pièces. Si la première pièce est face, cette attaque inflige 50 dégâts au Pokémon Défenseur. Si la première pièce est pile, cette attaque inflige 20 dégâts à chacun des Pokémon de Banc de votre adversaire. (Vous ne pouvez pas appliquer la Faiblesse ou la Résistance aux Pokémon de Banc). Si la seconde pièce est face, le Pokémon Défenseur est maintenant Confus. Si la seconde pièce est pile, votre adversaire ne peut pas jouer de cartes Dresseur, Supporter ou Stade de sa main lors de son prochain tour.",
-          "de": "Wirf 2 Münzen. Wenn die erste Münze \"Kopf\" gezeigt hat, fügt dieser Angriff dem Verteidigenden Pokémon 50 Schadenspunkte zu. Wenn die erste Münze \"Zahl\" gezeigt hat, fügt dieser Angriff allen Pokémon auf der Bank deines Gegners 20 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.) Wenn die zweite Münze \"Kopf\" gezeigt hat, ist das Verteidigende Pokémon jetzt verwirrt. Wenn die zweite Münze \"Zahl\" gezeigt hat, kann dein Gegner in seinem nächsten Zug keine Trainer-, Unterstützer- und Stadion-Karten von seiner Hand spielen."
+          "de": "Wirf 2 Münzen. Wenn die erste Münze „Kopf“ gezeigt hat, fügt dieser Angriff dem Verteidigenden Pokémon 50 Schadenspunkte zu. Wenn die erste Münze „Zahl“ gezeigt hat, fügt dieser Angriff allen Pokémon auf der Bank deines Gegners 20 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.) Wenn die zweite Münze „Kopf“ gezeigt hat, ist das Verteidigende Pokémon jetzt verwirrt. Wenn die zweite Münze „Zahl“ gezeigt hat, kann dein Gegner in seinem nächsten Zug keine Trainer-, Unterstützer- und Stadion-Karten von seiner Hand spielen."
         }
       },
       {
@@ -2094,7 +2110,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "Its howls can be heard over six miles away. It emits all sorts of noises from the ports on its body."
+      "en": "Its howls can be heard over six miles away. It emits all sorts of noises from the ports on its body.",
+      "de": "Sein Heulen hört man in 10 km Entfernung. Es gibt alle Arten von Geräuschen von sich."
     }
   },
   {
@@ -2170,7 +2187,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Houndour",
-      "fr": "Malosse"
+      "fr": "Malosse",
+      "de": "Hunduster"
     },
     "attacks": [
       {
@@ -2203,7 +2221,7 @@
         "text": {
           "en": "You may discard a Fire or Darkness Energy attached to Houndoom. If you discard a Fire Energy, the Defending Pokémon is now Burned. If you discard a Darkness Energy, this attack does 40 damage plus 30 more damage.",
           "fr": "Vous pouvez défausser une Énergie Fire ou Darkness attachée à Demolosse. Si vous défaussez une Énergie Fire, le Pokémon Défenseur est maintenant Brûlé. Si vous défaussez une Énergie (D), cette attaque inflige 40 dégâts plus 30 dégâts supplémentaires.",
-          "de": "Du kannst 1 an Hundemon angelegte - oder -Energie auf deinen Ablagestapel legen. Wenn du 1 -Energie auf deinen Ablagestapel legst, ist das Verteidigende Pokémon jetzt verbrannt. Wenn du 1 -Energie auf deinen Ablagestapel legst, fügt dieser Angriff 40 Schadenspunkte plus 30 weitere Schadenspunkte zu."
+          "de": "Du kannst 1 an Hundemon angelegte {R}- oder {D}-Energie auf deinen Ablagestapel legen. Wenn du 1 {R}-Energie auf deinen Ablagestapel legst, ist das Verteidigende Pokémon jetzt verbrannt. Wenn du 1 {D}-Energie auf deinen Ablagestapel legst, fügt dieser Angriff 40 Schadenspunkte plus 30 weitere Schadenspunkte zu."
         }
       }
     ],
@@ -2221,7 +2239,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Long ago, people imagined its eerie howls to be the call of the grim reaper."
+      "en": "Long ago, people imagined its eerie howls to be the call of the grim reaper.",
+      "de": "In alten Zeiten glaubte man, das Heulen dieses PKMN sei der Ruf des Todes."
     }
   },
   {
@@ -2297,7 +2316,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Drowzee",
-      "fr": "Soporifik"
+      "fr": "Soporifik",
+      "de": "Traumato"
     },
     "attacks": [
       {
@@ -2344,7 +2364,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "Seeing its swinging pendulum can induce sleep in three seconds, even if someone just woke up."
+      "en": "Seeing its swinging pendulum can induce sleep in three seconds, even if someone just woke up.",
+      "de": "Ein Blick auf das Pendel versetzt einen in 3 Sekunden in Schlaf, selbst wenn man gar nicht müde ist."
     }
   },
   {
@@ -2462,7 +2483,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Shiny particles are released from its wings like a veil. It is said to represent the crescent moon."
+      "en": "Shiny particles are released from its wings like a veil. It is said to represent the crescent moon.",
+      "de": "Seine Flügel geben schimmernde Partikel ab, wie einen Schleier. Man sagt, es steht für die Mondsichel."
     }
   },
   {
@@ -2538,7 +2560,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Krabby",
-      "fr": "Krabby"
+      "fr": "Krabby",
+      "de": "Krabby"
     },
     "attacks": [
       {
@@ -2581,7 +2604,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "The larger pincer has 10,000-horsepower strength. However, it is so heavy, it is difficult to aim."
+      "en": "The larger pincer has 10,000-horsepower strength. However, it is so heavy, it is difficult to aim.",
+      "de": "Die großen Scheren haben eine Stärke von 10 000 PS. Aber sie sind schwer und kaum zu handhaben."
     }
   },
   {
@@ -2694,7 +2718,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It loves crossing the sea with people and Pokémon on its back. It understands human speech."
+      "en": "It loves crossing the sea with people and Pokémon on its back. It understands human speech.",
+      "de": "Es liebt es, das Meer mit PKMN und Menschen auf dem Rücken zu überqueren. Es versteht die Menschen."
     }
   },
   {
@@ -2800,7 +2825,7 @@
         "text": {
           "en": "Discard a Fire Energy and a Water Energy attached to Latias.",
           "fr": "Défaussez une Énergie Fire et une Énergie Water attachées à Latias.",
-          "de": "Lege 1 -Energie und 1 -Energie, die an Latias angelegt sind, auf deinen Ablagestapel."
+          "de": "Lege 1 {R}-Energie und 1 {W}-Energie, die an Latias angelegt sind, auf deinen Ablagestapel."
         }
       }
     ],
@@ -2818,7 +2843,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Its body is covered with a down that can refract light in such a way that it becomes invisible."
+      "en": "Its body is covered with a down that can refract light in such a way that it becomes invisible.",
+      "de": "Sein Körper ist mit Daunen bedeckt, die das Licht so brechen, dass das PKMN unsichtbar wird."
     }
   },
   {
@@ -2906,7 +2932,7 @@
         "text": {
           "en": "Flip a coin. If heads, search your deck for a basic Energy card and attach it to Latios. Shuffle your deck afterward.",
           "fr": "Lancez une pièce. Si c'est face, choisissez dans votre deck une carte Énergie de base et attachez-la à Latios. Ensuite, mélangez votre deck.",
-          "de": "Wirf 1 Münze. Bei \"Kopf\" durchsuche dein Deck nach 1 Basis-Energiekarte und lege sie an Latios an. Mische dein Deck danach."
+          "de": "Wirf 1 Münze. Bei „Kopf“ durchsuche dein Deck nach 1 Basis-Energiekarte und lege sie an Latios an. Mische dein Deck danach."
         }
       },
       {
@@ -2943,7 +2969,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "A highly intelligent Pokémon. By folding back its wings in flight, it can overtake jet planes."
+      "en": "A highly intelligent Pokémon. By folding back its wings in flight, it can overtake jet planes.",
+      "de": "Ein hochintelligentes PKMN. Wenn es im Flug seine Flügel nach hinten legt, ist es schneller als ein Jet."
     }
   },
   {
@@ -3064,7 +3091,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Attached to its head is a huge set of jaws formed by horns. It can chew through iron beams."
+      "en": "Attached to its head is a huge set of jaws formed by horns. It can chew through iron beams.",
+      "de": "Auf seinem Kopf befindet sich ein riesiger Kiefer, der aus Hörnern besteht. Er kann Eisen zermalmen."
     }
   },
   {
@@ -3140,7 +3168,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Feebas",
-      "fr": "Barpau"
+      "fr": "Barpau",
+      "de": "Barschwa"
     },
     "attacks": [
       {
@@ -3158,7 +3187,7 @@
         "text": {
           "en": "Flip 2 coins. If both are tails, this attack does nothing. For each heads, discard an Energy attached to the Defending Pokémon.",
           "fr": "Lancez 2 pièces. Si ce sont 2 piles, cette attaque est sans effet. Pour chaque face, défaussez une Énergie attachée au Pokémon Défenseur.",
-          "de": "Wirf 2 Münzen. Wenn beide \"Zahl\" zeigen, hat dieser Angriff keine Auswirkungen. Lege pro \"Kopf\" eine an das Verteidigende Pokémon angelegte Energie auf den Ablagestapel deines Gegners."
+          "de": "Wirf 2 Münzen. Wenn beide „Zahl“ zeigen, hat dieser Angriff keine Auswirkungen. Lege pro „Kopf“ eine an das Verteidigende Pokémon angelegte Energie auf den Ablagestapel deines Gegners."
         }
       }
     ],
@@ -3170,7 +3199,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "When people bicker, it is said to arise from the depths of lakes to becalm violent hearts."
+      "en": "When people bicker, it is said to arise from the depths of lakes to becalm violent hearts.",
+      "de": "Wenn sich jemand streitet, steigt es aus den Tiefen des Sees empor, um die Streitenden zu beruhigen."
     }
   },
   {
@@ -3355,7 +3385,7 @@
         "text": {
           "en": "You may flip a coin. If heads, discard all Energy attached to Palkia and put the Defending Pokémon and all cards attached to it on top of your opponent's deck. Your opponent shuffles his or her deck afterward.",
           "fr": "Vous pouvez lancer une pièce. Si c'est face, défaussez toutes les Énergies attachées à Palkia et placez le Pokémon Défenseur et toutes les cartes qui lui sont attachées au dessus du deck de votre adversaire. Ensuite, votre adversaire mélange son deck.",
-          "de": "Du kannst 1 Münze werfen. Bei \"Kopf\" lege alle Energien, die an Palkia angelegt sind, auf deinen Ablagestapel. Danach lege das Verteidigende Pokémon und alle an es angelegten Karten auf das Deck deines Gegners. Dein Gegner mischt sein Deck danach."
+          "de": "Du kannst 1 Münze werfen. Bei „Kopf“ lege alle Energien, die an Palkia angelegt sind, auf deinen Ablagestapel. Danach lege das Verteidigende Pokémon und alle an es angelegten Karten auf das Deck deines Gegners. Dein Gegner mischt sein Deck danach."
         }
       }
     ],
@@ -3367,7 +3397,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "It has the ability to distort space. It is described as a deity in Sinnoh-region mythology."
+      "en": "It has the ability to distort space. It is described as a deity in Sinnoh-region mythology.",
+      "de": "Es hat die Macht, den Raum zu krümmen. In den Mythen von Sinnoh erscheint es als Gottheit."
     }
   },
   {
@@ -3443,7 +3474,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Mankey",
-      "fr": "Férosinge"
+      "fr": "Férosinge",
+      "de": "Menki"
     },
     "attacks": [
       {
@@ -3461,7 +3493,7 @@
         "text": {
           "en": "Primeape is now Confused. Flip a coin. If heads, the Defending Pokémon can't attack during your opponent's next turn.",
           "fr": "Colosinge est maintenant Confus. Lancez une pièce. Si c'est face, le Pokémon Défenseur ne peut pas attaquer lors du prochain tour de votre adversaire.",
-          "de": "Rasaff ist jetzt verwirrt. Wirf 1 Münze. Bei \"Kopf\" kann das Verteidigende Pokémon im nächsten Zug deines Gegners nicht angreifen."
+          "de": "Rasaff ist jetzt verwirrt. Wirf 1 Münze. Bei „Kopf“ kann das Verteidigende Pokémon im nächsten Zug deines Gegners nicht angreifen."
         }
       }
     ],
@@ -3473,7 +3505,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It grows angry if you see its eyes and gets angrier if you run. If you beat it, it gets even madder."
+      "en": "It grows angry if you see its eyes and gets angrier if you run. If you beat it, it gets even madder.",
+      "de": "Siehst du ihm in die Augen, wird es wütend. Rennst du weg, wird es noch wütender. Ärgerst du es..."
     }
   },
   {
@@ -3549,7 +3582,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Slowpoke",
-      "fr": "Ramoloss"
+      "fr": "Ramoloss",
+      "de": "Flegmon"
     },
     "attacks": [
       {
@@ -3578,7 +3612,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "Being bitten by Shellder gave it intelligence comparable to that of award-winning scientists."
+      "en": "Being bitten by Shellder gave it intelligence comparable to that of award-winning scientists.",
+      "de": "Wird es von MUSCHAS gebissen, wird es so intelligent, dass es sich mit Nobelpreisträgern messen kann."
     }
   },
   {
@@ -3652,7 +3687,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Shaped like ancient writing, it is a huge mystery whether language or UNOWN came first."
+      "en": "Shaped like ancient writing, it is a huge mystery whether language or UNOWN came first.",
+      "de": "Seine Form sieht aus wie antike Schrift. Was war zuerst da? Die Sprache oder ICOGNITO?"
     }
   },
   {
@@ -3774,7 +3810,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It can lull people to sleep and make them dream. It is active during nights of the new moon."
+      "en": "It can lull people to sleep and make them dream. It is active during nights of the new moon.",
+      "de": "Es kann andere in Schlaf versetzen und ihnen Träume geben. Es ist nur bei Neumond aktiv."
     }
   },
   {
@@ -3850,7 +3887,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Wailmer",
-      "fr": "Wailmer"
+      "fr": "Wailmer",
+      "de": "Wailmer"
     },
     "attacks": [
       {
@@ -3881,7 +3919,8 @@
     ],
     "retreat_cost": 4,
     "flavor_text": {
-      "en": "The biggest of all Pokémon. It can dive to a depth of almost 10,000 feet on only one breath."
+      "en": "The biggest of all Pokémon. It can dive to a depth of almost 10,000 feet on only one breath.",
+      "de": "Das größte PKMN. Es kann mit nur einem Atemzug in Tiefen bis 3.000 Meter tauchen."
     }
   },
   {
@@ -3957,7 +3996,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Koffing",
-      "fr": "Smogo"
+      "fr": "Smogo",
+      "de": "Smogon"
     },
     "attacks": [
       {
@@ -3974,7 +4014,7 @@
         "text": {
           "en": "Flip a coin. If heads, the Defending Pokémon is now Confused and Poisoned.",
           "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Confus et Empoisonné.",
-          "de": "Wirf 1 Münze. Bei \"Kopf\" ist das Verteidigende Pokémon jetzt vergiftet und verwirrt."
+          "de": "Wirf 1 Münze. Bei „Kopf“ ist das Verteidigende Pokémon jetzt vergiftet und verwirrt."
         }
       }
     ],
@@ -3986,7 +4026,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "It grows by feeding on gases released by garbage. Though very rare, triplets have been found."
+      "en": "It grows by feeding on gases released by garbage. Though very rare, triplets have been found.",
+      "de": "Es wächst, indem es Gase aufnimmt, die aus dem Müll aufsteigen. Selten kann man Drillinge von ihnen finden."
     }
   },
   {
@@ -4062,7 +4103,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Jigglypuff",
-      "fr": "Rondoudou"
+      "fr": "Rondoudou",
+      "de": "Pummeluff"
     },
     "attacks": [
       {
@@ -4091,7 +4133,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Its fine fur feels sublime to the touch. It can expand its body by inhaling air."
+      "en": "Its fine fur feels sublime to the touch. It can expand its body by inhaling air.",
+      "de": "Sein feines Fell fühlt sich herrlich an. Es kann sich größer machen, indem es Luft einatmet."
     }
   },
   {
@@ -4167,7 +4210,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Ekans",
-      "fr": "Abo"
+      "fr": "Abo",
+      "de": "Rettan"
     },
     "attacks": [
       {
@@ -4201,7 +4245,7 @@
         "text": {
           "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
           "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Paralysé.",
-          "de": "Wirf 1 Münze. Bei \"Kopf\" ist das Verteidigende Pokémon jetzt gelähmt."
+          "de": "Wirf 1 Münze. Bei „Kopf“ ist das Verteidigende Pokémon jetzt gelähmt."
         }
       }
     ],
@@ -4213,7 +4257,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "The pattern on its belly is for intimidation. It constricts foes while they are frozen in fear."
+      "en": "The pattern on its belly is for intimidation. It constricts foes while they are frozen in fear.",
+      "de": "Das Muster auf seinem Bauch schüchtert Gegner ein. Sind sie vor Angst erstarrt, umklammert es sie."
     }
   },
   {
@@ -4289,7 +4334,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Cacnea",
-      "fr": "Cacnea"
+      "fr": "Cacnea",
+      "de": "Tuska"
     },
     "attacks": [
       {
@@ -4306,7 +4352,7 @@
         "text": {
           "en": "Flip 3 coins. This attack does 20 damage times the number of heads.",
           "fr": "Lancez 3 pièces. Cette attaque inflige 20 dégâts multipliés par le nombre de faces.",
-          "de": "Wirf 3 Münzen. Dieser Angriff fügt 20 Schadenspunkte mal der Anzahl \"Kopf\" zu."
+          "de": "Wirf 3 Münzen. Dieser Angriff fügt 20 Schadenspunkte mal der Anzahl „Kopf“ zu."
         }
       },
       {
@@ -4342,7 +4388,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It becomes active at night, seeking prey that is exhausted from the day's desert heat."
+      "en": "It becomes active at night, seeking prey that is exhausted from the day's desert heat.",
+      "de": "Ein nachtaktives PKMN, das Beute sucht, die durch die Tageshitze der Wüste bereits erschöpft ist."
     }
   },
   {
@@ -4418,7 +4465,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Torchic",
-      "fr": "Poussifeu"
+      "fr": "Poussifeu",
+      "de": "Flemmli"
     },
     "attacks": [
       {
@@ -4452,7 +4500,7 @@
         "text": {
           "en": "Flip 2 coins. This attack does 50 damage times the number of heads.",
           "fr": "Lancez 2 pièces. Cette attaque inflige 50 dégâts multipliés par le nombre de faces.",
-          "de": "Wirf 2 Münzen. Dieser Angriff fügt 50 Schadenspunkte mal der Anzahl \"Kopf\" zu."
+          "de": "Wirf 2 Münzen. Dieser Angriff fügt 50 Schadenspunkte mal der Anzahl „Kopf“ zu."
         }
       }
     ],
@@ -4464,7 +4512,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Its kicking mastery lets it loose 10 kicks per second. It emits sharp cries to intimidate foes."
+      "en": "Its kicking mastery lets it loose 10 kicks per second. It emits sharp cries to intimidate foes.",
+      "de": "Es kann 10 Tritte pro Sekunde austeilen. Es gibt schrille Schreie von sich, um Gegner einzuschüchtern."
     }
   },
   {
@@ -4550,7 +4599,7 @@
         "text": {
           "en": "Flip a coin. If heads, search your deck for any 1 card and put it into your hand. Shuffle your deck afterward.",
           "fr": "Lancez une pièce. Si c'est face, choisissez 1 carte dans votre deck et placez-la dans votre main. Ensuite, mélangez votre deck.",
-          "de": "Wirf 1 Münze. Bei \"Kopf\" durchsuche dein Deck nach 1 Karte und nimm sie auf die Hand. Mische dein Deck danach."
+          "de": "Wirf 1 Münze. Bei „Kopf“ durchsuche dein Deck nach 1 Karte und nimm sie auf die Hand. Mische dein Deck danach."
         }
       },
       {
@@ -4574,7 +4623,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It carries food rolled up in its tail. It has the habit of sharing food with people lost in mountains."
+      "en": "It carries food rolled up in its tail. It has the habit of sharing food with people lost in mountains.",
+      "de": "Im eingerollten Schweif transportiert es Futter, das es mit denen teilt, die sich verlaufen haben."
     }
   },
   {
@@ -4677,7 +4727,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Buizel",
-      "fr": "Mustébouée"
+      "fr": "Mustébouée",
+      "de": "Bamelin"
     },
     "attacks": [
       {
@@ -4694,7 +4745,7 @@
         "text": {
           "en": "Flip a coin. If heads, prevent all effects of an attack, including damage, done to Floatzel during your opponent's next turn.",
           "fr": "Lancez une pièce. Si c'est face, prévenez tous les effets d'une attaque, dégâts inclus, infligés à Mustéflott lors du prochain tour de votre adversaire.",
-          "de": "Wirf 1 Münze. Bei 'Kopf' verhindere während des nächsten Zuges deines Gegners alle Effekte eines Angriffs, einschließlich Schaden, die Bojelin zugefügt würden."
+          "de": "Wirf 1 Münze. Bei „Kopf“ verhindere während des nächsten Zuges deines Gegners alle Effekte eines Angriffs, einschließlich Schaden, die Bojelin zugefügt würden."
         }
       },
       {
@@ -4712,7 +4763,7 @@
         "text": {
           "en": "Flip a coin. If heads, this attack does 10 damage to 1 of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
           "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 10 dégâts à 1 des Pokémon de Banc de votre adversaire. (Vous ne pouvez pas appliquer la Faiblesse ou la Résistance aux Pokémon de Banc).",
-          "de": "Wirf 1 Münze. Bei 'Kopf' fügt dieser Angriff einem Pokémon auf der Bank deines Gegners 10 Schadenspunkte zu. (Wende Schwäche und Resistenz für Pokémon auf der Bank nicht an.)"
+          "de": "Wirf 1 Münze. Bei „Kopf“ fügt dieser Angriff 1 Pokémon auf der Bank deines Gegners 10 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
         }
       }
     ],
@@ -4724,7 +4775,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It floats using its well-developed floatation sac. It assists in the rescues of drowning people."
+      "en": "It floats using its well-developed floatation sac. It assists in the rescues of drowning people.",
+      "de": "Es treibt mithilfe einer Art Rettungsring auf dem Wasser und hilft dem, der zu ertrinken droht."
     }
   },
   {
@@ -4800,7 +4852,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Clamperl",
-      "fr": "Coquiperl"
+      "fr": "Coquiperl",
+      "de": "Perlu"
     },
     "attacks": [
       {
@@ -4831,7 +4884,7 @@
         "text": {
           "en": "If Gorebyss has any Psychic Energy attached to it, this attack does 30 damage plus 20 more damage and the Defending Pokémon is now Confused.",
           "fr": "Si Rosabyss possède de l'Énergie Psychic, cette attaque inflige 30 dégâts plus 20 dégâts supplémentaires et le Pokémon Défenseur est maintenant Confus.",
-          "de": "Wenn an Saganabyss mindestens 1 -Energie angelegt ist, fügt dieser Angriff 30 Schadenspunkte plus 20 weitere Schadenspunkte zu und das Verteidigende Pokémon ist jetzt verwirrt."
+          "de": "Wenn an Saganabyss mindestens 1 {P}-Energie angelegt ist, fügt dieser Angriff 30 Schadenspunkte plus 20 weitere Schadenspunkte zu und das Verteidigende Pokémon ist jetzt verwirrt."
         }
       }
     ],
@@ -4842,7 +4895,8 @@
       }
     ],
     "flavor_text": {
-      "en": "It lives at the bottom of the sea. In the springtime, its pink body turns more vivid for some reason."
+      "en": "It lives at the bottom of the sea. In the springtime, its pink body turns more vivid for some reason.",
+      "de": "Es lebt auf dem Grund des Meeres. Im Frühling wirkt die Farbe seines Körpers viel kräftiger."
     }
   },
   {
@@ -4918,7 +4972,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Snubbull",
-      "fr": "Snubbull"
+      "fr": "Snubbull",
+      "de": "Snubbull"
     },
     "attacks": [
       {
@@ -4966,7 +5021,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "It is timid in spite of its looks. If it becomes enraged, however, it will strike with its huge fangs."
+      "en": "It is timid in spite of its looks. If it becomes enraged, however, it will strike with its huge fangs.",
+      "de": "Es ist trotz seines Äußeren schüchtern. Wird es wütend, schnappt es mit seinen Fängen zu."
     }
   },
   {
@@ -5090,7 +5146,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It can lull people to sleep and make them dream. It is active during nights of the new moon."
+      "en": "It can lull people to sleep and make them dream. It is active during nights of the new moon.",
+      "de": "Es kann andere in Schlaf versetzen und ihnen Träume geben. Es ist nur bei Neumond aktiv."
     }
   },
   {
@@ -5166,7 +5223,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Treecko",
-      "fr": "Arcko"
+      "fr": "Arcko",
+      "de": "Geckarbor"
     },
     "attacks": [
       {
@@ -5180,7 +5238,7 @@
         "text": {
           "en": "Search your deck for up to 2 Grass Energy cards, show them to your opponent, and put them into your hand. Shuffle your deck afterward.",
           "fr": "Choisissez dans votre deck jusqu'à 2 cartes Énergie Grass, montrez-les à votre adversaire et placez-les dans votre main. Ensuite, mélangez votre deck.",
-          "de": "Durchsuche dein Deck nach bis zu 2 -Energiekarten, zeige sie deinem Gegner und nimm sie auf die Hand. Mische dein Deck danach."
+          "de": "Durchsuche dein Deck nach bis zu 2 {G}-Energiekarten, zeige sie deinem Gegner und nimm sie auf die Hand. Mische dein Deck danach."
         }
       },
       {
@@ -5215,7 +5273,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It lives in dense jungles. While closing in on its prey, it leaps from branch to branch."
+      "en": "It lives in dense jungles. While closing in on its prey, it leaps from branch to branch.",
+      "de": "Es lebt im dichten Dschungel. Es springt von Ast zu Ast, wenn es sich einer Beute nähert."
     }
   },
   {
@@ -5291,7 +5350,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Makuhita",
-      "fr": "Makuhita"
+      "fr": "Makuhita",
+      "de": "Makuhita"
     },
     "attacks": [
       {
@@ -5308,7 +5368,7 @@
         "text": {
           "en": "Flip a coin. If heads, this attack does 20 damage plus 40 more damage.",
           "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 20 dégâts plus 40 dégâts supplémentaires.",
-          "de": "Wirf 1 Münze. Bei \"Kopf\" fügt dieser Angriff 20 Schadenspunkte plus 40 weitere Schadenspunkte zu."
+          "de": "Wirf 1 Münze. Bei „Kopf“ fügt dieser Angriff 20 Schadenspunkte plus 40 weitere Schadenspunkte zu."
         }
       },
       {
@@ -5338,7 +5398,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "It loves to match power with big-bodied Pokémon. It can knock a truck flying with its arm thrusts."
+      "en": "It loves to match power with big-bodied Pokémon. It can knock a truck flying with its arm thrusts.",
+      "de": "Es liebt das Kräftemessen mit großen PKMN. Mit seinem Armwurf kann es LKW durch die Luft werfen."
     }
   },
   {
@@ -5414,7 +5475,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Clamperl",
-      "fr": "Coquiperl"
+      "fr": "Coquiperl",
+      "de": "Perlu"
     },
     "attacks": [
       {
@@ -5428,7 +5490,7 @@
         "text": {
           "en": "Flip a coin. If heads, the Defending Pokémon can't attack or retreat during your opponent's next turn.",
           "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur ne peut pas attaquer ou battre en retraite lors du prochain tour de votre adversaire.",
-          "de": "Wirf 1 Münze. Bei \"Kopf\" kann das Verteidigende Pokémon im nächsten Zug deines Gegners weder angreifen noch sich zurückziehen."
+          "de": "Wirf 1 Münze. Bei „Kopf“ kann das Verteidigende Pokémon im nächsten Zug deines Gegners weder angreifen noch sich zurückziehen."
         }
       },
       {
@@ -5445,7 +5507,7 @@
         "text": {
           "en": "If Huntail has any Darkness Energy attached to it, this attack does 30 damage plus 20 more damage and discard a Special Energy card, if any, attached to the Defending Pokémon.",
           "fr": "Si Serpang possède de l'Énergie Darkness, cette attaque inflige 30 dégâts plus 20 dégâts supplémentaires. Défaussez une carte Énergie spéciale attachée au Pokémon Défenseur, s'il en a.",
-          "de": "Wenn an Aalabyss mindestens 1 -Energie angelegt ist, fügt dieser Angriff 30 Schadenspunkte plus 20 weitere Schadenspunkte zu und lege, falls am Verteidigenden Pokémon eine Spezialenergiekarte angelegt ist, diese auf den Ablagestapel deines Gegners."
+          "de": "Wenn an Aalabyss mindestens 1 {D}-Energie angelegt ist, fügt dieser Angriff 30 Schadenspunkte plus 20 weitere Schadenspunkte zu und lege, falls am Verteidigenden Pokémon eine Spezialenergiekarte angelegt ist, diese auf den Ablagestapel deines Gegners."
         }
       }
     ],
@@ -5457,7 +5519,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It lives deep in the sea. With a tail shaped like a small fish, it attracts unsuspecting prey."
+      "en": "It lives deep in the sea. With a tail shaped like a small fish, it attracts unsuspecting prey.",
+      "de": "Es lebt tief im Meer. Sein Schweif ist wie ein kleiner Fisch geformt. Mit ihm lockt es Beute an."
     }
   },
   {
@@ -5467,7 +5530,7 @@
     "category": "pokemon",
     "name": {
       "en": "Linoone",
-      "fr": "Lineon",
+      "fr": "Linéon",
       "de": "Geradaks"
     },
     "pokemon": [
@@ -5533,7 +5596,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Zigzagoon",
-      "fr": "Zigzaton"
+      "fr": "Zigzaton",
+      "de": "Zigzachs"
     },
     "attacks": [
       {
@@ -5576,7 +5640,8 @@
       }
     ],
     "flavor_text": {
-      "en": "It charges prey at speeds over 60 mph. However, because it can only run straight, it often fails."
+      "en": "It charges prey at speeds over 60 mph. However, because it can only run straight, it often fails.",
+      "de": "Es stürzt sich mit 100 km/h auf Beute. Aber es kann nur geradeaus laufen und die Jagd misslingt oft."
     }
   },
   {
@@ -5652,7 +5717,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Whismur",
-      "fr": "Chuchmur"
+      "fr": "Chuchmur",
+      "de": "Flurmel"
     },
     "attacks": [
       {
@@ -5687,7 +5753,7 @@
         "text": {
           "en": "Flip a coin. If heads, this attack does 40 damage plus 20 more damage.",
           "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 40 dégâts plus 20 dégâts supplémentaires.",
-          "de": "Wirf 1 Münze. Bei \"Kopf\" fügt dieser Angriff 40 Schadenspunkte plus 20 weitere Schadenspunkte zu."
+          "de": "Wirf 1 Münze. Bei „Kopf“ fügt dieser Angriff 40 Schadenspunkte plus 20 weitere Schadenspunkte zu."
         }
       }
     ],
@@ -5699,7 +5765,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "The shock waves from its cries can tip over trucks. It stamps its feet to power up."
+      "en": "The shock waves from its cries can tip over trucks. It stamps its feet to power up.",
+      "de": "Die Schockwellen, die durch sein Rufen entstehen, können einen LKW umkippen."
     }
   },
   {
@@ -5775,7 +5842,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Slugma",
-      "fr": "Limagma"
+      "fr": "Limagma",
+      "de": "Schneckmag"
     },
     "attacks": [
       {
@@ -5805,7 +5873,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "Its body temperature is roughly 18,000 degrees F. Flames spout from gaps in its hardened shell."
+      "en": "Its body temperature is roughly 18,000 degrees F. Flames spout from gaps in its hardened shell.",
+      "de": "Seine Körpertemperatur beträgt etwa 10 000 Grad. Aus seiner Schale treten immer wieder Flammen aus."
     }
   },
   {
@@ -5881,7 +5950,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Mudkip",
-      "fr": "Gobou"
+      "fr": "Gobou",
+      "de": "Hydropi"
     },
     "attacks": [
       {
@@ -5924,7 +5994,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "Its sturdy legs give it sure footing, even in mud. It burrows into dirt to sleep."
+      "en": "Its sturdy legs give it sure footing, even in mud. It burrows into dirt to sleep.",
+      "de": "Seine kräftigen Beine geben ihm sicheren Halt. Es gräbt sich in Dreck ein, wenn es schlafen will."
     }
   },
   {
@@ -6000,7 +6071,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Caterpie",
-      "fr": "Chenipan"
+      "fr": "Chenipan",
+      "de": "Raupy"
     },
     "attacks": [
       {
@@ -6025,7 +6097,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "A steel-hard shell protects its tender body. It quietly endures hardships while awaiting evolution."
+      "en": "A steel-hard shell protects its tender body. It quietly endures hardships while awaiting evolution.",
+      "de": "Der stahlharte Panzer schützt seinen zarten Körper. Es wartet geduldig auf seine Entwicklung."
     }
   },
   {
@@ -6101,7 +6174,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Wingull",
-      "fr": "Goelise"
+      "fr": "Goélise",
+      "de": "Wingull"
     },
     "attacks": [
       {
@@ -6115,7 +6189,7 @@
         "text": {
           "en": "Choose up to 2 basic Water Energy cards from your hand and attach them to Pelipper. Remove 2 damage counters for each Energy card attached in this way.",
           "fr": "Choisissez jusqu'à 2 cartes Énergie de base (W) de votre main et attachez-les à Bekipan. Retirez 2 marqueurs de dégât pour chaque carte Énergie attachée de cette façon.",
-          "de": "Wähle bis zu 2 -Basis-Energiekarten von deiner Hand und lege sie an Pelipper an. Entferne für jede so angelegte Energiekarte 2 Schadensmarken von Pelipper."
+          "de": "Wähle bis zu 2 {W}-Basis-Energiekarten von deiner Hand und lege sie an Pelipper an. Entferne für jede so angelegte Energiekarte 2 Schadensmarken von Pelipper."
         }
       },
       {
@@ -6151,7 +6225,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It dips its large bill in the sea, then scoops up numerous prey along with water."
+      "en": "It dips its large bill in the sea, then scoops up numerous prey along with water.",
+      "de": "Es taucht seinen großen Schnabel ins Wasser und fängt so eine Menge Beute."
     }
   },
   {
@@ -6282,7 +6357,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Porygon",
-      "fr": "Porygon"
+      "fr": "Porygon",
+      "de": "Porygon"
     },
     "attacks": [
       {
@@ -6307,7 +6383,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "With planetary development software installed, it became capable of working in space."
+      "en": "With planetary development software installed, it became capable of working in space.",
+      "de": "Interstellare Software wurde installiert, so dass dieses PKMN sich auch im All bewegen kann."
     }
   },
   {
@@ -6429,7 +6506,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It makes fur balls that crackle with static electricity. It stores them with berries in tree holes."
+      "en": "It makes fur balls that crackle with static electricity. It stores them with berries in tree holes.",
+      "de": "Es bildet ein Fellknäuel, der vor statischer Energie knistert. Es speichert die Energie in Bäumen."
     }
   },
   {
@@ -6505,7 +6583,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Glameow",
-      "fr": "Chaglam"
+      "fr": "Chaglam",
+      "de": "Charmian"
     },
     "attacks": [
       {
@@ -6522,7 +6601,7 @@
         "text": {
           "en": "Flip a coin. If heads, discard an Energy attached to the Defending Pokémon.",
           "fr": "Lancez une pièce. Si c'est face, défaussez une Énergie attachée au Pokémon Défenseur.",
-          "de": "Wirf 1 Münze. Bei \"Kopf\" lege eine Energie, die am Verteidigenden Pokémon angelegt ist, auf den Ablagestapel deines Gegners."
+          "de": "Wirf 1 Münze. Bei „Kopf“ lege eine Energie, die am Verteidigenden Pokémon angelegt ist, auf den Ablagestapel deines Gegners."
         }
       },
       {
@@ -6540,7 +6619,7 @@
         "text": {
           "en": "Flip 3 coins. This attack does 40 damage times the number of heads.",
           "fr": "Lancez 3 pièces. Cette attaque inflige 40 dégâts multipliés par le nombre de faces.",
-          "de": "Wirf 3 Münzen. Dieser Angriff fügt 40 Schadenspunkte mal der Anzahl \"Kopf\" zu."
+          "de": "Wirf 3 Münzen. Dieser Angriff fügt 40 Schadenspunkte mal der Anzahl „Kopf“ zu."
         }
       }
     ],
@@ -6552,7 +6631,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "It is a brazen brute that barges its way into another Pokémon's nest and claims it as its own."
+      "en": "It is a brazen brute that barges its way into another Pokémon's nest and claims it as its own.",
+      "de": "Dieses PKMN ist ein Grobian, der sich in die Nester anderer PKMN einnistet und sie sich damit aneignet."
     }
   },
   {
@@ -6667,7 +6747,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "A rare Pokémon discovered during a deep-sea exploration. It has not changed in over 100 million years."
+      "en": "A rare Pokémon discovered during a deep-sea exploration. It has not changed in over 100 million years.",
+      "de": "Tiefseeforscher fanden dieses seltene PKMN, das sich in 100 Mio. Jahren nicht verändert hat."
     }
   },
   {
@@ -6677,7 +6758,7 @@
     "category": "pokemon",
     "name": {
       "en": "Seviper",
-      "fr": "Seviper",
+      "fr": "Séviper",
       "de": "Vipitis"
     },
     "pokemon": [
@@ -6755,7 +6836,7 @@
         "text": {
           "en": "Flip a coin. If heads, your opponent can't play any Trainer cards from his or her hand during your opponent's next turn.",
           "fr": "Lancez une pièce. Si c'est face, votre adversaire ne peut pas jouer de cartes Dresseur de sa main lors de son prochain tour.",
-          "de": "Wirf 1 Münze. Bei \"Kopf\" kann dein Gegner in seinem nächsten Zug keine Trainerkarten von seiner Hand spielen."
+          "de": "Wirf 1 Münze. Bei „Kopf“ kann dein Gegner in seinem nächsten Zug keine Trainerkarten von seiner Hand spielen."
         }
       },
       {
@@ -6773,7 +6854,7 @@
         "text": {
           "en": "Flip a coin. If heads, this attack does 30 damage plus 30 more damage and the Defending Pokémon is now Poisoned.",
           "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 30 dégâts plus 30 dégâts supplémentaires et le Pokémon Défenseur est maintenant Empoisonné.",
-          "de": "Wirf 1 Münze. Bei \"Kopf\" fügt dieser Angriff 30 Schadenspunkte plus 30 weitere Schadenspunkte zu und das Verteidigende Pokémon ist jetzt vergiftet."
+          "de": "Wirf 1 Münze. Bei „Kopf“ fügt dieser Angriff 30 Schadenspunkte plus 30 weitere Schadenspunkte zu und das Verteidigende Pokémon ist jetzt vergiftet."
         }
       }
     ],
@@ -6785,7 +6866,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "For many generations, it has feuded with ZANGOOSE. It whets its bladed tail on rocks for battle."
+      "en": "For many generations, it has feuded with ZANGOOSE. It whets its bladed tail on rocks for battle.",
+      "de": "Seit Generationen ist es mit SENGO verfeindet. Es wetzt seinen scharfen Schweif an Felsen."
     }
   },
   {
@@ -6873,7 +6955,7 @@
         "text": {
           "en": "Flip a coin. If heads, discard an Energy attached to the Defending Pokémon.",
           "fr": "Lancez une pièce. Si c'est face, défaussez une Énergie attachée au Pokémon Défenseur.",
-          "de": "Wirf 1 Münze. Bei \"Kopf\" lege eine Energie, die am Verteidigenden Pokémon angelegt ist, auf den Ablagestapel deines Gegners."
+          "de": "Wirf 1 Münze. Bei „Kopf“ lege eine Energie, die am Verteidigenden Pokémon angelegt ist, auf den Ablagestapel deines Gegners."
         }
       },
       {
@@ -6909,7 +6991,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Despite being clad entirely in iron-hard armor, it flies at speeds over 180 mph."
+      "en": "Despite being clad entirely in iron-hard armor, it flies at speeds over 180 mph.",
+      "de": "Es wird komplett von einer eisenharten Rüstung geschützt. Wenn es fliegt, erreicht es bis zu 300 km/h."
     }
   },
   {
@@ -6985,7 +7068,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Slowpoke",
-      "fr": "Ramoloss"
+      "fr": "Ramoloss",
+      "de": "Flegmon"
     },
     "attacks": [
       {
@@ -7028,7 +7112,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "Though usually dim witted, it seems to become inspired if the SHELLDER on its tail bites down."
+      "en": "Though usually dim witted, it seems to become inspired if the SHELLDER on its tail bites down.",
+      "de": "Ein begriffsstutziges Pokémon. Beißt das MUSCHAS am Schweif zu, scheint es Intelligenz zu gewinnen."
     }
   },
   {
@@ -7104,7 +7189,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Togepi",
-      "fr": "Togepi"
+      "fr": "Togepi",
+      "de": "Togepi"
     },
     "attacks": [
       {
@@ -7153,7 +7239,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It is said to appear in front of kindly people to scatter a glowing down called \"joy dust.\""
+      "en": "It is said to appear in front of kindly people to scatter a glowing down called \"joy dust.\"",
+      "de": "Man sagt, es erscheint vor denen, die gutherzig sind, und verteilt glänzenden „Glücksstaub“."
     }
   },
   {
@@ -7215,7 +7302,7 @@
         "text": {
           "en": "You may flip a coin. If tails, this attack does nothing. If heads, this attack's base damage is 30.",
           "fr": "Vous pouvez lancer une pièce. Si c'est pile, cette attaque est sans effet. Si c'est face, les dégâts de base de cette attaque sont de 30.",
-          "de": "Du kannst 1 Münze werfen. Bei \"Zahl\" hat dieser Angriff keine Auswirkungen. Bei \"Kopf\" beträgt der Grundschaden dieses Angriffs 30 Schadenspunkte."
+          "de": "Du kannst 1 Münze werfen. Bei „Zahl“ hat dieser Angriff keine Auswirkungen. Bei „Kopf“ beträgt der Grundschaden dieses Angriffs 30 Schadenspunkte."
         }
       }
     ],
@@ -7227,7 +7314,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Shaped like ancient writing, it is a huge mystery whether language or UNOWN came first."
+      "en": "Shaped like ancient writing, it is a huge mystery whether language or UNOWN came first.",
+      "de": "Seine Form sieht aus wie antike Schrift. Was war zuerst da? Die Sprache oder ICOGNITO?"
     }
   },
   {
@@ -7372,7 +7460,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Shaped like ancient writing, it is a huge mystery whether language or UNOWN came first."
+      "en": "Shaped like ancient writing, it is a huge mystery whether language or UNOWN came first.",
+      "de": "Seine Form sieht aus wie antike Schrift. Was war zuerst da? Die Sprache oder ICOGNITO?"
     }
   },
   {
@@ -7461,7 +7550,7 @@
         "text": {
           "en": "Flip a coin. If heads, this attack does 10 damage to each of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
           "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 10 dégâts à chacun des Pokémon de Banc de votre adversaire. (Vous ne pouvez pas appliquer la Faiblesse ou la Résistance aux Pokémon de Banc).",
-          "de": "Wirf 1 Münze. Bei \"Kopf\" fügt dieser Angriff allen Pokémon auf der Bank deines Gegners 10 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
+          "de": "Wirf 1 Münze. Bei „Kopf“ fügt dieser Angriff allen Pokémon auf der Bank deines Gegners 10 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
         }
       },
       {
@@ -7487,7 +7576,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "On sunny days, it lands on beaches to bounce like a ball and play. It spouts water from its nose."
+      "en": "On sunny days, it lands on beaches to bounce like a ball and play. It spouts water from its nose.",
+      "de": "An sonnigen Tagen trifft man diese Pokémon an Stränden, wo sie wie Bälle herumhüpfen."
     }
   },
   {
@@ -7601,7 +7691,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It has feuded with SEVIPER for many generations. Its sharp claws are its biggest weapons."
+      "en": "It has feuded with SEVIPER for many generations. Its sharp claws are its biggest weapons.",
+      "de": "Seit Generationen ist es mit VIPITIS verfeindet. Seine scharfen Klauen sind seine stärksten Waffen."
     }
   },
   {
@@ -7701,7 +7792,8 @@
     "stage": "stage2",
     "evolves_from": {
       "en": "Porygon2",
-      "fr": "Porygon2"
+      "fr": "Porygon2",
+      "de": "Porygon2"
     },
     "attacks": [
       {
@@ -7718,7 +7810,7 @@
         "text": {
           "en": "Flip 3 coins. This attack does 40 damage times the number of heads.",
           "fr": "Lancez 3 pièces. Cette attaque inflige 40 dégâts multipliés par le nombre de faces.",
-          "de": "Wirf 3 Münzen. Dieser Angriff fügt 40 Schadenspunkte mal der Anzahl \"Kopf\" zu."
+          "de": "Wirf 3 Münzen. Dieser Angriff fügt 40 Schadenspunkte mal der Anzahl „Kopf“ zu."
         }
       }
     ],
@@ -7730,7 +7822,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "Additional software was installed to make it a better Pokémon. It began acting oddly, however."
+      "en": "Additional software was installed to make it a better Pokémon. It began acting oddly, however.",
+      "de": "Zusätzliche Software wurde installiert, um das PKMN zu verbessern. Seitdem benimmt es sich seltsam."
     }
   },
   {
@@ -8009,7 +8102,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It moves by spinning on its foot. It is a rare Pokémon that was discovered in ancient ruins."
+      "en": "It moves by spinning on its foot. It is a rare Pokémon that was discovered in ancient ruins.",
+      "de": "Es bewegt sich, indem es sich auf seinem Fuß dreht. Ein seltenes PKMN, das in alten Ruinen lebte."
     }
   },
   {
@@ -8143,7 +8237,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It has a flotation sac that is like an inflatable collar. It floats on water with its head out."
+      "en": "It has a flotation sac that is like an inflatable collar. It floats on water with its head out.",
+      "de": "Es hat eine Art Rettungsring um den Hals. Wenn es schwimmt, gerät sein Kopf niemals unter Wasser."
     }
   },
   {
@@ -8231,7 +8326,7 @@
         "text": {
           "en": "If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing.",
           "fr": "Si le Pokémon Défenseur essaye d'attaquer lors du prochain tour de votre adversaire, celui-ci lance une pièce. Si c'est pile, cette attaque est sans effet.",
-          "de": "Falls das Verteidigende Pokémon während des nächsten Zuges deines Gegners angreift, wirft dein Gegner 1 Münze. Bei \"Zahl\" hat dieser Angriff keine Auswirkungen."
+          "de": "Falls das Verteidigende Pokémon während des nächsten Zuges deines Gegners angreift, wirft dein Gegner 1 Münze. Bei „Zahl“ hat dieser Angriff keine Auswirkungen."
         }
       },
       {
@@ -8266,7 +8361,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "By storing water in its body, this desert dweller can survive 30 days without water."
+      "en": "By storing water in its body, this desert dweller can survive 30 days without water.",
+      "de": "Dieser Wüstenbewohner speichert Wasser in seinem Körper. So kann er 30 Tage ohne Wasser überleben."
     }
   },
   {
@@ -8362,7 +8458,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It releases a stench from its red antenna to repel enemies. It grows by molting repeatedly."
+      "en": "It releases a stench from its red antenna to repel enemies. It grows by molting repeatedly.",
+      "de": "Seine roten Antennen sondern einen Gestank ab, der Feinde verjagt. Es wächst, indem es sich häutet."
     }
   },
   {
@@ -8450,7 +8547,7 @@
         "text": {
           "en": "Flip a coin. If tails, this attack does nothing. If heads, the Defending Pokémon is now Paralyzed.",
           "fr": "Lancez une pièce. Si c'est pile, cette attaque est sans effet. Si c'est face, le Pokémon Défenseur est maintenant Paralysé.",
-          "de": "Wirf 1 Münze. Bei \"Zahl\" hat dieser Angriff keine Auswirkungen. Bei \"Kopf\" ist das Verteidigende Pokémon jetzt gelähmt."
+          "de": "Wirf 1 Münze. Bei „Zahl“ hat dieser Angriff keine Auswirkungen. Bei „Kopf“ ist das Verteidigende Pokémon jetzt gelähmt."
         }
       },
       {
@@ -8475,7 +8572,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It makes a single pearl during its lifetime. The pearl is said to amplify psychic power."
+      "en": "It makes a single pearl during its lifetime. The pearl is said to amplify psychic power.",
+      "de": "In seinem Leben erschafft es eine einzige Perle. Diese soll Psycho-Kräfte verstärken."
     }
   },
   {
@@ -8588,7 +8686,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It can tell what people are dreaming by sniffing with its big nose. It loves fun dreams."
+      "en": "It can tell what people are dreaming by sniffing with its big nose. It loves fun dreams.",
+      "de": "Mit seiner großen Nase kann es die Träume anderer erkennen. Es liebt lustige Träume."
     }
   },
   {
@@ -8692,7 +8791,7 @@
         "text": {
           "en": "Flip a coin. If heads, the Defending Pokémon is now Poisoned.",
           "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Empoisonné,",
-          "de": "Wirf 1 Münze. Bei \"Kopf\" ist das Verteidigende Pokémon jetzt vergiftet."
+          "de": "Wirf 1 Münze. Bei „Kopf“ ist das Verteidigende Pokémon jetzt vergiftet."
         }
       }
     ],
@@ -8704,7 +8803,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "It sneaks through grass without making a sound and strikes unsuspecting prey from behind."
+      "en": "It sneaks through grass without making a sound and strikes unsuspecting prey from behind.",
+      "de": "Es bewegt sich ohne einen Laut durch das Gras und greift seine ahnungslose Beute von hinten an."
     }
   },
   {
@@ -8816,7 +8916,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It is famous for its shabby appearance. While populous, they tend to cluster in set locations."
+      "en": "It is famous for its shabby appearance. While populous, they tend to cluster in set locations.",
+      "de": "Seine lumpige Gestalt ist berühmt. Es lebt mit anderen in Gruppen an bestimmten Orten."
     }
   },
   {
@@ -8929,7 +9030,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It claws if displeased and purrs when affectionate. Its fickleness is very popular among some."
+      "en": "It claws if displeased and purrs when affectionate. Its fickleness is very popular among some.",
+      "de": "Es schlägt mit Krallen zu oder schnurrt, je nachdem, ob es gerade wütend oder zutraulich ist."
     }
   },
   {
@@ -9017,7 +9119,7 @@
         "text": {
           "en": "Flip a coin. If tails, discard a Fire Energy attached to Houndour.",
           "fr": "Lancez une pièce. Si c'est pile, défaussez une Énergie Fire attachée à Malosse.",
-          "de": "Wirf 1 Münze. Bei \"Zahl\" entferne 1 -Energie, die an Hunduster angelegt ist, und lege sie auf deinen Ablagestapel."
+          "de": "Wirf 1 Münze. Bei „Zahl“ entferne 1 {R}-Energie, die an Hunduster angelegt ist, und lege sie auf deinen Ablagestapel."
         }
       },
       {
@@ -9042,7 +9144,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It conveys its feelings using different cries. It works in a pack to cleverly take down prey."
+      "en": "It conveys its feelings using different cries. It works in a pack to cleverly take down prey.",
+      "de": "Durch unterschiedliche Schreie drückt es seine Gefühle aus. Diese PKMN jagen im Verbund nach Beute."
     }
   },
   {
@@ -9148,7 +9251,7 @@
         "text": {
           "en": "Flip a coin. If heads, this attack does 30 damage plus 30 more damage and the Defending Pokémon is now Paralyzed.",
           "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 30 dégâts plus 30 dégâts supplémentaires et le Pokémon Défenseur est maintenant Paralysé.",
-          "de": "Wirf 1 Münze. Bei \"Kopf\" fügt dieser Angriff 30 Schadenspunkte plus 30 weitere Schadenspunkte zu und das Verteidigende Pokémon ist jetzt gelähmt."
+          "de": "Wirf 1 Münze. Bei „Kopf“ fügt dieser Angriff 30 Schadenspunkte plus 30 weitere Schadenspunkte zu und das Verteidigende Pokémon ist jetzt gelähmt."
         }
       }
     ],
@@ -9166,7 +9269,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Its body is composed of plasma. It is known to infiltrate electronic devices and wreak havoc."
+      "en": "Its body is composed of plasma. It is known to infiltrate electronic devices and wreak havoc.",
+      "de": "Sein Körper besteht aus Plasma. Mit ihm kann es in elektrische Geräte eindringen und für Chaos sorgen."
     }
   },
   {
@@ -9264,7 +9368,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It has a soft and bouncy body. Once it starts bouncing, it becomes impossible to stop."
+      "en": "It has a soft and bouncy body. Once it starts bouncing, it becomes impossible to stop.",
+      "de": "Es hat einen weichen, elastischen Körper. Hat es einmal angefangen zu hüpfen, ist es nicht zu stoppen."
     }
   },
   {
@@ -9365,7 +9470,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "With its sweet aroma, it guides VOLBEAT to draw signs with light in the night sky."
+      "en": "With its sweet aroma, it guides VOLBEAT to draw signs with light in the night sky.",
+      "de": "Sein süßer Duft leitet VOLBEAT an, Zeichen aus Licht an den Nachthimmel zu malen."
     }
   },
   {
@@ -9482,7 +9588,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "When it wavers its big, round eyes, it begins singing a lullaby that makes everyone drowsy."
+      "en": "When it wavers its big, round eyes, it begins singing a lullaby that makes everyone drowsy.",
+      "de": "Sobald es mit seinen großen, runden Augen rollt, fängt es an, ein Lied zu singen und jeder schläft ein."
     }
   },
   {
@@ -9558,7 +9665,8 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Weedle",
-      "fr": "Aspicot"
+      "fr": "Aspicot",
+      "de": "Hornliu"
     },
     "attacks": [
       {
@@ -9600,7 +9708,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "While awaiting evolution, it hides from predators under leaves and in nooks of branches."
+      "en": "While awaiting evolution, it hides from predators under leaves and in nooks of branches.",
+      "de": "Während es auf seine Entwicklung wartet, versteckt es sich unter Blättern und zwischen Ästen."
     }
   },
   {
@@ -9701,7 +9810,7 @@
         "text": {
           "en": "The Defending Pokémon is now Poisoned. If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing.",
           "fr": "Le Pokémon Défenseur est maintenant Empoisonné. S'il essaye d'attaquer lors du prochain tour de votre adversaire, celui-ci lance une pièce. Si c'est pile, cette attaque est sans effet.",
-          "de": "Das Verteidigende Pokémon ist jetzt vergiftet. Falls das Verteidigende Pokémon während des nächsten Zuges deines Gegners angreift, wirft dein Gegner 1 Münze. Bei \"Zahl\" hat dieser Angriff keine Auswirkungen."
+          "de": "Das Verteidigende Pokémon ist jetzt vergiftet. Falls das Verteidigende Pokémon während des nächsten Zuges deines Gegners angreift, wirft dein Gegner 1 Münze. Bei „Zahl“ hat dieser Angriff keine Auswirkungen."
         }
       }
     ],
@@ -9713,7 +9822,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "Lighter-than-air gases in its body keep it aloft. The gases not only smell, they are also explosive."
+      "en": "Lighter-than-air gases in its body keep it aloft. The gases not only smell, they are also explosive.",
+      "de": "Gase, die leichter als Luft sind, lassen es schweben. Diese Gase stinken und sind explosiv."
     }
   },
   {
@@ -9822,7 +9932,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "It lives in burrows dug on sandy beaches. Its pincers fully grow back if they are broken in battle."
+      "en": "It lives in burrows dug on sandy beaches. Its pincers fully grow back if they are broken in battle.",
+      "de": "Es lebt in Höhlen am Strand. Seine Scheren wachsen nach, wenn es sie im Kampf verliert."
     }
   },
   {
@@ -9832,7 +9943,7 @@
     "category": "pokemon",
     "name": {
       "en": "Lunatone",
-      "fr": "Seleroc",
+      "fr": "Séléroc",
       "de": "Lunastein"
     },
     "pokemon": [
@@ -9922,7 +10033,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Because it turns active on nights of the full moon, it is said to have some link to the lunar phases."
+      "en": "Because it turns active on nights of the full moon, it is said to have some link to the lunar phases.",
+      "de": "Da es in Vollmondnächten aktiv wird, sagt man ihm nach, mit den Mondphasen in Verbindung zu stehen."
     }
   },
   {
@@ -10038,7 +10150,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It lives in warm seas. It is said that a couple finding this Pokémon will be blessed with eternal love."
+      "en": "It lives in warm seas. It is said that a couple finding this Pokémon will be blessed with eternal love.",
+      "de": "Es lebt in warmen Meeren. Man sagt, dass Verliebte, die es sehen, mit ewiger Liebe gesegnet sind."
     }
   },
   {
@@ -10139,7 +10252,7 @@
         "text": {
           "en": "Flip a coin. If tails, this attack does nothing. If heads, discard an Energy card attached to the Defending Pokémon.",
           "fr": "Lancez une pièce. Si c'est pile, cette attaque est sans effet. Si c'est face, défaussez une carte Énergie attachée au Pokémon Défenseur.",
-          "de": "Wirf 1 Münze. Bei \"Zahl\" hat dieser Angriff keine Auswirkungen. Bei \"Kopf\" entferne 1 Energiekarte, die an das Verteidigende Pokémon angelegt ist, und lege sie auf den Ablagestapel deines Gegners."
+          "de": "Wirf 1 Münze. Bei „Zahl“ hat dieser Angriff keine Auswirkungen. Bei „Kopf“ entferne 1 Energiekarte, die an das Verteidigende Pokémon angelegt ist, und lege sie auf den Ablagestapel deines Gegners."
         }
       }
     ],
@@ -10151,7 +10264,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "It toughens its body by slamming into thick trees. Many snapped trees can be found near its nest."
+      "en": "It toughens its body by slamming into thick trees. Many snapped trees can be found near its nest.",
+      "de": "Es stärkt seinen Körper, indem es gegen Bäume rennt. In seiner Nähe finden sich viele umgekippte Bäume."
     }
   },
   {
@@ -10264,7 +10378,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It lives in treetop colonies. If one becomes enraged, the whole colony rampages for no reason."
+      "en": "It lives in treetop colonies. If one becomes enraged, the whole colony rampages for no reason.",
+      "de": "Es lebt mit anderen in Baumkronen. Wird eines von ihnen wütend, werden alle anderen auch wütend."
     }
   },
   {
@@ -10340,7 +10455,8 @@
     "stage": "stage2",
     "evolves_from": {
       "en": "Grovyle",
-      "fr": "Massko"
+      "fr": "Massko",
+      "de": "Reptain"
     },
     "attacks": [
       {
@@ -10359,7 +10475,7 @@
         "text": {
           "en": "Flip a coin. If heads, this attack does 50 damage plus 20 more damage.",
           "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 50 dégâts plus 20 dégâts supplémentaires.",
-          "de": "Wirf 1 Münze. Bei \"Kopf\" fügt dieser Angriff 50 Schadenspunkte plus 20 weitere Schadenspunkte zu."
+          "de": "Wirf 1 Münze. Bei „Kopf“ fügt dieser Angriff 50 Schadenspunkte plus 20 weitere Schadenspunkte zu."
         }
       }
     ],
@@ -10377,7 +10493,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "The leaves that grow on its arms can slice down thick trees. It is without peer in jungle combat."
+      "en": "The leaves that grow on its arms can slice down thick trees. It is without peer in jungle combat.",
+      "de": "Die Blätter an seinen Armen können dicke Bäume fällen. Im Dschungelkampf gibt es kein stärkeres PKMN."
     }
   },
   {
@@ -10479,7 +10596,7 @@
         "text": {
           "en": "Flip 2 coins. This attack does 30 damage plus 20 more damage for each heads.",
           "fr": "Lancez 2 pièces. Cette attaque inflige 30 dégâts plus 20 dégâts supplémentaires pour chaque face.",
-          "de": "Wirf 2 Münzen. Dieser Angriff fügt 30 Schadenspunkte plus 20 Schadenspunkte mal der Anzahl \"Kopf\" zu."
+          "de": "Wirf 2 Münzen. Dieser Angriff fügt 30 Schadenspunkte plus 20 Schadenspunkte mal der Anzahl „Kopf“ zu."
         }
       }
     ],
@@ -10491,7 +10608,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "To alert it, the fin on its head senses the flow of water. It has the strength to heft boulders."
+      "en": "To alert it, the fin on its head senses the flow of water. It has the strength to heft boulders.",
+      "de": "Die Flosse auf seinem Kopf prüft die Strömung des Wassers. Dieses PKMN kann Felsen heben."
     }
   },
   {
@@ -10604,7 +10722,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "The world's first artificially created Pokémon. It can travel through electronic space."
+      "en": "The world's first artificially created Pokémon. It can travel through electronic space.",
+      "de": "Das erste künstlich erzeugte PKMN der Welt. Es kann durch elektronischen Raum reisen."
     }
   },
   {
@@ -10720,7 +10839,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "Although slow, it is skilled at fishing with its tail. It does not feel pain if its tail is bitten."
+      "en": "Although slow, it is skilled at fishing with its tail. It does not feel pain if its tail is bitten.",
+      "de": "Es ist langsam, hat aber ein Talent, mit seinem Schweif zu fischen. Beißt etwas an, tut es ihm nicht weh."
     }
   },
   {
@@ -10821,7 +10941,7 @@
         "text": {
           "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
           "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Paralysé.",
-          "de": "Wirf 1 Münze. Bei \"Kopf\" ist das Verteidigende Pokémon jetzt gelähmt."
+          "de": "Wirf 1 Münze. Bei „Kopf“ ist das Verteidigende Pokémon jetzt gelähmt."
         }
       }
     ],
@@ -10833,7 +10953,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "Its body is made of magma. If it doesn't keep moving, its body will cool and harden."
+      "en": "Its body is made of magma. If it doesn't keep moving, its body will cool and harden.",
+      "de": "Sein Körper besteht aus Magma. Bleibt es nicht ständig in Bewegung, kühlt es aus und verhärtet sich."
     }
   },
   {
@@ -10947,7 +11068,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Small Pokémon flee from its scary face. It is, however, considered by women to be cute."
+      "en": "Small Pokémon flee from its scary face. It is, however, considered by women to be cute.",
+      "de": "Kleine PKMN fliehen beim Anblick seines Gesichts. Frauen aber finden es niedlich."
     }
   },
   {
@@ -11047,7 +11169,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "A new Pokémon species, rumored to be from the sun. It gives off light while spinning."
+      "en": "A new Pokémon species, rumored to be from the sun. It gives off light while spinning.",
+      "de": "Eine neue PKMN-Spezies, von der man annimmt, sie käme von der Sonne. Sie strahlt Licht ab."
     }
   },
   {
@@ -11135,7 +11258,7 @@
         "text": {
           "en": "Flip a coin. If heads, prevent all effects of an attack, including damage, done to Swablu during your opponent's next turn.",
           "fr": "Lancez une pièce. Si c'est face, prévenez tous les effets d'une attaque, dégâts inclus, infligés à Tylton lors du prochain tour de votre adversaire.",
-          "de": "Wirf 1 Münze. Bei \"Kopf\" verhindere während des nächsten Zuges deines Gegners alle Effekte eines Angriffs, einschließlich Schaden, die Wablu zugefügt würden."
+          "de": "Wirf 1 Münze. Bei „Kopf“ verhindere während des nächsten Zuges deines Gegners alle Effekte eines Angriffs, einschließlich Schaden, die Wablu zugefügt würden."
         }
       },
       {
@@ -11170,7 +11293,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Its wings are like cotton tufts. If it perches on someone's head, it looks like a cotton hat."
+      "en": "Its wings are like cotton tufts. If it perches on someone's head, it looks like a cotton hat.",
+      "de": "Seine Flügel sehen aus wie Baumwolle. Legt es sie jemandem auf den Kopf, sehen sie wie ein Wollhut aus."
     }
   },
   {
@@ -11275,7 +11399,7 @@
         "text": {
           "en": "Does 20 damage plus 10 more damage for each Colorless Energy in the Defending Pokémon's Retreat Cost (after applying effects to the Retreat Cost).",
           "fr": "Inflige 20 dégâts plus 10 dégâts supplémentaires pour chaque Énergie Colorless dans le Coût de retraite du Pokémon Défenseur (après application des effets sur le Coût de retraite).",
-          "de": "Dieser Angriff fügt 20 Schadenspunkte plus 10 weitere Schadenspunkte für jede -Energie in den Rückzugskosten des Verteidigenden Pokémon zu (nachdem Effekte auf die Rückzugskosten verrechnet wurden)."
+          "de": "Dieser Angriff fügt 20 Schadenspunkte plus 10 weitere Schadenspunkte für jede {C}-Energie in den Rückzugskosten des Verteidigenden Pokémon zu (nachdem Effekte auf die Rückzugskosten verrechnet wurden)."
         }
       }
     ],
@@ -11287,7 +11411,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "It is shrouded by blue vines. No one has seen the face hidden behind this growth of vines."
+      "en": "It is shrouded by blue vines. No one has seen the face hidden behind this growth of vines.",
+      "de": "Es ist von blauen Ranken umgeben. Niemand hat jemals das Gesicht dieses Pokémon gesehen."
     }
   },
   {
@@ -11391,7 +11516,7 @@
         "text": {
           "en": "Flip a coin. If heads, search your deck for a Pokémon, show it to your opponent, and put it into your hand. Shuffle your deck afterward.",
           "fr": "Lancez une pièce. Si c'est face, choisissez un Pokémon dans votre deck, montrez-le à votre adversaire et placez-le dans votre main. Ensuite, mélangez votre deck.",
-          "de": "Wirf 1 Münze. Bei \"Kopf\" durchsuche dein Deck nach einer Pokémon-Karte, zeige sie deinem Gegner und nimm sie auf die Hand. Mische dein Deck danach."
+          "de": "Wirf 1 Münze. Bei „Kopf“ durchsuche dein Deck nach einer Pokémon-Karte, zeige sie deinem Gegner und nimm sie auf die Hand. Mische dein Deck danach."
         }
       }
     ],
@@ -11403,7 +11528,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Its shell is said to be stuffed with happiness that it shares with kindhearted people."
+      "en": "Its shell is said to be stuffed with happiness that it shares with kindhearted people.",
+      "de": "Seine Schale ist mit Glücksgefühlen gefüllt, die es mit gutherzigen Lebewesen teilt."
     }
   },
   {
@@ -11513,7 +11639,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "A fire burns inside, so it feels very warm to hug. It launches fireballs of 1,800 degrees F."
+      "en": "A fire burns inside, so it feels very warm to hug. It launches fireballs of 1,800 degrees F.",
+      "de": "In seinem Inneren lodert ein Feuer. Es schleudert 1 000 Grad heiße Feuerbälle."
     }
   },
   {
@@ -11589,7 +11716,8 @@
     "stage": "stage2",
     "evolves_from": {
       "en": "Marshtomp",
-      "fr": "Flobio"
+      "fr": "Flobio",
+      "de": "Moorabbel"
     },
     "attacks": [
       {
@@ -11620,7 +11748,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "It can swim while towing a large ship. It bashes down foes with a swing of its thick arms."
+      "en": "It can swim while towing a large ship. It bashes down foes with a swing of its thick arms.",
+      "de": "Es kann im Schwimmen ein großes Schiff ziehen. Seine Gegner schlägt es mit Schlägen seiner Arme zurück."
     }
   },
   {
@@ -11743,7 +11872,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "The soles of its feet are covered by countless tiny spikes, enabling it to walk on walls and ceilings."
+      "en": "The soles of its feet are covered by countless tiny spikes, enabling it to walk on walls and ceilings.",
+      "de": "Seine Fußsohlen sind mit kleinen Stacheln bedeckt, so dass es an Wänden und Decken Halt findet."
     }
   },
   {
@@ -11818,7 +11948,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Shaped like ancient writing, it is a huge mystery whether language or UNOWN came first."
+      "en": "Shaped like ancient writing, it is a huge mystery whether language or UNOWN came first.",
+      "de": "Seine Form sieht aus wie antike Schrift. Was war zuerst da? Die Sprache oder ICOGNITO?"
     }
   },
   {
@@ -11907,7 +12038,7 @@
         "text": {
           "en": "Flip a coin. If heads, the Defending Pokémon is now Confused.",
           "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Confus.",
-          "de": "Wirf 1 Münze. Bei \"Kopf\" ist das Verteidigende Pokémon jetzt verwirrt."
+          "de": "Wirf 1 Münze. Bei „Kopf“ ist das Verteidigende Pokémon jetzt verwirrt."
         }
       }
     ],
@@ -11919,7 +12050,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It communicates with others by lighting up its rear at night. It loves ILLUMISE's sweet aroma."
+      "en": "It communicates with others by lighting up its rear at night. It loves ILLUMISE's sweet aroma.",
+      "de": "Es kommuniziert mit anderen, indem es sein Hinterteil zum Leuchten bringt. Es liebt ILLUMISEs Duft."
     }
   },
   {
@@ -12050,7 +12182,7 @@
         "text": {
           "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
           "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Paralysé.",
-          "de": "Wirf 1 Münze. Bei \"Kopf\" ist das Verteidigende Pokémon jetzt gelähmt."
+          "de": "Wirf 1 Münze. Bei „Kopf“ ist das Verteidigende Pokémon jetzt gelähmt."
         }
       }
     ],
@@ -12062,7 +12194,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It eats its weight in leaves every day. It fends off attackers with the needle on its head."
+      "en": "It eats its weight in leaves every day. It fends off attackers with the needle on its head.",
+      "de": "Es frisst täglich sein Gewicht in Blättern. Die Nadel auf seinem Kopf dient der Verteidigung."
     }
   },
   {
@@ -12160,7 +12293,7 @@
         "text": {
           "en": "Flip a coin. If heads, this attack does 10 damage to each of your opponent's Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
           "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 10 dégâts à chacun des Pokémon de votre adversaire. (Vous ne pouvez pas appliquer la Faiblesse ou la Résistance aux Pokémon de Banc).",
-          "de": "Wirf 1 Münze. Bei \"Kopf\" fügt dieser Angriff allen Pokémon deines Gegners 10 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
+          "de": "Wirf 1 Münze. Bei „Kopf“ fügt dieser Angriff allen Pokémon deines Gegners 10 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
         }
       }
     ],
@@ -12172,7 +12305,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Usually, its cries are like quiet murmurs.  If frightened, it shrieks at the same volume as a jet plane."
+      "en": "Usually, its cries are like quiet murmurs.  If frightened, it shrieks at the same volume as a jet plane.",
+      "de": "Normalerweise klingen seine Rufe wie Gemurmel. Hat es aber Angst, ist es so laut wie ein Flugzeug."
     }
   },
   {
@@ -12182,7 +12316,7 @@
     "category": "pokemon",
     "name": {
       "en": "Wingull",
-      "fr": "Goelise",
+      "fr": "Goélise",
       "de": "Wingull"
     },
     "pokemon": [
@@ -12287,7 +12421,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It makes its nest on steep sea cliffs. Riding updrafts, it soars to great heights."
+      "en": "It makes its nest on steep sea cliffs. Riding updrafts, it soars to great heights.",
+      "de": "Es baut sein Nest auf steilen Klippen. Es nutzt die Aufwinde, um in größerer Höhe fliegen zu können."
     }
   },
   {
@@ -12391,7 +12526,7 @@
         "text": {
           "en": "Flip 2 coins. This attack does 10 damage times the number of heads.",
           "fr": "Lancez 2 pièces. Cette attaque inflige 10 dégâts multipliés par le nombre de faces.",
-          "de": "Wirf 2 Münzen. Dieser Angriff fügt 10 Schadenspunkte mal der Anzahl \"Kopf\" zu."
+          "de": "Wirf 2 Münzen. Dieser Angriff fügt 10 Schadenspunkte mal der Anzahl „Kopf“ zu."
         }
       }
     ],
@@ -12403,7 +12538,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It walks in zigzag fashion. It is good at finding items in the grass and even in the ground."
+      "en": "It walks in zigzag fashion. It is good at finding items in the grass and even in the ground.",
+      "de": "Es läuft im Zickzack. Es hat das Talent, Items im Gras, aber auch im Boden, zu finden."
     }
   },
   {
@@ -12474,7 +12610,7 @@
     "rules_text": {
       "en": "Attach Amulet Coin to 1 of your Pokémon that doesn't already have a Pokémon Tool attached to it. If that Pokémon is Knocked Out, discard this card. If the Pokémon Amulet Coin is attached to is your Active Pokémon at the end of your turn, draw a card.",
       "fr": "Attachez Pièce rune à 1 de vos Pokémon qui ne posséde pas déjà d'Outil Pokémon. Si ce Pokémon est mis K.O, défaussez cette carte.",
-      "de": "Wenn das Pokémon, an das Münzamulett angelegt ist, am Ende deines Zuges dein Aktives Pokémon ist, ziehe 1 Karte."
+      "de": "Lege Münzamulett an 1 deiner Pokémon an, an das noch keine Pokémon-Ausrüstung angelegt ist. Wenn dieses Pokémon kampfunfähig wird, lege Münzamulett auf den Ablagestapel. Wenn das Pokémon, an dem Münzamulett angelegt ist, am Ende deines Zuges dein Aktives Pokémon ist, ziehe 1 Karte."
     }
   },
   {
@@ -12597,7 +12733,7 @@
     "rules_text": {
       "en": "You can play only one Supporter card each turn. When you play this card, put it next to your Active Pokémon. When your turn ends, discard this card. Discard up to 2 cards from your hand. If you discard 1 card, draw 3 cards. If you discard 2 cards, draw 4 cards.",
       "fr": "Défaussez jusqu'à 2 cartes de votre main. Si vous défaussez 1 carte, piochez 3 cartes. Si vous défaussez 2 cartes, piochez 4 cartes.",
-      "de": "Lege bis zu 2 Karten von deiner Hand auf deinen Ablagestapel. Wenn du auf diese Weise 1 Karte auf deinen Ablagestapel gelegt hast, ziehe 3 Karten. Wenn du auf diese Weise 2 Karte auf deinen Ablagestapel gelegt hast, ziehe 4 Karten."
+      "de": "Du kannst in jedem Zug nur eine Unterstützerkarte spielen. Wenn du diese Karte ausspielst, lege sie neben dein Aktives Pokémon. Lege diese Karte am Ende deines Zuges auf deinen Ablagestapel. Lege bis zu 2 Karten von deiner Hand auf deinen Ablagestapel. Wenn du auf diese Weise 1 Karte auf deinen Ablagestapel gelegt hast, ziehe 3 Karten. Wenn du auf diese Weise 2 Karten auf deinen Ablagestapel gelegt hast, ziehe 4 Karten."
     }
   },
   {
@@ -12668,7 +12804,7 @@
     "rules_text": {
       "en": "Attach Leftovers to 1 of your Pokémon that doesn't already have a Pokémon Tool attached to it. If that Pokémon is Knocked Out, discard this card. If the Pokémon Leftovers is attached to is your Active Pokémon at the end of your turn, remove 1 damage counter from the Pokémon.",
       "fr": "Attachez Pièce rune à 1 de vos Pokémon qui ne posséde pas déjà d'Outil Pokémon. Si ce Pokémon est mis K.O, défaussez cette carte.",
-      "de": "Wenn das Pokémon, an das Überreste angelegt ist, am Ende deines Zuges dein Aktives Pokémon ist, entferne 1 Schadensmarke von diesem Pokémon."
+      "de": "Lege Überreste an 1 deiner Pokémon an, an das noch keine Pokémon-Ausrüstung angelegt ist. Wenn dieses Pokémon kampfunfähig wird, lege Überreste auf den Ablagestapel. Wenn das Pokémon, an dem Überreste angelegt ist, am Ende deines Zuges dein Aktives Pokémon ist, entferne 1 Schadensmarke von diesem Pokémon."
     }
   }
 ]

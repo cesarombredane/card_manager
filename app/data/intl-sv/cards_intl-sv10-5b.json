@@ -2145,7 +2145,7 @@
         "cardmarket": {
           "product_id": 835069,
           "currency": "EUR",
-          "updated_at": "2026-07-26T02:44:32+0200",
+          "updated_at": "2026-08-25T02:48:52+0200",
           "price_kind": "standard",
           "average": null,
           "low": null,
@@ -2170,7 +2170,7 @@
         "cardmarket": {
           "product_id": 835069,
           "currency": "EUR",
-          "updated_at": "2026-07-26T02:44:32+0200",
+          "updated_at": "2026-08-25T02:48:52+0200",
           "price_kind": "standard",
           "average": null,
           "low": null,
@@ -3606,7 +3606,7 @@
         "text": {
           "en": "This attack does 30 damage for each Item card in your opponent's discard pile.",
           "fr": "Cette attaque inflige 30 dégâts pour chaque carte Objet dans la pile de défausse de votre adversaire.",
-          "de": "Diese Attacke fügt für jede Itemkarte im Ablagestapel deines Gegners 30 Schadenspunkte zu.",
+          "de": "Diese Attacke fügt 30 für jede Itemkarte im Ablagestapel deines Gegners 30 Schadenspunkte zu.",
           "it": "Questo attacco infligge 30 danni per ogni carta Strumento nella pila degli scarti del tuo avversario.",
           "pt-BR": "Este ataque causa 30 pontos de dano para cada carta de Item na pilha de descarte do seu oponente.",
           "es": "Este ataque hace 30 puntos de daño por cada carta de Objeto en la pila de descartes de tu rival."
@@ -6344,7 +6344,7 @@
         "text": {
           "en": "This attack does 40 more damage for each of your Evolution Pokémon in play.",
           "fr": "Cette attaque inflige 40 dégâts supplémentaires pour chacun de vos Pokémon Évolutifs en jeu.",
-          "de": "Diese Attacke fügt für jedes deiner Entwicklungs-Pokémon im Spiel 40 Schadenspunkte mehr zu.",
+          "de": "Diese Attacke fügt für jedes deiner Entwicklungs-Pokémon im Spiel 40 Schadenspunkt mehr zu.",
           "it": "Questo attacco infligge 40 danni in più per ogni tuo Pokémon Evoluzione in gioco.",
           "pt-BR": "Este ataque causa 40 pontos de dano a mais para cada um dos seus Pokémon de Evolução em jogo.",
           "es": "Este ataque hace 40 puntos de daño más por cada uno de tus Pokémon Evolución en juego."
@@ -12731,7 +12731,7 @@
     "rules_text": {
       "en": "The Retreat Cost of the Pokémon this card is attached to is {C}{C} less.",
       "fr": "Le Coût de Retraite du Pokémon auquel cette carte est attachée est diminué de {C}{C}.",
-      "de": "Die Rückzugskosten des Pokémon, an das diese Karte angelegt ist, verringern sich um {C}{C}.",
+      "de": "Die Rückzugskosten des Pokémon, an das diese Karte angelegt ist, verringern sich um {C} {C}. Du kannst während deines Zuges beliebig viele Pokémon-Ausrüstungen an deine Pokémon anlegen. Du kannst an jedes Pokémon nur 1 Pokémon-Ausrüstung anlegen, und sie bleibt angelegt.",
       "it": "Il costo di ritirata del Pokémon a cui è assegnata questa carta è ridotto di {C}{C}.",
       "pt-BR": "O custo de Recuo do Pokémon ao qual esta carta está ligada é {C}{C} a menos.",
       "es": "El Coste de Retirada del Pokémon al que esté unida esta carta es de {C}{C} menos."
@@ -12832,11 +12832,12 @@
         }
       }
     ],
+    "hp": 60,
     "trainer_type": "item",
     "rules_text": {
       "en": "Play this card as if it were a 60-HP Basic {C} Pokémon. This card can't be affected by any Special Conditions and can't retreat.\n\nAt any time during your turn, you may discard this card from play.",
       "fr": "Jouez cette carte comme si c'était un Pokémon {C} de base avec 60 PV. Cette carte ne peut être affectée par aucun État Spécial et ne peut pas battre en retraite.\n\nÀ tout moment pendant votre tour, vous pouvez défausser cette carte du jeu.",
-      "de": "Spiele diese Karte, als ob sie ein Basis-{C}-Pokémon mit 60 KP wäre. Diese Karte kann von keinen Speziellen Zuständen betroffen werden und sich nicht zurückziehen.\n\nDu kannst diese Karte jederzeit während deines Zuges aus dem Spiel nehmen und auf deinen Ablagestapel legen.",
+      "de": "Spiele diese Karte, als ob sie ein Basis-{C}-Pokémon mit 60 KP wäre. Diese Karte kann von keinen Speziellen Zuständen betroffen werden und sich nicht zurückziehen. Du kannst diese Karte jederzeit während deines Zuges aus dem Spiel nehmen und auf deinen Ablagestapel legen. Du kannst während deines Zuges beliebig viele Itemkarten spielen.",
       "it": "Gioca questa carta come se fosse un Pokémon Base {C} con 60 PS. Questa carta non può essere influenzata da condizioni speciali e non può ritirarsi.\n\nDurante il tuo turno, in qualsiasi momento, puoi scartare questa carta dal gioco.",
       "pt-BR": "Jogue esta carta como se fosse um Pokémon {C} Básico com PS 60. Esta carta não pode ser afetada por quaisquer Condições Especiais e não pode recuar.\n\nA qualquer momento durante o seu turno, você poderá descartar esta carta do jogo.",
       "es": "Juega esta carta como si fuera un Pokémon {C} Básico de 60 PS. Esta carta no puede verse afectada por ninguna Condición Especial y no puede retirarse.\n\nEn cualquier momento durante tu turno, puedes descartar esta carta del juego."
@@ -12941,7 +12942,7 @@
     "rules_text": {
       "en": "Flip 2 coins. If both of them are heads, search your deck for a Basic Energy card and attach it to 1 of your Pokémon. Then, shuffle your deck.",
       "fr": "Lancez 2 pièces. Si vous obtenez 2 côtés face, cherchez dans votre deck une carte Énergie de base et attachez-la à l'un de vos Pokémon. Mélangez ensuite votre deck.",
-      "de": "Wirf 2 Münzen. Zeigen beide Münzen Kopf, durchsuche dein Deck nach 1 Basis-Energiekarte und lege sie an 1 deiner Pokémon an. Mische anschließend dein Deck.",
+      "de": "Wirf 2 Münzen. Zeigen beide Münzen Kopf, durchsuche dein Deck nach 1 Basis-Energiekarte und lege sie an 1 deiner Pokémon an. Mische anschließend dein Deck. Du kannst während deines Zuges beliebig viele Itemkarten spielen.",
       "it": "Lancia due volte una moneta. Se esce entrambe le volte testa, cerca nel tuo mazzo una carta Energia base e assegnala a uno dei tuoi Pokémon. Poi rimischia le carte del tuo mazzo.",
       "pt-BR": "Jogue 2 moedas. Se as duas saírem cara, procure por uma carta de Energia Básica no seu baralho e ligue-a a 1 dos seus Pokémon. Em seguida, embaralhe o seu baralho.",
       "es": "Lanza 2 monedas. Si sale cara en ambas, busca en tu baraja 1 carta de Energía Básica y únela a uno de tus Pokémon. Después, baraja las cartas de tu baraja."
@@ -13046,7 +13047,7 @@
     "rules_text": {
       "en": "Heal 40 damage from each of your Pokémon.",
       "fr": "Soignez 40 dégâts de chacun de vos Pokémon.",
-      "de": "Heile 40 Schadenspunkte bei jedem deiner Pokémon.",
+      "de": "Heile 40 Schadenspunkte bei jedem deiner Pokémon. Du kannst während deines Zuges nur 1 Unterstützerkarte spielen.",
       "it": "Cura ciascuno dei tuoi Pokémon da 40 danni.",
       "pt-BR": "Cure 40 pontos de dano de cada um dos seus Pokémon.",
       "es": "Cura 40 puntos de daño a cada uno de tus Pokémon."
@@ -13151,7 +13152,7 @@
     "rules_text": {
       "en": "Move up to 2 Energy from your Benched Pokémon to your Active Pokémon.",
       "fr": "Déplacez jusqu'à 2 Énergies de vos Pokémon de Banc vers votre Pokémon Actif.",
-      "de": "Verschiebe bis zu 2 Energien von Pokémon auf deiner Bank auf dein Aktives Pokémon.",
+      "de": "Verschiebe bis zu 2 Energien von Pokémon auf deiner Bank auf dein Aktives Pokémon. Du kannst während deines Zuges nur 1 Unterstützerkarte spielen.",
       "it": "Sposta fino a due Energie dai tuoi Pokémon in panchina al tuo Pokémon attivo.",
       "pt-BR": "Mova até 2 Energias dos seus Pokémon no Banco para o seu Pokémon Ativo.",
       "es": "Mueve hasta 2 Energías de tus Pokémon en Banca a tu Pokémon Activo."
@@ -13361,7 +13362,7 @@
     "rules_text": {
       "en": "Discard your hand and draw 7 cards.",
       "fr": "Défaussez votre main, puis piochez 7 cartes.",
-      "de": "Lege deine Handkarten auf deinen Ablagestapel und ziehe 7 Karten.",
+      "de": "Lege deine Handkarten auf deinen Ablagestapel und ziehe 7 Karten. Du kannst während deines Zuges nur 1 Unterstützerkarte spielen.",
       "it": "Scarta le carte che hai in mano e pesca sette carte.",
       "pt-BR": "Descarte a sua mão e compre 7 cartas.",
       "es": "Descarta las cartas de tu mano y roba 7 cartas."
@@ -15239,7 +15240,7 @@
         "text": {
           "en": "This attack does 30 damage for each Item card in your opponent's discard pile.",
           "fr": "Cette attaque inflige 30 dégâts pour chaque carte Objet dans la pile de défausse de votre adversaire.",
-          "de": "Diese Attacke fügt für jede Itemkarte im Ablagestapel deines Gegners 30 Schadenspunkte zu.",
+          "de": "Diese Attacke fügt 30 für jede Itemkarte im Ablagestapel deines Gegners 30 Schadenspunkte zu.",
           "it": "Questo attacco infligge 30 danni per ogni carta Strumento nella pila degli scarti del tuo avversario.",
           "pt-BR": "Este ataque causa 30 pontos de dano para cada carta de Item na pilha de descarte do seu oponente.",
           "es": "Este ataque hace 30 puntos de daño por cada carta de Objeto en la pila de descartes de tu rival."
@@ -20267,7 +20268,7 @@
     "rules_text": {
       "en": "Heal 40 damage from each of your Pokémon.",
       "fr": "Soignez 40 dégâts de chacun de vos Pokémon.",
-      "de": "Heile 40 Schadenspunkte bei jedem deiner Pokémon.",
+      "de": "Heile 40 Schadenspunkte bei jedem deiner Pokémon. Du kannst während deines Zuges nur 1 Unterstützerkarte spielen.",
       "it": "Cura ciascuno dei tuoi Pokémon da 40 danni.",
       "pt-BR": "Cure 40 pontos de dano de cada um dos seus Pokémon.",
       "es": "Cura 40 puntos de daño a cada uno de tus Pokémon."
@@ -20321,7 +20322,7 @@
     "rules_text": {
       "en": "Move up to 2 Energy from your Benched Pokémon to your Active Pokémon.",
       "fr": "Déplacez jusqu'à 2 Énergies de vos Pokémon de Banc vers votre Pokémon Actif.",
-      "de": "Verschiebe bis zu 2 Energien von Pokémon auf deiner Bank auf dein Aktives Pokémon.",
+      "de": "Verschiebe bis zu 2 Energien von Pokémon auf deiner Bank auf dein Aktives Pokémon. Du kannst während deines Zuges nur 1 Unterstützerkarte spielen.",
       "it": "Sposta fino a due Energie dai tuoi Pokémon in panchina al tuo Pokémon attivo.",
       "pt-BR": "Mova até 2 Energias dos seus Pokémon no Banco para o seu Pokémon Ativo.",
       "es": "Mueve hasta 2 Energías de tus Pokémon en Banca a tu Pokémon Activo."
@@ -20925,7 +20926,7 @@
     "rules_text": {
       "en": "Move up to 2 Energy from your Benched Pokémon to your Active Pokémon.",
       "fr": "Déplacez jusqu'à 2 Énergies de vos Pokémon de Banc vers votre Pokémon Actif.",
-      "de": "Verschiebe bis zu 2 Energien von Pokémon auf deiner Bank auf dein Aktives Pokémon.",
+      "de": "Verschiebe bis zu 2 Energien von Pokémon auf deiner Bank auf dein Aktives Pokémon. Du kannst während deines Zuges nur 1 Unterstützerkarte spielen.",
       "it": "Sposta fino a due Energie dai tuoi Pokémon in panchina al tuo Pokémon attivo.",
       "pt-BR": "Mova até 2 Energias dos seus Pokémon no Banco para o seu Pokémon Ativo.",
       "es": "Mueve hasta 2 Energías de tus Pokémon en Banca a tu Pokémon Activo."

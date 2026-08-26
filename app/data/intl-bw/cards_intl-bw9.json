@@ -54,7 +54,8 @@
       {
         "name": {
           "en": "Triple Stab",
-          "fr": "Aiguillon Triple"
+          "fr": "Aiguillon Triple",
+          "de": "Triplexstich"
         },
         "cost": [
           "grass"
@@ -62,7 +63,8 @@
         "damage": "10",
         "text": {
           "en": "Flip 3 coins. This attack does 10 damage times the number of heads.",
-          "fr": "Lancez 3 pièces. Cette attaque inflige 10 dégâts multipliés par le nombre de côtés face."
+          "fr": "Lancez 3 pièces. Cette attaque inflige 10 dégâts multipliés par le nombre de côtés face.",
+          "de": "Wirf 3 Münzen. Dieser Angriff fügt 10 Schadenspunkte mal der Anzahl „Kopf“ zu."
         }
       }
     ],
@@ -74,7 +76,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It eats its weight in leaves every day. It fends off attackers with the needle on its head."
+      "en": "It eats its weight in leaves every day. It fends off attackers with the needle on its head.",
+      "de": "Es frisst täglich sein Gewicht in Blättern. Die Nadel auf seinem Kopf dient der Verteidigung."
     }
   },
   {
@@ -130,13 +133,15 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Cacnea",
-      "fr": "Cacnea"
+      "fr": "Cacnea",
+      "de": "Tuska"
     },
     "attacks": [
       {
         "name": {
           "en": "Rapid-Fire Needles",
-          "fr": "Salve d'Aiguilles"
+          "fr": "Salve d'Aiguilles",
+          "de": "Schnellfeuernadeln"
         },
         "cost": [
           "grass"
@@ -144,13 +149,15 @@
         "damage": "60",
         "text": {
           "en": "Does 30 damage to 1 of your Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
-          "fr": "Inflige 30 dégâts à 1 de vos Pokémon. (N'appliquez ni la Faiblesse ni la Résistance aux Pokémon de Banc.)"
+          "fr": "Inflige 30 dégâts à 1 de vos Pokémon. (N'appliquez ni la Faiblesse ni la Résistance aux Pokémon de Banc.)",
+          "de": "Dieser Angriff fügt 1 deiner Pokémon 30 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
         }
       },
       {
         "name": {
           "en": "Payback",
-          "fr": "Représailles"
+          "fr": "Représailles",
+          "de": "Gegenstoß"
         },
         "cost": [
           "grass",
@@ -159,7 +166,8 @@
         "damage": "30",
         "text": {
           "en": "If your opponent has only 1 Prize card left, this attack does 60 more damage and discard an Energy attached to the Defending Pokémon.",
-          "fr": "S'il ne reste qu'une seule carte Récompense à votre adversaire, cette attaque inflige 60 dégâts supplémentaires et vous défaussez une Énergie attachée au Pokémon Défenseur."
+          "fr": "S'il ne reste qu'une seule carte Récompense à votre adversaire, cette attaque inflige 60 dégâts supplémentaires et vous défaussez une Énergie attachée au Pokémon Défenseur.",
+          "de": "Wenn dein Gegner nur 1 Preiskarte übrig hat, fügt dieser Angriff 60 weitere Schadenspunkte zu. Lege 1 an das Verteidigende Pokémon angelegte Energie auf den Ablagestapel deines Gegners."
         }
       }
     ],
@@ -177,7 +185,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It becomes active at night, seeking prey that is exhausted from the day's desert heat."
+      "en": "It becomes active at night, seeking prey that is exhausted from the day's desert heat.",
+      "de": "Ein nachtaktives Pokémon, das Beute sucht, die durch die Tageshitze der Wüste bereits erschöpft ist."
     }
   },
   {
@@ -231,7 +240,7 @@
       "es": "Cada vez que algún jugador una una Energía de su mano a 1 de sus Pokémon (excluidos los Pokémon del Equipo Plasma), pon 2 contadores de daño en ese Pokémon.",
       "it": "Quando uno dei giocatori assegna un’Energia dalla sua mano a uno dei suoi Pokémon, esclusi i Pokémon Team Plasma, metti due segnalini danno su quel Pokémon.",
       "pt-BR": "Sempre que qualquer jogador ligar uma Energia de sua própria mão a 1 dos Pokémon desse mesmo jogador (exceto Pokémon da Equipe Plasma), coloque 2 marcadores de danos nesse Pokémon.",
-      "de": "Lege jedes Mal, wenn ein Spieler eine Energie von seiner Hand an 1 seiner Pokémon (ausgenommen Team-Plasma-Pokémon) anlegt, 2 Schadensmarken auf das Pokémon."
+      "de": "Lege jedes Mal, wenn ein Spieler 1 Energie von seiner Hand an 1 seiner Pokémon anlegt (ausgenommen Team Plasma-Pokémon), 2 Schadensmarken auf das Pokémon. Diese Karte bleibt im Spiel, wenn du sie spielst. Lege diese Karte ab, sobald eine weitere Stadionkarte ins Spiel kommt. Wenn eine andere Karte mit dem gleichen Namen im Spiel ist, kannst du diese Karte nicht spielen."
     }
   },
   {
@@ -285,7 +294,7 @@
       "es": "Tu rival enseña las cartas de su mano, pone todas las cartas de Objeto que encuentre entre ellas en su baraja y las baraja todas. Después, tú robas un número de cartas igual al número de cartas de Objeto que tu rival haya puesto en su baraja.",
       "it": "Il tuo avversario mostra la sua mano e rimischia tutte le carte Strumento che ha in mano nel suo mazzo. Poi pesca un numero di carte pari al numero di carte Strumento che il tuo avversario ha rimischiato nel suo mazzo.",
       "pt-BR": "Seu oponente revela a mão e embaralha todos os cards de Item encontrados em sua mão no próprio baralho. Em seguida, compre um número de cards igual ao número de cards de Item que seu oponente embaralhou em seu deck.",
-      "de": "Dein Gegner deckt seine Handkarten auf und mischt alle dort gefundenen Itemkarten in sein Deck. Ziehe anschließend genauso viele Karten, wie dein Gegner Itemkarten in sein Deck gemischt hat."
+      "de": "Dein Gegner deckt seine Handkarten auf und mischt alle dort gefundenen Itemkarten zurück in sein Deck. Ziehe anschließend genauso viele Karten, wie dein Gegner Itemkarten zurück in sein Deck gemischt hat. Du kannst während deines Zuges (vor deinem Angriff) nur 1 Unterstützerkarte spielen."
     }
   },
   {
@@ -339,7 +348,7 @@
       "es": "Pon una carta del Equipo Plasma de tu pila de descartes en tu mano.",
       "it": "Prendi una carta Team Plasma dalla tua pila degli scarti e aggiungila a quelle che hai in mano.",
       "pt-BR": "Coloque um card da Equipe Plasma da sua pilha de descarte em sua mão.",
-      "de": "Nimm 1 Team-Plasma-Karte von deinem Ablagestapel auf deine Hand."
+      "de": "Nimm 1 Team Plasma-Karte von deinem Ablagestapel auf deine Hand. Du kannst während deines Zuges (vor deinem Angriff) nur 1 Unterstützerkarte spielen."
     }
   },
   {
@@ -393,7 +402,7 @@
       "es": "Descarta 2 cartas de tu mano. (Si no puedes descartar 2 cartas, no puedes jugar esta carta.) Pon 4 cartas de Energía Básica de tu pila de descartes en tu mano. (No puedes elegir una carta que hayas descartado con el efecto de esta carta.)",
       "it": "Scarta due delle carte che hai in mano. Se non puoi scartarne due, non puoi giocare questa carta. Prendi quattro carte Energia base dalla tua pila degli scarti e aggiungile a quelle che hai in mano. Ricorda che non puoi scegliere una carta scartata con l’effetto di questa carta.",
       "pt-BR": "Descarte 2 cards da sua mão. (Se você não puder descartar 2 cards, não poderá jogar esse card.) Coloque 4 cards de Energia básica da sua pilha de descarte em sua mão. (Não é possível escolher um card que foi descartado com o efeito deste card.)",
-      "de": "Lege 2 Karten von deiner Hand auf deinen Ablagestapel. (Wenn du keine 2 Karten von der Hand auf deinen Ablagestapel legen kannst, kannst du diese Karte nicht spielen.) Nimm 4 Basis-Energiekarten von deinem Ablagestapel auf deine Hand. (Du darfst keine Karte nehmen, die du aufgrund dieser Karte auf den Ablagestapel gelegt hast.)"
+      "de": "Lege 2 Karten von deiner Hand auf deinen Ablagestapel. (Wenn du keine 2 Karten auf deinen Ablagestapel legen kannst, kannst du diese Karte nicht spielen.) Nimm 4 Basis-Energiekarten von deinem Ablagestapel auf deine Hand. (Du kannst keine Karte auswählen, die du mit dem Effekt dieser Karte auf deinen Ablagestapel gelegt hast.) Du kannst während deines Zuges (vor deinem Angriff) beliebig viele Itemkarten spielen."
     }
   },
   {
@@ -447,7 +456,7 @@
       "es": "El Pokémon al que esté unida esta carta es un Pokémon del Equipo Plasma.",
       "it": "Il Pokémon a cui è assegnata questa carta è un Pokémon del Team Plasma.",
       "pt-BR": "O Pokémon ao qual este card está ligado é um Pokémon da Equipe Plasma.",
-      "de": "Das Pokémon, an das diese Karte angelegt ist, ist ein Team Plasma-Pokémon."
+      "de": "Lege 1 Pokémon-Ausrüstung an 1 deiner Pokémon an, an das noch keine Pokémon-Ausrüstung angelegt ist. Das Pokémon, an das diese Karte angelegt ist, ist ein Team Plasma-Pokémon. Du kannst während deines Zuges (vor deinem Angriff) beliebig viele Itemkarten spielen."
     }
   },
   {
@@ -501,7 +510,7 @@
       "es": "Busca en tu baraja a un Pokémon del Equipo Plasma, enséñalo y ponlo en tu mano. Baraja las cartas de tu baraja después.",
       "it": "Cerca nel tuo mazzo un Pokémon Team Plasma, mostralo e aggiungilo alle carte che hai in mano. Poi rimischia le carte del tuo mazzo.",
       "pt-BR": "Procure um Pokémon da Equipe Plasma em seu baralho, revele-o e coloque-o em sua mão. Em seguida, embaralhe seus cards.",
-      "de": "Durchsuche dein Deck nach 1 Team-Plasma-Pokémon, zeige es deinem Gegner und nimm es auf deine Hand. Mische anschließend dein Deck."
+      "de": "Durchsuche dein Deck nach 1 Team Plasma-Pokémon, zeige es deinem Gegner und nimm es auf deine Hand. Mische anschließend dein Deck. Du kannst während deines Zuges (vor deinem Angriff) beliebig viele Itemkarten spielen."
     }
   },
   {
@@ -554,7 +563,7 @@
       "es": "Esta carta proporciona Energía Colorless.",
       "it": "Questa carta fornisce Energia Colorless",
       "pt-BR": "Este card fornece Energia Colorless.",
-      "de": "Diese Karte liefert Colorless"
+      "de": "Diese Karte liefert {C}-Energie."
     }
   },
   {
@@ -608,7 +617,7 @@
       "es": "Si el Pokémon al que está unida esta carta queda Fuera de Combate, tu rival coge 1 carta de Premio menos.",
       "it": "Se il Pokémon a cui è assegnata questa carta viene messo K.O., il tuo avversario prende una carta Premio in meno.",
       "pt-BR": "Se o Pokémon ao qual este card está ligado for Nocauteado, seu oponente levará 1 card de Prêmio a menos.",
-      "de": "Wenn das Pokémon, an das diese Karte angelegt ist, kampfunfähig wird, darf dein Gegner dafür 1 Preiskarte weniger als üblich nehmen."
+      "de": "Dein Deck darf nicht mehr als 1 ASS-KLASSE-Karte enthalten. Wenn das Pokémon, an das diese Karte angelegt ist, kampfunfähig wird, nimmt dein Gegner 1 Preiskarte weniger als erlaubt. Lege 1 Pokémon-Ausrüstung an 1 deiner Pokémon an, an das noch keine Pokémon-Ausrüstung angelegt ist. Du kannst während deines Zuges (vor deinem Angriff) beliebig viele Itemkarten spielen."
     }
   },
   {
@@ -662,7 +671,7 @@
       "es": "Si el Pokémon al que está unida esta carta es tu Pokémon Activo y resulta dañado por un ataque de tu rival (incluso si ese Pokémon queda Fuera de Combate), pon 6 contadores de daño en el Pokémon Atacante.",
       "it": "Se il Pokémon a cui è assegnata questa carta è il tuo Pokémon attivo e viene danneggiato da un attacco del tuo avversario, anche se viene messo K.O., metti sei segnalini danno sul Pokémon attaccante.",
       "pt-BR": "Se este card estiver ligado a seu Pokémon Ativo e ele for danificado pelo ataque de um oponente (mesmo se esse Pokémon for Nocauteado), coloque 6 marcadores de danos no Pokémon Atacante.",
-      "de": "Wenn das Pokémon, an das diese Karte angelegt ist, dein Aktives Pokémon ist, und es durch einen gegnerischen Angriff Schaden erhält (auch wenn dieses Pokémon dadurch kampfunfähig wird), lege 6 Schadensmarken auf das Angreifende Pokémon."
+      "de": "Dein Deck darf nicht mehr als 1 ASS-KLASSE-Karte enthalten. Wenn das Pokémon, an das diese Karte angelegt ist, dein Aktives Pokémon ist und durch einen gegnerischen Angriff Schaden erhält (auch wenn dieses Pokémon dadurch kampfunfähig wird), lege 6 Schadensmarken auf das Angreifende Pokémon. Lege 1 Pokémon-Ausrüstung an 1 deiner Pokémon an, an das noch keine Pokémon-Ausrüstung angelegt ist. Du kannst während deines Zuges (vor deinem Angriff) beliebig viele Itemkarten spielen."
     }
   },
   {
@@ -707,7 +716,8 @@
       {
         "name": {
           "en": "Heat Boiler",
-          "fr": "Coup de Chaud"
+          "fr": "Coup de Chaud",
+          "de": "Hitzekessel"
         },
         "cost": [
           "fire",
@@ -717,13 +727,15 @@
         "damage": "60",
         "text": {
           "en": "If this Pokémon is affected by a Special Condition, this attack does 60 more damage.",
-          "fr": "Si ce Pokémon est affecté par un État Spécial, cette attaque inflige 60 dégâts supplémentaires."
+          "fr": "Si ce Pokémon est affecté par un État Spécial, cette attaque inflige 60 dégâts supplémentaires.",
+          "de": "Wenn dieses Pokémon von einem Speziellen Zustand betroffen ist, fügt dieser Angriff 60 weitere Schadenspunkte zu."
         }
       },
       {
         "name": {
           "en": "Dynamite Press",
-          "fr": "Pression Explosive"
+          "fr": "Pression Explosive",
+          "de": "Dynamitdruck"
         },
         "cost": [
           "fire",
@@ -734,7 +746,8 @@
         "damage": "80",
         "text": {
           "en": "If this Pokémon has any Plasma Energy attached to it, this attack does 10 more damage for each damage counter on the Defending Pokémon.",
-          "fr": "Si de l'Énergie Plasma est attachée à ce Pokémon, cette attaque inflige 10 dégâts supplémentaires pour chaque marqueur de dégâts placé sur le Pokémon Défenseur."
+          "fr": "Si de l'Énergie Plasma est attachée à ce Pokémon, cette attaque inflige 10 dégâts supplémentaires pour chaque marqueur de dégâts placé sur le Pokémon Défenseur.",
+          "de": "Wenn an dieses Pokémon bereits Plasma-Energie angelegt ist, fügt dieser Angriff 10 weitere Schadenspunkte für jede Schadensmarke auf dem Verteidigenden Pokémon zu."
         }
       }
     ],
@@ -799,13 +812,15 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Eevee",
-      "fr": "Évoli"
+      "fr": "Évoli",
+      "de": "Evoli"
     },
     "attacks": [
       {
         "name": {
           "en": "Energy Crush",
-          "fr": "Écras'Énergie"
+          "fr": "Écras'Énergie",
+          "de": "Zermalmende Energie"
         },
         "cost": [
           "normal"
@@ -813,13 +828,15 @@
         "damage": "20",
         "text": {
           "en": "Does 20 damage times the amount of Energy attached to all of your opponent's Pokémon.",
-          "fr": "Inflige 20 dégâts multipliés par le nombre d'Énergies attachées à tous les Pokémon de votre adversaire."
+          "fr": "Inflige 20 dégâts multipliés par le nombre d'Énergies attachées à tous les Pokémon de votre adversaire.",
+          "de": "Dieser Angriff fügt 20 Schadenspunkte mal der Anzahl der an allen Pokémon deines Gegners angelegten Energien zu."
         }
       },
       {
         "name": {
           "en": "Leaf Blade",
-          "fr": "Lame-Feuille"
+          "fr": "Lame-Feuille",
+          "de": "Laubklinge"
         },
         "cost": [
           "grass",
@@ -829,7 +846,8 @@
         "damage": "60",
         "text": {
           "en": "Flip a coin. If heads, this attack does 20 more damage.",
-          "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 20 dégâts supplémentaires."
+          "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 20 dégâts supplémentaires.",
+          "de": "Wirf 1 Münze. Bei „Kopf“ fügt dieser Angriff 20 weitere Schadenspunkte zu."
         }
       }
     ],
@@ -847,7 +865,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "With cells similar to those of plants, it performs photosynthesis inside its body and creates pure air."
+      "en": "With cells similar to those of plants, it performs photosynthesis inside its body and creates pure air.",
+      "de": "Da seine Zellstruktur der von Pflanzen gleicht, kann sein Körper Photosynthese betreiben und saubere Luft erzeugen."
     }
   },
   {
@@ -892,7 +911,8 @@
       {
         "name": {
           "en": "Raiden Knuckle",
-          "fr": "Appel Foudroyant"
+          "fr": "Appel Foudroyant",
+          "de": "Herr des Donners"
         },
         "cost": [
           "lightning"
@@ -900,13 +920,15 @@
         "damage": "30",
         "text": {
           "en": "Attach an Energy card from your discard pile to 1 of your Benched Team Plasma Pokémon.",
-          "fr": "Attachez une carte Énergie de votre pile de défausse à 1 de vos Pokémon de la Team Plasma sur votre Banc."
+          "fr": "Attachez une carte Énergie de votre pile de défausse à 1 de vos Pokémon de la Team Plasma sur votre Banc.",
+          "de": "Nimm 1 Energiekarte von deinem Ablagestapel und lege sie an 1 Team Plasma-Pokémon auf deiner Bank an."
         }
       },
       {
         "name": {
           "en": "Thunderous Noise",
-          "fr": "Grondement Tonitruant"
+          "fr": "Grondement Tonitruant",
+          "de": "Donnerschall"
         },
         "cost": [
           "lightning",
@@ -917,7 +939,8 @@
         "damage": "90",
         "text": {
           "en": "If this Pok��mon has any Plasma Energy attached to it, discard an Energy attached to the Defending Pokémon.",
-          "fr": "Si de l'Énergie Plasma est attachée à ce Pokémon, défaussez une Énergie attachée au Pokémon Défenseur."
+          "fr": "Si de l'Énergie Plasma est attachée à ce Pokémon, défaussez une Énergie attachée au Pokémon Défenseur.",
+          "de": "Wenn an dieses Pokémon bereits Plasma-Energie angelegt ist, lege 1 an das Verteidigende Pokémon angelegte Energie auf den Ablagestapel deines Gegners."
         }
       }
     ],
@@ -971,7 +994,8 @@
       {
         "name": {
           "en": "Helix Force",
-          "fr": "Force Spirale"
+          "fr": "Force Spirale",
+          "de": "Helixkraft"
         },
         "cost": [
           "psychic",
@@ -980,7 +1004,8 @@
         "damage": "30",
         "text": {
           "en": "If this Pokémon has any Plasma Energy attached to it, this attack does 30 more damage for each Energy attached to the Defending Pokémon.",
-          "fr": "Si de l'Énergie Plasma est attachée à ce Pokémon, cette attaque inflige 30 dégâts supplémentaires pour chaque Énergie attachée au Pokémon Défenseur."
+          "fr": "Si de l'Énergie Plasma est attachée à ce Pokémon, cette attaque inflige 30 dégâts supplémentaires pour chaque Énergie attachée au Pokémon Défenseur.",
+          "de": "Wenn an dieses Pokémon bereits Plasma-Energie angelegt ist, fügt dieser Angriff 30 weitere Schadenspunkte für jede an das Verteidigende Pokémon angelegte Energie zu."
         }
       }
     ],
@@ -1034,7 +1059,8 @@
       {
         "name": {
           "en": "Barrier Break",
-          "fr": "Brise Barrière"
+          "fr": "Brise Barrière",
+          "de": "Barrierebrecher"
         },
         "cost": [
           "fire",
@@ -1044,7 +1070,8 @@
         "damage": "70",
         "text": {
           "en": "This attack's damage isn't affected by Weakness, Resistance, or any other effects on the Defending Pokémon.",
-          "fr": "Les dégâts de cette attaque ne sont pas affectés par la Faiblesse, la Résistance ou tout autre effet en action sur le Pokémon Défenseur."
+          "fr": "Les dégâts de cette attaque ne sont pas affectés par la Faiblesse, la Résistance ou tout autre effet en action sur le Pokémon Défenseur.",
+          "de": "Der Schaden dieses Angriffs wird durch Schwäche, Resistenz oder alle anderen Effekte auf dem Verteidigenden Pokémon nicht verändert."
         }
       }
     ],
@@ -1098,7 +1125,8 @@
       {
         "name": {
           "en": "Mach Flight",
-          "fr": "Vol Supersonique"
+          "fr": "Vol Supersonique",
+          "de": "Tempoflug"
         },
         "cost": [
           "psychic",
@@ -1107,13 +1135,15 @@
         "damage": "40",
         "text": {
           "en": "The Defending Pokémon can't retreat during your opponent's next turn.",
-          "fr": "Le Pokémon Défenseur ne peut pas battre en retraite pendant le prochain tour de votre adversaire."
+          "fr": "Le Pokémon Défenseur ne peut pas battre en retraite pendant le prochain tour de votre adversaire.",
+          "de": "Das Verteidigende Pokémon kann sich während des nächsten Zuges deines Gegners nicht zurückziehen."
         }
       },
       {
         "name": {
           "en": "Luster Purge",
-          "fr": "Lumi-Éclat"
+          "fr": "Lumi-Éclat",
+          "de": "Scheinwerfer"
         },
         "cost": [
           "water",
@@ -1123,7 +1153,8 @@
         "damage": "150",
         "text": {
           "en": "Discard all Energy attached to this Pokémon.",
-          "fr": "Défaussez toutes les Énergies attachées à ce Pokémon."
+          "fr": "Défaussez toutes les Énergies attachées à ce Pokémon.",
+          "de": "Lege alle an dieses Pokémon angelegten Energien auf deinen Ablagestapel."
         }
       }
     ],
@@ -1177,7 +1208,8 @@
       {
         "name": {
           "en": "Windfall",
-          "fr": "Rafale de Vent"
+          "fr": "Rafale de Vent",
+          "de": "Warmer Regen"
         },
         "cost": [
           "normal"
@@ -1185,13 +1217,15 @@
         "damage": "",
         "text": {
           "en": "Shuffle your hand into your deck. Then, draw 6 cards.",
-          "fr": "Mélangez votre main avec votre deck. Ensuite, piochez 6 cartes."
+          "fr": "Mélangez votre main avec votre deck. Ensuite, piochez 6 cartes.",
+          "de": "Mische deine Handkarten in dein Deck. Ziehe anschließend 6 Karten."
         }
       },
       {
         "name": {
           "en": "Jet Blast",
-          "fr": "Rafale d'Explosions"
+          "fr": "Rafale d'Explosions",
+          "de": "Hochdruckwelle"
         },
         "cost": [
           "normal",
@@ -1202,7 +1236,8 @@
         "damage": "60",
         "text": {
           "en": "Does 30 more damage for each Plasma Energy attached to this Pokémon.",
-          "fr": "Inflige 30 dégâts supplémentaires pour chaque Énergie Plasma attachée à ce Pokémon."
+          "fr": "Inflige 30 dégâts supplémentaires pour chaque Énergie Plasma attachée à ce Pokémon.",
+          "de": "Dieser Angriff fügt 30 weitere Schadenspunkte für jede an dieses Pokémon angelegte Plasma-Energie zu."
         }
       }
     ],
@@ -1271,7 +1306,7 @@
       "es": "Tu rival enseña las cartas de su mano, pone todas las cartas de Objeto que encuentre entre ellas en su baraja y las baraja todas. Después, tú robas un número de cartas igual al número de cartas de Objeto que tu rival haya puesto en su baraja.",
       "it": "Il tuo avversario mostra la sua mano e rimischia tutte le carte Strumento che ha in mano nel suo mazzo. Poi pesca un numero di carte pari al numero di carte Strumento che il tuo avversario ha rimischiato nel suo mazzo.",
       "pt-BR": "Seu oponente revela a mão e embaralha todos os cards de Item encontrados em sua mão no próprio baralho. Em seguida, compre um número de cards igual ao número de cards de Item que seu oponente embaralhou em seu deck.",
-      "de": "Dein Gegner deckt seine Handkarten auf und mischt alle dort gefundenen Itemkarten in sein Deck. Ziehe anschließend genauso viele Karten, wie dein Gegner Itemkarten in sein Deck gemischt hat."
+      "de": "Dein Gegner deckt seine Handkarten auf und mischt alle dort gefundenen Itemkarten zurück in sein Deck. Ziehe anschließend genauso viele Karten, wie dein Gegner Itemkarten zurück in sein Deck gemischt hat. Du kannst während deines Zuges (vor deinem Angriff) nur 1 Unterstützerkarte spielen."
     }
   },
   {
@@ -1325,7 +1360,7 @@
       "es": "Descarta las cartas de tu mano y roba 7 cartas.",
       "it": "Scarta la tua mano e pesca sette carte.",
       "pt-BR": "Descarte sua mão e compre 7 cards.",
-      "de": "Lege deine Handkarten auf deinen Ablagestapel und ziehe 7 neue Karten."
+      "de": "Lege deine Handkarten auf deinen Ablagestapel und ziehe 7 neue Karten. Du kannst während deines Zuges (vor deinem Angriff) nur 1 Unterstützerkarte spielen."
     }
   },
   {
@@ -1381,13 +1416,15 @@
     "stage": "stage2",
     "evolves_from": {
       "en": "Prinplup",
-      "fr": "Prinplouf"
+      "fr": "Prinplouf",
+      "de": "Pliprin"
     },
     "attacks": [
       {
         "name": {
           "en": "Attack Command",
-          "fr": "Ordre d'Assaut"
+          "fr": "Ordre d'Assaut",
+          "de": "Angriffsbefehl"
         },
         "cost": [
           "water"
@@ -1395,7 +1432,8 @@
         "damage": "10",
         "text": {
           "en": "Does 10 damage times the number of Pokémon in play (both yours and your opponent's).",
-          "fr": "Inflige 10 dégâts multipliés par le nombre de Pokémon en jeu (les vôtres et ceux de votre adversaire)."
+          "fr": "Inflige 10 dégâts multipliés par le nombre de Pokémon en jeu (les vôtres et ceux de votre adversaire).",
+          "de": "Dieser Angriff fügt 10 Schadenspunkte mal der Anzahl der Pokémon im Spiel (deiner und der deines Gegners) zu."
         }
       }
     ],
@@ -1407,7 +1445,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "This extremely rare Pokémon is a different color than usual. It is very hard to find."
+      "en": "This extremely rare Pokémon is a different color than usual. It is very hard to find.",
+      "de": "Dieses sehr seltene Pokémon hat eine andere Farbe als üblich. Es ist schwer zu finden."
     }
   },
   {
@@ -1465,7 +1504,8 @@
       {
         "name": {
           "en": "Psychic",
-          "fr": "Psyko"
+          "fr": "Psyko",
+          "de": "Psychokinese"
         },
         "cost": [
           "psychic",
@@ -1475,7 +1515,8 @@
         "damage": "50",
         "text": {
           "en": "Does 10 more damage for each Energy attached to the Defending Pokémon.",
-          "fr": "Inflige 10 dégâts supplémentaires pour chaque Énergie attachée au Pokémon Défenseur."
+          "fr": "Inflige 10 dégâts supplémentaires pour chaque Énergie attachée au Pokémon Défenseur.",
+          "de": "Dieser Angriff fügt 10 weitere Schadenspunkte für jede an das Verteidigende Pokémon angelegte Energie zu."
         }
       }
     ],
@@ -1487,7 +1528,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "This extremely rare Pokémon is a different color than usual. It is very hard to find."
+      "en": "This extremely rare Pokémon is a different color than usual. It is very hard to find.",
+      "de": "Dieses sehr seltene Pokémon hat eine andere Farbe als üblich. Es ist schwer zu finden."
     }
   },
   {
@@ -1543,13 +1585,15 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Trubbish",
-      "fr": "Miamiasme"
+      "fr": "Miamiasme",
+      "de": "Unratütox"
     },
     "attacks": [
       {
         "name": {
           "en": "Sludge Toss",
-          "fr": "Giclée Vaseuse"
+          "fr": "Giclée Vaseuse",
+          "de": "Schleimwurf"
         },
         "cost": [
           "psychic",
@@ -1568,7 +1612,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "This extremely rare Pokémon is a different color than usual. It is very hard to find."
+      "en": "This extremely rare Pokémon is a different color than usual. It is very hard to find.",
+      "de": "Dieses sehr seltene Pokémon hat eine andere Farbe als üblich. Es ist schwer zu finden."
     }
   },
   {
@@ -1624,13 +1669,15 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Eevee",
-      "fr": "Évoli"
+      "fr": "Évoli",
+      "de": "Evoli"
     },
     "attacks": [
       {
         "name": {
           "en": "Vengeance",
-          "fr": "Rétorsion"
+          "fr": "Rétorsion",
+          "de": "Rache"
         },
         "cost": [
           "normal",
@@ -1639,13 +1686,15 @@
         "damage": "20",
         "text": {
           "en": "Does 10 more damage for each Pokémon in your discard pile.",
-          "fr": "Inflige 10 dégâts supplémentaires pour chaque Pokémon dans votre pile de défausse."
+          "fr": "Inflige 10 dégâts supplémentaires pour chaque Pokémon dans votre pile de défausse.",
+          "de": "Dieser Angriff fügt für jedes Pokémon in deinem Ablagestapel 10 weitere Schadenspunkte zu."
         }
       },
       {
         "name": {
           "en": "Heat Tackle",
-          "fr": "Charge Énergétique"
+          "fr": "Charge Énergétique",
+          "de": "Hitze Tackle"
         },
         "cost": [
           "fire",
@@ -1655,7 +1704,8 @@
         "damage": "90",
         "text": {
           "en": "This Pokémon does 10 damage to itself.",
-          "fr": "Ce Pokémon s'inflige 10 dégâts."
+          "fr": "Ce Pokémon s'inflige 10 dégâts.",
+          "de": "Dieses Pokémon fügt sich selbst 10 Schadenspunkte zu."
         }
       }
     ],
@@ -1667,7 +1717,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "Inhaled air is carried to its flame sac, heated, and exhaled as fire that reaches over 3,000 degrees F."
+      "en": "Inhaled air is carried to its flame sac, heated, and exhaled as fire that reaches over 3,000 degrees F.",
+      "de": "Speichert Atemluft in einer Feuerlunge. Dort erhitzt es sie auf 1 700 Grad, um sie als Flammen auszuspucken."
     }
   },
   {
@@ -1723,13 +1774,15 @@
     "stage": "stage2",
     "evolves_from": {
       "en": "Gabite",
-      "fr": "Carmache"
+      "fr": "Carmache",
+      "de": "Knarksel"
     },
     "attacks": [
       {
         "name": {
           "en": "Mach Cut",
-          "fr": "Coupe Vive"
+          "fr": "Coupe Vive",
+          "de": "Schallschnitt"
         },
         "cost": [
           "fighting"
@@ -1737,13 +1790,15 @@
         "damage": "60",
         "text": {
           "en": "Discard a Special Energy attached to the Defending Pokémon.",
-          "fr": "Défaussez une Énergie spéciale attachée au Pokémon Défenseur."
+          "fr": "Défaussez une Énergie spéciale attachée au Pokémon Défenseur.",
+          "de": "Lege 1 an das Verteidigende Pokémon angelegte Spezial-Energie auf den Ablagestapel deines Gegners."
         }
       },
       {
         "name": {
           "en": "Dragonblade",
-          "fr": "Draco-Lame"
+          "fr": "Draco-Lame",
+          "de": "Drachenklinge"
         },
         "cost": [
           "water",
@@ -1752,7 +1807,8 @@
         "damage": "100",
         "text": {
           "en": "Discard the top 2 cards of your deck.",
-          "fr": "Défaussez les 2 cartes du dessus de votre deck."
+          "fr": "Défaussez les 2 cartes du dessus de votre deck.",
+          "de": "Lege die obersten 2 Karten deines Decks auf deinen Ablagestapel."
         }
       }
     ],
@@ -1764,7 +1820,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "This extremely rare Pokémon is a different color than usual. It is very hard to find."
+      "en": "This extremely rare Pokémon is a different color than usual. It is very hard to find.",
+      "de": "Dieses sehr seltene Pokémon hat eine andere Farbe als üblich. Es ist schwer zu finden."
     }
   },
   {
@@ -1818,7 +1875,7 @@
       "es": "Cura todos los puntos de daño a 1 de tus Pokémon. Después, descarta todas las Energías unidas a ese Pokémon.",
       "it": "Cura uno dei tuoi Pokémon da tutti i danni. Poi scarta tutta l’Energia assegnata a quel Pokémon.",
       "pt-BR": "Cure todos os danos de 1 dos seus Pokémon. Em seguida, descarte toda a Energia ligada a este Pokémon.",
-      "de": "Heile allen Schaden bei 1 deiner Pokémon. Lege anschließend alle an dieses Pokémon angelegten Energien auf deinen Ablagestapel."
+      "de": "Heile allen Schaden bei 1 deiner Pokémon. Lege alle Energien, die an das Pokémon angelegt sind, auf deinen Ablagestapel. Du kannst während deines Zuges (vor deinem Angriff) beliebig viele Itemkarten spielen."
     }
   },
   {
@@ -1872,7 +1929,7 @@
       "es": "Descarta 2 cartas de tu mano. (Si no puedes descartar 2 cartas, no puedes jugar esta carta.) Busca en tu baraja a un Pokémon, enséñalo y ponlo en tu mano. Baraja las cartas de tu baraja después.",
       "it": "Scarta due delle carte che hai in mano. Se non puoi scartarne due, non puoi giocare questa carta. Cerca nel tuo mazzo un Pokémon, mostralo e aggiungilo alle carte che hai in mano. Poi rimischia le carte del tuo mazzo.",
       "pt-BR": "Descarte 2 cards da sua mão. (Se você não puder descartar 2 cards, não poderá jogar esse card.) Procure um Pokémon em seu baralho, revele-o e coloque-o em sua mão. Em seguida, embaralhe seus cards.",
-      "de": "Lege 2 Karten von deiner Hand auf deinen Ablagestapel. (Wenn du keine 2 Karten von der Hand auf deinen Ablagestapel legen kannst, kannst du diese Karte nicht spielen.) Durchsuche dein Deck nach 1 Pokémon, zeige es deinem Gegner und nimm es auf deine Hand. Mische anschließend dein Deck."
+      "de": "Lege 2 Karten von deiner Hand auf deinen Ablagestapel. (Wenn du keine 2 Karten auf deinen Ablagestapel legen kannst, kannst du diese Karte nicht spielen.) Durchsuche dein Deck nach 1 Pokémon, zeige es deinem Gegner und nimm es auf deine Hand. Mische anschließend dein Deck. Du kannst während deines Zuges (vor deinem Angriff) beliebig viele Itemkarten spielen."
     }
   },
   {
@@ -1917,7 +1974,8 @@
       {
         "name": {
           "en": "Heat Boiler",
-          "fr": "Coup de Chaud"
+          "fr": "Coup de Chaud",
+          "de": "Hitzekessel"
         },
         "cost": [
           "fire",
@@ -1927,13 +1985,15 @@
         "damage": "60",
         "text": {
           "en": "If this Pokémon is affected by a Special Condition, this attack does 60 more damage.",
-          "fr": "Si ce Pokémon est affecté par un État Spécial, cette attaque inflige 60 dégâts supplémentaires."
+          "fr": "Si ce Pokémon est affecté par un État Spécial, cette attaque inflige 60 dégâts supplémentaires.",
+          "de": "Wenn dieses Pokémon von einem Speziellen Zustand betroffen ist, fügt dieser Angriff 60 weitere Schadenspunkte zu."
         }
       },
       {
         "name": {
           "en": "Dynamite Press",
-          "fr": "Pression Explosive"
+          "fr": "Pression Explosive",
+          "de": "Dynamitdruck"
         },
         "cost": [
           "fire",
@@ -1944,7 +2004,8 @@
         "damage": "80",
         "text": {
           "en": "If this Pokémon has any Plasma Energy attached to it, this attack does 10 more damage for each damage counter on the Defending Pokémon.",
-          "fr": "Si de l'Énergie Plasma est attachée à ce Pokémon, cette attaque inflige 10 dégâts supplémentaires pour chaque marqueur de dégâts placé sur le Pokémon Défenseur."
+          "fr": "Si de l'Énergie Plasma est attachée à ce Pokémon, cette attaque inflige 10 dégâts supplémentaires pour chaque marqueur de dégâts placé sur le Pokémon Défenseur.",
+          "de": "Wenn an dieses Pokémon bereits Plasma-Energie angelegt ist, fügt dieser Angriff 10 weitere Schadenspunkte für jede Schadensmarke auf dem Verteidigenden Pokémon zu."
         }
       }
     ],
@@ -2011,7 +2072,8 @@
       {
         "name": {
           "en": "Singe",
-          "fr": "Roussi"
+          "fr": "Roussi",
+          "de": "Versengung"
         },
         "cost": [
           "fire"
@@ -2019,13 +2081,15 @@
         "damage": "",
         "text": {
           "en": "Flip a coin. If heads, the Defending Pokémon is now Burned.",
-          "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Brûlé."
+          "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Brûlé.",
+          "de": "Wirf 1 Münze. Bei „Kopf“ ist das Verteidigende Pokémon jetzt verbrannt."
         }
       },
       {
         "name": {
           "en": "Live Coal",
-          "fr": "Charbon Mutant"
+          "fr": "Charbon Mutant",
+          "de": "Glühende Kohlen"
         },
         "cost": [
           "fire",
@@ -2043,7 +2107,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Its flame is usually out, but it starts shining when it absorbs life force from people or Pokémon."
+      "en": "Its flame is usually out, but it starts shining when it absorbs life force from people or Pokémon.",
+      "de": "Seine Flamme entzündet sich erst, wenn es einem Menschen oder einem Pokémon die Lebensenergie absaugt."
     }
   },
   {
@@ -2099,13 +2164,15 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Litwick",
-      "fr": "Funécire"
+      "fr": "Funécire",
+      "de": "Lichtel"
     },
     "attacks": [
       {
         "name": {
           "en": "Live Coal",
-          "fr": "Charbon Mutant"
+          "fr": "Charbon Mutant",
+          "de": "Glühende Kohlen"
         },
         "cost": [
           "normal",
@@ -2117,7 +2184,8 @@
       {
         "name": {
           "en": "Searing Flame",
-          "fr": "Flammes Calcinantes"
+          "fr": "Flammes Calcinantes",
+          "de": "Sengende Flammen"
         },
         "cost": [
           "fire",
@@ -2127,7 +2195,8 @@
         "damage": "40",
         "text": {
           "en": "The Defending Pokémon is now Burned.",
-          "fr": "Le Pokémon Défenseur est maintenant Brûlé."
+          "fr": "Le Pokémon Défenseur est maintenant Brûlé.",
+          "de": "Das Verteidigende Pokémon ist jetzt verbrannt."
         }
       }
     ],
@@ -2139,7 +2208,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "The spirits it absorbs fuel its baleful fire. It hangs around hospitals waiting for people to pass on."
+      "en": "The spirits it absorbs fuel its baleful fire. It hangs around hospitals waiting for people to pass on.",
+      "de": "Es nährt seine Flamme mit den Seelen seiner Opfer. Heutzutage irrt es auf der Suche nach Seelen durch Krankenhäuser."
     }
   },
   {
@@ -2195,13 +2265,15 @@
     "stage": "stage2",
     "evolves_from": {
       "en": "Lampent",
-      "fr": "Mélancolux"
+      "fr": "Mélancolux",
+      "de": "Laternecto"
     },
     "attacks": [
       {
         "name": {
           "en": "Absorb Life",
-          "fr": "Absorption"
+          "fr": "Absorption",
+          "de": "Lebensverkoster"
         },
         "cost": [
           "fire",
@@ -2211,7 +2283,8 @@
         "damage": "70",
         "text": {
           "en": "Heal 30 damage from this Pokémon.",
-          "fr": "Soignez 30 dégâts à ce Pokémon."
+          "fr": "Soignez 30 dégâts à ce Pokémon.",
+          "de": "Heile 30 Schadenspunkte bei diesem Pokémon."
         }
       }
     ],
@@ -2223,7 +2296,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "The spirits burned up in its ominous flame lose their way and wander this world forever."
+      "en": "The spirits burned up in its ominous flame lose their way and wander this world forever.",
+      "de": "Seelen, die das Feuer seiner schaurigen Flammen gekostet haben, irren bis ans Ende der Tage ziellos durch diese Welt."
     }
   },
   {
@@ -2281,7 +2355,8 @@
       {
         "name": {
           "en": "Purifying Flame",
-          "fr": "Flamme Purifiante"
+          "fr": "Flamme Purifiante",
+          "de": "Reinigende Flamme"
         },
         "cost": [
           "fire",
@@ -2291,13 +2366,15 @@
         "damage": "50",
         "text": {
           "en": "Remove all Special Conditions from this Pokémon.",
-          "fr": "Retirez tous les États Spéciaux de ce Pokémon."
+          "fr": "Retirez tous les États Spéciaux de ce Pokémon.",
+          "de": "Alle Speziellen Zustände auf diesem Pokémon verlieren ihre Wirkung."
         }
       },
       {
         "name": {
           "en": "Fusion Flare",
-          "fr": "Flamme Croix"
+          "fr": "Flamme Croix",
+          "de": "Kreuzflamme"
         },
         "cost": [
           "fire",
@@ -2308,7 +2385,8 @@
         "damage": "80",
         "text": {
           "en": "If Zekrom is on your Bench, this attack does 40 more damage.",
-          "fr": "Si Zekrom est sur votre Banc, cette attaque inflige 40 dégâts supplémentaires."
+          "fr": "Si Zekrom est sur votre Banc, cette attaque inflige 40 dégâts supplémentaires.",
+          "de": "Wenn sich Zekrom auf deiner Bank befindet, fügt dieser Angriff 40 weitere Schadenspunkte zu."
         }
       }
     ],
@@ -2320,7 +2398,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "This legendary Pokémon can scorch the world with fire. It helps those who want to build a world of truth."
+      "en": "This legendary Pokémon can scorch the world with fire. It helps those who want to build a world of truth.",
+      "de": "Ein Legendäres Pokémon mit der Macht, die Welt mit seinen Flammen einzuäschern. Hilft allen, die nach Wirklichkeit streben."
     }
   },
   {
@@ -2378,7 +2457,8 @@
       {
         "name": {
           "en": "Fin Smack",
-          "fr": "Coup d'Aileron"
+          "fr": "Coup d'Aileron",
+          "de": "Flossenklatscher"
         },
         "cost": [
           "water"
@@ -2386,7 +2466,8 @@
         "damage": "10",
         "text": {
           "en": "Flip 2 coins. This attack does 10 damage times the number of heads.",
-          "fr": "Lancez 2 pièces. Cette attaque inflige 10 dégâts multipliés par le nombre de côtés face."
+          "fr": "Lancez 2 pièces. Cette attaque inflige 10 dégâts multipliés par le nombre de côtés face.",
+          "de": "Wirf 2 Münzen. Dieser Angriff fügt 10 Schadenspunkte mal der Anzahl „Kopf“ zu."
         }
       }
     ],
@@ -2398,7 +2479,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It makes its nest in the shade of corals. If it senses danger, it spits murky ink and flees."
+      "en": "It makes its nest in the shade of corals. If it senses danger, it spits murky ink and flees.",
+      "de": "Im Schatten von Korallen legt es sein Nest an. Bei Gefahr versprüht es Tinte und flieht."
     }
   },
   {
@@ -2454,13 +2536,15 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Horsea",
-      "fr": "Hypotrempe"
+      "fr": "Hypotrempe",
+      "de": "Seeper"
     },
     "attacks": [
       {
         "name": {
           "en": "Smokescreen",
-          "fr": "Brouillard"
+          "fr": "Brouillard",
+          "de": "Rauchwolke"
         },
         "cost": [
           "water"
@@ -2468,7 +2552,8 @@
         "damage": "20",
         "text": {
           "en": "If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing.",
-          "fr": "Si le Pokémon Défenseur essaie d'attaquer pendant le prochain tour de votre adversaire, ce dernier lance une pièce. Si c’est pile, son attaque ne fait rien."
+          "fr": "Si le Pokémon Défenseur essaie d'attaquer pendant le prochain tour de votre adversaire, ce dernier lance une pièce. Si c’est pile, son attaque ne fait rien.",
+          "de": "Falls das Verteidigende Pokémon während des nächsten Zuges deines Gegners angreift, wirft dein Gegner 1 Münze. Bei „Zahl“ hat dieser Angriff keine Auswirkungen."
         }
       }
     ],
@@ -2480,7 +2565,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Its spines provide protection. Its fins and bones are prized as traditional-medicine ingredients."
+      "en": "Its spines provide protection. Its fins and bones are prized as traditional-medicine ingredients.",
+      "de": "Seine Stacheln schützen es. Seine Flossen und Knochen werden bei der Herstellung von Medizin verwendet."
     }
   },
   {
@@ -2536,13 +2622,15 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Weedle",
-      "fr": "Aspicot"
+      "fr": "Aspicot",
+      "de": "Hornliu"
     },
     "attacks": [
       {
         "name": {
           "en": "Hide",
-          "fr": "Cachette"
+          "fr": "Cachette",
+          "de": "Verstecken"
         },
         "cost": [
           "grass"
@@ -2550,7 +2638,8 @@
         "damage": "",
         "text": {
           "en": "Flip a coin. If heads, prevent all effects of attacks, including damage, done to this Pokémon during your opponent's next turn.",
-          "fr": "Lancez une pièce. Si c'est face, évitez tous les effets d'attaques (y compris les dégâts) infligés à ce Pokémon pendant le prochain tour de votre adversaire."
+          "fr": "Lancez une pièce. Si c'est face, évitez tous les effets d'attaques (y compris les dégâts) infligés à ce Pokémon pendant le prochain tour de votre adversaire.",
+          "de": "Wirf 1 Münze. Verhindere bei „Kopf“ während des nächsten Zuges deines Gegners alle Effekte von Angriffen, einschließlich Schaden, die diesem Pokémon zugefügt werden."
         }
       }
     ],
@@ -2562,7 +2651,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "While awaiting evolution, it hides from predators under leaves and in nooks of branches."
+      "en": "While awaiting evolution, it hides from predators under leaves and in nooks of branches.",
+      "de": "Während es auf seine Entwicklung wartet, versteckt es sich unter Blättern und zwischen Ästen."
     }
   },
   {
@@ -2618,13 +2708,15 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Eevee",
-      "fr": "Évoli"
+      "fr": "Évoli",
+      "de": "Evoli"
     },
     "attacks": [
       {
         "name": {
           "en": "Refreshing Rain",
-          "fr": "Ondée Rafraîchissante"
+          "fr": "Ondée Rafraîchissante",
+          "de": "Erquicklicher Regen"
         },
         "cost": [
           "normal"
@@ -2632,13 +2724,15 @@
         "damage": "",
         "text": {
           "en": "Heal 30 damage from each of your Pokémon.",
-          "fr": "Soignez 30 dégâts à chacun de vos Pokémon."
+          "fr": "Soignez 30 dégâts à chacun de vos Pokémon.",
+          "de": "Heile 30 Schadenspunkte bei jedem deiner Pokémon."
         }
       },
       {
         "name": {
           "en": "Gold Breaker",
-          "fr": "Goliastruction"
+          "fr": "Goliastruction",
+          "de": "Goldbrecher"
         },
         "cost": [
           "water",
@@ -2647,7 +2741,8 @@
         "damage": "30",
         "text": {
           "en": "If the Defending Pokémon is a Pokémon-EX, this attack does 50 more damage.",
-          "fr": "Si le Pokémon Défenseur est un Pokémon-EX, cette attaque inflige 50 dégâts supplémentaires."
+          "fr": "Si le Pokémon Défenseur est un Pokémon-EX, cette attaque inflige 50 dégâts supplémentaires.",
+          "de": "Wenn das Verteidigende Pokémon ein Pokémon-EX ist, fügt dieser Angriff 50 weitere Schadenspunkte zu."
         }
       }
     ],
@@ -2659,7 +2754,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "Its cell composition is similar to water molecules. As a result, it can't be seen when it melts away into water."
+      "en": "Its cell composition is similar to water molecules. As a result, it can't be seen when it melts away into water.",
+      "de": "Seine Zellstruktur ist der von Wassermolekülen ähnlich. Daher kann es mit Wasser eins werden."
     }
   },
   {
@@ -2717,7 +2813,8 @@
       {
         "name": {
           "en": "Slam",
-          "fr": "Souplesse"
+          "fr": "Souplesse",
+          "de": "Slam"
         },
         "cost": [
           "water",
@@ -2726,7 +2823,8 @@
         "damage": "20",
         "text": {
           "en": "Flip 2 coins. This attack does 20 damage times the number of heads.",
-          "fr": "Lancez 2 pièces. Cette attaque inflige 20 dégâts multipliés par le nombre de côtés face."
+          "fr": "Lancez 2 pièces. Cette attaque inflige 20 dégâts multipliés par le nombre de côtés face.",
+          "de": "Wirf 2 Münzen. Dieser Angriff fügt 20 Schadenspunkte mal der Anzahl „Kopf“ zu."
         }
       }
     ],
@@ -2738,7 +2836,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "When walking on land, it covers its body with a poisonous film that keeps its skin from dehydrating."
+      "en": "When walking on land, it covers its body with a poisonous film that keeps its skin from dehydrating.",
+      "de": "An Land bedeckt es die Haut mit einer giftigen Schicht, die es vor dem Austrocknen bewahrt."
     }
   },
   {
@@ -2794,13 +2893,15 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Wooper",
-      "fr": "Axoloto"
+      "fr": "Axoloto",
+      "de": "Felino"
     },
     "attacks": [
       {
         "name": {
           "en": "Mud Gun",
-          "fr": "Giclée de Boue"
+          "fr": "Giclée de Boue",
+          "de": "Schlammkanone"
         },
         "cost": [
           "water",
@@ -2810,7 +2911,8 @@
         "damage": "60",
         "text": {
           "en": "If this Pokémon has any Fighting Energy attached to it, this attack does 30 more damage.",
-          "fr": "Si de l'Énergie Fighting est attachée à ce Pokémon, cette attaque inflige 30 dégâts supplémentaires."
+          "fr": "Si de l'Énergie Fighting est attachée à ce Pokémon, cette attaque inflige 30 dégâts supplémentaires.",
+          "de": "Wenn an dieses Pokémon bereits {F}-Energie angelegt ist, fügt dieser Angriff 30 weitere Schadenspunkte zu."
         }
       }
     ],
@@ -2822,7 +2924,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "It has an easygoing nature. It doesn't care if it bumps its head on boats and boulders while swimming."
+      "en": "It has an easygoing nature. It doesn't care if it bumps its head on boats and boulders while swimming.",
+      "de": "Es ist sehr unbekümmert und stört sich nicht daran, wenn es während des Schwimmens an etwas stößt."
     }
   },
   {
@@ -2878,13 +2981,15 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Eevee",
-      "fr": "Évoli"
+      "fr": "Évoli",
+      "de": "Evoli"
     },
     "attacks": [
       {
         "name": {
           "en": "Icy Wind",
-          "fr": "Vent Glace"
+          "fr": "Vent Glace",
+          "de": "Eissturm"
         },
         "cost": [
           "water",
@@ -2894,7 +2999,8 @@
         "damage": "60",
         "text": {
           "en": "The Defending Pokémon is now Asleep.",
-          "fr": "Le Pokémon Défenseur est maintenant Endormi."
+          "fr": "Le Pokémon Défenseur est maintenant Endormi.",
+          "de": "Das Verteidigende Pokémon schläft jetzt."
         }
       }
     ],
@@ -2906,7 +3012,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "It lowers its body heat to freeze its fur. The hairs then become like needles it can fire."
+      "en": "It lowers its body heat to freeze its fur. The hairs then become like needles it can fire.",
+      "de": "Wenn es seine Körpertemperatur senkt, erstarren die Haare seines Fells zu Eis und dienen ihm als nadelartige Geschosse."
     }
   },
   {
@@ -2964,7 +3071,8 @@
       {
         "name": {
           "en": "Surprise Attack",
-          "fr": "Attaque Surprise"
+          "fr": "Attaque Surprise",
+          "de": "Überraschungsangriff"
         },
         "cost": [
           "water"
@@ -2972,7 +3080,8 @@
         "damage": "20",
         "text": {
           "en": "Flip a coin. If tails, this attack does nothing.",
-          "fr": "Lancez une pièce. Si c'est pile, cette attaque ne fait rien."
+          "fr": "Lancez une pièce. Si c'est pile, cette attaque ne fait rien.",
+          "de": "Wirf 1 Münze. Bei „Zahl“ hat dieser Angriff keine Auswirkungen."
         }
       }
     ],
@@ -2984,7 +3093,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "By vibrating its cheeks, it emits sound waves imperceptible to humans and warns others of danger."
+      "en": "By vibrating its cheeks, it emits sound waves imperceptible to humans and warns others of danger.",
+      "de": "Erzeugt mit seinen Wangen für Menschen unhörbare Schallwellen, um Artgenossen vor Gefahr zu warnen."
     }
   },
   {
@@ -3040,13 +3150,15 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Tympole",
-      "fr": "Tritonde"
+      "fr": "Tritonde",
+      "de": "Schallquap"
     },
     "attacks": [
       {
         "name": {
           "en": "Vibration",
-          "fr": "Vibration"
+          "fr": "Vibration",
+          "de": "Schwingung"
         },
         "cost": [
           "normal",
@@ -3058,7 +3170,8 @@
       {
         "name": {
           "en": "Suspicious Soundwave",
-          "fr": "Onde Sonore Suspecte"
+          "fr": "Onde Sonore Suspecte",
+          "de": "Seltsame Schallwelle"
         },
         "cost": [
           "water",
@@ -3068,7 +3181,8 @@
         "damage": "30",
         "text": {
           "en": "Flip a coin. If heads, the Defending Pokémon is now Confused.",
-          "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Confus."
+          "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Confus.",
+          "de": "Wirf 1 Münze. Bei „Kopf“ ist das Verteidigende Pokémon jetzt verwirrt."
         }
       }
     ],
@@ -3080,7 +3194,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "It lives in the water and on land. It uses its long, sticky tongue to immobilize its opponents."
+      "en": "It lives in the water and on land. It uses its long, sticky tongue to immobilize its opponents.",
+      "de": "Es lebt zu Wasser und zu Lande. Mit seiner langen, klebrigen Zunge raubt es Gegnern die Bewegungsfreiheit."
     }
   },
   {
@@ -3136,13 +3251,15 @@
     "stage": "stage2",
     "evolves_from": {
       "en": "Palpitoad",
-      "fr": "Batracné"
+      "fr": "Batracné",
+      "de": "Mebrana"
     },
     "attacks": [
       {
         "name": {
           "en": "Seismic Punch",
-          "fr": "Poing Sismique"
+          "fr": "Poing Sismique",
+          "de": "Erderschütterer"
         },
         "cost": [
           "normal",
@@ -3151,13 +3268,15 @@
         "damage": "30",
         "text": {
           "en": "Does 30 damage to each Benched Pokémon (both yours and your opponent's). (Don't apply Weakness and Resistance for Benched Pokémon.)",
-          "fr": "Inflige 30 dégâts à chaque Pokémon de Banc (les vôtres et ceux de votre adversaire). (N'appliquez ni la Faiblesse ni la Résistance aux Pokémon de Banc.)"
+          "fr": "Inflige 30 dégâts à chaque Pokémon de Banc (les vôtres et ceux de votre adversaire). (N'appliquez ni la Faiblesse ni la Résistance aux Pokémon de Banc.)",
+          "de": "Dieser Angriff fügt jedem Pokémon auf der Bank (deinen und denen deines Gegners) 30 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
         }
       },
       {
         "name": {
           "en": "Splashing Turn",
-          "fr": "Tour Éclaboussant"
+          "fr": "Tour Éclaboussant",
+          "de": "Platschende Drehung"
         },
         "cost": [
           "water",
@@ -3168,7 +3287,8 @@
         "damage": "80",
         "text": {
           "en": "Switch this Pokémon with 1 of your Benched Pokémon.",
-          "fr": "Échangez ce Pokémon avec 1 de vos Pokémon de Banc."
+          "fr": "Échangez ce Pokémon avec 1 de vos Pokémon de Banc.",
+          "de": "Tausche dieses Pokémon gegen 1 Pokémon auf deiner Bank aus."
         }
       }
     ],
@@ -3180,7 +3300,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "By putting power into its bumps, it creates vibrations and increases the power of its punches."
+      "en": "By putting power into its bumps, it creates vibrations and increases the power of its punches.",
+      "de": "Konzentriert es all seine Energie auf seine Beulen, um sie vibrieren zu lassen, erhöht sich die Stärke seiner Hiebe."
     }
   },
   {
@@ -3238,7 +3359,8 @@
       {
         "name": {
           "en": "Jump On",
-          "fr": "Saut"
+          "fr": "Saut",
+          "de": "Draufspringen"
         },
         "cost": [
           "normal",
@@ -3247,7 +3369,8 @@
         "damage": "20",
         "text": {
           "en": "Flip a coin. If heads, this attack does 10 more damage.",
-          "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 10 dégâts supplémentaires."
+          "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 10 dégâts supplémentaires.",
+          "de": "Wirf 1 Münze. Bei „Kopf“ fügt dieser Angriff 10 weitere Schadenspunkte zu."
         }
       }
     ],
@@ -3259,7 +3382,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Theoretically, this Pokémon formed from icicles bathed in energy from the morning sun. Their breath is -58° F."
+      "en": "Theoretically, this Pokémon formed from icicles bathed in energy from the morning sun. Their breath is -58° F.",
+      "de": "Ein Eiszapfen, der durch die Energie der aufgehenden Sonne zum Pokémon wurde. Es speit minus 50 Grad kalten Odem."
     }
   },
   {
@@ -3315,13 +3439,15 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Vanillite",
-      "fr": "Sorbébé"
+      "fr": "Sorbébé",
+      "de": "Gelatini"
     },
     "attacks": [
       {
         "name": {
           "en": "Surefire Spin",
-          "fr": "Tourbillon Glacé"
+          "fr": "Tourbillon Glacé",
+          "de": "Narrensicherer Dreher"
         },
         "cost": [
           "normal",
@@ -3330,7 +3456,8 @@
         "damage": "20",
         "text": {
           "en": "Flip 2 coins. If both of them are heads, this attack does 40 more damage.",
-          "fr": "Lancez 2 pièces. Si vous obtenez 2 côtés face, cette attaque inflige 40 dégâts supplémentaires."
+          "fr": "Lancez 2 pièces. Si vous obtenez 2 côtés face, cette attaque inflige 40 dégâts supplémentaires.",
+          "de": "Wirf 2 Münzen. Zeigen beide „Kopf“, fügt dieser Angriff 40 weitere Schadenspunkte zu."
         }
       }
     ],
@@ -3342,7 +3469,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "They cool down the surrounding air and create ice particles, which they use to freeze their foes."
+      "en": "They cool down the surrounding air and create ice particles, which they use to freeze their foes.",
+      "de": "Es produziert Eiskörner, indem es die Luft um sich herum abkühlt, und zieht mit ihnen eine Eisschicht um seinen Gegner."
     }
   },
   {
@@ -3398,13 +3526,15 @@
     "stage": "stage2",
     "evolves_from": {
       "en": "Vanillish",
-      "fr": "Sorboul"
+      "fr": "Sorboul",
+      "de": "Gelatroppo"
     },
     "attacks": [
       {
         "name": {
           "en": "ChillMAX",
-          "fr": "Gel Maximal"
+          "fr": "Gel Maximal",
+          "de": "Kalter Schauer"
         },
         "cost": [
           "normal"
@@ -3412,13 +3542,15 @@
         "damage": "60",
         "text": {
           "en": "Flip a coin for each Energy attached to this Pokémon. This attack does 60 damage times the number of heads.",
-          "fr": "Lancez une pièce pour chaque Énergie attachée à ce Pokémon. Cette attaque inflige 60 dégâts multipliés par le nombre de côtés face."
+          "fr": "Lancez une pièce pour chaque Énergie attachée à ce Pokémon. Cette attaque inflige 60 dégâts multipliés par le nombre de côtés face.",
+          "de": "Wirf für jede an dieses Pokémon angelegte Energie 1 Münze. Dieser Angriff fügt 60 Schadenspunkte mal der Anzahl „Kopf“ zu."
         }
       },
       {
         "name": {
           "en": "Cold Breath",
-          "fr": "Souffle Froid"
+          "fr": "Souffle Froid",
+          "de": "Eisiger Atem"
         },
         "cost": [
           "water",
@@ -3427,7 +3559,8 @@
         "damage": "40",
         "text": {
           "en": "The Defending Pokémon is now Asleep.",
-          "fr": "Le Pokémon Défenseur est maintenant Endormi."
+          "fr": "Le Pokémon Défenseur est maintenant Endormi.",
+          "de": "Das Verteidigende Pokémon schläft jetzt."
         }
       }
     ],
@@ -3439,7 +3572,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Swallowing large amounts of water, they make snow clouds inside their bodies and, when angry, cause violent blizzards."
+      "en": "Swallowing large amounts of water, they make snow clouds inside their bodies and, when angry, cause violent blizzards.",
+      "de": "Es verschluckt Unmengen an Wasser und wandelt es intern in Schneewolken um. Ist es wütend, erzeugt es Schneestürme."
     }
   },
   {
@@ -3495,13 +3629,15 @@
     "stage": "stage2",
     "evolves_from": {
       "en": "Kakuna",
-      "fr": "Coconfort"
+      "fr": "Coconfort",
+      "de": "Kokuna"
     },
     "attacks": [
       {
         "name": {
           "en": "Swift Sting",
-          "fr": "Piqûre Vive"
+          "fr": "Piqûre Vive",
+          "de": "Flinker Stachel"
         },
         "cost": [
           "grass"
@@ -3509,13 +3645,15 @@
         "damage": "20",
         "text": {
           "en": "If this Pokémon has full HP, this attack does 40 more damage, and the Defending Pokémon is now Confused and Poisoned.",
-          "fr": "Si ce Pokémon a tous ses PV, cette attaque inflige 40 dégâts supplémentaires, et le Pokémon Défenseur est maintenant Confus et Empoisonné."
+          "fr": "Si ce Pokémon a tous ses PV, cette attaque inflige 40 dégâts supplémentaires, et le Pokémon Défenseur est maintenant Confus et Empoisonné.",
+          "de": "Wenn dieses Pokémon volle KP hat, fügt dieser Angriff 40 weitere Schadenspunkte zu und das Verteidigende Pokémon ist jetzt verwirrt und vergiftet."
         }
       },
       {
         "name": {
           "en": "Pierce",
-          "fr": "Transpercement"
+          "fr": "Transpercement",
+          "de": "Durchbohren"
         },
         "cost": [
           "normal",
@@ -3534,7 +3672,8 @@
     ],
     "retreat_cost": 0,
     "flavor_text": {
-      "en": "Its best attack involves flying around at high speed, striking with poison needles, then flying off."
+      "en": "Its best attack involves flying around at high speed, striking with poison needles, then flying off.",
+      "de": "Sein bester Angriff: schnell auf den Gegner zufliegen, mit Giftstacheln zustechen und davonfliegen."
     }
   },
   {
@@ -3592,7 +3731,8 @@
       {
         "name": {
           "en": "Call Sign",
-          "fr": "Signe d’Appel"
+          "fr": "Signe d’Appel",
+          "de": "Rufzeichen"
         },
         "cost": [
           "normal"
@@ -3600,13 +3740,15 @@
         "damage": "",
         "text": {
           "en": "Search your deck for a Water Pokémon, reveal it, and put it into your hand. Shuffle your deck afterward.",
-          "fr": "Cherchez un Pokémon Water dans votre deck, montrez-le, puis ajoutez-le à votre main. Mélangez ensuite votre deck."
+          "fr": "Cherchez un Pokémon Water dans votre deck, montrez-le, puis ajoutez-le à votre main. Mélangez ensuite votre deck.",
+          "de": "Durchsuche dein Deck nach 1 {W}-Pokémon, zeige es deinem Gegner und nimm es auf deine Hand. Mische anschließend dein Deck."
         }
       },
       {
         "name": {
           "en": "Cryofreeze",
-          "fr": "Cryogel"
+          "fr": "Cryogel",
+          "de": "Kryofrost"
         },
         "cost": [
           "water"
@@ -3614,7 +3756,8 @@
         "damage": "10",
         "text": {
           "en": "Discard an Energy attached to this Pokémon. The Defending Pokémon can't attack during your opponent's next turn.",
-          "fr": "Défaussez une Énergie attachée à ce Pokémon. Le Pokémon Défenseur ne peut pas attaquer pendant le prochain tour de votre adversaire."
+          "fr": "Défaussez une Énergie attachée à ce Pokémon. Le Pokémon Défenseur ne peut pas attaquer pendant le prochain tour de votre adversaire.",
+          "de": "Lege 1 an dieses Pokémon angelegte Energie auf deinen Ablagestapel. Das Verteidigende Pokémon kann während des nächsten Zuges deines Gegners nicht angreifen."
         }
       }
     ],
@@ -3626,7 +3769,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "They are composed of ice crystals. They capture prey with chains of ice, freezing the prey at -148° F."
+      "en": "They are composed of ice crystals. They capture prey with chains of ice, freezing the prey at -148° F.",
+      "de": "Es fängt seine Beute mit Ketten aus Eiskristallen und kühlt sie auf eine Temperatur von minus 100 Grad ab."
     }
   },
   {
@@ -3684,7 +3828,8 @@
       {
         "name": {
           "en": "Frost Spear",
-          "fr": "Lance de Givre"
+          "fr": "Lance de Givre",
+          "de": "Frostspeer"
         },
         "cost": [
           "water",
@@ -3693,13 +3838,15 @@
         "damage": "30",
         "text": {
           "en": "Does 30 damage to 1 of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
-          "fr": "Inflige 30 dégâts à 1 des Pokémon de Banc de votre adversaire. (N'appliquez ni la Faiblesse ni la Résistance aux Pokémon de Banc.)"
+          "fr": "Inflige 30 dégâts à 1 des Pokémon de Banc de votre adversaire. (N'appliquez ni la Faiblesse ni la Résistance aux Pokémon de Banc.)",
+          "de": "Dieser Angriff fügt 1 Pokémon auf der Bank deines Gegners 30 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
         }
       },
       {
         "name": {
           "en": "Blizzard Burn",
-          "fr": "Blizzard Étourdissant"
+          "fr": "Blizzard Étourdissant",
+          "de": "Blizzardbrand"
         },
         "cost": [
           "water",
@@ -3709,7 +3856,8 @@
         "damage": "120",
         "text": {
           "en": "This Pokémon can't attack during your next turn.",
-          "fr": "Ce Pokémon ne peut pas attaquer pendant votre prochain tour."
+          "fr": "Ce Pokémon ne peut pas attaquer pendant votre prochain tour.",
+          "de": "Dieses Pokémon kann während deines nächsten Zuges nicht angreifen."
         }
       }
     ],
@@ -3721,7 +3869,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "This legendary ice Pokémon waits for a hero to fill in the missing parts of its body with truth or ideals."
+      "en": "This legendary ice Pokémon waits for a hero to fill in the missing parts of its body with truth or ideals.",
+      "de": "Ein Legendäres Eis-Pokémon, das auf den Helden wartet, der seinen verstümmelten Körper mit Wunsch und Wirklichkeit heilt."
     }
   },
   {
@@ -3779,7 +3928,8 @@
       {
         "name": {
           "en": "Rollout",
-          "fr": "Roulade"
+          "fr": "Roulade",
+          "de": "Walzer"
         },
         "cost": [
           "lightning",
@@ -3797,7 +3947,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It looks just like a Poké Ball. It is dangerous because it may electrocute or explode on touch."
+      "en": "It looks just like a Poké Ball. It is dangerous because it may electrocute or explode on touch.",
+      "de": "Sieht aus wie ein Pokéball. Es ist gefährlich, da es bei Berührung explodieren kann."
     }
   },
   {
@@ -3853,13 +4004,15 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Voltorb",
-      "fr": "Voltorbe"
+      "fr": "Voltorbe",
+      "de": "Voltobal"
     },
     "attacks": [
       {
         "name": {
           "en": "Electro Ball",
-          "fr": "Boule Élek"
+          "fr": "Boule Élek",
+          "de": "Elektroball"
         },
         "cost": [
           "lightning",
@@ -3878,7 +4031,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It is known to drift on winds if it is bloated to bursting with stored electricity."
+      "en": "It is known to drift on winds if it is bloated to bursting with stored electricity.",
+      "de": "Es lässt sich vom Wind treiben, wenn es so voller Elektrizität ist, dass es fast explodiert."
     }
   },
   {
@@ -3934,13 +4088,15 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Eevee",
-      "fr": "Évoli"
+      "fr": "Évoli",
+      "de": "Evoli"
     },
     "attacks": [
       {
         "name": {
           "en": "Pin Missile",
-          "fr": "Dard-Nuée"
+          "fr": "Dard-Nuée",
+          "de": "Nadelrakete"
         },
         "cost": [
           "normal"
@@ -3948,13 +4104,15 @@
         "damage": "20",
         "text": {
           "en": "Flip 4 coins. This attack does 20 damage times the number of heads.",
-          "fr": "Lancez 4 pièces. Cette attaque inflige 20 dégâts multipliés par le nombre de côtés face."
+          "fr": "Lancez 4 pièces. Cette attaque inflige 20 dégâts multipliés par le nombre de côtés face.",
+          "de": "Wirf 4 Münzen. Dieser Angriff fügt 20 Schadenspunkte mal der Anzahl „Kopf“ zu."
         }
       },
       {
         "name": {
           "en": "Electri-Defuse",
-          "fr": "Neutralivolt"
+          "fr": "Neutralivolt",
+          "de": "Elektro-Entschärfung"
         },
         "cost": [
           "lightning",
@@ -3963,7 +4121,8 @@
         "damage": "40",
         "text": {
           "en": "If the Defending Pokémon is a Pokémon-EX, that Pokémon can't attack during your opponent's next turn.",
-          "fr": "Si le Pokémon Défenseur est un Pokémon-EX, il ne peut pas attaquer pendant le prochain tour de votre adversaire."
+          "fr": "Si le Pokémon Défenseur est un Pokémon-EX, il ne peut pas attaquer pendant le prochain tour de votre adversaire.",
+          "de": "Wenn das Verteidigende Pokémon ein Pokémon-EX ist, kann es während des nächsten Zuges deines Gegners nicht angreifen."
         }
       }
     ],
@@ -3975,7 +4134,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "By storing electricity in its body, it can shoot its bristlelike fur like a barrage of missiles."
+      "en": "By storing electricity in its body, it can shoot its bristlelike fur like a barrage of missiles.",
+      "de": "Lädt sich sein Körper mit Elektrizität, richten sich alle seine Haare auf und dienen ihm als Geschosse."
     }
   },
   {
@@ -4033,7 +4193,8 @@
       {
         "name": {
           "en": "Static Shock",
-          "fr": "Choc Statique"
+          "fr": "Choc Statique",
+          "de": "Statischer Schock"
         },
         "cost": [
           "lightning",
@@ -4051,7 +4212,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "It discharges positive and negative electricity from its antenna tips to shock its foes."
+      "en": "It discharges positive and negative electricity from its antenna tips to shock its foes.",
+      "de": "Über seine Antennen entlädt es Elektrizität, mit der es seinen Gegnern einen Schlag versetzt."
     }
   },
   {
@@ -4107,13 +4269,15 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Chinchou",
-      "fr": "Loupio"
+      "fr": "Loupio",
+      "de": "Lampi"
     },
     "attacks": [
       {
         "name": {
           "en": "Special Tackle",
-          "fr": "Charge Spéciale"
+          "fr": "Charge Spéciale",
+          "de": "Spezial-Tackle"
         },
         "cost": [
           "lightning"
@@ -4121,13 +4285,15 @@
         "damage": "30",
         "text": {
           "en": "If this Pokémon has any Special Energy attached to it, this attack does 30 more damage.",
-          "fr": "Si de l'Énergie spéciale est attachée à ce Pokémon, cette attaque inflige 30 dégâts supplémentaires."
+          "fr": "Si de l'Énergie spéciale est attachée à ce Pokémon, cette attaque inflige 30 dégâts supplémentaires.",
+          "de": "Wenn an dieses Pokémon bereits Spezial-Energie angelegt ist, fügt dieser Angriff 30 weitere Schadenspunkte zu."
         }
       },
       {
         "name": {
           "en": "Extreme Current",
-          "fr": "Courant Extrême"
+          "fr": "Courant Extrême",
+          "de": "Extreme Strömung"
         },
         "cost": [
           "lightning",
@@ -4137,7 +4303,8 @@
         "damage": "90",
         "text": {
           "en": "Discard an Energy attached to this Pokémon.",
-          "fr": "Défaussez une Énergie attachée à ce Pokémon."
+          "fr": "Défaussez une Énergie attachée à ce Pokémon.",
+          "de": "Lege 1 an dieses Pokémon angelegte Energie auf deinen Ablagestapel."
         }
       }
     ],
@@ -4149,7 +4316,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "Lanturn's light can shine up from great depths. It is nicknamed \"The Deep-Sea Star.\""
+      "en": "Lanturn's light can shine up from great depths. It is nicknamed \"The Deep-Sea Star.\"",
+      "de": "Lanturns Licht kann aus großen Tiefen heraufscheinen. Man nennt es auch „Tiefseestern“."
     }
   },
   {
@@ -4207,7 +4375,8 @@
       {
         "name": {
           "en": "Minor Errand-Running",
-          "fr": "Rendez-vous Mineur"
+          "fr": "Rendez-vous Mineur",
+          "de": "Kleine Besorgung"
         },
         "cost": [
           "normal"
@@ -4215,13 +4384,15 @@
         "damage": "",
         "text": {
           "en": "Search your deck for 2 basic Energy cards, reveal them, and put them into your hand. Shuffle your deck afterward.",
-          "fr": "Cherchez 2 cartes Énergie de base dans votre deck, montrez-les, puis ajoutez-les à votre main. Mélangez ensuite votre deck."
+          "fr": "Cherchez 2 cartes Énergie de base dans votre deck, montrez-les, puis ajoutez-les à votre main. Mélangez ensuite votre deck.",
+          "de": "Durchsuche dein Deck nach 2 Basis-Energiekarten, zeige sie deinem Gegner und nimm sie auf deine Hand. Mische anschließend dein Deck."
         }
       },
       {
         "name": {
           "en": "Electric Tail",
-          "fr": "Électro-Queue"
+          "fr": "Électro-Queue",
+          "de": "Stromschweif"
         },
         "cost": [
           "lightning"
@@ -4229,7 +4400,8 @@
         "damage": "10",
         "text": {
           "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
-          "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Paralysé."
+          "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Paralysé.",
+          "de": "Wirf 1 Münze. Bei „Kopf“ ist das Verteidigende Pokémon jetzt paralysiert."
         }
       }
     ],
@@ -4241,7 +4413,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "A pair may be seen rubbing their cheek pouches together in an effort to share stored electricity."
+      "en": "A pair may be seen rubbing their cheek pouches together in an effort to share stored electricity.",
+      "de": "Um gespeicherte Elektrizität zu teilen, reiben zwei von ihnen ihre Backentaschen aneinander."
     }
   },
   {
@@ -4286,7 +4459,8 @@
       {
         "name": {
           "en": "Raiden Knuckle",
-          "fr": "Appel Foudroyant"
+          "fr": "Appel Foudroyant",
+          "de": "Herr des Donners"
         },
         "cost": [
           "lightning"
@@ -4294,13 +4468,15 @@
         "damage": "30",
         "text": {
           "en": "Attach an Energy card from your discard pile to 1 of your Benched Team Plasma Pokémon.",
-          "fr": "Attachez une carte Énergie de votre pile de défausse à 1 de vos Pokémon de la Team Plasma sur votre Banc."
+          "fr": "Attachez une carte Énergie de votre pile de défausse à 1 de vos Pokémon de la Team Plasma sur votre Banc.",
+          "de": "Nimm 1 Energiekarte von deinem Ablagestapel und lege sie an 1 Team Plasma-Pokémon auf deiner Bank an."
         }
       },
       {
         "name": {
           "en": "Thunderous Noise",
-          "fr": "Grondement Tonitruant"
+          "fr": "Grondement Tonitruant",
+          "de": "Donnerschall"
         },
         "cost": [
           "lightning",
@@ -4311,7 +4487,8 @@
         "damage": "90",
         "text": {
           "en": "If this Pokémon has any Plasma Energy attached to it, discard an Energy attached to the Defending Pokémon.",
-          "fr": "Si de l'Énergie Plasma est attachée à ce Pokémon, défaussez une Énergie attachée au Pokémon Défenseur."
+          "fr": "Si de l'Énergie Plasma est attachée à ce Pokémon, défaussez une Énergie attachée au Pokémon Défenseur.",
+          "de": "Wenn an dieses Pokémon bereits Plasma-Energie angelegt ist, lege 1 an das Verteidigende Pokémon angelegte Energie auf den Ablagestapel deines Gegners."
         }
       }
     ],
@@ -4378,7 +4555,8 @@
       {
         "name": {
           "en": "Mach Claw",
-          "fr": "Instagriffe"
+          "fr": "Instagriffe",
+          "de": "Tempoklaue"
         },
         "cost": [
           "lightning",
@@ -4388,13 +4566,15 @@
         "damage": "50",
         "text": {
           "en": "This attack's damage isn't affected by Resistance.",
-          "fr": "Les dégâts de cette attaque ne sont pas affectés par la Résistance."
+          "fr": "Les dégâts de cette attaque ne sont pas affectés par la Résistance.",
+          "de": "Der Schaden dieses Angriffs wird durch Resistenz nicht verändert."
         }
       },
       {
         "name": {
           "en": "Fusion Bolt",
-          "fr": "Éclair Croix"
+          "fr": "Éclair Croix",
+          "de": "Kreuzdonner"
         },
         "cost": [
           "lightning",
@@ -4405,7 +4585,8 @@
         "damage": "80",
         "text": {
           "en": "If Reshiram is on your Bench, this attack does 40 more damage.",
-          "fr": "Si Reshiram est sur votre Banc, cette attaque inflige 40 dégâts supplémentaires."
+          "fr": "Si Reshiram est sur votre Banc, cette attaque inflige 40 dégâts supplémentaires.",
+          "de": "Wenn sich Reshiram auf deiner Bank befindet, fügt dieser Angriff 40 weitere Schadenspunkte zu."
         }
       }
     ],
@@ -4417,7 +4598,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "This legendary Pokémon can scorch the world with lightning. It assists those who want to build an ideal world."
+      "en": "This legendary Pokémon can scorch the world with lightning. It assists those who want to build an ideal world.",
+      "de": "Ein Legendäres Pokémon mit der Macht, die Welt durch Donner einzuäschern. Hilft allen, die einer Welt der Wünsche harren."
     }
   },
   {
@@ -4475,7 +4657,8 @@
       {
         "name": {
           "en": "Seed Bomb",
-          "fr": "Canon Graine"
+          "fr": "Canon Graine",
+          "de": "Samenbomben"
         },
         "cost": [
           "grass",
@@ -4499,7 +4682,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Its six eggs converse using telepathy. They can quickly gather if they become separated."
+      "en": "Its six eggs converse using telepathy. They can quickly gather if they become separated.",
+      "de": "Die sechs Eier kommunizieren telepathisch. Werden sie getrennt, finden sie sich schnell wieder."
     }
   },
   {
@@ -4544,7 +4728,8 @@
       {
         "name": {
           "en": "Poison Sting",
-          "fr": "Dard-Venin"
+          "fr": "Dard-Venin",
+          "de": "Giftstachel"
         },
         "cost": [
           "psychic",
@@ -4553,7 +4738,8 @@
         "damage": "20",
         "text": {
           "en": "Flip a coin. If heads, the Defending Pokémon is now Poisoned.",
-          "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Empoisonné."
+          "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Empoisonné.",
+          "de": "Wirf 1 Münze. Bei „Kopf“ ist das Verteidigende Pokémon jetzt vergiftet."
         }
       }
     ],
@@ -4565,7 +4751,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "While it does not prefer to fight, even one drop of the poison it secretes from its barbs can be fatal."
+      "en": "While it does not prefer to fight, even one drop of the poison it secretes from its barbs can be fatal.",
+      "de": "Es mag keine Kämpfe. Ein einziger Tropfen des Gifts aus seinen Widerhaken hat eine fatale Wirkung."
     }
   },
   {
@@ -4621,13 +4808,15 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Nidoran♀",
-      "fr": "Nidoran♀"
+      "fr": "Nidoran♀",
+      "de": "Nidoran♀"
     },
     "attacks": [
       {
         "name": {
           "en": "Poison Sting",
-          "fr": "Dard-Venin"
+          "fr": "Dard-Venin",
+          "de": "Giftstachel"
         },
         "cost": [
           "psychic",
@@ -4636,13 +4825,15 @@
         "damage": "20",
         "text": {
           "en": "The Defending Pokémon is now Poisoned.",
-          "fr": "Le Pokémon Défenseur est maintenant Empoisonné."
+          "fr": "Le Pokémon Défenseur est maintenant Empoisonné.",
+          "de": "Das Verteidigende Pokémon ist jetzt vergiftet."
         }
       },
       {
         "name": {
           "en": "Double Kick",
-          "fr": "Double Pied"
+          "fr": "Double Pied",
+          "de": "Doppelkick"
         },
         "cost": [
           "psychic",
@@ -4652,7 +4843,8 @@
         "damage": "40",
         "text": {
           "en": "Flip 2 coins. This attack does 40 damage times the number of heads.",
-          "fr": "Lancez 2 pièces. Cette attaque inflige 40 dégâts multipliés par le nombre de côtés face."
+          "fr": "Lancez 2 pièces. Cette attaque inflige 40 dégâts multipliés par le nombre de côtés face.",
+          "de": "Wirf 2 Münzen. Dieser Angriff fügt 40 Schadenspunkte mal der Anzahl „Kopf“ zu."
         }
       }
     ],
@@ -4664,7 +4856,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "When it senses danger, it raises all the barbs on its body. These barbs grow slower than Nidorino's."
+      "en": "When it senses danger, it raises all the barbs on its body. These barbs grow slower than Nidorino's.",
+      "de": "Bei Gefahr fährt es die Widerhaken am Körper aus. Diese wachsen langsamer als die von Nidorino."
     }
   },
   {
@@ -4720,13 +4913,15 @@
     "stage": "stage2",
     "evolves_from": {
       "en": "Nidorina",
-      "fr": "Nidorina"
+      "fr": "Nidorina",
+      "de": "Nidorina"
     },
     "attacks": [
       {
         "name": {
           "en": "Poison Horn",
-          "fr": "Corne Empoisonnée"
+          "fr": "Corne Empoisonnée",
+          "de": "Gifthorn"
         },
         "cost": [
           "psychic",
@@ -4735,13 +4930,15 @@
         "damage": "50",
         "text": {
           "en": "The Defending Pokémon is now Poisoned.",
-          "fr": "Le Pokémon Défenseur est maintenant Empoisonné."
+          "fr": "Le Pokémon Défenseur est maintenant Empoisonné.",
+          "de": "Das Verteidigende Pokémon ist jetzt vergiftet."
         }
       },
       {
         "name": {
           "en": "Double Stomp",
-          "fr": "Double Écrasement"
+          "fr": "Double Écrasement",
+          "de": "Doppelstampfer"
         },
         "cost": [
           "psychic",
@@ -4751,7 +4948,8 @@
         "damage": "60",
         "text": {
           "en": "Flip 2 coins. This attack does 30 more damage for each heads.",
-          "fr": "Lancez 2 pièces. Cette attaque inflige 30 dégâts supplémentaires pour chaque côté face."
+          "fr": "Lancez 2 pièces. Cette attaque inflige 30 dégâts supplémentaires pour chaque côté face.",
+          "de": "Wirf 2 Münzen. Dieser Angriff fügt 30 weitere Schadenspunkte mal der Anzahl „Kopf“ zu."
         }
       }
     ],
@@ -4763,7 +4961,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "Its entire body is armored with hard scales. It will protect the young in its burrow with its life."
+      "en": "Its entire body is armored with hard scales. It will protect the young in its burrow with its life.",
+      "de": "Sein ganzer Körper ist mit harten Schuppen bedeckt. Es beschützt sein Junges mit seinem Leben."
     }
   },
   {
@@ -4808,7 +5007,8 @@
       {
         "name": {
           "en": "Hit Back",
-          "fr": "Réplique"
+          "fr": "Réplique",
+          "de": "Rückschlag"
         },
         "cost": [
           "psychic"
@@ -4816,7 +5016,8 @@
         "damage": "30",
         "text": {
           "en": "If this Pokémon has no damage counters on it, this attack does nothing.",
-          "fr": "Si ce Pokémon n'a aucun marqueur de dégâts, cette attaque ne fait rien."
+          "fr": "Si ce Pokémon n'a aucun marqueur de dégâts, cette attaque ne fait rien.",
+          "de": "Wenn auf diesem Pokémon keine Schadensmarken liegen, hat dieser Angriff keine Auswirkungen."
         }
       }
     ],
@@ -4828,7 +5029,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It scans its surroundings by raising its ears out of the grass. Its toxic horn is for protection."
+      "en": "It scans its surroundings by raising its ears out of the grass. Its toxic horn is for protection.",
+      "de": "Es untersucht die Umgebung, indem es die Ohren spitzt und lauscht. Sein giftiges Horn schützt es."
     }
   },
   {
@@ -4884,13 +5086,15 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Nidoran♂",
-      "fr": "Nidoran♂"
+      "fr": "Nidoran♂",
+      "de": "Nidoran♂"
     },
     "attacks": [
       {
         "name": {
           "en": "Double Kick",
-          "fr": "Double Pied"
+          "fr": "Double Pied",
+          "de": "Doppelkick"
         },
         "cost": [
           "psychic",
@@ -4899,13 +5103,15 @@
         "damage": "30",
         "text": {
           "en": "Flip 2 coins. This attack does 30 damage times the number of heads.",
-          "fr": "Lancez 2 pièces. Cette attaque inflige 30 dégâts multipliés par le nombre de côtés face."
+          "fr": "Lancez 2 pièces. Cette attaque inflige 30 dégâts multipliés par le nombre de côtés face.",
+          "de": "Wirf 2 Münzen. Dieser Angriff fügt 30 Schadenspunkte mal der Anzahl „Kopf“ zu."
         }
       },
       {
         "name": {
           "en": "Horn Attack",
-          "fr": "Koud'Korne"
+          "fr": "Koud'Korne",
+          "de": "Hornattacke"
         },
         "cost": [
           "normal",
@@ -4924,7 +5130,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "It has a violent disposition and stabs foes with its horn, which oozes poison upon impact."
+      "en": "It has a violent disposition and stabs foes with its horn, which oozes poison upon impact.",
+      "de": "Es ist aggressiv und greift seine Gegner mit dem Horn an, welches bei Berührung Gift absondert."
     }
   },
   {
@@ -4982,7 +5189,8 @@
       {
         "name": {
           "en": "Lure Poison",
-          "fr": "Appât Vénéneux"
+          "fr": "Appât Vénéneux",
+          "de": "Lockendes Gift"
         },
         "cost": [
           "psychic"
@@ -4990,13 +5198,15 @@
         "damage": "",
         "text": {
           "en": "Flip a coin. If heads, switch 1 of your opponent's Benched Pokémon with the Defending Pokémon. The new Defending Pokémon is now Poisoned.",
-          "fr": "Lancez une pièce. Si c'est face, échangez 1 des Pokémon de Banc de votre adversaire avec le Pokémon Défenseur. Le nouveau Pokémon Défenseur est maintenant Empoisonné."
+          "fr": "Lancez une pièce. Si c'est face, échangez 1 des Pokémon de Banc de votre adversaire avec le Pokémon Défenseur. Le nouveau Pokémon Défenseur est maintenant Empoisonné.",
+          "de": "Wirf 1 Münze. Tausche bei „Kopf“ 1 Pokémon auf der Bank deines Gegners gegen das Verteidigende Pokémon aus. Das neue Verteidigende Pokémon ist jetzt vergiftet."
         }
       },
       {
         "name": {
           "en": "Sludge Toss",
-          "fr": "Giclée Vaseuse"
+          "fr": "Giclée Vaseuse",
+          "de": "Schleimwurf"
         },
         "cost": [
           "psychic",
@@ -5015,7 +5225,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "Born from sludge, these Pokémon now gather in polluted places and increase the bacteria in their bodies."
+      "en": "Born from sludge, these Pokémon now gather in polluted places and increase the bacteria in their bodies.",
+      "de": "Diese aus Schlamm entstandenen Pokémon scharen sich an dreckigen Orten, um ihre körpereigenen Bakterien zu kultivieren."
     }
   },
   {
@@ -5071,13 +5282,15 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Grimer",
-      "fr": "Tadmorv"
+      "fr": "Tadmorv",
+      "de": "Sleima"
     },
     "attacks": [
       {
         "name": {
           "en": "Poison Suction",
-          "fr": "Succion Empoisonnée"
+          "fr": "Succion Empoisonnée",
+          "de": "Giftsauger"
         },
         "cost": [
           "psychic",
@@ -5087,13 +5300,15 @@
         "damage": "60",
         "text": {
           "en": "If the Defending Pokémon is Poisoned, heal 60 damage from this Pokémon.",
-          "fr": "Si le Pokémon Défenseur est Empoisonné, soignez 60 dégâts à ce Pokémon."
+          "fr": "Si le Pokémon Défenseur est Empoisonné, soignez 60 dégâts à ce Pokémon.",
+          "de": "Wenn das Verteidigende Pokémon vergiftet ist, heile 60 Schadenspunkte bei diesem Pokémon."
         }
       },
       {
         "name": {
           "en": "Sludge Crash",
-          "fr": "Flot de Vase"
+          "fr": "Flot de Vase",
+          "de": "Schlammrutsch"
         },
         "cost": [
           "psychic",
@@ -5104,7 +5319,8 @@
         "damage": "80",
         "text": {
           "en": "Flip a coin until you get tails. For each heads, discard an Energy attached to the Defending Pokémon.",
-          "fr": "Lancez une pièce jusqu'à ce que vous obteniez un côté pile. Pour chaque côté face, défaussez une Énergie attachée au Pokémon Défenseur."
+          "fr": "Lancez une pièce jusqu'à ce que vous obteniez un côté pile. Pour chaque côté face, défaussez une Énergie attachée au Pokémon Défenseur.",
+          "de": "Wirf so lang 1 Münze, bis zum ersten Mal das Ergebnis „Zahl“ kommt. Lege pro „Kopf“ 1 an das Verteidigende Pokémon angelegte Energie auf den Ablagestapel deines Gegners."
         }
       }
     ],
@@ -5116,7 +5332,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "It's so stinky! Muk's body contains toxic elements, and any plant will wilt when it passes by."
+      "en": "It's so stinky! Muk's body contains toxic elements, and any plant will wilt when it passes by.",
+      "de": "Ihr Gestank ist unerträglich. Das starke Gift, aus dem ihr Körper besteht, macht jeder Pflanze in ihrem Weg den Garaus."
     }
   },
   {
@@ -5174,7 +5391,8 @@
       {
         "name": {
           "en": "Psy Bolt",
-          "fr": "Choc Mental"
+          "fr": "Choc Mental",
+          "de": "Konfusion"
         },
         "cost": [
           "psychic",
@@ -5183,7 +5401,8 @@
         "damage": "20",
         "text": {
           "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
-          "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Paralysé."
+          "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Paralysé.",
+          "de": "Wirf 1 Münze. Bei „Kopf“ ist das Verteidigende Pokémon jetzt paralysiert."
         }
       }
     ],
@@ -5195,7 +5414,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It shapes an invisible wall in midair by minutely vibrating its fingertips to stop molecules in the air."
+      "en": "It shapes an invisible wall in midair by minutely vibrating its fingertips to stop molecules in the air.",
+      "de": "Formt eine unsichtbare Wand mitten in der Luft, indem es minutiös mit den Fingerspitzen vibriert."
     }
   },
   {
@@ -5251,13 +5471,15 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Eevee",
-      "fr": "Évoli"
+      "fr": "Évoli",
+      "de": "Evoli"
     },
     "attacks": [
       {
         "name": {
           "en": "Psy Alert",
-          "fr": "Alerte Psychique"
+          "fr": "Alerte Psychique",
+          "de": "Psy-Alarm"
         },
         "cost": [
           "normal"
@@ -5265,13 +5487,15 @@
         "damage": "20",
         "text": {
           "en": "Draw cards until you have 6 cards in your hand.",
-          "fr": "Piochez des cartes jusqu'à ce que vous ayez 6 cartes en main."
+          "fr": "Piochez des cartes jusqu'à ce que vous ayez 6 cartes en main.",
+          "de": "Ziehe so viele Karten, bis du 6 Karten auf der Hand hast."
         }
       },
       {
         "name": {
           "en": "Shadow Ball",
-          "fr": "Ball'Ombre"
+          "fr": "Ball'Ombre",
+          "de": "Spukball"
         },
         "cost": [
           "psychic"
@@ -5279,7 +5503,8 @@
         "damage": "",
         "text": {
           "en": "This attack does 40 damage to 1 of your opponent's Pokémon. Also apply Weakness and Resistance for Benched Pokémon.",
-          "fr": "Cette attaque inflige 40 dégâts à 1 des Pokémon de votre adversaire. Appliquez aussi la Faiblesse et la Résistance aux Pokémon de Banc."
+          "fr": "Cette attaque inflige 40 dégâts à 1 des Pokémon de votre adversaire. Appliquez aussi la Faiblesse et la Résistance aux Pokémon de Banc.",
+          "de": "Dieser Angriff fügt 1 Pokémon deines Gegners 40 Schadenspunkte zu. Wende Schwäche und Resistenz auch bei Pokémon auf der Bank an."
         }
       }
     ],
@@ -5291,7 +5516,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Its fur is so sensitive, it can feel minute shifts in the air and predict the weather…and its foes' thoughts."
+      "en": "Its fur is so sensitive, it can feel minute shifts in the air and predict the weather…and its foes' thoughts.",
+      "de": "Die Haare seines Fells sind so feinfühlig, dass es am Wind ablesen kann, was seine Gegner denken und wie das Wetter wird."
     }
   },
   {
@@ -5349,7 +5575,8 @@
       {
         "name": {
           "en": "Scratch",
-          "fr": "Griffe"
+          "fr": "Griffe",
+          "de": "Kratzer"
         },
         "cost": [
           "normal"
@@ -5360,7 +5587,8 @@
       {
         "name": {
           "en": "Shadow Cage",
-          "fr": "Cage d’Ombre"
+          "fr": "Cage d’Ombre",
+          "de": "Schattenverlies"
         },
         "cost": [
           "psychic",
@@ -5369,13 +5597,15 @@
         "damage": "20",
         "text": {
           "en": "The Defending Pokémon can't retreat during your opponent's next turn.",
-          "fr": "Le Pokémon Défenseur ne peut pas battre en retraite pendant le prochain tour de votre adversaire."
+          "fr": "Le Pokémon Défenseur ne peut pas battre en retraite pendant le prochain tour de votre adversaire.",
+          "de": "Das Verteidigende Pokémon kann sich während des nächsten Zuges deines Gegners nicht zurückziehen."
         }
       }
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It hides in the darkness of caves. Its diet of gems has transformed its eyes into gemstones."
+      "en": "It hides in the darkness of caves. Its diet of gems has transformed its eyes into gemstones.",
+      "de": "Es versteckt sich im Dunkeln von Höhlen. Seine Augen sind Edelsteine."
     }
   },
   {
@@ -5431,13 +5661,15 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Exeggcute",
-      "fr": "Noeunoeuf"
+      "fr": "Noeunoeuf",
+      "de": "Owei"
     },
     "attacks": [
       {
         "name": {
           "en": "Blockade",
-          "fr": "Blocus"
+          "fr": "Blocus",
+          "de": "Blockade"
         },
         "cost": [
           "normal"
@@ -5445,13 +5677,15 @@
         "damage": "10",
         "text": {
           "en": "Your opponent can't play any Supporter cards from his or her hand during his or her next turn.",
-          "fr": "Votre adversaire ne peut pas jouer de cartes Supporter de sa main pendant son prochain tour."
+          "fr": "Votre adversaire ne peut pas jouer de cartes Supporter de sa main pendant son prochain tour.",
+          "de": "Dein Gegner kann während seines nächsten Zuges keine Unterstützerkarten von seiner Hand spielen."
         }
       },
       {
         "name": {
           "en": "Stomp",
-          "fr": "Écrasement"
+          "fr": "Écrasement",
+          "de": "Stampfer"
         },
         "cost": [
           "grass",
@@ -5461,7 +5695,8 @@
         "damage": "60",
         "text": {
           "en": "Flip a coin. If heads, this attack does 30 more damage.",
-          "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 30 dégâts supplémentaires."
+          "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 30 dégâts supplémentaires.",
+          "de": "Wirf 1 Münze. Bei „Kopf“ fügt dieser Angriff 30 weitere Schadenspunkte zu."
         }
       }
     ],
@@ -5479,7 +5714,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "It is called \"The Walking Jungle.\" If a head grows too big, it falls off and becomes an Exeggcute."
+      "en": "It is called \"The Walking Jungle.\" If a head grows too big, it falls off and becomes an Exeggcute.",
+      "de": "Man nennt es den „Laufenden Dschungel“. Wird ein Kopf zu groß, fällt er ab und wird zu einem Owei."
     }
   },
   {
@@ -5537,7 +5773,8 @@
       {
         "name": {
           "en": "Calculate",
-          "fr": "Calcul"
+          "fr": "Calcul",
+          "de": "Berechnen"
         },
         "cost": [
           "normal"
@@ -5545,13 +5782,15 @@
         "damage": "",
         "text": {
           "en": "Look at the top 4 cards of your deck and put them back on top of your deck in any order.",
-          "fr": "Regardez les 4 cartes du dessus de votre deck et replacez-les sur le dessus de votre deck dans l'ordre de votre choix."
+          "fr": "Regardez les 4 cartes du dessus de votre deck et replacez-les sur le dessus de votre deck dans l'ordre de votre choix.",
+          "de": "Schau dir die obersten 4 Karten deines Decks an und lege sie in beliebiger Reihenfolge zurück auf dein Deck."
         }
       },
       {
         "name": {
           "en": "Psypunch",
-          "fr": "Coup de Poing Psy"
+          "fr": "Coup de Poing Psy",
+          "de": "Psyhieb"
         },
         "cost": [
           "psychic",
@@ -5569,7 +5808,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Its cells are all magnetic, and it communicates with others by using magnetic pulses."
+      "en": "Its cells are all magnetic, and it communicates with others by using magnetic pulses.",
+      "de": "Ihre Zellen sind magnetisch geladen. Sie sondern über ihre Körper Magnetkräfte ab, um miteinander zu kommunizieren."
     }
   },
   {
@@ -5625,13 +5865,15 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Beldum",
-      "fr": "Terhal"
+      "fr": "Terhal",
+      "de": "Tanhel"
     },
     "attacks": [
       {
         "name": {
           "en": "Psy Bolt",
-          "fr": "Choc Mental"
+          "fr": "Choc Mental",
+          "de": "Konfusion"
         },
         "cost": [
           "psychic"
@@ -5639,13 +5881,15 @@
         "damage": "10",
         "text": {
           "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
-          "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Paralysé."
+          "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Paralysé.",
+          "de": "Wirf 1 Münze. Bei „Kopf“ ist das Verteidigende Pokémon jetzt paralysiert."
         }
       },
       {
         "name": {
           "en": "Psypunch",
-          "fr": "Coup de Poing Psy"
+          "fr": "Coup de Poing Psy",
+          "de": "Psyhieb"
         },
         "cost": [
           "psychic",
@@ -5664,7 +5908,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "It is formed by two Beldum joining together. Its two brains are linked, amplifying its psychic power."
+      "en": "It is formed by two Beldum joining together. Its two brains are linked, amplifying its psychic power.",
+      "de": "Es besteht aus zwei Tanhel. Dank der Vereinigung ihrer beiden Hirne verfügen sie über gesteigerte Psycho-Kräfte."
     }
   },
   {
@@ -5720,13 +5965,15 @@
     "stage": "stage2",
     "evolves_from": {
       "en": "Metang",
-      "fr": "Métang"
+      "fr": "Métang",
+      "de": "Metang"
     },
     "attacks": [
       {
         "name": {
           "en": "Mind Bend",
-          "fr": "Contrôleur d'Esprit"
+          "fr": "Contrôleur d'Esprit",
+          "de": "Gedankenverbiegung"
         },
         "cost": [
           "psychic",
@@ -5737,7 +5984,8 @@
         "damage": "60",
         "text": {
           "en": "The Defending Pokémon is now Confused.",
-          "fr": "Le Pokémon Défenseur est maintenant Confus."
+          "fr": "Le Pokémon Défenseur est maintenant Confus.",
+          "de": "Das Verteidigende Pokémon ist jetzt verwirrt."
         }
       }
     ],
@@ -5749,7 +5997,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "With four linked brains, it's more intelligent than a supercomputer, and it uses calculations to analyze foes."
+      "en": "With four linked brains, it's more intelligent than a supercomputer, and it uses calculations to analyze foes.",
+      "de": "Dank seiner vier vernetzten Hirne kann es Gegner besser als ein Supercomputer mit komplizierten Formeln analysieren."
     }
   },
   {
@@ -5794,7 +6043,8 @@
       {
         "name": {
           "en": "Helix Force",
-          "fr": "Force Spirale"
+          "fr": "Force Spirale",
+          "de": "Helixkraft"
         },
         "cost": [
           "psychic",
@@ -5803,7 +6053,8 @@
         "damage": "30",
         "text": {
           "en": "If this Pokémon has any Plasma Energy attached to it, this attack does 30 more damage for each Energy attached to the Defending Pokémon.",
-          "fr": "Si de l'Énergie Plasma est attachée à ce Pokémon, cette attaque inflige 30 dégâts supplémentaires pour chaque Énergie attachée au Pokémon Défenseur."
+          "fr": "Si de l'Énergie Plasma est attachée à ce Pokémon, cette attaque inflige 30 dégâts supplémentaires pour chaque Énergie attachée au Pokémon Défenseur.",
+          "de": "Wenn an dieses Pokémon bereits Plasma-Energie angelegt ist, fügt dieser Angriff 30 weitere Schadenspunkte für jede an das Verteidigende Pokémon angelegte Energie zu."
         }
       }
     ],
@@ -5870,7 +6121,8 @@
       {
         "name": {
           "en": "Transfer Pain",
-          "fr": "Transfert de Douleur"
+          "fr": "Transfert de Douleur",
+          "de": "Schmerztranfer"
         },
         "cost": [
           "psychic"
@@ -5878,7 +6130,8 @@
         "damage": "",
         "text": {
           "en": "Move 1 damage counter from any of your Pokémon to any of your opponent's Pokémon.",
-          "fr": "Déplacez 1 marqueur de dégâts de l'un de vos Pokémon vers l'un des Pokémon de votre adversaire."
+          "fr": "Déplacez 1 marqueur de dégâts de l'un de vos Pokémon vers l'un des Pokémon de votre adversaire.",
+          "de": "Verschiebe 1 Schadensmarke von einem deiner Pokémon auf ein Pokémon deines Gegners."
         }
       }
     ],
@@ -5890,7 +6143,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "These Pokémon arose from the spirits of people interred in graves. Each retains memories of its former life."
+      "en": "These Pokémon arose from the spirits of people interred in graves. Each retains memories of its former life.",
+      "de": "Es entsteht aus den Seelen von längst begrabenen Menschen und kann sich immer noch an deren Vergangenheit erinnern."
     }
   },
   {
@@ -5948,7 +6202,8 @@
       {
         "name": {
           "en": "Will-O-Wisp",
-          "fr": "Feu Follet"
+          "fr": "Feu Follet",
+          "de": "Irrlicht"
         },
         "cost": [
           "normal"
@@ -5959,7 +6214,8 @@
       {
         "name": {
           "en": "Ram",
-          "fr": "Collision"
+          "fr": "Collision",
+          "de": "Ramme"
         },
         "cost": [
           "psychic",
@@ -5978,7 +6234,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "These Pokémon arose from the spirits of people interred in graves. Each retains memories of its former life."
+      "en": "These Pokémon arose from the spirits of people interred in graves. Each retains memories of its former life.",
+      "de": "Es entsteht aus den Seelen von längst begrabenen Menschen und kann sich immer noch an deren Vergangenheit erinnern."
     }
   },
   {
@@ -6034,13 +6291,15 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Yamask",
-      "fr": "Tutafeh"
+      "fr": "Tutafeh",
+      "de": "Makabaja"
     },
     "attacks": [
       {
         "name": {
           "en": "Slap of Misfortune",
-          "fr": "Revers de Fortune"
+          "fr": "Revers de Fortune",
+          "de": "Unglückshieb"
         },
         "cost": [
           "psychic",
@@ -6050,7 +6309,8 @@
         "damage": "70",
         "text": {
           "en": "Whenever your opponent flips a coin during his or her next turn, treat it as tails.",
-          "fr": "Chaque fois que votre adversaire lance une pièce pendant son prochain tour, considérez que c'est pile."
+          "fr": "Chaque fois que votre adversaire lance une pièce pendant son prochain tour, considérez que c'est pile.",
+          "de": "Immer wenn dein Gegner während seines nächsten Zuges 1 Münze wirft, wird das Ergebnis als „Zahl“ gewertet."
         }
       }
     ],
@@ -6062,7 +6322,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "Grave robbers who mistake them for real coffins and get too close end up trapped inside their bodies."
+      "en": "Grave robbers who mistake them for real coffins and get too close end up trapped inside their bodies.",
+      "de": "Grabräuber, die es mit einem echten Sarg verwechseln und ihm zu nahe kommen, hält es im Inneren seines Körpers gefangen."
     }
   },
   {
@@ -6118,13 +6379,15 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Yamask",
-      "fr": "Tutafeh"
+      "fr": "Tutafeh",
+      "de": "Makabaja"
     },
     "attacks": [
       {
         "name": {
           "en": "Elongating Arms",
-          "fr": "Bras à Rallonges"
+          "fr": "Bras à Rallonges",
+          "de": "Lange Arme"
         },
         "cost": [
           "normal"
@@ -6132,13 +6395,15 @@
         "damage": "",
         "text": {
           "en": "This attack does 30 damage to 1 of your opponent's Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
-          "fr": "Cette attaque inflige 30 dégâts à 1 des Pokémon de votre adversaire. (N'appliquez ni la Faiblesse ni la Résistance aux Pokémon de Banc.)"
+          "fr": "Cette attaque inflige 30 dégâts à 1 des Pokémon de votre adversaire. (N'appliquez ni la Faiblesse ni la Résistance aux Pokémon de Banc.)",
+          "de": "Dieser Angriff fügt 1 Pokémon deines Gegners 30 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
         }
       },
       {
         "name": {
           "en": "Crazy Slap",
-          "fr": "Gifle Folle"
+          "fr": "Gifle Folle",
+          "de": "Irrer Hieb"
         },
         "cost": [
           "psychic",
@@ -6148,7 +6413,8 @@
         "damage": "40",
         "text": {
           "en": "Flip 4 coins. This attack does 40 damage times the number of heads.",
-          "fr": "Lancez 4 pièces. Cette attaque inflige 40 dégâts multipliés par le nombre de côtés face."
+          "fr": "Lancez 4 pièces. Cette attaque inflige 40 dégâts multipliés par le nombre de côtés face.",
+          "de": "Wirf 4 Münzen. Dieser Angriff fügt 40 Schadenspunkte mal der Anzahl „Kopf“ zu."
         }
       }
     ],
@@ -6160,7 +6426,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "Grave robbers who mistake them for real coffins and get too close end up trapped inside their bodies."
+      "en": "Grave robbers who mistake them for real coffins and get too close end up trapped inside their bodies.",
+      "de": "Grabräuber, die es mit einem echten Sarg verwechseln und ihm zu nahe kommen, hält es im Inneren seines Körpers gefangen."
     }
   },
   {
@@ -6216,13 +6483,15 @@
     "stage": "stage2",
     "evolves_from": {
       "en": "Nidorino",
-      "fr": "Nidorino"
+      "fr": "Nidorino",
+      "de": "Nidorino"
     },
     "attacks": [
       {
         "name": {
           "en": "Lovestrike",
-          "fr": "Coup de Foudre"
+          "fr": "Coup de Foudre",
+          "de": "Liebestaumel"
         },
         "cost": [
           "normal",
@@ -6231,13 +6500,15 @@
         "damage": "20",
         "text": {
           "en": "Does 40 more damage for each Nidoqueen on your Bench.",
-          "fr": "Inflige 40 dégâts supplémentaires pour chaque Nidoqueen sur votre Banc."
+          "fr": "Inflige 40 dégâts supplémentaires pour chaque Nidoqueen sur votre Banc.",
+          "de": "Dieser Angriff fügt für jedes Nidoqueen auf deiner Bank 40 weitere Schadenspunkte zu."
         }
       },
       {
         "name": {
           "en": "Horn Drill",
-          "fr": "Empal'Korne"
+          "fr": "Empal'Korne",
+          "de": "Hornbohrer"
         },
         "cost": [
           "fighting",
@@ -6263,7 +6534,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "One swing of its mighty tail can snap a telephone pole as if it were a matchstick."
+      "en": "One swing of its mighty tail can snap a telephone pole as if it were a matchstick.",
+      "de": "Ein Schlag mit seinem gewaltigen Schweif kann einen Telegrafenmasten knicken wie ein Streichholz."
     }
   },
   {
@@ -6321,7 +6593,8 @@
       {
         "name": {
           "en": "Scratch",
-          "fr": "Griffe"
+          "fr": "Griffe",
+          "de": "Kratzer"
         },
         "cost": [
           "fighting"
@@ -6338,7 +6611,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It lives in treetop colonies. If one becomes enraged, the whole colony rampages for no reason."
+      "en": "It lives in treetop colonies. If one becomes enraged, the whole colony rampages for no reason.",
+      "de": "Es lebt mit anderen in Baumkronen. Wird eines von ihnen wütend, werden alle anderen auch wütend."
     }
   },
   {
@@ -6396,7 +6670,8 @@
       {
         "name": {
           "en": "Pound",
-          "fr": "Écras'Face"
+          "fr": "Écras'Face",
+          "de": "Pfund"
         },
         "cost": [
           "normal"
@@ -6407,7 +6682,8 @@
       {
         "name": {
           "en": "Reckless Charge",
-          "fr": "Attaque Imprudente"
+          "fr": "Attaque Imprudente",
+          "de": "Waghalsiger Sturmangriff"
         },
         "cost": [
           "grass",
@@ -6416,7 +6692,8 @@
         "damage": "30",
         "text": {
           "en": "This Pokémon does 10 damage to itself.",
-          "fr": "Ce Pokémon s'inflige 10 dégâts."
+          "fr": "Ce Pokémon s'inflige 10 dégâts.",
+          "de": "Dieses Pokémon fügt sich selbst 10 Schadenspunkte zu."
         }
       }
     ],
@@ -6434,7 +6711,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "The soles of its feet are covered by countless tiny spikes, enabling it to walk on walls and ceilings."
+      "en": "The soles of its feet are covered by countless tiny spikes, enabling it to walk on walls and ceilings.",
+      "de": "Seine Fußsohlen sind mit kleinen Stacheln bedeckt, so dass es an Wänden und Decken Halt findet."
     }
   },
   {
@@ -6490,13 +6768,15 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Mankey",
-      "fr": "Férosinge"
+      "fr": "Férosinge",
+      "de": "Menki"
     },
     "attacks": [
       {
         "name": {
           "en": "Fury Swipes",
-          "fr": "Combo-Griffe"
+          "fr": "Combo-Griffe",
+          "de": "Kratzfurie"
         },
         "cost": [
           "normal",
@@ -6505,13 +6785,15 @@
         "damage": "30",
         "text": {
           "en": "Flip 3 coins. This attack does 30 damage times the number of heads.",
-          "fr": "Lancez 3 pièces. Cette attaque inflige 30 dégâts multipliés par le nombre de côtés face."
+          "fr": "Lancez 3 pièces. Cette attaque inflige 30 dégâts multipliés par le nombre de côtés face.",
+          "de": "Wirf 3 Münzen. Dieser Angriff fügt 30 Schadenspunkte mal der Anzahl „Kopf“ zu."
         }
       },
       {
         "name": {
           "en": "Karate Chop",
-          "fr": "Poing-Karaté"
+          "fr": "Poing-Karaté",
+          "de": "Karateschlag"
         },
         "cost": [
           "fighting",
@@ -6520,7 +6802,8 @@
         "damage": "80",
         "text": {
           "en": "Does 80 damage minus 10 damage for each damage counter on this Pokémon.",
-          "fr": "Inflige 80 dégâts moins 10 dégâts pour chaque marqueur de dégâts placé sur ce Pokémon."
+          "fr": "Inflige 80 dégâts moins 10 dégâts pour chaque marqueur de dégâts placé sur ce Pokémon.",
+          "de": "Dieser Angriff fügt 80 Schadenspunkte minus 10 Schadenspunkte für jede Schadensmarke auf diesem Pokémon zu."
         }
       }
     ],
@@ -6532,7 +6815,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It grows angry if you see its eyes and gets angrier if you run. If you beat it, it gets even madder."
+      "en": "It grows angry if you see its eyes and gets angrier if you run. If you beat it, it gets even madder.",
+      "de": "Siehst du ihm in die Augen, wird es wütend. Rennst du weg, wird es noch wütender. Ärgerst du es..."
     }
   },
   {
@@ -6590,7 +6874,8 @@
       {
         "name": {
           "en": "Tackle",
-          "fr": "Charge"
+          "fr": "Charge",
+          "de": "Tackle"
         },
         "cost": [
           "normal",
@@ -6603,7 +6888,8 @@
       {
         "name": {
           "en": "Swing Around",
-          "fr": "Balançoire"
+          "fr": "Balançoire",
+          "de": "Gegenschwung"
         },
         "cost": [
           "fighting",
@@ -6614,7 +6900,8 @@
         "damage": "60",
         "text": {
           "en": "Flip 2 coins. This attack does 60 damage times the number of heads.",
-          "fr": "Lancez 2 pièces. Cette attaque inflige 60 dégâts multipliés par le nombre de côtés face."
+          "fr": "Lancez 2 pièces. Cette attaque inflige 60 dégâts multipliés par le nombre de côtés face.",
+          "de": "Wirf 2 Münzen. Dieser Angriff fügt 60 Schadenspunkte mal der Anzahl „Kopf“ zu."
         }
       }
     ],
@@ -6626,7 +6913,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "Opening its large mouth, it ingests massive amounts of soil and creates long tunnels."
+      "en": "Opening its large mouth, it ingests massive amounts of soil and creates long tunnels.",
+      "de": "Es gräbt lange Tunnel, indem es sein riesiges Maul öffnet und große Mengen an Erdreich verschluckt."
     }
   },
   {
@@ -6684,7 +6972,8 @@
       {
         "name": {
           "en": "Continuous Slap",
-          "fr": "Gifles Sans Fin"
+          "fr": "Gifles Sans Fin",
+          "de": "Dauerhieb"
         },
         "cost": [
           "fighting",
@@ -6693,13 +6982,15 @@
         "damage": "20",
         "text": {
           "en": "Flip a coin until you get tails. This attack does 20 damage times the number of heads.",
-          "fr": "Lancez une pièce jusqu'à ce que vous obteniez un côté pile. Cette attaque inflige 20 dégâts multipliés par le nombre de côtés face."
+          "fr": "Lancez une pièce jusqu'à ce que vous obteniez un côté pile. Cette attaque inflige 20 dégâts multipliés par le nombre de côtés face.",
+          "de": "Wirf so lang 1 Münze, bis zum ersten Mal das Ergebnis „Zahl“ kommt. Dieser Angriff fügt 20 Schadenspunkte mal der Anzahl „Kopf“ zu."
         }
       },
       {
         "name": {
           "en": "Hammer In",
-          "fr": "Enfoncer"
+          "fr": "Enfoncer",
+          "de": "Einhämmern"
         },
         "cost": [
           "fighting",
@@ -6718,7 +7009,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "It toughens its body by slamming into thick trees. Many snapped trees can be found near its nest."
+      "en": "It toughens its body by slamming into thick trees. Many snapped trees can be found near its nest.",
+      "de": "Es stärkt seinen Körper, indem es gegen Bäume rennt. In seiner Nähe finden sich viele umgekippte Bäume."
     }
   },
   {
@@ -6774,13 +7066,15 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Makuhita",
-      "fr": "Makuhita"
+      "fr": "Makuhita",
+      "de": "Makuhita"
     },
     "attacks": [
       {
         "name": {
           "en": "Fake Out",
-          "fr": "Bluff"
+          "fr": "Bluff",
+          "de": "Mogelhieb"
         },
         "cost": [
           "fighting",
@@ -6789,13 +7083,15 @@
         "damage": "30",
         "text": {
           "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
-          "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Paralysé."
+          "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Paralysé.",
+          "de": "Wirf 1 Münze. Bei „Kopf“ ist das Verteidigende Pokémon jetzt paralysiert."
         }
       },
       {
         "name": {
           "en": "Pivot Throw",
-          "fr": "Lancer Tournant"
+          "fr": "Lancer Tournant",
+          "de": "Schleuderwurf"
         },
         "cost": [
           "fighting",
@@ -6805,7 +7101,8 @@
         "damage": "90",
         "text": {
           "en": "During your opponent's next turn, any damage done to this Pokémon by attacks is increased by 20 (after applying Weakness and Resistance).",
-          "fr": "Pendant le prochain tour de votre adversaire, tous les dégâts infligés à ce Pokémon par des attaques sont augmentés de 20 (après application de la Faiblesse et de la Résistance)."
+          "fr": "Pendant le prochain tour de votre adversaire, tous les dégâts infligés à ce Pokémon par des attaques sont augmentés de 20 (après application de la Faiblesse et de la Résistance).",
+          "de": "Während des nächsten Zuges deines Gegners wird Schaden, der diesem Pokémon durch Angriffe zugefügt wird, um 20 Schadenspunkte erhöht (nachdem Schwäche und Resistenz verrechnet wurden)."
         }
       }
     ],
@@ -6817,7 +7114,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "It loves to match power with big-bodied Pokémon. It can knock a truck flying with its arm thrusts."
+      "en": "It loves to match power with big-bodied Pokémon. It can knock a truck flying with its arm thrusts.",
+      "de": "Es liebt das Kräftemessen mit großen Pokémon. Mit seinem Armwurf kann es LKW durch die Luft werfen."
     }
   },
   {
@@ -6873,13 +7171,15 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Eevee",
-      "fr": "Évoli"
+      "fr": "Évoli",
+      "de": "Evoli"
     },
     "attacks": [
       {
         "name": {
           "en": "Darkness Fang",
-          "fr": "Croc Obscur"
+          "fr": "Croc Obscur",
+          "de": "Fänge der Dunkelheit"
         },
         "cost": [
           "dark",
@@ -6904,7 +7204,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "When exposed to the moon's aura, the rings on its body glow faintly and it's filled with a mysterious power."
+      "en": "When exposed to the moon's aura, the rings on its body glow faintly and it's filled with a mysterious power.",
+      "de": "Wird es der Aura des Mondes ausgesetzt, glühen seine Ringe und es wird von einer mysteriösen Kraft durchströmt."
     }
   },
   {
@@ -6962,7 +7263,8 @@
       {
         "name": {
           "en": "Quick Attack",
-          "fr": "Vive-Attaque"
+          "fr": "Vive-Attaque",
+          "de": "Ruckzuckhieb"
         },
         "cost": [
           "dark",
@@ -6971,7 +7273,8 @@
         "damage": "20",
         "text": {
           "en": "Flip a coin. If heads, this attack does 20 more damage.",
-          "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 20 dégâts supplémentaires."
+          "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 20 dégâts supplémentaires.",
+          "de": "Wirf 1 Münze. Bei „Kopf“ fügt dieser Angriff 20 weitere Schadenspunkte zu."
         }
       }
     ],
@@ -6989,7 +7292,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "A smart and sneaky Pokémon, it makes its opponents flinch by suddenly showing the claws hidden in its paws."
+      "en": "A smart and sneaky Pokémon, it makes its opponents flinch by suddenly showing the claws hidden in its paws.",
+      "de": "Dieses durchtriebene Pokémon lässt seine Gegner zurückschrecken, indem es auf einmal seine langen Krallen ausfährt."
     }
   },
   {
@@ -7045,13 +7349,15 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Sneasel",
-      "fr": "Farfuret"
+      "fr": "Farfuret",
+      "de": "Sniebel"
     },
     "attacks": [
       {
         "name": {
           "en": "Hail",
-          "fr": "Grêle"
+          "fr": "Grêle",
+          "de": "Hagelsturm"
         },
         "cost": [
           "normal"
@@ -7059,13 +7365,15 @@
         "damage": "",
         "text": {
           "en": "This attack does 10 damage to each of your opponent's Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
-          "fr": "Cette attaque inflige 10 dégâts à chacun des Pokémon de votre adversaire. (N'appliquez ni la Faiblesse ni la Résistance aux Pokémon de Banc.)"
+          "fr": "Cette attaque inflige 10 dégâts à chacun des Pokémon de votre adversaire. (N'appliquez ni la Faiblesse ni la Résistance aux Pokémon de Banc.)",
+          "de": "Dieser Angriff fügt jedem Pokémon deines Gegners 10 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
         }
       },
       {
         "name": {
           "en": "Vilify",
-          "fr": "Calomnie"
+          "fr": "Calomnie",
+          "de": "Kalkuliertes Risiko"
         },
         "cost": [
           "dark",
@@ -7074,7 +7382,8 @@
         "damage": "30",
         "text": {
           "en": "Discard as many Pokémon as you like from your hand. This attack does 30 damage times the number of Pokémon you discarded.",
-          "fr": "Défaussez autant de Pokémon que vous voulez de votre main. Cette attaque inflige 30 dégâts multipliés par le nombre de Pokémon que vous avez défaussés."
+          "fr": "Défaussez autant de Pokémon que vous voulez de votre main. Cette attaque inflige 30 dégâts multipliés par le nombre de Pokémon que vous avez défaussés.",
+          "de": "Lege beliebig viele Pokémon von deiner Hand auf deinen Ablagestapel. Dieser Angriff fügt 30 Schadenspunkte mal der Anzahl der von dir abgelegten Pokémon zu."
         }
       }
     ],
@@ -7092,7 +7401,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "They communicate by clawing signs in boulders and work together to surround enemies."
+      "en": "They communicate by clawing signs in boulders and work together to surround enemies.",
+      "de": "Sie sprechen sich miteinander ab, indem sie Muster in Steine ritzen, um ihre Gegner dann gemeinsam einzukreisen."
     }
   },
   {
@@ -7150,7 +7460,8 @@
       {
         "name": {
           "en": "Mind Jack",
-          "fr": "Emprise Mentale"
+          "fr": "Emprise Mentale",
+          "de": "Gedankenstoß"
         },
         "cost": [
           "dark",
@@ -7159,13 +7470,15 @@
         "damage": "20",
         "text": {
           "en": "Does 20 more damage for each of your opponent's Benched Pokémon.",
-          "fr": "Inflige 20 dégâts supplémentaires pour chaque Pokémon de Banc de votre adversaire."
+          "fr": "Inflige 20 dégâts supplémentaires pour chaque Pokémon de Banc de votre adversaire.",
+          "de": "Dieser Angriff fügt 20 weitere Schadenspunkte für jedes Pokémon auf der Bank deines Gegners zu."
         }
       },
       {
         "name": {
           "en": "Fearsome Shadow",
-          "fr": "Ombre Redoutable"
+          "fr": "Ombre Redoutable",
+          "de": "Furchtbarer Schatten"
         },
         "cost": [
           "dark",
@@ -7175,7 +7488,8 @@
         "damage": "60",
         "text": {
           "en": "Your opponent reveals his or her hand.",
-          "fr": "Votre adversaire montre sa main."
+          "fr": "Votre adversaire montre sa main.",
+          "de": "Dein Gegner deckt seine Handkarten auf."
         }
       }
     ],
@@ -7193,7 +7507,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It appears from deep in the mountains to warn people about upcoming disasters it has sensed with its horn."
+      "en": "It appears from deep in the mountains to warn people about upcoming disasters it has sensed with its horn.",
+      "de": "Es steigt von den Bergen herab, um die Menschen vor Unheil zu warnen, das es mit seinem Horn vorhergesehen hat."
     }
   },
   {
@@ -7251,7 +7566,8 @@
       {
         "name": {
           "en": "Gentle Slap",
-          "fr": "Gifle Douce"
+          "fr": "Gifle Douce",
+          "de": "Sanfter Hieb"
         },
         "cost": [
           "dark",
@@ -7260,7 +7576,8 @@
         "damage": "10",
         "text": {
           "en": "Flip a coin. If heads, this attack does 20 more damage.",
-          "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 20 dégâts supplémentaires."
+          "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 20 dégâts supplémentaires.",
+          "de": "Wirf 1 Münze. Bei „Kopf“ fügt dieser Angriff 20 weitere Schadenspunkte zu."
         }
       }
     ],
@@ -7278,7 +7595,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "They live hidden under hot desert sands in order to keep their body temperature from dropping."
+      "en": "They live hidden under hot desert sands in order to keep their body temperature from dropping.",
+      "de": "Es vergräbt sich im heißen Wüstensand, um nicht auszukühlen, und fristet sein Leben im Verborgenen."
     }
   },
   {
@@ -7334,13 +7652,15 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Sandile",
-      "fr": "Mascaïman"
+      "fr": "Mascaïman",
+      "de": "Ganovil"
     },
     "attacks": [
       {
         "name": {
           "en": "Bite",
-          "fr": "Morsure"
+          "fr": "Morsure",
+          "de": "Biss"
         },
         "cost": [
           "dark"
@@ -7351,7 +7671,8 @@
       {
         "name": {
           "en": "Corkscrew Punch",
-          "fr": "Poing Tire-Bouchon"
+          "fr": "Poing Tire-Bouchon",
+          "de": "Korkenzieherhieb"
         },
         "cost": [
           "dark",
@@ -7376,7 +7697,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "Protected by thin membranes, their eyes can see even in the dead of night. They live in groups of a few individuals."
+      "en": "Protected by thin membranes, their eyes can see even in the dead of night. They live in groups of a few individuals.",
+      "de": "Ihre Augen sind von einer dünnen Membran umgeben und können auch nachts sehen. Sie bilden kleine Rudel."
     }
   },
   {
@@ -7432,13 +7754,15 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Treecko",
-      "fr": "Arcko"
+      "fr": "Arcko",
+      "de": "Geckarbor"
     },
     "attacks": [
       {
         "name": {
           "en": "Pound",
-          "fr": "Écras'Face"
+          "fr": "Écras'Face",
+          "de": "Pfund"
         },
         "cost": [
           "normal"
@@ -7449,7 +7773,8 @@
       {
         "name": {
           "en": "Cut",
-          "fr": "Coupe"
+          "fr": "Coupe",
+          "de": "Zerschneider"
         },
         "cost": [
           "grass",
@@ -7473,7 +7798,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It lives in dense jungles. While closing in on its prey, it leaps from branch to branch."
+      "en": "It lives in dense jungles. While closing in on its prey, it leaps from branch to branch.",
+      "de": "Es lebt im dichten Dschungel. Es springt von Ast zu Ast, wenn es sich einer Beute nähert."
     }
   },
   {
@@ -7529,13 +7855,15 @@
     "stage": "stage2",
     "evolves_from": {
       "en": "Krokorok",
-      "fr": "Escroco"
+      "fr": "Escroco",
+      "de": "Rokkaiman"
     },
     "attacks": [
       {
         "name": {
           "en": "Piston Headbutt",
-          "fr": "Coup de Piston"
+          "fr": "Coup de Piston",
+          "de": "Kolbenschwinger"
         },
         "cost": [
           "dark"
@@ -7543,13 +7871,15 @@
         "damage": "30",
         "text": {
           "en": "Move an Energy attached to the Defending Pokémon to 1 of your opponent's Benched Pokémon.",
-          "fr": "Déplacez une Énergie attachée au Pokémon Défenseur vers 1 des Pokémon de Banc de votre adversaire."
+          "fr": "Déplacez une Énergie attachée au Pokémon Défenseur vers 1 des Pokémon de Banc de votre adversaire.",
+          "de": "Verschiebe 1 an das Verteidigende Pokémon angelegte Energie auf 1 Pokémon auf der Bank deines Gegners."
         }
       },
       {
         "name": {
           "en": "Hammer In",
-          "fr": "Enfoncer"
+          "fr": "Enfoncer",
+          "de": "Einhämmern"
         },
         "cost": [
           "dark",
@@ -7574,7 +7904,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "Very violent Pokémon, they try to clamp down on anything that moves in front of their eyes."
+      "en": "Very violent Pokémon, they try to clamp down on anything that moves in front of their eyes.",
+      "de": "Ein äußerst grausames Pokémon. Es greift jeden, der ihm unter die Augen kommt, mit seinen scharfen Reißzähnen an."
     }
   },
   {
@@ -7632,7 +7963,8 @@
       {
         "name": {
           "en": "Slash",
-          "fr": "Tranche"
+          "fr": "Tranche",
+          "de": "Schlitzer"
         },
         "cost": [
           "dark"
@@ -7655,7 +7987,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Ignoring their injuries, groups attack by sinking the blades that cover their bodies into their prey."
+      "en": "Ignoring their injuries, groups attack by sinking the blades that cover their bodies into their prey.",
+      "de": "Selbst wenn sie verletzt sind, greifen sie ihren Gegner unbeirrt in der Gruppe an, indem sie ihre Klingen in ihn hineinrammen."
     }
   },
   {
@@ -7713,7 +8046,8 @@
       {
         "name": {
           "en": "Cut",
-          "fr": "Coupe"
+          "fr": "Coupe",
+          "de": "Zerschneider"
         },
         "cost": [
           "dark",
@@ -7737,7 +8071,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Ignoring their injuries, groups attack by sinking the blades that cover their bodies into their prey."
+      "en": "Ignoring their injuries, groups attack by sinking the blades that cover their bodies into their prey.",
+      "de": "Selbst wenn sie verletzt sind, greifen sie ihren Gegner unbeirrt in der Gruppe an, indem sie ihre Klingen in ihn hineinrammen."
     }
   },
   {
@@ -7793,13 +8128,15 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Pawniard",
-      "fr": "Scalpion"
+      "fr": "Scalpion",
+      "de": "Gladiantri"
     },
     "attacks": [
       {
         "name": {
           "en": "Slash",
-          "fr": "Tranche"
+          "fr": "Tranche",
+          "de": "Schlitzer"
         },
         "cost": [
           "normal"
@@ -7810,7 +8147,8 @@
       {
         "name": {
           "en": "Dragon Slayer",
-          "fr": "Dragon Slayer"
+          "fr": "Dragon Slayer",
+          "de": "Drachentöter"
         },
         "cost": [
           "dark",
@@ -7820,7 +8158,8 @@
         "damage": "80",
         "text": {
           "en": "If the Defending Pokémon is a Dragon Pokémon, this attack does 40 more damage.",
-          "fr": "Si le Pokémon Défenseur est un Pokémon Dragon, cette attaque inflige 40 dégâts supplémentaires."
+          "fr": "Si le Pokémon Défenseur est un Pokémon Dragon, cette attaque inflige 40 dégâts supplémentaires.",
+          "de": "Wenn das Verteidigende Pokémon ein {N}-Pokémon ist, fügt dieser Angriff 40 weitere Schadenspunkte zu."
         }
       }
     ],
@@ -7838,7 +8177,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "This pitiless Pokémon commands a group of Pawniard to hound prey into immobility. It then moves in to finish the prey off."
+      "en": "This pitiless Pokémon commands a group of Pawniard to hound prey into immobility. It then moves in to finish the prey off.",
+      "de": "Ein kaltblütiges Pokémon, das Gegner zunächst mit einer Schar von Gladiantri lähmt und dann zweiteilt."
     }
   },
   {
@@ -7894,13 +8234,15 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Pawniard",
-      "fr": "Scalpion"
+      "fr": "Scalpion",
+      "de": "Gladiantri"
     },
     "attacks": [
       {
         "name": {
           "en": "Cut Down",
-          "fr": "Retranchement"
+          "fr": "Retranchement",
+          "de": "Umsägen"
         },
         "cost": [
           "normal",
@@ -7909,13 +8251,15 @@
         "damage": "30",
         "text": {
           "en": "Flip a coin. If heads, discard an Energy attached to the Defending Pokémon.",
-          "fr": "Lancez une pièce. Si c'est face, défaussez une Énergie attachée au Pokémon Défenseur."
+          "fr": "Lancez une pièce. Si c'est face, défaussez une Énergie attachée au Pokémon Défenseur.",
+          "de": "Wirf 1 Münze. Lege bei „Kopf“ 1 an das Verteidigende Pokémon angelegte Energie auf den Ablagestapel deines Gegners."
         }
       },
       {
         "name": {
           "en": "Slicing Blade",
-          "fr": "Lame Tranchante"
+          "fr": "Lame Tranchante",
+          "de": "Schwertschneide"
         },
         "cost": [
           "dark",
@@ -7940,7 +8284,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "This pitiless Pokémon commands a group of Pawniard to hound prey into immobility. It then moves in to finish the prey off."
+      "en": "This pitiless Pokémon commands a group of Pawniard to hound prey into immobility. It then moves in to finish the prey off.",
+      "de": "Ein kaltblütiges Pokémon, das Gegner zunächst mit einer Schar von Gladiantri lähmt und dann zweiteilt."
     }
   },
   {
@@ -7998,7 +8343,8 @@
       {
         "name": {
           "en": "Push Down",
-          "fr": "Renversement"
+          "fr": "Renversement",
+          "de": "Runterdrücken"
         },
         "cost": [
           "dark",
@@ -8007,13 +8353,15 @@
         "damage": "20",
         "text": {
           "en": "Your opponent switches the Defending Pokémon with 1 of his or her Benched Pokémon.",
-          "fr": "Votre adversaire échange le Pokémon Défenseur avec 1 de ses Pokémon de Banc."
+          "fr": "Votre adversaire échange le Pokémon Défenseur avec 1 de ses Pokémon de Banc.",
+          "de": "Dein Gegner tauscht das Verteidigende Pokémon gegen 1 Pokémon auf seiner Bank aus."
         }
       },
       {
         "name": {
           "en": "Bite",
-          "fr": "Morsure"
+          "fr": "Morsure",
+          "de": "Biss"
         },
         "cost": [
           "dark",
@@ -8038,7 +8386,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "Lacking sight, it's unaware of its surroundings, so it bumps into things and eats anything that moves."
+      "en": "Lacking sight, it's unaware of its surroundings, so it bumps into things and eats anything that moves.",
+      "de": "Da es nichts sehen kann, rammt und frisst es alles, was ihm auf dem Weg in die Quere kommt."
     }
   },
   {
@@ -8096,7 +8445,8 @@
       {
         "name": {
           "en": "Slam",
-          "fr": "Souplesse"
+          "fr": "Souplesse",
+          "de": "Slam"
         },
         "cost": [
           "normal",
@@ -8105,7 +8455,8 @@
         "damage": "20",
         "text": {
           "en": "Flip 2 coins. This attack does 20 damage times the number of heads.",
-          "fr": "Lancez 2 pièces. Cette attaque inflige 20 dégâts multipliés par le nombre de côtés face."
+          "fr": "Lancez 2 pièces. Cette attaque inflige 20 dégâts multipliés par le nombre de côtés face.",
+          "de": "Wirf 2 Münzen. Dieser Angriff fügt 20 Schadenspunkte mal der Anzahl „Kopf“ zu."
         }
       }
     ],
@@ -8123,7 +8474,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "Lacking sight, it's unaware of its surroundings, so it bumps into things and eats anything that moves."
+      "en": "Lacking sight, it's unaware of its surroundings, so it bumps into things and eats anything that moves.",
+      "de": "Da es nichts sehen kann, rammt und frisst es alles, was ihm auf dem Weg in die Quere kommt."
     }
   },
   {
@@ -8179,13 +8531,15 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Deino",
-      "fr": "Solochi"
+      "fr": "Solochi",
+      "de": "Kapuno"
     },
     "attacks": [
       {
         "name": {
           "en": "Bite",
-          "fr": "Morsure"
+          "fr": "Morsure",
+          "de": "Biss"
         },
         "cost": [
           "dark",
@@ -8197,7 +8551,8 @@
       {
         "name": {
           "en": "Body Slam",
-          "fr": "Plaquage"
+          "fr": "Plaquage",
+          "de": "Bodyslam"
         },
         "cost": [
           "dark",
@@ -8207,7 +8562,8 @@
         "damage": "30",
         "text": {
           "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
-          "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Paralysé."
+          "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Paralysé.",
+          "de": "Wirf 1 Münze. Bei „Kopf“ ist das Verteidigende Pokémon jetzt paralysiert."
         }
       }
     ],
@@ -8225,7 +8581,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "The two heads do not get along. Whichever head eats more than the other gets to be the leader."
+      "en": "The two heads do not get along. Whichever head eats more than the other gets to be the leader.",
+      "de": "Seine zwei Köpfe sind sich spinnefeind. Beide versuchen, über Fresswettbewerbe die Oberhand zu gewinnen."
     }
   },
   {
@@ -8281,13 +8638,15 @@
     "stage": "stage2",
     "evolves_from": {
       "en": "Zweilous",
-      "fr": "Diamat"
+      "fr": "Diamat",
+      "de": "Duodino"
     },
     "attacks": [
       {
         "name": {
           "en": "Tractorbeam",
-          "fr": "Rayon Inversion"
+          "fr": "Rayon Inversion",
+          "de": "Traktorstrahl"
         },
         "cost": [
           "dark",
@@ -8297,13 +8656,15 @@
         "damage": "",
         "text": {
           "en": "Switch 1 of your opponent's Benched Pokémon with the Defending Pokémon. This attack does 40 damage to the new Defending Pokémon.",
-          "fr": "Échangez 1 des Pokémon de Banc de votre adversaire avec le Pokémon Défenseur. Cette attaque inflige 40 dégâts au nouveau Pokémon Défenseur."
+          "fr": "Échangez 1 des Pokémon de Banc de votre adversaire avec le Pokémon Défenseur. Cette attaque inflige 40 dégâts au nouveau Pokémon Défenseur.",
+          "de": "Tausche 1 Pokémon auf der Bank deines Gegners gegen das Verteidigende Pokémon aus. Dieser Angriff fügt dem neuen Verteidigenden Pokémon 40 Schadenspunkte zu."
         }
       },
       {
         "name": {
           "en": "Obsidian Fang",
-          "fr": "Croc d'Obsidienne"
+          "fr": "Croc d'Obsidienne",
+          "de": "Schwarze Fänge"
         },
         "cost": [
           "dark",
@@ -8314,7 +8675,8 @@
         "damage": "80",
         "text": {
           "en": "Before doing damage, discard all Pokémon Tool cards attached to the Defending Pokémon.",
-          "fr": "Avant d'infliger des dégâts, défaussez toutes les cartes Outil Pokémon attachées au Pokémon Défenseur."
+          "fr": "Avant d'infliger des dégâts, défaussez toutes les cartes Outil Pokémon attachées au Pokémon Défenseur.",
+          "de": "Lege, bevor du Schaden zufügst, alle an das Verteidigende Pokémon angelegten Pokémon-Ausrüstungen auf den Ablagestapel deines Gegners."
         }
       }
     ],
@@ -8332,7 +8694,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "It responds to movement by attacking. This scary, three-headed Pokémon devours everything in its path!"
+      "en": "It responds to movement by attacking. This scary, three-headed Pokémon devours everything in its path!",
+      "de": "Ein kaltblütiges Pokémon, das auf alles reagiert, was sich bewegt, indem es mit seinen drei Köpfen danach schnappt."
     }
   },
   {
@@ -8388,13 +8751,15 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Onix",
-      "fr": "Onix"
+      "fr": "Onix",
+      "de": "Onix"
     },
     "attacks": [
       {
         "name": {
           "en": "Metal Defender",
-          "fr": "Défense Métallique"
+          "fr": "Défense Métallique",
+          "de": "Metallverteidiger"
         },
         "cost": [
           "metal",
@@ -8404,13 +8769,15 @@
         "damage": "50",
         "text": {
           "en": "During your opponent's next turn, this Pokémon has no Weakness.",
-          "fr": "Pendant le prochain tour de votre adversaire, ce Pokémon n'a pas de Faiblesse."
+          "fr": "Pendant le prochain tour de votre adversaire, ce Pokémon n'a pas de Faiblesse.",
+          "de": "Während des nächsten Zuges deines Gegners hat dieses Pokémon keine Schwäche."
         }
       },
       {
         "name": {
           "en": "Heavy Impact",
-          "fr": "Gros Impact"
+          "fr": "Gros Impact",
+          "de": "Schwerer Einschlag"
         },
         "cost": [
           "metal",
@@ -8437,7 +8804,8 @@
     ],
     "retreat_cost": 4,
     "flavor_text": {
-      "en": "The iron it ingested with the soil it swallowed transformed its body and made it harder than diamonds."
+      "en": "The iron it ingested with the soil it swallowed transformed its body and made it harder than diamonds.",
+      "de": "Durch all die eisenhaltige Erde, die es verschluckt hat, wurde sein Körper härter als ein Diamant."
     }
   },
   {
@@ -8493,13 +8861,15 @@
     "stage": "stage2",
     "evolves_from": {
       "en": "Grovyle",
-      "fr": "Massko"
+      "fr": "Massko",
+      "de": "Reptain"
     },
     "attacks": [
       {
         "name": {
           "en": "X-Scissor",
-          "fr": "Plaie-Croix"
+          "fr": "Plaie-Croix",
+          "de": "Kreuzschere"
         },
         "cost": [
           "grass",
@@ -8508,13 +8878,15 @@
         "damage": "30",
         "text": {
           "en": "Flip a coin. If heads, this attack does 40 more damage.",
-          "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 40 dégâts supplémentaires."
+          "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 40 dégâts supplémentaires.",
+          "de": "Wirf 1 Münze. Bei „Kopf“ fügt dieser Angriff 40 weitere Schadenspunkte zu."
         }
       },
       {
         "name": {
           "en": "Energy Bloom",
-          "fr": "Énergie Florissante"
+          "fr": "Énergie Florissante",
+          "de": "Energieschwall"
         },
         "cost": [
           "grass",
@@ -8524,7 +8896,8 @@
         "damage": "80",
         "text": {
           "en": "Heal 20 damage from each of your Pokémon that has any Energy attached to it.",
-          "fr": "Soignez 20 dégâts à chacun de vos Pokémon auquel de l'Énergie est attachée."
+          "fr": "Soignez 20 dégâts à chacun de vos Pokémon auquel de l'Énergie est attachée.",
+          "de": "Heile 20 Schadenspunkte bei jedem deiner Pokémon, an das Energie angelegt ist."
         }
       }
     ],
@@ -8542,7 +8915,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "The leaves that grow on its arms can slice down thick trees. It is without peer in jungle combat."
+      "en": "The leaves that grow on its arms can slice down thick trees. It is without peer in jungle combat.",
+      "de": "Die Blätter an seinen Armen können dicke Bäume fällen. Im Dschungelkampf gibt es kein stärkeres Pokémon."
     }
   },
   {
@@ -8600,7 +8974,8 @@
       {
         "name": {
           "en": "Astonish",
-          "fr": "Étonnement"
+          "fr": "Étonnement",
+          "de": "Erstauner"
         },
         "cost": [
           "metal"
@@ -8608,13 +8983,15 @@
         "damage": "",
         "text": {
           "en": "Flip a coin. If heads, choose a random card from your opponent's hand. Your opponent reveals that card and shuffles it into his or her deck.",
-          "fr": "Lancez une pièce. Si c'est face, choisissez une carte au hasard de la main de votre adversaire. Votre adversaire montre la carte choisie et la mélange avec son deck."
+          "fr": "Lancez une pièce. Si c'est face, choisissez une carte au hasard de la main de votre adversaire. Votre adversaire montre la carte choisie et la mélange avec son deck.",
+          "de": "Wirf 1 Münze. Wähle bei „Kopf“ 1 zufällige Karte aus der verdeckten Hand deines Gegners. Dein Gegner zeigt diese Karte und mischt sie zurück in sein Deck."
         }
       },
       {
         "name": {
           "en": "Big Ol' Bite",
-          "fr": "Morsure Sans Merci"
+          "fr": "Morsure Sans Merci",
+          "de": "Mächtiger Mampfer"
         },
         "cost": [
           "metal",
@@ -8624,7 +9001,8 @@
         "damage": "30",
         "text": {
           "en": "Heal 30 damage from this Pokémon. The Defending Pokémon can't retreat during your opponent's next turn.",
-          "fr": "Soignez 30 dégâts à ce Pokémon. Le Pokémon Défenseur ne peut pas battre en retraite pendant le prochain tour de votre adversaire."
+          "fr": "Soignez 30 dégâts à ce Pokémon. Le Pokémon Défenseur ne peut pas battre en retraite pendant le prochain tour de votre adversaire.",
+          "de": "Heile 30 Schadenspunkte bei diesem Pokémon. Das Verteidigende Pokémon kann sich während des nächsten Zuges deines Gegners nicht zurückziehen."
         }
       }
     ],
@@ -8642,7 +9020,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Attached to its head is a huge set of jaws formed by horns. It can chew through iron beams."
+      "en": "Attached to its head is a huge set of jaws formed by horns. It can chew through iron beams.",
+      "de": "Auf seinem Kopf befindet sich ein riesiger Kiefer, der aus Hörnern besteht. Er kann Eisen zermalmen."
     }
   },
   {
@@ -8700,7 +9079,8 @@
       {
         "name": {
           "en": "Shed Skin",
-          "fr": "Mue"
+          "fr": "Mue",
+          "de": "Expidermis"
         },
         "cost": [
           "grass"
@@ -8708,13 +9088,15 @@
         "damage": "",
         "text": {
           "en": "Heal 20 damage from this Pokémon.",
-          "fr": "Soignez 20 dégâts à ce Pokémon."
+          "fr": "Soignez 20 dégâts à ce Pokémon.",
+          "de": "Heile 20 Schadenspunkte bei diesem Pokémon."
         }
       },
       {
         "name": {
           "en": "Tail Smack",
-          "fr": "Coup de Queue"
+          "fr": "Coup de Queue",
+          "de": "Schweifschlag"
         },
         "cost": [
           "lightning",
@@ -8732,7 +9114,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It is called the \"Mirage Pokémon\" because so few have seen it. Its shed skin has been found."
+      "en": "It is called the \"Mirage Pokémon\" because so few have seen it. Its shed skin has been found.",
+      "de": "Man nennt es „Illusion-Pokémon“, denn nur wenige haben es gesehen. Nur seine Haut wurde oft gefunden."
     }
   },
   {
@@ -8788,13 +9171,15 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Dratini",
-      "fr": "Minidraco"
+      "fr": "Minidraco",
+      "de": "Dratini"
     },
     "attacks": [
       {
         "name": {
           "en": "Wrap",
-          "fr": "Ligotage"
+          "fr": "Ligotage",
+          "de": "Wickel"
         },
         "cost": [
           "lightning"
@@ -8802,13 +9187,15 @@
         "damage": "20",
         "text": {
           "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
-          "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Paralysé."
+          "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Paralysé.",
+          "de": "Wirf 1 Münze. Bei „Kopf“ ist das Verteidigende Pokémon jetzt paralysiert."
         }
       },
       {
         "name": {
           "en": "Tail Smack",
-          "fr": "Coup de Queue"
+          "fr": "Coup de Queue",
+          "de": "Schweifschlag"
         },
         "cost": [
           "grass",
@@ -8827,7 +9214,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "If its body takes on an aura, the weather changes instantly. It is said to live in seas and lakes."
+      "en": "If its body takes on an aura, the weather changes instantly. It is said to live in seas and lakes.",
+      "de": "Erscheint um seinen Körper eine Aura, gibt es einen Wetterwechsel. Es soll in Seen und Meeren leben."
     }
   },
   {
@@ -8883,13 +9271,15 @@
     "stage": "stage2",
     "evolves_from": {
       "en": "Dragonair",
-      "fr": "Draco"
+      "fr": "Draco",
+      "de": "Dragonir"
     },
     "attacks": [
       {
         "name": {
           "en": "Deafen",
-          "fr": "Rendre Sourd"
+          "fr": "Rendre Sourd",
+          "de": "Ohren betäuben"
         },
         "cost": [
           "normal",
@@ -8899,13 +9289,15 @@
         "damage": "60",
         "text": {
           "en": "Your opponent can't play any Item cards from his or her hand during his or her next turn.",
-          "fr": "Votre adversaire ne peut pas jouer de cartes Objet de sa main pendant son prochain tour."
+          "fr": "Votre adversaire ne peut pas jouer de cartes Objet de sa main pendant son prochain tour.",
+          "de": "Dein Gegner kann während seines nächsten Zuges keine Itemkarten von seiner Hand spielen."
         }
       },
       {
         "name": {
           "en": "Healwing",
-          "fr": "Aile Soin"
+          "fr": "Aile Soin",
+          "de": "Heilschwinge"
         },
         "cost": [
           "grass",
@@ -8916,7 +9308,8 @@
         "damage": "90",
         "text": {
           "en": "Heal 30 damage from this Pokémon.",
-          "fr": "Soignez 30 dégâts à ce Pokémon."
+          "fr": "Soignez 30 dégâts à ce Pokémon.",
+          "de": "Heile 30 Schadenspunkte bei diesem Pokémon."
         }
       }
     ],
@@ -8928,7 +9321,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "It is said to make its home somewhere in the sea. It guides crews of shipwrecks to shore."
+      "en": "It is said to make its home somewhere in the sea. It guides crews of shipwrecks to shore.",
+      "de": "Man sagt, es lebe in den Meeren. Es bringt Schiffbrüchige sicher an Land."
     }
   },
   {
@@ -8984,13 +9378,15 @@
     "stage": "stage2",
     "evolves_from": {
       "en": "Seadra",
-      "fr": "Hypocéan"
+      "fr": "Hypocéan",
+      "de": "Seemon"
     },
     "attacks": [
       {
         "name": {
           "en": "Dragon Vortex",
-          "fr": "Vortex Draconique"
+          "fr": "Vortex Draconique",
+          "de": "Drachenwirbel"
         },
         "cost": [
           "normal"
@@ -8998,13 +9394,15 @@
         "damage": "20",
         "text": {
           "en": "Does 20 damage times the number of Water Energy cards and Lightning Energy cards in your discard pile. Then, shuffle all of those cards back into your deck.",
-          "fr": "Inflige 20 dégâts multipliés par le nombre de cartes Énergie Water et de cartes Énergie Lightning dans votre pile de défausse. Ensuite, mélangez toutes ces cartes avec votre deck."
+          "fr": "Inflige 20 dégâts multipliés par le nombre de cartes Énergie Water et de cartes Énergie Lightning dans votre pile de défausse. Ensuite, mélangez toutes ces cartes avec votre deck.",
+          "de": "Dieser Angriff fügt 20 Schadenspunkte mal der Anzahl der {W}- und {L}-Energiekarten in deinem Ablagestapel zu. Mische diese Karten anschließend zurück in dein Deck."
         }
       },
       {
         "name": {
           "en": "Tri Bullet",
-          "fr": "Triple Décharge"
+          "fr": "Triple Décharge",
+          "de": "Kugeltrio"
         },
         "cost": [
           "water"
@@ -9012,7 +9410,8 @@
         "damage": "",
         "text": {
           "en": "This attack does 30 damage to 3 of your opponent's Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
-          "fr": "Cette attaque inflige 30 dégâts à 3 des Pokémon de votre adversaire. (N'appliquez ni la Faiblesse ni la Résistance aux Pokémon de Banc.)"
+          "fr": "Cette attaque inflige 30 dégâts à 3 des Pokémon de votre adversaire. (N'appliquez ni la Faiblesse ni la Résistance aux Pokémon de Banc.)",
+          "de": "Dieser Angriff fügt 3 Pokémon deines Gegners jeweils 30 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
         }
       }
     ],
@@ -9024,7 +9423,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It lives in caves on the seafloor and creates giant whirlpools every time it moves."
+      "en": "It lives in caves on the seafloor and creates giant whirlpools every time it moves.",
+      "de": "Es lebt in Höhlen auf dem Meeresgrund. Jedes Mal, wenn es sich bewegt, entsteht ein Strudel."
     }
   },
   {
@@ -9069,7 +9469,8 @@
       {
         "name": {
           "en": "Barrier Break",
-          "fr": "Brise Barrière"
+          "fr": "Brise Barrière",
+          "de": "Barrierebrecher"
         },
         "cost": [
           "fire",
@@ -9079,7 +9480,8 @@
         "damage": "70",
         "text": {
           "en": "This attack's damage isn't affected by Weakness, Resistance, or any other effects on the Defending Pokémon.",
-          "fr": "Les dégâts de cette attaque ne sont pas affectés par la Faiblesse, la Résistance ou tout autre effet en action sur le Pokémon Défenseur."
+          "fr": "Les dégâts de cette attaque ne sont pas affectés par la Faiblesse, la Résistance ou tout autre effet en action sur le Pokémon Défenseur.",
+          "de": "Der Schaden dieses Angriffs wird durch Schwäche, Resistenz oder alle anderen Effekte auf dem Verteidigenden Pokémon nicht verändert."
         }
       }
     ],
@@ -9133,7 +9535,8 @@
       {
         "name": {
           "en": "Mach Flight",
-          "fr": "Vol Supersonique"
+          "fr": "Vol Supersonique",
+          "de": "Tempoflug"
         },
         "cost": [
           "psychic",
@@ -9142,13 +9545,15 @@
         "damage": "40",
         "text": {
           "en": "The Defending Pokémon can't retreat during your opponent's next turn.",
-          "fr": "Le Pokémon Défenseur ne peut pas battre en retraite pendant le prochain tour de votre adversaire."
+          "fr": "Le Pokémon Défenseur ne peut pas battre en retraite pendant le prochain tour de votre adversaire.",
+          "de": "Das Verteidigende Pokémon kann sich während des nächsten Zuges deines Gegners nicht zurückziehen."
         }
       },
       {
         "name": {
           "en": "Luster Purge",
-          "fr": "Lumi-Éclat"
+          "fr": "Lumi-Éclat",
+          "de": "Scheinwerfer"
         },
         "cost": [
           "water",
@@ -9158,7 +9563,8 @@
         "damage": "150",
         "text": {
           "en": "Discard all Energy attached to this Pokémon.",
-          "fr": "Défaussez toutes les Énergies attachées à ce Pokémon."
+          "fr": "Défaussez toutes les Énergies attachées à ce Pokémon.",
+          "de": "Lege alle an dieses Pokémon angelegten Energien auf deinen Ablagestapel."
         }
       }
     ],
@@ -9225,7 +9631,8 @@
       {
         "name": {
           "en": "Lunge",
-          "fr": "Coup Rapide"
+          "fr": "Coup Rapide",
+          "de": "Ausfall"
         },
         "cost": [
           "normal",
@@ -9234,7 +9641,8 @@
         "damage": "30",
         "text": {
           "en": "Flip a coin. If tails, this attack does nothing.",
-          "fr": "Lancez une pièce. Si c'est pile, cette attaque ne fait rien."
+          "fr": "Lancez une pièce. Si c'est pile, cette attaque ne fait rien.",
+          "de": "Wirf 1 Münze. Bei „Zahl“ hat dieser Angriff keine Auswirkungen."
         }
       }
     ],
@@ -9246,7 +9654,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It searches for food all day. It gnaws on hard objects to wear down its fangs, which grow constantly during its lifetime."
+      "en": "It searches for food all day. It gnaws on hard objects to wear down its fangs, which grow constantly during its lifetime.",
+      "de": "Sucht den lieben langen Tag nach Futter. Da seine Nagezähne immer nachwachsen, wetzt es sie an harten Objekten ab."
     }
   },
   {
@@ -9302,13 +9711,15 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Rattata",
-      "fr": "Rattata"
+      "fr": "Rattata",
+      "de": "Rattfratz"
     },
     "attacks": [
       {
         "name": {
           "en": "Transfer Junk",
-          "fr": "Transfert de Camelote"
+          "fr": "Transfert de Camelote",
+          "de": "Trödeltransfer"
         },
         "cost": [
           "normal"
@@ -9316,13 +9727,15 @@
         "damage": "",
         "text": {
           "en": "Put a Team Plasma Pokémon, a Team Plasma Trainer card, and a Team Plasma Energy card from your discard pile into your hand.",
-          "fr": "Ajoutez un Pokémon de la Team Plasma, une carte Dresseur de la Team Plasma et une carte Énergie de la Team Plasma de votre pile de défausse à votre main."
+          "fr": "Ajoutez un Pokémon de la Team Plasma, une carte Dresseur de la Team Plasma et une carte Énergie de la Team Plasma de votre pile de défausse à votre main.",
+          "de": "Nimm 1 Team Plasma-Pokémon, 1 Team Plasma-Trainerkarte und 1 Team Plasma-Energiekarte von deinem Ablagestapel auf deine Hand."
         }
       },
       {
         "name": {
           "en": "Bite",
-          "fr": "Morsure"
+          "fr": "Morsure",
+          "de": "Biss"
         },
         "cost": [
           "normal",
@@ -9340,7 +9753,8 @@
     ],
     "retreat_cost": 0,
     "flavor_text": {
-      "en": "With its long fangs, this surprisingly violent Pokémon can gnaw away even thick concrete with ease."
+      "en": "With its long fangs, this surprisingly violent Pokémon can gnaw away even thick concrete with ease.",
+      "de": "Ein überraschend brutales Pokémon. Seine langen Nagezähne sind äußerst stark und durchbrechen selbst Beton."
     }
   },
   {
@@ -9398,7 +9812,8 @@
       {
         "name": {
           "en": "Growl",
-          "fr": "Rugissement"
+          "fr": "Rugissement",
+          "de": "Heuler"
         },
         "cost": [
           "normal"
@@ -9406,13 +9821,15 @@
         "damage": "",
         "text": {
           "en": "During your opponent's next turn, any damage done by attacks from the Defending Pokémon is reduced by 20 (before applying Weakness and Resistance).",
-          "fr": "Pendant le prochain tour de votre adversaire, tous les dégâts infligés par des attaques du Pokémon Défenseur sont réduits de 20 (avant application de la Faiblesse et de la Résistance)."
+          "fr": "Pendant le prochain tour de votre adversaire, tous les dégâts infligés par des attaques du Pokémon Défenseur sont réduits de 20 (avant application de la Faiblesse et de la Résistance).",
+          "de": "Während des nächsten Zuges deines Gegners wird Schaden, der durch Angriffe des Verteidigenden Pokémon zugefügt wird, um 20 Schadenspunkte reduziert (bevor Schwäche und Resistenz verrechnet werden)."
         }
       },
       {
         "name": {
           "en": "Quick Attack",
-          "fr": "Vive-Attaque"
+          "fr": "Vive-Attaque",
+          "de": "Ruckzuckhieb"
         },
         "cost": [
           "normal",
@@ -9421,7 +9838,8 @@
         "damage": "10",
         "text": {
           "en": "Flip a coin. If heads, this attack does 10 more damage.",
-          "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 10 dégâts supplémentaires."
+          "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 10 dégâts supplémentaires.",
+          "de": "Wirf 1 Münze. Bei „Kopf“ fügt dieser Angriff 10 weitere Schadenspunkte zu."
         }
       }
     ],
@@ -9433,7 +9851,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Thanks to its unstable genetic makeup, this special Pokémon conceals many different possible evolutions."
+      "en": "Thanks to its unstable genetic makeup, this special Pokémon conceals many different possible evolutions.",
+      "de": "Aufgrund einer genetischen Anomalie kann seine Entwicklung viele verschiedene Formen annehmen."
     }
   },
   {
@@ -9491,7 +9910,8 @@
       {
         "name": {
           "en": "Poison Sting",
-          "fr": "Dard-Venin"
+          "fr": "Dard-Venin",
+          "de": "Giftstachel"
         },
         "cost": [
           "grass"
@@ -9499,7 +9919,8 @@
         "damage": "",
         "text": {
           "en": "Flip a coin. If heads, the Defending Pokémon is now Poisoned.",
-          "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Empoisonné."
+          "fr": "Lancez une pièce. Si c'est face, le Pokémon Défenseur est maintenant Empoisonné.",
+          "de": "Wirf 1 Münze. Bei „Kopf“ ist das Verteidigende Pokémon jetzt vergiftet."
         }
       }
     ],
@@ -9517,7 +9938,8 @@
     ],
     "retreat_cost": 2,
     "flavor_text": {
-      "en": "By storing water in its body, this desert dweller can survive for 30 days without water."
+      "en": "By storing water in its body, this desert dweller can survive for 30 days without water.",
+      "de": "Dieser Wüstenbewohner speichert Wasser in seinem Körper. So kann er 30 Tage ohne Wasser überleben."
     }
   },
   {
@@ -9575,7 +9997,8 @@
       {
         "name": {
           "en": "Signs of Evolution",
-          "fr": "Signes d'Évolution"
+          "fr": "Signes d'Évolution",
+          "de": "Spuren der Evolution"
         },
         "cost": [
           "normal"
@@ -9583,13 +10006,15 @@
         "damage": "",
         "text": {
           "en": "Search your deck for 3 Pokémon of different types that evolve from Eevee. Reveal them and put them into your hand. Shuffle your deck afterward.",
-          "fr": "Cherchez dans votre deck 3 Pokémon de différents types qui sont une évolution d'Évoli. Montrez-les puis ajoutez-les à votre main. Mélangez ensuite votre deck."
+          "fr": "Cherchez dans votre deck 3 Pokémon de différents types qui sont une évolution d'Évoli. Montrez-les puis ajoutez-les à votre main. Mélangez ensuite votre deck.",
+          "de": "Durchsuche dein Deck nach 3 vom Typ her unterschiedlichen Pokémon, die sich aus Evoli entwickeln. Zeige sie deinem Gegner und nimm sie auf deine Hand. Mische anschließend dein Deck."
         }
       },
       {
         "name": {
           "en": "Bite",
-          "fr": "Morsure"
+          "fr": "Morsure",
+          "de": "Biss"
         },
         "cost": [
           "normal",
@@ -9608,7 +10033,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Thanks to its unstable genetic makeup, this special Pokémon conceals many different possible evolutions."
+      "en": "Thanks to its unstable genetic makeup, this special Pokémon conceals many different possible evolutions.",
+      "de": "Aufgrund einer genetischen Anomalie kann seine Entwicklung viele verschiedene Formen annehmen."
     }
   },
   {
@@ -9666,7 +10092,8 @@
       {
         "name": {
           "en": "Dual Draw",
-          "fr": "Pioche Mutuelle"
+          "fr": "Pioche Mutuelle",
+          "de": "Doppelzug"
         },
         "cost": [
           "normal"
@@ -9674,7 +10101,8 @@
         "damage": "",
         "text": {
           "en": "Each player draws 2 cards.",
-          "fr": "Chaque joueur pioche 2 cartes."
+          "fr": "Chaque joueur pioche 2 cartes.",
+          "de": "Jeder Spieler zieht 2 Karten."
         }
       }
     ],
@@ -9692,7 +10120,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It marks time precisely. Some countries consider it to be a wise friend, versed in the world's ways."
+      "en": "It marks time precisely. Some countries consider it to be a wise friend, versed in the world's ways.",
+      "de": "Es sagt präzise die Uhrzeit an. In manchen Regionen verehrt man es zudem als weisen Freund."
     }
   },
   {
@@ -9748,13 +10177,15 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Hoothoot",
-      "fr": "Hoothoot"
+      "fr": "Hoothoot",
+      "de": "Hoothoot"
     },
     "attacks": [
       {
         "name": {
           "en": "Powerful Vision",
-          "fr": "Vision Puissante"
+          "fr": "Vision Puissante",
+          "de": "Mächtige Vision"
         },
         "cost": [
           "normal",
@@ -9763,13 +10194,15 @@
         "damage": "10",
         "text": {
           "en": "Does 10 damage times the number of cards in your opponent's hand.",
-          "fr": "Inflige 10 dégâts multipliés par le nombre de cartes dans la main de votre adversaire."
+          "fr": "Inflige 10 dégâts multipliés par le nombre de cartes dans la main de votre adversaire.",
+          "de": "Dieser Angriff fügt 10 Schadenspunkte mal der Anzahl der Karten auf der Hand deines Gegners zu."
         }
       },
       {
         "name": {
           "en": "Fly",
-          "fr": "Vol"
+          "fr": "Vol",
+          "de": "Fliegen"
         },
         "cost": [
           "normal",
@@ -9779,7 +10212,8 @@
         "damage": "50",
         "text": {
           "en": "Flip a coin. If tails, this attack does nothing. If heads, prevent all effects of attacks, including damage, done to this Pokémon during your opponent's next turn.",
-          "fr": "Lancez une pièce. Si c'est pile, cette attaque ne fait rien. Si c'est face, évitez tous les effets d'attaques (y compris les dégâts) infligés à ce Pokémon pendant le prochain tour de votre adversaire."
+          "fr": "Lancez une pièce. Si c'est pile, cette attaque ne fait rien. Si c'est face, évitez tous les effets d'attaques (y compris les dégâts) infligés à ce Pokémon pendant le prochain tour de votre adversaire.",
+          "de": "Wirf 1 Münze. Bei „Zahl“ hat dieser Angriff keine Auswirkungen. Verhindere bei „Kopf“ während des nächsten Zuges deines Gegners alle Effekte von Angriffen, einschließlich Schaden, die diesem Pokémon zugefügt werden."
         }
       }
     ],
@@ -9797,7 +10231,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Its eyes are specially developed to enable it to see clearly even in murky darkness and minimal light."
+      "en": "Its eyes are specially developed to enable it to see clearly even in murky darkness and minimal light.",
+      "de": "Seine Augen sind so gut entwickelt, dass es selbst in tiefster Dunkelheit noch klar sehen kann."
     }
   },
   {
@@ -9855,7 +10290,8 @@
       {
         "name": {
           "en": "Max Milk",
-          "fr": "Lait Max"
+          "fr": "Lait Max",
+          "de": "Megamilch"
         },
         "cost": [
           "normal",
@@ -9864,13 +10300,15 @@
         "damage": "",
         "text": {
           "en": "Heal all damage from 1 of your Pokémon. Then, discard all Energy attached to this Pokémon.",
-          "fr": "Soignez tous les dégâts de l'un de vos Pokémon. Ensuite, défaussez toutes les Énergies attachées à ce Pokémon."
+          "fr": "Soignez tous les dégâts de l'un de vos Pokémon. Ensuite, défaussez toutes les Énergies attachées à ce Pokémon.",
+          "de": "Heile allen Schaden bei 1 deiner Pokémon. Lege anschließend alle an dieses Pokémon angelegten Energien auf deinen Ablagestapel."
         }
       },
       {
         "name": {
           "en": "Tackle",
-          "fr": "Charge"
+          "fr": "Charge",
+          "de": "Tackle"
         },
         "cost": [
           "normal",
@@ -9888,7 +10326,8 @@
     ],
     "retreat_cost": 3,
     "flavor_text": {
-      "en": "It is said that kids who drink Miltank's milk grow up to become hearty, healthy adults."
+      "en": "It is said that kids who drink Miltank's milk grow up to become hearty, healthy adults.",
+      "de": "Man sagt, dass Kinder, die Miltanks Milch trinken, zu gesunden Erwachsenen heranwachsen."
     }
   },
   {
@@ -9946,7 +10385,8 @@
       {
         "name": {
           "en": "Imittack",
-          "fr": "Imit’Attaque"
+          "fr": "Imit’Attaque",
+          "de": "Nachmacher"
         },
         "cost": [
           "normal"
@@ -9954,7 +10394,8 @@
         "damage": "",
         "text": {
           "en": "Choose 1 of the Defending Pokémon's attacks. If this Pokémon has the necessary Energy to use that attack, use it as this attack.",
-          "fr": "Choisissez 1 des attaques du Pokémon Défenseur. Si ce Pokémon a l'Énergie nécessaire pour utiliser l'attaque choisie, utilisez-la  à la place de cette attaque."
+          "fr": "Choisissez 1 des attaques du Pokémon Défenseur. Si ce Pokémon a l'Énergie nécessaire pour utiliser l'attaque choisie, utilisez-la  à la place de cette attaque.",
+          "de": "Wähle 1 Angriff des Verteidigenden Pokémon. Wenn an dieses Pokémon die für den gewählten Angriff erforderliche Energie angelegt ist, verwende ihn als diesen Angriff."
         }
       }
     ],
@@ -9966,7 +10407,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It can freely change its body's color. The zigzag pattern on its belly doesn't change, however."
+      "en": "It can freely change its body's color. The zigzag pattern on its belly doesn't change, however.",
+      "de": "Es kann nach Belieben seine Farbe ändern. Nur das gezackte Muster auf seinem Bauch bleibt gleich."
     }
   },
   {
@@ -10024,7 +10466,8 @@
       {
         "name": {
           "en": "Tackle",
-          "fr": "Charge"
+          "fr": "Charge",
+          "de": "Tackle"
         },
         "cost": [
           "normal"
@@ -10047,7 +10490,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Because they are weak individually, they form groups. However, they bicker if the group grows too big."
+      "en": "Because they are weak individually, they form groups. However, they bicker if the group grows too big.",
+      "de": "Einzeln sind sie schwach. Daher bilden sie Gruppen. Werden diese jedoch zu groß, zanken sie sich."
     }
   },
   {
@@ -10103,13 +10547,15 @@
     "stage": "stage1",
     "evolves_from": {
       "en": "Starly",
-      "fr": "Étourmi"
+      "fr": "Étourmi",
+      "de": "Staralili"
     },
     "attacks": [
       {
         "name": {
           "en": "Take Down",
-          "fr": "Bélier"
+          "fr": "Bélier",
+          "de": "Bodycheck"
         },
         "cost": [
           "normal",
@@ -10118,7 +10564,8 @@
         "damage": "30",
         "text": {
           "en": "Flip a coin. If tails, this Pokémon does 10 damage to itself.",
-          "fr": "Lancez une pièce. Si c'est pile, ce Pokémon s'inflige 10 dégâts."
+          "fr": "Lancez une pièce. Si c'est pile, ce Pokémon s'inflige 10 dégâts.",
+          "de": "Wirf 1 Münze. Bei „Zahl“ fügt sich dieses Pokémon selbst 10 Schadenspunkte zu."
         }
       }
     ],
@@ -10136,7 +10583,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "Recognizing their own weakness, they always live in a group. When alone, a Staravia cries noisily."
+      "en": "Recognizing their own weakness, they always live in a group. When alone, a Staravia cries noisily.",
+      "de": "Staravia verbergen ihre Schwäche in Gruppen. Sind sie allein, kann man sie an ihren lauten Rufen erkennen."
     }
   },
   {
@@ -10192,13 +10640,15 @@
     "stage": "stage2",
     "evolves_from": {
       "en": "Staravia",
-      "fr": "Étourvol"
+      "fr": "Étourvol",
+      "de": "Staravia"
     },
     "attacks": [
       {
         "name": {
           "en": "Wing Attack",
-          "fr": "Cru-Aile"
+          "fr": "Cru-Aile",
+          "de": "Flügelschlag"
         },
         "cost": [
           "normal",
@@ -10211,7 +10661,8 @@
       {
         "name": {
           "en": "Strong Breeze",
-          "fr": "Forte Brise"
+          "fr": "Forte Brise",
+          "de": "Steife Brise"
         },
         "cost": [
           "normal",
@@ -10222,7 +10673,8 @@
         "damage": "",
         "text": {
           "en": "Your opponent shuffles the Defending Pokémon and all cards attached to it into his or her deck.",
-          "fr": "Votre adversaire mélange le Pokémon Défenseur et toutes les cartes qui lui sont attachées avec son deck."
+          "fr": "Votre adversaire mélange le Pokémon Défenseur et toutes les cartes qui lui sont attachées avec son deck.",
+          "de": "Dein Gegner mischt das Verteidigende Pokémon und alle daran angelegten Karten zurück in sein Deck."
         }
       }
     ],
@@ -10240,7 +10692,8 @@
     ],
     "retreat_cost": 1,
     "flavor_text": {
-      "en": "It never stops attacking even if it is injured. It fusses over the shape of its comb."
+      "en": "It never stops attacking even if it is injured. It fusses over the shape of its comb.",
+      "de": "Selbst mit einer Verletzung greift es immer weiter an. Ziert sich etwas aufgrund der Form seines Kamms."
     }
   },
   {
@@ -10285,7 +10738,8 @@
       {
         "name": {
           "en": "Windfall",
-          "fr": "Rafale de Vent"
+          "fr": "Rafale de Vent",
+          "de": "Warmer Regen"
         },
         "cost": [
           "normal"
@@ -10293,13 +10747,15 @@
         "damage": "",
         "text": {
           "en": "Shuffle your hand into your deck. Then, draw 6 cards.",
-          "fr": "Mélangez votre main avec votre deck. Ensuite, piochez 6 cartes."
+          "fr": "Mélangez votre main avec votre deck. Ensuite, piochez 6 cartes.",
+          "de": "Mische deine Handkarten in dein Deck. Ziehe anschließend 6 Karten."
         }
       },
       {
         "name": {
           "en": "Jet Blast",
-          "fr": "Rafale d'Explosions"
+          "fr": "Rafale d'Explosions",
+          "de": "Hochdruckwelle"
         },
         "cost": [
           "normal",
@@ -10310,7 +10766,8 @@
         "damage": "60",
         "text": {
           "en": "Does 30 more damage for each Plasma Energy attached to this Pokémon.",
-          "fr": "Inflige 30 dégâts supplémentaires pour chaque Énergie Plasma attachée à ce Pokémon."
+          "fr": "Inflige 30 dégâts supplémentaires pour chaque Énergie Plasma attachée à ce Pokémon.",
+          "de": "Dieser Angriff fügt 30 weitere Schadenspunkte für jede an dieses Pokémon angelegte Plasma-Energie zu."
         }
       }
     ],
@@ -10379,7 +10836,7 @@
       "es": "El Pokémon al que esté unida esta carta no tiene ningún Coste de Retirada.",
       "it": "Il Pokémon a cui questa carta è assegnata non ha alcun costo di ritirata.",
       "pt-BR": "O Pokémon ao qual este card está ligado não tem Custo para Recuar.",
-      "de": "Das Pokémon, an das diese Karte angelegt ist, hat keine Rückzugskosten."
+      "de": "Lege 1 Pokémon-Ausrüstung an 1 deiner Pokémon an, an das noch keine Pokémon-Ausrüstung angelegt ist. Das Pokémon, an das diese Karte angelegt ist, hat keine Rückzugskosten. Du kannst während deines Zuges (vor deinem Angriff) beliebig viele Itemkarten spielen."
     }
   }
 ]

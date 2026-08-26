@@ -115,6 +115,12 @@
         "text": {}
       }
     ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
     "retreat_cost": 2
   },
   {
@@ -262,6 +268,12 @@
         }
       }
     ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
     "retreat_cost": 1
   },
   {
@@ -385,6 +397,18 @@
         }
       }
     ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
     "retreat_cost": 1
   },
   {
@@ -492,6 +516,12 @@
         "text": {}
       }
     ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
     "retreat_cost": 1
   },
   {
@@ -515,7 +545,7 @@
     "regulation_mark": "I",
     "variants": [
       {
-        "id": "holo",
+        "id": "holo-cosmos",
         "type": "holo",
         "images": {
           "de": "",
@@ -526,6 +556,7 @@
           "it": "",
           "pt-BR": ""
         },
+        "foil": "cosmos",
         "cardmarket": {
           "product_id": 851051,
           "currency": "EUR",
@@ -552,9 +583,10 @@
           "en": "Pull",
           "fr": "Tirer",
           "de": "Ziehen",
-          "it": "Trascinamento",
-          "es": "Jalar",
-          "pt-BR": "Puxar"
+          "it": "Tira",
+          "es": "Tirar",
+          "pt-BR": "Puxar",
+          "es-mx": "Jalar"
         },
         "cost": [
           "psychic"
@@ -568,6 +600,18 @@
           "es": "Lanza 1 moneda. Si sale cara, cambia 1 de los Pokémon en Banca de tu rival por su Pokémon Activo.",
           "pt-BR": "Jogue 1 moeda. Se sair cara, troque 1 dos Pokémon no Banco do seu oponente pelo Pokémon Ativo dele."
         }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
       }
     ],
     "retreat_cost": 1
@@ -593,7 +637,7 @@
     "regulation_mark": "I",
     "variants": [
       {
-        "id": "holo",
+        "id": "holo-cosmos",
         "type": "holo",
         "images": {
           "de": "",
@@ -604,6 +648,7 @@
           "it": "",
           "pt-BR": ""
         },
+        "foil": "cosmos",
         "cardmarket": {
           "product_id": 851052,
           "currency": "EUR",
@@ -679,6 +724,18 @@
         }
       }
     ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
     "retreat_cost": 1
   },
   {
@@ -749,6 +806,12 @@
         ],
         "damage": "20",
         "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
       }
     ],
     "retreat_cost": 1
@@ -837,6 +900,12 @@
           "es": "Este ataque hace 20 puntos de daño más por cada Energía {W} unida a este Pokémon.",
           "pt-BR": "Este ataque causa 20 pontos de dano a mais para cada Energia {W} ligada a este Pokémon."
         }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
       }
     ],
     "retreat_cost": 1
@@ -958,6 +1027,18 @@
         }
       }
     ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
     "retreat_cost": 1
   },
   {
@@ -1065,6 +1146,12 @@
         }
       }
     ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
     "retreat_cost": 2
   },
   {
@@ -1112,19 +1199,6 @@
           "average_7d": 1.55,
           "average_30d": 0.87,
           "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=851063"
-        }
-      },
-      {
-        "id": "holo-2",
-        "type": "holo",
-        "images": {
-          "de": "",
-          "en": "/images/cards/intl-mep/en/011.webp",
-          "es": "",
-          "es-mx": "",
-          "fr": "",
-          "it": "",
-          "pt-BR": ""
         }
       },
       {
@@ -1354,6 +1428,12 @@
         }
       }
     ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
     "retreat_cost": 2
   },
   {
@@ -1401,19 +1481,6 @@
           "average_7d": 2.18,
           "average_30d": 1.84,
           "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=859011"
-        }
-      },
-      {
-        "id": "holo-2",
-        "type": "holo",
-        "images": {
-          "de": "",
-          "en": "/images/cards/intl-mep/en/013.webp",
-          "es": "",
-          "es-mx": "",
-          "fr": "",
-          "it": "",
-          "pt-BR": ""
         }
       },
       {
@@ -1485,6 +1552,12 @@
           "pt-BR": "Cure 30 pontos de dano deste Pokémon.",
           "es-mx": "Cura 30 puntos de daño a este Pokémon."
         }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
       }
     ],
     "retreat_cost": 4
@@ -1610,6 +1683,12 @@
         }
       }
     ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
     "retreat_cost": 2
   },
   {
@@ -1725,6 +1804,12 @@
         }
       }
     ],
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "x2"
+      }
+    ],
     "retreat_cost": 2
   },
   {
@@ -1817,10 +1902,10 @@
       "en": "Vibrava",
       "fr": "Vibraninf",
       "es": "Vibrava",
-      "es-mx": "Vibrava",
-      "de": "Vibrava",
       "it": "Vibrava",
-      "pt-BR": "Vibrava"
+      "pt-BR": "Vibrava",
+      "de": "Vibrava",
+      "es-mx": "Vibrava"
     },
     "attacks": [
       {
@@ -1839,6 +1924,12 @@
         ],
         "damage": "130",
         "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
       }
     ],
     "retreat_cost": 1
@@ -1958,6 +2049,12 @@
         "text": {}
       }
     ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
     "retreat_cost": 2
   },
   {
@@ -1981,7 +2078,7 @@
     "regulation_mark": "I",
     "variants": [
       {
-        "id": "holo",
+        "id": "holo-cosmos",
         "type": "holo",
         "images": {
           "de": "",
@@ -1992,6 +2089,7 @@
           "it": "",
           "pt-BR": ""
         },
+        "foil": "cosmos",
         "cardmarket": {
           "product_id": 859021,
           "currency": "EUR",
@@ -2036,6 +2134,12 @@
         }
       }
     ],
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "x2"
+      }
+    ],
     "retreat_cost": 1
   },
   {
@@ -2059,7 +2163,7 @@
     "regulation_mark": "I",
     "variants": [
       {
-        "id": "holo",
+        "id": "holo-cosmos",
         "type": "holo",
         "images": {
           "de": "",
@@ -2070,6 +2174,7 @@
           "it": "",
           "pt-BR": ""
         },
+        "foil": "cosmos",
         "cardmarket": {
           "product_id": 859022,
           "currency": "EUR",
@@ -2144,6 +2249,12 @@
         }
       }
     ],
+    "weaknesses": [
+      {
+        "type": "metal",
+        "value": "x2"
+      }
+    ],
     "retreat_cost": 1
   },
   {
@@ -2167,7 +2278,7 @@
     "regulation_mark": "I",
     "variants": [
       {
-        "id": "holo",
+        "id": "holo-cosmos",
         "type": "holo",
         "images": {
           "de": "",
@@ -2178,6 +2289,7 @@
           "it": "",
           "pt-BR": ""
         },
+        "foil": "cosmos",
         "cardmarket": {
           "product_id": 859024,
           "currency": "EUR",
@@ -2231,6 +2343,12 @@
         "text": {}
       }
     ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
     "retreat_cost": 1
   },
   {
@@ -2254,7 +2372,7 @@
     "regulation_mark": "I",
     "variants": [
       {
-        "id": "holo",
+        "id": "holo-cosmos",
         "type": "holo",
         "images": {
           "de": "",
@@ -2265,6 +2383,7 @@
           "it": "",
           "pt-BR": ""
         },
+        "foil": "cosmos",
         "cardmarket": {
           "product_id": 859026,
           "currency": "EUR",
@@ -2332,6 +2451,12 @@
         ],
         "damage": "60",
         "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
       }
     ],
     "retreat_cost": 1
@@ -2456,6 +2581,12 @@
         "text": {}
       }
     ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
     "retreat_cost": 2
   },
   {
@@ -2544,6 +2675,12 @@
         }
       }
     ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
     "retreat_cost": 2
   },
   {
@@ -2618,6 +2755,12 @@
         "text": {}
       }
     ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
     "retreat_cost": 1
   },
   {
@@ -2667,8 +2810,8 @@
         }
       },
       {
-        "id": "holo-859039",
-        "type": "holo",
+        "id": "lenticular",
+        "type": "lenticular",
         "images": {
           "de": "",
           "en": "/images/cards/intl-mep/en/025.webp",
@@ -2723,6 +2866,12 @@
           "es": "Lanza 1 moneda hasta que salga cruz. Este ataque hace 50 puntos de daño más por cada cara.",
           "pt-BR": "Jogue uma moeda até sair coroa. Este ataque causa 50 pontos de dano a mais para cada cara."
         }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
       }
     ],
     "retreat_cost": 3
@@ -2819,6 +2968,18 @@
         "text": {}
       }
     ],
+    "weaknesses": [
+      {
+        "type": "dark",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
     "retreat_cost": 1
   },
   {
@@ -2898,6 +3059,12 @@
         "text": {}
       }
     ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
     "retreat_cost": 1
   },
   {
@@ -2932,7 +3099,20 @@
         },
         "stamps": [
           "ace-trainer"
-        ]
+        ],
+        "cardmarket": {
+          "product_id": 850977,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 420,
+          "low": 476,
+          "trend": 474.09,
+          "average_1d": 400,
+          "average_7d": 437.14,
+          "average_30d": 527.45,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=850977"
+        }
       }
     ],
     "trainer_type": "stadium",
@@ -3381,6 +3561,12 @@
         "value": "x2"
       }
     ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
     "retreat_cost": 2
   },
   {
@@ -3546,8 +3732,8 @@
         }
       },
       {
-        "id": "holo-2",
-        "type": "holo",
+        "id": "lenticular",
+        "type": "lenticular",
         "images": {
           "de": "",
           "en": "/images/cards/intl-mep/en/034.webp",
@@ -3556,6 +3742,19 @@
           "fr": "",
           "it": "",
           "pt-BR": ""
+        },
+        "cardmarket": {
+          "product_id": 873718,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.87,
+          "low": 0.1,
+          "trend": 0.51,
+          "average_1d": 0.62,
+          "average_7d": 0.47,
+          "average_30d": 0.75,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=873718"
         }
       }
     ],
@@ -3654,8 +3853,8 @@
         }
       },
       {
-        "id": "holo-2",
-        "type": "holo",
+        "id": "lenticular",
+        "type": "lenticular",
         "images": {
           "de": "",
           "en": "/images/cards/intl-mep/en/035.webp",
@@ -3664,6 +3863,19 @@
           "fr": "",
           "it": "",
           "pt-BR": ""
+        },
+        "cardmarket": {
+          "product_id": 873720,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.82,
+          "low": 0.2,
+          "trend": 0.61,
+          "average_1d": 0.43,
+          "average_7d": 0.48,
+          "average_30d": 0.78,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=873720"
         }
       }
     ],
@@ -3762,8 +3974,8 @@
         }
       },
       {
-        "id": "holo-2",
-        "type": "holo",
+        "id": "lenticular",
+        "type": "lenticular",
         "images": {
           "de": "",
           "en": "/images/cards/intl-mep/en/036.webp",
@@ -3772,6 +3984,19 @@
           "fr": "",
           "it": "",
           "pt-BR": ""
+        },
+        "cardmarket": {
+          "product_id": 873722,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.84,
+          "low": 0.1,
+          "trend": 0.71,
+          "average_1d": 0.7,
+          "average_7d": 0.66,
+          "average_30d": 0.8,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=873722"
         }
       }
     ],
@@ -3902,6 +4127,12 @@
         }
       }
     ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
     "retreat_cost": 2
   },
   {
@@ -3981,6 +4212,12 @@
           "pt-BR": "Descarte uma Energia deste Pokémon.",
           "es-mx": "Descarta 1 Energía de este Pokémon."
         }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
       }
     ],
     "retreat_cost": 2
@@ -4064,6 +4301,12 @@
         }
       }
     ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
     "retreat_cost": 2
   },
   {
@@ -4137,6 +4380,12 @@
         ],
         "damage": "60",
         "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
       }
     ],
     "retreat_cost": 3
@@ -4221,6 +4470,12 @@
         }
       }
     ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
     "retreat_cost": 1
   },
   {
@@ -4292,6 +4547,12 @@
         ],
         "damage": "20",
         "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
       }
     ],
     "retreat_cost": 1
@@ -4366,6 +4627,12 @@
         ],
         "damage": "20",
         "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
       }
     ],
     "retreat_cost": 1
@@ -4450,6 +4717,12 @@
         }
       }
     ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
     "retreat_cost": 1
   },
   {
@@ -4532,1596 +4805,9 @@
         }
       }
     ],
-    "retreat_cost": 1
-  },
-  {
-    "id": "intl-mep-064",
-    "set_id": "intl-mep",
-    "number": "064",
-    "category": "pokemon",
-    "name": {
-      "en": "Serperior",
-      "fr": "Majaspic",
-      "es": "Serperior",
-      "es-mx": "Serperior",
-      "de": "Serpiroyal",
-      "it": "Serperior",
-      "pt-BR": "Serperior"
-    },
-    "pokemon": [
-      "0497"
-    ],
-    "illustrator": "LINNE",
-    "rarity": "promo",
-    "regulation_mark": "J",
-    "variants": [
-      {
-        "id": "holo",
-        "type": "holo",
-        "images": {
-          "de": "",
-          "en": "/images/cards/intl-mep/en/064.webp",
-          "es": "",
-          "es-mx": "",
-          "fr": "",
-          "it": "",
-          "pt-BR": ""
-        }
-      },
-      {
-        "id": "stamped-set_logo",
-        "type": "stamped",
-        "images": {
-          "de": "",
-          "en": "/images/cards/intl-mep/en/064.webp",
-          "es": "",
-          "es-mx": "",
-          "fr": "",
-          "it": "",
-          "pt-BR": ""
-        },
-        "stamps": [
-          "set-logo"
-        ],
-        "cardmarket": {
-          "product_id": 877543,
-          "currency": "EUR",
-          "updated_at": "2026-08-25T02:48:52+0200",
-          "price_kind": "standard",
-          "average": 8.78,
-          "low": 2.5,
-          "trend": 9.21,
-          "average_1d": 7.5,
-          "average_7d": 8.96,
-          "average_30d": 8.66,
-          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=877543"
-        }
-      },
-      {
-        "id": "stamped-set_logo-staff",
-        "type": "stamped",
-        "images": {
-          "de": "",
-          "en": "/images/cards/intl-mep/en/064.webp",
-          "es": "",
-          "es-mx": "",
-          "fr": "",
-          "it": "",
-          "pt-BR": ""
-        },
-        "stamps": [
-          "set-logo",
-          "staff"
-        ],
-        "cardmarket": {
-          "product_id": 879303,
-          "currency": "EUR",
-          "updated_at": "2026-08-25T02:48:52+0200",
-          "price_kind": "standard",
-          "average": 29.35,
-          "low": 6.95,
-          "trend": 43.87,
-          "average_1d": 14,
-          "average_7d": 36.53,
-          "average_30d": 28.86,
-          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=879303"
-        }
-      }
-    ],
-    "hp": 160,
-    "types": [
-      "grass"
-    ],
-    "stage": "stage2",
-    "evolves_from": {
-      "en": "Servine",
-      "fr": "Lianaja",
-      "es": "Servine",
-      "es-mx": "Servine",
-      "de": "Efoserp",
-      "it": "Servine",
-      "pt-BR": "Servine"
-    },
-    "attacks": [
-      {
-        "name": {
-          "en": "Regal Command",
-          "fr": "Ordre Majestueux",
-          "es": "Mandato Realeza",
-          "es-mx": "Mandato de Realeza",
-          "de": "Hoheitlicher Befehl",
-          "it": "Comando Regale",
-          "pt-BR": "Comando Real"
-        },
-        "cost": [
-          "grass"
-        ],
-        "damage": "20×",
-        "text": {
-          "en": "This attack does 20 damage for each of your Pokémon in play.",
-          "fr": "Cette attaque inflige 20 dégâts pour chacun de vos Pokémon en jeu.",
-          "es": "Este ataque hace 20 puntos de daño por cada uno de tus Pokémon en juego.",
-          "es-mx": "Este ataque hace 20 puntos de daño por cada uno de tus Pokémon en juego.",
-          "de": "Diese Attacke fügt für jedes deiner Pokémon im Spiel 20 Schadenspunkte zu.",
-          "it": "Questo attacco infligge 20 danni per ciascuno dei tuoi Pokémon in gioco.",
-          "pt-BR": "Este ataque causa 20 pontos de dano para cada um dos seus Pokémon em jogo."
-        }
-      },
-      {
-        "name": {
-          "en": "Solar Coiling",
-          "fr": "Enroulement Solaire",
-          "es": "Enrosque Solar",
-          "es-mx": "Enrosque Solar",
-          "de": "Solarschlinge",
-          "it": "Avvolgimento Solare",
-          "pt-BR": "Enrolada Solar"
-        },
-        "cost": [
-          "grass",
-          "grass",
-          "grass"
-        ],
-        "damage": "100+",
-        "text": {
-          "en": "If Rosa's Encouragement is in your discard pile, this attack does 150 more damage.",
-          "fr": "Si Encouragement d'Écho est dans votre pile de défausse, cette attaque inflige 150 dégâts supplémentaires.",
-          "es": "Si Apoyo de Nanci está en tu pila de descartes, este ataque hace 150 puntos de daño más.",
-          "es-mx": "Si Motivación de Nanci está en tu pila de descartes, este ataque hace 150 puntos de daño más.",
-          "de": "Wenn Rosys Ermutigung in deinem Ablagestapel ist, fügt diese Attacke 150 Schadenspunkte mehr zu.",
-          "it": "Se Incoraggiamento di Rina è nella tua pila degli scarti, questo attacco infligge 150 danni in più.",
-          "pt-BR": "Se Encorajamento da Rose estiver na sua pilha de descarte, este ataque causará 150 pontos de dano a mais."
-        }
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "fire",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 2
-  },
-  {
-    "id": "intl-mep-065",
-    "set_id": "intl-mep",
-    "number": "065",
-    "category": "pokemon",
-    "name": {
-      "en": "Barbaracle",
-      "fr": "Golgopathe",
-      "es": "Barbaracle",
-      "es-mx": "Barbaracle",
-      "de": "Thanathora",
-      "it": "Barbaracle",
-      "pt-BR": "Barbaracle"
-    },
-    "pokemon": [
-      "0689"
-    ],
-    "illustrator": "Hasuno",
-    "rarity": "promo",
-    "regulation_mark": "J",
-    "variants": [
-      {
-        "id": "holo",
-        "type": "holo",
-        "images": {
-          "de": "",
-          "en": "/images/cards/intl-mep/en/065.webp",
-          "es": "",
-          "es-mx": "",
-          "fr": "",
-          "it": "",
-          "pt-BR": ""
-        }
-      },
-      {
-        "id": "stamped-set_logo",
-        "type": "stamped",
-        "images": {
-          "de": "",
-          "en": "/images/cards/intl-mep/en/065.webp",
-          "es": "",
-          "es-mx": "",
-          "fr": "",
-          "it": "",
-          "pt-BR": ""
-        },
-        "stamps": [
-          "set-logo"
-        ],
-        "cardmarket": {
-          "product_id": 877544,
-          "currency": "EUR",
-          "updated_at": "2026-08-25T02:48:52+0200",
-          "price_kind": "standard",
-          "average": 8.54,
-          "low": 2.5,
-          "trend": 9.29,
-          "average_1d": 8.99,
-          "average_7d": 9.26,
-          "average_30d": 8.76,
-          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=877544"
-        }
-      },
-      {
-        "id": "stamped-set_logo-staff",
-        "type": "stamped",
-        "images": {
-          "de": "",
-          "en": "/images/cards/intl-mep/en/065.webp",
-          "es": "",
-          "es-mx": "",
-          "fr": "",
-          "it": "",
-          "pt-BR": ""
-        },
-        "stamps": [
-          "set-logo",
-          "staff"
-        ],
-        "cardmarket": {
-          "product_id": 879305,
-          "currency": "EUR",
-          "updated_at": "2026-08-25T02:48:52+0200",
-          "price_kind": "standard",
-          "average": 11.36,
-          "low": 4.9,
-          "trend": 7.45,
-          "average_1d": 4.5,
-          "average_7d": 7.91,
-          "average_30d": 12.62,
-          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=879305"
-        }
-      }
-    ],
-    "hp": 130,
-    "types": [
-      "fighting"
-    ],
-    "stage": "stage1",
-    "evolves_from": {
-      "en": "Binacle",
-      "fr": "Opermine",
-      "es": "Binacle",
-      "es-mx": "Binacle",
-      "de": "Bithora",
-      "it": "Binacle",
-      "pt-BR": "Binacle"
-    },
-    "attacks": [
-      {
-        "name": {
-          "en": "Hammer In",
-          "fr": "Enfoncement",
-          "es": "Martillear",
-          "es-mx": "Martillar",
-          "de": "Einhämmern",
-          "it": "Martello",
-          "pt-BR": "Martelada"
-        },
-        "cost": [
-          "fighting",
-          "fighting",
-          "normal"
-        ],
-        "damage": "80",
-        "text": {}
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "grass",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 2
-  },
-  {
-    "id": "intl-mep-066",
-    "set_id": "intl-mep",
-    "number": "066",
-    "category": "pokemon",
-    "name": {
-      "en": "Tyrantrum",
-      "fr": "Rexillius",
-      "es": "Tyrantrum",
-      "es-mx": "Tyrantrum",
-      "de": "Monargoras",
-      "it": "Tyrantrum",
-      "pt-BR": "Tyrantrum"
-    },
-    "pokemon": [
-      "0697"
-    ],
-    "illustrator": "Nisota Niso",
-    "rarity": "promo",
-    "regulation_mark": "J",
-    "variants": [
-      {
-        "id": "holo",
-        "type": "holo",
-        "images": {
-          "de": "",
-          "en": "/images/cards/intl-mep/en/066.webp",
-          "es": "",
-          "es-mx": "",
-          "fr": "",
-          "it": "",
-          "pt-BR": ""
-        }
-      },
-      {
-        "id": "stamped-set_logo",
-        "type": "stamped",
-        "images": {
-          "de": "",
-          "en": "/images/cards/intl-mep/en/066.webp",
-          "es": "",
-          "es-mx": "",
-          "fr": "",
-          "it": "",
-          "pt-BR": ""
-        },
-        "stamps": [
-          "set-logo"
-        ],
-        "cardmarket": {
-          "product_id": 877545,
-          "currency": "EUR",
-          "updated_at": "2026-08-25T02:48:52+0200",
-          "price_kind": "standard",
-          "average": 11.54,
-          "low": 4,
-          "trend": 12.14,
-          "average_1d": 12.75,
-          "average_7d": 11.46,
-          "average_30d": 11.63,
-          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=877545"
-        }
-      },
-      {
-        "id": "stamped-set_logo-staff",
-        "type": "stamped",
-        "images": {
-          "de": "",
-          "en": "/images/cards/intl-mep/en/066.webp",
-          "es": "",
-          "es-mx": "",
-          "fr": "",
-          "it": "",
-          "pt-BR": ""
-        },
-        "stamps": [
-          "set-logo",
-          "staff"
-        ],
-        "cardmarket": {
-          "product_id": 879315,
-          "currency": "EUR",
-          "updated_at": "2026-08-25T02:48:52+0200",
-          "price_kind": "standard",
-          "average": 17.95,
-          "low": 7.99,
-          "trend": 13.13,
-          "average_1d": 13,
-          "average_7d": 13.69,
-          "average_30d": 17.8,
-          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=879315"
-        }
-      }
-    ],
-    "hp": 180,
-    "types": [
-      "fighting"
-    ],
-    "stage": "stage2",
-    "evolves_from": {
-      "en": "Tyrunt",
-      "fr": "Ptyranidur",
-      "es": "Tyrunt",
-      "es-mx": "Tyrunt",
-      "de": "Balgoras",
-      "it": "Tyrunt",
-      "pt-BR": "Tyrunt"
-    },
-    "attacks": [
-      {
-        "name": {
-          "en": "Wreak Havoc",
-          "fr": "Ravages",
-          "es": "Sembrar el Caos",
-          "es-mx": "Sembrar el Caos",
-          "de": "Chaos anrichten",
-          "it": "Scombussolare",
-          "pt-BR": "Causar Estragos"
-        },
-        "cost": [
-          "fighting",
-          "normal"
-        ],
-        "damage": "160",
-        "text": {
-          "en": "Flip a coin until you get tails. For each heads, discard the top card of your opponent's deck.",
-          "fr": "Lancez une pièce jusqu'à obtenir un côté pile. Pour chaque côté face, défaussez la carte du dessus du deck de votre adversaire.",
-          "es": "Lanza 1 moneda hasta que salga cruz. Por cada cara, descarta la primera carta de la baraja de tu rival.",
-          "es-mx": "Lanza 1 moneda hasta que salga cruz. Por cada cara, descarta la primera carta del mazo de tu rival.",
-          "de": "Wirf so lange 1 Münze, bis sie Zahl zeigt. Lege pro Kopf die oberste Karte des Decks deines Gegners auf seinen Ablagestapel.",
-          "it": "Lancia una moneta finché non esce croce. Ogni volta che esce testa, scarta la prima carta del mazzo del tuo avversario.",
-          "pt-BR": "Jogue uma moeda até sair coroa. Para cada cara, descarte a carta de cima do baralho do seu oponente."
-        }
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "grass",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 3
-  },
-  {
-    "id": "intl-mep-067",
-    "set_id": "intl-mep",
-    "number": "067",
-    "category": "pokemon",
-    "name": {
-      "en": "Doublade",
-      "fr": "Dimoclès",
-      "es": "Doublade",
-      "es-mx": "Doublade",
-      "de": "Duokles",
-      "it": "Doublade",
-      "pt-BR": "Doublade"
-    },
-    "pokemon": [
-      "0680"
-    ],
-    "illustrator": "Yukihiro Tada",
-    "rarity": "promo",
-    "regulation_mark": "J",
-    "variants": [
-      {
-        "id": "holo",
-        "type": "holo",
-        "images": {
-          "de": "",
-          "en": "/images/cards/intl-mep/en/067.webp",
-          "es": "",
-          "es-mx": "",
-          "fr": "",
-          "it": "",
-          "pt-BR": ""
-        }
-      },
-      {
-        "id": "stamped-set_logo",
-        "type": "stamped",
-        "images": {
-          "de": "",
-          "en": "/images/cards/intl-mep/en/067.webp",
-          "es": "",
-          "es-mx": "",
-          "fr": "",
-          "it": "",
-          "pt-BR": ""
-        },
-        "stamps": [
-          "set-logo"
-        ],
-        "cardmarket": {
-          "product_id": 877546,
-          "currency": "EUR",
-          "updated_at": "2026-08-25T02:48:52+0200",
-          "price_kind": "standard",
-          "average": 7.69,
-          "low": 2.49,
-          "trend": 6.86,
-          "average_1d": 5.5,
-          "average_7d": 6.53,
-          "average_30d": 7.79,
-          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=877546"
-        }
-      },
-      {
-        "id": "stamped-set_logo-staff",
-        "type": "stamped",
-        "images": {
-          "de": "",
-          "en": "/images/cards/intl-mep/en/067.webp",
-          "es": "",
-          "es-mx": "",
-          "fr": "",
-          "it": "",
-          "pt-BR": ""
-        },
-        "stamps": [
-          "set-logo",
-          "staff"
-        ],
-        "cardmarket": {
-          "product_id": 879312,
-          "currency": "EUR",
-          "updated_at": "2026-08-25T02:48:52+0200",
-          "price_kind": "standard",
-          "average": 11.82,
-          "low": 5.95,
-          "trend": 8.04,
-          "average_1d": 10.73,
-          "average_7d": 9.6,
-          "average_30d": 12.63,
-          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=879312"
-        }
-      }
-    ],
-    "hp": 100,
-    "types": [
-      "metal"
-    ],
-    "stage": "stage1",
-    "evolves_from": {
-      "en": "Honedge",
-      "fr": "Monorpale",
-      "es": "Honedge",
-      "es-mx": "Honedge",
-      "de": "Gramokles",
-      "it": "Honedge",
-      "pt-BR": "Honedge"
-    },
-    "attacks": [
-      {
-        "name": {
-          "en": "Weaponized Swords",
-          "fr": "Épées Armes",
-          "es": "Espadas Pertrechadas",
-          "es-mx": "Espadas Pertrechadas",
-          "de": "Kollektive Klingenkraft",
-          "it": "Spade Belliche",
-          "pt-BR": "Espadas Armadas"
-        },
-        "cost": [
-          "normal",
-          "normal"
-        ],
-        "damage": "60×",
-        "text": {
-          "en": "Reveal any number of Honedge, Doublade, and Aegislash from your hand, and this attack does 60 damage for each card you revealed in this way.",
-          "fr": "Montrez le nombre voulu de Monorpale, de Dimoclès et d'Exagide de votre main. Cette attaque inflige 60 dégâts pour chaque carte montrée de cette façon.",
-          "es": "Enseña cualquier cantidad de Honedge, Doublade y Aegislash de tu mano, y este ataque hace 60 puntos de daño por cada carta que hayas enseñado de esta manera.",
-          "es-mx": "Muestra cualquier cantidad de Honedge, Doublade y Aegislash de tu mano, y este ataque hace 60 puntos de daño por cada carta que mostraste de esta manera.",
-          "de": "Zeige deinem Gegner beliebig viele Gramokles, Duokles und Durengard auf deiner Hand, und diese Attacke fügt für jede auf diese Weise gezeigte Karte 60 Schadenspunkte zu.",
-          "it": "Mostra un numero qualsiasi di Honedge, Doublade e Aegislash che hai in mano e questo attacco infligge 60 danni per ogni carta che hai mostrato in questo modo.",
-          "pt-BR": "Revele qualquer número de Honedge, Doublade e Aegislash na sua mão, e este ataque causa 60 pontos de dano para cada carta revelada desta forma."
-        }
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "fire",
-        "value": "x2"
-      }
-    ],
-    "resistances": [
-      {
-        "type": "grass",
-        "value": "-30"
-      }
-    ],
-    "retreat_cost": 2
-  },
-  {
-    "id": "intl-mep-068",
-    "set_id": "intl-mep",
-    "number": "068",
-    "category": "pokemon",
-    "name": {
-      "en": "Makuhita",
-      "fr": "Makuhita",
-      "de": "Makuhita",
-      "it": "Makuhita",
-      "es": "Makuhita",
-      "pt-BR": "Makuhita",
-      "es-mx": "Makuhita"
-    },
-    "pokemon": [
-      "0296"
-    ],
-    "illustrator": "Takeshi Nakamura",
-    "rarity": "promo",
-    "regulation_mark": "I",
-    "variants": [
-      {
-        "id": "holo",
-        "type": "holo",
-        "images": {
-          "de": "",
-          "en": "/images/cards/intl-mep/en/068.webp",
-          "es": "",
-          "es-mx": "",
-          "fr": "",
-          "it": "",
-          "pt-BR": ""
-        },
-        "cardmarket": {
-          "product_id": 879250,
-          "currency": "EUR",
-          "updated_at": "2026-08-25T02:48:52+0200",
-          "price_kind": "standard",
-          "average": 2.65,
-          "low": 1.5,
-          "trend": 2.61,
-          "average_1d": 4.38,
-          "average_7d": 2.67,
-          "average_30d": 2.77,
-          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=879250"
-        }
-      }
-    ],
-    "hp": 80,
-    "types": [
-      "fighting"
-    ],
-    "stage": "basic",
-    "attacks": [
-      {
-        "name": {
-          "en": "Corkscrew Punch",
-          "fr": "Poing Tire-Bouchon",
-          "de": "Korkenzieherhieb",
-          "it": "Pugno Rotante",
-          "es": "Puño Tirabuzón",
-          "pt-BR": "Soco Saca-rolha",
-          "es-mx": "Puño Sacacorchos"
-        },
-        "cost": [
-          "fighting"
-        ],
-        "damage": "10",
-        "text": {}
-      },
-      {
-        "name": {
-          "en": "Confront",
-          "fr": "Confrontation",
-          "de": "Konfrontieren",
-          "it": "Confronto",
-          "es": "Confrontar",
-          "pt-BR": "Confrontar",
-          "es-mx": "Confrontar"
-        },
-        "cost": [
-          "fighting",
-          "fighting"
-        ],
-        "damage": "30",
-        "text": {}
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "psychic",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 2
-  },
-  {
-    "id": "intl-mep-069",
-    "set_id": "intl-mep",
-    "number": "069",
-    "category": "pokemon",
-    "name": {
-      "en": "Chikorita",
-      "fr": "Germignon",
-      "de": "Endivie",
-      "it": "Chikorita",
-      "es": "Chikorita",
-      "pt-BR": "Chikorita",
-      "es-mx": "Chikorita"
-    },
-    "pokemon": [
-      "0152"
-    ],
-    "illustrator": "Makura Tami",
-    "rarity": "promo",
-    "regulation_mark": "I",
-    "variants": [
-      {
-        "id": "holo",
-        "type": "holo",
-        "images": {
-          "de": "",
-          "en": "/images/cards/intl-mep/en/069.webp",
-          "es": "",
-          "es-mx": "",
-          "fr": "",
-          "it": "",
-          "pt-BR": ""
-        },
-        "cardmarket": {
-          "product_id": 879255,
-          "currency": "EUR",
-          "updated_at": "2026-08-25T02:48:52+0200",
-          "price_kind": "standard",
-          "average": 0.31,
-          "low": 0.02,
-          "trend": 0.37,
-          "average_1d": 0.91,
-          "average_7d": 0.36,
-          "average_30d": 0.29,
-          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=879255"
-        }
-      }
-    ],
-    "hp": 70,
-    "types": [
-      "grass"
-    ],
-    "stage": "basic",
-    "attacks": [
-      {
-        "name": {
-          "en": "Razor Leaf",
-          "fr": "Tranch'Herbe",
-          "de": "Rasierblatt",
-          "it": "Foglielama",
-          "es": "Hoja Afilada",
-          "pt-BR": "Folha Navalha",
-          "es-mx": "Hojas Navaja"
-        },
-        "cost": [
-          "grass"
-        ],
-        "damage": "20",
-        "text": {}
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "fire",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 1
-  },
-  {
-    "id": "intl-mep-070",
-    "set_id": "intl-mep",
-    "number": "070",
-    "category": "pokemon",
-    "name": {
-      "en": "Tyrunt",
-      "fr": "Ptyranidur",
-      "es": "Tyrunt",
-      "es-mx": "Tyrunt",
-      "de": "Balgoras",
-      "it": "Tyrunt",
-      "pt-BR": "Tyrunt"
-    },
-    "pokemon": [
-      "0696"
-    ],
-    "illustrator": "Shimaris Yukichi",
-    "rarity": "promo",
-    "regulation_mark": "J",
-    "variants": [
-      {
-        "id": "holo",
-        "type": "holo",
-        "images": {
-          "de": "",
-          "en": "/images/cards/intl-mep/en/070.webp",
-          "es": "",
-          "es-mx": "",
-          "fr": "",
-          "it": "",
-          "pt-BR": ""
-        },
-        "cardmarket": {
-          "product_id": 879262,
-          "currency": "EUR",
-          "updated_at": "2026-08-25T02:48:52+0200",
-          "price_kind": "standard",
-          "average": 4.04,
-          "low": 1,
-          "trend": 3.44,
-          "average_1d": 2.4,
-          "average_7d": 3.55,
-          "average_30d": 3.82,
-          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=879262"
-        }
-      },
-      {
-        "id": "stamped-pokemon_center",
-        "type": "stamped",
-        "images": {
-          "de": "",
-          "en": "/images/cards/intl-mep/en/070.webp",
-          "es": "",
-          "es-mx": "",
-          "fr": "",
-          "it": "",
-          "pt-BR": ""
-        },
-        "stamps": [
-          "pokemon-center"
-        ],
-        "cardmarket": {
-          "product_id": 879272,
-          "currency": "EUR",
-          "updated_at": "2026-08-25T02:48:52+0200",
-          "price_kind": "standard",
-          "average": 40.59,
-          "low": 5,
-          "trend": 33.9,
-          "average_1d": 25,
-          "average_7d": 31.13,
-          "average_30d": 44.59,
-          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=879272"
-        }
-      }
-    ],
-    "hp": 100,
-    "types": [
-      "fighting"
-    ],
-    "stage": "stage1",
-    "evolves_from": {
-      "en": "Antique Jaw Fossil",
-      "fr": "Fossile Mâchoire Ancien",
-      "es": "Fósil Mandíbula Antiguo",
-      "es-mx": "Fósil Mandíbula Antiguo",
-      "de": "Antikes Kieferfossil",
-      "it": "Vecchio Fossilmascella",
-      "pt-BR": "Fóssil de Mandíbula Arcaico"
-    },
-    "attacks": [
-      {
-        "name": {
-          "en": "Get Angry",
-          "fr": "Coléreux",
-          "es": "Enfadarse",
-          "es-mx": "Enojarse",
-          "de": "Rotsehen",
-          "it": "Tutte le Furie",
-          "pt-BR": "Dar Piti"
-        },
-        "cost": [
-          "fighting",
-          "normal"
-        ],
-        "damage": "20×",
-        "text": {
-          "en": "This attack does 20 damage for each damage counter on this Pokémon.",
-          "fr": "Cette attaque inflige 20 dégâts pour chaque marqueur de dégâts sur ce Pokémon.",
-          "es": "Este ataque hace 20 puntos de daño por cada contador de daño en este Pokémon.",
-          "es-mx": "Este ataque hace 20 puntos de daño por cada contador de daño en este Pokémon.",
-          "de": "Diese Attacke fügt für jede Schadensmarke auf diesem Pokémon 20 Schadenspunkte zu.",
-          "it": "Questo attacco infligge 20 danni per ogni segnalino danno presente su questo Pokémon.",
-          "pt-BR": "Este ataque causa 20 pontos de dano para cada contador de dano neste Pokémon."
-        }
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "grass",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 3
-  },
-  {
-    "id": "intl-mep-071",
-    "set_id": "intl-mep",
-    "number": "071",
-    "category": "pokemon",
-    "name": {
-      "en": "Mega Zygarde ex",
-      "fr": "Méga-Zygarde-ex",
-      "es": "Mega-Zygarde ex",
-      "es-mx": "Mega-Zygarde ex",
-      "de": "Mega-Zygarde-ex",
-      "it": "Mega Zygarde-ex",
-      "pt-BR": "Mega Zygarde ex"
-    },
-    "pokemon": [
-      "0718-mega-zygarde"
-    ],
-    "illustrator": "takuyoa",
-    "rarity": "promo",
-    "regulation_mark": "J",
-    "variants": [
-      {
-        "id": "holo",
-        "type": "holo",
-        "images": {
-          "de": "",
-          "en": "/images/cards/intl-mep/en/071.webp",
-          "es": "",
-          "es-mx": "",
-          "fr": "",
-          "it": "",
-          "pt-BR": ""
-        }
-      }
-    ],
-    "hp": 310,
-    "types": [
-      "fighting"
-    ],
-    "stage": "basic",
-    "rule_box": "ex",
-    "attacks": [
-      {
-        "name": {
-          "en": "Gaia Wave",
-          "fr": "Onde de Gaïa",
-          "es": "Onda Gaia",
-          "es-mx": "Onda Gaia",
-          "de": "Gaia-Welle",
-          "it": "Onda Gaia",
-          "pt-BR": "Onda de Gaia"
-        },
-        "cost": [
-          "fighting",
-          "fighting",
-          "fighting"
-        ],
-        "damage": "200",
-        "text": {
-          "en": "During your opponent's next turn, this Pokémon takes 30 less damage from attacks (after applying Weakness and Resistance).",
-          "fr": "Pendant le prochain tour de votre adversaire, ce Pokémon subit 30 dégâts de moins provenant des attaques (après application de la Faiblesse et de la Résistance).",
-          "es": "Durante el próximo turno de tu rival, los ataques hacen 30 puntos de daño menos a este Pokémon (después de aplicar Debilidad y Resistencia).",
-          "es-mx": "Durante el próximo turno de tu rival, los ataques hacen 30 puntos de daño menos a este Pokémon (después de aplicar Debilidad y Resistencia).",
-          "de": "Während des nächsten Zuges deines Gegners werden diesem Pokémon durch Attacken 30 Schadenspunkte weniger zugefügt (nachdem Schwäche und Resistenz verrechnet wurden).",
-          "it": "Durante il prossimo turno del tuo avversario, questo Pokémon subisce 30 danni in meno dagli attacchi, dopo aver applicato debolezza e resistenza.",
-          "pt-BR": "Durante o próximo turno do seu oponente, este Pokémon receberá 30 pontos de dano a menos de ataques (depois de aplicar Fraqueza e Resistência)."
-        }
-      },
-      {
-        "name": {
-          "en": "Nullifying Zero",
-          "fr": "Zéro Annihilant",
-          "es": "Cero Devastador",
-          "es-mx": "Cero Devastador",
-          "de": "Tilgendes Nichts",
-          "it": "Tabula Zero",
-          "pt-BR": "Zero Anulador"
-        },
-        "cost": [
-          "fighting",
-          "fighting",
-          "fighting",
-          "fighting",
-          "fighting"
-        ],
-        "damage": "",
-        "text": {
-          "en": "For each of your opponent's Pokémon, flip a coin. If heads, this attack does 150 damage to that Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
-          "fr": "Pour chacun des Pokémon de votre adversaire, lancez une pièce. Si c'est face, cette attaque inflige 150 dégâts à ce Pokémon-là. (N'appliquez ni la Faiblesse ni la Résistance aux Pokémon de Banc.)",
-          "es": "Por cada uno de los Pokémon de tu rival, lanza 1 moneda. Si sale cara, este ataque hace 150 puntos de daño a ese Pokémon. (No apliques Debilidad y Resistencia a los Pokémon en Banca).",
-          "es-mx": "Por cada uno de los Pokémon de tu rival, lanza 1 moneda. Si sale cara, este ataque hace 150 puntos de daño a ese Pokémon. (No apliques Debilidad y Resistencia a los Pokémon en Banca).",
-          "de": "Wirf für jedes Pokémon deines Gegners 1 Münze. Bei Kopf fügt diese Attacke jenem Pokémon 150 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)",
-          "it": "Per ciascuno dei Pokémon del tuo avversario, lancia una moneta. Se esce testa, questo attacco infligge 150 danni a quel Pokémon. Non applicare debolezza e resistenza ai Pokémon in panchina.",
-          "pt-BR": "Para cada um dos Pokémon do seu oponente, jogue uma moeda. Se sair cara, este ataque causará 150 pontos de dano àquele Pokémon. (Não aplique Fraqueza e Resistência aos Pokémon no Banco.)"
-        }
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "grass",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 2
-  },
-  {
-    "id": "intl-mep-074",
-    "set_id": "intl-mep",
-    "number": "074",
-    "category": "pokemon",
-    "name": {
-      "en": "Delphox",
-      "fr": "Goupelin",
-      "es": "Delphox",
-      "es-mx": "Delphox",
-      "de": "Fennexis",
-      "it": "Delphox",
-      "pt-BR": "Delphox"
-    },
-    "pokemon": [
-      "0655"
-    ],
-    "illustrator": "Souichirou Gunjima",
-    "rarity": "promo",
-    "regulation_mark": "J",
-    "variants": [
-      {
-        "id": "holo",
-        "type": "holo",
-        "images": {
-          "de": "",
-          "en": "/images/cards/intl-mep/en/074.webp",
-          "es": "",
-          "es-mx": "",
-          "fr": "",
-          "it": "",
-          "pt-BR": ""
-        }
-      }
-    ],
-    "hp": 160,
-    "types": [
-      "fire"
-    ],
-    "stage": "stage2",
-    "evolves_from": {
-      "en": "Braixen",
-      "fr": "Roussil",
-      "es": "Braixen",
-      "es-mx": "Braixen",
-      "de": "Rutena",
-      "it": "Braixen",
-      "pt-BR": "Braixen"
-    },
-    "attacks": [
-      {
-        "name": {
-          "en": "Energized Storm",
-          "fr": "Tempête Énergisée",
-          "es": "Tormenta Energética",
-          "es-mx": "Tormenta Energética",
-          "de": "Energiegeladener Sturm",
-          "it": "Tempesta Energizzata",
-          "pt-BR": "Tormenta Energizada"
-        },
-        "cost": [
-          "fire",
-          "fire"
-        ],
-        "damage": "30×",
-        "text": {
-          "en": "This attack does 30 damage for each Energy attached to all Pokémon.",
-          "fr": "Cette attaque inflige 30 dégâts pour chaque Énergie attachée à tous les Pokémon.",
-          "es": "Este ataque hace 30 puntos de daño por cada Energía unida a cada Pokémon.",
-          "es-mx": "Este ataque hace 30 puntos de daño por cada Energía unida a cada Pokémon.",
-          "de": "Diese Attacke fügt für jede an alle Pokémon angelegte Energie 30 Schadenspunkte zu.",
-          "it": "Questo attacco infligge 30 danni per ogni Energia assegnata a tutti i Pokémon.",
-          "pt-BR": "Este ataque causa 30 pontos de dano para cada Energia ligada a todos os Pokémon."
-        }
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "water",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 2
-  },
-  {
-    "id": "intl-mep-075",
-    "set_id": "intl-mep",
-    "number": "075",
-    "category": "pokemon",
-    "name": {
-      "en": "Ampharos",
-      "fr": "Pharamp",
-      "es": "Ampharos",
-      "es-mx": "Ampharos",
-      "de": "Ampharos",
-      "it": "Ampharos",
-      "pt-BR": "Ampharos"
-    },
-    "pokemon": [
-      "0181"
-    ],
-    "illustrator": "Taiga Kasai",
-    "rarity": "promo",
-    "regulation_mark": "J",
-    "variants": [
-      {
-        "id": "holo",
-        "type": "holo",
-        "images": {
-          "de": "",
-          "en": "/images/cards/intl-mep/en/075.webp",
-          "es": "",
-          "es-mx": "",
-          "fr": "",
-          "it": "",
-          "pt-BR": ""
-        }
-      }
-    ],
-    "hp": 160,
-    "types": [
-      "lightning"
-    ],
-    "stage": "stage2",
-    "evolves_from": {
-      "en": "Flaaffy",
-      "fr": "Lainergie",
-      "es": "Flaaffy",
-      "es-mx": "Flaaffy",
-      "de": "Waaty",
-      "it": "Flaaffy",
-      "pt-BR": "Flaaffy"
-    },
-    "attacks": [
-      {
-        "name": {
-          "en": "Flashing Bolt",
-          "fr": "Éclair Aveuglant",
-          "es": "Rayo Destellante",
-          "es-mx": "Rayo Destellante",
-          "de": "Leuchtblitz",
-          "it": "Bolide Abbagliante",
-          "pt-BR": "Raio Piscante"
-        },
-        "cost": [
-          "lightning",
-          "normal"
-        ],
-        "damage": "140",
-        "text": {
-          "en": "During your next turn, this Pokémon can't use Flashing Bolt.",
-          "fr": "Pendant votre prochain tour, ce Pokémon ne peut pas utiliser Éclair Aveuglant.",
-          "es": "Durante tu próximo turno, este Pokémon no puede usar Rayo Destellante.",
-          "es-mx": "Durante tu próximo turno, este Pokémon no puede usar Rayo Destellante.",
-          "de": "Während deines nächsten Zuges kann dieses Pokémon Leuchtblitz nicht einsetzen.",
-          "it": "Durante il tuo prossimo turno, questo Pokémon non può usare Bolide Abbagliante.",
-          "pt-BR": "Durante o seu próximo turno, este Pokémon não poderá usar Raio Piscante."
-        }
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "fighting",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 2
-  },
-  {
-    "id": "intl-mep-076",
-    "set_id": "intl-mep",
-    "number": "076",
-    "category": "pokemon",
-    "name": {
-      "en": "Crobat",
-      "fr": "Nostenfer",
-      "es": "Crobat",
-      "es-mx": "Crobat",
-      "de": "Iksbat",
-      "it": "Crobat",
-      "pt-BR": "Crobat"
-    },
-    "pokemon": [
-      "0169"
-    ],
-    "illustrator": "Apios",
-    "rarity": "promo",
-    "regulation_mark": "J",
-    "variants": [
-      {
-        "id": "holo",
-        "type": "holo",
-        "images": {
-          "de": "",
-          "en": "/images/cards/intl-mep/en/076.webp",
-          "es": "",
-          "es-mx": "",
-          "fr": "",
-          "it": "",
-          "pt-BR": ""
-        }
-      }
-    ],
-    "hp": 130,
-    "types": [
-      "dark"
-    ],
-    "stage": "stage2",
-    "evolves_from": {
-      "en": "Golbat",
-      "fr": "Nosferalto",
-      "es": "Golbat",
-      "es-mx": "Golbat",
-      "de": "Golbat",
-      "it": "Golbat",
-      "pt-BR": "Golbat"
-    },
-    "attacks": [
-      {
-        "name": {
-          "en": "Poison Sound Wave",
-          "fr": "Onde Sonore Toxique",
-          "es": "Onda Sónica Venenosa",
-          "es-mx": "Onda Sónica Venenosa",
-          "de": "Gift-Schallwelle",
-          "it": "Onda Sonora Velenosa",
-          "pt-BR": "Vibração Venenosa"
-        },
-        "cost": [
-          "dark"
-        ],
-        "damage": "80",
-        "text": {
-          "en": "Your opponent's Active Pokémon is now Confused and Poisoned.",
-          "fr": "Le Pokémon Actif de votre adversaire est maintenant Confus et Empoisonné.",
-          "es": "El Pokémon Activo de tu rival pasa a estar Confundido y Envenenado.",
-          "es-mx": "El Pokémon Activo de tu rival pasa a estar Confundido y Envenenado.",
-          "de": "Das Aktive Pokémon deines Gegners ist jetzt verwirrt und vergiftet.",
-          "it": "Il Pokémon attivo del tuo avversario viene confuso e avvelenato.",
-          "pt-BR": "O Pokémon Ativo do seu oponente agora está Confuso e Envenenado."
-        }
-      }
-    ],
     "weaknesses": [
       {
         "type": "lightning",
-        "value": "x2"
-      }
-    ],
-    "resistances": [
-      {
-        "type": "fighting",
-        "value": "-30"
-      }
-    ],
-    "retreat_cost": 1
-  },
-  {
-    "id": "intl-mep-077",
-    "set_id": "intl-mep",
-    "number": "077",
-    "category": "pokemon",
-    "name": {
-      "en": "Goodra",
-      "fr": "Muplodocus",
-      "es": "Goodra",
-      "es-mx": "Goodra",
-      "de": "Viscogon",
-      "it": "Goodra",
-      "pt-BR": "Goodra"
-    },
-    "pokemon": [
-      "0706"
-    ],
-    "illustrator": "okayamatakatoshi",
-    "rarity": "promo",
-    "regulation_mark": "J",
-    "variants": [
-      {
-        "id": "holo",
-        "type": "holo",
-        "images": {
-          "de": "",
-          "en": "/images/cards/intl-mep/en/077.webp",
-          "es": "",
-          "es-mx": "",
-          "fr": "",
-          "it": "",
-          "pt-BR": ""
-        }
-      }
-    ],
-    "hp": 160,
-    "types": [
-      "dragon"
-    ],
-    "stage": "stage2",
-    "evolves_from": {
-      "en": "Sliggoo",
-      "fr": "Colimucus",
-      "es": "Sliggoo",
-      "es-mx": "Sliggoo",
-      "de": "Viscargot",
-      "it": "Sliggoo",
-      "pt-BR": "Sliggoo"
-    },
-    "attacks": [
-      {
-        "name": {
-          "en": "Dragon Pulse",
-          "fr": "Draco-Choc",
-          "es": "Pulso Dragón",
-          "es-mx": "Pulso Dragón",
-          "de": "Drachenpuls",
-          "it": "Dragopulsar",
-          "pt-BR": "Pulso do Dragão"
-        },
-        "cost": [
-          "water",
-          "psychic"
-        ],
-        "damage": "160",
-        "text": {
-          "en": "Discard the top card of your deck.",
-          "fr": "Défaussez la carte du dessus de votre deck.",
-          "es": "Descarta la primera carta de tu baraja.",
-          "es-mx": "Descarta la primera carta de tu baraja.",
-          "de": "Lege die oberste Karte deines Decks auf deinen Ablagestapel.",
-          "it": "Scarta la prima carta del tuo mazzo.",
-          "pt-BR": "Descarte a carta de cima do seu baralho."
-        }
-      }
-    ],
-    "retreat_cost": 3
-  },
-  {
-    "id": "intl-mep-078",
-    "set_id": "intl-mep",
-    "number": "078",
-    "category": "pokemon",
-    "name": {
-      "en": "Toxel",
-      "fr": "Toxizap",
-      "es": "Toxel",
-      "es-mx": "Toxel",
-      "de": "Toxel",
-      "it": "Toxel",
-      "pt-BR": "Toxel"
-    },
-    "pokemon": [
-      "0848"
-    ],
-    "illustrator": "Mina Nakai",
-    "rarity": "promo",
-    "regulation_mark": "I",
-    "variants": [
-      {
-        "id": "holo",
-        "type": "holo",
-        "images": {
-          "de": "",
-          "en": "/images/cards/intl-mep/en/078.webp",
-          "es": "",
-          "es-mx": "",
-          "fr": "",
-          "it": "",
-          "pt-BR": ""
-        }
-      }
-    ],
-    "hp": 70,
-    "types": [
-      "dark"
-    ],
-    "stage": "basic",
-    "attacks": [
-      {
-        "name": {
-          "en": "Call for Family",
-          "fr": "Appel à la Famille",
-          "es": "Llamar a la Familia",
-          "es-mx": "Llamar a la Familia",
-          "de": "Familienruf",
-          "it": "Cerca Famiglia",
-          "pt-BR": "Chamar a Família"
-        },
-        "cost": [
-          "dark"
-        ],
-        "damage": "",
-        "text": {
-          "en": "Search your deck for up to 2 Basic Pokémon and put them onto your Bench. Then, shuffle your deck.",
-          "fr": "Cherchez dans votre deck jusqu'à 2 Pokémon de base, puis placez-les sur votre Banc. Mélangez ensuite votre deck.",
-          "es": "Busca en tu baraja hasta 2 Pokémon Básicos y ponlos en tu Banca. Después, baraja las cartas de tu baraja.",
-          "es-mx": "Busca en tu baraja hasta 2 Pokémon Básicos y ponlos en tu Banca. Después, baraja las cartas de tu baraja.",
-          "de": "Durchsuche dein Deck nach bis zu 2 Basis-Pokémon und lege sie auf deine Bank. Mische anschließend dein Deck.",
-          "it": "Cerca nel tuo mazzo fino a due Pokémon Base e mettili nella tua panchina. Poi rimischia il tuo mazzo.",
-          "pt-BR": "Procure por até 2 Pokémon Básicos no seu baralho e coloque-os no seu Banco. Em seguida, embaralhe o seu baralho."
-        }
-      },
-      {
-        "name": {
-          "en": "Playful Kick",
-          "fr": "Coup de Pied de Garnement",
-          "es": "Patada Juguetona",
-          "es-mx": "Patada Juguetona",
-          "de": "Verspielter Kick",
-          "it": "Calcio Briccone",
-          "pt-BR": "Chute Brincalhão"
-        },
-        "cost": [
-          "dark",
-          "normal"
-        ],
-        "damage": "20",
-        "text": {}
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "fighting",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 1
-  },
-  {
-    "id": "intl-mep-079",
-    "set_id": "intl-mep",
-    "number": "079",
-    "category": "pokemon",
-    "name": {
-      "en": "Charmeleon",
-      "fr": "Reptincel",
-      "es": "Charmeleon",
-      "es-mx": "Charmeleon",
-      "de": "Glutexo",
-      "it": "Charmeleon",
-      "pt-BR": "Charmeleon"
-    },
-    "pokemon": [
-      "0005"
-    ],
-    "illustrator": "Teeziro",
-    "rarity": "promo",
-    "regulation_mark": "I",
-    "variants": [
-      {
-        "id": "holo",
-        "type": "holo",
-        "images": {
-          "de": "",
-          "en": "/images/cards/intl-mep/en/079.webp",
-          "es": "",
-          "es-mx": "",
-          "fr": "",
-          "it": "",
-          "pt-BR": ""
-        }
-      }
-    ],
-    "hp": 110,
-    "types": [
-      "fire"
-    ],
-    "stage": "stage1",
-    "evolves_from": {
-      "en": "Charmander",
-      "fr": "Salamèche",
-      "es": "Charmander",
-      "es-mx": "Charmander",
-      "de": "Glumanda",
-      "it": "Charmander",
-      "pt-BR": "Charmander"
-    },
-    "attacks": [
-      {
-        "name": {
-          "en": "Steady Firebreathing",
-          "fr": "Crachage de Feu Régulier",
-          "es": "Lanzallamas Continuo",
-          "es-mx": "Lanzallamas Continuo",
-          "de": "Stetiger Feuerhauch",
-          "it": "Soffiofuoco Mirato",
-          "pt-BR": "Hálito de Fogo Constante"
-        },
-        "cost": [
-          "fire"
-        ],
-        "damage": "40",
-        "text": {}
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "water",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 2
-  },
-  {
-    "id": "intl-mep-080",
-    "set_id": "intl-mep",
-    "number": "080",
-    "category": "pokemon",
-    "name": {
-      "en": "Fennekin",
-      "fr": "Feunnec",
-      "es": "Fennekin",
-      "es-mx": "Fennekin",
-      "de": "Fynx",
-      "it": "Fennekin",
-      "pt-BR": "Fennekin"
-    },
-    "pokemon": [
-      "0653"
-    ],
-    "illustrator": "satoma",
-    "rarity": "promo",
-    "regulation_mark": "J",
-    "variants": [
-      {
-        "id": "holo",
-        "type": "holo",
-        "images": {
-          "de": "",
-          "en": "/images/cards/intl-mep/en/080.webp",
-          "es": "",
-          "es-mx": "",
-          "fr": "",
-          "it": "",
-          "pt-BR": ""
-        }
-      }
-    ],
-    "hp": 70,
-    "types": [
-      "fire"
-    ],
-    "stage": "basic",
-    "attacks": [
-      {
-        "name": {
-          "en": "Call for Family",
-          "fr": "Appel à la Famille",
-          "es": "Llamar a la Familia",
-          "es-mx": "Llamar a la Familia",
-          "de": "Familienruf",
-          "it": "Cerca Famiglia",
-          "pt-BR": "Chamar a Família"
-        },
-        "cost": [
-          "normal"
-        ],
-        "damage": "",
-        "text": {
-          "en": "Search your deck for up to 2 Basic Pokémon and put them onto your Bench. Then, shuffle your deck.",
-          "fr": "Cherchez dans votre deck jusqu'à 2 Pokémon de base, puis placez-les sur votre Banc. Mélangez ensuite votre deck.",
-          "es": "Busca en tu baraja hasta 2 Pokémon Básicos y ponlos en tu Banca. Después, baraja las cartas de tu baraja.",
-          "es-mx": "Busca en tu baraja hasta 2 Pokémon Básicos y ponlos en tu Banca. Después, baraja las cartas de tu baraja.",
-          "de": "Durchsuche dein Deck nach bis zu 2 Basis-Pokémon und lege sie auf deine Bank. Mische anschließend dein Deck.",
-          "it": "Cerca nel tuo mazzo fino a due Pokémon Base e mettili nella tua panchina. Poi rimischia il tuo mazzo.",
-          "pt-BR": "Procure por até 2 Pokémon Básicos no seu baralho e coloque-os no seu Banco. Em seguida, embaralhe o seu baralho."
-        }
-      },
-      {
-        "name": {
-          "en": "Steady Firebreathing",
-          "fr": "Crachage de Feu Régulier",
-          "es": "Lanzallamas Continuo",
-          "es-mx": "Lanzallamas Continuo",
-          "de": "Stetiger Feuerhauch",
-          "it": "Soffiofuoco Mirato",
-          "pt-BR": "Hálito de Fogo Constante"
-        },
-        "cost": [
-          "fire"
-        ],
-        "damage": "10",
-        "text": {}
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "water",
         "value": "x2"
       }
     ],
@@ -7584,6 +6270,1010 @@
     "retreat_cost": 1
   },
   {
+    "id": "intl-mep-064",
+    "set_id": "intl-mep",
+    "number": "064",
+    "category": "pokemon",
+    "name": {
+      "en": "Serperior",
+      "fr": "Majaspic",
+      "es": "Serperior",
+      "es-mx": "Serperior",
+      "de": "Serpiroyal",
+      "it": "Serperior",
+      "pt-BR": "Serperior"
+    },
+    "pokemon": [
+      "0497"
+    ],
+    "illustrator": "LINNE",
+    "rarity": "promo",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "type": "holo",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-mep/en/064.webp",
+          "es": "",
+          "es-mx": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        }
+      },
+      {
+        "id": "stamped-set_logo",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-mep/en/064.webp",
+          "es": "",
+          "es-mx": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        },
+        "stamps": [
+          "set-logo"
+        ],
+        "cardmarket": {
+          "product_id": 877543,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 8.78,
+          "low": 2.5,
+          "trend": 9.21,
+          "average_1d": 7.5,
+          "average_7d": 8.96,
+          "average_30d": 8.66,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=877543"
+        }
+      },
+      {
+        "id": "stamped-set_logo-staff",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-mep/en/064.webp",
+          "es": "",
+          "es-mx": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        },
+        "stamps": [
+          "set-logo",
+          "staff"
+        ],
+        "cardmarket": {
+          "product_id": 879303,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 29.35,
+          "low": 6.95,
+          "trend": 43.87,
+          "average_1d": 14,
+          "average_7d": 36.53,
+          "average_30d": 28.86,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=879303"
+        }
+      }
+    ],
+    "hp": 160,
+    "types": [
+      "grass"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Servine",
+      "fr": "Lianaja",
+      "es": "Servine",
+      "es-mx": "Servine",
+      "de": "Efoserp",
+      "it": "Servine",
+      "pt-BR": "Servine"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Regal Command",
+          "fr": "Ordre Majestueux",
+          "es": "Mandato Realeza",
+          "es-mx": "Mandato de Realeza",
+          "de": "Hoheitlicher Befehl",
+          "it": "Comando Regale",
+          "pt-BR": "Comando Real"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "20×",
+        "text": {
+          "en": "This attack does 20 damage for each of your Pokémon in play.",
+          "fr": "Cette attaque inflige 20 dégâts pour chacun de vos Pokémon en jeu.",
+          "es": "Este ataque hace 20 puntos de daño por cada uno de tus Pokémon en juego.",
+          "es-mx": "Este ataque hace 20 puntos de daño por cada uno de tus Pokémon en juego.",
+          "de": "Diese Attacke fügt für jedes deiner Pokémon im Spiel 20 Schadenspunkte zu.",
+          "it": "Questo attacco infligge 20 danni per ciascuno dei tuoi Pokémon in gioco.",
+          "pt-BR": "Este ataque causa 20 pontos de dano para cada um dos seus Pokémon em jogo."
+        }
+      },
+      {
+        "name": {
+          "en": "Solar Coiling",
+          "fr": "Enroulement Solaire",
+          "es": "Enrosque Solar",
+          "es-mx": "Enrosque Solar",
+          "de": "Solarschlinge",
+          "it": "Avvolgimento Solare",
+          "pt-BR": "Enrolada Solar"
+        },
+        "cost": [
+          "grass",
+          "grass",
+          "grass"
+        ],
+        "damage": "100+",
+        "text": {
+          "en": "If Rosa's Encouragement is in your discard pile, this attack does 150 more damage.",
+          "fr": "Si Encouragement d'Écho est dans votre pile de défausse, cette attaque inflige 150 dégâts supplémentaires.",
+          "es": "Si Apoyo de Nanci está en tu pila de descartes, este ataque hace 150 puntos de daño más.",
+          "es-mx": "Si Motivación de Nanci está en tu pila de descartes, este ataque hace 150 puntos de daño más.",
+          "de": "Wenn Rosys Ermutigung in deinem Ablagestapel ist, fügt diese Attacke 150 Schadenspunkte mehr zu.",
+          "it": "Se Incoraggiamento di Rina è nella tua pila degli scarti, questo attacco infligge 150 danni in più.",
+          "pt-BR": "Se Encorajamento da Rose estiver na sua pilha de descarte, este ataque causará 150 pontos de dano a mais."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-mep-065",
+    "set_id": "intl-mep",
+    "number": "065",
+    "category": "pokemon",
+    "name": {
+      "en": "Barbaracle",
+      "fr": "Golgopathe",
+      "es": "Barbaracle",
+      "es-mx": "Barbaracle",
+      "de": "Thanathora",
+      "it": "Barbaracle",
+      "pt-BR": "Barbaracle"
+    },
+    "pokemon": [
+      "0689"
+    ],
+    "illustrator": "Hasuno",
+    "rarity": "promo",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "stamped-set_logo",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-mep/en/065.webp",
+          "es": "",
+          "es-mx": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        },
+        "stamps": [
+          "set-logo"
+        ],
+        "cardmarket": {
+          "product_id": 877544,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 8.54,
+          "low": 2.5,
+          "trend": 9.29,
+          "average_1d": 8.99,
+          "average_7d": 9.26,
+          "average_30d": 8.76,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=877544"
+        }
+      },
+      {
+        "id": "stamped-set_logo-staff",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-mep/en/065.webp",
+          "es": "",
+          "es-mx": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        },
+        "stamps": [
+          "set-logo",
+          "staff"
+        ],
+        "cardmarket": {
+          "product_id": 879305,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 11.36,
+          "low": 4.9,
+          "trend": 7.45,
+          "average_1d": 4.5,
+          "average_7d": 7.91,
+          "average_30d": 12.62,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=879305"
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Binacle",
+      "fr": "Opermine",
+      "es": "Binacle",
+      "es-mx": "Binacle",
+      "de": "Bithora",
+      "it": "Binacle",
+      "pt-BR": "Binacle"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Hammer In",
+          "fr": "Enfoncement",
+          "es": "Martillear",
+          "es-mx": "Martillar",
+          "de": "Einhämmern",
+          "it": "Martello",
+          "pt-BR": "Martelada"
+        },
+        "cost": [
+          "fighting",
+          "fighting",
+          "normal"
+        ],
+        "damage": "80",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-mep-066",
+    "set_id": "intl-mep",
+    "number": "066",
+    "category": "pokemon",
+    "name": {
+      "en": "Tyrantrum",
+      "fr": "Rexillius",
+      "es": "Tyrantrum",
+      "es-mx": "Tyrantrum",
+      "de": "Monargoras",
+      "it": "Tyrantrum",
+      "pt-BR": "Tyrantrum"
+    },
+    "pokemon": [
+      "0697"
+    ],
+    "illustrator": "Nisota Niso",
+    "rarity": "promo",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "stamped-set_logo",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-mep/en/066.webp",
+          "es": "",
+          "es-mx": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        },
+        "stamps": [
+          "set-logo"
+        ],
+        "cardmarket": {
+          "product_id": 877545,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 11.54,
+          "low": 4,
+          "trend": 12.14,
+          "average_1d": 12.75,
+          "average_7d": 11.46,
+          "average_30d": 11.63,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=877545"
+        }
+      },
+      {
+        "id": "stamped-set_logo-staff",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-mep/en/066.webp",
+          "es": "",
+          "es-mx": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        },
+        "stamps": [
+          "set-logo",
+          "staff"
+        ],
+        "cardmarket": {
+          "product_id": 879315,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 17.95,
+          "low": 7.99,
+          "trend": 13.13,
+          "average_1d": 13,
+          "average_7d": 13.69,
+          "average_30d": 17.8,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=879315"
+        }
+      }
+    ],
+    "hp": 180,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Tyrunt",
+      "fr": "Ptyranidur",
+      "es": "Tyrunt",
+      "es-mx": "Tyrunt",
+      "de": "Balgoras",
+      "it": "Tyrunt",
+      "pt-BR": "Tyrunt"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Wreak Havoc",
+          "fr": "Ravages",
+          "es": "Sembrar el Caos",
+          "es-mx": "Sembrar el Caos",
+          "de": "Chaos anrichten",
+          "it": "Scombussolare",
+          "pt-BR": "Causar Estragos"
+        },
+        "cost": [
+          "fighting",
+          "normal"
+        ],
+        "damage": "160",
+        "text": {
+          "en": "Flip a coin until you get tails. For each heads, discard the top card of your opponent's deck.",
+          "fr": "Lancez une pièce jusqu'à obtenir un côté pile. Pour chaque côté face, défaussez la carte du dessus du deck de votre adversaire.",
+          "es": "Lanza 1 moneda hasta que salga cruz. Por cada cara, descarta la primera carta de la baraja de tu rival.",
+          "es-mx": "Lanza 1 moneda hasta que salga cruz. Por cada cara, descarta la primera carta del mazo de tu rival.",
+          "de": "Wirf so lange 1 Münze, bis sie Zahl zeigt. Lege pro Kopf die oberste Karte des Decks deines Gegners auf seinen Ablagestapel.",
+          "it": "Lancia una moneta finché non esce croce. Ogni volta che esce testa, scarta la prima carta del mazzo del tuo avversario.",
+          "pt-BR": "Jogue uma moeda até sair coroa. Para cada cara, descarte a carta de cima do baralho do seu oponente."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-mep-067",
+    "set_id": "intl-mep",
+    "number": "067",
+    "category": "pokemon",
+    "name": {
+      "en": "Doublade",
+      "fr": "Dimoclès",
+      "es": "Doublade",
+      "es-mx": "Doublade",
+      "de": "Duokles",
+      "it": "Doublade",
+      "pt-BR": "Doublade"
+    },
+    "pokemon": [
+      "0680"
+    ],
+    "illustrator": "Yukihiro Tada",
+    "rarity": "promo",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "stamped-set_logo",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-mep/en/067.webp",
+          "es": "",
+          "es-mx": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        },
+        "stamps": [
+          "set-logo"
+        ],
+        "cardmarket": {
+          "product_id": 877546,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 7.69,
+          "low": 2.49,
+          "trend": 6.86,
+          "average_1d": 5.5,
+          "average_7d": 6.53,
+          "average_30d": 7.79,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=877546"
+        }
+      },
+      {
+        "id": "stamped-set_logo-staff",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-mep/en/067.webp",
+          "es": "",
+          "es-mx": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        },
+        "stamps": [
+          "set-logo",
+          "staff"
+        ],
+        "cardmarket": {
+          "product_id": 879312,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 11.82,
+          "low": 5.95,
+          "trend": 8.04,
+          "average_1d": 10.73,
+          "average_7d": 9.6,
+          "average_30d": 12.63,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=879312"
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "metal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Honedge",
+      "fr": "Monorpale",
+      "es": "Honedge",
+      "es-mx": "Honedge",
+      "de": "Gramokles",
+      "it": "Honedge",
+      "pt-BR": "Honedge"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Weaponized Swords",
+          "fr": "Épées Armes",
+          "es": "Espadas Pertrechadas",
+          "es-mx": "Espadas Pertrechadas",
+          "de": "Kollektive Klingenkraft",
+          "it": "Spade Belliche",
+          "pt-BR": "Espadas Armadas"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "60×",
+        "text": {
+          "en": "Reveal any number of Honedge, Doublade, and Aegislash from your hand, and this attack does 60 damage for each card you revealed in this way.",
+          "fr": "Montrez le nombre voulu de Monorpale, de Dimoclès et d'Exagide de votre main. Cette attaque inflige 60 dégâts pour chaque carte montrée de cette façon.",
+          "es": "Enseña cualquier cantidad de Honedge, Doublade y Aegislash de tu mano, y este ataque hace 60 puntos de daño por cada carta que hayas enseñado de esta manera.",
+          "es-mx": "Muestra cualquier cantidad de Honedge, Doublade y Aegislash de tu mano, y este ataque hace 60 puntos de daño por cada carta que mostraste de esta manera.",
+          "de": "Zeige deinem Gegner beliebig viele Gramokles, Duokles und Durengard auf deiner Hand, und diese Attacke fügt für jede auf diese Weise gezeigte Karte 60 Schadenspunkte zu.",
+          "it": "Mostra un numero qualsiasi di Honedge, Doublade e Aegislash che hai in mano e questo attacco infligge 60 danni per ogni carta che hai mostrato in questo modo.",
+          "pt-BR": "Revele qualquer número de Honedge, Doublade e Aegislash na sua mão, e este ataque causa 60 pontos de dano para cada carta revelada desta forma."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "grass",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-mep-068",
+    "set_id": "intl-mep",
+    "number": "068",
+    "category": "pokemon",
+    "name": {
+      "en": "Makuhita",
+      "fr": "Makuhita",
+      "de": "Makuhita",
+      "it": "Makuhita",
+      "es": "Makuhita",
+      "pt-BR": "Makuhita",
+      "es-mx": "Makuhita"
+    },
+    "pokemon": [
+      "0296"
+    ],
+    "illustrator": "Takeshi Nakamura",
+    "rarity": "promo",
+    "regulation_mark": "I",
+    "variants": [
+      {
+        "id": "holo-cosmos",
+        "type": "holo",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-mep/en/068.webp",
+          "es": "",
+          "es-mx": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        },
+        "foil": "cosmos",
+        "cardmarket": {
+          "product_id": 879250,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 2.65,
+          "low": 1.5,
+          "trend": 2.61,
+          "average_1d": 4.38,
+          "average_7d": 2.67,
+          "average_30d": 2.77,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=879250"
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Corkscrew Punch",
+          "fr": "Poing Tire-Bouchon",
+          "de": "Korkenzieherhieb",
+          "it": "Pugno Rotante",
+          "es": "Puño Tirabuzón",
+          "pt-BR": "Soco Saca-rolha",
+          "es-mx": "Puño Sacacorchos"
+        },
+        "cost": [
+          "fighting"
+        ],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Confront",
+          "fr": "Confrontation",
+          "de": "Konfrontieren",
+          "it": "Confronto",
+          "es": "Confrontar",
+          "pt-BR": "Confrontar",
+          "es-mx": "Confrontar"
+        },
+        "cost": [
+          "fighting",
+          "fighting"
+        ],
+        "damage": "30",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-mep-069",
+    "set_id": "intl-mep",
+    "number": "069",
+    "category": "pokemon",
+    "name": {
+      "en": "Chikorita",
+      "fr": "Germignon",
+      "de": "Endivie",
+      "it": "Chikorita",
+      "es": "Chikorita",
+      "pt-BR": "Chikorita",
+      "es-mx": "Chikorita"
+    },
+    "pokemon": [
+      "0152"
+    ],
+    "illustrator": "Makura Tami",
+    "rarity": "promo",
+    "regulation_mark": "I",
+    "variants": [
+      {
+        "id": "holo-cosmos",
+        "type": "holo",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-mep/en/069.webp",
+          "es": "",
+          "es-mx": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        },
+        "foil": "cosmos",
+        "cardmarket": {
+          "product_id": 879255,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.31,
+          "low": 0.02,
+          "trend": 0.37,
+          "average_1d": 0.91,
+          "average_7d": 0.36,
+          "average_30d": 0.29,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=879255"
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Razor Leaf",
+          "fr": "Tranch'Herbe",
+          "de": "Rasierblatt",
+          "it": "Foglielama",
+          "es": "Hoja Afilada",
+          "pt-BR": "Folha Navalha",
+          "es-mx": "Hojas Navaja"
+        },
+        "cost": [
+          "grass"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-mep-070",
+    "set_id": "intl-mep",
+    "number": "070",
+    "category": "pokemon",
+    "name": {
+      "en": "Tyrunt",
+      "fr": "Ptyranidur",
+      "es": "Tyrunt",
+      "es-mx": "Tyrunt",
+      "de": "Balgoras",
+      "it": "Tyrunt",
+      "pt-BR": "Tyrunt"
+    },
+    "pokemon": [
+      "0696"
+    ],
+    "illustrator": "Shimaris Yukichi",
+    "rarity": "promo",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "type": "holo",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-mep/en/070.webp",
+          "es": "",
+          "es-mx": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        },
+        "cardmarket": {
+          "product_id": 879262,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 4.04,
+          "low": 1,
+          "trend": 3.44,
+          "average_1d": 2.4,
+          "average_7d": 3.55,
+          "average_30d": 3.82,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=879262"
+        }
+      },
+      {
+        "id": "stamped-pokemon_center",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-mep/en/070.webp",
+          "es": "",
+          "es-mx": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        },
+        "stamps": [
+          "pokemon-center"
+        ],
+        "cardmarket": {
+          "product_id": 879272,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 40.59,
+          "low": 5,
+          "trend": 33.9,
+          "average_1d": 25,
+          "average_7d": 31.13,
+          "average_30d": 44.59,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=879272"
+        }
+      }
+    ],
+    "hp": 100,
+    "types": [
+      "fighting"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Antique Jaw Fossil",
+      "fr": "Fossile Mâchoire Ancien",
+      "es": "Fósil Mandíbula Antiguo",
+      "es-mx": "Fósil Mandíbula Antiguo",
+      "de": "Antikes Kieferfossil",
+      "it": "Vecchio Fossilmascella",
+      "pt-BR": "Fóssil de Mandíbula Arcaico"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Get Angry",
+          "fr": "Coléreux",
+          "es": "Enfadarse",
+          "es-mx": "Enojarse",
+          "de": "Rotsehen",
+          "it": "Tutte le Furie",
+          "pt-BR": "Dar Piti"
+        },
+        "cost": [
+          "fighting",
+          "normal"
+        ],
+        "damage": "20×",
+        "text": {
+          "en": "This attack does 20 damage for each damage counter on this Pokémon.",
+          "fr": "Cette attaque inflige 20 dégâts pour chaque marqueur de dégâts sur ce Pokémon.",
+          "es": "Este ataque hace 20 puntos de daño por cada contador de daño en este Pokémon.",
+          "es-mx": "Este ataque hace 20 puntos de daño por cada contador de daño en este Pokémon.",
+          "de": "Diese Attacke fügt für jede Schadensmarke auf diesem Pokémon 20 Schadenspunkte zu.",
+          "it": "Questo attacco infligge 20 danni per ogni segnalino danno presente su questo Pokémon.",
+          "pt-BR": "Este ataque causa 20 pontos de dano para cada contador de dano neste Pokémon."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-mep-071",
+    "set_id": "intl-mep",
+    "number": "071",
+    "category": "pokemon",
+    "name": {
+      "en": "Mega Zygarde ex",
+      "fr": "Méga-Zygarde-ex",
+      "es": "Mega-Zygarde ex",
+      "es-mx": "Mega-Zygarde ex",
+      "de": "Mega-Zygarde-ex",
+      "it": "Mega Zygarde-ex",
+      "pt-BR": "Mega Zygarde ex"
+    },
+    "pokemon": [
+      "0718-mega-zygarde"
+    ],
+    "illustrator": "takuyoa",
+    "rarity": "promo",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "type": "holo",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-mep/en/071.webp",
+          "es": "",
+          "es-mx": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        },
+        "cardmarket": {
+          "product_id": 873310,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.85,
+          "low": 0.35,
+          "trend": 0.72,
+          "average_1d": 0.78,
+          "average_7d": 0.71,
+          "average_30d": 0.82,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=873310"
+        }
+      },
+      {
+        "id": "lenticular",
+        "type": "lenticular",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-mep/en/071.webp",
+          "es": "",
+          "es-mx": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        },
+        "cardmarket": {
+          "product_id": 873311,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.82,
+          "low": 0.2,
+          "trend": 0.57,
+          "average_1d": 0.25,
+          "average_7d": 0.62,
+          "average_30d": 0.85,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=873311"
+        }
+      }
+    ],
+    "hp": 310,
+    "types": [
+      "fighting"
+    ],
+    "stage": "basic",
+    "rule_box": "ex",
+    "attacks": [
+      {
+        "name": {
+          "en": "Gaia Wave",
+          "fr": "Onde de Gaïa",
+          "es": "Onda Gaia",
+          "es-mx": "Onda Gaia",
+          "de": "Gaia-Welle",
+          "it": "Onda Gaia",
+          "pt-BR": "Onda de Gaia"
+        },
+        "cost": [
+          "fighting",
+          "fighting",
+          "fighting"
+        ],
+        "damage": "200",
+        "text": {
+          "en": "During your opponent's next turn, this Pokémon takes 30 less damage from attacks (after applying Weakness and Resistance).",
+          "fr": "Pendant le prochain tour de votre adversaire, ce Pokémon subit 30 dégâts de moins provenant des attaques (après application de la Faiblesse et de la Résistance).",
+          "es": "Durante el próximo turno de tu rival, los ataques hacen 30 puntos de daño menos a este Pokémon (después de aplicar Debilidad y Resistencia).",
+          "es-mx": "Durante el próximo turno de tu rival, los ataques hacen 30 puntos de daño menos a este Pokémon (después de aplicar Debilidad y Resistencia).",
+          "de": "Während des nächsten Zuges deines Gegners werden diesem Pokémon durch Attacken 30 Schadenspunkte weniger zugefügt (nachdem Schwäche und Resistenz verrechnet wurden).",
+          "it": "Durante il prossimo turno del tuo avversario, questo Pokémon subisce 30 danni in meno dagli attacchi, dopo aver applicato debolezza e resistenza.",
+          "pt-BR": "Durante o próximo turno do seu oponente, este Pokémon receberá 30 pontos de dano a menos de ataques (depois de aplicar Fraqueza e Resistência)."
+        }
+      },
+      {
+        "name": {
+          "en": "Nullifying Zero",
+          "fr": "Zéro Annihilant",
+          "es": "Cero Devastador",
+          "es-mx": "Cero Devastador",
+          "de": "Tilgendes Nichts",
+          "it": "Tabula Zero",
+          "pt-BR": "Zero Anulador"
+        },
+        "cost": [
+          "fighting",
+          "fighting",
+          "fighting",
+          "fighting",
+          "fighting"
+        ],
+        "damage": "",
+        "text": {
+          "en": "For each of your opponent's Pokémon, flip a coin. If heads, this attack does 150 damage to that Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "fr": "Pour chacun des Pokémon de votre adversaire, lancez une pièce. Si c'est face, cette attaque inflige 150 dégâts à ce Pokémon-là. (N'appliquez ni la Faiblesse ni la Résistance aux Pokémon de Banc.)",
+          "es": "Por cada uno de los Pokémon de tu rival, lanza 1 moneda. Si sale cara, este ataque hace 150 puntos de daño a ese Pokémon. (No apliques Debilidad y Resistencia a los Pokémon en Banca).",
+          "es-mx": "Por cada uno de los Pokémon de tu rival, lanza 1 moneda. Si sale cara, este ataque hace 150 puntos de daño a ese Pokémon. (No apliques Debilidad y Resistencia a los Pokémon en Banca).",
+          "de": "Wirf für jedes Pokémon deines Gegners 1 Münze. Bei Kopf fügt diese Attacke jenem Pokémon 150 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)",
+          "it": "Per ciascuno dei Pokémon del tuo avversario, lancia una moneta. Se esce testa, questo attacco infligge 150 danni a quel Pokémon. Non applicare debolezza e resistenza ai Pokémon in panchina.",
+          "pt-BR": "Para cada um dos Pokémon do seu oponente, jogue uma moeda. Se sair cara, este ataque causará 150 pontos de dano àquele Pokémon. (Não aplique Fraqueza e Resistência aos Pokémon no Banco.)"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "grass",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
     "id": "intl-mep-072",
     "set_id": "intl-mep",
     "number": "072",
@@ -7777,6 +7467,851 @@
       }
     ],
     "retreat_cost": 2
+  },
+  {
+    "id": "intl-mep-074",
+    "set_id": "intl-mep",
+    "number": "074",
+    "category": "pokemon",
+    "name": {
+      "en": "Delphox",
+      "fr": "Goupelin",
+      "es": "Delphox",
+      "es-mx": "Delphox",
+      "de": "Fennexis",
+      "it": "Delphox",
+      "pt-BR": "Delphox"
+    },
+    "pokemon": [
+      "0655"
+    ],
+    "illustrator": "Souichirou Gunjima",
+    "rarity": "promo",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "stamped-set_logo",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-mep/en/074.webp",
+          "es": "",
+          "es-mx": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        },
+        "stamps": [
+          "set-logo"
+        ],
+        "cardmarket": {
+          "product_id": 884752,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 11.26,
+          "low": 2,
+          "trend": 12.27,
+          "average_1d": 13.99,
+          "average_7d": 11.76,
+          "average_30d": 11.61,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=884752"
+        }
+      },
+      {
+        "id": "stamped-set_logo-staff",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-mep/en/074.webp",
+          "es": "",
+          "es-mx": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        },
+        "stamps": [
+          "set-logo",
+          "staff"
+        ],
+        "cardmarket": {
+          "product_id": 884753,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 54.08,
+          "low": 9.49,
+          "trend": 36.29,
+          "average_1d": 62.5,
+          "average_7d": 41.75,
+          "average_30d": 56.34,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=884753"
+        }
+      }
+    ],
+    "hp": 160,
+    "types": [
+      "fire"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Braixen",
+      "fr": "Roussil",
+      "es": "Braixen",
+      "es-mx": "Braixen",
+      "de": "Rutena",
+      "it": "Braixen",
+      "pt-BR": "Braixen"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Energized Storm",
+          "fr": "Tempête Énergisée",
+          "es": "Tormenta Energética",
+          "es-mx": "Tormenta Energética",
+          "de": "Energiegeladener Sturm",
+          "it": "Tempesta Energizzata",
+          "pt-BR": "Tormenta Energizada"
+        },
+        "cost": [
+          "fire",
+          "fire"
+        ],
+        "damage": "30×",
+        "text": {
+          "en": "This attack does 30 damage for each Energy attached to all Pokémon.",
+          "fr": "Cette attaque inflige 30 dégâts pour chaque Énergie attachée à tous les Pokémon.",
+          "es": "Este ataque hace 30 puntos de daño por cada Energía unida a cada Pokémon.",
+          "es-mx": "Este ataque hace 30 puntos de daño por cada Energía unida a cada Pokémon.",
+          "de": "Diese Attacke fügt für jede an alle Pokémon angelegte Energie 30 Schadenspunkte zu.",
+          "it": "Questo attacco infligge 30 danni per ogni Energia assegnata a tutti i Pokémon.",
+          "pt-BR": "Este ataque causa 30 pontos de dano para cada Energia ligada a todos os Pokémon."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-mep-075",
+    "set_id": "intl-mep",
+    "number": "075",
+    "category": "pokemon",
+    "name": {
+      "en": "Ampharos",
+      "fr": "Pharamp",
+      "es": "Ampharos",
+      "es-mx": "Ampharos",
+      "de": "Ampharos",
+      "it": "Ampharos",
+      "pt-BR": "Ampharos"
+    },
+    "pokemon": [
+      "0181"
+    ],
+    "illustrator": "Taiga Kasai",
+    "rarity": "promo",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "stamped-set_logo",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-mep/en/075.webp",
+          "es": "",
+          "es-mx": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        },
+        "stamps": [
+          "set-logo"
+        ],
+        "cardmarket": {
+          "product_id": 884754,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 12.53,
+          "low": 3.5,
+          "trend": 13.12,
+          "average_1d": 10.43,
+          "average_7d": 12.3,
+          "average_30d": 12.68,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=884754"
+        }
+      },
+      {
+        "id": "stamped-set_logo-staff",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-mep/en/075.webp",
+          "es": "",
+          "es-mx": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        },
+        "stamps": [
+          "set-logo",
+          "staff"
+        ],
+        "cardmarket": {
+          "product_id": 884755,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 36,
+          "low": 8.95,
+          "trend": 29.17,
+          "average_1d": 17,
+          "average_7d": 30.8,
+          "average_30d": 36.63,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=884755"
+        }
+      }
+    ],
+    "hp": 160,
+    "types": [
+      "lightning"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Flaaffy",
+      "fr": "Lainergie",
+      "es": "Flaaffy",
+      "es-mx": "Flaaffy",
+      "de": "Waaty",
+      "it": "Flaaffy",
+      "pt-BR": "Flaaffy"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Flashing Bolt",
+          "fr": "Éclair Aveuglant",
+          "es": "Rayo Destellante",
+          "es-mx": "Rayo Destellante",
+          "de": "Leuchtblitz",
+          "it": "Bolide Abbagliante",
+          "pt-BR": "Raio Piscante"
+        },
+        "cost": [
+          "lightning",
+          "normal"
+        ],
+        "damage": "140",
+        "text": {
+          "en": "During your next turn, this Pokémon can't use Flashing Bolt.",
+          "fr": "Pendant votre prochain tour, ce Pokémon ne peut pas utiliser Éclair Aveuglant.",
+          "es": "Durante tu próximo turno, este Pokémon no puede usar Rayo Destellante.",
+          "es-mx": "Durante tu próximo turno, este Pokémon no puede usar Rayo Destellante.",
+          "de": "Während deines nächsten Zuges kann dieses Pokémon Leuchtblitz nicht einsetzen.",
+          "it": "Durante il tuo prossimo turno, questo Pokémon non può usare Bolide Abbagliante.",
+          "pt-BR": "Durante o seu próximo turno, este Pokémon não poderá usar Raio Piscante."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-mep-076",
+    "set_id": "intl-mep",
+    "number": "076",
+    "category": "pokemon",
+    "name": {
+      "en": "Crobat",
+      "fr": "Nostenfer",
+      "es": "Crobat",
+      "es-mx": "Crobat",
+      "de": "Iksbat",
+      "it": "Crobat",
+      "pt-BR": "Crobat"
+    },
+    "pokemon": [
+      "0169"
+    ],
+    "illustrator": "Apios",
+    "rarity": "promo",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "stamped-set_logo",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-mep/en/076.webp",
+          "es": "",
+          "es-mx": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        },
+        "stamps": [
+          "set-logo"
+        ],
+        "cardmarket": {
+          "product_id": 884756,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 12.53,
+          "low": 4.9,
+          "trend": 12.64,
+          "average_1d": 6,
+          "average_7d": 12.49,
+          "average_30d": 11.7,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=884756"
+        }
+      },
+      {
+        "id": "stamped-set_logo-staff",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-mep/en/076.webp",
+          "es": "",
+          "es-mx": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        },
+        "stamps": [
+          "set-logo",
+          "staff"
+        ],
+        "cardmarket": {
+          "product_id": 884757,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 46.18,
+          "low": 9.94,
+          "trend": 45.19,
+          "average_1d": 10.45,
+          "average_7d": 29.95,
+          "average_30d": 41.32,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=884757"
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "dark"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Golbat",
+      "fr": "Nosferalto",
+      "es": "Golbat",
+      "es-mx": "Golbat",
+      "de": "Golbat",
+      "it": "Golbat",
+      "pt-BR": "Golbat"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Poison Sound Wave",
+          "fr": "Onde Sonore Toxique",
+          "es": "Onda Sónica Venenosa",
+          "es-mx": "Onda Sónica Venenosa",
+          "de": "Gift-Schallwelle",
+          "it": "Onda Sonora Velenosa",
+          "pt-BR": "Vibração Venenosa"
+        },
+        "cost": [
+          "dark"
+        ],
+        "damage": "80",
+        "text": {
+          "en": "Your opponent's Active Pokémon is now Confused and Poisoned.",
+          "fr": "Le Pokémon Actif de votre adversaire est maintenant Confus et Empoisonné.",
+          "es": "El Pokémon Activo de tu rival pasa a estar Confundido y Envenenado.",
+          "es-mx": "El Pokémon Activo de tu rival pasa a estar Confundido y Envenenado.",
+          "de": "Das Aktive Pokémon deines Gegners ist jetzt verwirrt und vergiftet.",
+          "it": "Il Pokémon attivo del tuo avversario viene confuso e avvelenato.",
+          "pt-BR": "O Pokémon Ativo do seu oponente agora está Confuso e Envenenado."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-30"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-mep-077",
+    "set_id": "intl-mep",
+    "number": "077",
+    "category": "pokemon",
+    "name": {
+      "en": "Goodra",
+      "fr": "Muplodocus",
+      "es": "Goodra",
+      "es-mx": "Goodra",
+      "de": "Viscogon",
+      "it": "Goodra",
+      "pt-BR": "Goodra"
+    },
+    "pokemon": [
+      "0706"
+    ],
+    "illustrator": "okayamatakatoshi",
+    "rarity": "promo",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "stamped-set_logo",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-mep/en/077.webp",
+          "es": "",
+          "es-mx": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        },
+        "stamps": [
+          "set-logo"
+        ],
+        "cardmarket": {
+          "product_id": 884758,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 9.94,
+          "low": 1.5,
+          "trend": 10.23,
+          "average_1d": 6.43,
+          "average_7d": 9.6,
+          "average_30d": 9.78,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=884758"
+        }
+      },
+      {
+        "id": "stamped-set_logo-staff",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-mep/en/077.webp",
+          "es": "",
+          "es-mx": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        },
+        "stamps": [
+          "set-logo",
+          "staff"
+        ],
+        "cardmarket": {
+          "product_id": 884759,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 18.88,
+          "low": 7.5,
+          "trend": 16.67,
+          "average_1d": 12,
+          "average_7d": 17.6,
+          "average_30d": 18.36,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=884759"
+        }
+      }
+    ],
+    "hp": 160,
+    "types": [
+      "dragon"
+    ],
+    "stage": "stage2",
+    "evolves_from": {
+      "en": "Sliggoo",
+      "fr": "Colimucus",
+      "es": "Sliggoo",
+      "es-mx": "Sliggoo",
+      "de": "Viscargot",
+      "it": "Sliggoo",
+      "pt-BR": "Sliggoo"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Dragon Pulse",
+          "fr": "Draco-Choc",
+          "es": "Pulso Dragón",
+          "es-mx": "Pulso Dragón",
+          "de": "Drachenpuls",
+          "it": "Dragopulsar",
+          "pt-BR": "Pulso do Dragão"
+        },
+        "cost": [
+          "water",
+          "psychic"
+        ],
+        "damage": "160",
+        "text": {
+          "en": "Discard the top card of your deck.",
+          "fr": "Défaussez la carte du dessus de votre deck.",
+          "es": "Descarta la primera carta de tu baraja.",
+          "es-mx": "Descarta la primera carta de tu baraja.",
+          "de": "Lege die oberste Karte deines Decks auf deinen Ablagestapel.",
+          "it": "Scarta la prima carta del tuo mazzo.",
+          "pt-BR": "Descarte a carta de cima do seu baralho."
+        }
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-mep-078",
+    "set_id": "intl-mep",
+    "number": "078",
+    "category": "pokemon",
+    "name": {
+      "en": "Toxel",
+      "fr": "Toxizap",
+      "es": "Toxel",
+      "es-mx": "Toxel",
+      "de": "Toxel",
+      "it": "Toxel",
+      "pt-BR": "Toxel"
+    },
+    "pokemon": [
+      "0848"
+    ],
+    "illustrator": "Mina Nakai",
+    "rarity": "promo",
+    "regulation_mark": "I",
+    "variants": [
+      {
+        "id": "holo-cosmos",
+        "type": "holo",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-mep/en/078.webp",
+          "es": "",
+          "es-mx": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        },
+        "foil": "cosmos",
+        "cardmarket": {
+          "product_id": 888609,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 1.5,
+          "low": 0.65,
+          "trend": 1.15,
+          "average_1d": 1.16,
+          "average_7d": 1.34,
+          "average_30d": 1.42,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=888609"
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "dark"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Call for Family",
+          "fr": "Appel à la Famille",
+          "es": "Llamar a la Familia",
+          "es-mx": "Llamar a la Familia",
+          "de": "Familienruf",
+          "it": "Cerca Famiglia",
+          "pt-BR": "Chamar a Família"
+        },
+        "cost": [
+          "dark"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Search your deck for up to 2 Basic Pokémon and put them onto your Bench. Then, shuffle your deck.",
+          "fr": "Cherchez dans votre deck jusqu'à 2 Pokémon de base, puis placez-les sur votre Banc. Mélangez ensuite votre deck.",
+          "es": "Busca en tu baraja hasta 2 Pokémon Básicos y ponlos en tu Banca. Después, baraja las cartas de tu baraja.",
+          "es-mx": "Busca en tu baraja hasta 2 Pokémon Básicos y ponlos en tu Banca. Después, baraja las cartas de tu baraja.",
+          "de": "Durchsuche dein Deck nach bis zu 2 Basis-Pokémon und lege sie auf deine Bank. Mische anschließend dein Deck.",
+          "it": "Cerca nel tuo mazzo fino a due Pokémon Base e mettili nella tua panchina. Poi rimischia il tuo mazzo.",
+          "pt-BR": "Procure por até 2 Pokémon Básicos no seu baralho e coloque-os no seu Banco. Em seguida, embaralhe o seu baralho."
+        }
+      },
+      {
+        "name": {
+          "en": "Playful Kick",
+          "fr": "Coup de Pied de Garnement",
+          "es": "Patada Juguetona",
+          "es-mx": "Patada Juguetona",
+          "de": "Verspielter Kick",
+          "it": "Calcio Briccone",
+          "pt-BR": "Chute Brincalhão"
+        },
+        "cost": [
+          "dark",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-mep-079",
+    "set_id": "intl-mep",
+    "number": "079",
+    "category": "pokemon",
+    "name": {
+      "en": "Charmeleon",
+      "fr": "Reptincel",
+      "es": "Charmeleon",
+      "es-mx": "Charmeleon",
+      "de": "Glutexo",
+      "it": "Charmeleon",
+      "pt-BR": "Charmeleon"
+    },
+    "pokemon": [
+      "0005"
+    ],
+    "illustrator": "Teeziro",
+    "rarity": "promo",
+    "regulation_mark": "I",
+    "variants": [
+      {
+        "id": "holo-cosmos",
+        "type": "holo",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-mep/en/079.webp",
+          "es": "",
+          "es-mx": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        },
+        "foil": "cosmos",
+        "cardmarket": {
+          "product_id": 888607,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.58,
+          "low": 0.02,
+          "trend": 0.5,
+          "average_1d": 0.49,
+          "average_7d": 0.56,
+          "average_30d": 0.57,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=888607"
+        }
+      }
+    ],
+    "hp": 110,
+    "types": [
+      "fire"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Charmander",
+      "fr": "Salamèche",
+      "es": "Charmander",
+      "es-mx": "Charmander",
+      "de": "Glumanda",
+      "it": "Charmander",
+      "pt-BR": "Charmander"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Steady Firebreathing",
+          "fr": "Crachage de Feu Régulier",
+          "es": "Lanzallamas Continuo",
+          "es-mx": "Lanzallamas Continuo",
+          "de": "Stetiger Feuerhauch",
+          "it": "Soffiofuoco Mirato",
+          "pt-BR": "Hálito de Fogo Constante"
+        },
+        "cost": [
+          "fire"
+        ],
+        "damage": "40",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-mep-080",
+    "set_id": "intl-mep",
+    "number": "080",
+    "category": "pokemon",
+    "name": {
+      "en": "Fennekin",
+      "fr": "Feunnec",
+      "es": "Fennekin",
+      "es-mx": "Fennekin",
+      "de": "Fynx",
+      "it": "Fennekin",
+      "pt-BR": "Fennekin"
+    },
+    "pokemon": [
+      "0653"
+    ],
+    "illustrator": "satoma",
+    "rarity": "promo",
+    "regulation_mark": "J",
+    "variants": [
+      {
+        "id": "holo",
+        "type": "holo",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-mep/en/080.webp",
+          "es": "",
+          "es-mx": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        },
+        "cardmarket": {
+          "product_id": 888506,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 4,
+          "low": 0.1,
+          "trend": 3.77,
+          "average_1d": 3.83,
+          "average_7d": 3.85,
+          "average_30d": 3.97,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=888506"
+        }
+      },
+      {
+        "id": "stamped-pokemon_center",
+        "type": "stamped",
+        "images": {
+          "de": "",
+          "en": "/images/cards/intl-mep/en/080.webp",
+          "es": "",
+          "es-mx": "",
+          "fr": "",
+          "it": "",
+          "pt-BR": ""
+        },
+        "stamps": [
+          "pokemon-center"
+        ],
+        "cardmarket": {
+          "product_id": 889722,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 30.75,
+          "low": 21,
+          "trend": 35.69,
+          "average_1d": 29.95,
+          "average_7d": 34.25,
+          "average_30d": 39.3,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=889722"
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "fire"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Call for Family",
+          "fr": "Appel à la Famille",
+          "es": "Llamar a la Familia",
+          "es-mx": "Llamar a la Familia",
+          "de": "Familienruf",
+          "it": "Cerca Famiglia",
+          "pt-BR": "Chamar a Família"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Search your deck for up to 2 Basic Pokémon and put them onto your Bench. Then, shuffle your deck.",
+          "fr": "Cherchez dans votre deck jusqu'à 2 Pokémon de base, puis placez-les sur votre Banc. Mélangez ensuite votre deck.",
+          "es": "Busca en tu baraja hasta 2 Pokémon Básicos y ponlos en tu Banca. Después, baraja las cartas de tu baraja.",
+          "es-mx": "Busca en tu baraja hasta 2 Pokémon Básicos y ponlos en tu Banca. Después, baraja las cartas de tu baraja.",
+          "de": "Durchsuche dein Deck nach bis zu 2 Basis-Pokémon und lege sie auf deine Bank. Mische anschließend dein Deck.",
+          "it": "Cerca nel tuo mazzo fino a due Pokémon Base e mettili nella tua panchina. Poi rimischia il tuo mazzo.",
+          "pt-BR": "Procure por até 2 Pokémon Básicos no seu baralho e coloque-os no seu Banco. Em seguida, embaralhe o seu baralho."
+        }
+      },
+      {
+        "name": {
+          "en": "Steady Firebreathing",
+          "fr": "Crachage de Feu Régulier",
+          "es": "Lanzallamas Continuo",
+          "es-mx": "Lanzallamas Continuo",
+          "de": "Stetiger Feuerhauch",
+          "it": "Soffiofuoco Mirato",
+          "pt-BR": "Hálito de Fogo Constante"
+        },
+        "cost": [
+          "fire"
+        ],
+        "damage": "10",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1
   },
   {
     "id": "intl-mep-081",

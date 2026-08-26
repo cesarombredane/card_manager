@@ -1,916 +1,5 @@
 [
   {
-    "id": "intl-tk-sm-r-11",
-    "set_id": "intl-tk-sm-r",
-    "number": "11",
-    "category": "pokemon",
-    "name": {
-      "en": "Zubat",
-      "fr": "Nosferapti",
-      "es": "Zubat",
-      "it": "Zubat"
-    },
-    "pokemon": [
-      "0041"
-    ],
-    "illustrator": null,
-    "rarity": "common",
-    "regulation_mark": null,
-    "variants": [
-      {
-        "id": "normal",
-        "type": "normal",
-        "images": {
-          "en": "",
-          "es": "/images/cards/intl-tk-sm-r/es/11.webp",
-          "fr": "",
-          "it": "/images/cards/intl-tk-sm-r/it/11.webp"
-        }
-      }
-    ],
-    "hp": 50,
-    "types": [
-      "psychic"
-    ],
-    "stage": "basic",
-    "weaknesses": [
-      {
-        "type": "lightning",
-        "value": "x2"
-      }
-    ],
-    "resistances": [
-      {
-        "type": "fighting",
-        "value": "-20"
-      }
-    ],
-    "retreat_cost": 1
-  },
-  {
-    "id": "intl-tk-sm-r-13",
-    "set_id": "intl-tk-sm-r",
-    "number": "13",
-    "category": "pokemon",
-    "name": {
-      "en": "Spearow",
-      "fr": "Piafabec",
-      "es": "Spearow",
-      "it": "Spearow"
-    },
-    "pokemon": [
-      "0021"
-    ],
-    "illustrator": null,
-    "rarity": "common",
-    "regulation_mark": null,
-    "variants": [
-      {
-        "id": "normal",
-        "type": "normal",
-        "images": {
-          "en": "",
-          "es": "/images/cards/intl-tk-sm-r/es/13.webp",
-          "fr": "",
-          "it": "/images/cards/intl-tk-sm-r/it/13.webp"
-        }
-      }
-    ],
-    "hp": 60,
-    "types": [
-      "normal"
-    ],
-    "stage": "basic",
-    "weaknesses": [
-      {
-        "type": "lightning",
-        "value": "x2"
-      }
-    ],
-    "resistances": [
-      {
-        "type": "fighting",
-        "value": "-20"
-      }
-    ],
-    "retreat_cost": 1
-  },
-  {
-    "id": "intl-tk-sm-r-14",
-    "set_id": "intl-tk-sm-r",
-    "number": "14",
-    "category": "pokemon",
-    "name": {
-      "en": "Pikachu",
-      "fr": "Pikachu",
-      "es": "Pikachu",
-      "it": "Pikachu"
-    },
-    "pokemon": [
-      "0025"
-    ],
-    "illustrator": "kodama",
-    "rarity": "none",
-    "regulation_mark": null,
-    "variants": [
-      {
-        "id": "normal",
-        "type": "normal",
-        "images": {
-          "en": "",
-          "es": "/images/cards/intl-tk-sm-r/es/14.webp",
-          "fr": "",
-          "it": "/images/cards/intl-tk-sm-r/it/14.webp"
-        }
-      }
-    ],
-    "hp": 60,
-    "types": [
-      "lightning"
-    ],
-    "stage": "basic",
-    "attacks": [
-      {
-        "name": {
-          "en": "Tail Whap",
-          "fr": "Queue Battoir"
-        },
-        "cost": [],
-        "damage": "10",
-        "text": {}
-      },
-      {
-        "name": {
-          "en": "Spark",
-          "fr": "Étincelle"
-        },
-        "cost": [],
-        "damage": "20",
-        "text": {
-          "en": "This attack does 10 damage to 1 of your opponent’s Benched Pokémon. (Don’t apply Weakness and Resistance for Benched Pokémon.)",
-          "fr": "Cette attaque inflige 10 dégâts à l'un des Pokémon de Banc de votre adversaire. (N'appliquez ni la Faiblesse ni la Résistance aux Pokémon de Banc.)"
-        }
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "fighting",
-        "value": "x2"
-      }
-    ],
-    "resistances": [
-      {
-        "type": "metal",
-        "value": "-20"
-      }
-    ],
-    "retreat_cost": 1,
-    "flavor_text": {
-      "en": "A plan was recently announced to gather many Pikachu and make an electric power plant."
-    }
-  },
-  {
-    "id": "intl-tk-sm-r-15",
-    "set_id": "intl-tk-sm-r",
-    "number": "15",
-    "category": "trainer",
-    "name": {
-      "en": "Potion",
-      "fr": "Potion",
-      "es": "Poción",
-      "it": "Pozione"
-    },
-    "pokemon": [],
-    "illustrator": null,
-    "rarity": "uncommon",
-    "regulation_mark": null,
-    "variants": [
-      {
-        "id": "normal",
-        "type": "normal",
-        "images": {
-          "en": "",
-          "es": "/images/cards/intl-tk-sm-r/es/15.webp",
-          "fr": "",
-          "it": "/images/cards/intl-tk-sm-r/it/15.webp"
-        }
-      }
-    ],
-    "trainer_type": "item",
-    "rules_text": {
-      "en": "Heal 30 damage from 1 of your Pokémon.",
-      "fr": "Soignez 30 dégâts à l’un de vos Pokémon.",
-      "es": "Cura 30 puntos de daño a 1 de tus Pokémon.",
-      "it": "Cura uno dei tuoi Pokémon da 30 danni."
-    }
-  },
-  {
-    "id": "intl-tk-sm-r-16",
-    "set_id": "intl-tk-sm-r",
-    "number": "16",
-    "category": "pokemon",
-    "name": {
-      "en": "Grubbin",
-      "fr": "Larvibule",
-      "es": "Grubbin",
-      "it": "Grubbin"
-    },
-    "pokemon": [
-      "0736"
-    ],
-    "illustrator": null,
-    "rarity": "common",
-    "regulation_mark": null,
-    "variants": [
-      {
-        "id": "normal",
-        "type": "normal",
-        "images": {
-          "en": "",
-          "es": "/images/cards/intl-tk-sm-r/es/16.webp",
-          "fr": "",
-          "it": "/images/cards/intl-tk-sm-r/it/16.webp"
-        }
-      }
-    ],
-    "hp": 70,
-    "types": [
-      "grass"
-    ],
-    "stage": "basic",
-    "weaknesses": [
-      {
-        "type": "fire",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 2
-  },
-  {
-    "id": "intl-tk-sm-r-17",
-    "set_id": "intl-tk-sm-r",
-    "number": "17",
-    "category": "pokemon",
-    "name": {
-      "en": "Alolan Raichu",
-      "fr": "Raichu d’Alola",
-      "es": "Raichu de Alola",
-      "it": "Raichu di Alola"
-    },
-    "pokemon": [
-      "0026-alolan-raichu"
-    ],
-    "illustrator": "5ban Graphics",
-    "rarity": "none",
-    "regulation_mark": null,
-    "variants": [
-      {
-        "id": "normal",
-        "type": "normal",
-        "images": {
-          "en": "",
-          "es": "/images/cards/intl-tk-sm-r/es/17.webp",
-          "fr": "",
-          "it": "/images/cards/intl-tk-sm-r/it/17.webp"
-        }
-      }
-    ],
-    "hp": 110,
-    "types": [
-      "lightning"
-    ],
-    "stage": "stage1",
-    "evolves_from": {
-      "en": "Pikachu",
-      "fr": "Pikachu",
-      "es": "Pikachu",
-      "it": "Pikachu"
-    },
-    "attacks": [
-      {
-        "name": {
-          "en": "Quick Attack",
-          "fr": "Vive-Attaque"
-        },
-        "cost": [],
-        "damage": "10+",
-        "text": {
-          "en": "Flip a coin. If heads, this attack does 30 more damage.",
-          "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 30 dégâts supplémentaires."
-        }
-      },
-      {
-        "name": {
-          "en": "Electric Surfer",
-          "fr": "Surfeur Électrique"
-        },
-        "cost": [],
-        "damage": "70",
-        "text": {}
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "fighting",
-        "value": "x2"
-      }
-    ],
-    "resistances": [
-      {
-        "type": "metal",
-        "value": "-20"
-      }
-    ],
-    "retreat_cost": 1,
-    "flavor_text": {
-      "en": "It only evolves to this form in the Alola region. According to researchers, its diet is one of the causes of this change."
-    }
-  },
-  {
-    "id": "intl-tk-sm-r-18",
-    "set_id": "intl-tk-sm-r",
-    "number": "18",
-    "category": "pokemon",
-    "name": {
-      "en": "Bewear",
-      "fr": "Chelours",
-      "es": "Bewear",
-      "it": "Bewear"
-    },
-    "pokemon": [
-      "0760"
-    ],
-    "illustrator": null,
-    "rarity": "rare",
-    "regulation_mark": null,
-    "variants": [
-      {
-        "id": "normal",
-        "type": "normal",
-        "images": {
-          "en": "",
-          "es": "/images/cards/intl-tk-sm-r/es/18.webp",
-          "fr": "",
-          "it": "/images/cards/intl-tk-sm-r/it/18.webp"
-        }
-      }
-    ],
-    "hp": 130,
-    "types": [
-      "normal"
-    ],
-    "stage": "stage1",
-    "evolves_from": {
-      "en": "Stufful",
-      "fr": "Nounourson",
-      "es": "Stufful",
-      "it": "Stufful"
-    },
-    "weaknesses": [
-      {
-        "type": "fighting",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 3
-  },
-  {
-    "id": "intl-tk-sm-r-19",
-    "set_id": "intl-tk-sm-r",
-    "number": "19",
-    "category": "trainer",
-    "name": {
-      "en": "Hau",
-      "fr": "Tili",
-      "es": "Tilo",
-      "it": "Hau"
-    },
-    "pokemon": [],
-    "illustrator": null,
-    "rarity": "uncommon",
-    "regulation_mark": null,
-    "variants": [
-      {
-        "id": "normal",
-        "type": "normal",
-        "images": {
-          "en": "",
-          "es": "/images/cards/intl-tk-sm-r/es/19.webp",
-          "fr": "",
-          "it": "/images/cards/intl-tk-sm-r/it/19.webp"
-        }
-      }
-    ],
-    "trainer_type": "supporter",
-    "rules_text": {
-      "en": "Draw 3 cards.",
-      "fr": "Piochez 3 cartes.",
-      "es": "Roba 3 cartas.",
-      "it": "Pesca tre carte."
-    }
-  },
-  {
-    "id": "intl-tk-sm-r-2",
-    "set_id": "intl-tk-sm-r",
-    "number": "2",
-    "category": "energy",
-    "name": {
-      "en": "Lightning Energy",
-      "fr": "Énergie Électrique",
-      "es": "Energía Rayo",
-      "it": "Energia Lampo"
-    },
-    "pokemon": [],
-    "illustrator": null,
-    "rarity": "common",
-    "regulation_mark": null,
-    "variants": [
-      {
-        "id": "normal",
-        "type": "normal",
-        "images": {
-          "en": "",
-          "es": "/images/cards/intl-tk-sm-r/es/2.webp",
-          "fr": "",
-          "it": "/images/cards/intl-tk-sm-r/it/2.webp"
-        }
-      }
-    ]
-  },
-  {
-    "id": "intl-tk-sm-r-20",
-    "set_id": "intl-tk-sm-r",
-    "number": "20",
-    "category": "energy",
-    "name": {
-      "en": "Psychic Energy",
-      "fr": "Énergie Psy",
-      "es": "Energía Psíquica",
-      "it": "Energia Psico"
-    },
-    "pokemon": [],
-    "illustrator": null,
-    "rarity": "common",
-    "regulation_mark": null,
-    "variants": [
-      {
-        "id": "normal",
-        "type": "normal",
-        "images": {
-          "en": "",
-          "es": "/images/cards/intl-tk-sm-r/es/20.webp",
-          "fr": "",
-          "it": "/images/cards/intl-tk-sm-r/it/20.webp"
-        }
-      }
-    ]
-  },
-  {
-    "id": "intl-tk-sm-r-21",
-    "set_id": "intl-tk-sm-r",
-    "number": "21",
-    "category": "trainer",
-    "name": {
-      "en": "Great Ball",
-      "fr": "Super Ball",
-      "es": "Super Ball",
-      "it": "Mega Ball"
-    },
-    "pokemon": [],
-    "illustrator": null,
-    "rarity": "uncommon",
-    "regulation_mark": null,
-    "variants": [
-      {
-        "id": "normal",
-        "type": "normal",
-        "images": {
-          "en": "",
-          "es": "/images/cards/intl-tk-sm-r/es/21.webp",
-          "fr": "",
-          "it": "/images/cards/intl-tk-sm-r/it/21.webp"
-        }
-      }
-    ],
-    "trainer_type": "item",
-    "rules_text": {
-      "en": "Look at the top 7 cards of your deck. You may reveal a Pokémon you find there and put it into your hand. Shuffle the other cards back into your deck.",
-      "fr": "Regardez les 7 cartes du dessus de votre deck. Vous pouvez montrer un Pokémon que vous y trouvez et l’ajouter à votre main. Mélangez les autres cartes avec votre deck.",
-      "es": "Mira las 7 primeras cartas de tu baraja. Puedes enseñar 1 Pokémon que encuentres entre ellas y ponerlo en tu mano. Pon el resto de cartas de nuevo en tu baraja y barájalas todas.",
-      "it": "Guarda le prime sette carte del tuo mazzo. Puoi mostrare un Pokémon che hai trovato e aggiungerlo alle carte che hai in mano. Poi rimischia le altre carte nel tuo mazzo."
-    }
-  },
-  {
-    "id": "intl-tk-sm-r-22",
-    "set_id": "intl-tk-sm-r",
-    "number": "22",
-    "category": "pokemon",
-    "name": {
-      "en": "Drowzee",
-      "fr": "Soporifik",
-      "es": "Drowzee",
-      "it": "Drowzee"
-    },
-    "pokemon": [
-      "0096"
-    ],
-    "illustrator": null,
-    "rarity": "common",
-    "regulation_mark": null,
-    "variants": [
-      {
-        "id": "normal",
-        "type": "normal",
-        "images": {
-          "en": "",
-          "es": "/images/cards/intl-tk-sm-r/es/22.webp",
-          "fr": "",
-          "it": "/images/cards/intl-tk-sm-r/it/22.webp"
-        }
-      }
-    ],
-    "hp": 70,
-    "types": [
-      "psychic"
-    ],
-    "stage": "basic",
-    "weaknesses": [
-      {
-        "type": "psychic",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 2
-  },
-  {
-    "id": "intl-tk-sm-r-23",
-    "set_id": "intl-tk-sm-r",
-    "number": "23",
-    "category": "trainer",
-    "name": {
-      "en": "Hau",
-      "fr": "Tili",
-      "es": "Tilo",
-      "it": "Hau"
-    },
-    "pokemon": [],
-    "illustrator": null,
-    "rarity": "uncommon",
-    "regulation_mark": null,
-    "variants": [
-      {
-        "id": "normal",
-        "type": "normal",
-        "images": {
-          "en": "",
-          "es": "/images/cards/intl-tk-sm-r/es/23.webp",
-          "fr": "",
-          "it": "/images/cards/intl-tk-sm-r/it/23.webp"
-        }
-      }
-    ],
-    "trainer_type": "supporter",
-    "rules_text": {
-      "en": "Draw 3 cards.",
-      "fr": "Piochez 3 cartes.",
-      "es": "Roba 3 cartas.",
-      "it": "Pesca tre carte."
-    }
-  },
-  {
-    "id": "intl-tk-sm-r-25",
-    "set_id": "intl-tk-sm-r",
-    "number": "25",
-    "category": "trainer",
-    "name": {
-      "en": "Great Ball",
-      "fr": "Super Ball",
-      "es": "Super Ball",
-      "it": "Mega Ball"
-    },
-    "pokemon": [],
-    "illustrator": null,
-    "rarity": "uncommon",
-    "regulation_mark": null,
-    "variants": [
-      {
-        "id": "normal",
-        "type": "normal",
-        "images": {
-          "en": "",
-          "es": "/images/cards/intl-tk-sm-r/es/25.webp",
-          "fr": "",
-          "it": "/images/cards/intl-tk-sm-r/it/25.webp"
-        }
-      }
-    ],
-    "trainer_type": "item",
-    "rules_text": {
-      "en": "Look at the top 7 cards of your deck. You may reveal a Pokémon you find there and put it into your hand. Shuffle the other cards back into your deck.",
-      "fr": "Regardez les 7 cartes du dessus de votre deck. Vous pouvez montrer un Pokémon que vous y trouvez et l’ajouter à votre main. Mélangez les autres cartes avec votre deck.",
-      "es": "Mira las 7 primeras cartas de tu baraja. Puedes enseñar 1 Pokémon que encuentres entre ellas y ponerlo en tu mano. Pon el resto de cartas de nuevo en tu baraja y barájalas todas.",
-      "it": "Guarda le prime sette carte del tuo mazzo. Puoi mostrare un Pokémon che hai trovato e aggiungerlo alle carte che hai in mano. Poi rimischia le altre carte nel tuo mazzo."
-    }
-  },
-  {
-    "id": "intl-tk-sm-r-26",
-    "set_id": "intl-tk-sm-r",
-    "number": "26",
-    "category": "pokemon",
-    "name": {
-      "en": "Togedemaru",
-      "fr": "Togedemaru",
-      "es": "Togedemaru",
-      "it": "Togedemaru"
-    },
-    "pokemon": [
-      "0777"
-    ],
-    "illustrator": null,
-    "rarity": "common",
-    "regulation_mark": null,
-    "variants": [
-      {
-        "id": "normal",
-        "type": "normal",
-        "images": {
-          "en": "",
-          "es": "/images/cards/intl-tk-sm-r/es/26.webp",
-          "fr": "",
-          "it": "/images/cards/intl-tk-sm-r/it/26.webp"
-        }
-      }
-    ],
-    "hp": 70,
-    "types": [
-      "lightning"
-    ],
-    "stage": "basic",
-    "weaknesses": [
-      {
-        "type": "fighting",
-        "value": "x2"
-      }
-    ],
-    "resistances": [
-      {
-        "type": "metal",
-        "value": "-20"
-      }
-    ],
-    "retreat_cost": 1
-  },
-  {
-    "id": "intl-tk-sm-r-29",
-    "set_id": "intl-tk-sm-r",
-    "number": "29",
-    "category": "pokemon",
-    "name": {
-      "en": "Pikachu",
-      "fr": "Pikachu",
-      "es": "Pikachu",
-      "it": "Pikachu"
-    },
-    "pokemon": [
-      "0025"
-    ],
-    "illustrator": "kodama",
-    "rarity": "none",
-    "regulation_mark": null,
-    "variants": [
-      {
-        "id": "normal",
-        "type": "normal",
-        "images": {
-          "en": "",
-          "es": "/images/cards/intl-tk-sm-r/es/29.webp",
-          "fr": "",
-          "it": "/images/cards/intl-tk-sm-r/it/29.webp"
-        }
-      }
-    ],
-    "hp": 60,
-    "types": [
-      "lightning"
-    ],
-    "stage": "basic",
-    "attacks": [
-      {
-        "name": {
-          "en": "Tail Whap",
-          "fr": "Queue Battoir"
-        },
-        "cost": [],
-        "damage": "10",
-        "text": {}
-      },
-      {
-        "name": {
-          "en": "Spark",
-          "fr": "Étincelle"
-        },
-        "cost": [],
-        "damage": "20",
-        "text": {
-          "en": "This attack does 10 damage to 1 of your opponent’s Benched Pokémon. (Don’t apply Weakness and Resistance for Benched Pokémon.)",
-          "fr": "Cette attaque inflige 10 dégâts à l'un des Pokémon de Banc de votre adversaire. (N'appliquez ni la Faiblesse ni la Résistance aux Pokémon de Banc.)"
-        }
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "fighting",
-        "value": "x2"
-      }
-    ],
-    "resistances": [
-      {
-        "type": "metal",
-        "value": "-20"
-      }
-    ],
-    "retreat_cost": 1,
-    "flavor_text": {
-      "en": "A plan was recently announced to gather many Pikachu and make an electric power plant."
-    }
-  },
-  {
-    "id": "intl-tk-sm-r-30",
-    "set_id": "intl-tk-sm-r",
-    "number": "30",
-    "category": "pokemon",
-    "name": {
-      "en": "Alolan Raichu",
-      "fr": "Raichu d’Alola",
-      "es": "Raichu de Alola",
-      "it": "Raichu di Alola"
-    },
-    "pokemon": [
-      "0026-alolan-raichu"
-    ],
-    "illustrator": "5ban Graphics",
-    "rarity": "none",
-    "regulation_mark": null,
-    "variants": [
-      {
-        "id": "normal",
-        "type": "normal",
-        "images": {
-          "en": "",
-          "es": "/images/cards/intl-tk-sm-r/es/30.webp",
-          "fr": "",
-          "it": "/images/cards/intl-tk-sm-r/it/30.webp"
-        }
-      }
-    ],
-    "hp": 110,
-    "types": [
-      "lightning"
-    ],
-    "stage": "stage1",
-    "evolves_from": {
-      "en": "Pikachu",
-      "fr": "Pikachu",
-      "es": "Pikachu",
-      "it": "Pikachu"
-    },
-    "attacks": [
-      {
-        "name": {
-          "en": "Quick Attack",
-          "fr": "Vive-Attaque"
-        },
-        "cost": [],
-        "damage": "10+",
-        "text": {
-          "en": "Flip a coin. If heads, this attack does 30 more damage.",
-          "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 30 dégâts supplémentaires."
-        }
-      },
-      {
-        "name": {
-          "en": "Electric Surfer",
-          "fr": "Surfeur Électrique"
-        },
-        "cost": [],
-        "damage": "70",
-        "text": {}
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "fighting",
-        "value": "x2"
-      }
-    ],
-    "resistances": [
-      {
-        "type": "metal",
-        "value": "-20"
-      }
-    ],
-    "retreat_cost": 1,
-    "flavor_text": {
-      "en": "It only evolves to this form in the Alola region. According to researchers, its diet is one of the causes of this change."
-    }
-  },
-  {
-    "id": "intl-tk-sm-r-4",
-    "set_id": "intl-tk-sm-r",
-    "number": "4",
-    "category": "pokemon",
-    "name": {
-      "en": "Stufful",
-      "fr": "Nounourson",
-      "es": "Stufful",
-      "it": "Stufful"
-    },
-    "pokemon": [
-      "0759"
-    ],
-    "illustrator": null,
-    "rarity": "common",
-    "regulation_mark": null,
-    "variants": [
-      {
-        "id": "normal",
-        "type": "normal",
-        "images": {
-          "en": "",
-          "es": "/images/cards/intl-tk-sm-r/es/4.webp",
-          "fr": "",
-          "it": "/images/cards/intl-tk-sm-r/it/4.webp"
-        }
-      }
-    ],
-    "hp": 70,
-    "types": [
-      "normal"
-    ],
-    "stage": "basic",
-    "weaknesses": [
-      {
-        "type": "fighting",
-        "value": "x2"
-      }
-    ],
-    "retreat_cost": 2
-  },
-  {
-    "id": "intl-tk-sm-r-6",
-    "set_id": "intl-tk-sm-r",
-    "number": "6",
-    "category": "pokemon",
-    "name": {
-      "en": "Golbat",
-      "fr": "Nosferalto",
-      "es": "Golbat",
-      "it": "Golbat"
-    },
-    "pokemon": [
-      "0042"
-    ],
-    "illustrator": null,
-    "rarity": "uncommon",
-    "regulation_mark": null,
-    "variants": [
-      {
-        "id": "normal",
-        "type": "normal",
-        "images": {
-          "en": "",
-          "es": "/images/cards/intl-tk-sm-r/es/6.webp",
-          "fr": "",
-          "it": "/images/cards/intl-tk-sm-r/it/6.webp"
-        }
-      }
-    ],
-    "hp": 80,
-    "types": [
-      "psychic"
-    ],
-    "stage": "stage1",
-    "evolves_from": {
-      "en": "Zubat",
-      "fr": "Nosferapti",
-      "es": "Zubat",
-      "it": "Zubat"
-    },
-    "weaknesses": [
-      {
-        "type": "lightning",
-        "value": "x2"
-      }
-    ],
-    "resistances": [
-      {
-        "type": "fighting",
-        "value": "-20"
-      }
-    ],
-    "retreat_cost": 0
-  },
-  {
     "id": "intl-tk-sm-r-1",
     "set_id": "intl-tk-sm-r",
     "number": "1",
@@ -989,6 +78,81 @@
     "retreat_cost": 0
   },
   {
+    "id": "intl-tk-sm-r-11",
+    "set_id": "intl-tk-sm-r",
+    "number": "11",
+    "category": "pokemon",
+    "name": {
+      "en": "Zubat",
+      "fr": "Nosferapti",
+      "es": "Zubat",
+      "it": "Zubat"
+    },
+    "pokemon": [
+      "0041"
+    ],
+    "illustrator": "Satoshi Shirai",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "type": "normal",
+        "images": {
+          "en": "",
+          "es": "/images/cards/intl-tk-sm-r/es/11.webp",
+          "fr": "",
+          "it": "/images/cards/intl-tk-sm-r/it/11.webp"
+        },
+        "cardmarket": {
+          "product_id": 297242,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.18,
+          "low": 0.02,
+          "trend": 0.15,
+          "average_1d": 0.1,
+          "average_7d": 0.15,
+          "average_30d": 0.13,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=297242"
+        }
+      }
+    ],
+    "hp": 50,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Astonish"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Choose a random card from your opponent's hand. Your opponent reveals that card and shuffles it into their deck."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
     "id": "intl-tk-sm-r-12",
     "set_id": "intl-tk-sm-r",
     "number": "12",
@@ -1026,6 +190,773 @@
       }
     ],
     "retreat_cost": 0
+  },
+  {
+    "id": "intl-tk-sm-r-13",
+    "set_id": "intl-tk-sm-r",
+    "number": "13",
+    "category": "pokemon",
+    "name": {
+      "en": "Spearow",
+      "fr": "Piafabec",
+      "es": "Spearow",
+      "it": "Spearow"
+    },
+    "pokemon": [
+      "0021"
+    ],
+    "illustrator": "Yukiko Baba",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "type": "normal",
+        "images": {
+          "en": "",
+          "es": "/images/cards/intl-tk-sm-r/es/13.webp",
+          "fr": "",
+          "it": "/images/cards/intl-tk-sm-r/it/13.webp"
+        },
+        "cardmarket": {
+          "product_id": 297244,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.09,
+          "low": 0.02,
+          "trend": 0.17,
+          "average_1d": 0.08,
+          "average_7d": 0.12,
+          "average_30d": 0.18,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=297244"
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Peck Bugs"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "10+",
+        "text": {
+          "en": "If your opponent's Active Pokémon is a Grass Pokémon, this attack does 30 more damage."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
+  },
+  {
+    "id": "intl-tk-sm-r-14",
+    "set_id": "intl-tk-sm-r",
+    "number": "14",
+    "category": "pokemon",
+    "name": {
+      "en": "Pikachu",
+      "fr": "Pikachu",
+      "es": "Pikachu",
+      "it": "Pikachu"
+    },
+    "pokemon": [
+      "0025"
+    ],
+    "illustrator": "kodama",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "type": "normal",
+        "images": {
+          "en": "",
+          "es": "/images/cards/intl-tk-sm-r/es/14.webp",
+          "fr": "",
+          "it": "/images/cards/intl-tk-sm-r/it/14.webp"
+        },
+        "cardmarket": {
+          "product_id": 297245,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.17,
+          "low": 0.02,
+          "trend": 0.15,
+          "average_1d": 0.25,
+          "average_7d": 0.16,
+          "average_30d": 0.2,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=297245"
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Tail Whap",
+          "fr": "Queue Battoir"
+        },
+        "cost": [],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Spark",
+          "fr": "Étincelle"
+        },
+        "cost": [],
+        "damage": "20",
+        "text": {
+          "en": "This attack does 10 damage to 1 of your opponent’s Benched Pokémon. (Don’t apply Weakness and Resistance for Benched Pokémon.)",
+          "fr": "Cette attaque inflige 10 dégâts à l'un des Pokémon de Banc de votre adversaire. (N'appliquez ni la Faiblesse ni la Résistance aux Pokémon de Banc.)"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "metal",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "A plan was recently announced to gather many Pikachu and make an electric power plant."
+    }
+  },
+  {
+    "id": "intl-tk-sm-r-15",
+    "set_id": "intl-tk-sm-r",
+    "number": "15",
+    "category": "trainer",
+    "name": {
+      "en": "Potion",
+      "fr": "Potion",
+      "es": "Poción",
+      "it": "Pozione"
+    },
+    "pokemon": [],
+    "illustrator": "Toyste Beach",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "type": "normal",
+        "images": {
+          "en": "",
+          "es": "/images/cards/intl-tk-sm-r/es/15.webp",
+          "fr": "",
+          "it": "/images/cards/intl-tk-sm-r/it/15.webp"
+        },
+        "cardmarket": {
+          "product_id": 297246,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.13,
+          "low": 0.02,
+          "trend": 0.16,
+          "average_1d": 0.19,
+          "average_7d": 0.17,
+          "average_30d": 0.16,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=297246"
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "en": "Heal 30 damage from 1 of your Pokémon.",
+      "fr": "Soignez 30 dégâts à l’un de vos Pokémon.",
+      "es": "Cura 30 puntos de daño a 1 de tus Pokémon.",
+      "it": "Cura uno dei tuoi Pokémon da 30 danni."
+    }
+  },
+  {
+    "id": "intl-tk-sm-r-16",
+    "set_id": "intl-tk-sm-r",
+    "number": "16",
+    "category": "pokemon",
+    "name": {
+      "en": "Grubbin",
+      "fr": "Larvibule",
+      "es": "Grubbin",
+      "it": "Grubbin"
+    },
+    "pokemon": [
+      "0736"
+    ],
+    "illustrator": "Akira Komayama",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "type": "normal",
+        "images": {
+          "en": "",
+          "es": "/images/cards/intl-tk-sm-r/es/16.webp",
+          "fr": "",
+          "it": "/images/cards/intl-tk-sm-r/it/16.webp"
+        },
+        "cardmarket": {
+          "product_id": 297247,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.4,
+          "low": 0.02,
+          "trend": 0.77,
+          "average_1d": 0.5,
+          "average_7d": 0.37,
+          "average_30d": 0.43,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=297247"
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "grass"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Vice Grip"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-tk-sm-r-17",
+    "set_id": "intl-tk-sm-r",
+    "number": "17",
+    "category": "pokemon",
+    "name": {
+      "en": "Alolan Raichu",
+      "fr": "Raichu d’Alola",
+      "es": "Raichu de Alola",
+      "it": "Raichu di Alola"
+    },
+    "pokemon": [
+      "0026-alolan-raichu"
+    ],
+    "illustrator": "5ban Graphics",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "type": "normal",
+        "images": {
+          "en": "",
+          "es": "/images/cards/intl-tk-sm-r/es/17.webp",
+          "fr": "",
+          "it": "/images/cards/intl-tk-sm-r/it/17.webp"
+        },
+        "cardmarket": {
+          "product_id": 297248,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.12,
+          "low": 0.02,
+          "trend": 0.12,
+          "average_1d": 0.1,
+          "average_7d": 0.1,
+          "average_30d": 0.12,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=297248"
+        }
+      }
+    ],
+    "hp": 110,
+    "types": [
+      "lightning"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Pikachu",
+      "fr": "Pikachu",
+      "es": "Pikachu",
+      "it": "Pikachu"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Quick Attack",
+          "fr": "Vive-Attaque"
+        },
+        "cost": [],
+        "damage": "10+",
+        "text": {
+          "en": "Flip a coin. If heads, this attack does 30 more damage.",
+          "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 30 dégâts supplémentaires."
+        }
+      },
+      {
+        "name": {
+          "en": "Electric Surfer",
+          "fr": "Surfeur Électrique"
+        },
+        "cost": [],
+        "damage": "70",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "metal",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It only evolves to this form in the Alola region. According to researchers, its diet is one of the causes of this change."
+    }
+  },
+  {
+    "id": "intl-tk-sm-r-18",
+    "set_id": "intl-tk-sm-r",
+    "number": "18",
+    "category": "pokemon",
+    "name": {
+      "en": "Bewear",
+      "fr": "Chelours",
+      "es": "Bewear",
+      "it": "Bewear"
+    },
+    "pokemon": [
+      "0760"
+    ],
+    "illustrator": "kirisAki",
+    "rarity": "rare",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "type": "normal",
+        "images": {
+          "en": "",
+          "es": "/images/cards/intl-tk-sm-r/es/18.webp",
+          "fr": "",
+          "it": "/images/cards/intl-tk-sm-r/it/18.webp"
+        },
+        "cardmarket": {
+          "product_id": 297253,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.25,
+          "low": 0.02,
+          "trend": 0.2,
+          "average_1d": 0.25,
+          "average_7d": 0.14,
+          "average_30d": 0.17,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=297253"
+        }
+      }
+    ],
+    "hp": 130,
+    "types": [
+      "normal"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Stufful",
+      "fr": "Nounourson",
+      "es": "Stufful",
+      "it": "Stufful"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Bear Hug"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "40",
+        "text": {
+          "en": "The Defending Pokémon can't retreat during your opponent's next turn."
+        }
+      },
+      {
+        "name": {
+          "en": "Superpower"
+        },
+        "cost": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "damage": "80+",
+        "text": {
+          "en": "You may do 40 more damage. If you do, this Pokémon does 20 damage to itself."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3
+  },
+  {
+    "id": "intl-tk-sm-r-19",
+    "set_id": "intl-tk-sm-r",
+    "number": "19",
+    "category": "trainer",
+    "name": {
+      "en": "Hau",
+      "fr": "Tili",
+      "es": "Tilo",
+      "it": "Hau"
+    },
+    "pokemon": [],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "type": "normal",
+        "images": {
+          "en": "",
+          "es": "/images/cards/intl-tk-sm-r/es/19.webp",
+          "fr": "",
+          "it": "/images/cards/intl-tk-sm-r/it/19.webp"
+        },
+        "cardmarket": {
+          "product_id": 297254,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.15,
+          "low": 0.02,
+          "trend": 0.17,
+          "average_1d": 0.04,
+          "average_7d": 0.16,
+          "average_30d": 0.15,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=297254"
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "en": "Draw 3 cards.",
+      "fr": "Piochez 3 cartes.",
+      "es": "Roba 3 cartas.",
+      "it": "Pesca tre carte."
+    }
+  },
+  {
+    "id": "intl-tk-sm-r-2",
+    "set_id": "intl-tk-sm-r",
+    "number": "2",
+    "category": "energy",
+    "name": {
+      "en": "Lightning Energy",
+      "fr": "Énergie Électrique",
+      "es": "Energía Rayo",
+      "it": "Energia Lampo"
+    },
+    "pokemon": [],
+    "illustrator": null,
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "type": "normal",
+        "images": {
+          "en": "",
+          "es": "/images/cards/intl-tk-sm-r/es/2.webp",
+          "fr": "",
+          "it": "/images/cards/intl-tk-sm-r/it/2.webp"
+        },
+        "cardmarket": {
+          "product_id": 297233,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.07,
+          "low": 0.02,
+          "trend": 0.1,
+          "average_1d": 0.09,
+          "average_7d": 0.09,
+          "average_30d": 0.09,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=297233"
+        }
+      }
+    ]
+  },
+  {
+    "id": "intl-tk-sm-r-20",
+    "set_id": "intl-tk-sm-r",
+    "number": "20",
+    "category": "energy",
+    "name": {
+      "en": "Psychic Energy",
+      "fr": "Énergie Psy",
+      "es": "Energía Psíquica",
+      "it": "Energia Psico"
+    },
+    "pokemon": [],
+    "illustrator": null,
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "type": "normal",
+        "images": {
+          "en": "",
+          "es": "/images/cards/intl-tk-sm-r/es/20.webp",
+          "fr": "",
+          "it": "/images/cards/intl-tk-sm-r/it/20.webp"
+        },
+        "cardmarket": {
+          "product_id": 297249,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.09,
+          "low": 0.05,
+          "trend": 0.14,
+          "average_1d": 0.05,
+          "average_7d": 0.08,
+          "average_30d": 0.12,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=297249"
+        }
+      }
+    ]
+  },
+  {
+    "id": "intl-tk-sm-r-21",
+    "set_id": "intl-tk-sm-r",
+    "number": "21",
+    "category": "trainer",
+    "name": {
+      "en": "Great Ball",
+      "fr": "Super Ball",
+      "es": "Super Ball",
+      "it": "Mega Ball"
+    },
+    "pokemon": [],
+    "illustrator": "Ryo Ueda",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "type": "normal",
+        "images": {
+          "en": "",
+          "es": "/images/cards/intl-tk-sm-r/es/21.webp",
+          "fr": "",
+          "it": "/images/cards/intl-tk-sm-r/it/21.webp"
+        },
+        "cardmarket": {
+          "product_id": 297255,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.02,
+          "low": 0.02,
+          "trend": 0.07,
+          "average_1d": 0.02,
+          "average_7d": 0.08,
+          "average_30d": 0.13,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=297255"
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "en": "Look at the top 7 cards of your deck. You may reveal a Pokémon you find there and put it into your hand. Shuffle the other cards back into your deck.",
+      "fr": "Regardez les 7 cartes du dessus de votre deck. Vous pouvez montrer un Pokémon que vous y trouvez et l’ajouter à votre main. Mélangez les autres cartes avec votre deck.",
+      "es": "Mira las 7 primeras cartas de tu baraja. Puedes enseñar 1 Pokémon que encuentres entre ellas y ponerlo en tu mano. Pon el resto de cartas de nuevo en tu baraja y barájalas todas.",
+      "it": "Guarda le prime sette carte del tuo mazzo. Puoi mostrare un Pokémon che hai trovato e aggiungerlo alle carte che hai in mano. Poi rimischia le altre carte nel tuo mazzo."
+    }
+  },
+  {
+    "id": "intl-tk-sm-r-22",
+    "set_id": "intl-tk-sm-r",
+    "number": "22",
+    "category": "pokemon",
+    "name": {
+      "en": "Drowzee",
+      "fr": "Soporifik",
+      "es": "Drowzee",
+      "it": "Drowzee"
+    },
+    "pokemon": [
+      "0096"
+    ],
+    "illustrator": "Suwama Chiaki",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "type": "normal",
+        "images": {
+          "en": "",
+          "es": "/images/cards/intl-tk-sm-r/es/22.webp",
+          "fr": "",
+          "it": "/images/cards/intl-tk-sm-r/it/22.webp"
+        },
+        "cardmarket": {
+          "product_id": 297256,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.29,
+          "low": 0.02,
+          "trend": 0.38,
+          "average_1d": 0.5,
+          "average_7d": 0.31,
+          "average_30d": 0.31,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=297256"
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "psychic"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Psychic Boom"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "10×",
+        "text": {
+          "en": "This attack does 10 damage times the amount of Energy attached to your opponent's Active Pokémon."
+        }
+      },
+      {
+        "name": {
+          "en": "Headbutt"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "20",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
+    "id": "intl-tk-sm-r-23",
+    "set_id": "intl-tk-sm-r",
+    "number": "23",
+    "category": "trainer",
+    "name": {
+      "en": "Hau",
+      "fr": "Tili",
+      "es": "Tilo",
+      "it": "Hau"
+    },
+    "pokemon": [],
+    "illustrator": "Ken Sugimori",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "type": "normal",
+        "images": {
+          "en": "",
+          "es": "/images/cards/intl-tk-sm-r/es/23.webp",
+          "fr": "",
+          "it": "/images/cards/intl-tk-sm-r/it/23.webp"
+        },
+        "cardmarket": {
+          "product_id": 297257,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.15,
+          "low": 0.02,
+          "trend": 0.08,
+          "average_1d": 0.15,
+          "average_7d": 0.12,
+          "average_30d": 0.14,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=297257"
+        }
+      }
+    ],
+    "trainer_type": "supporter",
+    "rules_text": {
+      "en": "Draw 3 cards.",
+      "fr": "Piochez 3 cartes.",
+      "es": "Roba 3 cartas.",
+      "it": "Pesca tre carte."
+    }
   },
   {
     "id": "intl-tk-sm-r-24",
@@ -1068,6 +999,141 @@
       "psychic"
     ],
     "retreat_cost": 0
+  },
+  {
+    "id": "intl-tk-sm-r-25",
+    "set_id": "intl-tk-sm-r",
+    "number": "25",
+    "category": "trainer",
+    "name": {
+      "en": "Great Ball",
+      "fr": "Super Ball",
+      "es": "Super Ball",
+      "it": "Mega Ball"
+    },
+    "pokemon": [],
+    "illustrator": "Ryo Ueda",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "type": "normal",
+        "images": {
+          "en": "",
+          "es": "/images/cards/intl-tk-sm-r/es/25.webp",
+          "fr": "",
+          "it": "/images/cards/intl-tk-sm-r/it/25.webp"
+        },
+        "cardmarket": {
+          "product_id": 297258,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.13,
+          "low": 0.02,
+          "trend": 0.13,
+          "average_1d": 0.15,
+          "average_7d": 0.09,
+          "average_30d": 0.13,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=297258"
+        }
+      }
+    ],
+    "trainer_type": "item",
+    "rules_text": {
+      "en": "Look at the top 7 cards of your deck. You may reveal a Pokémon you find there and put it into your hand. Shuffle the other cards back into your deck.",
+      "fr": "Regardez les 7 cartes du dessus de votre deck. Vous pouvez montrer un Pokémon que vous y trouvez et l’ajouter à votre main. Mélangez les autres cartes avec votre deck.",
+      "es": "Mira las 7 primeras cartas de tu baraja. Puedes enseñar 1 Pokémon que encuentres entre ellas y ponerlo en tu mano. Pon el resto de cartas de nuevo en tu baraja y barájalas todas.",
+      "it": "Guarda le prime sette carte del tuo mazzo. Puoi mostrare un Pokémon che hai trovato e aggiungerlo alle carte che hai in mano. Poi rimischia le altre carte nel tuo mazzo."
+    }
+  },
+  {
+    "id": "intl-tk-sm-r-26",
+    "set_id": "intl-tk-sm-r",
+    "number": "26",
+    "category": "pokemon",
+    "name": {
+      "en": "Togedemaru",
+      "fr": "Togedemaru",
+      "es": "Togedemaru",
+      "it": "Togedemaru"
+    },
+    "pokemon": [
+      "0777"
+    ],
+    "illustrator": "Megumi Mizutani",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "type": "normal",
+        "images": {
+          "en": "",
+          "es": "/images/cards/intl-tk-sm-r/es/26.webp",
+          "fr": "",
+          "it": "/images/cards/intl-tk-sm-r/it/26.webp"
+        },
+        "cardmarket": {
+          "product_id": 297251,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.12,
+          "low": 0.02,
+          "trend": 0.12,
+          "average_1d": 0.1,
+          "average_7d": 0.1,
+          "average_30d": 0.1,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=297251"
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Defense Curl"
+        },
+        "cost": [
+          "normal"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Flip a coin. If heads, prevent all damage done to this Pokémon by attacks during your opponent's next turn."
+        }
+      },
+      {
+        "name": {
+          "en": "Discharge"
+        },
+        "cost": [
+          "lightning"
+        ],
+        "damage": "30×",
+        "text": {
+          "en": "Discard all Lightning Energy from this Pokémon. This attack does 30 damage for each card you discarded in this way."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "metal",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1
   },
   {
     "id": "intl-tk-sm-r-27",
@@ -1154,6 +1220,93 @@
     "retreat_cost": 0
   },
   {
+    "id": "intl-tk-sm-r-29",
+    "set_id": "intl-tk-sm-r",
+    "number": "29",
+    "category": "pokemon",
+    "name": {
+      "en": "Pikachu",
+      "fr": "Pikachu",
+      "es": "Pikachu",
+      "it": "Pikachu"
+    },
+    "pokemon": [
+      "0025"
+    ],
+    "illustrator": "kodama",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "type": "normal",
+        "images": {
+          "en": "",
+          "es": "/images/cards/intl-tk-sm-r/es/29.webp",
+          "fr": "",
+          "it": "/images/cards/intl-tk-sm-r/it/29.webp"
+        },
+        "cardmarket": {
+          "product_id": 297260,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.12,
+          "low": 0.02,
+          "trend": 0.3,
+          "average_1d": 0.14,
+          "average_7d": 0.14,
+          "average_30d": 0.2,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=297260"
+        }
+      }
+    ],
+    "hp": 60,
+    "types": [
+      "lightning"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Tail Whap",
+          "fr": "Queue Battoir"
+        },
+        "cost": [],
+        "damage": "10",
+        "text": {}
+      },
+      {
+        "name": {
+          "en": "Spark",
+          "fr": "Étincelle"
+        },
+        "cost": [],
+        "damage": "20",
+        "text": {
+          "en": "This attack does 10 damage to 1 of your opponent’s Benched Pokémon. (Don’t apply Weakness and Resistance for Benched Pokémon.)",
+          "fr": "Cette attaque inflige 10 dégâts à l'un des Pokémon de Banc de votre adversaire. (N'appliquez ni la Faiblesse ni la Résistance aux Pokémon de Banc.)"
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "metal",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "A plan was recently announced to gather many Pikachu and make an electric power plant."
+    }
+  },
+  {
     "id": "intl-tk-sm-r-3",
     "set_id": "intl-tk-sm-r",
     "number": "3",
@@ -1193,6 +1346,167 @@
     "retreat_cost": 0
   },
   {
+    "id": "intl-tk-sm-r-30",
+    "set_id": "intl-tk-sm-r",
+    "number": "30",
+    "category": "pokemon",
+    "name": {
+      "en": "Alolan Raichu",
+      "fr": "Raichu d’Alola",
+      "es": "Raichu de Alola",
+      "it": "Raichu di Alola"
+    },
+    "pokemon": [
+      "0026-alolan-raichu"
+    ],
+    "illustrator": "5ban Graphics",
+    "rarity": "none",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "holo",
+        "type": "holo",
+        "images": {
+          "en": "",
+          "es": "/images/cards/intl-tk-sm-r/es/30.webp",
+          "fr": "",
+          "it": "/images/cards/intl-tk-sm-r/it/30.webp"
+        },
+        "cardmarket": {
+          "product_id": 297261,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.32,
+          "low": 0.05,
+          "trend": 0.36,
+          "average_1d": 0.29,
+          "average_7d": 0.32,
+          "average_30d": 0.37,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=297261"
+        }
+      }
+    ],
+    "hp": 110,
+    "types": [
+      "lightning"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Pikachu",
+      "fr": "Pikachu",
+      "es": "Pikachu",
+      "it": "Pikachu"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Quick Attack",
+          "fr": "Vive-Attaque"
+        },
+        "cost": [],
+        "damage": "10+",
+        "text": {
+          "en": "Flip a coin. If heads, this attack does 30 more damage.",
+          "fr": "Lancez une pièce. Si c'est face, cette attaque inflige 30 dégâts supplémentaires."
+        }
+      },
+      {
+        "name": {
+          "en": "Electric Surfer",
+          "fr": "Surfeur Électrique"
+        },
+        "cost": [],
+        "damage": "70",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "metal",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1,
+    "flavor_text": {
+      "en": "It only evolves to this form in the Alola region. According to researchers, its diet is one of the causes of this change."
+    }
+  },
+  {
+    "id": "intl-tk-sm-r-4",
+    "set_id": "intl-tk-sm-r",
+    "number": "4",
+    "category": "pokemon",
+    "name": {
+      "en": "Stufful",
+      "fr": "Nounourson",
+      "es": "Stufful",
+      "it": "Stufful"
+    },
+    "pokemon": [
+      "0759"
+    ],
+    "illustrator": "Sanosuke Sakuma",
+    "rarity": "common",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "type": "normal",
+        "images": {
+          "en": "",
+          "es": "/images/cards/intl-tk-sm-r/es/4.webp",
+          "fr": "",
+          "it": "/images/cards/intl-tk-sm-r/it/4.webp"
+        },
+        "cardmarket": {
+          "product_id": 297241,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.13,
+          "low": 0.02,
+          "trend": 0.18,
+          "average_1d": 0.1,
+          "average_7d": 0.13,
+          "average_30d": 0.15,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=297241"
+        }
+      }
+    ],
+    "hp": 70,
+    "types": [
+      "normal"
+    ],
+    "stage": "basic",
+    "attacks": [
+      {
+        "name": {
+          "en": "Tackle"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "30",
+        "text": {}
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2
+  },
+  {
     "id": "intl-tk-sm-r-5",
     "set_id": "intl-tk-sm-r",
     "number": "5",
@@ -1227,6 +1541,100 @@
           "average_30d": 0.1,
           "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=297235"
         }
+      }
+    ],
+    "retreat_cost": 0
+  },
+  {
+    "id": "intl-tk-sm-r-6",
+    "set_id": "intl-tk-sm-r",
+    "number": "6",
+    "category": "pokemon",
+    "name": {
+      "en": "Golbat",
+      "fr": "Nosferalto",
+      "es": "Golbat",
+      "it": "Golbat"
+    },
+    "pokemon": [
+      "0042"
+    ],
+    "illustrator": "Masakazu Fukuda",
+    "rarity": "uncommon",
+    "regulation_mark": null,
+    "variants": [
+      {
+        "id": "normal",
+        "type": "normal",
+        "images": {
+          "en": "",
+          "es": "/images/cards/intl-tk-sm-r/es/6.webp",
+          "fr": "",
+          "it": "/images/cards/intl-tk-sm-r/it/6.webp"
+        },
+        "cardmarket": {
+          "product_id": 297236,
+          "currency": "EUR",
+          "updated_at": "2026-08-25T02:48:52+0200",
+          "price_kind": "standard",
+          "average": 0.12,
+          "low": 0.04,
+          "trend": 0.14,
+          "average_1d": 0.1,
+          "average_7d": 0.11,
+          "average_30d": 0.12,
+          "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=297236"
+        }
+      }
+    ],
+    "hp": 80,
+    "types": [
+      "psychic"
+    ],
+    "stage": "stage1",
+    "evolves_from": {
+      "en": "Zubat",
+      "fr": "Nosferapti",
+      "es": "Zubat",
+      "it": "Zubat"
+    },
+    "attacks": [
+      {
+        "name": {
+          "en": "Super Poison Breath"
+        },
+        "cost": [
+          "psychic"
+        ],
+        "damage": "",
+        "text": {
+          "en": "Your opponent's Active Pokémon is now Poisoned."
+        }
+      },
+      {
+        "name": {
+          "en": "Acrobatics"
+        },
+        "cost": [
+          "normal",
+          "normal"
+        ],
+        "damage": "10+",
+        "text": {
+          "en": "Flip 2 coins. This attack does 20 more damage for each heads."
+        }
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "fighting",
+        "value": "-20"
       }
     ],
     "retreat_cost": 0
