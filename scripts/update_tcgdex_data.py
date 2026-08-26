@@ -559,7 +559,9 @@ def build_pokemon_catalog(
     for (dex_id, form_key), names_by_language in sorted(groups.items()):
         entry_id = pokemon_entry_id(dex_id, form_key)
         names = {
-            language_id: min(values, key=lambda value: (len(value), value.casefold()))
+            # The original value is the final tie-breaker so case-only aliases
+            # are deterministic and prefer uppercase spellings (Ho-Oh over Ho-oh).
+            language_id: min(values, key=lambda value: (len(value), value.casefold(), value))
             for language_id, values in sorted(names_by_language.items())
         }
         for language_id, values in names_by_language.items():
