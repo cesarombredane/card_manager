@@ -88,6 +88,21 @@ VARIANT_MAP = {
 }
 
 REGIONAL_PREFIXES = ("alolan ", "galarian ", "hisuian ", "paldean ")
+# The TCG sometimes prefixes region-exclusive evolutions with their region even
+# though the species has no non-regional form. Keep those names as aliases of
+# the base species instead of creating a second Pokemon catalog entry.
+REGION_EXCLUSIVE_SPECIES = {
+    862: "galarian",  # Obstagoon
+    863: "galarian",  # Perrserker
+    864: "galarian",  # Cursola
+    865: "galarian",  # Sirfetch'd
+    866: "galarian",  # Mr. Rime
+    867: "galarian",  # Runerigus
+    902: "hisuian",   # Basculegion
+    903: "hisuian",   # Sneasler
+    904: "hisuian",   # Overqwil
+    980: "paldean",   # Clodsire
+}
 CARD_NAME_SUFFIX_PATTERN = re.compile(
     r"(?:\s+|-)(?:ex|gx|v|vmax|vstar|break|lv\.?\s*x|star|δ)$",
     re.IGNORECASE,
@@ -549,6 +564,8 @@ def build_pokemon_catalog(
                 if len(matching_keys) != 1:
                     continue
                 form_key = next(iter(matching_keys))
+            if REGION_EXCLUSIVE_SPECIES.get(dex_id) == form_key.split("-", 1)[0]:
+                form_key = "base"
             group = groups.setdefault((dex_id, form_key), {})
             for language_id, name in names.items():
                 group.setdefault(language_id, set()).add(name)

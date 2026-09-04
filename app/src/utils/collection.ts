@@ -76,6 +76,18 @@ type CollectionData = {
 
 const legacyMainFolderId = 'main';
 const migratedDefaultFolderId = 'default-collection';
+const legacyRegionExclusiveRequirements: Record<string, string> = {
+  'pokedex:0862-galarian-obstagoon': 'pokedex:0862',
+  'pokedex:0863-galarian-perrserker': 'pokedex:0863',
+  'pokedex:0864-galarian-cursola': 'pokedex:0864',
+  'pokedex:0865-galarian-sirfetch-d': 'pokedex:0865',
+  'pokedex:0866-galarian-mr-rime': 'pokedex:0866',
+  'pokedex:0867-galarian-runerigus': 'pokedex:0867',
+  'pokedex:0902-hisuian-basculegion': 'pokedex:0902',
+  'pokedex:0903-hisuian-sneasler': 'pokedex:0903',
+  'pokedex:0904-hisuian-overqwil': 'pokedex:0904',
+  'pokedex:0980-paldean-clodsire': 'pokedex:0980'
+};
 
 const defaultData = (): CollectionData => ({
   version: 2,
@@ -210,10 +222,10 @@ const normalizeData = (parsed: Partial<CollectionData>): CollectionData => {
   };
 };
 
-const reconcilePokedexFolder = (folderId: string): void => {
+const reconcilePokedexFolder = (folderId: string): boolean => {
   const folder = state.folders.find((candidate) => candidate.id === folderId);
   const config = folder?.pokedex_config;
-  if (!config) return;
+  if (!config) return false;
   const candidatesByTarget = pokedexCandidatesByTarget(config);
   const now = new Date().toISOString();
   const targets = pokedexTargets(config);
@@ -229,8 +241,16 @@ const reconcilePokedexFolder = (folderId: string): void => {
   // Transfers and legacy entries can arrive without an assignment. Resolve the
   // unambiguous cases automatically; multi-Pokémon cards still require a choice.
   const fulfilledRequirements = new Set<string>();
+  let migratedLegacyRequirement = false;
   for (const entry of ownedEntries) {
     if (entry.set_id === 'manual-collection') continue;
+    if (entry.pokedex_requirement_id) {
+      const migratedRequirement = legacyRegionExclusiveRequirements[entry.pokedex_requirement_id];
+      if (migratedRequirement) {
+        entry.pokedex_requirement_id = migratedRequirement;
+        migratedLegacyRequirement = true;
+      }
+    }
     const requirementIds = matchingPokedexRequirementIds(config, entry.set_id, entry.card_id, entry.variant_id, entry.language_id);
     if (!entry.pokedex_requirement_id && requirementIds.length === 1) entry.pokedex_requirement_id = requirementIds[0];
     if (entry.pokedex_requirement_id && requirementIds.includes(entry.pokedex_requirement_id)) {
@@ -279,10 +299,15 @@ const reconcilePokedexFolder = (folderId: string): void => {
       state.entries.splice(state.entries.indexOf(entry), 1);
     }
   }
+  return migratedLegacyRequirement;
 };
 
-const reconcilePokedexFolders = (...folderIds: string[]): void => {
-  for (const folderId of new Set(folderIds.filter(Boolean))) reconcilePokedexFolder(folderId);
+const reconcilePokedexFolders = (...folderIds: string[]): boolean => {
+  let migratedLegacyRequirement = false;
+  for (const folderId of new Set(folderIds.filter(Boolean))) {
+    migratedLegacyRequirement = reconcilePokedexFolder(folderId) || migratedLegacyRequirement;
+  }
+  return migratedLegacyRequirement;
 };
 
 const replaceData = (data: CollectionData): void => {
@@ -341,19 +366,21 @@ const loadFile = async (): Promise<void> => {
   const needsFolderMigration = JSON.stringify(parsed.folders) !== JSON.stringify(normalized.folders)
     || JSON.stringify(parsed.entries) !== JSON.stringify(normalized.entries);
   replaceData(normalized);
-  reconcilePokedexFolders(...normalized.folders.filter((folder) => folder.pokedex_config).map((folder) => folder.id));
+  const migratedLegacyRequirements = reconcilePokedexFolders(
+    ...normalized.folders.filter((folder) => folder.pokedex_config).map((folder) => folder.id)
+  );
   queuedSnapshot = snapshot();
   isReady.value = true;
   saveError.value = null;
 
-  if (needsFolderMigration) {
+  if (needsFolderMigration || migratedLegacyRequirements) {
     const beforeMigration: CollectionData = {
       ...normalized,
       folders: parsed.folders as CollectionFolder[],
       entries: parsed.entries as CollectionEntry[]
     };
     setTimeout(() => {
-      void writeOperation(beforeMigration, normalized)
+      void writeOperation(beforeMigration, snapshot())
         .then(() => collectionChannel?.postMessage('changed'))
         .catch((error: unknown) => {
           saveError.value = error instanceof Error ? error.message : String(error);
