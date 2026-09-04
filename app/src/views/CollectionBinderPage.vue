@@ -1053,7 +1053,6 @@
   const applyMichiProposal = (): void => {
     if (!binder.value || !michiProposal.value) return;
     binderStore.applyLayout(folderId.value, michiProposal.value.slots, michiProposal.value.imagePlacements);
-    currentSpread.value = 0;
     showMichiDialog.value = false;
   };
 
