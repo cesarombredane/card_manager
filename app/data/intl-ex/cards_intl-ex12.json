@@ -1096,7 +1096,7 @@
         "damage": "30+",
         "text": {
           "en": "Does 30 damage plus 20 more damage for each Water Energy attached to Gorebyss but not used to pay for this attack's Energy cost. You can't add more than 40 damage in this way.",
-          "fr": "Inflige 30 dégâts plus 20 dégâts supplémentaires pour chaque Énergie  attachée à Rosabyss qui n'a pas été utilisée pour payer le Coût en Énergie de cette attaque. Vous ne pouvez pas ajouter plus de 40 dégâts de cette façon.",
+          "fr": "Inflige 30 dégâts plus 20 dégâts supplémentaires pour chaque Énergie {W} attachée à Rosabyss qui n'a pas été utilisée pour payer le Coût en Énergie de cette attaque. Vous ne pouvez pas ajouter plus de 40 dégâts de cette façon.",
           "de": "Dieser Angriff fügt 30 Schadenspunkte plus 20 weitere Schadenspunkte für jede an Saganabyss angelegte {W}-Energie zu, die nicht zum Zahlen der Energiekosten für diesen Angriff verwendet wurde. Es lassen sich so nicht mehr als 40 Schadenspunkte hinzufügen."
         }
       }
@@ -1319,7 +1319,7 @@
         "damage": "40+",
         "text": {
           "en": "Does 40 damage plus 20 more damage for each Water Energy attached to Lanturn but not used to pay for this attack's Energy cost. You can't add more then 40 damage in this way.",
-          "fr": "Inflige 40 dégâts plus 20 dégâts supplémentaires pour chaque Énergie  attachée à Lanturn qui n'a pas été utilisée pour payer le Coût en Énergie de cette attaque. Vous ne pouvez pas ajouter plus de 40 dégâts de cette façon.",
+          "fr": "Inflige 40 dégâts plus 20 dégâts supplémentaires pour chaque Énergie {W} attachée à Lanturn qui n'a pas été utilisée pour payer le Coût en Énergie de cette attaque. Vous ne pouvez pas ajouter plus de 40 dégâts de cette façon.",
           "de": "Dieser Angriff fügt 40 Schadenspunkte plus 20 weitere Schadenspunkte für jede an Lanturn angelegte {W}-Energie zu, die nicht zum Zahlen der Energiekosten für diesen Angriff verwendet wurde. Es lassen sich so nicht mehr als 40 Schadenspunkte hinzufügen."
         }
       }
@@ -2045,7 +2045,7 @@
         "damage": "",
         "text": {
           "en": "Search your deck for a Grass Pokémon (excluding Pokémon-ex), show it to your opponent, and put it into your hand. Shuffle your deck afterward.",
-          "fr": "Cherchez dans votre deck un Pokémon  (Pokémon-ex exclus), montrez-le à votre adversaire et placez-le dans votre main. Ensuite, mélangez votre deck.",
+          "fr": "Cherchez dans votre deck un Pokémon {G} (Pokémon-ex exclus), montrez-le à votre adversaire et placez-le dans votre main. Ensuite, mélangez votre deck.",
           "de": "Durchsuche dein Deck nach einem {G}-Pokémon (außer Pokémon-ex), zeige es deinem Gegner und nimm es auf deine Hand. Mische dein Deck danach."
         }
       },
@@ -2441,7 +2441,7 @@
         "damage": "",
         "text": {
           "en": "Search your deck for a Fire Pokémon (excluding Pokémon-ex), show it to your opponent, and put it into your hand. Shuffle your deck afterward.",
-          "fr": "Cherchez dans votre deck un Pokémon  (Pokémon-ex exclus), montrez-le à votre adversaire et placez-le dans votre main. Ensuite, mélangez votre deck.",
+          "fr": "Cherchez dans votre deck un Pokémon {R} (Pokémon-ex exclus), montrez-le à votre adversaire et placez-le dans votre main. Ensuite, mélangez votre deck.",
           "de": "Durchsuche dein Deck nach einem {R}-Pokémon (außer Pokémon-ex), zeige es deinem Gegner und nimm es auf deine Hand. Mische dein Deck danach."
         }
       },
@@ -2458,7 +2458,7 @@
         "damage": "30",
         "text": {
           "en": "Flip a coin. If tails, discard a Fire Energy attached to Torkoal.",
-          "fr": "Lancez une pièce. Si c'est pile, défaussez une Énergie  attachée à Chartor.",
+          "fr": "Lancez une pièce. Si c'est pile, défaussez une Énergie {R} attachée à Chartor.",
           "de": "Wirf 1 Münze. Lege bei „Zahl“ eine an Qurtel angelegte {R}-Energie auf deinen Ablagestapel."
         }
       }
@@ -5174,7 +5174,7 @@
         "damage": "",
         "text": {
           "en": "Attach a Metal Energy card from your hand to Aron.",
-          "fr": "Attachez une carte Énergie  de votre main à Galekid.",
+          "fr": "Attachez une carte Énergie {M} de votre main à Galekid.",
           "de": "Lege eine {M}-Energiekarte von deiner Hand an Stollunior an."
         }
       },
@@ -6655,7 +6655,7 @@
         "damage": "",
         "text": {
           "en": "Search your discard pile for a Fighting Energy card and attach it to Golem. If you do, remove 2 damage counters from Golem.",
-          "fr": "Cherchez dans votre pile de défausse une carte Énergie  et attachez-la à Grolem. Retirez-lui alors 2 marqueurs de dégât.",
+          "fr": "Cherchez dans votre pile de défausse une carte Énergie {F} et attachez-la à Grolem. Retirez-lui alors 2 marqueurs de dégât.",
           "de": "Durchsuche deinen Ablagestapel nach 1 {F}-Energiekarte und lege sie an Geowaz an. Wenn du das machst, entferne 2 Schadensmarken von Geowaz."
         }
       },
@@ -8879,7 +8879,7 @@
     "trainer_type": "item",
     "rules_text": {
       "en": "Play Claw Fossil as if it were a Basic Pokémon. While in play, Claw Fossil counts as a Colorless Pokémon (as well as a Trainer card). Claw Fossil has no attacks of its own, can't retreat, and can't be affected by any Special Conditions. If Claw Fossil is Knocked Out, it doesn't count as a Knocked Out Pokémon. (Discard it anyway.) At any time during your turn before your attack, you may discard Claw Fossil from play.",
-      "fr": "Jouez Fossile griffe comme si c'était un Pokémon de base. Lorsqu'elle est en jeu, Fossile griffe compte comme un Pokémon  (et comme une carte Dresseur.) Fossile griffe ne possède pas d'attaques, ne peut pas battre en retraite, et ne peut pas être affectée par des États Spéciaux. Si Fossile griffe est mise K.O., elle ne compte pas comme un Pokémon K.O. (défaussez-la de toutes façons). N'importe quand lors de votre tour, avant votre attaque, vous pouvez défausser Fossile griffe.",
+      "fr": "Jouez Fossile griffe comme si c'était un Pokémon de base. Lorsqu'elle est en jeu, Fossile griffe compte comme un Pokémon {C} (et comme une carte Dresseur.) Fossile griffe ne possède pas d'attaques, ne peut pas battre en retraite, et ne peut pas être affectée par des États Spéciaux. Si Fossile griffe est mise K.O., elle ne compte pas comme un Pokémon K.O. (défaussez-la de toutes façons). N'importe quand lors de votre tour, avant votre attaque, vous pouvez défausser Fossile griffe.",
       "de": "Spiele Klauenfossil wie ein Basis-Pokémon. Während Klauenfossil im Spiel ist, zählt es als {C}-Pokémon (anstatt einer Trainerkarte). Klauenfossil hat keine Angriffe, kann sich nicht zurückziehen und wird nicht von Speziellen Zuständen betroffen. Falls Klauenfossil kampfunfähig gemacht wird, zählt es nicht als kampfunfähig gemachtes Pokémon (lege es trotzdem ab). Jederzeit während deines Zuges vor deinem Angriff kannst du Klauenfossil aus dem Spiel ablegen."
     }
   },
@@ -8952,7 +8952,7 @@
     "trainer_type": "item",
     "rules_text": {
       "en": "Play Mysterious Fossil as if it were a Basic Pokémon. While in play, Mysterious Fossil counts as a Colorless Pokémon (as well as a Trainer card). Mysterious Fossil has no attacks of its own, can't retreat, and can't be affected by any Special Conditions. If Mysterious Fossil is Knocked Out, it doesn't count as a Knocked Out Pokémon. (Discard it anyway.) At any time during your turn before your attack, you may discard Mysterious Fossil from play.",
-      "fr": "Jouez Mystérieux fossile comme si c'était un Pokémon de base. Lorsqu'elle est en jeu, Mystérieux fossile compte comme un Pokémon  (et comme une carte Dresseur). Mystérieux fossile ne possède pas d'attaques, ne peut pas battre en retraite et ne peut pas être affectée par des États Spéciaux. Si Mystérieux fossile est mise K.O, elle ne compte pas comme un Pokémon K.O (défaussez-la de toutes façons). N'importe quand lors de votre tour, avant votre attaque, vous pouvez défausser Mystérieux fossile.",
+      "fr": "Jouez Mystérieux fossile comme si c'était un Pokémon de base. Lorsqu'elle est en jeu, Mystérieux fossile compte comme un Pokémon {C} (et comme une carte Dresseur). Mystérieux fossile ne possède pas d'attaques, ne peut pas battre en retraite et ne peut pas être affectée par des États Spéciaux. Si Mystérieux fossile est mise K.O, elle ne compte pas comme un Pokémon K.O (défaussez-la de toutes façons). N'importe quand lors de votre tour, avant votre attaque, vous pouvez défausser Mystérieux fossile.",
       "de": "Spiele Geheimnis-Fossil wie ein Basis-Pokémon. Während Geheimnis-Fossil im Spiel ist, zählt es als -Pokémon (anstatt einer Trainerkarte). Geheimnis-Fossil hat keine Angriffe, kann sich nicht zurückziehen und wird nicht von Speziellen Zuständen betroffen. Falls Geheimnis-Fossil kampfunfähig gemacht wird, zählt es nicht als kampfunfähig gemachtes Pokémon (lege es trotzdem ab). Jederzeit während deines Zuges vor deinem Angriff kannst du Geheimnis-Fossil aus dem Spiel ablegen."
     }
   },
@@ -9120,7 +9120,7 @@
     "trainer_type": "item",
     "rules_text": {
       "en": "Play Root Fossil as if it were a Basic Pokémon. While in play, Root Fossil counts as a Colorless Pokémon (as well as a Trainer card). Root Fossil has no attacks of its own, can't retreat, and can't be affected by any Special Conditions. If Root Fossil is Knocked Out, it doesn't count as a Knocked Out Pokémon. (Discard it anyway.) At any time during your turn before your attack, you may discard Root Fossil from play.",
-      "fr": "Jouez Fossile racine comme si c'était un Pokémon de base. Lorsqu'elle est en jeu, Fossile racine compte comme un Pokémon  (et comme une carte Dresseur). Fossile racine ne possède pas d'attaques, ne peut pas battre en retraite et ne peut pas être affectée par des États Spéciaux. Si Fossile racine est mise K.O, elle ne compte pas comme un Pokémon K.O (défaussez-la de toutes façons). N'importe quand lors de votre tour, avant votre attaque, vous pouvez défausser Fossile racine.",
+      "fr": "Jouez Fossile racine comme si c'était un Pokémon de base. Lorsqu'elle est en jeu, Fossile racine compte comme un Pokémon {C} (et comme une carte Dresseur). Fossile racine ne possède pas d'attaques, ne peut pas battre en retraite et ne peut pas être affectée par des États Spéciaux. Si Fossile racine est mise K.O, elle ne compte pas comme un Pokémon K.O (défaussez-la de toutes façons). N'importe quand lors de votre tour, avant votre attaque, vous pouvez défausser Fossile racine.",
       "de": "Spiele Wurzelfossil wie ein Basis-Pokémon. Während Wurzelfossil im Spiel ist, zählt es als {C}-Pokémon (anstatt einer Trainerkarte). Wurzelfossil hat keine Angriffe, kann sich nicht zurückziehen und wird nicht von Speziellen Zuständen betroffen. Falls Wurzelfossil kampfunfähig gemacht wird, zählt es nicht als kampfunfähig gemachtes Pokémon (lege es trotzdem ab). Jederzeit während deines Zuges vor deinem Angriff kannst du Wurzelfossil aus dem Spiel ablegen."
     }
   },
@@ -9373,7 +9373,7 @@
         ],
         "damage": "100",
         "text": {
-          "fr": "Défaussez 2 Énergies  ou 1 carte Énergie réaction attachée à Arcanin ex.",
+          "fr": "Défaussez 2 Énergies {R} ou 1 carte Énergie réaction attachée à Arcanin ex.",
           "de": "Lege 2 -Energie oder 1 Reaktions-Energiekarte, die an Arkani ex angelegt ist, auf deinen Ablagestapel."
         }
       }
@@ -9987,7 +9987,7 @@
         ],
         "damage": "80",
         "text": {
-          "fr": "Si le Pokémon Défenseur est un Pokémon , les dégâts de base de cette attaque sont de 120 au lieu de 80.",
+          "fr": "Si le Pokémon Défenseur est un Pokémon {F}, les dégâts de base de cette attaque sont de 120 au lieu de 80.",
           "de": "Wenn das Verteidigende Pokémon ein -Pokémon ist, beträgt der Grundschaden 120 Schadenspunkte anstelle von 80 Schadenspunkten."
         }
       }
@@ -10190,7 +10190,7 @@
         "damage": "30",
         "text": {
           "en": "If your opponent has only 1 Prize card left and Regice ☆ is the only Pokémon you have in play, this attack does 30 damage to each of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
-          "fr": "S'il reste à votre adversaire une seule carte Récompense et que Regice ☆  est le seul Pokémon que vous ayez en jeu, cette attaque inflige 30 dégâts à chacun des Pokémon de Banc de votre adversaire. (Vous ne pouvez pas appliquer la Faiblesse et la Résistance aux Pokémon de Banc.)",
+          "fr": "S'il reste à votre adversaire une seule carte Récompense et que Regice ☆ est le seul Pokémon que vous ayez en jeu, cette attaque inflige 30 dégâts à chacun des Pokémon de Banc de votre adversaire. (Vous ne pouvez pas appliquer la Faiblesse et la Résistance aux Pokémon de Banc.)",
           "de": "Wenn dein Gegner nur noch einen Preis übrig hat und Regice ☆ das einzige Pokémon ist, das du im Spiel hast, fügt dieser Angriff jedem Pokémon auf der Bank deines Gegners 30 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
         }
       }
@@ -10326,7 +10326,7 @@
         "damage": "10",
         "text": {
           "en": "During your opponent's next turn, any damage done to Registeel Star by attacks is reduced by 10 (after applying Weakness and Resistance).",
-          "fr": "Lors du prochain tour de votre adversaire, tous dégâts infligés à Registeel  par des attaques sont réduits de 10 (après application de la Faiblesse et de la Résistance).",
+          "fr": "Lors du prochain tour de votre adversaire, tous dégâts infligés à Registeel ☆ par des attaques sont réduits de 10 (après application de la Faiblesse et de la Résistance).",
           "de": "Im nächsten Zug deines Gegners wird Schaden, der Registeel ☆ durch Angriffe zugefügt wird, um 10 Schadenspunkte reduziert (nachdem Schwäche und Resistenz verrechnet wurden)."
         }
       },

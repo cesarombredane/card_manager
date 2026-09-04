@@ -105,7 +105,7 @@
         "damage": "60+",
         "text": {
           "en": "Discard a Fire Energy attached to Arcanine. This attack does 60 damage plus 10 more damage for each damage counter on Arcanine.",
-          "fr": "Défaussez une Énergie Fire attachée à Arcanin. Cette attaque inflige alors 60 dégâts plus 10 dégâts supplémentaires pour chaque marqueur de dégât sur Arcanin.",
+          "fr": "Défaussez une Énergie {R} attachée à Arcanin. Cette attaque inflige alors 60 dégâts plus 10 dégâts supplémentaires pour chaque marqueur de dégât sur Arcanin.",
           "de": "Lege 1 {R}-Energie, die an Arkani angelegt ist, auf deinen Ablagestapel. Dieser Angriff fügt 60 Schadenspunkte plus 10 weitere Schadenspunkte für jede Schadensmarke auf Arkani zu."
         }
       }
@@ -125,7 +125,7 @@
     "category": "pokemon",
     "name": {
       "en": "Mismagius GL",
-      "fr": "Magirêve  Niv. 26",
+      "fr": "Magirêve GL Niv. 26",
       "de": "Traunmagil GL"
     },
     "pokemon": [
@@ -303,7 +303,7 @@
     ],
     "rules_text": {
       "en": "Damage done by attacks to the Pokémon that Metal Energy is attached to is reduced by 10 (after applying Weakness and Resistance). Ignore this effect if the Pokémon that Metal Energy is attached to isn't Metal. Metal Energy provides Metal Energy. (Doesn't count as a basic Energy card.)",
-      "fr": "Les dégâts infligés par des attaques au Pokémon auquel Énergie Métal est attachée sont réduits de 10 (après application de la Faiblesse et de la Résistance). Ignorez cet effet si le Pokémon auquel Énergie Métal est attachée n'est pas Metal. Énergie Métal fournit de l'Énergie Metal. (Elle ne compte pas comme carte Énergie de base).",
+      "fr": "Les dégâts infligés par des attaques au Pokémon auquel Énergie Métal est attachée sont réduits de 10 (après application de la Faiblesse et de la Résistance). Ignorez cet effet si le Pokémon auquel Énergie Métal est attachée n'est pas {M}. Énergie Métal fournit de l'Énergie {M}. (Elle ne compte pas comme carte Énergie de base).",
       "de": "Schaden, der dem Pokémon, an das Metall-Energie angelegt ist, durch Angriffe zugefügt wird, wird um 10 Schadenspunkte reduziert (nachdem Schwäche und Resistenz verrechnet wurden). Dieser Effekt wirkt nur, wenn die Metall-Energie an einem Pokémon vom Typ {M} angelegt ist. Metall-Energie liefert {M}-Energie. (Zählt nicht als Basis-Energiekarte.)"
     }
   },
@@ -397,7 +397,7 @@
     ],
     "rules_text": {
       "en": "SP Energy provides Colorless Energy. If the Pokémon SP Energy is attached to is a Pokémon SP, SP Energy provides every type of Energy buy provides only 1 Energy at a time. (Doesn't count as a basic Energy card.)",
-      "fr": "Énergie SP fournit de l'Énergie Colorless. Si le Pokémon auquel Énergie SP est attachée est un Pokémon SP, Énergie SP fournit tous les types d'Énergie mais fournit 1 Énergie à la fois. (Elle ne compte pas comme carte Énergie de base).",
+      "fr": "Énergie SP fournit de l'Énergie {C}. Si le Pokémon auquel Énergie SP est attachée est un Pokémon SP, Énergie SP fournit tous les types d'Énergie mais fournit 1 Énergie à la fois. (Elle ne compte pas comme carte Énergie de base).",
       "de": "SP-Energie liefert {C}-Energie. Solange das Pokémon, an dem SP-Energie angelegt ist, ein Pokémon SP ist, zählt SP-Energie als jeder beliebige Energietyp, spendet aber immer nur eine Energie auf einmal. (Zählt nicht als Basis-Energiekarte.)"
     }
   },
@@ -515,7 +515,7 @@
     ],
     "rules_text": {
       "en": "Upper Energy provides Colorless Energy. If you have more Prize cards left than your opponent and this card is attached to a Pokémon (excluding Pokémon LV.X), Upper Energy provides ColorlessColorless.",
-      "fr": "Énergie Sup fournit de l'Énergie Colorless. Si vous possédez plus de cartes Récompense que votre adversaire et que cette carte est attachée à un Pokémon (Pokémon LV.X exclus), Énergie Sup fournit de l'Énergie ColorlessColorless.",
+      "fr": "Énergie Sup fournit de l'Énergie {C}. Si vous possédez plus de cartes Récompense que votre adversaire et que cette carte est attachée à un Pokémon (Pokémon LV.X exclus), Énergie Sup fournit de l'Énergie {C}{C}.",
       "de": "Aufputsch-Energie liefert {C}-Energie. Solange du mehr Preise übrig hast als dein Gegner und diese Karte an ein Pokémon (außer Pokémon LV.X) angelegt ist, liefert Aufputsch-Energie {C}{C}-Energie."
     }
   },
@@ -526,7 +526,7 @@
     "category": "pokemon",
     "name": {
       "en": "Alakazam E4 LV.X",
-      "fr": "Alakazam  Niv. X",
+      "fr": "Alakazam 4 Niv. X",
       "de": "Simsala 4"
     },
     "pokemon": [
@@ -600,7 +600,7 @@
     "category": "pokemon",
     "name": {
       "en": "Floatzel GL LV.X",
-      "fr": "Mustéflott  Niv. X",
+      "fr": "Mustéflott GL Niv. X",
       "de": "Bojelin GL"
     },
     "pokemon": [
@@ -779,7 +779,7 @@
     "category": "pokemon",
     "name": {
       "en": "Gallade E4 LV.X",
-      "fr": "Gallame  Niv. X",
+      "fr": "Gallame 4 Niv. X",
       "de": "Galagladi 4"
     },
     "pokemon": [
@@ -908,7 +908,7 @@
         "damage": "",
         "text": {
           "en": "Discard 2 Fighting Energy attached to Hippowdon and choose 2 of your opponent's Benched Pokémon. This attack does 40 damage to each of them. (Don't apply Weakness and Resistance for Benched Pokémon.)",
-          "fr": "Défaussez 2 Énergies Fighting attachées à Hippodocus et choisissez 2 des Pokémon de Banc de votre adversaire. Cette attaque leur inflige 40 dégâts à chacun. (Vous ne pouvez pas appliquer la Faiblesse et la Résistance aux Pokémon de Banc).",
+          "fr": "Défaussez 2 Énergies {F} attachées à Hippodocus et choisissez 2 des Pokémon de Banc de votre adversaire. Cette attaque leur inflige 40 dégâts à chacun. (Vous ne pouvez pas appliquer la Faiblesse et la Résistance aux Pokémon de Banc).",
           "de": "Lege 2 an Hippoterus angelegte {F}-Energien auf deinen Ablagestapel und wähle 2 Pokémon auf der Bank deines Gegners. Dieser Angriff fügt den gewählten Pokémon 40 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.)"
         }
       }
@@ -934,7 +934,7 @@
     "category": "pokemon",
     "name": {
       "en": "Infernape E4 LV.X",
-      "fr": "Simiabraz  Niv. X",
+      "fr": "Simiabraz 4 Niv. X",
       "de": "Panferno 4"
     },
     "pokemon": [
@@ -988,7 +988,7 @@
         "damage": "100",
         "text": {
           "en": "Discard 2 Energy attached to Infernape E4.",
-          "fr": "Défaussez 2 Énergies attachées à Simiabraz .",
+          "fr": "Défaussez 2 Énergies attachées à Simiabraz 4.",
           "de": "Lege 2 an Panferno E4 angelegte Energien auf deinen Ablagestapel."
         }
       }
@@ -1008,7 +1008,7 @@
     "category": "pokemon",
     "name": {
       "en": "Luxray GL LV.X",
-      "fr": "Luxray  Niv. X",
+      "fr": "Luxray GL Niv. X",
       "de": "Luxtra GL"
     },
     "pokemon": [
@@ -1227,7 +1227,7 @@
     "category": "pokemon",
     "name": {
       "en": "Rampardos GL",
-      "fr": "Charkos  Niv. 63",
+      "fr": "Charkos GL Niv. 63",
       "de": "Rameidon GL"
     },
     "pokemon": [
@@ -1341,7 +1341,7 @@
     "category": "pokemon",
     "name": {
       "en": "Mismagius GL LV.X",
-      "fr": "Magirêve  Niv. X",
+      "fr": "Magirêve GL Niv. X",
       "de": "Traunmagil GL"
     },
     "pokemon": [
@@ -1752,7 +1752,7 @@
     "category": "pokemon",
     "name": {
       "en": "Roserade GL",
-      "fr": "Roserade  Niv. 22",
+      "fr": "Roserade GL Niv. 22",
       "de": "Roserade GL"
     },
     "pokemon": [
@@ -2261,7 +2261,7 @@
     "category": "pokemon",
     "name": {
       "en": "Bronzong E4",
-      "fr": "Archéodong  Niv. 54",
+      "fr": "Archéodong 4 Niv. 54",
       "de": "Bronzong 4"
     },
     "pokemon": [
@@ -2377,7 +2377,7 @@
     "category": "pokemon",
     "name": {
       "en": "Drapion E4",
-      "fr": "Drascore  Niv. 53",
+      "fr": "Drascore 4 Niv. 53",
       "de": "Piondragi 4"
     },
     "pokemon": [
@@ -2494,7 +2494,7 @@
     "category": "pokemon",
     "name": {
       "en": "Espeon E4",
-      "fr": "Mentali  Niv. 55",
+      "fr": "Mentali 4 Niv. 55",
       "de": "Psiana 4"
     },
     "pokemon": [
@@ -2719,7 +2719,7 @@
     "category": "pokemon",
     "name": {
       "en": "Bastiodon GL",
-      "fr": "Bastiodon  Niv. 41",
+      "fr": "Bastiodon GL Niv. 41",
       "de": "Bollterus GL"
     },
     "pokemon": [
@@ -2815,7 +2815,7 @@
         "damage": "60",
         "text": {
           "en": "Remove 1 damage counter from Bastiodon GL.",
-          "fr": "Retirez à Bastiodon  1 marqueur de dégât.",
+          "fr": "Retirez à Bastiodon GL 1 marqueur de dégât.",
           "de": "Entferne 1 Schadensmarke von Bollterus GL."
         }
       }
@@ -2841,7 +2841,7 @@
     "category": "pokemon",
     "name": {
       "en": "Gallade E4",
-      "fr": "Gallame  Niv. 59",
+      "fr": "Gallame 4 Niv. 59",
       "de": "Galagladi 4"
     },
     "pokemon": [
@@ -3226,7 +3226,7 @@
     "category": "pokemon",
     "name": {
       "en": "Golem E4",
-      "fr": "Grolem  Niv. 52",
+      "fr": "Grolem 4 Niv. 52",
       "de": "Geowaz 4"
     },
     "pokemon": [
@@ -3322,7 +3322,7 @@
         "damage": "100",
         "text": {
           "en": "Golem E4 does 60 damage to itself.",
-          "fr": "Grolem  s'inflige 60 dégâts.",
+          "fr": "Grolem 4 s'inflige 60 dégâts.",
           "de": "Geowaz 4 fügt sich selbst 60 Schadenspunkte zu."
         }
       }
@@ -3348,7 +3348,7 @@
     "category": "pokemon",
     "name": {
       "en": "Heracross E4",
-      "fr": "Scarhino  Niv. 51",
+      "fr": "Scarhino 4 Niv. 51",
       "de": "Skaraborn 4"
     },
     "pokemon": [
@@ -3421,7 +3421,7 @@
         "damage": "",
         "text": {
           "en": "During your next turn, Heracross E4's Megahorn attack's base damage is 100.",
-          "fr": "Lors de votre prochain tour, les dégâts de base de l'attaque Megacorne de Scarhino  sont de 100.",
+          "fr": "Lors de votre prochain tour, les dégâts de base de l'attaque Megacorne de Scarhino 4 sont de 100.",
           "de": "In deinem nächsten Zug beträgt der Grundschaden des Angriffs Vielender von Skaraborn 4 100 Schadenspunkte."
         }
       },
@@ -3538,7 +3538,7 @@
         "damage": "20+",
         "text": {
           "en": "Does 20 damage plus 10 more damage for each Energy attached to Hippowdon. Before doing damage, you may search your discard pile for a Fighting Energy card and attach it to Hippowdon.",
-          "fr": "Inflige 20 dégâts plus 10 dégâts supplémentaires pour chaque Énergie attachée à Hippodocus. Avant d'infliger des dégâts, vous pouvez chercher une carte Énergie Fighting dans votre pile de défausse et l'attacher à Hippodocus.",
+          "fr": "Inflige 20 dégâts plus 10 dégâts supplémentaires pour chaque Énergie attachée à Hippodocus. Avant d'infliger des dégâts, vous pouvez chercher une carte Énergie {F} dans votre pile de défausse et l'attacher à Hippodocus.",
           "de": "Dieser Angriff fügt 20 Schadenspunkte plus 10 weitere Schadenspunkte für jede an Hippoterus angelegte Energie zu. Bevor der Schaden zugefügt wird kannst du deinen Ablagestapel nach einer {F}-Energiekarte durchsuchen und sie an Hippoterus anlegen."
         }
       },
@@ -3706,7 +3706,7 @@
     "category": "pokemon",
     "name": {
       "en": "Mamoswine GL",
-      "fr": "Mammochon  Niv. 61",
+      "fr": "Mammochon GL Niv. 61",
       "de": "Mamutel GL"
     },
     "pokemon": [
@@ -3810,7 +3810,7 @@
     "category": "pokemon",
     "name": {
       "en": "Mr. Mime E4",
-      "fr": "M. Mime  Niv. 53",
+      "fr": "M. Mime 4 Niv. 53",
       "de": "Pantimos 4"
     },
     "pokemon": [
@@ -3900,7 +3900,7 @@
         "damage": "30",
         "text": {
           "en": "During your opponent's next turn, any damage done to Mr. Mime E4 by attacks is reduced by 10 (after applying Weakness and Resistance).",
-          "fr": "Lors du prochain tour de votre adversaire, tous dégâts infligés à M. Mime  par des attaques sont réduits de 10 (après application de la Faiblesse et de la Résistance).",
+          "fr": "Lors du prochain tour de votre adversaire, tous dégâts infligés à M. Mime 4 par des attaques sont réduits de 10 (après application de la Faiblesse et de la Résistance).",
           "de": "Während des nächsten Zuges deines Gegners wird Schaden, der Pantimos 4 durch Angriffe zugefügt wird, um 10 Schadenspunkte reduziert (nachdem Schwäche und Resistenz verrechnet wurden)."
         }
       }
@@ -4047,7 +4047,7 @@
     "category": "pokemon",
     "name": {
       "en": "Darkrai G",
-      "fr": "Darkrai  Niv. 58",
+      "fr": "Darkrai G Niv. 58",
       "de": "Darkrai G"
     },
     "pokemon": [
@@ -4323,7 +4323,7 @@
     "category": "pokemon",
     "name": {
       "en": "Raichu GL",
-      "fr": "Raichu  Niv. 46",
+      "fr": "Raichu GL Niv. 46",
       "de": "Raichu GL"
     },
     "pokemon": [
@@ -4441,7 +4441,7 @@
     "category": "pokemon",
     "name": {
       "en": "Rhyperior E4",
-      "fr": "Rhinastoc  Niv. 55",
+      "fr": "Rhinastoc 4 Niv. 55",
       "de": "Rihornior 4"
     },
     "pokemon": [
@@ -4816,7 +4816,7 @@
     "category": "pokemon",
     "name": {
       "en": "Vespiquen E4",
-      "fr": "Apireine  Niv. 50",
+      "fr": "Apireine 4 Niv. 50",
       "de": "Honweisel 4"
     },
     "pokemon": [
@@ -4893,7 +4893,7 @@
         "damage": "30+",
         "text": {
           "en": "Flip a coin for each Grass Energy attached to Vespiquen E4. This attack does 30 damage plus 20 more damage for each heads.",
-          "fr": "Lancez une pièce pour chaque Énergie Grass attachée à Apireine . Cette attaque inflige 30 dégâts plus 20 dégâts supplémentaires pour chaque face.",
+          "fr": "Lancez une pièce pour chaque Énergie {G} attachée à Apireine 4. Cette attaque inflige 30 dégâts plus 20 dégâts supplémentaires pour chaque face.",
           "de": "Wirf 1 Münze für jede an Honweisel 4 angelegte {G}-Energie. Dieser Angriff fügt 30 Schadenspunkte plus 20 weitere Schadenspunkte mal der Anzahl „Kopf“ zu."
         }
       }
@@ -5026,7 +5026,7 @@
     "category": "pokemon",
     "name": {
       "en": "Yanmega E4",
-      "fr": "Yanmega  Niv. 49",
+      "fr": "Yanmega 4 Niv. 49",
       "de": "Yanmega 4"
     },
     "pokemon": [
@@ -5145,7 +5145,7 @@
     "category": "pokemon",
     "name": {
       "en": "Alakazam E4",
-      "fr": "Alakazam  Niv. 56",
+      "fr": "Alakazam 4 Niv. 56",
       "de": "Simsala 4"
     },
     "pokemon": [
@@ -5220,7 +5220,7 @@
         "damage": "",
         "text": {
           "en": "Discard a Psychic Energy attached to Alakazam E4 and remove 4 damage counters from Alakazam E4.",
-          "fr": "Défaussez une carte Énergie Psychic attachée à Alakazam  et retirez-lui 4 marqueurs de dégât.",
+          "fr": "Défaussez une carte Énergie {P} attachée à Alakazam 4 et retirez-lui 4 marqueurs de dégât.",
           "de": "Lege 1 an Simsala 4 angelegte {P}-Energie auf deinen Ablagestapel und entferne 4 Schadensmarken von Simsala 4."
         }
       },
@@ -5258,7 +5258,7 @@
     "category": "pokemon",
     "name": {
       "en": "Electrode G",
-      "fr": "Electrode  Niv. 38",
+      "fr": "Electrode G Niv. 38",
       "de": "Lektrobal G"
     },
     "pokemon": [
@@ -5334,7 +5334,7 @@
         "damage": "",
         "text": {
           "en": "This attack does 20 damage to each of your opponent's Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.) Electrode G does 100 damage to itself.",
-          "fr": "Cette attaque inflige 20 dégâts à chacun des Pokémon de votre adversaire. (Vous ne pouvez pas appliquer la Faiblesse et la Résistance aux Pokémon de Banc). Electrode  s'inflige 100 dégâts.",
+          "fr": "Cette attaque inflige 20 dégâts à chacun des Pokémon de votre adversaire. (Vous ne pouvez pas appliquer la Faiblesse et la Résistance aux Pokémon de Banc). Electrode G s'inflige 100 dégâts.",
           "de": "Dieser Angriff fügt jedem Pokémon deines Gegners 20 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.) Lektrobal G fügt sich selbst 100 Schadenspunkte zu."
         }
       },
@@ -5351,7 +5351,7 @@
         "damage": "30",
         "text": {
           "en": "Move an Energy card attached to Electrode G to 1 of your Benched Pokémon.",
-          "fr": "Déplacez une carte Énergie attachée à Electrode  sur 1 des Pokémon de votre Banc.",
+          "fr": "Déplacez une carte Énergie attachée à Electrode G sur 1 des Pokémon de votre Banc.",
           "de": "Entferne 1 an Lektrobal G angelegte Energiekarte und lege sie an 1 Pokémon auf deiner Bank an."
         }
       }
@@ -5377,7 +5377,7 @@
     "category": "pokemon",
     "name": {
       "en": "Floatzel GL",
-      "fr": "Mustéflott  Niv. 37",
+      "fr": "Mustéflott GL Niv. 37",
       "de": "Bojelin GL"
     },
     "pokemon": [
@@ -5467,7 +5467,7 @@
         "damage": "50",
         "text": {
           "en": "Floatzel GL can't use Giant Wave during your next turn.",
-          "fr": "Mustéflott  ne peut pas utiliser Vague géante lors de votre prochain tour.",
+          "fr": "Mustéflott GL ne peut pas utiliser Vague géante lors de votre prochain tour.",
           "de": "Bojelin GL kann Riesenwelle in deinem nächsten Zug nicht einsetzen."
         }
       }
@@ -5487,7 +5487,7 @@
     "category": "pokemon",
     "name": {
       "en": "Gengar GL",
-      "fr": "Ectoplasma  Niv. 65",
+      "fr": "Ectoplasma GL Niv. 65",
       "de": "Gengar GL"
     },
     "pokemon": [
@@ -5580,7 +5580,7 @@
         "damage": "",
         "text": {
           "en": "Put 3 damage counters on 1 of your opponent's Pokémon. You may shuffle Gengar GL and all cards attached to it back into your deck.",
-          "fr": "Placez 3 marqueurs de dégât sur 1 des Pokémon de votre adversaire. Vous pouvez mélanger Ectoplasma  ainsi que toutes les cartes qui lui sont attachées avec votre deck.",
+          "fr": "Placez 3 marqueurs de dégât sur 1 des Pokémon de votre adversaire. Vous pouvez mélanger Ectoplasma GL ainsi que toutes les cartes qui lui sont attachées avec votre deck.",
           "de": "Lege 3 Schadensmarken auf 1 Pokémon deines Gegners. Du kannst Gengar GL und alle Karten, die an es angelegt sind, in dein Deck mischen."
         }
       }
@@ -5725,7 +5725,7 @@
     "category": "pokemon",
     "name": {
       "en": "Hippowdon E4",
-      "fr": "Hippodocus  Niv. 52",
+      "fr": "Hippodocus 4 Niv. 52",
       "de": "Hippoterus 4"
     },
     "pokemon": [
@@ -5828,7 +5828,7 @@
     "category": "pokemon",
     "name": {
       "en": "Infernape E4",
-      "fr": "Simiabraz  Niv. 55",
+      "fr": "Simiabraz 4 Niv. 55",
       "de": "Panferno 4"
     },
     "pokemon": [
@@ -6019,7 +6019,7 @@
         "damage": "10+",
         "text": {
           "en": "Flip a coin for each Metal Energy attached to Lairon. This attack does 10 damage plus 20 more damage for each heads.",
-          "fr": "Lancez une pièce pour chaque Énergie Metal attachée à Galegon. Cette attaque inflige 10 dégâts plus 20 dégâts supplémentaires pour chaque face.",
+          "fr": "Lancez une pièce pour chaque Énergie {M} attachée à Galegon. Cette attaque inflige 10 dégâts plus 20 dégâts supplémentaires pour chaque face.",
           "de": "Wirf 1 Münze für jede an Stollrak angelegte {M}-Energie. Dieser Angriff fügt 10 Schadenspunkte plus 20 weitere Schadenspunkte mal der Anzahl „Kopf“ zu."
         }
       },
@@ -6192,7 +6192,7 @@
     "category": "pokemon",
     "name": {
       "en": "Machamp GL",
-      "fr": "Mackogneur  Niv. 64",
+      "fr": "Mackogneur GL Niv. 64",
       "de": "Machomei GL"
     },
     "pokemon": [
@@ -6308,7 +6308,7 @@
     "category": "pokemon",
     "name": {
       "en": "Rapidash E4",
-      "fr": "Galopa  Niv. 53",
+      "fr": "Galopa 4 Niv. 53",
       "de": "Gallopa 4"
     },
     "pokemon": [
@@ -6413,7 +6413,7 @@
     "category": "pokemon",
     "name": {
       "en": "Scizor E4",
-      "fr": "Cizayox  Niv. 49",
+      "fr": "Cizayox 4 Niv. 49",
       "de": "Scherox 4"
     },
     "pokemon": [
@@ -6920,7 +6920,7 @@
     "category": "pokemon",
     "name": {
       "en": "Steelix GL",
-      "fr": "Steelix  Niv. 38",
+      "fr": "Steelix GL Niv. 38",
       "de": "Stahlos GL"
     },
     "pokemon": [
@@ -6996,7 +6996,7 @@
         "damage": "",
         "text": {
           "en": "Search your discard pile for a Metal Energy card and attach it to Steelix GL. If you do, remove 1 damage counter from Steelix GL.",
-          "fr": "Choisissez dans votre pile de défausse une carte Énergie Metal et attachez-la à Steelix . Retirez alors à Steelix  1 marqueur de dégât.",
+          "fr": "Choisissez dans votre pile de défausse une carte Énergie {M} et attachez-la à Steelix GL. Retirez alors à Steelix GL 1 marqueur de dégât.",
           "de": "Durchsuche deinen Ablagestapel nach 1 {M}-Energiekarte und lege sie an Stahlos GL an. Wenn du das machst, entferne 1 Schadensmarke von Stahlos GL."
         }
       },
@@ -7173,7 +7173,7 @@
         "damage": "",
         "text": {
           "en": "Remove all damage counters from 1 of your Benched Grass Pokémon.",
-          "fr": "Retirez à 1 de vos Pokémon de Banc Grass tous ses marqueurs de dégât.",
+          "fr": "Retirez à 1 de vos Pokémon de Banc {G} tous ses marqueurs de dégât.",
           "de": "Entferne alle Schadensmarken von 1 {G}-Pokémon auf deiner Bank."
         }
       },
@@ -7367,7 +7367,7 @@
     "category": "pokemon",
     "name": {
       "en": "Whiscash E4",
-      "fr": "Barbicha  Niv. 50",
+      "fr": "Barbicha 4 Niv. 50",
       "de": "Welsar 4"
     },
     "pokemon": [
@@ -7486,7 +7486,7 @@
     "category": "pokemon",
     "name": {
       "en": "Aerodactyl GL",
-      "fr": "Ptera  Niv. 62",
+      "fr": "Ptera GL Niv. 62",
       "de": "Aerodactyl GL"
     },
     "pokemon": [
@@ -7604,7 +7604,7 @@
     "category": "pokemon",
     "name": {
       "en": "Ambipom G",
-      "fr": "Capidextre  Niv. 40",
+      "fr": "Capidextre G Niv. 40",
       "de": "Ambidiffel G"
     },
     "pokemon": [
@@ -8069,7 +8069,7 @@
     "category": "pokemon",
     "name": {
       "en": "Froslass GL",
-      "fr": "Momartik  Niv. 44",
+      "fr": "Momartik GL Niv. 44",
       "de": "Frosdeje GL"
     },
     "pokemon": [
@@ -8181,7 +8181,7 @@
     "category": "pokemon",
     "name": {
       "en": "Flareon E4",
-      "fr": "Pyroli  Niv. 55",
+      "fr": "Pyroli 4 Niv. 55",
       "de": "Flamara 4"
     },
     "pokemon": [
@@ -8280,7 +8280,7 @@
         "damage": "40",
         "text": {
           "en": "Flip a coin. If tails, discard a Fire Energy attached to Flareon .",
-          "fr": "Lancez une pièce. Si c'est pile, défaussez une Énergie Fire attachée à Pyroli .",
+          "fr": "Lancez une pièce. Si c'est pile, défaussez une Énergie {R} attachée à Pyroli 4.",
           "de": "Wirf 1 Münze. Bei „Zahl“ entferne 1 {R}-Energie, die an Flamara 4 angelegt ist, und lege sie auf deinen Ablagestapel."
         }
       }
@@ -8300,7 +8300,7 @@
     "category": "pokemon",
     "name": {
       "en": "Forretress G",
-      "fr": "Forretress  Niv. 35",
+      "fr": "Forretress G Niv. 35",
       "de": "Forstellka G"
     },
     "pokemon": [
@@ -8376,7 +8376,7 @@
         "damage": "",
         "text": {
           "en": "This attack does 10 damage to each of your opponent's Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.) Forretress G can't use Shell Scatter during your next turn.",
-          "fr": "Cette attaque inflige 10 dégâts à chacun des Pokémon de votre adversaire. (Vous ne pouvez pas appliquer la Faiblesse et la Résistance aux Pokémon de Banc). Forretress  ne peut pas utiliser Écras'coquille lors de votre prochain tour.",
+          "fr": "Cette attaque inflige 10 dégâts à chacun des Pokémon de votre adversaire. (Vous ne pouvez pas appliquer la Faiblesse et la Résistance aux Pokémon de Banc). Forretress G ne peut pas utiliser Écras'coquille lors de votre prochain tour.",
           "de": "Dieser Angriff fügt jedem Pokémon deines Gegners 10 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.) Forstellka G kann Streugranate in deinem nächsten Zug nicht einsetzen."
         }
       },
@@ -8394,7 +8394,7 @@
         "damage": "80",
         "text": {
           "en": "Does 10 damage to each Benched Pokémon (both yours and your opponent's). (Don't apply Weakness and Resistance for Benched Pokémon.) Flip a coin. If tails, Forretress G does 80 damage to itself.",
-          "fr": "Inflige 10 dégâts à chaque Pokémon de Banc (les vôtres et ceux de votre adversaire). (Vous ne pouvez pas appliquer la Faiblesse et la Résistance aux Pokémon de Banc). Lancez une pièce. Si c'est pile, Forretress  s'inflige 80 dégâts.",
+          "fr": "Inflige 10 dégâts à chaque Pokémon de Banc (les vôtres et ceux de votre adversaire). (Vous ne pouvez pas appliquer la Faiblesse et la Résistance aux Pokémon de Banc). Lancez une pièce. Si c'est pile, Forretress G s'inflige 80 dégâts.",
           "de": "Dieser Angriff fügt jedem Pokémon auf der Bank (deinen und denen deines Gegners) 10 Schadenspunkte zu. (Wende Schwäche und Resistenz bei Pokémon auf der Bank nicht an.) Wirf 1 Münze. Bei „Zahl“ fügt Forstellka G sich selbst 80 Schadenspunkte zu."
         }
       }
@@ -8420,7 +8420,7 @@
     "category": "pokemon",
     "name": {
       "en": "Gliscor E4",
-      "fr": "Scorvol  Niv. 53",
+      "fr": "Scorvol 4 Niv. 53",
       "de": "Skorgo 4"
     },
     "pokemon": [
@@ -8620,7 +8620,7 @@
         "damage": "",
         "text": {
           "en": "Search your deck for a Fire Energy card and attach it to Growlithe. Shuffle your deck afterward.",
-          "fr": "Cherchez dans votre deck une carte Énergie Fire et attachez-la à Caninos. Ensuite, mélangez votre deck.",
+          "fr": "Cherchez dans votre deck une carte Énergie {R} et attachez-la à Caninos. Ensuite, mélangez votre deck.",
           "de": "Durchsuche dein Deck nach 1 {R}-Energiekarte und lege sie an Fukano an. Mische dein Deck danach."
         }
       },
@@ -8785,7 +8785,7 @@
     "category": "pokemon",
     "name": {
       "en": "Houndoom E4",
-      "fr": "Demolosse  Niv. 52",
+      "fr": "Demolosse 4 Niv. 52",
       "de": "Hundemon 4"
     },
     "pokemon": [
@@ -8861,7 +8861,7 @@
         "damage": "20",
         "text": {
           "en": "The Defending Pokémon can't retreat during your opponent's next turn.",
-          "fr": "Le  Pokémon Défenseur ne peut pas battre en retraite lors du prochain tour de votre adversaire.",
+          "fr": "Le Pokémon Défenseur ne peut pas battre en retraite lors du prochain tour de votre adversaire.",
           "de": "Das Verteidigende Pokémon kann sich im nächsten Zug deines Gegners nicht zurückziehen."
         }
       },
@@ -10257,7 +10257,7 @@
     "category": "pokemon",
     "name": {
       "en": "Quagsire GL",
-      "fr": "Maraiste  Niv. 34",
+      "fr": "Maraiste GL Niv. 34",
       "de": "Morlord GL"
     },
     "pokemon": [
@@ -10334,7 +10334,7 @@
         "damage": "40",
         "text": {
           "en": "You may switch Quagsire GL with 1 of your Benched Pokémon.",
-          "fr": "Vous pouvez échanger Maraiste  avec 1 des Pokémon de votre Banc.",
+          "fr": "Vous pouvez échanger Maraiste GL avec 1 des Pokémon de votre Banc.",
           "de": "Du kannst Morlord GL gegen 1 Pokémon auf deiner Bank austauschen."
         }
       }
@@ -10438,7 +10438,7 @@
         "damage": "",
         "text": {
           "en": "Search your deck for up to 2 Water Energy cards, show them to your opponent, and put them into your hand. Shuffle your deck afterward.",
-          "fr": "Cherchez dans votre deck 2 cartes Énergie Water, montrez-les à votre adversaire et placez-les dans votre main. Ensuite, mélangez votre deck.",
+          "fr": "Cherchez dans votre deck 2 cartes Énergie {W}, montrez-les à votre adversaire et placez-les dans votre main. Ensuite, mélangez votre deck.",
           "de": "Durchsuche dein Deck nach bis zu 2 {W}-Energiekarten, zeige sie deinem Gegner und nimm sie auf die Hand. Mische dein Deck danach."
         }
       },
@@ -10715,7 +10715,7 @@
     "category": "pokemon",
     "name": {
       "en": "Lucario GL",
-      "fr": "Lucario  Niv. 32",
+      "fr": "Lucario GL Niv. 32",
       "de": "Lucario GL"
     },
     "pokemon": [
@@ -11431,7 +11431,7 @@
     "category": "pokemon",
     "name": {
       "en": "Turtwig GL",
-      "fr": "Tortipouss  Niv. 20",
+      "fr": "Tortipouss GL Niv. 20",
       "de": "Chelast GL"
     },
     "pokemon": [
@@ -11508,7 +11508,7 @@
         "damage": "30",
         "text": {
           "en": "After your attack, remove from Turtwig GL the number of damage counters equal to the damage you did to the Defending Pokémon.",
-          "fr": "Après votre attaque, retirez à Tortipouss  autant de marqueurs de dégât que vous avez infligé de dégâts au Pokémon Défenseur.",
+          "fr": "Après votre attaque, retirez à Tortipouss GL autant de marqueurs de dégât que vous avez infligé de dégâts au Pokémon Défenseur.",
           "de": "Entferne nach deinem Angriff Schadensmarken von Chelast GL entsprechend der Höhe der Schadenspunkte, die dem Verteidigenden Pokémon durch diesen Angriff zugefügt wurden."
         }
       }
@@ -11953,7 +11953,7 @@
     "category": "pokemon",
     "name": {
       "en": "Luxray GL",
-      "fr": "Luxray  Niv. 48",
+      "fr": "Luxray GL Niv. 48",
       "de": "Luxtra GL"
     },
     "pokemon": [
@@ -12568,7 +12568,7 @@
     "category": "trainer",
     "name": {
       "en": "Team Galactic's Invention G-107 Technical Machine G",
-      "fr": "Machine Technique  Invention G-107 de Team Galaxie",
+      "fr": "Machine Technique G Invention G-107 de Team Galaxie",
       "de": "Team Galaktiks Erfindung G-107 Technische Maschine"
     },
     "pokemon": [],
@@ -13073,7 +13073,7 @@
     ],
     "rules_text": {
       "en": "If the Pokémon Darkness Energy is attached to attacks, the attack does 10 more damage to the Active Pokémon (before applying Weakness and Resistance). Ignore this effect if the Pokémon that Darkness Energy is attached to isn't Darkness. Darkness Energy provides Darkness Energy. (Doesn't count as a basic Energy card.)",
-      "fr": "Si le Pokémon auquel Énergie Obscurité est attachée attaque, cette attaque inflige 10 dégâts supplémentaires au Pokémon Actif (avant application de la Faiblesse et de la Résistance). Ignorez cet effet si le Pokémon auquel Énergie Obscurité est attachée n'est pas Darkness. Énergie Obscurité fournit de l'Énergie Darkness. (Elle ne compte pas comme carte Énergie de base).",
+      "fr": "Si le Pokémon auquel Énergie Obscurité est attachée attaque, cette attaque inflige 10 dégâts supplémentaires au Pokémon Actif (avant application de la Faiblesse et de la Résistance). Ignorez cet effet si le Pokémon auquel Énergie Obscurité est attachée n'est pas {D}. Énergie Obscurité fournit de l'Énergie {D}. (Elle ne compte pas comme carte Énergie de base).",
       "de": "Falls das Pokémon, an das Finsternis-Energie angelegt ist, angreift, fügt der Angriff den Aktiven Pokémon 10 weitere Schadenspunkte zu (bevor Schwäche und Resistenz verrechnet werden). Dieser Effekt wirkt nur, wenn die Finsternis-Energie an einem Pokémon vom Typ {D} angelegt ist. Finsternis-Energie liefert {D}-Energie. (Zählt nicht als Basis-Energiekarte.)"
     }
   },
@@ -13254,7 +13254,7 @@
         "damage": "40+",
         "text": {
           "en": "Does 40 damage plus 10 more damage for each Colorless Energy in the Defending Pokémon's Retreat Cost (after applying effects to the Retreat Cost).",
-          "fr": "Inflige 40 dégâts plus 10 dégâts supplémentaires pour chaque Énergie Colorless dans le Coût de retraite du Pokémon Défenseur (après application des effets sur le Coût de retraite).",
+          "fr": "Inflige 40 dégâts plus 10 dégâts supplémentaires pour chaque Énergie {C} dans le Coût de retraite du Pokémon Défenseur (après application des effets sur le Coût de retraite).",
           "de": "Dieser Angriff fügt 40 Schadenspunkte plus 10 weitere Schadenspunkte für jede {C}-Energie in den Rückzugskosten des Verteidigenden Pokémon zu (nachdem Effekte auf die Rückzugskosten verrechnet wurden)."
         }
       }
@@ -13333,7 +13333,7 @@
         "damage": "",
         "text": {
           "en": "Search your deck for a Fire Energy card and attach it to 1 of your Benched Pokémon. Shuffle your deck afterward.",
-          "fr": "Cherchez dans votre deck une carte Énergie Fire et attachez-la à 1 des Pokémon de votre Banc. Ensuite, mélangez votre deck.",
+          "fr": "Cherchez dans votre deck une carte Énergie {R} et attachez-la à 1 des Pokémon de votre Banc. Ensuite, mélangez votre deck.",
           "de": "Durchsuche dein Deck nach 1 {R}-Energiekarte und lege sie an 1 Pokémon auf deiner Bank an. Mische dein Deck danach."
         }
       },
