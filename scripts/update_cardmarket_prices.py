@@ -7,6 +7,8 @@ import json
 import os
 import sys
 from pathlib import Path
+
+from update_logging import log
 from typing import Any
 
 from cardmarket_prices import download_price_guide, index_price_guide, normalized_price, product_url
@@ -23,14 +25,14 @@ def main() -> int:
     data_root = project_root / "app" / "data"
     cache_path = project_root / "tcgdex_data" / "cardmarket-price-guide.json"
     if not data_root.is_dir():
-        print(f"Missing app data folder: {data_root}", file=sys.stderr)
+        log(f"Missing app data folder: {data_root}", file=sys.stderr)
         return 1
 
-    print("Downloading Cardmarket price guide")
+    log("Downloading Cardmarket price guide")
     try:
         guide = download_price_guide(cache_path)
     except Exception as error:
-        print(f"Unable to load Cardmarket price guide: {error}", file=sys.stderr)
+        log(f"Unable to load Cardmarket price guide: {error}", file=sys.stderr)
         return 1
     updated_at, prices = index_price_guide(guide)
 
@@ -64,12 +66,12 @@ def main() -> int:
             write_json_atomic(cards_path, cards)
             files_changed += 1
 
-    print("Cardmarket price update complete")
-    print(f"  Guide updated:     {updated_at or 'unknown'}")
-    print(f"  Variants scanned:  {variants_seen}")
-    print(f"  Variants priced:   {variants_priced}")
-    print(f"  Products missing:  {missing_products}")
-    print(f"  Files changed:     {files_changed}")
+    log("Cardmarket price update complete")
+    log(f"  Guide updated:     {updated_at or 'unknown'}")
+    log(f"  Variants scanned:  {variants_seen}")
+    log(f"  Variants priced:   {variants_priced}")
+    log(f"  Products missing:  {missing_products}")
+    log(f"  Files changed:     {files_changed}")
     return 0
 
 

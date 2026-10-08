@@ -67,10 +67,22 @@ python3 update_data.py
 
 This single command fetches TCGdex, creates the catalog, refreshes Cardmarket
 prices, downloads images, generates the coverage report, and validates the
-application. Updates are append-only by default. Use
-`python3 update_data.py --help` to see overwrite and optional skip controls.
-Personal collection, binder, and manual-image data are preserved during
-overwrite updates.
+application. Catalog updates are append-only by default. Every update retries
+all missing card images, set logos, and symbols, including assets previously
+reported unavailable. Existing downloaded images are reused.
+
+The only optional modes are:
+
+- `python3 update_data.py --prices`: refresh prices of existing cards and validate
+  the application, without fetching TCGdex, changing the catalog, or processing images.
+- `python3 update_data.py --reset`: rebuild the catalog from the latest TCGdex
+  source, discard generated image and price caches, and download images again.
+  Collection, binder, manual-image records, and manual image files are preserved.
+
+The modes cannot be combined. All successful runs include application validation.
+Terminal output uses color and a live image progress bar with counts, elapsed
+time, and estimated time remaining. Redirected output uses periodic plain-text
+progress lines. Set `NO_COLOR=1` to disable colors.
 
 ## Run the application
 

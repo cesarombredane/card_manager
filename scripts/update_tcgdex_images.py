@@ -4,9 +4,11 @@
 from __future__ import annotations
 
 import argparse
-import json
+import sys
 import time
 from pathlib import Path
+
+from update_logging import duration, log
 
 from report_coverage import generate_coverage
 from update_tcgdex_data import IMAGE_WORKERS, REQUEST_TIMEOUT, sync_assets
@@ -14,11 +16,6 @@ from update_tcgdex_data import IMAGE_WORKERS, REQUEST_TIMEOUT, sync_assets
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument(
-        "--overwrite",
-        action="store_true",
-        help="Recheck known-missing assets; existing cached image files remain reusable.",
-    )
     parser.add_argument(
         "--set-only",
         action="store_true",
@@ -35,24 +32,8 @@ def main() -> int:
     public_root = project_root / "app" / "public" / "images"
 
     if not (data_root / "series.json").exists():
-        print(f"Missing generated card data: {data_root}")
+        log(f"Missing generated card data: {data_root}")
         return 1
-
-    missing_status = public_root / ".tcgdex-missing-assets.json"
-    if args.overwrite and missing_status.exists():
-        if args.set_only:
-            missing_assets = json.loads(missing_status.read_text(encoding="utf-8"))
-            card_assets = {
-                url: unavailable
-                for url, unavailable in missing_assets.items()
-                if not url.endswith(("/logo.webp", "/symbol.webp"))
-            }
-            missing_status.write_text(
-                json.dumps(card_assets, ensure_ascii=False, indent=2) + "\n",
-                encoding="utf-8",
-            )
-        else:
-            missing_status.unlink()
 
     result = sync_assets(
         data_root,
@@ -63,16 +44,13 @@ def main() -> int:
     )
     coverage = generate_coverage(data_root, data_root / "coverage.json")
 
-    print("\nImage update complete")
-    print(f"  Mode:                 {'recheck unavailable' if args.overwrite else 'missing only'}")
-    print(f"  Asset scope:          {'sets only' if args.set_only else 'sets and cards'}")
-    print(f"  Missing assets checked: {result['candidates']}")
-    print(f"  Images downloaded:      {result['downloaded']}")
-    print(f"  References filled:      {result['filled_references']}")
-    print(f"  Known unavailable:      {result['unavailable']}")
-    print(f"  Request failures:       {result['failures']}")
-    print(f"  Image coverage:         {coverage['totals']['image_slot_coverage_percent']:.2f}%")
-    print(f"  Total duration:         {time.monotonic() - started:.1f}s")
+    log("Image update finished with errors" if result["failures"] else "Image update complete",
+        file=sys.stderr if result["failures"] else None)
+    log(f"Checked {result['candidates']:,} assets · downloaded {result['downloaded']:,} · "
+        f"unavailable {result['unavailable']:,} · failed {result['failures']:,}")
+    log(f"Filled {result['filled_references']:,} references · "
+        f"image coverage {coverage['totals']['image_slot_coverage_percent']:.2f}% · "
+        f"elapsed {duration(time.monotonic() - started)}")
     return 1 if result["failures"] else 0
 
 

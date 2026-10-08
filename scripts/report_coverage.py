@@ -9,6 +9,8 @@ import os
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
+
+from update_logging import log
 from typing import Any
 
 
@@ -196,13 +198,13 @@ def main() -> int:
     output = (root / args.output).resolve() if args.output else data_root / "coverage.json"
     report = generate_coverage(data_root, output)
     totals = report["totals"]
-    print("Coverage generated")
-    print(f"  Sets:            {totals['sets']}")
-    print(f"  Cards:           {totals['cards']}")
-    print(f"  Variants:        {totals['variants']}")
-    print(f"  Card coverage:   {totals['card_image_coverage_percent']:.2f}%")
-    print(f"  Image coverage:  {totals['image_slot_coverage_percent']:.2f}%")
-    print(f"  Output:           {output}")
+    log("Coverage generated")
+    log(f"  Sets:            {totals['sets']}")
+    log(f"  Cards:           {totals['cards']}")
+    log(f"  Variants:        {totals['variants']}")
+    log(f"  Card coverage:   {totals['card_image_coverage_percent']:.2f}%")
+    log(f"  Image coverage:  {totals['image_slot_coverage_percent']:.2f}%")
+    log(f"  Output:           {output}")
     return 0
 
 

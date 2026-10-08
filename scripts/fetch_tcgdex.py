@@ -7,6 +7,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+from update_logging import log
+
 
 REPOSITORY_URL = "https://github.com/tcgdex/cards-database.git"
 SPARSE_FOLDERS = ("data", "data-asia")
@@ -22,23 +24,23 @@ def main() -> int:
     checkout = project_root / "tcgdex_data" / "cards-database"
 
     if checkout.exists() and not (checkout / ".git").is_dir():
-        print(f"Refusing to replace non-Git path: {checkout}", file=sys.stderr)
+        log(f"Refusing to replace non-Git path: {checkout}", file=sys.stderr)
         return 1
 
     if not checkout.exists():
         checkout.parent.mkdir(parents=True, exist_ok=True)
-        print(f"Cloning TCGdex into {checkout}")
+        log(f"Cloning TCGdex into {checkout}")
         run([
             "git", "clone", "--depth", "1", "--filter=blob:none", "--sparse",
             REPOSITORY_URL, str(checkout),
         ])
         run(["git", "sparse-checkout", "set", *SPARSE_FOLDERS], cwd=checkout)
     else:
-        print(f"Updating existing TCGdex checkout in {checkout}")
+        log(f"Updating existing TCGdex checkout in {checkout}")
         run(["git", "pull", "--ff-only"], cwd=checkout)
         run(["git", "sparse-checkout", "set", *SPARSE_FOLDERS], cwd=checkout)
 
-    print(f"TCGdex checkout ready at commit {run(['git', 'rev-parse', 'HEAD'], cwd=checkout)}")
+    log(f"TCGdex checkout ready at commit {run(['git', 'rev-parse', 'HEAD'], cwd=checkout)}")
     return 0
 
 

@@ -12,8 +12,10 @@ import shutil
 import subprocess
 import sys
 import time
-from concurrent.futures import ThreadPoolExecutor, as_completed
+from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
 from pathlib import Path
+
+from update_logging import Progress, log
 from typing import Any
 from urllib.error import HTTPError, URLError
 from urllib.parse import quote
@@ -935,14 +937,14 @@ def inventory_changes(
 
 
 def print_change_table(changes: dict[str, dict[str, int]], overwrite: bool) -> None:
-    print("\nData summary")
-    print("  Type       Pulled    Added    Updated    Removed")
-    print("  --------  -------  -------  ---------  ---------")
+    log("\nData summary")
+    log("  Type       Pulled    Added    Updated    Removed")
+    log("  --------  -------  -------  ---------  ---------")
     for kind in ("series", "sets", "cards", "pokemon"):
         row = changes[kind]
         updated = row["updated"] if overwrite else 0
         removed = row["removed"] if overwrite else 0
-        print(f"  {kind.title():<8}  {row['pulled']:>7}  {row['added']:>7}  {updated:>9}  {removed:>9}")
+        log(f"  {kind.title():<8}  {row['pulled']:>7}  {row['added']:>7}  {updated:>9}  {removed:>9}")
 
 
 def merge_append_only(existing_root: Path, discovered_root: Path, destination_root: Path) -> dict[str, int]:
@@ -1134,12 +1136,8 @@ def sync_assets(
     public_root.mkdir(parents=True, exist_ok=True)
     status_path = public_root / ".tcgdex-missing-assets.json"
     missing: dict[str, bool] = json.loads(status_path.read_text()) if status_path.exists() else {}
-    legacy_card_status_path = cards_root / ".asset-status.json"
-    legacy_card_status = (
-        json.loads(legacy_card_status_path.read_text(encoding="utf-8"))
-        if legacy_card_status_path.exists() else {}
-    )
     tasks: dict[str, Path] = {}
+    log("Scanning cached images and missing assets...")
 
     for sets_path in data_root.glob("*/sets.json"):
         for set_row in json.loads(sets_path.read_text(encoding="utf-8")):
@@ -1149,7 +1147,7 @@ def sync_assets(
             symbol_url = asset_url("univ", upstream_series, upstream_set, "symbol.webp")
             symbol_path = sets_root / set_id / "symbol.webp"
             cached_symbol = existing_image(sets_root / set_id / "symbol")
-            if not cached_symbol and symbol_url not in missing:
+            if not cached_symbol:
                 tasks[symbol_url] = symbol_path
 
             for language_id in set_row["language_ids"]:
@@ -1159,7 +1157,7 @@ def sync_assets(
                     existing_image(sets_root / set_id / f"logo-{language_id}")
                     or existing_image(sets_root / set_id / "logo")
                 )
-                if not cached_logo and logo_url not in missing:
+                if not cached_logo:
                     tasks[logo_url] = logo_path
 
             if set_only:
@@ -1172,40 +1170,53 @@ def sync_assets(
                     destination = cards_root / set_id / language_id / f"{filename}.webp"
                     cached_card = existing_image(cards_root / set_id / language_id / filename)
                     url = asset_url(language_id, upstream_series, upstream_set, str(card["number"]), "high.webp")
-                    legacy_key = f"{set_id}/{language_id}/{card['id']}"
-                    if legacy_key in legacy_card_status and legacy_card_status[legacy_key] is None:
-                        missing[url] = True
                     existing_images = [
                         str(variant.get("images", {}).get(language_id) or "")
                         for variant in card.get("variants", [])
                     ]
                     has_existing_image = any(image.lower().endswith(".webp") for image in existing_images)
-                    if not cached_card and not has_existing_image and url not in missing:
+                    if not cached_card and not has_existing_image:
                         tasks[url] = destination
 
     downloaded = unavailable = failures = 0
+    failure_samples: list[str] = []
     if tasks:
-        with ThreadPoolExecutor(max_workers=max(1, workers)) as executor:
+        with Progress("Images", len(tasks)) as progress, ThreadPoolExecutor(max_workers=max(1, workers)) as executor:
             futures = {
                 executor.submit(download_webp, url, destination, timeout): url
                 for url, destination in tasks.items()
             }
-            for future in as_completed(futures):
-                url = futures[future]
-                try:
-                    future.result()
-                    downloaded += 1
-                except HTTPError as error:
-                    if error.code == 404:
-                        missing[url] = True
-                        unavailable += 1
-                    else:
+            pending = set(futures)
+            while pending:
+                done, pending = wait(pending, timeout=0.2, return_when=FIRST_COMPLETED)
+                for future in done:
+                    url = futures[future]
+                    try:
+                        future.result()
+                        missing.pop(url, None)
+                        downloaded += 1
+                    except HTTPError as error:
+                        if error.code == 404:
+                            missing[url] = True
+                            unavailable += 1
+                        else:
+                            failures += 1
+                            if len(failure_samples) < 5:
+                                failure_samples.append(f"Asset request failed ({error.code}): {url}")
+                    except (URLError, TimeoutError, OSError, ValueError) as error:
                         failures += 1
-                        print(f"Asset request failed ({error.code}): {url}", file=sys.stderr)
-                except (URLError, TimeoutError, OSError, ValueError) as error:
-                    failures += 1
-                    print(f"Asset request failed: {url}: {error}", file=sys.stderr)
+                        if len(failure_samples) < 5:
+                            failure_samples.append(f"Asset request failed: {url}: {error}")
+                progress.update(len(tasks) - len(pending),
+                                f"saved {downloaded:,} / missing {unavailable:,} / errors {failures:,}")
+        for message in failure_samples:
+            log(message, file=sys.stderr)
+        if failures > len(failure_samples):
+            log(f"{failures - len(failure_samples):,} additional image requests failed.", file=sys.stderr)
+    else:
+        log("All image assets are already cached.")
 
+    log("Updating image references...")
     referenced = filled_references = 0
     for sets_path in data_root.glob("*/sets.json"):
         sets = json.loads(sets_path.read_text(encoding="utf-8"))
@@ -1385,7 +1396,7 @@ def build_catalog(args: argparse.Namespace, source_root: Path, commit_sha: str) 
     discovered_root = output_root.with_name(f"{output_root.name}.discovered")
 
     if not source_root.exists():
-        print(f"Missing source folder: {source_root}", file=sys.stderr)
+        log(f"Missing source folder: {source_root}", file=sys.stderr)
         return 1
 
     for temporary_root in (staging_root, discovered_root):
@@ -1395,19 +1406,19 @@ def build_catalog(args: argparse.Namespace, source_root: Path, commit_sha: str) 
 
     if args.preserve_prices:
         cardmarket_updated_at, cardmarket_prices = "", {}
-        print("Skipping Cardmarket price guide and preserving existing prices")
+        log("Skipping Cardmarket price guide and preserving existing prices")
     else:
-        print("Loading Cardmarket price guide")
+        log("Loading Cardmarket price guide")
         cache_path = project_root / "tcgdex_data" / "cardmarket-price-guide.json"
         try:
             price_guide = download_price_guide(cache_path)
             cardmarket_updated_at, cardmarket_prices = index_price_guide(price_guide)
-            print(f"      Loaded {len(cardmarket_prices)} products ({cardmarket_updated_at or 'unknown date'})")
+            log(f"      Loaded {len(cardmarket_prices)} products ({cardmarket_updated_at or 'unknown date'})")
         except Exception as error:
             cardmarket_updated_at, cardmarket_prices = "", {}
-            print(f"      Price guide unavailable; generating links without prices: {error}", file=sys.stderr)
+            log(f"      Price guide unavailable; generating links without prices: {error}", file=sys.stderr)
 
-    print("[1/3] Converting supported physical-card data")
+    log("[1/3] Converting supported physical-card data")
     phase_started = time.monotonic()
     pokemon_catalog, pokemon_aliases, pokemon_name_aliases = build_pokemon_catalog(source_root)
     pokemon_catalog_ids = {entry["id"] for entry in pokemon_catalog}
@@ -1451,44 +1462,41 @@ def build_catalog(args: argparse.Namespace, source_root: Path, commit_sha: str) 
     write_json(discovered_root / "pokemon.json", pokemon_catalog)
     if args.preserve_images:
         preserved_images = preserve_image_references(output_root, discovered_root)
-        print(
+        log(
             f"      Preserved image references for {preserved_images['sets']} sets and "
             f"{preserved_images['variants']} card variants"
         )
     if args.preserve_prices:
         preserved_prices = preserve_price_data(output_root, discovered_root)
-        print(f"      Preserved Cardmarket data for {preserved_prices} card variants")
+        log(f"      Preserved Cardmarket data for {preserved_prices} card variants")
     validate_generated_sets(discovered_root)
     mapped_count = sum(
         count for status, count in mapping_diagnostics["counts"].items()
         if status not in {"ambiguous", "unmapped"}
     )
-    print("\nPokemon mapping summary")
-    print(f"  Mapped:       {mapped_count}")
-    for status in ("upstream-dex", "exact-name", "normalized-name", "owned-name", "override"):
-        print(f"  {status:<13} {mapping_diagnostics['counts'].get(status, 0)}")
-    print(f"  Ambiguous:    {mapping_diagnostics['counts'].get('ambiguous', 0)}")
-    print(f"  Unmapped:     {mapping_diagnostics['counts'].get('unmapped', 0)}")
+    log("\nPokemon mapping summary")
+    log(f"Mapped {mapped_count:,} · ambiguous {mapping_diagnostics['counts'].get('ambiguous', 0):,} · "
+        f"unmapped {mapping_diagnostics['counts'].get('unmapped', 0):,}")
     for status in ("ambiguous", "unmapped"):
         if mapping_diagnostics[status]:
-            print(f"  Sample {status} cards:")
-            for card in mapping_diagnostics[status][:10]:
+            log(f"  Sample {status} cards:")
+            for card in mapping_diagnostics[status][:3]:
                 display_name = card["name"].get("en") or next(iter(card["name"].values()), "(unnamed)")
-                print(f"    {card['id']}: {display_name}")
-    print(f"      Completed in {time.monotonic() - phase_started:.1f}s")
+                log(f"    {card['id']}: {display_name}")
+    log(f"      Completed in {time.monotonic() - phase_started:.1f}s")
 
     existing_inventory = catalog_inventory(output_root)
     discovered_inventory = catalog_inventory(discovered_root)
     missing_override_cards = sorted(CARD_POKEMON_OVERRIDES.keys() - discovered_inventory["cards"].keys())
     if missing_override_cards:
-        print(f"Warning: {len(missing_override_cards)} Pokemon mapping overrides reference missing cards.", file=sys.stderr)
+        log(f"Warning: {len(missing_override_cards)} Pokemon mapping overrides reference missing cards.", file=sys.stderr)
     mapping_losses = [
         card_id for card_id in existing_inventory["cards"].keys() & discovered_inventory["cards"].keys()
         if existing_inventory["cards"][card_id].get("pokemon")
         and not discovered_inventory["cards"][card_id].get("pokemon")
     ]
     if mapping_losses:
-        print(
+        log(
             f"Warning: {len(mapping_losses)} previously mapped Pokemon cards became unmapped "
             f"(examples: {', '.join(sorted(mapping_losses)[:10])}).",
             file=sys.stderr,
@@ -1502,23 +1510,23 @@ def build_catalog(args: argparse.Namespace, source_root: Path, commit_sha: str) 
         for row in discovered_inventory["cards"].values()
     )
     if new_unmapped > old_unmapped:
-        print(
+        log(
             f"Warning: unmapped Pokemon cards increased from {old_unmapped} to {new_unmapped}.",
             file=sys.stderr,
         )
     changes = inventory_changes(existing_inventory, discovered_inventory)
     print_change_table(changes, args.overwrite)
 
-    print(f"\n[2/3] Preparing {'overwrite' if args.overwrite else 'append-only'} catalog")
+    log(f"\n[2/3] Preparing {'overwrite' if args.overwrite else 'append-only'} catalog")
     if args.overwrite:
         shutil.copytree(discovered_root, staging_root)
         additions = {kind: changes[kind]["added"] for kind in changes}
     else:
         additions = merge_append_only(output_root, discovered_root, staging_root)
     validate_generated_sets(staging_root)
-    print(f"      New records applied: {sum(additions.values())}")
+    log(f"      New records applied: {sum(additions.values())}")
 
-    print("\n[3/3] Generating coverage and publishing")
+    log("\n[3/3] Generating coverage and publishing")
     from report_coverage import generate_coverage
     coverage = generate_coverage(staging_root, staging_root / "coverage.json")
 
@@ -1537,15 +1545,15 @@ def build_catalog(args: argparse.Namespace, source_root: Path, commit_sha: str) 
         shutil.rmtree(backup_root)
     shutil.rmtree(discovered_root)
 
-    print("\nUpdate complete")
-    print(f"  Mode:              {'overwrite' if args.overwrite else 'append-only'}")
-    print(f"  TCGdex commit:     {commit_sha}")
-    print(f"  Series:            {coverage['totals']['sets'] and len(coverage['series'])}")
-    print(f"  Sets:              {coverage['totals']['sets']}")
-    print(f"  Cards:             {coverage['totals']['cards']}")
-    print(f"  Variants:          {coverage['totals']['variants']}")
-    print(f"  Image coverage:    {coverage['totals']['image_slot_coverage_percent']:.2f}%")
-    print(f"  Published to:      {output_root}")
+    log("\nUpdate complete")
+    log(f"  Mode:              {'overwrite' if args.overwrite else 'append-only'}")
+    log(f"  TCGdex commit:     {commit_sha}")
+    log(f"  Series:            {coverage['totals']['sets'] and len(coverage['series'])}")
+    log(f"  Sets:              {coverage['totals']['sets']}")
+    log(f"  Cards:             {coverage['totals']['cards']}")
+    log(f"  Variants:          {coverage['totals']['variants']}")
+    log(f"  Image coverage:    {coverage['totals']['image_slot_coverage_percent']:.2f}%")
+    log(f"  Published to:      {output_root}")
     return 0
 
 
@@ -1556,7 +1564,7 @@ def main() -> int:
     project_root = Path(__file__).resolve().parents[1]
     source_root = project_root / "tcgdex_data" / "cards-database"
     if not (source_root / ".git").is_dir():
-        print(
+        log(
             f"Missing TCGdex checkout: {source_root}\n"
             "Run scripts/fetch_tcgdex.py first.",
             file=sys.stderr,
@@ -1564,7 +1572,7 @@ def main() -> int:
         return 1
     commit_sha = run_command(["git", "rev-parse", "HEAD"], cwd=source_root)
     result = build_catalog(args, source_root, commit_sha)
-    print(f"  Total duration:    {time.monotonic() - started:.1f}s")
+    log(f"  Total duration:    {time.monotonic() - started:.1f}s")
     return result
 
 
