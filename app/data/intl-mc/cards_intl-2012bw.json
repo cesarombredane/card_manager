@@ -19,7 +19,7 @@
         "id": "stamped-mcdonalds",
         "type": "stamped",
         "images": {
-          "en": "/images/cards/intl-2012bw/en/1.webp",
+          "en": "",
           "es": "",
           "fr": "",
           "it": ""
@@ -30,7 +30,7 @@
         "cardmarket": {
           "product_id": 281778,
           "currency": "EUR",
-          "updated_at": "2026-10-08T02:51:56+0200",
+          "updated_at": "2026-10-31T02:42:33+0100",
           "price_kind": "standard",
           "average": 15,
           "low": null,
@@ -53,7 +53,9 @@
           "en": "Wrap",
           "fr": "Ligotage"
         },
-        "cost": [],
+        "cost": [
+          "normal"
+        ],
         "damage": "20",
         "text": {
           "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
@@ -65,11 +67,27 @@
           "en": "Tackle",
           "fr": "Charge"
         },
-        "cost": [],
+        "cost": [
+          "grass",
+          "normal"
+        ],
         "damage": "30",
         "text": {}
       }
     ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "water",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1,
     "flavor_text": {
       "en": "They avoid attacks by sinking into the shadows of thick foliage. They retaliate with masterful whipping techniques."
     }
@@ -94,7 +112,7 @@
         "id": "stamped-mcdonalds",
         "type": "stamped",
         "images": {
-          "en": "/images/cards/intl-2012bw/en/10.webp",
+          "en": "",
           "es": "",
           "fr": "",
           "it": ""
@@ -105,7 +123,7 @@
         "cardmarket": {
           "product_id": 281787,
           "currency": "EUR",
-          "updated_at": "2026-10-08T02:51:56+0200",
+          "updated_at": "2026-10-31T02:42:33+0100",
           "price_kind": "standard",
           "average": 32.99,
           "low": 39.95,
@@ -128,11 +146,26 @@
           "en": "Headbutt",
           "fr": "Coup d'Boule"
         },
-        "cost": [],
+        "cost": [
+          "normal"
+        ],
         "damage": "10",
         "text": {}
       }
     ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1,
     "flavor_text": {
       "en": "Its skin has a rubbery elasticity, so it can reduce damage by defensively pulling its skin up to its neck."
     }
@@ -157,7 +190,7 @@
         "id": "stamped-mcdonalds",
         "type": "stamped",
         "images": {
-          "en": "/images/cards/intl-2012bw/en/11.webp",
+          "en": "",
           "es": "",
           "fr": "",
           "it": ""
@@ -168,14 +201,14 @@
         "cardmarket": {
           "product_id": 281788,
           "currency": "EUR",
-          "updated_at": "2026-10-08T02:51:56+0200",
+          "updated_at": "2026-10-31T02:42:33+0100",
           "price_kind": "standard",
-          "average": 39.99,
+          "average": 14.65,
           "low": 9.99,
-          "trend": 20.64,
-          "average_1d": 14.65,
-          "average_7d": 20.31,
-          "average_30d": 17.64,
+          "trend": 20.61,
+          "average_1d": 18.97,
+          "average_7d": 19.46,
+          "average_30d": 17.7,
           "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=281788"
         }
       }
@@ -191,7 +224,9 @@
           "en": "Metal Sound",
           "fr": "Strido-Son"
         },
-        "cost": [],
+        "cost": [
+          "normal"
+        ],
         "damage": "",
         "text": {
           "en": "The Defending Pokémon is now Confused.",
@@ -203,7 +238,11 @@
           "en": "Guard Press",
           "fr": "Pression de Garde"
         },
-        "cost": [],
+        "cost": [
+          "metal",
+          "metal",
+          "normal"
+        ],
         "damage": "60",
         "text": {
           "en": "During your opponent’s next turn, any damage done to this Pokémon by attacks is reduced by 20 (after applying Weakness and Resistance).",
@@ -211,6 +250,19 @@
         }
       }
     ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1,
     "flavor_text": {
       "en": "Spinning minigears are rotated at high speed and repeatedly fired away. It is dangerous if the gears don’t return."
     }
@@ -235,7 +287,7 @@
         "id": "stamped-mcdonalds",
         "type": "stamped",
         "images": {
-          "en": "/images/cards/intl-2012bw/en/12.webp",
+          "en": "",
           "es": "",
           "fr": "",
           "it": ""
@@ -246,14 +298,14 @@
         "cardmarket": {
           "product_id": 281789,
           "currency": "EUR",
-          "updated_at": "2026-10-08T02:51:56+0200",
+          "updated_at": "2026-10-31T02:42:33+0100",
           "price_kind": "standard",
-          "average": 18.75,
+          "average": 21.24,
           "low": 12.49,
-          "trend": 25.06,
-          "average_1d": 19.99,
-          "average_7d": 24.62,
-          "average_30d": 15.73,
+          "trend": 25.4,
+          "average_1d": 23.73,
+          "average_7d": 19.99,
+          "average_30d": 16.95,
           "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=281789"
         }
       }
@@ -269,7 +321,9 @@
           "en": "Dual Chop",
           "fr": "Double Baffe"
         },
-        "cost": [],
+        "cost": [
+          "normal"
+        ],
         "damage": "10×",
         "text": {
           "en": "Flip 2 coins. This attack does 10 damage times the number of heads.",
@@ -277,6 +331,7 @@
         }
       }
     ],
+    "retreat_cost": 1,
     "flavor_text": {
       "en": "They use their tusks to crush the berries they eat. Repeated regrowth makes their tusks strong and sharp."
     }
@@ -301,7 +356,7 @@
         "id": "stamped-mcdonalds",
         "type": "stamped",
         "images": {
-          "en": "/images/cards/intl-2012bw/en/2.webp",
+          "en": "",
           "es": "",
           "fr": "",
           "it": ""
@@ -312,14 +367,14 @@
         "cardmarket": {
           "product_id": 281779,
           "currency": "EUR",
-          "updated_at": "2026-10-08T02:51:56+0200",
+          "updated_at": "2026-10-31T02:42:33+0100",
           "price_kind": "standard",
-          "average": 19.99,
-          "low": 14.99,
-          "trend": 15.91,
-          "average_1d": 19.99,
-          "average_7d": 15.41,
-          "average_30d": 12.01,
+          "average": 17.4,
+          "low": 10,
+          "trend": 16.63,
+          "average_1d": 24.7,
+          "average_7d": 18.49,
+          "average_30d": 12.65,
           "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=281779"
         }
       }
@@ -335,7 +390,9 @@
           "en": "Collect",
           "fr": "Collecte"
         },
-        "cost": [],
+        "cost": [
+          "normal"
+        ],
         "damage": "",
         "text": {
           "en": "Draw a card.",
@@ -347,11 +404,27 @@
           "en": "Scratch",
           "fr": "Griffe"
         },
-        "cost": [],
+        "cost": [
+          "normal",
+          "normal"
+        ],
         "damage": "20",
         "text": {}
       }
     ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "water",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1,
     "flavor_text": {
       "en": "This Pokémon dwells deep in the forest. Eating a leaf from its head whisks weariness away as if by magic."
     }
@@ -376,7 +449,7 @@
         "id": "stamped-mcdonalds",
         "type": "stamped",
         "images": {
-          "en": "/images/cards/intl-2012bw/en/3.webp",
+          "en": "",
           "es": "",
           "fr": "",
           "it": ""
@@ -387,14 +460,14 @@
         "cardmarket": {
           "product_id": 281780,
           "currency": "EUR",
-          "updated_at": "2026-10-08T02:51:56+0200",
+          "updated_at": "2026-10-31T02:42:33+0100",
           "price_kind": "standard",
-          "average": 42.48,
+          "average": 31.5,
           "low": 19.99,
-          "trend": 23.83,
-          "average_1d": 25,
-          "average_7d": 32.84,
-          "average_30d": 21.57,
+          "trend": 24.83,
+          "average_1d": 37.99,
+          "average_7d": 35.72,
+          "average_30d": 22.16,
           "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=281780"
         }
       }
@@ -410,7 +483,9 @@
           "en": "Withdraw",
           "fr": "Repli"
         },
-        "cost": [],
+        "cost": [
+          "normal"
+        ],
         "damage": "",
         "text": {
           "en": "Flip a coin. If heads, prevent all damage done to this Pokémon by attacks during your opponent’s next turn.",
@@ -422,11 +497,21 @@
           "en": "Slash",
           "fr": "Tranche"
         },
-        "cost": [],
+        "cost": [
+          "grass",
+          "normal"
+        ],
         "damage": "20",
         "text": {}
       }
     ],
+    "weaknesses": [
+      {
+        "type": "fire",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 2,
     "flavor_text": {
       "en": "The Pokémon can easily melt holes in hard rocks with a liquid secreted from its mouth."
     }
@@ -451,7 +536,7 @@
         "id": "stamped-mcdonalds",
         "type": "stamped",
         "images": {
-          "en": "/images/cards/intl-2012bw/en/4.webp",
+          "en": "",
           "es": "",
           "fr": "",
           "it": ""
@@ -462,14 +547,14 @@
         "cardmarket": {
           "product_id": 281781,
           "currency": "EUR",
-          "updated_at": "2026-10-08T02:51:56+0200",
+          "updated_at": "2026-10-31T02:42:33+0100",
           "price_kind": "standard",
-          "average": 19.55,
-          "low": 5,
-          "trend": 18.45,
-          "average_1d": 19.55,
-          "average_7d": 16.06,
-          "average_30d": 15.28,
+          "average": 15.78,
+          "low": 4.89,
+          "trend": 17.88,
+          "average_1d": 12,
+          "average_7d": 15.63,
+          "average_30d": 15.14,
           "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=281781"
         }
       }
@@ -485,7 +570,9 @@
           "en": "Flame Charge",
           "fr": "Nitrocharge"
         },
-        "cost": [],
+        "cost": [
+          "normal"
+        ],
         "damage": "",
         "text": {
           "en": "Search your deck for a Fire Energy card and attach it to this Pokémon. Shuffle your deck afterward.",
@@ -497,11 +584,22 @@
           "en": "Heat Crash",
           "fr": "Tacle Feu"
         },
-        "cost": [],
+        "cost": [
+          "fire",
+          "fire",
+          "normal"
+        ],
         "damage": "50",
         "text": {}
       }
     ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 3,
     "flavor_text": {
       "en": "When its internal fire flares up, its movements grow sharper and faster. When in trouble, it emits smoke."
     }
@@ -526,7 +624,7 @@
         "id": "stamped-mcdonalds",
         "type": "stamped",
         "images": {
-          "en": "/images/cards/intl-2012bw/en/5.webp",
+          "en": "",
           "es": "",
           "fr": "",
           "it": ""
@@ -537,14 +635,14 @@
         "cardmarket": {
           "product_id": 281782,
           "currency": "EUR",
-          "updated_at": "2026-10-08T02:51:56+0200",
+          "updated_at": "2026-10-31T02:42:33+0100",
           "price_kind": "standard",
-          "average": 30.5,
-          "low": 6.9,
-          "trend": 15.7,
-          "average_1d": 21,
-          "average_7d": 16.69,
-          "average_30d": 13.68,
+          "average": 6.9,
+          "low": 9.95,
+          "trend": 16.84,
+          "average_1d": 34.95,
+          "average_7d": 20.09,
+          "average_30d": 14.45,
           "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=281782"
         }
       }
@@ -560,7 +658,10 @@
           "en": "Water Gun",
           "fr": "Pistolet à O"
         },
-        "cost": [],
+        "cost": [
+          "normal",
+          "normal"
+        ],
         "damage": "30",
         "text": {}
       },
@@ -569,7 +670,11 @@
           "en": "Razor Shell",
           "fr": "Coquilame"
         },
-        "cost": [],
+        "cost": [
+          "water",
+          "water",
+          "normal"
+        ],
         "damage": "40+",
         "text": {
           "en": "Flip a coin. If heads, this attack does 20 more damage.",
@@ -577,6 +682,13 @@
         }
       }
     ],
+    "weaknesses": [
+      {
+        "type": "lightning",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
     "flavor_text": {
       "en": "Scalchop techniques differ from one Dewott to another. It never neglects maintaining its scalchops."
     }
@@ -601,7 +713,7 @@
         "id": "stamped-mcdonalds",
         "type": "stamped",
         "images": {
-          "en": "/images/cards/intl-2012bw/en/6.webp",
+          "en": "",
           "es": "",
           "fr": "",
           "it": ""
@@ -612,14 +724,14 @@
         "cardmarket": {
           "product_id": 281783,
           "currency": "EUR",
-          "updated_at": "2026-10-08T02:51:56+0200",
+          "updated_at": "2026-10-31T02:42:33+0100",
           "price_kind": "standard",
-          "average": 19.55,
+          "average": 22.28,
           "low": 18,
-          "trend": 20.54,
-          "average_1d": 19.55,
-          "average_7d": 23.48,
-          "average_30d": 14.54,
+          "trend": 21.65,
+          "average_1d": 29.65,
+          "average_7d": 24.07,
+          "average_30d": 15.32,
           "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=281783"
         }
       }
@@ -635,7 +747,9 @@
           "en": "Thundershock",
           "fr": "Éclair"
         },
-        "cost": [],
+        "cost": [
+          "lightning"
+        ],
         "damage": "10",
         "text": {
           "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
@@ -647,7 +761,10 @@
           "en": "Acrobatics",
           "fr": "Acrobatie"
         },
-        "cost": [],
+        "cost": [
+          "normal",
+          "normal"
+        ],
         "damage": "10+",
         "text": {
           "en": "Flip 2 coins. This attack does 20 more damage for each heads.",
@@ -655,6 +772,13 @@
         }
       }
     ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 0,
     "flavor_text": {
       "en": "The energy made in its cheeks’ electric pouches is stored inside its membranes and released while it is gliding."
     }
@@ -679,7 +803,7 @@
         "id": "stamped-mcdonalds",
         "type": "stamped",
         "images": {
-          "en": "/images/cards/intl-2012bw/en/7.webp",
+          "en": "",
           "es": "",
           "fr": "",
           "it": ""
@@ -690,9 +814,9 @@
         "cardmarket": {
           "product_id": 281784,
           "currency": "EUR",
-          "updated_at": "2026-10-08T02:51:56+0200",
+          "updated_at": "2026-10-31T02:42:33+0100",
           "price_kind": "standard",
-          "average": 39.99,
+          "average": 26,
           "low": 5,
           "trend": 20.31,
           "average_1d": 12,
@@ -713,7 +837,10 @@
           "en": "Psy Bolt",
           "fr": "Choc Mental"
         },
-        "cost": [],
+        "cost": [
+          "psychic",
+          "normal"
+        ],
         "damage": "20",
         "text": {
           "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
@@ -721,6 +848,13 @@
         }
       }
     ],
+    "weaknesses": [
+      {
+        "type": "psychic",
+        "value": "x2"
+      }
+    ],
+    "retreat_cost": 1,
     "flavor_text": {
       "en": "Its habitat is dark forests and caves. It emits ultrasonic waves from its nose to learn about its surroundings."
     }
@@ -745,7 +879,7 @@
         "id": "stamped-mcdonalds",
         "type": "stamped",
         "images": {
-          "en": "/images/cards/intl-2012bw/en/8.webp",
+          "en": "",
           "es": "",
           "fr": "",
           "it": ""
@@ -756,10 +890,10 @@
         "cardmarket": {
           "product_id": 281785,
           "currency": "EUR",
-          "updated_at": "2026-10-08T02:51:56+0200",
+          "updated_at": "2026-10-31T02:42:33+0100",
           "price_kind": "standard",
           "average": 24.85,
-          "low": 15,
+          "low": 9.75,
           "trend": 17.59,
           "average_1d": 35,
           "average_7d": 18.73,
@@ -779,15 +913,18 @@
           "en": "Hone Claws",
           "fr": "Aiguisage"
         },
-        "cost": [],
+        "cost": [
+          "normal"
+        ],
         "damage": "",
         "text": {
-          "en": "During your next turn, each of this Pokémon’s attacks does 30 more damage (before applying Weakness and Resistance).\nFighting",
+          "en": "During your next turn, each of this Pokémon’s attacks does 30 more damage (before applying Weakness and Resistance).",
           "fr": "Pendant votre prochain tour, chaque attaque de ce Pokémon inflige 30 dégâts supplémentaires (avant application de la Faiblesse et de la Résistance)."
         }
       },
       {
         "name": {
+          "en": "Scratch",
           "fr": "Griffe"
         },
         "cost": [
@@ -797,6 +934,19 @@
         "text": {}
       }
     ],
+    "weaknesses": [
+      {
+        "type": "water",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "lightning",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 2,
     "flavor_text": {
       "en": "It can dig through the ground at a speed of 30 mph. It could give a car running aboveground a good race."
     }
@@ -821,7 +971,7 @@
         "id": "stamped-mcdonalds",
         "type": "stamped",
         "images": {
-          "en": "/images/cards/intl-2012bw/en/9.webp",
+          "en": "",
           "es": "",
           "fr": "",
           "it": ""
@@ -832,14 +982,14 @@
         "cardmarket": {
           "product_id": 281786,
           "currency": "EUR",
-          "updated_at": "2026-10-08T02:51:56+0200",
+          "updated_at": "2026-10-31T02:42:33+0100",
           "price_kind": "standard",
-          "average": 14.69,
+          "average": 21.84,
           "low": 10,
-          "trend": 22.85,
-          "average_1d": 14.69,
-          "average_7d": 22.17,
-          "average_30d": 17.34,
+          "trend": 23.91,
+          "average_1d": 28.99,
+          "average_7d": 24.16,
+          "average_30d": 18.07,
           "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=281786"
         }
       }
@@ -855,7 +1005,10 @@
           "en": "Knock Off",
           "fr": "Sabotage"
         },
-        "cost": [],
+        "cost": [
+          "dark",
+          "normal"
+        ],
         "damage": "20",
         "text": {
           "en": "Flip a coin. If heads, discard a random card from your opponent’s hand.",
@@ -863,6 +1016,19 @@
         }
       }
     ],
+    "weaknesses": [
+      {
+        "type": "fighting",
+        "value": "x2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "psychic",
+        "value": "-20"
+      }
+    ],
+    "retreat_cost": 1,
     "flavor_text": {
       "en": "They steal from people for fun, but their victims can’t help but forgive them. Their deceptively cute act is perfect."
     }
