@@ -12,8 +12,11 @@ import shutil
 import subprocess
 import sys
 import time
+import threading
+from datetime import datetime, timezone
 from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
 from pathlib import Path
+from typing import Callable, TextIO
 
 from update_logging import Progress, log
 from typing import Any
@@ -1105,7 +1108,7 @@ def existing_image(base: Path) -> Path | None:
 
 def asset_url(language_id: str, series_id: str, set_id: str, *names: str) -> str:
     language = ASSET_LANGUAGE_CODES.get(language_id, language_id)
-    parts = (language, series_id.lower(), set_id.lower(), *names)
+    parts = (language, series_id, set_id, *names)
     return f"{TCGDEX_ASSET_ROOT}/{'/'.join(quote(part, safe='') for part in parts)}"
 
 
@@ -1123,12 +1126,70 @@ def download_webp(url: str, destination: Path, timeout: float) -> None:
     os.replace(temporary, destination)
 
 
+def download_asset(
+    url: str, destination: Path, timeout: float, image_log: TextIO,
+    lock: threading.Lock, fallback_urls: list[str],
+) -> None:
+    """Log every request, retry temporary errors, and try localized symbols."""
+    urls = [url, *fallback_urls]
+    for url_index, candidate in enumerate(urls):
+        for attempt in range(1, 4):
+            started = time.monotonic()
+            error = None
+            try:
+                download_webp(candidate, destination, timeout)
+            except (HTTPError, URLError, TimeoutError, OSError, ValueError) as caught:
+                error = caught
+
+            status_code = error.code if isinstance(error, HTTPError) else None
+            retryable = (
+                status_code in {408, 429, 500, 502, 503, 504}
+                if isinstance(error, HTTPError)
+                else isinstance(error, (URLError, TimeoutError))
+            )
+            retry = error is not None and retryable and attempt < 3
+            fallback = status_code == 404 and url_index + 1 < len(urls)
+            event = {
+                "timestamp": datetime.now(timezone.utc).isoformat(),
+                "url": candidate,
+                "destination": str(destination),
+                "attempt": attempt,
+                "elapsed_seconds": round(time.monotonic() - started, 3),
+                "status": ("downloaded" if error is None else "retry" if retry else
+                           "fallback" if fallback else "unavailable" if status_code == 404
+                           else "failed"),
+                "http_status": status_code,
+            }
+            if error is not None:
+                event["error_type"] = type(error).__name__
+                event["error"] = str(error)
+                if isinstance(error, HTTPError):
+                    try:
+                        event["response_body"] = error.read(2048).decode("utf-8", errors="replace")
+                    except OSError as body_error:
+                        event["response_body_error"] = str(body_error)
+                    finally:
+                        error.close()
+            with lock:
+                image_log.write(json.dumps(event, ensure_ascii=False) + "\n")
+                image_log.flush()
+            if error is None:
+                return
+            if retry:
+                time.sleep(2 ** (attempt - 1))
+            elif fallback:
+                break
+            else:
+                raise error
+
+
 def sync_assets(
     data_root: Path,
     public_root: Path,
     workers: int,
     timeout: float,
     set_only: bool = False,
+    log_path: Path | None = None,
 ) -> dict[str, int]:
     """Reuse cached assets, concurrently fetch missing ones, and update JSON URLs."""
     cards_root = public_root / "cards"
@@ -1137,6 +1198,11 @@ def sync_assets(
     status_path = public_root / ".tcgdex-missing-assets.json"
     missing: dict[str, bool] = json.loads(status_path.read_text()) if status_path.exists() else {}
     tasks: dict[str, Path] = {}
+    symbol_fallbacks: dict[str, list[str]] = {}
+    log_path = log_path or data_root.parent.parent / "reports" / "images.jsonl"
+    log_path.parent.mkdir(parents=True, exist_ok=True)
+    log_path.write_text("", encoding="utf-8")
+    log(f"Per-image log: {log_path}")
     log("Scanning cached images and missing assets...")
 
     for sets_path in data_root.glob("*/sets.json"):
@@ -1144,11 +1210,15 @@ def sync_assets(
             set_id = str(set_row["id"])
             upstream_set = str(set_row["tcgdex_id"])
             upstream_series = str(set_row["tcgdex_series_id"])
-            symbol_url = asset_url("univ", upstream_series, upstream_set, "symbol.webp")
+            symbol_languages = list(dict.fromkeys(["en", *set_row["language_ids"]]))
+            symbol_urls = [asset_url(language, upstream_series, upstream_set, "symbol.webp")
+                           for language in symbol_languages]
+            symbol_url = symbol_urls[0]
             symbol_path = sets_root / set_id / "symbol.webp"
             cached_symbol = existing_image(sets_root / set_id / "symbol")
             if not cached_symbol:
                 tasks[symbol_url] = symbol_path
+                symbol_fallbacks[symbol_url] = symbol_urls[1:]
 
             for language_id in set_row["language_ids"]:
                 logo_url = asset_url(language_id, upstream_series, upstream_set, "logo.webp")
@@ -1178,12 +1248,29 @@ def sync_assets(
                     if not cached_card and not has_existing_image:
                         tasks[url] = destination
 
-    downloaded = unavailable = failures = 0
     failure_samples: list[str] = []
+    # One writer shared by workers; flush each record so failures survive interruption.
+    with log_path.open("a", encoding="utf-8", buffering=1) as image_log:
+        image_log_lock = threading.Lock()
+
+        def fetch(url: str, destination: Path) -> None:
+            download_asset(url, destination, timeout, image_log, image_log_lock,
+                           symbol_fallbacks.get(url, []))
+
+        return _sync_asset_tasks(tasks, fetch, workers, missing, failure_samples,
+                                 data_root, sets_root, cards_root, status_path, set_only)
+
+
+def _sync_asset_tasks(
+    tasks: dict[str, Path], fetch: Callable[[str, Path], None], workers: int,
+    missing: dict[str, bool], failure_samples: list[str], data_root: Path,
+    sets_root: Path, cards_root: Path, status_path: Path, set_only: bool,
+) -> dict[str, int]:
+    downloaded = unavailable = failures = 0
     if tasks:
         with Progress("Images", len(tasks)) as progress, ThreadPoolExecutor(max_workers=max(1, workers)) as executor:
             futures = {
-                executor.submit(download_webp, url, destination, timeout): url
+                executor.submit(fetch, url, destination): url
                 for url, destination in tasks.items()
             }
             pending = set(futures)

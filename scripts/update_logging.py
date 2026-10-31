@@ -6,7 +6,37 @@ import os
 import shutil
 import sys
 import time
+from contextlib import contextmanager
+from pathlib import Path
 from typing import TextIO
+
+
+@contextmanager
+def capture_run_log(path: Path):
+    """Keep terminal output and overwrite the transcript for each run."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", encoding="utf-8", buffering=1) as transcript:
+        class Tee:
+            def __init__(self, stream):
+                self.stream = stream
+
+            def write(self, message):
+                transcript.write(message)
+                return self.stream.write(message)
+
+            def flush(self):
+                transcript.flush()
+                self.stream.flush()
+
+            def isatty(self):
+                return False
+
+        stdout, stderr = sys.stdout, sys.stderr
+        sys.stdout, sys.stderr = Tee(stdout), Tee(stderr)
+        try:
+            yield
+        finally:
+            sys.stdout, sys.stderr = stdout, stderr
 
 
 def color(text: str, code: str, stream: TextIO) -> str:

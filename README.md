@@ -80,9 +80,25 @@ The only optional modes are:
   Collection, binder, manual-image records, and manual image files are preserved.
 
 The modes cannot be combined. All successful runs include application validation.
-Terminal output uses color and a live image progress bar with counts, elapsed
-time, and estimated time remaining. Redirected output uses periodic plain-text
-progress lines. Set `NO_COLOR=1` to disable colors.
+Each pipeline run overwrites `reports/update.log` with the combined output from
+all stages, also shown in the terminal with periodic image progress updates.
+`reports/images.jsonl` contains one JSON record per image request attempt:
+timestamp, URL, destination, attempt number, elapsed time, outcome, HTTP error
+status, and error details (including up to 2 KB of the error response body).
+Both files are cleared at the start of each pipeline run. Running the image
+updater directly also clears `reports/images.jsonl`. Cached images require no
+request and are not listed in that file. Temporary network errors and selected
+HTTP errors (including 429 and 503) get up to three attempts with backoff;
+404s are reported as unavailable. Symbols try English, then the set's languages.
+
+To recover missing images while keeping successful downloads, run:
+
+```sh
+python3 scripts/update_tcgdex_images.py
+```
+
+The standalone image updater uses a live progress bar in terminals. Set
+`NO_COLOR=1` to disable colors.
 
 ## Run the application
 

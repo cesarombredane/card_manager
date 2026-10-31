@@ -11,7 +11,7 @@ import sys
 import time
 from pathlib import Path
 
-from scripts.update_logging import duration, log, title
+from scripts.update_logging import capture_run_log, duration, log, title
 
 PROJECT_ROOT = Path(__file__).resolve().parent
 APP_DATA = PROJECT_ROOT / "app" / "data"
@@ -37,7 +37,15 @@ def parse_args() -> argparse.Namespace:
 def run_stage(label: str, command: list[str], *, cwd: Path = PROJECT_ROOT) -> None:
     title(label)
     started = time.monotonic()
-    subprocess.run(command, cwd=cwd, check=True)
+    with subprocess.Popen(command, cwd=cwd, stdout=subprocess.PIPE,
+                          stderr=subprocess.STDOUT, text=True, bufsize=1) as process:
+        assert process.stdout is not None
+        for line in process.stdout:
+            sys.stdout.write(line)
+            sys.stdout.flush()
+        returncode = process.wait()
+    if returncode:
+        raise subprocess.CalledProcessError(returncode, command)
     log(f"Stage complete in {duration(time.monotonic() - started)}")
 
 
@@ -124,4 +132,10 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    # Clear image details even if a stage before the image updater fails.
+    reports = PROJECT_ROOT / "reports"
+    reports.mkdir(parents=True, exist_ok=True)
+    (reports / "images.jsonl").write_text("", encoding="utf-8")
+    with capture_run_log(PROJECT_ROOT / "reports" / "update.log"):
+        log("Run log: reports/update.log")
+        raise SystemExit(main())
