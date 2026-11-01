@@ -53,5 +53,5 @@ Agent verification uses lint, formatting, type checks, synthetic unit tests and
 `npm run test:e2e` from the root. It uses temporary data. Review collection creation,
 manual-card editing (including variant changes), transfers, bulk language edits,
 Pokédex settings, binder assets and import/export confirmation before signing off
-on the interactive migration. Agents must leave this verification pending rather
-than running it themselves.
+on the interactive migration. Agents record user-reported results and leave this
+verification pending until the user provides them; agents do not run it themselves.

@@ -13,8 +13,7 @@ Example:
 # TODO
 
 - [x] toolbar spacing is weird
-- [ ] Verify the template migration.
-      Remaining code alignment is implemented and checked with static checks, unit
-      tests and a fixture build. User-run browser verification is pending:
-      `npm run test:e2e` and the checklist in `docs/migration.md`.
+- [x] Verify the template migration.
+      Code alignment passed static checks, 36 unit tests and a fixture build.
+      The user reported that all end-to-end tests passed.
 - [ ] redo opti (lag on load page and on any action)
