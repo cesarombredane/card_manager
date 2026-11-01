@@ -1,0 +1,636 @@
+{
+  "asia-pcg/cards_asia-pcg2.json": [
+    {
+      "id": "asia-pcg2-067",
+      "set_id": "asia-pcg2",
+      "number": "067",
+      "category": "pokemon",
+      "name": {
+        "ja": "レイカザの星"
+      },
+      "pokemon": ["0384"],
+      "illustrator": null,
+      "rarity": "unknown",
+      "regulation_mark": null,
+      "variants": [
+        {
+          "id": "stamped-1st_edition",
+          "type": "stamped",
+          "images": {
+            "ja": ""
+          },
+          "stamps": ["1st edition"]
+        }
+      ]
+    }
+  ],
+  "asia-pcg/sets.json": [
+    {
+      "id": "asia-pcg2",
+      "tcgdex_id": "PCG2",
+      "tcgdex_series_id": "PCG",
+      "series_id": "asia-pcg",
+      "name": {
+        "ja": "Test"
+      },
+      "title_image_url": null,
+      "symbol_image_url": null,
+      "release_date": "2004-01-01",
+      "card_count": 1,
+      "language_ids": ["ja"]
+    }
+  ],
+  "coverage.json": {
+    "schema_version": 1,
+    "totals": {
+      "sets": 2,
+      "set_logos": 0,
+      "set_symbols": 0,
+      "cards": 4,
+      "variants": 8,
+      "image_slots": 15,
+      "missing_set_logos": 2,
+      "missing_set_symbols": 2,
+      "cards_without_image": 4,
+      "missing_image_slots": 15,
+      "card_image_coverage_percent": 0.0,
+      "image_slot_coverage_percent": 0.0
+    },
+    "sources": {
+      "definitions": {
+        "tcgdex": {
+          "name": "TCGdex"
+        }
+      },
+      "matched_sets": 2,
+      "matched_cards": 4,
+      "metadata_fields_filled": 0
+    },
+    "languages": {
+      "en": {
+        "slots": 7,
+        "filled": 0,
+        "missing": 7,
+        "percent": 0.0
+      },
+      "fr": {
+        "slots": 7,
+        "filled": 0,
+        "missing": 7,
+        "percent": 0.0
+      },
+      "ja": {
+        "slots": 1,
+        "filled": 0,
+        "missing": 1,
+        "percent": 0.0
+      }
+    },
+    "missing_metadata": {
+      "illustrator": ["asia-pcg2-067", "intl-test-002", "intl-test-003"],
+      "regulation_mark": ["asia-pcg2-067", "intl-test-002", "intl-test-003"]
+    },
+    "missing_set_assets": {
+      "logo": ["asia-pcg2", "intl-test"],
+      "symbol": ["asia-pcg2", "intl-test"]
+    },
+    "series": {
+      "asia-pcg": {
+        "name": "PCG",
+        "region_id": "ASIA",
+        "sets": 1,
+        "cards": 1,
+        "cards_with_image": 0,
+        "cards_without_image": 1,
+        "percent": 0.0
+      },
+      "intl-sample": {
+        "name": "Sample & series",
+        "region_id": "INTL",
+        "sets": 1,
+        "cards": 3,
+        "cards_with_image": 0,
+        "cards_without_image": 3,
+        "percent": 0.0
+      }
+    },
+    "sets": [
+      {
+        "id": "asia-pcg2",
+        "name": "Test",
+        "series_id": "asia-pcg",
+        "series_name": "PCG",
+        "region_id": "ASIA",
+        "release_date": "2004-01-01",
+        "languages": ["ja"],
+        "has_logo": false,
+        "has_symbol": false,
+        "cards": 1,
+        "variants": 1,
+        "cards_with_image": 0,
+        "cards_without_image": 1,
+        "image_coverage_percent": 0.0,
+        "language_coverage": {
+          "ja": {
+            "slots": 1,
+            "filled": 0,
+            "missing": 1,
+            "percent": 0.0
+          }
+        },
+        "missing_card_ids": ["asia-pcg2-067"],
+        "missing_images": {
+          "ja": ["asia-pcg2-067:stamped-1st_edition"]
+        },
+        "sources": {}
+      },
+      {
+        "id": "intl-test",
+        "name": "Test set",
+        "series_id": "intl-sample",
+        "series_name": "Sample & series",
+        "region_id": "INTL",
+        "release_date": "2020-02-02",
+        "languages": ["en", "fr"],
+        "has_logo": false,
+        "has_symbol": false,
+        "cards": 3,
+        "variants": 7,
+        "cards_with_image": 0,
+        "cards_without_image": 3,
+        "image_coverage_percent": 0.0,
+        "language_coverage": {
+          "en": {
+            "slots": 7,
+            "filled": 0,
+            "missing": 7,
+            "percent": 0.0
+          },
+          "fr": {
+            "slots": 7,
+            "filled": 0,
+            "missing": 7,
+            "percent": 0.0
+          }
+        },
+        "missing_card_ids": ["intl-test-001", "intl-test-002", "intl-test-003"],
+        "missing_images": {
+          "en": [
+            "intl-test-001:normal-unlimited",
+            "intl-test-001:holo",
+            "intl-test-001:master_ball-masterball-1st_edition",
+            "intl-test-001:holo-456",
+            "intl-test-002:normal",
+            "intl-test-002:reverse_holo",
+            "intl-test-003:normal"
+          ],
+          "fr": [
+            "intl-test-001:normal-unlimited",
+            "intl-test-001:holo",
+            "intl-test-001:master_ball-masterball-1st_edition",
+            "intl-test-001:holo-456",
+            "intl-test-002:normal",
+            "intl-test-002:reverse_holo",
+            "intl-test-003:normal"
+          ]
+        },
+        "sources": {}
+      }
+    ]
+  },
+  "intl-sample/cards_intl-test.json": [
+    {
+      "id": "intl-test-001",
+      "set_id": "intl-test",
+      "number": "001",
+      "category": "pokemon",
+      "name": {
+        "en": "Pikachu",
+        "fr": "Pikachu"
+      },
+      "pokemon": ["0025"],
+      "illustrator": "Example",
+      "rarity": "common",
+      "regulation_mark": "G",
+      "variants": [
+        {
+          "id": "normal-unlimited",
+          "type": "normal",
+          "images": {
+            "en": "",
+            "fr": ""
+          },
+          "subtype": "unlimited",
+          "cardmarket": {
+            "product_id": 123,
+            "currency": "EUR",
+            "updated_at": "",
+            "price_kind": "standard",
+            "average": null,
+            "low": null,
+            "trend": null,
+            "average_1d": null,
+            "average_7d": null,
+            "average_30d": null,
+            "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=123"
+          }
+        },
+        {
+          "id": "holo",
+          "type": "holo",
+          "images": {
+            "en": "",
+            "fr": ""
+          },
+          "cardmarket": {
+            "product_id": 456,
+            "currency": "EUR",
+            "updated_at": "",
+            "price_kind": "holo",
+            "average": null,
+            "low": null,
+            "trend": null,
+            "average_1d": null,
+            "average_7d": null,
+            "average_30d": null,
+            "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=456"
+          }
+        },
+        {
+          "id": "master_ball-masterball-1st_edition",
+          "type": "master_ball",
+          "images": {
+            "en": "",
+            "fr": ""
+          },
+          "foil": "Masterball",
+          "stamps": ["1st edition"],
+          "cardmarket": {
+            "product_id": 456,
+            "currency": "EUR",
+            "updated_at": "",
+            "price_kind": "standard",
+            "average": null,
+            "low": null,
+            "trend": null,
+            "average_1d": null,
+            "average_7d": null,
+            "average_30d": null,
+            "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=456"
+          }
+        },
+        {
+          "id": "holo-456",
+          "type": "holo",
+          "images": {
+            "en": "",
+            "fr": ""
+          },
+          "cardmarket": {
+            "product_id": 456,
+            "currency": "EUR",
+            "updated_at": "",
+            "price_kind": "holo",
+            "average": null,
+            "low": null,
+            "trend": null,
+            "average_1d": null,
+            "average_7d": null,
+            "average_30d": null,
+            "url": "https://www.cardmarket.com/en/Pokemon/Products?idProduct=456"
+          }
+        }
+      ],
+      "hp": 60,
+      "types": ["lightning"],
+      "stage": "basic",
+      "attacks": [
+        {
+          "name": {
+            "en": "A \"quoted\" attack"
+          },
+          "cost": ["lightning", "normal"],
+          "damage": "20+",
+          "text": {
+            "en": "First second // still text."
+          }
+        }
+      ],
+      "weaknesses": [
+        {
+          "type": "dark",
+          "value": "x2"
+        }
+      ],
+      "resistances": [
+        {
+          "type": "normal",
+          "value": "-30"
+        }
+      ],
+      "retreat_cost": 0,
+      "flavor_text": {
+        "en": "Text",
+        "fr": null
+      },
+      "legalities": {
+        "standard": true
+      }
+    },
+    {
+      "id": "intl-test-002",
+      "set_id": "intl-test",
+      "number": "002",
+      "category": "pokemon",
+      "name": {
+        "en": "Mega Pikachu EX",
+        "fr": "Méga Pikachu EX"
+      },
+      "pokemon": ["0025-mega-pikachu"],
+      "illustrator": null,
+      "rarity": "unknown",
+      "regulation_mark": null,
+      "variants": [
+        {
+          "id": "normal",
+          "type": "normal",
+          "images": {
+            "en": "",
+            "fr": ""
+          }
+        },
+        {
+          "id": "reverse_holo",
+          "type": "reverse_holo",
+          "images": {
+            "en": "",
+            "fr": ""
+          }
+        }
+      ],
+      "hp": 120,
+      "evolves_from": {
+        "en": "Pikachu"
+      },
+      "rule_box": "EX"
+    },
+    {
+      "id": "intl-test-003",
+      "set_id": "intl-test",
+      "number": "003",
+      "category": "trainer",
+      "name": {
+        "en": "Trainer's example"
+      },
+      "pokemon": [],
+      "illustrator": null,
+      "rarity": "unknown",
+      "regulation_mark": null,
+      "variants": [
+        {
+          "id": "normal",
+          "type": "normal",
+          "images": {
+            "en": "",
+            "fr": ""
+          }
+        }
+      ],
+      "trainer_type": "item",
+      "rules_text": {
+        "en": "Draw a card."
+      }
+    }
+  ],
+  "intl-sample/sets.json": [
+    {
+      "id": "intl-test",
+      "tcgdex_id": "TEST",
+      "tcgdex_series_id": "SAMPLE",
+      "series_id": "intl-sample",
+      "name": {
+        "en": "Test set",
+        "fr": "Extension test"
+      },
+      "title_image_url": null,
+      "symbol_image_url": null,
+      "release_date": "2020-02-02",
+      "card_count": 7,
+      "language_ids": ["en", "fr"]
+    }
+  ],
+  "languages.json": [
+    {
+      "id": "en",
+      "name": "English"
+    },
+    {
+      "id": "fr",
+      "name": "French"
+    },
+    {
+      "id": "ja",
+      "name": "Japanese"
+    }
+  ],
+  "pokemon.json": [
+    {
+      "id": "0025",
+      "pokedex_id": 25,
+      "name": "Pikachu",
+      "names": {
+        "en": "Pikachu",
+        "fr": "Pikachu",
+        "ja": "ピカチュウ"
+      },
+      "form": null
+    },
+    {
+      "id": "0025-mega-pikachu",
+      "pokedex_id": 25,
+      "name": "Mega Pikachu",
+      "names": {
+        "en": "Mega Pikachu",
+        "fr": "Méga Pikachu"
+      },
+      "form": "mega"
+    },
+    {
+      "id": "0384",
+      "pokedex_id": 384,
+      "name": "レイカザの星",
+      "names": {
+        "ja": "レイカザの星"
+      },
+      "form": null
+    },
+    {
+      "id": "0390",
+      "pokedex_id": 390,
+      "form": null,
+      "name": "Chimchar",
+      "names": {
+        "en": "Chimchar",
+        "fr": "Ouisticram",
+        "ja": "ヒコザル",
+        "zh-CN": "小火焰猴"
+      }
+    },
+    {
+      "id": "0391",
+      "pokedex_id": 391,
+      "form": null,
+      "name": "Monferno",
+      "names": {
+        "en": "Monferno",
+        "fr": "Chimpenfeu",
+        "ja": "猛火猴",
+        "zh-CN": "猛火猴"
+      }
+    },
+    {
+      "id": "0862",
+      "pokedex_id": 862,
+      "form": null,
+      "name": "Obstagoon",
+      "names": {
+        "en": "Obstagoon",
+        "fr": "Ixon",
+        "ja": "タチフサグマ",
+        "zh-CN": "堵拦熊"
+      }
+    },
+    {
+      "id": "0863",
+      "pokedex_id": 863,
+      "form": null,
+      "name": "Perrserker",
+      "names": {
+        "en": "Perrserker",
+        "fr": "Berserkatt",
+        "ja": "ニャイキング",
+        "zh-CN": "喵头目"
+      }
+    },
+    {
+      "id": "0864",
+      "pokedex_id": 864,
+      "form": null,
+      "name": "Cursola",
+      "names": {
+        "en": "Cursola",
+        "fr": "Corayôme",
+        "ja": "サニゴーン",
+        "zh-CN": "魔灵珊瑚"
+      }
+    },
+    {
+      "id": "0865",
+      "pokedex_id": 865,
+      "form": null,
+      "name": "Sirfetch'd",
+      "names": {
+        "en": "Sirfetch'd",
+        "fr": "Palarticho",
+        "ja": "ネギガナイト",
+        "zh-CN": "葱游兵"
+      }
+    },
+    {
+      "id": "0866",
+      "pokedex_id": 866,
+      "form": null,
+      "name": "Mr. Rime",
+      "names": {
+        "en": "Mr. Rime",
+        "fr": "M. Glaquette",
+        "ja": "バリコオル",
+        "zh-CN": "踏冰人偶"
+      }
+    },
+    {
+      "id": "0867",
+      "pokedex_id": 867,
+      "form": null,
+      "name": "Runerigus",
+      "names": {
+        "en": "Runerigus",
+        "fr": "Tutétékri",
+        "ja": "デスバーン",
+        "zh-CN": "迭失板"
+      }
+    },
+    {
+      "id": "0902",
+      "pokedex_id": 902,
+      "form": null,
+      "name": "Basculegion",
+      "names": {
+        "en": "Basculegion",
+        "fr": "Paragruel",
+        "ja": "イダイトウ",
+        "zh-CN": "幽尾玄鱼"
+      }
+    },
+    {
+      "id": "0903",
+      "pokedex_id": 903,
+      "form": null,
+      "name": "Sneasler",
+      "names": {
+        "en": "Sneasler",
+        "fr": "Farfurex",
+        "ja": "オオニューラ",
+        "zh-CN": "大狃拉"
+      }
+    },
+    {
+      "id": "0904",
+      "pokedex_id": 904,
+      "form": null,
+      "name": "Overqwil",
+      "names": {
+        "en": "Overqwil",
+        "fr": "Qwilpik",
+        "ja": "ハリーマン",
+        "zh-CN": "万针鱼"
+      }
+    },
+    {
+      "id": "0980",
+      "pokedex_id": 980,
+      "form": null,
+      "name": "Clodsire",
+      "names": {
+        "en": "Clodsire",
+        "fr": "Terraiste",
+        "ja": "ドオー",
+        "zh-CN": "土王"
+      }
+    }
+  ],
+  "regions.json": [
+    {
+      "id": "INTL",
+      "name": "International"
+    },
+    {
+      "id": "ASIA",
+      "name": "Asia"
+    }
+  ],
+  "series.json": [
+    {
+      "id": "asia-pcg",
+      "region_id": "ASIA",
+      "name": "PCG",
+      "start_date": "2004-01-01"
+    },
+    {
+      "id": "intl-sample",
+      "region_id": "INTL",
+      "name": "Sample & series",
+      "start_date": "2020-02-02"
+    }
+  ]
+}

@@ -1,0 +1,295 @@
+<template>
+  <q-page class="bg-dark q-pa-md">
+    <section class="q-mb-md">
+      <div class="text-overline text-primary">Sets by series</div>
+      <div class="text-h4 text-weight-bold">Browse Pokemon TCG sets</div>
+      <div class="text-body2 text-secondary">
+        Sets are grouped by series and filtered by printing region.
+      </div>
+    </section>
+
+    <section class="row q-col-gutter-md items-center q-mb-md">
+      <div class="col-auto">
+        <q-btn-toggle
+          v-model="selected_region_id"
+          :options="region_options"
+          color="grey-9"
+          padding="sm md"
+          text-color="grey-4"
+          toggle-color="grey-7"
+          toggle-text-color="white"
+        />
+      </div>
+      <div class="col-auto">
+        <q-input
+          v-model="sets_search_input"
+          dense
+          outlined
+          clearable
+          debounce="150"
+          label="Search a set by name"
+        >
+          <template #prepend>
+            <q-icon name="search" />
+          </template>
+        </q-input>
+      </div>
+    </section>
+
+    <q-separator class="q-mb-md" />
+
+    <section v-for="group in visible_series" :key="group.series.id" class="q-mb-lg">
+      <div class="row items-end justify-between q-mb-md">
+        <div>
+          <div class="text-h5 text-weight-bold q-ma-none">
+            {{ group.series.name }}
+          </div>
+          <div class="text-caption text-grey-5">
+            {{ group.region.name }} · {{ group.sets.length }} sets
+          </div>
+        </div>
+      </div>
+
+      <q-list bordered separator class="bg-grey-10 rounded-borders">
+        <q-item v-for="set in group.sets" :key="set.id" class="q-py-md">
+          <q-item-section class="col-4 col-sm-3 col-md-2">
+            <q-card
+              flat
+              class="bg-grey-9 rounded-borders relative-position"
+              style="width: 100%; height: 96px; overflow: hidden"
+            >
+              <div
+                style="
+                  display: flex;
+                  width: 100%;
+                  height: 96px;
+                  align-items: center;
+                  justify-content: center;
+                  overflow: hidden;
+                "
+              >
+                <img
+                  v-if="set.title_image_url"
+                  :src="set.title_image_url"
+                  :alt="`${setDisplayName(set)} logo`"
+                  style="
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    padding: 8px;
+                    object-fit: contain;
+                  "
+                />
+                <q-icon v-else name="image" size="30px" class="text-grey-5" />
+              </div>
+
+              <q-avatar
+                rounded
+                text-color="grey-5"
+                class="absolute-bottom-right q-ma-xs"
+                style="width: 30px; height: 30px; overflow: hidden"
+              >
+                <q-img
+                  v-if="set.symbol_image_url"
+                  :src="set.symbol_image_url"
+                  fit="contain"
+                  style="width: 100%; height: 100%; padding: 2px"
+                />
+              </q-avatar>
+            </q-card>
+          </q-item-section>
+
+          <q-item-section>
+            <q-item-label class="text-subtitle2 text-weight-bold">
+              <router-link :to="`/set/${set.id}`" class="text-white">
+                {{ setDisplayName(set) }}
+              </router-link>
+            </q-item-label>
+            <q-item-label caption class="text-grey-4">
+              <template v-if="ownedCardCount(set.id) === 0">
+                {{ set.card_count }} collectible cards including variants ·
+              </template>
+              Released {{ formatFrenchDate(set.release_date) }}
+            </q-item-label>
+            <q-item-label caption class="text-grey-4">
+              Estimated set value {{ formatEuroPrice(setValue(set.id)) }}
+            </q-item-label>
+            <div v-if="ownedCardCount(set.id) > 0" class="q-mt-sm" style="max-width: 420px">
+              <div class="row justify-between text-caption text-grey-4 q-mb-xs">
+                <span>Collection completion</span>
+                <span>{{ ownedCardCount(set.id) }} / {{ set.card_count }} cards</span>
+              </div>
+              <q-linear-progress
+                rounded
+                size="8px"
+                color="primary"
+                track-color="grey-8"
+                :value="setCompletion(set)"
+              />
+            </div>
+            <div class="row q-gutter-xs q-mt-xs">
+              <q-chip
+                v-for="languageId in set.language_ids"
+                :key="languageId"
+                dense
+                square
+                color="grey-9"
+                text-color="white"
+                size="sm"
+              >
+                {{ languageId }}
+              </q-chip>
+            </div>
+          </q-item-section>
+        </q-item>
+      </q-list>
+    </section>
+
+    <q-banner v-if="visible_series.length === 0" class="bg-grey-10 text-grey-4">
+      No set found for this region and search.
+    </q-banner>
+
+    <back-to-top-button />
+  </q-page>
+</template>
+
+<script setup lang="ts">
+  // import hooks
+  import { computed, ref, watch } from 'vue';
+  import { useStore } from 'vuex';
+
+  // import components
+  import BackToTopButton from '../components/back_to_top_button.vue';
+
+  // import utils
+  import { getCardsBySetId, getRegions, getSeries, getSets } from '../services/catalog_storage';
+  import { cardmarketDisplayPrice, formatEuroPrice } from '../utils/card_display';
+  import { localizedValue } from '../utils/localization';
+  import type { Region, Series, Set } from '../models/catalog';
+  import type { AppState } from '../store/index';
+  import { formatFrenchDate } from '../utils/dates';
+  import { collectionStore } from '../store/modules/collection';
+
+  /* types */
+  // A region selector option formatted for q-btn-toggle.
+  type RegionOption = {
+    label: string;
+    value: string;
+  };
+
+  // A series and its filtered, ordered sets for display.
+  type SeriesSetGroup = {
+    series: Series;
+    region: Region;
+    sets: Set[];
+  };
+
+  /* constant vars */
+  // All configured regions available to the region switcher.
+  const regions: Region[] = getRegions();
+
+  // All configured series used to group sets.
+  const series: Series[] = getSeries();
+
+  // All sets loaded from per-series JSON files.
+  const sets: Set[] = getSets();
+
+  // Combined market value of one copy of every collectible variant per set.
+  const setValuesById = new Map(
+    sets.map((set) => [
+      set.id,
+      getCardsBySetId(set.id).reduce(
+        (setTotal, card) =>
+          setTotal +
+          card.variants.reduce(
+            (cardTotal, variant) => cardTotal + (cardmarketDisplayPrice(variant.cardmarket) ?? 0),
+            0,
+          ),
+        0,
+      ),
+    ]),
+  );
+
+  // Shared application state.
+  const store = useStore<AppState>();
+
+  /* reactive vars */
+  // Search text used to filter set names in every available language.
+  const sets_search_input = ref<string>(store.state.sets_search_input);
+
+  // Currently selected printing region. International is the default view.
+  const selected_region_id = ref<string>(store.state.selected_region_id);
+
+  /* computed vars */
+  // Region options rendered by the q-btn-toggle.
+  const region_options = computed<RegionOption[]>(() =>
+    regions.map((r) => ({ label: r.id, value: r.id })),
+  );
+
+  // Series groups shown on the page after region and search filtering.
+  const visible_series = computed<SeriesSetGroup[]>(() => {
+    const query: string = (sets_search_input.value || '').trim().toLowerCase();
+    const regionById: Map<string, Region> = new Map(regions.map((region) => [region.id, region]));
+    const setsBySeries: Map<string, Set[]> = new Map();
+
+    for (const set of sets) {
+      const matchesSearch: boolean =
+        query === '' || Object.values(set.name).some((name) => name?.toLowerCase().includes(query));
+      if (!matchesSearch) continue;
+      if (!setsBySeries.has(set.series_id)) setsBySeries.set(set.series_id, []);
+      setsBySeries.get(set.series_id)?.push(set);
+    }
+
+    return series
+      .filter((item) => item.region_id === selected_region_id.value)
+      .map((item): SeriesSetGroup => ({
+        series: item,
+        region: regionById.get(selected_region_id.value) ?? {
+          id: selected_region_id.value,
+          name: selected_region_id.value,
+        },
+        sets: [...(setsBySeries.get(item.id) ?? [])].sort((a, b) =>
+          b.release_date.localeCompare(a.release_date),
+        ),
+      }))
+      .filter((group) => group.sets.length > 0)
+      .sort((a, b) => b.series.start_date.localeCompare(a.series.start_date));
+  });
+
+  // Distinct card variants owned per set. Quantities, languages, conditions,
+  // and collection folders do not increase completion more than once.
+  const ownedCardsBySet = computed<Map<string, number>>(() => {
+    const variantsBySet = new Map<string, globalThis.Set<string>>();
+    for (const entry of collectionStore.entries.value) {
+      if (entry.wanted || entry.set_id === 'manual-collection') continue;
+      if (!variantsBySet.has(entry.set_id)) variantsBySet.set(entry.set_id, new globalThis.Set());
+      variantsBySet.get(entry.set_id)?.add(`${entry.card_id}:${entry.variant_id}`);
+    }
+    return new Map([...variantsBySet].map(([setId, variants]) => [setId, variants.size]));
+  });
+
+  /* methods */
+  // Resolves a set name using the shared language preference and stable fallbacks.
+  const setDisplayName = (set: Set): string => {
+    return localizedValue(set.name, store.state.selected_language_id) ?? set.id;
+  };
+
+  const ownedCardCount = (setId: string): number => ownedCardsBySet.value.get(setId) ?? 0;
+
+  const setValue = (setId: string): number => setValuesById.get(setId) ?? 0;
+
+  const setCompletion = (set: Set): number => {
+    return set.card_count > 0 ? Math.min(ownedCardCount(set.id) / set.card_count, 1) : 0;
+  };
+
+  /* watchers */
+  // Update the store when the selected region changes.
+  watch(selected_region_id, (regionId): void => {
+    store.commit('set_selected_region_id', regionId);
+  });
+
+  // Keep the current search available when this page is unmounted during navigation.
+  watch(sets_search_input, (search): void => {
+    store.commit('set_sets_search_input', search ?? '');
+  });
+</script>

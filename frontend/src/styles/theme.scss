@@ -1,0 +1,7 @@
+@use './quasar_variables.sass' as palette;
+
+:root {
+  --q-primary: #{palette.$primary};
+  --q-secondary: #{palette.$secondary};
+  --q-dark: #{palette.$dark};
+}

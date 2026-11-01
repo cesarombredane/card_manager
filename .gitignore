@@ -3,25 +3,37 @@ dist/
 tcgdex_data/
 source_data/
 reports/
-app/data.next/
-app/data.next.tmp/
-app/data.tmp/
-app/data.discovered/
-app/data.previous/
-app/public/images/sets/
-app/public/images/cards/
-__pycache__/
+frontend/data.next/
+frontend/data.next.tmp/
+frontend/data.tmp/
+frontend/data.discovered/
+frontend/data.previous/
+frontend/public/images/sets/
+frontend/public/images/cards/
 
-.vscode/
 .idea/
 .agent/
 .codex/
 
 # Personal collection data
-app/data/collection.json
-app/data/manual-images.json
-app/data/manual-images.json.tmp
-app/public/images/manual/
-app/data/binders.json
-app/data/binders.json.tmp
-app/data/collection.json.tmp
+frontend/data/collection.json
+frontend/data/manual-images.json
+frontend/data/manual-images.json.tmp
+frontend/public/images/manual/
+frontend/data/binders.json
+frontend/data/binders.json.tmp
+frontend/data/collection.json.tmp
+
+# Verification outputs and migration backups
+playwright-report/
+test-results/
+migration_backups/
+*.tsbuildinfo
+frontend/data/*.update-data.tmp
+
+# Personal-data atomic writes and import staging files
+frontend/data/collection.json.*
+frontend/data/binders.json.*
+frontend/data/manual-images.json.*
+frontend/public/images/manual.import-*/
+frontend/public/images/manual.backup-*/

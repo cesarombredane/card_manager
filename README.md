@@ -31,13 +31,13 @@ instead of being sent to a hosted account or external database.
 
 ## How it works
 
-The Vue and Quasar frontend reads its generated catalog from `app/data` and
-cached artwork from `app/public/images`. The update pipeline creates these files
+The Vue and Quasar frontend reads its generated catalog from `frontend/data` and
+cached artwork from `frontend/public/images`. The update pipeline creates these files
 from the TCGdex card database, downloads available scans and set artwork, and
 adds current EUR price-guide data from Cardmarket.
 
 Personal collection, binder, and manual-card information is stored separately
-in ignored local files under `app/data`. The Vite development and preview server
+in ignored local files under `frontend/data`. The Vite development and preview server
 provides the local endpoints used for atomic saves, image uploads, and backup
 imports or exports. Because of this, collection editing requires the local
 server; a purely static deployment can browse the catalog but cannot persist
@@ -51,18 +51,17 @@ The generated catalog intentionally includes:
 
 ## Requirements
 
-- Python 3.10 or newer
 - Git
-- Node.js and npm
+- Node.js (see `.nvmrc`) and npm
 - An internet connection for catalog, image, and price updates
 
 ## Create the application data
 
 Before starting the app for the first time, run the complete update pipeline
-from the project root:
+from the project root after `npm ci`:
 
 ```sh
-python3 update_data.py
+npm run update
 ```
 
 This single command fetches TCGdex, creates the catalog, refreshes Cardmarket
@@ -73,9 +72,9 @@ reported unavailable. Existing downloaded images are reused.
 
 The only optional modes are:
 
-- `python3 update_data.py --prices`: refresh prices of existing cards and validate
+- `npm run update -- --prices`: refresh prices of existing cards and validate
   the application, without fetching TCGdex, changing the catalog, or processing images.
-- `python3 update_data.py --reset`: rebuild the catalog from the latest TCGdex
+- `npm run update -- --reset`: rebuild the catalog from the latest TCGdex
   source, discard generated image and price caches, and download images again.
   Collection, binder, manual-image records, and manual image files are preserved.
 
@@ -94,7 +93,7 @@ HTTP errors (including 429 and 503) get up to three attempts with backoff;
 To recover missing images while keeping successful downloads, run:
 
 ```sh
-python3 scripts/update_tcgdex_images.py
+npm run update:images
 ```
 
 The standalone image updater uses a live progress bar in terminals. Set
@@ -102,33 +101,39 @@ The standalone image updater uses a live progress bar in terminals. Set
 
 ## Run the application
 
-Install the frontend dependencies and start the local development server:
+Install all dependencies from the repository root and start the local server:
 
 ```sh
-cd app
-npm install
+npm ci
 npm run dev
 ```
 
+For an existing installation, read [migration and rollback](docs/migration.md)
+before starting. On a fresh checkout, install dependencies before creating data.
 Open the address printed by Vite, normally <http://localhost:5173>.
 
 For a production build and local preview:
 
 ```sh
-cd app
 npm run build
 npm run preview
 ```
+
+The repository follows [web_app_template](https://github.com/cesarombredane/web_app_template)
+organization. See [architecture](ARCHITECTURE.md), [frontend usage](frontend/README.md),
+[update details](docs/updates.md) and [development/verification](docs/contributing.md).
+CI checks formatting, lint, types, unit tests, build and isolated Chromium journeys.
+It does not deploy or refresh real data. Python is no longer required.
 
 ## Personal data
 
 The main local files are:
 
 ```text
-app/data/collection.json
-app/data/binders.json
-app/data/manual-images.json
-app/public/images/manual/
+frontend/data/collection.json
+frontend/data/binders.json
+frontend/data/manual-images.json
+frontend/public/images/manual/
 ```
 
 These paths are ignored by Git. Use the **Export** action on the collection
