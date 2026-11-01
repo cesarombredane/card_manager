@@ -1,4 +1,4 @@
-export type ManualImageEntry = {
+export type Manual_Image_Entry = {
   set_id: string;
   card_id: string;
   variant_id: string;
@@ -6,3 +6,5 @@ export type ManualImageEntry = {
   url: string;
   updated_at: string;
 };
+
+export type Manual_Image_Data = { version: 1; entries: Manual_Image_Entry[] };

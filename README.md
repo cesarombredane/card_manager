@@ -122,8 +122,15 @@ npm run preview
 The repository follows [web_app_template](https://github.com/cesarombredane/web_app_template)
 organization. See [architecture](ARCHITECTURE.md), [frontend usage](frontend/README.md),
 [update details](docs/updates.md) and [development/verification](docs/contributing.md).
-CI checks formatting, lint, types, unit tests, build and isolated Chromium journeys.
-It does not deploy or refresh real data. Python is no longer required.
+The editing workflow requires an approved plan before any file changes; see
+[development instructions](AGENTS.md). The interface uses the template palette and
+[frontend conventions](docs/frontend_conventions.md).
+
+CI checks formatting, lint, types, unit tests, a synthetic production build and
+isolated Chromium journeys.
+It does not deploy, back up the installation or refresh real data. Run
+`npm run build:fixture` for a production check without building the saved catalog.
+Python is no longer required.
 
 ## Personal data
 

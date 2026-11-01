@@ -1,5 +1,7 @@
-import { afterEach, describe, expect, it, vi } from 'vitest';
+// import utils
 import { mkdtempSync, readFileSync, rmSync, writeFileSync, mkdirSync } from 'node:fs';
+import { afterEach, describe, expect, it, vi } from 'vitest';
+import { read_json, write_json } from '../scripts/runtime';
 import { dirname, join } from 'node:path';
 import { tmpdir } from 'node:os';
 import {
@@ -10,9 +12,11 @@ import {
   Network_Error,
   sync_assets,
 } from '../scripts/image_assets';
-import { read_json, write_json } from '../scripts/runtime';
+
+// import types
 import type { Image_Event } from '../scripts/image_assets';
 import type { Card } from '../frontend/src/models/catalog';
+
 const temporary: string[] = [];
 function directory(): string {
   const path = mkdtempSync(join(tmpdir(), 'card-images-test-'));

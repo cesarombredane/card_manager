@@ -1,31 +1,33 @@
 <template>
-  <q-card flat bordered class="bg-grey-10 text-white">
+  <q-card flat bordered class="app_surface text-white">
     <q-card-section>
       <div class="row no-wrap items-start justify-between">
         <div>
           <div class="text-h6">{{ folder.name }}</div>
-          <div class="text-caption text-grey-4">
+          <div class="text-caption text_secondary">
             {{ cards }} owned cards · {{ wanted }} wanted · {{ entries }} owned entries
           </div>
         </div>
-        <q-icon :name="locked ? 'lock' : icon" color="yellow-6" size="32px" />
+        <q-icon :name="locked ? 'lock' : icon" color="primary" size="32px" />
       </div>
-      <div class="text-h5 text-yellow-6 text-weight-bold q-mt-md">
-        {{ formatEuroPrice(value) }}
+      <div class="text-h5 text-primary text-weight-bold q-mt-md">
+        {{ format_euro_price(value) }}
       </div>
     </q-card-section>
     <q-card-actions>
+      <q-space />
       <q-btn
         class="full-width"
         unelevated
         size="lg"
         color="primary"
-        text-color="black"
+        text-color="dark"
         icon-right="arrow_forward"
         :label="`Open ${folder.type}`"
         no-caps
         :to="`/collection/folder/${folder.id}`"
-      />
+        ><q-tooltip :delay="1000">{{ `Open ${folder.type}` }}</q-tooltip></q-btn
+      >
     </q-card-actions>
     <q-card-actions>
       <q-space />
@@ -34,8 +36,10 @@
         flat
         round
         dense
-        color="grey-4"
+        color="secondary"
         icon="edit"
+        no-caps
+        aria-label="edit"
         @click="$emit('settings', folder)"
       >
         <q-tooltip :delay="1000">Collection settings</q-tooltip>
@@ -47,6 +51,8 @@
         dense
         color="negative"
         icon="delete"
+        no-caps
+        aria-label="delete"
         @click="$emit('delete', folder)"
       >
         <q-tooltip :delay="1000">Delete collection</q-tooltip>
@@ -56,12 +62,18 @@
 </template>
 
 <script setup lang="ts">
+  // import hooks
   import { computed } from 'vue';
-  import { formatEuroPrice } from '../utils/card_display';
-  import type { CollectionFolder } from '../store/modules/collection';
 
+  // import utils
+  import { format_euro_price } from '../utils/card_display';
+
+  // import types
+  import type { Collection_Folder } from '../store/modules/collection';
+
+  /* hooks */
   const props = defineProps<{
-    folder: CollectionFolder;
+    folder: Collection_Folder;
     entries: number;
     cards: number;
     wanted: number;
@@ -69,10 +81,11 @@
     locked?: boolean;
   }>();
   defineEmits<{
-    settings: [folder: CollectionFolder];
-    delete: [folder: CollectionFolder];
+    settings: [folder: Collection_Folder];
+    delete: [folder: Collection_Folder];
   }>();
 
+  /* computed vars */
   const icon = computed<'inventory' | 'auto_stories'>(() =>
     props.folder.type === 'box' ? 'inventory' : 'auto_stories',
   );

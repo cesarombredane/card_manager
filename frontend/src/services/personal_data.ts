@@ -1,10 +1,12 @@
-import type { CollectionData } from '../models/collection';
-import type { BindersData } from '../models/binders';
+// import types
+import type { Collection_Data } from '../models/collection';
+import type { Binders_Data } from '../models/binders';
+
 // Local transport only. Domain stores own validation, reconciliation and save queues.
 export const read_collection = (): Promise<Response> => fetch('/api/collection');
 export const apply_collection_operation = (operation: {
-  before: CollectionData;
-  after: CollectionData;
+  before: Collection_Data;
+  after: Collection_Data;
 }): Promise<Response> =>
   fetch('/api/collection/operations', {
     method: 'POST',
@@ -12,7 +14,7 @@ export const apply_collection_operation = (operation: {
     body: JSON.stringify(operation),
   });
 export const read_binders = (): Promise<Response> => fetch('/api/binders');
-export const save_binders = (data: BindersData): Promise<Response> =>
+export const save_binders = (data: Binders_Data): Promise<Response> =>
   fetch('/api/binders', {
     method: 'PUT',
     headers: { 'Content-Type': 'application/json' },

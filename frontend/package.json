@@ -5,15 +5,17 @@
   "type": "module",
   "description": "Static Vue card manager powered by local JSON data.",
   "scripts": {
-    "dev": "vite --host 0.0.0.0",
+    "dev": "vite",
     "build": "npm run typecheck && vite build",
-    "preview": "vite preview --host 0.0.0.0",
+    "preview": "vite preview",
     "typecheck": "vue-tsc --noEmit && tsc --noEmit -p tsconfig.node.json",
     "lint": "eslint . --max-warnings 0",
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "test": "vitest run --config ../vitest.config.ts",
-    "test:e2e": "playwright test"
+    "format": "prettier --ignore-path ../.prettierignore --write .",
+    "format:check": "prettier --ignore-path ../.prettierignore --check .",
+    "test": "npm --prefix .. test",
+    "test:e2e": "npm --prefix .. run test:e2e",
+    "lint:fix": "eslint . --fix",
+    "test:watch": "npm --prefix .. run test:watch"
   },
   "dependencies": {
     "@quasar/extras": "^2.0.1",

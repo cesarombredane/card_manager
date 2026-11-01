@@ -13,22 +13,29 @@
 </template>
 
 <script setup lang="ts">
+  // import hooks
   import { computed } from 'vue';
-  import { cardSortOptions, setCardSortOptions } from '../utils/card_sorting';
-  import type { CardSort } from '../utils/card_sorting';
 
+  // import utils
+  import { card_sort_options, set_card_sort_options } from '../utils/card_sorting';
+
+  // import types
+  import type { Card_Sort } from '../utils/card_sorting';
+
+  /* hooks */
   const props = withDefaults(
     defineProps<{
-      modelValue: CardSort;
-      includeSetOrder?: boolean;
+      modelValue: Card_Sort;
+      include_set_order?: boolean;
     }>(),
     {
-      includeSetOrder: false,
+      include_set_order: false,
     },
   );
-  defineEmits<{ 'update:modelValue': [value: CardSort] }>();
+  defineEmits<{ 'update:modelValue': [value: Card_Sort] }>();
 
-  const options = computed<{ label: string; value: CardSort }[]>(() =>
-    props.includeSetOrder ? setCardSortOptions : cardSortOptions,
+  /* computed vars */
+  const options = computed<{ label: string; value: Card_Sort }[]>(() =>
+    props.include_set_order ? set_card_sort_options : card_sort_options,
   );
 </script>

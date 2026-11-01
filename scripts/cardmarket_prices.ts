@@ -1,8 +1,11 @@
+// import utils
 import { existsSync, mkdirSync, renameSync, writeFileSync } from 'node:fs';
-import { dirname } from 'node:path';
 import { object, read_json } from './runtime';
+import { dirname } from 'node:path';
+
+// import types
+import type { Cardmarket_Price } from '../frontend/src/models/catalog';
 import type { Json_Object } from './runtime';
-import type { CardmarketPrice } from '../frontend/src/models/catalog';
 
 export const price_guide_url =
   'https://downloads.s3.cardmarket.com/productCatalog/priceGuide/price_guide_6.json';
@@ -56,7 +59,7 @@ export function normalized_price(
   updated_at: string,
   use_holo_fields = false,
   url: string | null = null,
-): CardmarketPrice {
+): Cardmarket_Price {
   const columns = ['avg', 'low', 'trend', 'avg1', 'avg7', 'avg30'];
   let values = columns.map((column) => row[`${column}${use_holo_fields ? '-holo' : ''}`] ?? null);
   if (use_holo_fields && values.every((value) => value === null))

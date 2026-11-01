@@ -17,10 +17,13 @@ save, manual-image and backup endpoints. Static hosting cannot persist collectio
 changes. The default host is loopback.
 
 Verification commands are `npm run lint`, `npm run format:check`,
-`npm run typecheck`, `npm test`, `npm run build` and `npm run test:e2e` at the root.
+`npm run typecheck`, `npm test`, `npm run build:fixture` and `npm run test:e2e` at the root.
 Install Chromium once with `npx playwright install chromium`. Browser tests start
-a dedicated server with temporary personal storage; they do not use saved user data.
+a production fixture build and preview server with temporary catalog and personal
+storage. These checks do not read or rewrite the installation catalog or artwork,
+run updates, or make installation backups. Normal `build` uses the local catalog.
 
 See [architecture](ARCHITECTURE.md), [frontend conventions](../docs/frontend_conventions.md)
-and [contributing](../docs/contributing.md). Existing domain facade names and
-serialized keys are compatibility boundaries; new internal files use `snake_case`.
+and [contributing](../docs/contributing.md). Serialized keys and public routes remain compatibility boundaries; internal
+identifiers use `snake_case`. Public `VITE_BASE_PATH` can configure the base URL;
+see `.env.example`. Never put secrets in `VITE_*` variables.

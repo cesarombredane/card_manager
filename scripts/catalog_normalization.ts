@@ -1,7 +1,8 @@
-import ts from 'typescript';
-import { readFileSync } from 'node:fs';
-import { basename, sep } from 'node:path';
+// import utils
+import { normalized_price, product_url } from './cardmarket_prices';
 import { object, files, compare } from './runtime';
+import { basename, sep } from 'node:path';
+import { readFileSync } from 'node:fs';
 import {
   energy_map,
   variant_map,
@@ -13,9 +14,11 @@ import {
   pokemon_overrides,
   language_names,
 } from './catalog_constants';
-import { normalized_price, product_url } from './cardmarket_prices';
+import ts from 'typescript';
+
+// import types
+import type { Card, Card_Variant, Localized_Text, Pokemon } from '../frontend/src/models/catalog';
 import type { Json, Json_Object } from './runtime';
-import type { Card, CardVariant, LocalizedText, Pokemon } from '../frontend/src/models/catalog';
 
 // Interpret data literals only. Upstream TypeScript is never imported or executed.
 function literal(node: ts.Expression): Json {
@@ -70,7 +73,7 @@ export function parse_typescript_object(path: string): Json_Object {
 export function normalize_language_code(value: string): string {
   return language_code_map[value] || value;
 }
-export function normalize_localized_text(value: Json | undefined): LocalizedText {
+export function normalize_localized_text(value: Json | undefined): Localized_Text {
   if (typeof value === 'string') return { en: value };
   return object(value)
     ? Object.fromEntries(
@@ -143,7 +146,7 @@ export function pokemon_form_key(name: string): string {
       return `${prefix.trim()}-${slugify(name.slice(prefix.length))}`;
   return 'base';
 }
-export function localized_form_type(names: LocalizedText): string {
+export function localized_form_type(names: Localized_Text): string {
   const key = names.en ? pokemon_form_key(names.en) : 'base';
   if (key !== 'base') return key.split('-')[0];
   for (const [form, markers] of Object.entries(form_markers))
@@ -287,7 +290,7 @@ export function build_pokemon_catalog(root: string): [Pokemon[], Pokemon_Aliases
 export function resolve_pokemon_ids(
   category: string,
   ids: number[],
-  names: LocalizedText,
+  names: Localized_Text,
   aliases: Pokemon_Aliases,
 ): [string[], string] {
   if (category !== 'pokemon') return [[], 'not-pokemon'];
@@ -360,7 +363,7 @@ export function normalize_variants(
   languages: string[],
   updated_at: string,
   prices: Map<number, Json_Object>,
-): CardVariant[] {
+): Card_Variant[] {
   const variants = Array.isArray(raw.variants)
     ? raw.variants
     : object(raw.variants)
@@ -378,7 +381,7 @@ export function normalize_variants(
     const product_id = Number.isInteger(variant_market_id) ? variant_market_id : card_market_id;
     if (used.has(id)) id += `-${Number.isInteger(product_id) ? product_id : index + 1}`;
     used.add(id);
-    const variant: CardVariant = {
+    const variant: Card_Variant = {
       id,
       type,
       images: Object.fromEntries(languages.map((language) => [language, ''])),
@@ -408,8 +411,8 @@ export function normalize_variants(
 }
 export type Mapping_Diagnostics = {
   counts: Record<string, number>;
-  ambiguous: { id: string; name: LocalizedText }[];
-  unmapped: { id: string; name: LocalizedText }[];
+  ambiguous: { id: string; name: Localized_Text }[];
+  unmapped: { id: string; name: Localized_Text }[];
 };
 function objects(value: Json | undefined): Json_Object[] {
   if (!value) return [];
@@ -474,7 +477,7 @@ export function normalize_card(
   return card;
 }
 export function restrict_card_languages(card: Card, languages: string[]): void {
-  const restrict = (value: LocalizedText) =>
+  const restrict = (value: Localized_Text) =>
     Object.fromEntries(Object.entries(value).filter(([language]) => languages.includes(language)));
   for (const field of ['name', 'evolves_from', 'rules_text', 'flavor_text'] as const)
     if (card[field]) card[field] = restrict(card[field]);

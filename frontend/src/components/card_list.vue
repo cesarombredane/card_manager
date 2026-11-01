@@ -2,25 +2,29 @@
   <section class="row q-col-gutter-md">
     <div
       v-for="(card, index) in cards"
-      :key="collectionEntries[index]?.id ?? card.id"
+      :key="collection_entries[index]?.id ?? card.id"
       class="col-6 col-sm-4 col-md-3 col-lg-2"
     >
       <card-list-item
         :card="card"
-        :collection-entry="collectionEntries[index]"
+        :collection_entry="collection_entries[index]"
         :selectable="selectable"
         :selected="
-          collectionEntries[index] ? selectedEntryIds.includes(collectionEntries[index].id) : false
+          collection_entries[index]
+            ? selected_entry_ids.includes(collection_entries[index].id)
+            : false
         "
-        :protected-entry="
-          collectionEntries[index] ? protectedEntryIds.includes(collectionEntries[index].id) : false
+        :protected_entry="
+          collection_entries[index]
+            ? protected_entry_ids.includes(collection_entries[index].id)
+            : false
         "
-        :status-overlay="
-          collectionEntries[index] ? statusOverlays[collectionEntries[index].id] : undefined
+        :status_overlay="
+          collection_entries[index] ? status_overlays[collection_entries[index].id] : undefined
         "
         @click="$emit('card-click', $event)"
-        @add-to-collection="openCollectionDialog"
-        @add-to-want-list="openWantListDialog"
+        @add-to-collection="open_collection_dialog"
+        @add-to-want-list="open_want_list_dialog"
         @edit-entry="$emit('edit-entry', $event)"
         @delete-entry="$emit('delete-entry', $event)"
         @toggle-selection="$emit('toggle-selection', $event)"
@@ -29,69 +33,79 @@
   </section>
 
   <add-to-collection-dialog
-    v-if="selectedCard"
-    v-model="showCollectionDialog"
-    :set-id="selectedCard.set_id"
-    :card-id="selectedCard.card_id"
-    :variant-id="selectedCard.variant_id"
-    :language-id="selectedCard.language_id"
-    :card-name="selectedCard.display_name"
+    v-if="selected_card"
+    v-model="show_collection_dialog"
+    :set_id="selected_card.set_id"
+    :card_id="selected_card.card_id"
+    :variant_id="selected_card.variant_id"
+    :language_id="selected_card.language_id"
+    :card_name="selected_card.display_name"
   />
   <add-to-want-list-dialog
-    v-if="selectedWantedCard"
-    v-model="showWantListDialog"
-    :set-id="selectedWantedCard.set_id"
-    :card-id="selectedWantedCard.card_id"
-    :variant-id="selectedWantedCard.variant_id"
-    :language-id="selectedWantedCard.language_id"
-    :card-name="selectedWantedCard.display_name"
+    v-if="selected_wanted_card"
+    v-model="show_want_list_dialog"
+    :set_id="selected_wanted_card.set_id"
+    :card_id="selected_wanted_card.card_id"
+    :variant_id="selected_wanted_card.variant_id"
+    :language_id="selected_wanted_card.language_id"
+    :card_name="selected_wanted_card.display_name"
   />
 </template>
 
 <script setup lang="ts">
+  // import hooks
   import { ref } from 'vue';
+
+  // import components
   import AddToCollectionDialog from './add_to_collection_dialog.vue';
   import AddToWantListDialog from './add_to_want_list_dialog.vue';
   import CardListItem from './card_list_item.vue';
-  import type { DisplayCard } from '../utils/card_display';
-  import type { CollectionEntry } from '../store/modules/collection';
 
+  // import types
+  import type { Collection_Entry } from '../store/modules/collection';
+  import type { Display_Card } from '../utils/card_display';
+
+  /* const vars */
   withDefaults(
     defineProps<{
-      cards: DisplayCard[];
-      collectionEntries?: CollectionEntry[];
+      cards: Display_Card[];
+      collection_entries?: Collection_Entry[];
       selectable?: boolean;
-      selectedEntryIds?: string[];
-      protectedEntryIds?: string[];
-      statusOverlays?: Record<string, string>;
+      selected_entry_ids?: string[];
+      protected_entry_ids?: string[];
+      status_overlays?: Record<string, string>;
     }>(),
     {
-      collectionEntries: () => [],
+      collection_entries: () => [],
       selectable: false,
-      selectedEntryIds: () => [],
-      protectedEntryIds: () => [],
-      statusOverlays: () => ({}),
+      selected_entry_ids: () => [],
+      protected_entry_ids: () => [],
+      status_overlays: () => ({}),
     },
   );
+
+  /* hooks */
   defineEmits<{
-    'card-click': [card: DisplayCard];
-    'edit-entry': [entry: CollectionEntry];
-    'delete-entry': [entry: CollectionEntry];
-    'toggle-selection': [entry: CollectionEntry];
+    'card-click': [card: Display_Card];
+    'edit-entry': [entry: Collection_Entry];
+    'delete-entry': [entry: Collection_Entry];
+    'toggle-selection': [entry: Collection_Entry];
   }>();
 
-  const selectedCard = ref<DisplayCard | null>(null);
-  const showCollectionDialog = ref<boolean>(false);
-  const selectedWantedCard = ref<DisplayCard | null>(null);
-  const showWantListDialog = ref<boolean>(false);
+  /* reactive vars */
+  const selected_card = ref<Display_Card | null>(null);
+  const show_collection_dialog = ref<boolean>(false);
+  const selected_wanted_card = ref<Display_Card | null>(null);
+  const show_want_list_dialog = ref<boolean>(false);
 
-  const openCollectionDialog = (card: DisplayCard): void => {
-    selectedCard.value = card;
-    showCollectionDialog.value = true;
+  /* functions */
+  const open_collection_dialog = (card: Display_Card): void => {
+    selected_card.value = card;
+    show_collection_dialog.value = true;
   };
 
-  const openWantListDialog = (card: DisplayCard): void => {
-    selectedWantedCard.value = card;
-    showWantListDialog.value = true;
+  const open_want_list_dialog = (card: Display_Card): void => {
+    selected_wanted_card.value = card;
+    show_want_list_dialog.value = true;
   };
 </script>

@@ -1,9 +1,11 @@
-import { spawn } from 'node:child_process';
+// import utils
 import { existsSync, mkdirSync, readFileSync, renameSync, rmSync, writeFileSync } from 'node:fs';
-import { dirname, join } from 'node:path';
+import { capture_run_log, duration, log, title, output } from './scripts/update_logging';
 import { project_root, cli, is_main, entry } from './scripts/runtime';
 import { personal_data_files } from './scripts/catalog_storage';
-import { capture_run_log, duration, log, title, output } from './scripts/update_logging';
+import { spawn } from 'node:child_process';
+import { dirname, join } from 'node:path';
+
 export class Stage_Error extends Error {
   constructor(public code: number) {
     super(`Stage failed with exit code ${code}`);

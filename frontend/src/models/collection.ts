@@ -1,5 +1,7 @@
-import type { PokedexBinderConfig } from '../utils/pokedex_binder';
-export const cardConditions = [
+// import types
+import type { Pokedex_Binder_Config } from './pokedex_binder';
+
+export const card_conditions = [
   { label: 'MT — Mint', value: 'MT' },
   { label: 'NM — Near Mint', value: 'NM' },
   { label: 'EX — Excellent', value: 'EX' },
@@ -9,26 +11,26 @@ export const cardConditions = [
   { label: 'HP — Heavily Played', value: 'HP' },
 ] as const;
 
-export type CardCondition = (typeof cardConditions)[number]['value'];
+export type Card_Condition = (typeof card_conditions)[number]['value'];
 
-export type CollectionFolderType = 'box' | 'binder';
+export type Collection_Folder_Type = 'box' | 'binder';
 
-export type CollectionFolder = {
+export type Collection_Folder = {
   id: string;
   name: string;
-  type: CollectionFolderType;
-  pokedex_config?: PokedexBinderConfig;
+  type: Collection_Folder_Type;
+  pokedex_config?: Pokedex_Binder_Config;
   created_at: string;
 };
 
-export type CollectionEntry = {
+export type Collection_Entry = {
   id: string;
   folder_id: string;
   set_id: string;
   card_id: string;
   variant_id: string;
   language_id: string;
-  condition: CardCondition;
+  condition: Card_Condition;
   quantity: number;
   wanted: boolean;
   strong_language?: boolean;
@@ -38,7 +40,7 @@ export type CollectionEntry = {
   updated_at: string;
 };
 
-export type ManualCollectionCard = {
+export type Manual_Collection_Card = {
   id: string;
   name: string;
   set_name: string;
@@ -56,9 +58,9 @@ export type ManualCollectionCard = {
   updated_at: string;
 };
 
-export type CollectionData = {
+export type Collection_Data = {
   version: 2;
-  folders: CollectionFolder[];
-  entries: CollectionEntry[];
-  manual_cards: ManualCollectionCard[];
+  folders: Collection_Folder[];
+  entries: Collection_Entry[];
+  manual_cards: Manual_Collection_Card[];
 };

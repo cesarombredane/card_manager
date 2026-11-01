@@ -1,7 +1,12 @@
 @use './quasar_variables.sass' as palette;
 
 :root {
-  --q-primary: #{palette.$primary};
-  --q-secondary: #{palette.$secondary};
-  --q-dark: #{palette.$dark};
+  --app_background: #{palette.$dark};
+  --app_surface: #1c1c1c;
+  --app_border: #383838;
+  --app_text: #f5f5f5;
+  --app_text_muted: #{palette.$secondary};
+  --app_radius: 12px;
+  --app_content_width: 1120px;
+  --app_warning: #{palette.$warning};
 }

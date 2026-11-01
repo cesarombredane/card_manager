@@ -1,8 +1,11 @@
-import { afterEach, describe, expect, it } from 'vitest';
+// import utils
 import { cpSync, existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
-import { tmpdir } from 'node:os';
-import { join, resolve } from 'node:path';
+import { parse_typescript_object } from '../scripts/catalog_normalization';
+import { generate_coverage } from '../scripts/report_coverage';
 import { build_catalog } from '../scripts/update_tcgdex_data';
+import { read_json, write_json } from '../scripts/runtime';
+import { afterEach, describe, expect, it } from 'vitest';
+import { join, resolve } from 'node:path';
 import {
   append_unique,
   merge_append_only,
@@ -10,10 +13,11 @@ import {
   preserve_price_data,
   validate_generated_sets,
 } from '../scripts/catalog_storage';
-import { parse_typescript_object } from '../scripts/catalog_normalization';
-import { read_json, write_json } from '../scripts/runtime';
-import { generate_coverage } from '../scripts/report_coverage';
+import { tmpdir } from 'node:os';
+
+// import types
 import type { Card } from '../frontend/src/models/catalog';
+
 const temporary: string[] = [];
 const fixture = resolve('tests/fixtures/source');
 const expected = read_json<Record<string, unknown>>(

@@ -1,0 +1,135 @@
+@use './theme.scss';
+@use './binder.scss';
+
+body {
+  background: var(--app_background);
+  color: var(--app_text);
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
+}
+
+.page_content {
+  width: min(100% - 48px, var(--app_content_width));
+  margin-inline: auto;
+}
+
+.app_header {
+  background: var(--app_background);
+}
+
+.text_secondary {
+  color: var(--app_text_muted);
+}
+
+.q-card {
+  background: var(--app_surface);
+  border-radius: var(--app_radius);
+}
+
+.q-card--bordered,
+.q-header--bordered {
+  border-color: var(--app_border);
+}
+
+.hero {
+  padding-block: 32px;
+}
+
+.hero_title {
+  max-width: 800px;
+  font-size: clamp(2.5rem, 7vw, 4.5rem);
+  font-weight: 750;
+  line-height: 1.1;
+  letter-spacing: -0.045em;
+}
+
+.hero_description {
+  max-width: 560px;
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.section_title {
+  font-size: 1.25rem;
+  font-weight: 650;
+}
+
+.empty_state {
+  border: 1px dashed var(--app_border);
+  border-radius: var(--app_radius);
+}
+
+.confirmation_card {
+  width: 440px;
+  max-width: calc(100vw - 32px);
+}
+
+.status_warning {
+  background: #302714;
+  border: 1px solid var(--app_warning);
+}
+
+.compact_layout .q-py-xl {
+  padding-block: 24px;
+}
+
+.compact_layout .q-mb-xl {
+  margin-bottom: 24px;
+}
+
+.compact_layout .hero {
+  padding-block: 8px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--q-primary);
+  outline-offset: 4px;
+}
+
+.skip_link {
+  position: fixed;
+  top: -100px;
+  left: 16px;
+  z-index: 10000;
+  padding: 12px 16px;
+  color: #121212;
+  background: var(--q-primary);
+}
+
+.skip_link:focus {
+  top: 8px;
+}
+
+@media (max-width: 599px) {
+  .page_content {
+    width: calc(100% - 32px);
+  }
+
+  .app_header .q-toolbar {
+    flex-wrap: wrap;
+    padding-block: 8px;
+    gap: 8px;
+  }
+
+  .app_header .q-toolbar__title {
+    flex-basis: 100%;
+  }
+}
+
+.app_surface {
+  background: var(--app_surface);
+}
+.status_error {
+  background: color-mix(in srgb, var(--q-negative) 22%, var(--app_background));
+}
+.q-page {
+  margin-inline: auto;
+}

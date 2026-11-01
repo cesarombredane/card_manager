@@ -1,16 +1,20 @@
+// import utils
+import { update_prices } from '../scripts/update_cardmarket_prices';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { mkdtempSync, readFileSync, rmSync } from 'node:fs';
-import { tmpdir } from 'node:os';
-import { join } from 'node:path';
+import { read_json, write_json } from '../scripts/runtime';
 import {
   product_url,
   download_price_guide,
   index_price_guide,
   normalized_price,
 } from '../scripts/cardmarket_prices';
-import { update_prices } from '../scripts/update_cardmarket_prices';
-import { read_json, write_json } from '../scripts/runtime';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+
+// import types
 import type { Card } from '../frontend/src/models/catalog';
+
 const temporary: string[] = [];
 function directory(): string {
   const path = mkdtempSync(join(tmpdir(), 'card-prices-test-'));

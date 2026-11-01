@@ -4,7 +4,7 @@ import AdmZip from 'adm-zip';
 test('creates and reloads a collection through the UI and retains navigation', async ({ page }) => {
   await page.goto('/');
   await expect(page.getByText('Manage your Pokemon card collection')).toBeVisible();
-  await page.getByRole('link', { name: 'My collection', exact: true }).click();
+  await page.getByRole('main').getByRole('link', { name: 'My collection', exact: true }).click();
   await page.getByRole('button', { name: 'New collection', exact: true }).click();
   await page.getByLabel('Collection name', { exact: true }).fill('Migration test collection');
   const save = page.waitForResponse(
@@ -93,5 +93,92 @@ test('rejects invalid imports without changing stored personal data', async ({ r
       await request.post('/api/personal-data/import', { data: Buffer.from('invalid archive') })
     ).status(),
   ).toBe(400);
+  const invalid = new AdmZip();
+  invalid.addFile(
+    'manifest.json',
+    Buffer.from(JSON.stringify({ format: 'card-manager-personal-data', version: 1 })),
+  );
+  invalid.addFile(
+    'data/collection.json',
+    Buffer.from(JSON.stringify({ ...before, entries: [{ id: 'invalid-entry' }] })),
+  );
+  invalid.addFile('data/binders.json', Buffer.from(JSON.stringify({ version: 1, binders: [] })));
+  invalid.addFile(
+    'data/manual-images.json',
+    Buffer.from(JSON.stringify({ version: 1, entries: [] })),
+  );
+  expect(
+    (await request.post('/api/personal-data/import', { data: invalid.toBuffer() })).status(),
+  ).toBe(400);
   expect(await (await request.get('/api/collection')).json()).toEqual(before);
+});
+
+test('creates, edits and reloads a binder asset through the separated workflows', async ({
+  page,
+  request,
+}) => {
+  const errors: string[] = [];
+  page.on('pageerror', (err) => errors.push(err.message));
+  const collection = await (await request.get('/api/collection')).json();
+  collection.folders.push({
+    id: 'workflow-binder',
+    name: 'Workflow binder',
+    type: 'binder',
+    created_at: '2020-01-01',
+  });
+  expect((await request.put('/api/collection', { data: collection })).ok()).toBe(true);
+  await page.goto('/collection/folder/workflow-binder/binder');
+  await page.getByLabel('Number of pages', { exact: true }).fill('1');
+  await page.getByRole('button', { name: 'Create binder', exact: true }).click();
+  await page.getByRole('button', { name: 'Binder settings', exact: true }).click();
+  await page.getByLabel('Number of pages', { exact: true }).fill('2');
+  await page.getByRole('button', { name: 'Reset and save', exact: true }).click();
+  await page.getByRole('tab', { name: 'Proxies', exact: true }).click();
+  await page.getByRole('button', { name: 'add', exact: true }).click();
+  await page.getByLabel('Proxy name', { exact: true }).fill('Fixture proxy');
+  await page.locator('input[type=file]').setInputFiles({
+    name: 'fixture.png',
+    mimeType: 'image/png',
+    buffer: Buffer.from(
+      'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+a0V8AAAAASUVORK5CYII=',
+      'base64',
+    ),
+  });
+  await expect(page.locator('canvas')).toHaveJSProperty('height', 900);
+  await page.getByRole('dialog').getByRole('button', { name: 'Add', exact: true }).click();
+  await expect(page.getByRole('dialog')).toHaveCount(0);
+  await page.getByRole('button', { name: 'edit', exact: true }).click();
+  await page.getByLabel('Name', { exact: true }).fill('Edited fixture proxy');
+  await page.getByRole('dialog').getByRole('button', { name: 'Save', exact: true }).click();
+  await page.getByRole('button', { name: 'Auto Michi', exact: true }).click();
+  await page.getByRole('button', { name: 'Generate preview', exact: true }).click();
+  await expect(page.getByText('Proposed binder', { exact: true })).toBeVisible();
+  const saved = page.waitForResponse(
+    (res) => res.url().endsWith('/api/binders') && res.request().method() === 'PUT',
+  );
+  await page.getByRole('button', { name: 'Apply layout', exact: true }).click();
+  expect((await saved).ok()).toBe(true);
+  await page.reload();
+  await expect(page.getByText('Workflow binder', { exact: true })).toBeVisible();
+  const persisted = await (await request.get('/api/binders')).json();
+  const binder = persisted.binders.find(
+    (item: { folder_id: string }) => item.folder_id === 'workflow-binder',
+  );
+  expect(binder.page_count).toBe(2);
+  expect(binder.proxies[0].name).toBe('Edited fixture proxy');
+  expect(binder.slots).toContain(`proxy:${binder.proxies[0].id}`);
+  expect(errors).toEqual([]);
+});
+
+test('supports keyboard content navigation and recovers from an unknown history URL', async ({
+  page,
+}) => {
+  await page.goto('/unknown-page');
+  await expect(page.getByRole('heading', { name: 'Page not found' })).toBeVisible();
+  await page.keyboard.press('Tab');
+  await expect(page.getByRole('link', { name: 'Skip to content' })).toBeFocused();
+  await page.keyboard.press('Enter');
+  await expect(page.getByRole('main')).toBeFocused();
+  await page.getByRole('link', { name: 'Return home', exact: true }).click();
+  await expect(page.getByText('Manage your Pokemon card collection')).toBeVisible();
 });

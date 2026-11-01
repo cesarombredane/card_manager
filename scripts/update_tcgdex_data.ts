@@ -1,17 +1,10 @@
+// import utils
+import { download_price_guide, index_price_guide } from './cardmarket_prices';
 import { cpSync, existsSync, mkdirSync, renameSync, rmSync } from 'node:fs';
-import { basename, join } from 'node:path';
-import {
-  project_root,
-  data_root,
-  files,
-  write_json,
-  compare,
-  cli,
-  run_command,
-  is_main,
-  entry,
-} from './runtime';
 import { source_folders, language_names } from './catalog_constants';
+import { generate_coverage } from './report_coverage';
+import { duration, log } from './update_logging';
+import { basename, join } from 'node:path';
 import {
   parse_typescript_object,
   slugify,
@@ -31,12 +24,23 @@ import {
   merge_append_only,
   personal_data_files,
 } from './catalog_storage';
-import { download_price_guide, index_price_guide } from './cardmarket_prices';
-import { generate_coverage } from './report_coverage';
-import { duration, log } from './update_logging';
-import type { Json_Object } from './runtime';
+import {
+  project_root,
+  data_root,
+  files,
+  write_json,
+  compare,
+  cli,
+  run_command,
+  is_main,
+  entry,
+} from './runtime';
+
+// import types
 import type { Mapping_Diagnostics, Pokemon_Aliases } from './catalog_normalization';
 import type { Series, Card, Set as Card_Set } from '../frontend/src/models/catalog';
+import type { Json_Object } from './runtime';
+
 export type Catalog_Options = {
   overwrite: boolean;
   preserve_images: boolean;

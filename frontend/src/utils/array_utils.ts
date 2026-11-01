@@ -1,4 +1,4 @@
 // Returns sorted unique string values.
-export const uniqueValues = (values: string[]): string[] => {
+export const unique_values = (values: string[]): string[] => {
   return [...new Set(values.filter(Boolean))].sort();
 };

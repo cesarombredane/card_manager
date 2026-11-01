@@ -1,23 +1,31 @@
-import type { IncomingMessage, ServerResponse } from 'node:http';
+// import utils
+import {
+  parse_collection_data,
+  parse_binders_data,
+  parse_manual_image_data,
+} from '../src/services/personal_validation';
 import { mkdir, readFile, rename, rm, unlink, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import AdmZip from 'adm-zip';
 
+// import types
+import type { IncomingMessage, ServerResponse } from 'node:http';
+
 export function personal_data_plugins(
   root = resolve(dirname(fileURLToPath(import.meta.url)), '..'),
 ) {
-  const collectionPath = resolve(root, 'data/collection.json');
-  const emptyCollection = {
+  const collection_path = resolve(root, 'data/collection.json');
+  const empty_collection = {
     version: 2,
     folders: [],
     entries: [],
     manual_cards: [],
   };
-  const bindersPath = resolve(root, 'data/binders.json');
-  const emptyBinders = { version: 1, binders: [] };
+  const binders_path = resolve(root, 'data/binders.json');
+  const empty_binders = { version: 1, binders: [] };
 
-  type ManualImageEntry = {
+  type Manual_Image_Entry = {
     set_id: string;
     card_id: string;
     variant_id: string;
@@ -26,82 +34,86 @@ export function personal_data_plugins(
     updated_at: string;
   };
 
-  type ManualImagesData = {
+  type Manual_Images_Data = {
     version: 1;
-    entries: ManualImageEntry[];
+    entries: Manual_Image_Entry[];
   };
 
-  const manualImagesPath = resolve(root, 'data/manual-images.json');
-  const manualImagesRoot = resolve(root, 'public/images/manual');
-  const emptyManualImages: ManualImagesData = { version: 1, entries: [] };
-  const safeId = (value: unknown): string => {
+  const manual_images_path = resolve(root, 'data/manual-images.json');
+  const manual_images_root = resolve(root, 'public/images/manual');
+  const empty_manual_images: Manual_Images_Data = { version: 1, entries: [] };
+  const safe_id = (value: unknown): string => {
     const id = String(value ?? '');
     if (!/^[a-zA-Z0-9._-]+$/.test(id)) throw new Error('Invalid image identifier');
     return id;
   };
-  const readRequestBody = (req: IncomingMessage, maximumBytes: number): Promise<string> =>
-    new Promise((resolveBody, reject) => {
+  const read_request_body = (req: IncomingMessage, maximum_bytes: number): Promise<string> =>
+    new Promise((resolve_body, reject) => {
       let body = '';
       req.setEncoding('utf-8');
       req.on('data', (chunk: string) => {
         body += chunk;
-        if (Buffer.byteLength(body, 'utf-8') > maximumBytes) {
+        if (Buffer.byteLength(body, 'utf-8') > maximum_bytes) {
           reject(new Error('Uploaded image is too large'));
           req.destroy();
         }
       });
-      req.on('end', () => resolveBody(body));
+      req.on('end', () => resolve_body(body));
       req.on('error', reject);
     });
-  const readBinaryRequest = (req: IncomingMessage, maximumBytes: number): Promise<Buffer> =>
-    new Promise((resolveBody, reject) => {
+  const read_binary_request = (req: IncomingMessage, maximum_bytes: number): Promise<Buffer> =>
+    new Promise((resolve_body, reject) => {
       const chunks: Buffer[] = [];
       let size = 0;
       req.on('data', (chunk: Buffer) => {
         size += chunk.length;
-        if (size > maximumBytes) {
+        if (size > maximum_bytes) {
           reject(new Error('Backup archive is too large'));
           req.destroy();
           return;
         }
         chunks.push(chunk);
       });
-      req.on('end', () => resolveBody(Buffer.concat(chunks)));
+      req.on('end', () => resolve_body(Buffer.concat(chunks)));
       req.on('error', reject);
     });
-  const readManualImages = async (): Promise<ManualImagesData> => {
+  const read_manual_images = async (): Promise<Manual_Images_Data> => {
     try {
       const parsed = JSON.parse(
-        await readFile(manualImagesPath, 'utf-8'),
-      ) as Partial<ManualImagesData>;
+        await readFile(manual_images_path, 'utf-8'),
+      ) as Partial<Manual_Images_Data>;
       if (!Array.isArray(parsed.entries)) throw new Error('Invalid manual-images JSON');
       return { version: 1, entries: parsed.entries };
     } catch (error) {
       if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error;
-      await mkdir(dirname(manualImagesPath), { recursive: true });
-      await writeFile(manualImagesPath, `${JSON.stringify(emptyManualImages, null, 2)}\n`, 'utf-8');
-      return { ...emptyManualImages, entries: [] };
+      await mkdir(dirname(manual_images_path), { recursive: true });
+      await writeFile(
+        manual_images_path,
+        `${JSON.stringify(empty_manual_images, null, 2)}\n`,
+        'utf-8',
+      );
+      return { ...empty_manual_images, entries: [] };
     }
   };
-  const writeManualImages = async (data: ManualImagesData): Promise<void> => {
-    const temporary = `${manualImagesPath}.tmp`;
+  const write_manual_images = async (data: Manual_Images_Data): Promise<void> => {
+    const temporary = `${manual_images_path}.tmp`;
     await writeFile(temporary, `${JSON.stringify(data, null, 2)}\n`, 'utf-8');
-    await rename(temporary, manualImagesPath);
+    await rename(temporary, manual_images_path);
   };
 
-  const collectionApi = () => {
-    type CollectionEntity = Record<string, unknown> & { id: string };
-    type CollectionDocument = {
+  const collection_api = () => {
+    type Collection_Entity = Record<string, unknown> & { id: string };
+    type Collection_Document = {
       version: number;
-      folders: CollectionEntity[];
-      entries: CollectionEntity[];
-      manual_cards: CollectionEntity[];
+      folders: Collection_Entity[];
+      entries: Collection_Entity[];
+      manual_cards: Collection_Entity[];
     };
-    let collectionWriteQueue: Promise<void> = Promise.resolve();
+    let collection_write_queue: Promise<void> = Promise.resolve();
 
-    const readCollection = async (): Promise<CollectionDocument> => {
+    const read_collection = async (): Promise<Collection_Document> => {
       try {
-        const parsed = JSON.parse(await readFile(collectionPath, 'utf-8')) as CollectionDocument;
+        const parsed = JSON.parse(await readFile(collection_path, 'utf-8')) as Collection_Document;
         if (
           !Array.isArray(parsed.folders) ||
           !Array.isArray(parsed.entries) ||
@@ -112,37 +124,37 @@ export function personal_data_plugins(
         return parsed;
       } catch (error) {
         if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error;
-        return structuredClone(emptyCollection) as CollectionDocument;
+        return structuredClone(empty_collection) as Collection_Document;
       }
     };
 
-    const writeCollection = async (data: CollectionDocument): Promise<void> => {
-      await mkdir(dirname(collectionPath), { recursive: true });
-      const temporary = `${collectionPath}.tmp`;
+    const write_collection = async (data: Collection_Document): Promise<void> => {
+      await mkdir(dirname(collection_path), { recursive: true });
+      const temporary = `${collection_path}.tmp`;
       await writeFile(temporary, `${JSON.stringify(data, null, 2)}\n`, 'utf-8');
-      await rename(temporary, collectionPath);
+      await rename(temporary, collection_path);
     };
 
-    const sameEntity = (left: CollectionEntity, right: CollectionEntity): boolean =>
+    const same_entity = (left: Collection_Entity, right: Collection_Entity): boolean =>
       JSON.stringify(left) === JSON.stringify(right);
 
-    const applyEntityChanges = (
-      latest: CollectionEntity[],
-      before: CollectionEntity[],
-      after: CollectionEntity[],
+    const apply_entity_changes = (
+      latest: Collection_Entity[],
+      before: Collection_Entity[],
+      after: Collection_Entity[],
     ): void => {
-      const beforeById = new Map(before.map((entity) => [entity.id, entity]));
-      const afterById = new Map(after.map((entity) => [entity.id, entity]));
+      const before_by_id = new Map(before.map((entity) => [entity.id, entity]));
+      const after_by_id = new Map(after.map((entity) => [entity.id, entity]));
 
-      for (const id of beforeById.keys()) {
-        if (afterById.has(id)) continue;
+      for (const id of before_by_id.keys()) {
+        if (after_by_id.has(id)) continue;
         const index = latest.findIndex((entity) => entity.id === id);
         if (index !== -1) latest.splice(index, 1);
       }
 
       for (const entity of after) {
-        const previous = beforeById.get(entity.id);
-        if (previous && sameEntity(previous, entity)) continue;
+        const previous = before_by_id.get(entity.id);
+        if (previous && same_entity(previous, entity)) continue;
         const index = latest.findIndex((candidate) => candidate.id === entity.id);
         if (index === -1) latest.push(structuredClone(entity));
         else {
@@ -157,7 +169,7 @@ export function personal_data_plugins(
       }
     };
 
-    const entryIdentity = (entry: CollectionEntity): string =>
+    const entry_identity = (entry: Collection_Entity): string =>
       [
         entry.folder_id,
         entry.set_id,
@@ -169,28 +181,28 @@ export function personal_data_plugins(
         entry.wanted === true && entry.strong_language === true,
       ].join(':');
 
-    const applyEntryChanges = (
-      latest: CollectionEntity[],
-      before: CollectionEntity[],
-      after: CollectionEntity[],
+    const apply_entry_changes = (
+      latest: Collection_Entity[],
+      before: Collection_Entity[],
+      after: Collection_Entity[],
     ): void => {
-      const beforeById = new Map(before.map((entry) => [entry.id, entry]));
-      const afterById = new Map(after.map((entry) => [entry.id, entry]));
+      const before_by_id = new Map(before.map((entry) => [entry.id, entry]));
+      const after_by_id = new Map(after.map((entry) => [entry.id, entry]));
 
-      for (const id of beforeById.keys()) {
-        if (afterById.has(id)) continue;
+      for (const id of before_by_id.keys()) {
+        if (after_by_id.has(id)) continue;
         const index = latest.findIndex((entry) => entry.id === id);
         if (index !== -1) latest.splice(index, 1);
       }
 
       for (const entry of after) {
-        const previous = beforeById.get(entry.id);
-        if (previous && sameEntity(previous, entry)) continue;
-        const latestIndex = latest.findIndex((candidate) => candidate.id === entry.id);
+        const previous = before_by_id.get(entry.id);
+        if (previous && same_entity(previous, entry)) continue;
+        const latest_index = latest.findIndex((candidate) => candidate.id === entry.id);
 
         if (!previous) {
           const matching = latest.find(
-            (candidate) => entryIdentity(candidate) === entryIdentity(entry),
+            (candidate) => entry_identity(candidate) === entry_identity(entry),
           );
           if (matching) {
             matching.quantity = Number(matching.quantity ?? 0) + Number(entry.quantity ?? 0);
@@ -201,29 +213,29 @@ export function personal_data_plugins(
           continue;
         }
 
-        if (latestIndex === -1) {
+        if (latest_index === -1) {
           latest.push(structuredClone(entry));
           continue;
         }
 
-        const quantityDelta = Number(entry.quantity ?? 0) - Number(previous.quantity ?? 0);
-        const merged = structuredClone(latest[latestIndex]);
+        const quantity_delta = Number(entry.quantity ?? 0) - Number(previous.quantity ?? 0);
+        const merged = structuredClone(latest[latest_index]);
         for (const [key, value] of Object.entries(entry)) {
           if (key !== 'quantity' && JSON.stringify(value) !== JSON.stringify(previous[key])) {
             merged[key] = structuredClone(value);
           }
         }
-        merged.quantity = Math.max(1, Number(latest[latestIndex].quantity ?? 0) + quantityDelta);
-        latest[latestIndex] = merged;
+        merged.quantity = Math.max(1, Number(latest[latest_index].quantity ?? 0) + quantity_delta);
+        latest[latest_index] = merged;
       }
 
       // Language edits and transfers may make two entries equivalent.
-      const entriesByIdentity = new Map<string, CollectionEntity>();
+      const entries_by_identity = new Map<string, Collection_Entity>();
       for (const entry of [...latest]) {
-        const identity = entryIdentity(entry);
-        const existing = entriesByIdentity.get(identity);
+        const identity = entry_identity(entry);
+        const existing = entries_by_identity.get(identity);
         if (!existing) {
-          entriesByIdentity.set(identity, entry);
+          entries_by_identity.set(identity, entry);
           continue;
         }
         existing.quantity = Number(existing.quantity ?? 0) + Number(entry.quantity ?? 0);
@@ -232,26 +244,26 @@ export function personal_data_plugins(
       }
     };
 
-    const applyCollectionDelta = async (
-      before: CollectionDocument,
-      after: CollectionDocument,
+    const apply_collection_delta = async (
+      before: Collection_Document,
+      after: Collection_Document,
     ): Promise<void> => {
-      const latest = await readCollection();
-      applyEntityChanges(latest.folders, before.folders, after.folders);
-      applyEntityChanges(latest.manual_cards, before.manual_cards, after.manual_cards);
-      applyEntryChanges(latest.entries, before.entries, after.entries);
+      const latest = await read_collection();
+      apply_entity_changes(latest.folders, before.folders, after.folders);
+      apply_entity_changes(latest.manual_cards, before.manual_cards, after.manual_cards);
+      apply_entry_changes(latest.entries, before.entries, after.entries);
       latest.version = Math.max(Number(latest.version) || 2, Number(after.version) || 2);
-      await writeCollection(latest);
+      await write_collection(latest);
     };
 
-    const middleware = (req: IncomingMessage, res: ServerResponse, next: () => void): void => {
+    const middleware = (req: IncomingMessage, reply: ServerResponse, next: () => void): void => {
       if (req.url === '/api/collection/operations' && req.method === 'POST') {
-        res.setHeader('Content-Type', 'application/json; charset=utf-8');
-        readRequestBody(req, 20_000_000)
-          .then((body) => {
-            const payload = JSON.parse(body) as {
-              before?: CollectionDocument;
-              after?: CollectionDocument;
+        reply.setHeader('Content-Type', 'application/json; charset=utf-8');
+        read_request_body(req, 20_000_000)
+          .then((res) => {
+            const payload = JSON.parse(res) as {
+              before?: Collection_Document;
+              after?: Collection_Document;
             };
             if (
               !payload.before ||
@@ -264,19 +276,19 @@ export function personal_data_plugins(
               !Array.isArray(payload.after.manual_cards)
             )
               throw new Error('Invalid collection operation');
-            collectionWriteQueue = collectionWriteQueue
+            parse_collection_data(payload.before);
+            parse_collection_data(payload.after);
+            collection_write_queue = collection_write_queue
               .catch(() => undefined)
-              .then(() => applyCollectionDelta(payload.before!, payload.after!));
-            return collectionWriteQueue;
+              .then(() => apply_collection_delta(payload.before!, payload.after!));
+            return collection_write_queue;
           })
           .then(() => {
-            res.end(JSON.stringify({ ok: true }));
+            reply.end(JSON.stringify({ ok: true }));
           })
-          .catch((error: unknown) => {
-            res.statusCode = 400;
-            res.end(
-              JSON.stringify({ error: error instanceof Error ? error.message : String(error) }),
-            );
+          .catch((err) => {
+            reply.statusCode = 400;
+            reply.end(JSON.stringify({ error: err instanceof Error ? err.message : String(err) }));
           });
         return;
       }
@@ -286,20 +298,20 @@ export function personal_data_plugins(
         return;
       }
 
-      res.setHeader('Content-Type', 'application/json; charset=utf-8');
+      reply.setHeader('Content-Type', 'application/json; charset=utf-8');
       if (req.method === 'GET') {
-        readFile(collectionPath, 'utf-8')
-          .then((contents) => res.end(contents))
-          .catch(async (error: NodeJS.ErrnoException) => {
-            if (error.code !== 'ENOENT') {
-              res.statusCode = 500;
-              res.end(JSON.stringify({ error: error.message }));
+        readFile(collection_path, 'utf-8')
+          .then((res) => reply.end(res))
+          .catch(async (err) => {
+            if (err.code !== 'ENOENT') {
+              reply.statusCode = 500;
+              reply.end(JSON.stringify({ error: err.message }));
               return;
             }
-            await mkdir(dirname(collectionPath), { recursive: true });
-            const contents = `${JSON.stringify(emptyCollection, null, 2)}\n`;
-            await writeFile(collectionPath, contents, 'utf-8');
-            res.end(contents);
+            await mkdir(dirname(collection_path), { recursive: true });
+            const contents = `${JSON.stringify(empty_collection, null, 2)}\n`;
+            await writeFile(collection_path, contents, 'utf-8');
+            reply.end(contents);
           });
         return;
       }
@@ -313,18 +325,18 @@ export function personal_data_plugins(
         });
         req.on('end', async () => {
           try {
-            const parsed = JSON.parse(body);
+            const parsed = parse_collection_data(JSON.parse(body));
             if (!Array.isArray(parsed.folders) || !Array.isArray(parsed.entries)) {
               throw new Error('Invalid collection JSON');
             }
-            collectionWriteQueue = collectionWriteQueue
+            collection_write_queue = collection_write_queue
               .catch(() => undefined)
-              .then(() => writeCollection(parsed as CollectionDocument));
-            await collectionWriteQueue;
-            res.end(JSON.stringify({ ok: true }));
+              .then(() => write_collection(parsed as Collection_Document));
+            await collection_write_queue;
+            reply.end(JSON.stringify({ ok: true }));
           } catch (error) {
-            res.statusCode = 400;
-            res.end(
+            reply.statusCode = 400;
+            reply.end(
               JSON.stringify({ error: error instanceof Error ? error.message : String(error) }),
             );
           }
@@ -332,8 +344,8 @@ export function personal_data_plugins(
         return;
       }
 
-      res.statusCode = 405;
-      res.end(JSON.stringify({ error: 'Method not allowed' }));
+      reply.statusCode = 405;
+      reply.end(JSON.stringify({ error: 'Method not allowed' }));
     };
 
     return {
@@ -349,47 +361,45 @@ export function personal_data_plugins(
     };
   };
 
-  const bindersApi = () => {
-    const middleware = (req: IncomingMessage, res: ServerResponse, next: () => void): void => {
+  const binders_api = () => {
+    const middleware = (req: IncomingMessage, reply: ServerResponse, next: () => void): void => {
       if (req.url !== '/api/binders') {
         next();
         return;
       }
-      res.setHeader('Content-Type', 'application/json; charset=utf-8');
+      reply.setHeader('Content-Type', 'application/json; charset=utf-8');
       if (req.method === 'GET') {
-        readFile(bindersPath, 'utf-8')
-          .then((contents) => res.end(contents))
-          .catch(async (error: NodeJS.ErrnoException) => {
-            if (error.code !== 'ENOENT') {
-              res.statusCode = 500;
-              res.end(JSON.stringify({ error: error.message }));
+        readFile(binders_path, 'utf-8')
+          .then((res) => reply.end(res))
+          .catch(async (err) => {
+            if (err.code !== 'ENOENT') {
+              reply.statusCode = 500;
+              reply.end(JSON.stringify({ error: err.message }));
               return;
             }
-            await writeFile(bindersPath, `${JSON.stringify(emptyBinders, null, 2)}\n`, 'utf-8');
-            res.end(JSON.stringify(emptyBinders));
+            await writeFile(binders_path, `${JSON.stringify(empty_binders, null, 2)}\n`, 'utf-8');
+            reply.end(JSON.stringify(empty_binders));
           });
         return;
       }
       if (req.method === 'PUT') {
-        readRequestBody(req, 10_000_000)
-          .then(async (body) => {
-            const parsed = JSON.parse(body) as { binders?: unknown[] };
-            if (!Array.isArray(parsed.binders)) throw new Error('Invalid binders JSON');
-            const temporary = `${bindersPath}.tmp`;
+        read_request_body(req, 10_000_000)
+          .then(async (res) => {
+            const parsed = JSON.parse(res) as { binders?: unknown[] };
+            parse_binders_data(parsed);
+            const temporary = `${binders_path}.tmp`;
             await writeFile(temporary, `${JSON.stringify(parsed, null, 2)}\n`, 'utf-8');
-            await rename(temporary, bindersPath);
-            res.end(JSON.stringify({ ok: true }));
+            await rename(temporary, binders_path);
+            reply.end(JSON.stringify({ ok: true }));
           })
-          .catch((error: unknown) => {
-            res.statusCode = 400;
-            res.end(
-              JSON.stringify({ error: error instanceof Error ? error.message : String(error) }),
-            );
+          .catch((err) => {
+            reply.statusCode = 400;
+            reply.end(JSON.stringify({ error: err instanceof Error ? err.message : String(err) }));
           });
         return;
       }
-      res.statusCode = 405;
-      res.end(JSON.stringify({ error: 'Method not allowed' }));
+      reply.statusCode = 405;
+      reply.end(JSON.stringify({ error: 'Method not allowed' }));
     };
     return {
       name: 'binders-json-api',
@@ -404,21 +414,21 @@ export function personal_data_plugins(
     };
   };
 
-  const personalDataApi = () => {
-    const middleware = (req: IncomingMessage, res: ServerResponse, next: () => void): void => {
+  const personal_data_api = () => {
+    const middleware = (req: IncomingMessage, reply: ServerResponse, next: () => void): void => {
       if (req.url === '/api/personal-data/export' && req.method === 'GET') {
         Promise.all([
-          readFile(collectionPath).catch(() =>
-            Buffer.from(`${JSON.stringify(emptyCollection, null, 2)}\n`),
+          readFile(collection_path).catch(() =>
+            Buffer.from(`${JSON.stringify(empty_collection, null, 2)}\n`),
           ),
-          readFile(bindersPath).catch(() =>
-            Buffer.from(`${JSON.stringify(emptyBinders, null, 2)}\n`),
+          readFile(binders_path).catch(() =>
+            Buffer.from(`${JSON.stringify(empty_binders, null, 2)}\n`),
           ),
-          readFile(manualImagesPath).catch(() =>
-            Buffer.from(`${JSON.stringify(emptyManualImages, null, 2)}\n`),
+          readFile(manual_images_path).catch(() =>
+            Buffer.from(`${JSON.stringify(empty_manual_images, null, 2)}\n`),
           ),
         ])
-          .then(async ([collection, binders, manualImages]) => {
+          .then(async ([collection, binders, manual_images]) => {
             const archive = new AdmZip();
             archive.addFile(
               'manifest.json',
@@ -436,50 +446,48 @@ export function personal_data_plugins(
             );
             archive.addFile('data/collection.json', collection);
             archive.addFile('data/binders.json', binders);
-            archive.addFile('data/manual-images.json', manualImages);
-            await mkdir(manualImagesRoot, { recursive: true });
+            archive.addFile('data/manual-images.json', manual_images);
+            await mkdir(manual_images_root, { recursive: true });
             archive.addLocalFolder(
-              manualImagesRoot,
+              manual_images_root,
               'images/manual',
               (filename) => !filename.startsWith('.'),
             );
             const contents = archive.toBuffer();
             const date = new Date().toISOString().slice(0, 10);
-            res.statusCode = 200;
-            res.setHeader('Content-Type', 'application/zip');
-            res.setHeader(
+            reply.statusCode = 200;
+            reply.setHeader('Content-Type', 'application/zip');
+            reply.setHeader(
               'Content-Disposition',
               `attachment; filename="card-manager-backup-${date}.zip"`,
             );
-            res.setHeader('Content-Length', String(contents.length));
-            res.end(contents);
+            reply.setHeader('Content-Length', String(contents.length));
+            reply.end(contents);
           })
-          .catch((error: unknown) => {
-            res.statusCode = 500;
-            res.setHeader('Content-Type', 'application/json; charset=utf-8');
-            res.end(
-              JSON.stringify({ error: error instanceof Error ? error.message : String(error) }),
-            );
+          .catch((err) => {
+            reply.statusCode = 500;
+            reply.setHeader('Content-Type', 'application/json; charset=utf-8');
+            reply.end(JSON.stringify({ error: err instanceof Error ? err.message : String(err) }));
           });
         return;
       }
 
       if (req.url === '/api/personal-data/import' && req.method === 'POST') {
-        readBinaryRequest(req, 300_000_000)
-          .then(async (contents) => {
-            const archive = new AdmZip(contents);
+        read_binary_request(req, 300_000_000)
+          .then(async (res) => {
+            const archive = new AdmZip(res);
             const entries = archive.getEntries();
             for (const entry of entries) {
               const parts = entry.entryName.replaceAll('\\', '/').split('/');
               if (entry.entryName.startsWith('/') || parts.includes('..'))
                 throw new Error('Backup contains an unsafe path');
             }
-            const requiredFile = (name: string): Buffer => {
+            const required_file = (name: string): Buffer => {
               const entry = archive.getEntry(name);
               if (!entry || entry.isDirectory) throw new Error(`Backup is missing ${name}`);
               return entry.getData();
             };
-            const manifest = JSON.parse(requiredFile('manifest.json').toString('utf-8')) as Record<
+            const manifest = JSON.parse(required_file('manifest.json').toString('utf-8')) as Record<
               string,
               unknown
             >;
@@ -487,13 +495,13 @@ export function personal_data_plugins(
               throw new Error('This is not a supported Card Manager backup');
             }
             const collection = JSON.parse(
-              requiredFile('data/collection.json').toString('utf-8'),
+              required_file('data/collection.json').toString('utf-8'),
             ) as Record<string, unknown>;
             const binders = JSON.parse(
-              requiredFile('data/binders.json').toString('utf-8'),
+              required_file('data/binders.json').toString('utf-8'),
             ) as Record<string, unknown>;
-            const manualImages = JSON.parse(
-              requiredFile('data/manual-images.json').toString('utf-8'),
+            const manual_images = JSON.parse(
+              required_file('data/manual-images.json').toString('utf-8'),
             ) as Record<string, unknown>;
             if (
               !Array.isArray(collection.folders) ||
@@ -504,58 +512,60 @@ export function personal_data_plugins(
             }
             if (!Array.isArray(binders.binders))
               throw new Error('Backup contains invalid binder data');
-            if (!Array.isArray(manualImages.entries))
+            if (!Array.isArray(manual_images.entries))
               throw new Error('Backup contains invalid manual image data');
 
-            const importId = Date.now().toString(36);
-            const stagedImages = resolve(root, `public/images/manual.import-${importId}`);
-            const backupImages = resolve(root, `public/images/manual.backup-${importId}`);
-            await mkdir(stagedImages, { recursive: true });
+            parse_collection_data(collection);
+            parse_binders_data(binders);
+            parse_manual_image_data(manual_images);
+
+            const import_id = Date.now().toString(36);
+            const staged_images = resolve(root, `public/images/manual.import-${import_id}`);
+            const backup_images = resolve(root, `public/images/manual.backup-${import_id}`);
+            await mkdir(staged_images, { recursive: true });
             for (const entry of entries) {
               if (entry.isDirectory || !entry.entryName.startsWith('images/manual/')) continue;
               const relative = entry.entryName.slice('images/manual/'.length);
               if (!relative) continue;
-              const destination = resolve(stagedImages, relative);
-              if (!destination.startsWith(`${stagedImages}/`))
+              const destination = resolve(staged_images, relative);
+              if (!destination.startsWith(`${staged_images}/`))
                 throw new Error('Backup contains an unsafe image path');
               await mkdir(dirname(destination), { recursive: true });
               await writeFile(destination, entry.getData());
             }
 
-            let previousImagesMoved = false;
+            let previous_images_moved = false;
             try {
-              await rename(manualImagesRoot, backupImages);
-              previousImagesMoved = true;
+              await rename(manual_images_root, backup_images);
+              previous_images_moved = true;
             } catch (error) {
               if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error;
             }
             try {
-              await rename(stagedImages, manualImagesRoot);
+              await rename(staged_images, manual_images_root);
               const writes: Array<[string, Record<string, unknown>]> = [
-                [collectionPath, collection],
-                [bindersPath, binders],
-                [manualImagesPath, manualImages],
+                [collection_path, collection],
+                [binders_path, binders],
+                [manual_images_path, manual_images],
               ];
               for (const [path, data] of writes) {
                 const temporary = `${path}.import.tmp`;
                 await writeFile(temporary, `${JSON.stringify(data, null, 2)}\n`, 'utf-8');
                 await rename(temporary, path);
               }
-              if (previousImagesMoved) await rm(backupImages, { recursive: true, force: true });
+              if (previous_images_moved) await rm(backup_images, { recursive: true, force: true });
             } catch (error) {
-              await rm(manualImagesRoot, { recursive: true, force: true });
-              if (previousImagesMoved) await rename(backupImages, manualImagesRoot);
+              await rm(manual_images_root, { recursive: true, force: true });
+              if (previous_images_moved) await rename(backup_images, manual_images_root);
               throw error;
             }
-            res.setHeader('Content-Type', 'application/json; charset=utf-8');
-            res.end(JSON.stringify({ ok: true }));
+            reply.setHeader('Content-Type', 'application/json; charset=utf-8');
+            reply.end(JSON.stringify({ ok: true }));
           })
-          .catch((error: unknown) => {
-            res.statusCode = 400;
-            res.setHeader('Content-Type', 'application/json; charset=utf-8');
-            res.end(
-              JSON.stringify({ error: error instanceof Error ? error.message : String(error) }),
-            );
+          .catch((err) => {
+            reply.statusCode = 400;
+            reply.setHeader('Content-Type', 'application/json; charset=utf-8');
+            reply.end(JSON.stringify({ error: err instanceof Error ? err.message : String(err) }));
           });
         return;
       }
@@ -574,34 +584,32 @@ export function personal_data_plugins(
     };
   };
 
-  const manualImagesApi = () => {
-    const middleware = (req: IncomingMessage, res: ServerResponse, next: () => void): void => {
+  const manual_images_api = () => {
+    const middleware = (req: IncomingMessage, reply: ServerResponse, next: () => void): void => {
       if (req.url !== '/api/manual-images') {
         next();
         return;
       }
-      res.setHeader('Content-Type', 'application/json; charset=utf-8');
+      reply.setHeader('Content-Type', 'application/json; charset=utf-8');
 
       if (req.method === 'GET') {
-        readManualImages()
-          .then((data) => res.end(JSON.stringify(data)))
-          .catch((error: unknown) => {
-            res.statusCode = 500;
-            res.end(
-              JSON.stringify({ error: error instanceof Error ? error.message : String(error) }),
-            );
+        read_manual_images()
+          .then((res) => reply.end(JSON.stringify(res)))
+          .catch((err) => {
+            reply.statusCode = 500;
+            reply.end(JSON.stringify({ error: err instanceof Error ? err.message : String(err) }));
           });
         return;
       }
 
       if (req.method === 'PUT') {
-        readRequestBody(req, 22_000_000)
-          .then(async (body) => {
-            const input = JSON.parse(body) as Record<string, unknown>;
-            const setId = safeId(input.set_id);
-            const cardId = safeId(input.card_id);
-            const variantId = safeId(input.variant_id);
-            const languageId = safeId(input.language_id);
+        read_request_body(req, 22_000_000)
+          .then(async (res) => {
+            const input = JSON.parse(res) as Record<string, unknown>;
+            const set_id = safe_id(input.set_id);
+            const card_id = safe_id(input.card_id);
+            const variant_id = safe_id(input.variant_id);
+            const language_id = safe_id(input.language_id);
             const match = /^data:(image\/(?:jpeg|png|webp));base64,([a-zA-Z0-9+/=]+)$/.exec(
               String(input.data_url ?? ''),
             );
@@ -611,57 +619,55 @@ export function personal_data_plugins(
             if (contents.length === 0 || contents.length > 15_000_000)
               throw new Error('Image must be smaller than 15 MB');
 
-            const directory = resolve(manualImagesRoot, setId, cardId, variantId);
-            const filePath = resolve(directory, `${languageId}${extension}`);
-            const url = `/images/manual/${setId}/${cardId}/${variantId}/${languageId}${extension}`;
-            const data = await readManualImages();
+            const directory = resolve(manual_images_root, set_id, card_id, variant_id);
+            const file_path = resolve(directory, `${language_id}${extension}`);
+            const url = `/images/manual/${set_id}/${card_id}/${variant_id}/${language_id}${extension}`;
+            const data = await read_manual_images();
             const existing = data.entries.find(
               (entry) =>
-                entry.set_id === setId &&
-                entry.card_id === cardId &&
-                entry.variant_id === variantId &&
-                entry.language_id === languageId,
+                entry.set_id === set_id &&
+                entry.card_id === card_id &&
+                entry.variant_id === variant_id &&
+                entry.language_id === language_id,
             );
             await mkdir(directory, { recursive: true });
-            await writeFile(filePath, contents);
+            await writeFile(file_path, contents);
             if (existing && existing.url !== url) {
               await unlink(resolve(root, 'public', existing.url.replace(/^\//, ''))).catch(
                 () => undefined,
               );
             }
             const entry = {
-              set_id: setId,
-              card_id: cardId,
-              variant_id: variantId,
-              language_id: languageId,
+              set_id: set_id,
+              card_id: card_id,
+              variant_id: variant_id,
+              language_id: language_id,
               url,
               updated_at: new Date().toISOString(),
             };
             if (existing) Object.assign(existing, entry);
             else data.entries.push(entry);
-            await writeManualImages(data);
-            res.end(JSON.stringify(entry));
+            await write_manual_images(data);
+            reply.end(JSON.stringify(entry));
           })
-          .catch((error: unknown) => {
-            res.statusCode = 400;
-            res.end(
-              JSON.stringify({ error: error instanceof Error ? error.message : String(error) }),
-            );
+          .catch((err) => {
+            reply.statusCode = 400;
+            reply.end(JSON.stringify({ error: err instanceof Error ? err.message : String(err) }));
           });
         return;
       }
 
       if (req.method === 'DELETE') {
-        readRequestBody(req, 20_000)
-          .then(async (body) => {
-            const input = JSON.parse(body) as Record<string, unknown>;
+        read_request_body(req, 20_000)
+          .then(async (res) => {
+            const input = JSON.parse(res) as Record<string, unknown>;
             const ids = [
-              safeId(input.set_id),
-              safeId(input.card_id),
-              safeId(input.variant_id),
-              safeId(input.language_id),
+              safe_id(input.set_id),
+              safe_id(input.card_id),
+              safe_id(input.variant_id),
+              safe_id(input.language_id),
             ];
-            const data = await readManualImages();
+            const data = await read_manual_images();
             const index = data.entries.findIndex(
               (entry) =>
                 entry.set_id === ids[0] &&
@@ -674,21 +680,19 @@ export function personal_data_plugins(
               await unlink(resolve(root, 'public', entry.url.replace(/^\//, ''))).catch(
                 () => undefined,
               );
-              await writeManualImages(data);
+              await write_manual_images(data);
             }
-            res.end(JSON.stringify({ ok: true }));
+            reply.end(JSON.stringify({ ok: true }));
           })
-          .catch((error: unknown) => {
-            res.statusCode = 400;
-            res.end(
-              JSON.stringify({ error: error instanceof Error ? error.message : String(error) }),
-            );
+          .catch((err) => {
+            reply.statusCode = 400;
+            reply.end(JSON.stringify({ error: err instanceof Error ? err.message : String(err) }));
           });
         return;
       }
 
-      res.statusCode = 405;
-      res.end(JSON.stringify({ error: 'Method not allowed' }));
+      reply.statusCode = 405;
+      reply.end(JSON.stringify({ error: 'Method not allowed' }));
     };
     return {
       name: 'manual-images-api',
@@ -703,5 +707,5 @@ export function personal_data_plugins(
     };
   };
 
-  return [collectionApi(), bindersApi(), personalDataApi(), manualImagesApi()];
+  return [collection_api(), binders_api(), personal_data_api(), manual_images_api()];
 }

@@ -19,7 +19,7 @@ change is missing or ambiguous. Resolve questions that affect scope, behaviour o
 acceptance criteria before implementing the dependent work. Read-only investigation
 may happen first to make questions and proposals concrete.
 
-Before editing any files, prepare a plan describing the proposed changes, affected
+Read-only investigation may establish the scope. Before editing any files, prepare a plan describing the proposed changes, affected
 files or components, and planned verification. Present the plan to the user, ask
 for explicit approval and wait for that approval before making edits. A request
 to implement a feature or fix is not, by itself, approval of a plan that has not
@@ -86,3 +86,10 @@ review the final diff, verify acceptance criteria and preservation of unrelated
 behaviour, and report the checks performed and their actual limitations. Never
 claim a check passed without running it. A green pipeline does not replace a
 review of architecture and behaviour.
+
+## Current verification boundary
+
+Use synthetic fixtures and temporary storage for automated verification. Do not
+run update, reset, download, price-refresh or catalog-generation commands as a
+verification shortcut. Do not modify existing catalog files, personal JSON, image
+indexes or artwork. Installation backups require an explicit request.

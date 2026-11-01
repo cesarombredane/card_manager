@@ -1,81 +1,87 @@
-import { manualImageStore } from '../store/modules/manual_images';
+// import utils
+import { manual_image_store } from '../store/modules/manual_images';
 
-export type ResolvedCardImage = {
+export type Resolved_Card_Image = {
   url: string | null;
-  languageId: string | null;
-  isFallback: boolean;
+  language_id: string | null;
+  is_fallback: boolean;
   source: 'automatic' | 'manual' | null;
 };
 
-export type CardImageIdentity = {
-  setId: string;
-  cardId: string;
-  variantId: string;
+export type Card_Image_Identity = {
+  set_id: string;
+  card_id: string;
+  variant_id: string;
 };
 
 // Resolves the requested scan and exposes when another language had to be used.
-export const resolveCardImage = (
+export const resolve_card_image = (
   images: Record<string, string>,
-  languageId: string,
-  fallbackLanguageId: string = 'en',
-  identity?: CardImageIdentity,
-): ResolvedCardImage => {
-  if (images[languageId]) {
-    return { url: images[languageId], languageId, isFallback: false, source: 'automatic' };
-  }
-
-  const requestedManual = identity
-    ? manualImageStore.find(identity.setId, identity.cardId, identity.variantId, languageId)
-    : null;
-  if (requestedManual) {
+  language_id: string,
+  fallback_language_id: string = 'en',
+  identity?: Card_Image_Identity,
+): Resolved_Card_Image => {
+  if (images[language_id]) {
     return {
-      url: `${requestedManual.url}?v=${encodeURIComponent(requestedManual.updated_at)}`,
-      languageId,
-      isFallback: false,
-      source: 'manual',
-    };
-  }
-
-  const automaticFallback = images[fallbackLanguageId]
-    ? ([fallbackLanguageId, images[fallbackLanguageId]] as const)
-    : Object.entries(images).find(([, url]) => Boolean(url));
-  if (automaticFallback) {
-    return {
-      url: automaticFallback[1],
-      languageId: automaticFallback[0],
-      isFallback: true,
+      url: images[language_id],
+      language_id: language_id,
+      is_fallback: false,
       source: 'automatic',
     };
   }
 
-  const manualFallback = identity
-    ? (manualImageStore.find(
-        identity.setId,
-        identity.cardId,
-        identity.variantId,
-        fallbackLanguageId,
+  const requested_manual = identity
+    ? manual_image_store.find(identity.set_id, identity.card_id, identity.variant_id, language_id)
+    : null;
+  if (requested_manual) {
+    return {
+      url: `${requested_manual.url}?v=${encodeURIComponent(requested_manual.updated_at)}`,
+      language_id: language_id,
+      is_fallback: false,
+      source: 'manual',
+    };
+  }
+
+  const automatic_fallback = images[fallback_language_id]
+    ? ([fallback_language_id, images[fallback_language_id]] as const)
+    : Object.entries(images).find(([, url]) => Boolean(url));
+  if (automatic_fallback) {
+    return {
+      url: automatic_fallback[1],
+      language_id: automatic_fallback[0],
+      is_fallback: true,
+      source: 'automatic',
+    };
+  }
+
+  const manual_fallback = identity
+    ? (manual_image_store.find(
+        identity.set_id,
+        identity.card_id,
+        identity.variant_id,
+        fallback_language_id,
       ) ??
-      manualImageStore.entries.value.find(
+      manual_image_store.entries.value.find(
         (entry) =>
-          entry.set_id === identity.setId &&
-          entry.card_id === identity.cardId &&
-          entry.variant_id === identity.variantId,
+          entry.set_id === identity.set_id &&
+          entry.card_id === identity.card_id &&
+          entry.variant_id === identity.variant_id,
       ))
     : null;
   return {
-    url: manualFallback
-      ? `${manualFallback.url}?v=${encodeURIComponent(manualFallback.updated_at)}`
+    url: manual_fallback
+      ? `${manual_fallback.url}?v=${encodeURIComponent(manual_fallback.updated_at)}`
       : null,
-    languageId: manualFallback?.language_id ?? null,
-    isFallback: Boolean(manualFallback),
-    source: manualFallback ? 'manual' : null,
+    language_id: manual_fallback?.language_id ?? null,
+    is_fallback: Boolean(manual_fallback),
+    source: manual_fallback ? 'manual' : null,
   };
 };
 
 // Compatibility helper for consumers that only need the URL.
-export const localizedCardImage = (
+export const localized_card_image = (
   images: Record<string, string>,
-  languageId: string,
+  language_id: string,
 ): string | null => {
-  return resolveCardImage(images, languageId).url;
+  return resolve_card_image(images, language_id).url;
 };

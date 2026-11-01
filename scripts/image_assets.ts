@@ -1,8 +1,12 @@
+// import utils
 import { appendFileSync, existsSync, mkdirSync, renameSync, writeFileSync } from 'node:fs';
 import { basename, dirname, extname, join } from 'node:path';
 import { read_json, write_json, set_paths } from './runtime';
 import { log, Progress } from './update_logging';
+
+// import types
 import type { Card, Set as Card_Set } from '../frontend/src/models/catalog';
+
 export const image_workers = 8,
   request_timeout = 30;
 export class Http_Error extends Error {

@@ -1,28 +1,28 @@
 <template>
-  <q-dialog v-model="isOpen">
-    <q-card class="bg-grey-10 text-white" style="width: 420px; max-width: 90vw">
+  <q-dialog v-model="is_open">
+    <q-card class="app_surface text-white" style="width: 420px; max-width: 90vw">
       <q-card-section>
         <div class="text-h6">Add to want list</div>
-        <div class="text-body2 text-grey-4">{{ cardName }}</div>
+        <div class="text-body2 text_secondary">{{ card_name }}</div>
       </q-card-section>
 
-      <q-card-section v-if="!collectionStore.isFileConnected.value">
-        <q-banner class="bg-grey-9 text-grey-3 rounded-borders">
+      <q-card-section v-if="!collection_store.is_file_connected.value">
+        <q-banner class="app_surface text_secondary rounded-borders">
           Loading collection.json…
-          <div v-if="collectionStore.saveError.value" class="text-negative q-mt-xs">
-            {{ collectionStore.saveError.value }}
+          <div v-if="collection_store.save_error.value" class="text-negative q-mt-xs">
+            {{ collection_store.save_error.value }}
           </div>
         </q-banner>
       </q-card-section>
 
       <q-card-section class="column q-gutter-md">
         <collection-folder-select
-          v-model="folderId"
-          :folders="collectionStore.folders.value"
+          v-model="folder_id"
+          :folders="collection_store.folders.value"
           dark
           outlined
           label="Collection"
-          :disable="!collectionStore.isFileConnected.value"
+          :disable="!collection_store.is_file_connected.value"
         />
         <q-input
           v-model.number="quantity"
@@ -32,88 +32,106 @@
           dark
           outlined
           label="Quantity wanted"
-          :disable="!collectionStore.isFileConnected.value"
+          :disable="!collection_store.is_file_connected.value"
         />
         <q-checkbox
-          v-model="strongLanguage"
+          v-model="strong_language"
           dark
           label="Require this exact language"
-          :disable="!collectionStore.isFileConnected.value"
+          :disable="!collection_store.is_file_connected.value"
         />
       </q-card-section>
 
-      <q-card-actions align="right">
-        <q-btn v-close-popup flat label="Cancel" color="grey-4" />
+      <q-card-actions>
+        <q-space />
+        <q-btn v-close-popup flat label="Cancel" color="secondary" no-caps
+          ><q-tooltip :delay="1000">Cancel</q-tooltip></q-btn
+        >
         <q-btn
           color="primary"
-          text-color="black"
+          text-color="dark"
           label="Add to want list"
-          :disable="quantity < 1 || !folderId || !collectionStore.isFileConnected.value"
-          @click="addWanted"
-        />
+          :disable="quantity < 1 || !folder_id || !collection_store.is_file_connected.value"
+          no-caps
+          @click="add_wanted"
+          ><q-tooltip :delay="1000">Add to want list</q-tooltip></q-btn
+        >
       </q-card-actions>
     </q-card>
   </q-dialog>
 </template>
 
 <script setup lang="ts">
+  // import hooks
   import { computed, ref, watch } from 'vue';
-  import { useStore } from 'vuex';
-  import { collectionStore } from '../store/modules/collection';
-  import type { AppState } from '../store/index';
+
+  // import components
   import CollectionFolderSelect from './collection_folder_select.vue';
 
+  // import utils
+  import { collection_store } from '../store/modules/collection';
+  import { use_store } from '../store';
+
+  /* hooks */
   const props = defineProps<{
     modelValue: boolean;
-    setId: string;
-    cardId: string;
-    variantId: string;
-    languageId: string;
-    cardName: string;
+    set_id: string;
+    card_id: string;
+    variant_id: string;
+    language_id: string;
+    card_name: string;
   }>();
   const emit = defineEmits<{
     'update:modelValue': [value: boolean];
     added: [];
   }>();
 
-  const isOpen = computed<boolean>({
+  /* computed vars */
+  const is_open = computed<boolean>({
     get: () => props.modelValue,
     set: (value: boolean) => emit('update:modelValue', value),
   });
-  const store = useStore<AppState>();
-  const folderId = ref<string>(store.state.last_collection_folder_id);
+
+  /* hooks */
+  const store = use_store();
+
+  /* reactive vars */
+  const folder_id = ref<string>(store.state.last_collection_folder_id);
   const quantity = ref<number>(1);
-  const strongLanguage = ref<boolean>(false);
+  const strong_language = ref<boolean>(false);
+
+  /* watchers */
   watch(
-    [isOpen, collectionStore.isFileConnected],
+    [is_open, collection_store.is_file_connected],
     ([open, connected]) => {
       if (!open || !connected) return;
-      const rememberedFolderId = store.state.last_collection_folder_id;
-      const defaultFolder = collectionStore.ensureDefaultFolder();
-      folderId.value = collectionStore.folders.value.some(
-        (folder) => folder.id === rememberedFolderId,
+      const remembered_folder_id = store.state.last_collection_folder_id;
+      const default_folder = collection_store.ensure_default_folder();
+      folder_id.value = collection_store.folders.value.some(
+        (folder) => folder.id === remembered_folder_id,
       )
-        ? rememberedFolderId
-        : defaultFolder.id;
+        ? remembered_folder_id
+        : default_folder.id;
       quantity.value = 1;
-      strongLanguage.value = false;
+      strong_language.value = false;
     },
     { immediate: true },
   );
 
-  const addWanted = (): void => {
-    collectionStore.addWanted({
-      folder_id: folderId.value,
-      set_id: props.setId,
-      card_id: props.cardId,
-      variant_id: props.variantId,
-      language_id: props.languageId,
+  /* functions */
+  const add_wanted = (): void => {
+    collection_store.add_wanted({
+      folder_id: folder_id.value,
+      set_id: props.set_id,
+      card_id: props.card_id,
+      variant_id: props.variant_id,
+      language_id: props.language_id,
       quantity: quantity.value,
-      strong_language: strongLanguage.value,
+      strong_language: strong_language.value,
     });
-    store.commit('set_last_collection_folder_id', folderId.value);
+    store.commit('set_last_collection_folder_id', folder_id.value);
     quantity.value = 1;
-    isOpen.value = false;
+    is_open.value = false;
     emit('added');
   };
 </script>

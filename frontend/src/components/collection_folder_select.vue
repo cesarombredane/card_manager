@@ -28,23 +28,28 @@
 </template>
 
 <script setup lang="ts">
+  // import hooks
   import { computed } from 'vue';
-  import type { CollectionFolder } from '../store/modules/collection';
 
+  // import types
+  import type { Collection_Folder } from '../store/modules/collection';
+
+  /* hooks */
   defineOptions({ inheritAttrs: false });
 
   const props = defineProps<{
     modelValue: string;
-    folders: CollectionFolder[];
+    folders: Collection_Folder[];
   }>();
   defineEmits<{ 'update:modelValue': [value: string] }>();
 
+  /* computed vars */
   const options = computed<{ label: string; value: string; icon: string; caption: string }[]>(() =>
     [...props.folders]
       .sort((left, right) => {
-        const typeRank = (folder: CollectionFolder): number => (folder.type === 'box' ? 0 : 1);
+        const type_rank = (folder: Collection_Folder): number => (folder.type === 'box' ? 0 : 1);
         return (
-          typeRank(left) - typeRank(right) ||
+          type_rank(left) - type_rank(right) ||
           left.name.localeCompare(right.name, undefined, { sensitivity: 'base' })
         );
       })

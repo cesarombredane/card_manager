@@ -1,29 +1,21 @@
-import { getCards, getPokemon, getSeries, getSetById } from '../services/catalog_storage';
-import type { Card, CardVariant, Pokemon, Set as CardSet } from '../models/catalog';
-import { uniqueValues } from './array_utils';
-import type { DisplayCard } from './card_display';
+// import utils
+import { get_cards, get_pokemon, get_series, get_set_by_id } from '../services/catalog_storage';
+import { unique_values } from './array_utils';
 
-export type PokedexRegion = 'all' | 'intl' | 'asia';
+// import types
+import type { Pokedex_Binder_Config, Pokedex_Candidate } from '../models/pokedex_binder';
+import type { Card, Card_Variant, Pokemon, Set as Card_Set } from '../models/catalog';
+import type { Display_Card } from './card_display';
 
-export type PokedexBinderConfig = {
-  include_regional_forms: boolean;
-  include_mega_forms: boolean;
-  region: PokedexRegion;
-  international_language_id: string;
-  asia_language_id: string;
-  series_ids: string[];
-  variant_types: string[];
-  rarities: string[];
-};
+export type {
+  Pokedex_Region,
+  Pokedex_Binder_Config,
+  Pokedex_Candidate,
+} from '../models/pokedex_binder';
 
-export type PokedexCandidate = {
-  set_id: string;
-  card_id: string;
-  variant_id: string;
-  language_id: string;
-};
-
-export const copyPokedexBinderConfig = (config: PokedexBinderConfig): PokedexBinderConfig => ({
+export const copy_pokedex_binder_config = (
+  config: Pokedex_Binder_Config,
+): Pokedex_Binder_Config => ({
   include_regional_forms: config.include_regional_forms,
   include_mega_forms: config.include_mega_forms,
   region: config.region,
@@ -34,108 +26,109 @@ export const copyPokedexBinderConfig = (config: PokedexBinderConfig): PokedexBin
   rarities: [...config.rarities],
 });
 
-const pokemon = getPokemon();
-const cards = getCards();
-const cardBySetAndId = new Map(cards.map((card) => [`${card.set_id}:${card.id}`, card]));
-const pokemonById = new Map(pokemon.map((entry) => [entry.id, entry]));
-const basePokemonByNumber = new Map(
+const pokemon = get_pokemon();
+const cards = get_cards();
+const card_by_set_and_id = new Map(cards.map((card) => [`${card.set_id}:${card.id}`, card]));
+const pokemon_by_id = new Map(pokemon.map((entry) => [entry.id, entry]));
+const base_pokemon_by_number = new Map(
   pokemon.filter((entry) => entry.form === null).map((entry) => [entry.pokedex_id, entry]),
 );
-const targetsCache = new Map<string, Pokemon[]>();
-const candidatesCache = new Map<string, Map<string, PokedexCandidate[]>>();
-const configCacheKey = (config: PokedexBinderConfig): string => JSON.stringify(config);
+const targets_cache = new Map<string, Pokemon[]>();
+const candidates_cache = new Map<string, Map<string, Pokedex_Candidate[]>>();
+const config_cache_key = (config: Pokedex_Binder_Config): string => JSON.stringify(config);
 
-const pokemonAliases = new Map<string, Set<number>>();
-const pokemonIdAliases = new Map<string, Set<string>>();
+const pokemon_aliases = new Map<string, Set<number>>();
+const pokemon_id_aliases = new Map<string, Set<string>>();
 for (const entry of pokemon) {
-  for (const [languageId, name] of Object.entries(entry.names)) {
+  for (const [language_id, name] of Object.entries(entry.names)) {
     if (!name) continue;
-    const key = `${languageId}:${name.trim().toLocaleLowerCase()}`;
-    if (!pokemonAliases.has(key)) pokemonAliases.set(key, new Set());
-    pokemonAliases.get(key)?.add(entry.pokedex_id);
-    if (!pokemonIdAliases.has(key)) pokemonIdAliases.set(key, new Set());
-    pokemonIdAliases.get(key)?.add(entry.id);
+    const key = `${language_id}:${name.trim().toLocaleLowerCase()}`;
+    if (!pokemon_aliases.has(key)) pokemon_aliases.set(key, new Set());
+    pokemon_aliases.get(key)?.add(entry.pokedex_id);
+    if (!pokemon_id_aliases.has(key)) pokemon_id_aliases.set(key, new Set());
+    pokemon_id_aliases.get(key)?.add(entry.id);
   }
 }
 
-const evolutionChildren = new Map<number, Set<number>>();
-const evolutionNeighbors = new Map<number, Set<number>>();
-const evolutionChildrenByPokemonId = new Map<string, Set<string>>();
-const evolutionParentsByPokemonId = new Map<string, Set<string>>();
+const evolution_children = new Map<number, Set<number>>();
+const evolution_neighbors = new Map<number, Set<number>>();
+const evolution_children_by_pokemon_id = new Map<string, Set<string>>();
+const evolution_parents_by_pokemon_id = new Map<string, Set<string>>();
 for (const card of cards) {
   if (!card.evolves_from || !card.pokemon?.length) continue;
-  const parentNumbers = new Set(
-    Object.entries(card.evolves_from).flatMap(([languageId, name]) => {
+  const parent_numbers = new Set(
+    Object.entries(card.evolves_from).flatMap(([language_id, name]) => {
       if (!name) return [];
-      const matches = pokemonAliases.get(`${languageId}:${name.trim().toLocaleLowerCase()}`);
+      const matches = pokemon_aliases.get(`${language_id}:${name.trim().toLocaleLowerCase()}`);
       return matches?.size === 1 ? [...matches] : [];
     }),
   );
-  const childNumbers = new Set(
-    card.pokemon.flatMap((pokemonId) => {
-      const entry = pokemonById.get(pokemonId);
+  const child_numbers = new Set(
+    card.pokemon.flatMap((pokemon_id) => {
+      const entry = pokemon_by_id.get(pokemon_id);
       return entry ? [entry.pokedex_id] : [];
     }),
   );
-  const parentPokemonIds = new Set(
-    Object.entries(card.evolves_from).flatMap(([languageId, name]) => {
+  const parent_pokemon_ids = new Set(
+    Object.entries(card.evolves_from).flatMap(([language_id, name]) => {
       if (!name) return [];
-      const matches = pokemonIdAliases.get(`${languageId}:${name.trim().toLocaleLowerCase()}`);
+      const matches = pokemon_id_aliases.get(`${language_id}:${name.trim().toLocaleLowerCase()}`);
       return matches?.size === 1 ? [...matches] : [];
     }),
   );
-  if (parentPokemonIds.size === 1) {
-    const parentPokemonId = [...parentPokemonIds][0];
-    if (parentPokemonId !== undefined) {
-      for (const childPokemonId of card.pokemon) {
-        if (parentPokemonId === childPokemonId || !pokemonById.has(childPokemonId)) continue;
-        if (!evolutionChildrenByPokemonId.has(parentPokemonId))
-          evolutionChildrenByPokemonId.set(parentPokemonId, new Set());
-        if (!evolutionParentsByPokemonId.has(childPokemonId))
-          evolutionParentsByPokemonId.set(childPokemonId, new Set());
-        evolutionChildrenByPokemonId.get(parentPokemonId)?.add(childPokemonId);
-        evolutionParentsByPokemonId.get(childPokemonId)?.add(parentPokemonId);
+  if (parent_pokemon_ids.size === 1) {
+    const parent_pokemon_id = [...parent_pokemon_ids][0];
+    if (parent_pokemon_id !== undefined) {
+      for (const child_pokemon_id of card.pokemon) {
+        if (parent_pokemon_id === child_pokemon_id || !pokemon_by_id.has(child_pokemon_id))
+          continue;
+        if (!evolution_children_by_pokemon_id.has(parent_pokemon_id))
+          evolution_children_by_pokemon_id.set(parent_pokemon_id, new Set());
+        if (!evolution_parents_by_pokemon_id.has(child_pokemon_id))
+          evolution_parents_by_pokemon_id.set(child_pokemon_id, new Set());
+        evolution_children_by_pokemon_id.get(parent_pokemon_id)?.add(child_pokemon_id);
+        evolution_parents_by_pokemon_id.get(child_pokemon_id)?.add(parent_pokemon_id);
       }
     }
   }
-  if (parentNumbers.size !== 1) continue;
-  const parent = [...parentNumbers][0];
+  if (parent_numbers.size !== 1) continue;
+  const parent = [...parent_numbers][0];
   if (parent === undefined) continue;
-  for (const child of childNumbers) {
+  for (const child of child_numbers) {
     if (parent === child) continue;
-    if (!evolutionChildren.has(parent)) evolutionChildren.set(parent, new Set());
-    evolutionChildren.get(parent)?.add(child);
-    if (!evolutionNeighbors.has(parent)) evolutionNeighbors.set(parent, new Set());
-    if (!evolutionNeighbors.has(child)) evolutionNeighbors.set(child, new Set());
-    evolutionNeighbors.get(parent)?.add(child);
-    evolutionNeighbors.get(child)?.add(parent);
+    if (!evolution_children.has(parent)) evolution_children.set(parent, new Set());
+    evolution_children.get(parent)?.add(child);
+    if (!evolution_neighbors.has(parent)) evolution_neighbors.set(parent, new Set());
+    if (!evolution_neighbors.has(child)) evolution_neighbors.set(child, new Set());
+    evolution_neighbors.get(parent)?.add(child);
+    evolution_neighbors.get(child)?.add(parent);
   }
 }
 
-export const pokedexSeriesOptions = getSeries().map((item) => ({
+export const pokedex_series_options = get_series().map((item) => ({
   label: item.name,
   value: item.id,
   region_id: item.region_id,
 }));
-export const pokedexVariantTypes = uniqueValues(
+export const pokedex_variant_types = unique_values(
   cards.flatMap((card) => card.variants.map((variant) => variant.type ?? variant.id.split('-')[0])),
 );
-export const pokedexRarities = uniqueValues(cards.map((card) => card.rarity));
+export const pokedex_rarities = unique_values(cards.map((card) => card.rarity));
 
-export const pokedexRequirementId = (pokemonId: string): string => `pokedex:${pokemonId}`;
-export const pokemonIdFromRequirement = (requirementId: string): string =>
-  requirementId.replace(/^pokedex:/, '');
+export const pokedex_requirement_id = (pokemon_id: string): string => `pokedex:${pokemon_id}`;
+export const pokemon_id_from_requirement = (requirement_id: string): string =>
+  requirement_id.replace(/^pokedex:/, '');
 
-const previewCache = new Map<string, Map<string, string[]>>();
-const previewUrlsByTarget = (config: PokedexBinderConfig): Map<string, string[]> => {
-  const cacheKey = JSON.stringify(config);
-  const cached = previewCache.get(cacheKey);
+const preview_cache = new Map<string, Map<string, string[]>>();
+const preview_urls_by_target = (config: Pokedex_Binder_Config): Map<string, string[]> => {
+  const cache_key = JSON.stringify(config);
+  const cached = preview_cache.get(cache_key);
   if (cached) return cached;
   const result = new Map<string, string[]>();
-  for (const [pokemonId, candidates] of pokedexCandidatesByTarget(config)) {
-    const urls = uniqueValues(
+  for (const [pokemon_id, candidates] of pokedex_candidates_by_target(config)) {
+    const urls = unique_values(
       candidates.flatMap((candidate) => {
-        const card = cardBySetAndId.get(`${candidate.set_id}:${candidate.card_id}`);
+        const card = card_by_set_and_id.get(`${candidate.set_id}:${candidate.card_id}`);
         const variant = card?.variants.find((item) => item.id === candidate.variant_id);
         const url =
           variant?.images[candidate.language_id] ??
@@ -143,13 +136,13 @@ const previewUrlsByTarget = (config: PokedexBinderConfig): Map<string, string[]>
         return url ? [url] : [];
       }),
     );
-    result.set(pokemonId, urls);
+    result.set(pokemon_id, urls);
   }
-  previewCache.set(cacheKey, result);
+  preview_cache.set(cache_key, result);
   return result;
 };
 
-const evenlySample = (values: string[], maximum: number): string[] => {
+const evenly_sample = (values: string[], maximum: number): string[] => {
   if (values.length <= maximum) return values;
   return Array.from(
     { length: maximum },
@@ -157,26 +150,26 @@ const evenlySample = (values: string[], maximum: number): string[] => {
   );
 };
 
-export const pokedexPlaceholderCard = (
-  requirementId: string,
-  candidateCount: number,
-  languageId: string,
-  config?: PokedexBinderConfig,
-): DisplayCard | null => {
-  const target = pokemon.find((entry) => entry.id === pokemonIdFromRequirement(requirementId));
+export const pokedex_placeholder_card = (
+  requirement_id: string,
+  candidate_count: number,
+  language_id: string,
+  config?: Pokedex_Binder_Config,
+): Display_Card | null => {
+  const target = pokemon.find((entry) => entry.id === pokemon_id_from_requirement(requirement_id));
   if (!target) return null;
-  const name = target.names[languageId] ?? target.name;
+  const name = target.names[language_id] ?? target.name;
   return {
-    id: requirementId,
+    id: requirement_id,
     card_id: target.id,
     set_id: 'pokedex-requirement',
     set_name: 'Pokédex requirement',
-    language_id: languageId,
-    variant_id: candidateCount ? 'multiple' : 'unavailable',
-    variant_type: candidateCount ? 'multiple' : 'unavailable',
+    language_id: language_id,
+    variant_id: candidate_count ? 'multiple' : 'unavailable',
+    variant_type: candidate_count ? 'multiple' : 'unavailable',
     number: String(target.pokedex_id).padStart(4, '0'),
-    display_name: candidateCount
-      ? `${name} — ${candidateCount} possible cards`
+    display_name: candidate_count
+      ? `${name} — ${candidate_count} possible cards`
       : `${name} — no available card`,
     category: 'pokemon',
     rarity: 'Pokédex slot',
@@ -187,8 +180,8 @@ export const pokedexPlaceholderCard = (
     energy_costs: [],
     image_url: null,
     preview_image_urls:
-      candidateCount > 1 && config
-        ? evenlySample(previewUrlsByTarget(config).get(target.id) ?? [], 12)
+      candidate_count > 1 && config
+        ? evenly_sample(preview_urls_by_target(config).get(target.id) ?? [], 12)
         : [],
     image_language_id: null,
     image_is_fallback: false,
@@ -197,9 +190,9 @@ export const pokedexPlaceholderCard = (
   };
 };
 
-export const pokedexTargets = (config: PokedexBinderConfig): Pokemon[] => {
-  const cacheKey = configCacheKey(config);
-  const cached = targetsCache.get(cacheKey);
+export const pokedex_targets = (config: Pokedex_Binder_Config): Pokemon[] => {
+  const cache_key = config_cache_key(config);
+  const cached = targets_cache.get(cache_key);
   if (cached) return cached;
   const targets = pokemon
     .filter(
@@ -210,13 +203,13 @@ export const pokedexTargets = (config: PokedexBinderConfig): Pokemon[] => {
     .sort(
       (left, right) => left.pokedex_id - right.pokedex_id || left.name.localeCompare(right.name),
     );
-  targetsCache.set(cacheKey, targets);
+  targets_cache.set(cache_key, targets);
   return targets;
 };
 
-export const groupPokemonByEvolution = (entries: Pokemon[]): Pokemon[][] => {
-  const selectedNumbers = new Set(entries.map((entry) => entry.pokedex_id));
-  const unvisited = new Set(selectedNumbers);
+export const group_pokemon_by_evolution = (entries: Pokemon[]): Pokemon[][] => {
+  const selected_numbers = new Set(entries.map((entry) => entry.pokedex_id));
+  const unvisited = new Set(selected_numbers);
   const components: number[][] = [];
   while (unvisited.size) {
     const start = Math.min(...unvisited);
@@ -227,20 +220,20 @@ export const groupPokemonByEvolution = (entries: Pokemon[]): Pokemon[][] => {
       if (current === undefined || component.has(current)) continue;
       component.add(current);
       unvisited.delete(current);
-      for (const neighbor of evolutionNeighbors.get(current) ?? []) {
-        if (selectedNumbers.has(neighbor) && !component.has(neighbor)) pending.push(neighbor);
+      for (const neighbor of evolution_neighbors.get(current) ?? []) {
+        if (selected_numbers.has(neighbor) && !component.has(neighbor)) pending.push(neighbor);
       }
     }
     components.push([...component]);
   }
   components.sort((left, right) => Math.min(...left) - Math.min(...right));
 
-  const orderedNumbers = components.flatMap((component) => {
-    const componentSet = new Set(component);
+  const ordered_numbers = components.flatMap((component) => {
+    const component_set = new Set(component);
     const indegree = new Map(component.map((number) => [number, 0]));
     for (const parent of component) {
-      for (const child of evolutionChildren.get(parent) ?? []) {
-        if (componentSet.has(child)) indegree.set(child, (indegree.get(child) ?? 0) + 1);
+      for (const child of evolution_children.get(parent) ?? []) {
+        if (component_set.has(child)) indegree.set(child, (indegree.get(child) ?? 0) + 1);
       }
     }
     const ready = component
@@ -251,8 +244,8 @@ export const groupPokemonByEvolution = (entries: Pokemon[]): Pokemon[][] => {
       const current = ready.shift();
       if (current === undefined) break;
       ordered.push(current);
-      for (const child of evolutionChildren.get(current) ?? []) {
-        if (!componentSet.has(child)) continue;
+      for (const child of evolution_children.get(current) ?? []) {
+        if (!component_set.has(child)) continue;
         const remaining = (indegree.get(child) ?? 0) - 1;
         indegree.set(child, remaining);
         if (remaining === 0) {
@@ -261,91 +254,91 @@ export const groupPokemonByEvolution = (entries: Pokemon[]): Pokemon[][] => {
         }
       }
     }
-    const orderedSet = new Set(ordered);
+    const ordered_set = new Set(ordered);
     return [
       ...ordered,
-      ...component.filter((number) => !orderedSet.has(number)).sort((left, right) => left - right),
+      ...component.filter((number) => !ordered_set.has(number)).sort((left, right) => left - right),
     ];
   });
-  const numberRank = new Map(orderedNumbers.map((number, index) => [number, index]));
-  const regionalFormOrder = ['alolan', 'galarian', 'hisuian', 'paldean'] as const;
-  type EvolutionBranch = 'base' | (typeof regionalFormOrder)[number];
-  const regionalForms = new Set<string>(regionalFormOrder);
-  const selectedIds = new Set(entries.map((entry) => entry.id));
-  const branchByPokemonId = new Map<string, EvolutionBranch>();
+  const number_rank = new Map(ordered_numbers.map((number, index) => [number, index]));
+  const regional_form_order = ['alolan', 'galarian', 'hisuian', 'paldean'] as const;
+  type Evolution_Branch = 'base' | (typeof regional_form_order)[number];
+  const regional_forms = new Set<string>(regional_form_order);
+  const selected_ids = new Set(entries.map((entry) => entry.id));
+  const branch_by_pokemon_id = new Map<string, Evolution_Branch>();
   for (const entry of entries) {
-    if (entry.form && regionalForms.has(entry.form)) {
-      branchByPokemonId.set(entry.id, entry.form as EvolutionBranch);
+    if (entry.form && regional_forms.has(entry.form)) {
+      branch_by_pokemon_id.set(entry.id, entry.form as Evolution_Branch);
     }
   }
-  let branchChanged = true;
-  while (branchChanged) {
-    branchChanged = false;
+  let branch_changed = true;
+  while (branch_changed) {
+    branch_changed = false;
     for (const entry of entries) {
-      if (entry.form !== null || branchByPokemonId.has(entry.id)) continue;
-      const inheritedBranches = new Set(
-        [...(evolutionParentsByPokemonId.get(entry.id) ?? [])]
-          .filter((parentId) => selectedIds.has(parentId))
-          .flatMap((parentId) => {
-            const branch = branchByPokemonId.get(parentId);
+      if (entry.form !== null || branch_by_pokemon_id.has(entry.id)) continue;
+      const inherited_branches = new Set(
+        [...(evolution_parents_by_pokemon_id.get(entry.id) ?? [])]
+          .filter((parent_id) => selected_ids.has(parent_id))
+          .flatMap((parent_id) => {
+            const branch = branch_by_pokemon_id.get(parent_id);
             return branch && branch !== 'base' ? [branch] : [];
           }),
       );
-      if (inheritedBranches.size === 1) {
-        branchByPokemonId.set(entry.id, [...inheritedBranches][0] as EvolutionBranch);
-        branchChanged = true;
+      if (inherited_branches.size === 1) {
+        branch_by_pokemon_id.set(entry.id, [...inherited_branches][0] as Evolution_Branch);
+        branch_changed = true;
       }
     }
   }
 
-  const compareEntries = (left: Pokemon, right: Pokemon): number =>
-    (numberRank.get(left.pokedex_id) ?? Number.MAX_SAFE_INTEGER) -
-      (numberRank.get(right.pokedex_id) ?? Number.MAX_SAFE_INTEGER) ||
+  const compare_entries = (left: Pokemon, right: Pokemon): number =>
+    (number_rank.get(left.pokedex_id) ?? Number.MAX_SAFE_INTEGER) -
+      (number_rank.get(right.pokedex_id) ?? Number.MAX_SAFE_INTEGER) ||
     Number(left.form !== null) - Number(right.form !== null) ||
     left.name.localeCompare(right.name);
-  const orderBranch = (branchEntries: Pokemon[]): Pokemon[] => {
-    const branchIds = new Set(branchEntries.map((entry) => entry.id));
-    const indegree = new Map(branchEntries.map((entry) => [entry.id, 0]));
-    for (const entry of branchEntries) {
-      for (const childId of evolutionChildrenByPokemonId.get(entry.id) ?? []) {
-        if (branchIds.has(childId)) indegree.set(childId, (indegree.get(childId) ?? 0) + 1);
+  const order_branch = (branch_entries: Pokemon[]): Pokemon[] => {
+    const branch_ids = new Set(branch_entries.map((entry) => entry.id));
+    const indegree = new Map(branch_entries.map((entry) => [entry.id, 0]));
+    for (const entry of branch_entries) {
+      for (const child_id of evolution_children_by_pokemon_id.get(entry.id) ?? []) {
+        if (branch_ids.has(child_id)) indegree.set(child_id, (indegree.get(child_id) ?? 0) + 1);
       }
     }
-    const ready = branchEntries
+    const ready = branch_entries
       .filter((entry) => indegree.get(entry.id) === 0)
-      .sort(compareEntries);
+      .sort(compare_entries);
     const ordered: Pokemon[] = [];
     while (ready.length) {
       const current = ready.shift();
       if (!current) break;
       ordered.push(current);
-      for (const childId of evolutionChildrenByPokemonId.get(current.id) ?? []) {
-        if (!branchIds.has(childId)) continue;
-        const remaining = (indegree.get(childId) ?? 0) - 1;
-        indegree.set(childId, remaining);
+      for (const child_id of evolution_children_by_pokemon_id.get(current.id) ?? []) {
+        if (!branch_ids.has(child_id)) continue;
+        const remaining = (indegree.get(child_id) ?? 0) - 1;
+        indegree.set(child_id, remaining);
         if (remaining === 0) {
-          const child = pokemonById.get(childId);
+          const child = pokemon_by_id.get(child_id);
           if (child) ready.push(child);
-          ready.sort(compareEntries);
+          ready.sort(compare_entries);
         }
       }
     }
-    const orderedIds = new Set(ordered.map((entry) => entry.id));
+    const ordered_ids = new Set(ordered.map((entry) => entry.id));
     return [
       ...ordered,
-      ...branchEntries.filter((entry) => !orderedIds.has(entry.id)).sort(compareEntries),
+      ...branch_entries.filter((entry) => !ordered_ids.has(entry.id)).sort(compare_entries),
     ];
   };
 
   return components.flatMap((component) => {
-    const componentNumbers = new Set(component);
-    const componentEntries = entries.filter((entry) => componentNumbers.has(entry.pokedex_id));
-    const branches: EvolutionBranch[] = ['base', ...regionalFormOrder];
+    const component_numbers = new Set(component);
+    const component_entries = entries.filter((entry) => component_numbers.has(entry.pokedex_id));
+    const branches: Evolution_Branch[] = ['base', ...regional_form_order];
     return branches
       .map((branch) =>
-        orderBranch(
-          componentEntries.filter(
-            (entry) => (branchByPokemonId.get(entry.id) ?? 'base') === branch,
+        order_branch(
+          component_entries.filter(
+            (entry) => (branch_by_pokemon_id.get(entry.id) ?? 'base') === branch,
           ),
         ),
       )
@@ -353,10 +346,10 @@ export const groupPokemonByEvolution = (entries: Pokemon[]): Pokemon[][] => {
   });
 };
 
-export const orderPokemonByEvolution = (entries: Pokemon[]): Pokemon[] =>
-  groupPokemonByEvolution(entries).flat();
+export const order_pokemon_by_evolution = (entries: Pokemon[]): Pokemon[] =>
+  group_pokemon_by_evolution(entries).flat();
 
-const setMatches = (set: CardSet, config: PokedexBinderConfig): boolean => {
+const set_matches = (set: Card_Set, config: Pokedex_Binder_Config): boolean => {
   const asia = set.series_id.startsWith('asia-');
   return (
     (config.region === 'all' || (config.region === 'asia') === asia) &&
@@ -364,133 +357,140 @@ const setMatches = (set: CardSet, config: PokedexBinderConfig): boolean => {
   );
 };
 
-const languageForSet = (set: CardSet, config: PokedexBinderConfig): string =>
+const language_for_set = (set: Card_Set, config: Pokedex_Binder_Config): string =>
   set.series_id.startsWith('asia-') ? config.asia_language_id : config.international_language_id;
 
-const variantHasLanguage = (variant: CardVariant, set: CardSet, languageId: string): boolean => {
-  const languageIds = variant.language_ids?.length ? variant.language_ids : set.language_ids;
-  return languageIds.includes(languageId);
+const variant_has_language = (
+  variant: Card_Variant,
+  set: Card_Set,
+  language_id: string,
+): boolean => {
+  const language_ids = variant.language_ids?.length ? variant.language_ids : set.language_ids;
+  return language_ids.includes(language_id);
 };
 
-const cardTargetIds = (card: Card, config: PokedexBinderConfig): string[] =>
-  uniqueValues(
-    (card.pokemon ?? []).flatMap((pokemonId) => {
-      const represented = pokemonById.get(pokemonId);
+const card_target_ids = (card: Card, config: Pokedex_Binder_Config): string[] =>
+  unique_values(
+    (card.pokemon ?? []).flatMap((pokemon_id) => {
+      const represented = pokemon_by_id.get(pokemon_id);
       if (!represented || represented.form === null) return represented ? [represented.id] : [];
-      const formIncluded =
+      const form_included =
         represented.form === 'mega' ? config.include_mega_forms : config.include_regional_forms;
-      if (formIncluded) return [represented.id];
-      const base = basePokemonByNumber.get(represented.pokedex_id);
+      if (form_included) return [represented.id];
+      const base = base_pokemon_by_number.get(represented.pokedex_id);
       return base ? [base.id] : [];
     }),
   );
 
-export const candidateKey = (candidate: PokedexCandidate): string =>
+export const candidate_key = (candidate: Pokedex_Candidate): string =>
   `${candidate.set_id}:${candidate.card_id}:${candidate.variant_id}:${candidate.language_id}`;
 
-export const pokedexCandidates = (
-  config: PokedexBinderConfig,
-  targetPokemonId?: string,
-): PokedexCandidate[] =>
+export const pokedex_candidates = (
+  config: Pokedex_Binder_Config,
+  target_pokemon_id?: string,
+): Pokedex_Candidate[] =>
   cards.flatMap((card) => {
     if (!config.rarities.includes(card.rarity)) return [];
-    if (targetPokemonId && !cardTargetIds(card, config).includes(targetPokemonId)) return [];
-    const set = getSetById(card.set_id);
-    if (!set || !setMatches(set, config)) return [];
-    const languageId = languageForSet(set, config);
+    if (target_pokemon_id && !card_target_ids(card, config).includes(target_pokemon_id)) return [];
+    const set = get_set_by_id(card.set_id);
+    if (!set || !set_matches(set, config)) return [];
+    const language_id = language_for_set(set, config);
     return card.variants.flatMap((variant) => {
-      const variantType = variant.type ?? variant.id.split('-')[0];
-      return config.variant_types.includes(variantType) &&
-        variantHasLanguage(variant, set, languageId)
+      const variant_type = variant.type ?? variant.id.split('-')[0];
+      return config.variant_types.includes(variant_type) &&
+        variant_has_language(variant, set, language_id)
         ? [
             {
               set_id: card.set_id,
               card_id: card.id,
               variant_id: variant.id,
-              language_id: languageId,
+              language_id: language_id,
             },
           ]
         : [];
     });
   });
 
-export const pokedexCandidatesByTarget = (
-  config: PokedexBinderConfig,
-): Map<string, PokedexCandidate[]> => {
-  const cacheKey = configCacheKey(config);
-  const cached = candidatesCache.get(cacheKey);
+export const pokedex_candidates_by_target = (
+  config: Pokedex_Binder_Config,
+): Map<string, Pokedex_Candidate[]> => {
+  const cache_key = config_cache_key(config);
+  const cached = candidates_cache.get(cache_key);
   if (cached) return cached;
-  const targetIds = new Set(pokedexTargets(config).map((target) => target.id));
-  const result = new Map<string, PokedexCandidate[]>();
+  const target_ids = new Set(pokedex_targets(config).map((target) => target.id));
+  const result = new Map<string, Pokedex_Candidate[]>();
   for (const card of cards) {
     if (!config.rarities.includes(card.rarity)) continue;
-    const matchedTargets = cardTargetIds(card, config).filter((pokemonId) =>
-      targetIds.has(pokemonId),
+    const matched_targets = card_target_ids(card, config).filter((pokemon_id) =>
+      target_ids.has(pokemon_id),
     );
-    if (matchedTargets.length === 0) continue;
-    const set = getSetById(card.set_id);
-    if (!set || !setMatches(set, config)) continue;
-    const languageId = languageForSet(set, config);
+    if (matched_targets.length === 0) continue;
+    const set = get_set_by_id(card.set_id);
+    if (!set || !set_matches(set, config)) continue;
+    const language_id = language_for_set(set, config);
     for (const variant of card.variants) {
-      const variantType = variant.type ?? variant.id.split('-')[0];
+      const variant_type = variant.type ?? variant.id.split('-')[0];
       if (
-        !config.variant_types.includes(variantType) ||
-        !variantHasLanguage(variant, set, languageId)
+        !config.variant_types.includes(variant_type) ||
+        !variant_has_language(variant, set, language_id)
       )
         continue;
       const candidate = {
         set_id: card.set_id,
         card_id: card.id,
         variant_id: variant.id,
-        language_id: languageId,
+        language_id: language_id,
       };
-      for (const pokemonId of matchedTargets) {
-        if (!result.has(pokemonId)) result.set(pokemonId, []);
-        result.get(pokemonId)?.push(candidate);
+      for (const pokemon_id of matched_targets) {
+        if (!result.has(pokemon_id)) result.set(pokemon_id, []);
+        result.get(pokemon_id)?.push(candidate);
       }
     }
   }
-  candidatesCache.set(cacheKey, result);
+  candidates_cache.set(cache_key, result);
   return result;
 };
 
-export const matchingPokedexRequirementIds = (
-  config: PokedexBinderConfig,
-  setId: string,
-  cardId: string,
-  variantId: string,
-  languageId: string,
+export const matching_pokedex_requirement_ids = (
+  config: Pokedex_Binder_Config,
+  set_id: string,
+  card_id: string,
+  variant_id: string,
+  language_id: string,
 ): string[] => {
-  const card = cardBySetAndId.get(`${setId}:${cardId}`);
-  const set = getSetById(setId);
-  const variant = card?.variants.find((candidate) => candidate.id === variantId);
+  const card = card_by_set_and_id.get(`${set_id}:${card_id}`);
+  const set = get_set_by_id(set_id);
+  const variant = card?.variants.find((candidate) => candidate.id === variant_id);
   if (
     !card ||
     !set ||
     !variant ||
-    !setMatches(set, config) ||
+    !set_matches(set, config) ||
     !config.rarities.includes(card.rarity)
   )
     return [];
-  if (languageForSet(set, config) !== languageId || !variantHasLanguage(variant, set, languageId))
+  if (
+    language_for_set(set, config) !== language_id ||
+    !variant_has_language(variant, set, language_id)
+  )
     return [];
   if (!config.variant_types.includes(variant.type ?? variant.id.split('-')[0])) return [];
-  const targetIds = new Set(pokedexTargets(config).map((target) => target.id));
-  return cardTargetIds(card, config)
-    .filter((pokemonId) => targetIds.has(pokemonId))
-    .map(pokedexRequirementId);
+  const target_ids = new Set(pokedex_targets(config).map((target) => target.id));
+  return card_target_ids(card, config)
+    .filter((pokemon_id) => target_ids.has(pokemon_id))
+    .map(pokedex_requirement_id);
 };
 
-export const defaultPokedexConfig = (
-  internationalLanguageId: string,
-  asiaLanguageId = 'ja',
-): PokedexBinderConfig => ({
+export const default_pokedex_config = (
+  international_language_id: string,
+  asia_language_id = 'ja',
+): Pokedex_Binder_Config => ({
   include_regional_forms: true,
   include_mega_forms: true,
   region: 'all',
-  international_language_id: internationalLanguageId,
-  asia_language_id: asiaLanguageId,
-  series_ids: pokedexSeriesOptions.map((option) => option.value),
-  variant_types: [...pokedexVariantTypes],
-  rarities: [...pokedexRarities],
+  international_language_id: international_language_id,
+  asia_language_id: asia_language_id,
+  series_ids: pokedex_series_options.map((option) => option.value),
+  variant_types: [...pokedex_variant_types],
+  rarities: [...pokedex_rarities],
 });

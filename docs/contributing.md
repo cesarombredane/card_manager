@@ -2,6 +2,11 @@
 
 ## Local work
 
+Before editing, present a concrete plan with affected components and verification,
+obtain explicit approval, and wait. Read-only investigation may establish scope.
+Approval covers that plan; material scope changes need a revised approved plan.
+See [development instructions](../AGENTS.md) for the lasting rules.
+
 Keep changes focused and document contracts that change. Bug reports describe the
 expected result, observed result, reproduction steps and environment. Feature
 requests explain the need and acceptance criteria. No issue or pull request
@@ -61,6 +66,16 @@ Before reporting a task complete:
 Prefer standard tools and repository patterns throughout the change. The smallest
 complete solution should remain understandable through subsequent updates; avoid
 both speculative infrastructure and shortcuts that leave the request incomplete.
+
+## Verification storage boundary
+
+Use `npm run build:fixture` and `npm run test:e2e` for isolated production checks.
+They build a synthetic catalog into temporary storage and serve it through preview.
+Unit tests use synthetic inputs and temporary directories. Never run update, reset,
+price refresh, download or catalog generation as a verification shortcut. Do not
+modify existing catalog files, personal JSON, image indexes or artwork. Installation
+backups require an explicit request. Formatting from either workspace ignores local
+data and public artwork.
 
 ## GitHub workflow
 

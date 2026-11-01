@@ -1,7 +1,9 @@
+// import utils
+import { project_root, run_command, is_main, entry, cli } from './runtime';
 import { existsSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
-import { project_root, run_command, is_main, entry, cli } from './runtime';
 import { log } from './update_logging';
+
 export function fetch_tcgdex(root = project_root): number {
   const checkout = join(root, 'tcgdex_data/cards-database');
   if (existsSync(checkout) && !existsSync(join(checkout, '.git'))) {

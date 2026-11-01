@@ -1,40 +1,43 @@
-import { resolveCardImage } from './card_images';
-import { localizedValue } from './localization';
-import type { Card, CardmarketPrice, CardVariant } from '../models/catalog';
+// import utils
+import { resolve_card_image } from './card_images';
+import { localized_value } from './localization';
+
+// import types
+import type { Card, Cardmarket_Price, Card_Variant } from '../models/catalog';
 
 // The source card images are 600 x 825 pixels, which simplifies to 8:11.
-export const cardImageRatio = 8 / 11;
+export const card_image_ratio = 8 / 11;
 
 // Sorts card numbers naturally, including values such as 1, 2, 10 and TG01.
-const cardNumberCollator = new Intl.Collator(undefined, { numeric: true, sensitivity: 'base' });
+const card_number_collator = new Intl.Collator(undefined, { numeric: true, sensitivity: 'base' });
 
-export const compareCardNumbers = (left: string, right: string): number => {
-  return cardNumberCollator.compare(left, right);
+export const compare_card_numbers = (left: string, right: string): number => {
+  return card_number_collator.compare(left, right);
 };
 
 // Orders cards by release date and then by their naturally sorted printed
 // number. Missing dates remain at the end in both directions.
-export const compareCardReleaseAndNumber = (
-  leftDate: string | null | undefined,
-  rightDate: string | null | undefined,
-  leftNumber: string,
-  rightNumber: string,
+export const compare_card_release_and_number = (
+  left_date: string | null | undefined,
+  right_date: string | null | undefined,
+  left_number: string,
+  right_number: string,
   direction: 'asc' | 'desc',
 ): number => {
-  if (!leftDate && rightDate) return 1;
-  if (leftDate && !rightDate) return -1;
+  if (!left_date && right_date) return 1;
+  if (left_date && !right_date) return -1;
 
-  if (leftDate && rightDate) {
-    const dateComparison = leftDate.localeCompare(rightDate);
-    if (dateComparison !== 0) return direction === 'asc' ? dateComparison : -dateComparison;
+  if (left_date && right_date) {
+    const date_comparison = left_date.localeCompare(right_date);
+    if (date_comparison !== 0) return direction === 'asc' ? date_comparison : -date_comparison;
   }
 
-  const numberComparison = compareCardNumbers(leftNumber, rightNumber);
-  return direction === 'asc' ? numberComparison : -numberComparison;
+  const number_comparison = compare_card_numbers(left_number, right_number);
+  return direction === 'asc' ? number_comparison : -number_comparison;
 };
 
 // A flattened physical card variant shared by every card grid.
-export type DisplayCard = {
+export type Display_Card = {
   id: string;
   card_id: string;
   set_id: string;
@@ -56,15 +59,15 @@ export type DisplayCard = {
   image_language_id: string | null;
   image_is_fallback: boolean;
   image_source: 'automatic' | 'manual' | null;
-  cardmarket: CardmarketPrice | null;
+  cardmarket: Cardmarket_Price | null;
   is_manual?: boolean;
   estimated_value?: number | null;
 };
 
-export const formatCardValue = (value: string): string => value.replaceAll('_', ' ');
+export const format_card_value = (value: string): string => value.replaceAll('_', ' ');
 
-export const cardmarketDisplayPrice = (
-  price: CardmarketPrice | null | undefined,
+export const cardmarket_display_price = (
+  price: Cardmarket_Price | null | undefined,
 ): number | null => {
   if (!price) return null;
   return (
@@ -74,36 +77,37 @@ export const cardmarketDisplayPrice = (
   );
 };
 
-export const formatEuroPrice = (value: number): string => {
+export const format_euro_price = (value: number): string => {
   return new Intl.NumberFormat(undefined, { style: 'currency', currency: 'EUR' }).format(value);
 };
 
 // Builds the presentation model used by CardList and CardListItem.
-export const buildDisplayCard = (
+export const build_display_card = (
   card: Card,
-  variant: CardVariant,
-  languageId: string,
-  setName: string | null = null,
-): DisplayCard => {
-  const cardName: string = localizedValue(card.name, languageId) ?? card.id;
-  const variantSuffix: string = variant.id !== 'normal' ? ` (${formatCardValue(variant.id)})` : '';
-  const fallbackLanguageId: string = card.set_id.startsWith('asia-') ? 'ja' : 'en';
-  const image = resolveCardImage(variant.images, languageId, fallbackLanguageId, {
-    setId: card.set_id,
-    cardId: card.id,
-    variantId: variant.id,
+  variant: Card_Variant,
+  language_id: string,
+  set_name: string | null = null,
+): Display_Card => {
+  const card_name: string = localized_value(card.name, language_id) ?? card.id;
+  const variant_suffix: string =
+    variant.id !== 'normal' ? ` (${format_card_value(variant.id)})` : '';
+  const fallback_language_id: string = card.set_id.startsWith('asia-') ? 'ja' : 'en';
+  const image = resolve_card_image(variant.images, language_id, fallback_language_id, {
+    set_id: card.set_id,
+    card_id: card.id,
+    variant_id: variant.id,
   });
 
   return {
     id: `${card.set_id}-${card.id}-${variant.id}`,
     card_id: card.id,
     set_id: card.set_id,
-    set_name: setName,
-    language_id: languageId,
+    set_name: set_name,
+    language_id: language_id,
     variant_id: variant.id,
     variant_type: variant.type ?? variant.id.split('-')[0],
     number: card.number,
-    display_name: `${cardName}${variantSuffix}`,
+    display_name: `${card_name}${variant_suffix}`,
     category: card.category,
     rarity: card.rarity,
     hp: card.hp ?? null,
@@ -112,8 +116,8 @@ export const buildDisplayCard = (
     pokemon_names: card.pokemon ?? [],
     energy_costs: [...new Set((card.attacks ?? []).flatMap((attack) => attack.cost))].sort(),
     image_url: image.url,
-    image_language_id: image.languageId,
-    image_is_fallback: image.isFallback,
+    image_language_id: image.language_id,
+    image_is_fallback: image.is_fallback,
     image_source: image.source,
     cardmarket: variant.cardmarket ?? null,
   };

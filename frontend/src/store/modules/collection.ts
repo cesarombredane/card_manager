@@ -1,37 +1,47 @@
-export { cardConditions } from '../../models/collection';
-import type {
-  CardCondition,
-  CollectionFolderType,
-  CollectionFolder,
-  CollectionEntry,
-  ManualCollectionCard,
-  CollectionData,
-} from '../../models/collection';
-export type {
-  CardCondition,
-  CollectionFolderType,
-  CollectionFolder,
-  CollectionEntry,
-  ManualCollectionCard,
-  CollectionData,
-} from '../../models/collection';
+// import hooks
+import { computed } from 'vue';
+
+// import utils
 import { read_collection, apply_collection_operation } from '../../services/personal_data';
-
-import { computed, reactive, ref } from 'vue';
-import { manualImageStore } from './manual_images';
+import { parse_collection_data } from '../../services/personal_validation';
+import { manual_image_store } from './manual_images';
+import { commit_result } from '../commit_result';
 import {
-  matchingPokedexRequirementIds,
-  copyPokedexBinderConfig,
-  pokedexCandidatesByTarget,
-  pokedexRequirementId,
-  pokedexTargets,
-  pokemonIdFromRequirement,
+  matching_pokedex_requirement_ids,
+  copy_pokedex_binder_config,
+  pokedex_candidates_by_target,
+  pokedex_requirement_id,
+  pokedex_targets,
+  pokemon_id_from_requirement,
 } from '../../utils/pokedex_binder';
-import type { PokedexBinderConfig } from '../../utils/pokedex_binder';
+import { store } from '../core';
 
-const legacyMainFolderId = 'main';
-const migratedDefaultFolderId = 'default-collection';
-const legacyRegionExclusiveRequirements: Record<string, string> = {
+// import types
+import type { Pokedex_Binder_Config } from '../../utils/pokedex_binder';
+import type { Mutation_Call } from '../../models/personal_state';
+import type {
+  Card_Condition,
+  Collection_Folder_Type,
+  Collection_Folder,
+  Collection_Entry,
+  Manual_Collection_Card,
+  Collection_Data,
+} from '../../models/collection';
+
+export { card_conditions } from '../../models/collection';
+
+export type {
+  Card_Condition,
+  Collection_Folder_Type,
+  Collection_Folder,
+  Collection_Entry,
+  Manual_Collection_Card,
+  Collection_Data,
+} from '../../models/collection';
+
+const legacy_main_folder_id = 'main';
+const migrated_default_folder_id = 'default-collection';
+const legacy_region_exclusive_requirements: Record<string, string> = {
   'pokedex:0862-galarian-obstagoon': 'pokedex:0862',
   'pokedex:0863-galarian-perrserker': 'pokedex:0863',
   'pokedex:0864-galarian-cursola': 'pokedex:0864',
@@ -44,23 +54,240 @@ const legacyRegionExclusiveRequirements: Record<string, string> = {
   'pokedex:0980-paldean-clodsire': 'pokedex:0980',
 };
 
-const defaultData = (): CollectionData => ({
+const default_data = (): Collection_Data => ({
   version: 2,
   folders: [],
   entries: [],
   manual_cards: [],
 });
 
-const state = reactive<CollectionData>(defaultData());
-const isReady = ref<boolean>(false);
-const saveError = ref<string | null>(null);
-let pendingSave: Promise<void> = Promise.resolve();
-let queuedSnapshot: CollectionData | null = null;
-let pendingOperationCount = 0;
-let refreshAfterPendingOperations = false;
-const collectionChannel =
+store.registerModule('collection', {
+  namespaced: true,
+  state: () => ({ data: default_data(), ready: false, error: null as string | null }),
+  mutations: {
+    set_ready(module_state, value: boolean) {
+      module_state.ready = value;
+    },
+    set_error(module_state, value: string | null) {
+      module_state.error = value;
+    },
+    apply_loaded(_state, parsed: Partial<Collection_Data>) {
+      apply_loaded(parsed);
+    },
+    create_folder(
+      _state,
+      call: Mutation_Call<
+        Parameters<typeof collection_operations.create_folder>,
+        ReturnType<typeof collection_operations.create_folder>
+      >,
+    ) {
+      call.result = collection_operations.create_folder(...call.args);
+    },
+    create_pokedex_folder(
+      _state,
+      call: Mutation_Call<
+        Parameters<typeof collection_operations.create_pokedex_folder>,
+        ReturnType<typeof collection_operations.create_pokedex_folder>
+      >,
+    ) {
+      call.result = collection_operations.create_pokedex_folder(...call.args);
+    },
+    update_pokedex_config(
+      _state,
+      call: Mutation_Call<
+        Parameters<typeof collection_operations.update_pokedex_config>,
+        ReturnType<typeof collection_operations.update_pokedex_config>
+      >,
+    ) {
+      call.result = collection_operations.update_pokedex_config(...call.args);
+    },
+    rename_folder(
+      _state,
+      call: Mutation_Call<
+        Parameters<typeof collection_operations.rename_folder>,
+        ReturnType<typeof collection_operations.rename_folder>
+      >,
+    ) {
+      call.result = collection_operations.rename_folder(...call.args);
+    },
+    update_folder(
+      _state,
+      call: Mutation_Call<
+        Parameters<typeof collection_operations.update_folder>,
+        ReturnType<typeof collection_operations.update_folder>
+      >,
+    ) {
+      call.result = collection_operations.update_folder(...call.args);
+    },
+    delete_folder(
+      _state,
+      call: Mutation_Call<
+        Parameters<typeof collection_operations.delete_folder>,
+        ReturnType<typeof collection_operations.delete_folder>
+      >,
+    ) {
+      call.result = collection_operations.delete_folder(...call.args);
+    },
+    ensure_default_folder(
+      _state,
+      call: Mutation_Call<
+        Parameters<typeof collection_operations.ensure_default_folder>,
+        ReturnType<typeof collection_operations.ensure_default_folder>
+      >,
+    ) {
+      call.result = collection_operations.ensure_default_folder(...call.args);
+    },
+    add_cards(
+      _state,
+      call: Mutation_Call<
+        Parameters<typeof collection_operations.add_cards>,
+        ReturnType<typeof collection_operations.add_cards>
+      >,
+    ) {
+      call.result = collection_operations.add_cards(...call.args);
+    },
+    add_wanted(
+      _state,
+      call: Mutation_Call<
+        Parameters<typeof collection_operations.add_wanted>,
+        ReturnType<typeof collection_operations.add_wanted>
+      >,
+    ) {
+      call.result = collection_operations.add_wanted(...call.args);
+    },
+    add_wanted_entries(
+      _state,
+      call: Mutation_Call<
+        Parameters<typeof collection_operations.add_wanted_entries>,
+        ReturnType<typeof collection_operations.add_wanted_entries>
+      >,
+    ) {
+      call.result = collection_operations.add_wanted_entries(...call.args);
+    },
+    fulfill_wanted(
+      _state,
+      call: Mutation_Call<
+        Parameters<typeof collection_operations.fulfill_wanted>,
+        ReturnType<typeof collection_operations.fulfill_wanted>
+      >,
+    ) {
+      call.result = collection_operations.fulfill_wanted(...call.args);
+    },
+    create_manual_card(
+      _state,
+      call: Mutation_Call<
+        Parameters<typeof collection_operations.create_manual_card>,
+        ReturnType<typeof collection_operations.create_manual_card>
+      >,
+    ) {
+      call.result = collection_operations.create_manual_card(...call.args);
+    },
+    update_manual_card(
+      _state,
+      call: Mutation_Call<
+        Parameters<typeof collection_operations.update_manual_card>,
+        ReturnType<typeof collection_operations.update_manual_card>
+      >,
+    ) {
+      call.result = collection_operations.update_manual_card(...call.args);
+    },
+    set_quantity(
+      _state,
+      call: Mutation_Call<
+        Parameters<typeof collection_operations.set_quantity>,
+        ReturnType<typeof collection_operations.set_quantity>
+      >,
+    ) {
+      call.result = collection_operations.set_quantity(...call.args);
+    },
+    update_entry(
+      _state,
+      call: Mutation_Call<
+        Parameters<typeof collection_operations.update_entry>,
+        ReturnType<typeof collection_operations.update_entry>
+      >,
+    ) {
+      call.result = collection_operations.update_entry(...call.args);
+    },
+    transfer_entry(
+      _state,
+      call: Mutation_Call<
+        Parameters<typeof collection_operations.transfer_entry>,
+        ReturnType<typeof collection_operations.transfer_entry>
+      >,
+    ) {
+      call.result = collection_operations.transfer_entry(...call.args);
+    },
+    transfer_entry_quantities(
+      _state,
+      call: Mutation_Call<
+        Parameters<typeof collection_operations.transfer_entry_quantities>,
+        ReturnType<typeof collection_operations.transfer_entry_quantities>
+      >,
+    ) {
+      call.result = collection_operations.transfer_entry_quantities(...call.args);
+    },
+    transfer_entries(
+      _state,
+      call: Mutation_Call<
+        Parameters<typeof collection_operations.transfer_entries>,
+        ReturnType<typeof collection_operations.transfer_entries>
+      >,
+    ) {
+      call.result = collection_operations.transfer_entries(...call.args);
+    },
+    update_entries_language(
+      _state,
+      call: Mutation_Call<
+        Parameters<typeof collection_operations.update_entries_language>,
+        ReturnType<typeof collection_operations.update_entries_language>
+      >,
+    ) {
+      call.result = collection_operations.update_entries_language(...call.args);
+    },
+    remove_entry(
+      _state,
+      call: Mutation_Call<
+        Parameters<typeof collection_operations.remove_entry>,
+        ReturnType<typeof collection_operations.remove_entry>
+      >,
+    ) {
+      call.result = collection_operations.remove_entry(...call.args);
+    },
+  },
+  actions: {
+    load({ commit }) {
+      return load_file().catch((err) => {
+        commit('set_ready', false);
+        commit('set_error', err instanceof Error ? err.message : String(err));
+        throw err;
+      });
+    },
+    save() {
+      queue_persist();
+      return pending_save;
+    },
+  },
+});
+const persist = (): void => {
+  void store.dispatch('collection/save');
+};
+const state = store.state.collection.data;
+const is_ready = computed<boolean>({
+  get: () => store.state.collection.ready,
+  set: (value) => store.commit('collection/set_ready', value),
+});
+const save_error = computed<string | null>({
+  get: () => store.state.collection.error,
+  set: (value) => store.commit('collection/set_error', value),
+});
+let pending_save: Promise<void> = Promise.resolve();
+let queued_snapshot: Collection_Data | null = null;
+let pending_operation_count = 0;
+let refresh_after_pending_operations = false;
+const collection_channel =
   typeof BroadcastChannel === 'undefined' ? null : new BroadcastChannel('card-manager-collection');
-const ownedQuantities = computed<Map<string, number>>(() => {
+const owned_quantities = computed<Map<string, number>>(() => {
   const quantities = new Map<string, number>();
   for (const entry of state.entries) {
     if (entry.wanted) continue;
@@ -69,7 +296,7 @@ const ownedQuantities = computed<Map<string, number>>(() => {
   }
   return quantities;
 });
-const wantedKeys = computed<Set<string>>(
+const wanted_keys = computed<Set<string>>(
   () =>
     new Set(
       state.entries
@@ -80,38 +307,38 @@ const wantedKeys = computed<Set<string>>(
         ),
     ),
 );
-const pokedexEntryStatuses = computed<Map<string, string>>(() => {
+const pokedex_entry_statuses = computed<Map<string, string>>(() => {
   const statuses = new Map<string, string>();
   for (const folder of state.folders) {
     const config = folder.pokedex_config;
     if (!config) continue;
-    const validEntries: CollectionEntry[] = [];
-    const assignedQuantities = new Map<string, number>();
+    const valid_entries: Collection_Entry[] = [];
+    const assigned_quantities = new Map<string, number>();
     for (const entry of state.entries) {
       if (entry.folder_id !== folder.id || entry.wanted) continue;
-      const requirementId = entry.pokedex_requirement_id;
+      const requirement_id = entry.pokedex_requirement_id;
       const valid =
-        Boolean(requirementId) &&
+        Boolean(requirement_id) &&
         entry.set_id !== 'manual-collection' &&
-        matchingPokedexRequirementIds(
+        matching_pokedex_requirement_ids(
           config,
           entry.set_id,
           entry.card_id,
           entry.variant_id,
           entry.language_id,
-        ).includes(requirementId as string);
+        ).includes(requirement_id as string);
       if (!valid) {
         statuses.set(entry.id, 'This card no longer fits this binder');
         continue;
       }
-      validEntries.push(entry);
-      assignedQuantities.set(
-        requirementId as string,
-        (assignedQuantities.get(requirementId as string) ?? 0) + entry.quantity,
+      valid_entries.push(entry);
+      assigned_quantities.set(
+        requirement_id as string,
+        (assigned_quantities.get(requirement_id as string) ?? 0) + entry.quantity,
       );
     }
-    for (const entry of validEntries) {
-      if ((assignedQuantities.get(entry.pokedex_requirement_id as string) ?? 0) > 1) {
+    for (const entry of valid_entries) {
+      if ((assigned_quantities.get(entry.pokedex_requirement_id as string) ?? 0) > 1) {
         statuses.set(entry.id, 'Duplicate in this binder');
       }
     }
@@ -119,69 +346,72 @@ const pokedexEntryStatuses = computed<Map<string, string>>(() => {
   return statuses;
 });
 
-const consumeMatchingWanted = (
-  folderId: string,
-  setId: string,
-  cardId: string,
-  variantId: string,
-  languageId: string,
+const consume_matching_wanted = (
+  folder_id: string,
+  set_id: string,
+  card_id: string,
+  variant_id: string,
+  language_id: string,
   quantity: number,
   now: string,
 ): void => {
   let remaining = quantity;
-  const matchingWanted = state.entries
+  const matching_wanted = state.entries
     .filter(
       (entry) =>
         entry.wanted &&
         !entry.pokedex_requirement_id &&
-        entry.folder_id === folderId &&
-        entry.set_id === setId &&
-        entry.card_id === cardId &&
-        entry.variant_id === variantId &&
-        (entry.strong_language !== true || entry.language_id === languageId),
+        entry.folder_id === folder_id &&
+        entry.set_id === set_id &&
+        entry.card_id === card_id &&
+        entry.variant_id === variant_id &&
+        (entry.strong_language !== true || entry.language_id === language_id),
     )
     .sort(
       (left, right) =>
         Number(right.strong_language === true) - Number(left.strong_language === true),
     );
-  for (const wantedEntry of matchingWanted) {
+  for (const wanted_entry of matching_wanted) {
     if (remaining <= 0) break;
-    const fulfilled = Math.min(remaining, wantedEntry.quantity);
+    const fulfilled = Math.min(remaining, wanted_entry.quantity);
     remaining -= fulfilled;
-    if (fulfilled === wantedEntry.quantity) {
-      state.entries.splice(state.entries.indexOf(wantedEntry), 1);
+    if (fulfilled === wanted_entry.quantity) {
+      state.entries.splice(state.entries.indexOf(wanted_entry), 1);
     } else {
-      wantedEntry.quantity -= fulfilled;
-      wantedEntry.updated_at = now;
+      wanted_entry.quantity -= fulfilled;
+      wanted_entry.updated_at = now;
     }
   }
 };
 
-const normalizeData = (parsed: Partial<CollectionData>): CollectionData => {
+const normalize_data = (parsed: Partial<Collection_Data>): Collection_Data => {
   if (!Array.isArray(parsed.folders) || !Array.isArray(parsed.entries)) {
     throw new Error('The selected file is not a valid Card Manager collection');
   }
   const folders = parsed.folders
-    .filter((folder) => folder.id !== legacyMainFolderId)
+    .filter((folder) => folder.id !== legacy_main_folder_id)
     .map((folder) => ({
       ...folder,
       type: folder.type === 'box' ? ('box' as const) : ('binder' as const),
     }));
-  let defaultFolder = folders.find((folder) => folder.type === 'box') ?? folders[0];
-  if (parsed.entries.some((entry) => entry.folder_id === legacyMainFolderId) && !defaultFolder) {
-    defaultFolder = {
-      id: migratedDefaultFolderId,
+  let default_folder = folders.find((folder) => folder.type === 'box') ?? folders[0];
+  if (
+    parsed.entries.some((entry) => entry.folder_id === legacy_main_folder_id) &&
+    !default_folder
+  ) {
+    default_folder = {
+      id: migrated_default_folder_id,
       name: 'Default collection',
       type: 'box',
       created_at: new Date().toISOString(),
     };
-    folders.push(defaultFolder);
+    folders.push(default_folder);
   }
   const entries = parsed.entries.map((entry) => ({
     ...entry,
     folder_id:
-      entry.folder_id === legacyMainFolderId
-        ? (defaultFolder?.id ?? entry.folder_id)
+      entry.folder_id === legacy_main_folder_id
+        ? (default_folder?.id ?? entry.folder_id)
         : entry.folder_id,
     language_id: entry.language_id || (entry.set_id.startsWith('asia-') ? 'ja' : 'en'),
     wanted: entry.wanted === true,
@@ -195,264 +425,270 @@ const normalizeData = (parsed: Partial<CollectionData>): CollectionData => {
   };
 };
 
-const reconcilePokedexFolder = (folderId: string): boolean => {
-  const folder = state.folders.find((candidate) => candidate.id === folderId);
+const reconcile_pokedex_folder = (folder_id: string): boolean => {
+  const folder = state.folders.find((candidate) => candidate.id === folder_id);
   const config = folder?.pokedex_config;
   if (!config) return false;
-  const candidatesByTarget = pokedexCandidatesByTarget(config);
+  const candidates_by_target = pokedex_candidates_by_target(config);
   const now = new Date().toISOString();
-  const targets = pokedexTargets(config);
-  const targetIds = new Set(targets.map((target) => target.id));
-  const folderEntries = state.entries.filter((entry) => entry.folder_id === folderId);
-  const ownedEntries = folderEntries.filter((entry) => !entry.wanted);
-  const wantedByRequirement = new Map(
-    folderEntries
+  const targets = pokedex_targets(config);
+  const target_ids = new Set(targets.map((target) => target.id));
+  const folder_entries = state.entries.filter((entry) => entry.folder_id === folder_id);
+  const owned_entries = folder_entries.filter((entry) => !entry.wanted);
+  const wanted_by_requirement = new Map(
+    folder_entries
       .filter((entry) => entry.wanted && entry.pokedex_requirement_id)
       .map((entry) => [entry.pokedex_requirement_id as string, entry]),
   );
 
   // Transfers and legacy entries can arrive without an assignment. Resolve the
   // unambiguous cases automatically; multi-Pokémon cards still require a choice.
-  const fulfilledRequirements = new Set<string>();
-  let migratedLegacyRequirement = false;
-  for (const entry of ownedEntries) {
+  const fulfilled_requirements = new Set<string>();
+  let migrated_legacy_requirement = false;
+  for (const entry of owned_entries) {
     if (entry.set_id === 'manual-collection') continue;
     if (entry.pokedex_requirement_id) {
-      const migratedRequirement = legacyRegionExclusiveRequirements[entry.pokedex_requirement_id];
-      if (migratedRequirement) {
-        entry.pokedex_requirement_id = migratedRequirement;
-        migratedLegacyRequirement = true;
+      const migrated_requirement =
+        legacy_region_exclusive_requirements[entry.pokedex_requirement_id];
+      if (migrated_requirement) {
+        entry.pokedex_requirement_id = migrated_requirement;
+        migrated_legacy_requirement = true;
       }
     }
-    const requirementIds = matchingPokedexRequirementIds(
+    const requirement_ids = matching_pokedex_requirement_ids(
       config,
       entry.set_id,
       entry.card_id,
       entry.variant_id,
       entry.language_id,
     );
-    if (!entry.pokedex_requirement_id && requirementIds.length === 1)
-      entry.pokedex_requirement_id = requirementIds[0];
-    if (entry.pokedex_requirement_id && requirementIds.includes(entry.pokedex_requirement_id)) {
-      fulfilledRequirements.add(entry.pokedex_requirement_id);
+    if (!entry.pokedex_requirement_id && requirement_ids.length === 1)
+      entry.pokedex_requirement_id = requirement_ids[0];
+    if (entry.pokedex_requirement_id && requirement_ids.includes(entry.pokedex_requirement_id)) {
+      fulfilled_requirements.add(entry.pokedex_requirement_id);
     }
   }
 
   for (const target of targets) {
-    const requirementId = pokedexRequirementId(target.id);
-    const existingWanted = wantedByRequirement.get(requirementId);
-    if (fulfilledRequirements.has(requirementId)) {
-      if (existingWanted) state.entries.splice(state.entries.indexOf(existingWanted), 1);
-      wantedByRequirement.delete(requirementId);
+    const requirement_id = pokedex_requirement_id(target.id);
+    const existing_wanted = wanted_by_requirement.get(requirement_id);
+    if (fulfilled_requirements.has(requirement_id)) {
+      if (existing_wanted) state.entries.splice(state.entries.indexOf(existing_wanted), 1);
+      wanted_by_requirement.delete(requirement_id);
       continue;
     }
-    const candidates = candidatesByTarget.get(target.id) ?? [];
+    const candidates = candidates_by_target.get(target.id) ?? [];
     const candidate = candidates.length === 1 ? candidates[0] : null;
-    const wantedData = {
+    const wanted_data = {
       set_id: candidate?.set_id ?? 'pokedex-requirement',
       card_id: candidate?.card_id ?? target.id,
       variant_id: candidate?.variant_id ?? (candidates.length ? 'multiple' : 'unavailable'),
       language_id: candidate?.language_id ?? '-',
       pokedex_candidate_count: candidates.length,
     };
-    if (existingWanted) {
-      Object.assign(existingWanted, wantedData, { updated_at: now });
+    if (existing_wanted) {
+      Object.assign(existing_wanted, wanted_data, { updated_at: now });
     } else {
       state.entries.push({
-        id: newId('pokedex-wanted'),
-        folder_id: folderId,
-        ...wantedData,
+        id: new_id('pokedex-wanted'),
+        folder_id: folder_id,
+        ...wanted_data,
         condition: 'NM',
         quantity: 1,
         wanted: true,
         strong_language: true,
-        pokedex_requirement_id: requirementId,
+        pokedex_requirement_id: requirement_id,
         added_at: now,
         updated_at: now,
       });
     }
-    wantedByRequirement.delete(requirementId);
+    wanted_by_requirement.delete(requirement_id);
   }
 
-  for (const entry of wantedByRequirement.values()) {
-    if (!targetIds.has(pokemonIdFromRequirement(entry.pokedex_requirement_id as string))) {
+  for (const entry of wanted_by_requirement.values()) {
+    if (!target_ids.has(pokemon_id_from_requirement(entry.pokedex_requirement_id as string))) {
       state.entries.splice(state.entries.indexOf(entry), 1);
     }
   }
-  return migratedLegacyRequirement;
+  return migrated_legacy_requirement;
 };
 
-const reconcilePokedexFolders = (...folderIds: string[]): boolean => {
-  let migratedLegacyRequirement = false;
-  for (const folderId of new Set(folderIds.filter(Boolean))) {
-    migratedLegacyRequirement = reconcilePokedexFolder(folderId) || migratedLegacyRequirement;
+const reconcile_pokedex_folders = (...folder_ids: string[]): boolean => {
+  let migrated_legacy_requirement = false;
+  for (const folder_id of new Set(folder_ids.filter(Boolean))) {
+    migrated_legacy_requirement =
+      reconcile_pokedex_folder(folder_id) || migrated_legacy_requirement;
   }
-  return migratedLegacyRequirement;
+  return migrated_legacy_requirement;
 };
 
-const replaceData = (data: CollectionData): void => {
+const replace_data = (data: Collection_Data): void => {
   state.version = 2;
   state.folders.splice(0, state.folders.length, ...data.folders);
   state.entries.splice(0, state.entries.length, ...data.entries);
   state.manual_cards.splice(0, state.manual_cards.length, ...data.manual_cards);
 };
 
-const snapshot = (): CollectionData => JSON.parse(JSON.stringify(state)) as CollectionData;
+const snapshot = (): Collection_Data => JSON.parse(JSON.stringify(state)) as Collection_Data;
 
-const changedEntities = <T extends { id: string }>(
+const changed_entities = <T extends { id: string }>(
   before: T[],
   after: T[],
 ): { before: T[]; after: T[] } => {
-  const beforeById = new Map(before.map((entity) => [entity.id, entity]));
-  const afterById = new Map(after.map((entity) => [entity.id, entity]));
-  const changedIds = new Set<string>();
-  for (const [id, entity] of beforeById) {
-    if (JSON.stringify(entity) !== JSON.stringify(afterById.get(id))) changedIds.add(id);
+  const before_by_id = new Map(before.map((entity) => [entity.id, entity]));
+  const after_by_id = new Map(after.map((entity) => [entity.id, entity]));
+  const changed_ids = new Set<string>();
+  for (const [id, entity] of before_by_id) {
+    if (JSON.stringify(entity) !== JSON.stringify(after_by_id.get(id))) changed_ids.add(id);
   }
-  for (const [id, entity] of afterById) {
-    if (JSON.stringify(entity) !== JSON.stringify(beforeById.get(id))) changedIds.add(id);
+  for (const [id, entity] of after_by_id) {
+    if (JSON.stringify(entity) !== JSON.stringify(before_by_id.get(id))) changed_ids.add(id);
   }
   return {
-    before: before.filter((entity) => changedIds.has(entity.id)),
-    after: after.filter((entity) => changedIds.has(entity.id)),
+    before: before.filter((entity) => changed_ids.has(entity.id)),
+    after: after.filter((entity) => changed_ids.has(entity.id)),
   };
 };
 
-const collectionDelta = (
-  before: CollectionData,
-  after: CollectionData,
+const collection_delta = (
+  before: Collection_Data,
+  after: Collection_Data,
 ): {
-  before: CollectionData;
-  after: CollectionData;
+  before: Collection_Data;
+  after: Collection_Data;
 } => {
-  const folders = changedEntities(before.folders, after.folders);
-  const entries = changedEntities(before.entries, after.entries);
-  const manualCards = changedEntities(before.manual_cards, after.manual_cards);
+  const folders = changed_entities(before.folders, after.folders);
+  const entries = changed_entities(before.entries, after.entries);
+  const manual_cards = changed_entities(before.manual_cards, after.manual_cards);
   return {
     before: {
       version: before.version,
       folders: folders.before,
       entries: entries.before,
-      manual_cards: manualCards.before,
+      manual_cards: manual_cards.before,
     },
     after: {
       version: after.version,
       folders: folders.after,
       entries: entries.after,
-      manual_cards: manualCards.after,
+      manual_cards: manual_cards.after,
     },
   };
 };
 
-const loadFile = async (): Promise<void> => {
-  const response = await read_collection();
-  if (!response.ok) throw new Error(`Unable to load collection.json (${response.status})`);
-  const parsed = (await response.json()) as Partial<CollectionData>;
-  const normalized = normalizeData(parsed);
-  const needsFolderMigration =
+function apply_loaded(parsed: Partial<Collection_Data>): void {
+  const normalized = normalize_data(parsed);
+  const needs_folder_migration =
     JSON.stringify(parsed.folders) !== JSON.stringify(normalized.folders) ||
     JSON.stringify(parsed.entries) !== JSON.stringify(normalized.entries);
-  replaceData(normalized);
-  const migratedLegacyRequirements = reconcilePokedexFolders(
+  replace_data(normalized);
+  const migrated_legacy_requirements = reconcile_pokedex_folders(
     ...normalized.folders.filter((folder) => folder.pokedex_config).map((folder) => folder.id),
   );
-  queuedSnapshot = snapshot();
-  isReady.value = true;
-  saveError.value = null;
+  queued_snapshot = snapshot();
+  is_ready.value = true;
+  save_error.value = null;
 
-  if (needsFolderMigration || migratedLegacyRequirements) {
-    const beforeMigration: CollectionData = {
+  if (needs_folder_migration || migrated_legacy_requirements) {
+    const before_migration: Collection_Data = {
       ...normalized,
-      folders: parsed.folders as CollectionFolder[],
-      entries: parsed.entries as CollectionEntry[],
+      folders: parsed.folders as Collection_Folder[],
+      entries: parsed.entries as Collection_Entry[],
     };
     setTimeout(() => {
-      void writeOperation(beforeMigration, snapshot())
-        .then(() => collectionChannel?.postMessage('changed'))
-        .catch((error: unknown) => {
-          saveError.value = error instanceof Error ? error.message : String(error);
+      void write_operation(before_migration, snapshot())
+        .then(() => collection_channel?.postMessage('changed'))
+        .catch((err) => {
+          save_error.value = err instanceof Error ? err.message : String(err);
         });
     }, 0);
   }
+}
+
+const load_file = async (): Promise<void> => {
+  const response = await read_collection();
+  if (!response.ok) throw new Error(`Unable to load collection.json (${response.status})`);
+  const parsed = parse_collection_data(await response.json());
+  store.commit('collection/apply_loaded', parsed);
 };
 
-const loadPromise = loadFile().catch((error: unknown) => {
-  saveError.value = error instanceof Error ? error.message : String(error);
+const load_promise = store.dispatch('collection/load').catch((err) => {
+  save_error.value = err instanceof Error ? err.message : String(err);
 });
 
-const writeOperation = async (before: CollectionData, after: CollectionData): Promise<void> => {
-  await loadPromise;
-  const response = await apply_collection_operation(collectionDelta(before, after));
+const write_operation = async (before: Collection_Data, after: Collection_Data): Promise<void> => {
+  await load_promise;
+  const response = await apply_collection_operation(collection_delta(before, after));
   if (!response.ok) throw new Error(`Unable to save collection change (${response.status})`);
 };
 
-const persist = (): void => {
-  if (!isReady.value || !queuedSnapshot) return;
-  const before = queuedSnapshot;
+const queue_persist = (): void => {
+  if (!is_ready.value || !queued_snapshot) return;
+  const before = queued_snapshot;
   const after = snapshot();
-  queuedSnapshot = after;
-  pendingOperationCount += 1;
-  pendingSave = pendingSave
-    .then(() => writeOperation(before, after))
+  queued_snapshot = after;
+  pending_operation_count += 1;
+  pending_save = pending_save
+    .then(() => write_operation(before, after))
     .then(() => {
-      saveError.value = null;
-      collectionChannel?.postMessage('changed');
+      save_error.value = null;
+      collection_channel?.postMessage('changed');
     })
-    .catch((error: unknown) => {
-      saveError.value = error instanceof Error ? error.message : String(error);
+    .catch((err) => {
+      save_error.value = err instanceof Error ? err.message : String(err);
     })
     .finally(() => {
-      pendingOperationCount -= 1;
-      if (pendingOperationCount === 0 && refreshAfterPendingOperations) {
-        refreshAfterPendingOperations = false;
-        void loadFile();
+      pending_operation_count -= 1;
+      if (pending_operation_count === 0 && refresh_after_pending_operations) {
+        refresh_after_pending_operations = false;
+        void store.dispatch('collection/load').catch(() => undefined);
       }
     });
 };
 
-collectionChannel?.addEventListener('message', () => {
-  if (pendingOperationCount > 0) {
-    refreshAfterPendingOperations = true;
+collection_channel?.addEventListener('message', () => {
+  if (pending_operation_count > 0) {
+    refresh_after_pending_operations = true;
     return;
   }
-  void loadFile();
+  void store.dispatch('collection/load').catch(() => undefined);
 });
 
-const newId = (prefix: string): string => {
+const new_id = (prefix: string): string => {
   return `${prefix}-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 9)}`;
 };
 
-export const collectionStore = {
-  folders: computed<CollectionFolder[]>(() => state.folders),
-  entries: computed<CollectionEntry[]>(() => state.entries),
-  manualCards: computed<ManualCollectionCard[]>(() => state.manual_cards),
-  isFileConnected: computed<boolean>(() => isReady.value),
-  fileName: computed<string>(() => 'collection.json'),
-  saveError: computed<string | null>(() => saveError.value),
+const collection_operations = {
+  folders: computed<Collection_Folder[]>(() => state.folders),
+  entries: computed<Collection_Entry[]>(() => state.entries),
+  manual_cards: computed<Manual_Collection_Card[]>(() => state.manual_cards),
+  is_file_connected: computed<boolean>(() => is_ready.value),
+  file_name: computed<string>(() => 'collection.json'),
+  save_error: computed<string | null>(() => save_error.value),
 
-  ownedQuantity(setId: string, cardId: string, variantId: string): number {
-    return ownedQuantities.value.get(`${setId}:${cardId}:${variantId}`) ?? 0;
+  owned_quantity(set_id: string, card_id: string, variant_id: string): number {
+    return owned_quantities.value.get(`${set_id}:${card_id}:${variant_id}`) ?? 0;
   },
 
-  isWanted(setId: string, cardId: string, variantId: string, languageId: string): boolean {
+  is_wanted(set_id: string, card_id: string, variant_id: string, language_id: string): boolean {
     return (
-      wantedKeys.value.has(`${setId}:${cardId}:${variantId}:${languageId}`) ||
-      wantedKeys.value.has(`${setId}:${cardId}:${variantId}:*`)
+      wanted_keys.value.has(`${set_id}:${card_id}:${variant_id}:${language_id}`) ||
+      wanted_keys.value.has(`${set_id}:${card_id}:${variant_id}:*`)
     );
   },
 
-  isProtectedPokedexWanted(entryId: string): boolean {
-    const entry = state.entries.find((candidate) => candidate.id === entryId);
+  is_protected_pokedex_wanted(entry_id: string): boolean {
+    const entry = state.entries.find((candidate) => candidate.id === entry_id);
     return Boolean(entry?.wanted && entry.pokedex_requirement_id);
   },
 
-  pokedexEntryStatus(entryId: string): string | null {
-    return pokedexEntryStatuses.value.get(entryId) ?? null;
+  pokedex_entry_status(entry_id: string): string | null {
+    return pokedex_entry_statuses.value.get(entry_id) ?? null;
   },
 
-  createFolder(name: string, type: CollectionFolderType): CollectionFolder {
-    const folder: CollectionFolder = {
-      id: newId('folder'),
+  create_folder(name: string, type: Collection_Folder_Type): Collection_Folder {
+    const folder: Collection_Folder = {
+      id: new_id('folder'),
       name: name.trim(),
       type,
       created_at: new Date().toISOString(),
@@ -463,25 +699,25 @@ export const collectionStore = {
     return folder;
   },
 
-  createPokedexFolder(name: string, config: PokedexBinderConfig): CollectionFolder {
-    const folder = this.createFolder(name, 'binder');
-    folder.pokedex_config = copyPokedexBinderConfig(config);
-    reconcilePokedexFolder(folder.id);
+  create_pokedex_folder(name: string, config: Pokedex_Binder_Config): Collection_Folder {
+    const folder = this.create_folder(name, 'binder');
+    folder.pokedex_config = copy_pokedex_binder_config(config);
+    reconcile_pokedex_folder(folder.id);
     persist();
     return folder;
   },
 
-  updatePokedexConfig(folderId: string, config: PokedexBinderConfig): void {
+  update_pokedex_config(folder_id: string, config: Pokedex_Binder_Config): void {
     const folder = state.folders.find(
-      (candidate) => candidate.id === folderId && candidate.type === 'binder',
+      (candidate) => candidate.id === folder_id && candidate.type === 'binder',
     );
     if (!folder?.pokedex_config) return;
-    folder.pokedex_config = copyPokedexBinderConfig(config);
-    reconcilePokedexFolder(folderId);
+    folder.pokedex_config = copy_pokedex_binder_config(config);
+    reconcile_pokedex_folder(folder_id);
     persist();
   },
 
-  matchingPokedexRequirements(input: {
+  matching_pokedex_requirements(input: {
     folder_id: string;
     set_id: string;
     card_id: string;
@@ -491,39 +727,39 @@ export const collectionStore = {
     const folder = state.folders.find((candidate) => candidate.id === input.folder_id);
     if (!folder?.pokedex_config || input.set_id === 'manual-collection') return [];
     const targets = new Map(
-      pokedexTargets(folder.pokedex_config).map((target) => [
-        pokedexRequirementId(target.id),
+      pokedex_targets(folder.pokedex_config).map((target) => [
+        pokedex_requirement_id(target.id),
         target,
       ]),
     );
-    return matchingPokedexRequirementIds(
+    return matching_pokedex_requirement_ids(
       folder.pokedex_config,
       input.set_id,
       input.card_id,
       input.variant_id,
       input.language_id,
-    ).flatMap((requirementId) => {
-      const target = targets.get(requirementId);
-      return target ? [{ label: target.name, value: requirementId }] : [];
+    ).flatMap((requirement_id) => {
+      const target = targets.get(requirement_id);
+      return target ? [{ label: target.name, value: requirement_id }] : [];
     });
   },
 
-  renameFolder(folderId: string, name: string): void {
-    const folder = state.folders.find((candidate) => candidate.id === folderId);
+  rename_folder(folder_id: string, name: string): void {
+    const folder = state.folders.find((candidate) => candidate.id === folder_id);
     if (!folder || !name.trim()) return;
     folder.name = name.trim();
     persist();
   },
 
-  updateFolder(folderId: string, name: string, type: CollectionFolderType): void {
-    const folder = state.folders.find((candidate) => candidate.id === folderId);
+  update_folder(folder_id: string, name: string, type: Collection_Folder_Type): void {
+    const folder = state.folders.find((candidate) => candidate.id === folder_id);
     if (!folder || !name.trim()) return;
     folder.name = name.trim();
     folder.type = type;
     if (type === 'box' && folder.pokedex_config) {
       folder.pokedex_config = undefined;
       for (const entry of [...state.entries]) {
-        if (entry.folder_id !== folderId) continue;
+        if (entry.folder_id !== folder_id) continue;
         if (entry.wanted && entry.pokedex_requirement_id)
           state.entries.splice(state.entries.indexOf(entry), 1);
         else entry.pokedex_requirement_id = undefined;
@@ -532,21 +768,23 @@ export const collectionStore = {
     persist();
   },
 
-  deleteFolder(folderId: string): void {
-    const folderIndex = state.folders.findIndex((folder) => folder.id === folderId);
-    if (folderIndex === -1) return;
-    const remainingEntries = state.entries.filter((candidate) => candidate.folder_id === folderId);
-    if (remainingEntries.some((entry) => !entry.wanted || !entry.pokedex_requirement_id)) return;
-    for (const entry of remainingEntries) state.entries.splice(state.entries.indexOf(entry), 1);
-    state.folders.splice(folderIndex, 1);
+  delete_folder(folder_id: string): void {
+    const folder_index = state.folders.findIndex((folder) => folder.id === folder_id);
+    if (folder_index === -1) return;
+    const remaining_entries = state.entries.filter(
+      (candidate) => candidate.folder_id === folder_id,
+    );
+    if (remaining_entries.some((entry) => !entry.wanted || !entry.pokedex_requirement_id)) return;
+    for (const entry of remaining_entries) state.entries.splice(state.entries.indexOf(entry), 1);
+    state.folders.splice(folder_index, 1);
     persist();
   },
 
-  ensureDefaultFolder(): CollectionFolder {
+  ensure_default_folder(): Collection_Folder {
     const existing = state.folders[0];
     if (existing) return existing;
-    const folder: CollectionFolder = {
-      id: newId('folder'),
+    const folder: Collection_Folder = {
+      id: new_id('folder'),
       name: 'Default collection',
       type: 'box',
       created_at: new Date().toISOString(),
@@ -556,24 +794,24 @@ export const collectionStore = {
     return folder;
   },
 
-  addCards(input: {
+  add_cards(input: {
     folder_id: string;
     set_id: string;
     card_id: string;
     variant_id: string;
     language_id: string;
-    condition: CardCondition;
+    condition: Card_Condition;
     quantity: number;
     pokedex_requirement_id?: string;
   }): void {
     const quantity = Math.max(1, Math.floor(input.quantity));
     const now = new Date().toISOString();
-    const isPokedexFolder = Boolean(
+    const is_pokedex_folder = Boolean(
       state.folders.find((folder) => folder.id === input.folder_id)?.pokedex_config,
     );
     const existing = state.entries.find(
       (entry) =>
-        !isPokedexFolder &&
+        !is_pokedex_folder &&
         entry.folder_id === input.folder_id &&
         entry.set_id === input.set_id &&
         entry.card_id === input.card_id &&
@@ -587,7 +825,7 @@ export const collectionStore = {
       existing.updated_at = now;
     } else {
       state.entries.push({
-        id: newId('entry'),
+        id: new_id('entry'),
         ...input,
         quantity,
         wanted: false,
@@ -595,7 +833,7 @@ export const collectionStore = {
         updated_at: now,
       });
     }
-    consumeMatchingWanted(
+    consume_matching_wanted(
       input.folder_id,
       input.set_id,
       input.card_id,
@@ -617,11 +855,11 @@ export const collectionStore = {
       );
       if (owned) owned.pokedex_requirement_id = input.pokedex_requirement_id;
     }
-    reconcilePokedexFolder(input.folder_id);
+    reconcile_pokedex_folder(input.folder_id);
     persist();
   },
 
-  addWanted(input: {
+  add_wanted(input: {
     folder_id: string;
     set_id: string;
     card_id: string;
@@ -650,7 +888,7 @@ export const collectionStore = {
     }
     const now = new Date().toISOString();
     state.entries.push({
-      id: newId('wanted'),
+      id: new_id('wanted'),
       ...input,
       condition: 'NM',
       quantity,
@@ -662,7 +900,7 @@ export const collectionStore = {
     persist();
   },
 
-  addWantedEntries(
+  add_wanted_entries(
     inputs: Array<{
       folder_id: string;
       set_id: string;
@@ -678,7 +916,7 @@ export const collectionStore = {
     for (const input of inputs) {
       if (!state.folders.some((folder) => folder.id === input.folder_id)) continue;
       const quantity = Math.max(1, Math.floor(input.quantity));
-      const strongLanguage = input.strong_language === true;
+      const strong_language = input.strong_language === true;
       const existing = state.entries.find(
         (entry) =>
           entry.wanted &&
@@ -687,19 +925,19 @@ export const collectionStore = {
           entry.card_id === input.card_id &&
           entry.variant_id === input.variant_id &&
           entry.language_id === input.language_id &&
-          entry.strong_language === strongLanguage,
+          entry.strong_language === strong_language,
       );
       if (existing) {
         existing.quantity += quantity;
         existing.updated_at = now;
       } else {
         state.entries.push({
-          id: newId('wanted'),
+          id: new_id('wanted'),
           ...input,
           condition: 'NM',
           quantity,
           wanted: true,
-          strong_language: strongLanguage,
+          strong_language: strong_language,
           added_at: now,
           updated_at: now,
         });
@@ -710,27 +948,27 @@ export const collectionStore = {
     return added;
   },
 
-  fulfillWanted(entryId: string, condition: CardCondition): CollectionEntry | null {
-    const wantedEntry = state.entries.find((entry) => entry.id === entryId && entry.wanted);
-    if (!wantedEntry) return null;
+  fulfill_wanted(entry_id: string, condition: Card_Condition): Collection_Entry | null {
+    const wanted_entry = state.entries.find((entry) => entry.id === entry_id && entry.wanted);
+    if (!wanted_entry) return null;
     const now = new Date().toISOString();
-    let ownedEntry = state.entries.find(
+    let owned_entry = state.entries.find(
       (entry) =>
         !entry.wanted &&
-        entry.folder_id === wantedEntry.folder_id &&
-        entry.set_id === wantedEntry.set_id &&
-        entry.card_id === wantedEntry.card_id &&
-        entry.variant_id === wantedEntry.variant_id &&
-        entry.language_id === wantedEntry.language_id &&
+        entry.folder_id === wanted_entry.folder_id &&
+        entry.set_id === wanted_entry.set_id &&
+        entry.card_id === wanted_entry.card_id &&
+        entry.variant_id === wanted_entry.variant_id &&
+        entry.language_id === wanted_entry.language_id &&
         entry.condition === condition,
     );
-    if (ownedEntry) {
-      ownedEntry.quantity += 1;
-      ownedEntry.updated_at = now;
+    if (owned_entry) {
+      owned_entry.quantity += 1;
+      owned_entry.updated_at = now;
     } else {
-      ownedEntry = {
-        ...wantedEntry,
-        id: newId('entry'),
+      owned_entry = {
+        ...wanted_entry,
+        id: new_id('entry'),
         condition,
         quantity: 1,
         wanted: false,
@@ -738,27 +976,27 @@ export const collectionStore = {
         added_at: now,
         updated_at: now,
       };
-      state.entries.push(ownedEntry);
+      state.entries.push(owned_entry);
     }
 
-    if (wantedEntry.quantity > 1) {
-      wantedEntry.quantity -= 1;
-      wantedEntry.updated_at = now;
+    if (wanted_entry.quantity > 1) {
+      wanted_entry.quantity -= 1;
+      wanted_entry.updated_at = now;
     } else {
-      state.entries.splice(state.entries.indexOf(wantedEntry), 1);
+      state.entries.splice(state.entries.indexOf(wanted_entry), 1);
     }
     persist();
-    return ownedEntry;
+    return owned_entry;
   },
 
-  createManualCard(input: {
+  create_manual_card(input: {
     folder_id: string;
     name: string;
     set_name: string;
     number: string;
     language_id: string;
     variant_id: string;
-    condition: CardCondition;
+    condition: Card_Condition;
     quantity: number;
     category: string;
     rarity: string;
@@ -769,13 +1007,13 @@ export const collectionStore = {
     notes: string;
     estimated_value: number | null;
     release_date: string | null;
-  }): { card: ManualCollectionCard; entry: CollectionEntry } {
+  }): { card: Manual_Collection_Card; entry: Collection_Entry } {
     if (!input.name.trim()) throw new Error('Card name is required');
     if (!state.folders.some((folder) => folder.id === input.folder_id))
       throw new Error('Collection folder does not exist');
     const now = new Date().toISOString();
-    const card: ManualCollectionCard = {
-      id: newId('manual-card'),
+    const card: Manual_Collection_Card = {
+      id: new_id('manual-card'),
       name: input.name.trim(),
       set_name: input.set_name.trim(),
       number: input.number.trim(),
@@ -792,8 +1030,8 @@ export const collectionStore = {
       created_at: now,
       updated_at: now,
     };
-    const entry: CollectionEntry = {
-      id: newId('entry'),
+    const entry: Collection_Entry = {
+      id: new_id('entry'),
       folder_id: input.folder_id,
       set_id: 'manual-collection',
       card_id: card.id,
@@ -811,8 +1049,8 @@ export const collectionStore = {
     return { card, entry };
   },
 
-  updateManualCard(
-    cardId: string,
+  update_manual_card(
+    card_id: string,
     input: {
       name: string;
       set_name: string;
@@ -828,7 +1066,7 @@ export const collectionStore = {
       release_date: string | null;
     },
   ): void {
-    const card = state.manual_cards.find((candidate) => candidate.id === cardId);
+    const card = state.manual_cards.find((candidate) => candidate.id === card_id);
     if (!card || !input.name.trim()) return;
     Object.assign(card, {
       name: input.name.trim(),
@@ -849,11 +1087,11 @@ export const collectionStore = {
     persist();
   },
 
-  setQuantity(entryId: string, quantity: number): void {
-    const entry = state.entries.find((candidate) => candidate.id === entryId);
+  set_quantity(entry_id: string, quantity: number): void {
+    const entry = state.entries.find((candidate) => candidate.id === entry_id);
     if (!entry) return;
     if (quantity <= 0) {
-      this.removeEntry(entryId);
+      this.remove_entry(entry_id);
       return;
     }
     entry.quantity = Math.max(1, Math.floor(quantity));
@@ -861,18 +1099,18 @@ export const collectionStore = {
     persist();
   },
 
-  updateEntry(
-    entryId: string,
+  update_entry(
+    entry_id: string,
     input: {
       folder_id: string;
       language_id: string;
-      condition: CardCondition;
+      condition: Card_Condition;
       quantity: number;
       strong_language?: boolean;
     },
   ): void {
-    const entry = state.entries.find((candidate) => candidate.id === entryId);
-    const previousFolderId = entry?.folder_id ?? '';
+    const entry = state.entries.find((candidate) => candidate.id === entry_id);
+    const previous_folder_id = entry?.folder_id ?? '';
     const quantity = Math.max(1, Math.floor(input.quantity));
     if (
       !entry ||
@@ -899,7 +1137,7 @@ export const collectionStore = {
       state.entries.splice(state.entries.indexOf(entry), 1);
     } else {
       entry.folder_id = input.folder_id;
-      if (previousFolderId !== input.folder_id) entry.pokedex_requirement_id = undefined;
+      if (previous_folder_id !== input.folder_id) entry.pokedex_requirement_id = undefined;
       entry.language_id = input.language_id;
       entry.condition = input.condition;
       entry.quantity = quantity;
@@ -907,7 +1145,7 @@ export const collectionStore = {
       entry.updated_at = new Date().toISOString();
     }
     if (!entry.wanted) {
-      consumeMatchingWanted(
+      consume_matching_wanted(
         input.folder_id,
         entry.set_id,
         entry.card_id,
@@ -917,52 +1155,52 @@ export const collectionStore = {
         new Date().toISOString(),
       );
     }
-    reconcilePokedexFolders(previousFolderId, input.folder_id);
+    reconcile_pokedex_folders(previous_folder_id, input.folder_id);
     persist();
   },
 
-  transferEntry(entryId: string, folderId: string): void {
-    this.transferEntries([entryId], folderId);
+  transfer_entry(entry_id: string, folder_id: string): void {
+    this.transfer_entries([entry_id], folder_id);
   },
 
-  transferEntryQuantities(
-    transfers: Array<{ entryId: string; quantity: number; pokedex_requirement_id?: string }>,
-    folderId: string,
+  transfer_entry_quantities(
+    transfers: Array<{ entry_id: string; quantity: number; pokedex_requirement_id?: string }>,
+    folder_id: string,
   ): number {
-    const destinationFolder = state.folders.find((folder) => folder.id === folderId);
-    if (!destinationFolder) return 0;
-    const isPokedexFolder = Boolean(destinationFolder.pokedex_config);
+    const destination_folder = state.folders.find((folder) => folder.id === folder_id);
+    if (!destination_folder) return 0;
+    const is_pokedex_folder = Boolean(destination_folder.pokedex_config);
 
     const now = new Date().toISOString();
     let transferred = 0;
-    const foldersToReconcile = new Set<string>([folderId]);
+    const folders_to_reconcile = new Set<string>([folder_id]);
     for (const transfer of transfers) {
       const entry = state.entries.find(
-        (candidate) => candidate.id === transfer.entryId && candidate.folder_id !== folderId,
+        (candidate) => candidate.id === transfer.entry_id && candidate.folder_id !== folder_id,
       );
       if (!entry) continue;
-      const previousFolderId = entry.folder_id;
-      foldersToReconcile.add(previousFolderId);
-      const automaticRequirements =
-        !entry.wanted && destinationFolder.pokedex_config && entry.set_id !== 'manual-collection'
-          ? matchingPokedexRequirementIds(
-              destinationFolder.pokedex_config,
+      const previous_folder_id = entry.folder_id;
+      folders_to_reconcile.add(previous_folder_id);
+      const automatic_requirements =
+        !entry.wanted && destination_folder.pokedex_config && entry.set_id !== 'manual-collection'
+          ? matching_pokedex_requirement_ids(
+              destination_folder.pokedex_config,
               entry.set_id,
               entry.card_id,
               entry.variant_id,
               entry.language_id,
             )
           : [];
-      const pokedexRequirementId =
+      const pokedex_requirement_id =
         transfer.pokedex_requirement_id ??
-        (automaticRequirements.length === 1 ? automaticRequirements[0] : undefined);
+        (automatic_requirements.length === 1 ? automatic_requirements[0] : undefined);
 
       const quantity = Math.min(entry.quantity, Math.max(1, Math.floor(transfer.quantity)));
       const matching = state.entries.find(
         (candidate) =>
-          !isPokedexFolder &&
+          !is_pokedex_folder &&
           candidate.id !== entry.id &&
-          candidate.folder_id === folderId &&
+          candidate.folder_id === folder_id &&
           candidate.set_id === entry.set_id &&
           candidate.card_id === entry.card_id &&
           candidate.variant_id === entry.variant_id &&
@@ -978,8 +1216,8 @@ export const collectionStore = {
           matching.updated_at = now;
           state.entries.splice(state.entries.indexOf(entry), 1);
         } else {
-          entry.folder_id = folderId;
-          entry.pokedex_requirement_id = pokedexRequirementId;
+          entry.folder_id = folder_id;
+          entry.pokedex_requirement_id = pokedex_requirement_id;
           entry.updated_at = now;
         }
       } else {
@@ -991,18 +1229,18 @@ export const collectionStore = {
         } else {
           state.entries.push({
             ...entry,
-            id: newId('entry'),
-            folder_id: folderId,
-            pokedex_requirement_id: pokedexRequirementId,
+            id: new_id('entry'),
+            folder_id: folder_id,
+            pokedex_requirement_id: pokedex_requirement_id,
             quantity,
             added_at: now,
             updated_at: now,
           });
         }
       }
-      if (!entry.wanted && !isPokedexFolder) {
-        consumeMatchingWanted(
-          folderId,
+      if (!entry.wanted && !is_pokedex_folder) {
+        consume_matching_wanted(
+          folder_id,
           entry.set_id,
           entry.card_id,
           entry.variant_id,
@@ -1015,24 +1253,24 @@ export const collectionStore = {
     }
 
     if (transferred > 0) {
-      reconcilePokedexFolders(...foldersToReconcile);
+      reconcile_pokedex_folders(...folders_to_reconcile);
       persist();
     }
     return transferred;
   },
 
-  transferEntries(entryIds: string[], folderId: string): number {
+  transfer_entries(entry_ids: string[], folder_id: string): number {
     const transfers = state.entries
-      .filter((entry) => entryIds.includes(entry.id) && entry.folder_id !== folderId)
-      .map((entry) => ({ entryId: entry.id, quantity: entry.quantity }));
-    this.transferEntryQuantities(transfers, folderId);
+      .filter((entry) => entry_ids.includes(entry.id) && entry.folder_id !== folder_id)
+      .map((entry) => ({ entry_id: entry.id, quantity: entry.quantity }));
+    this.transfer_entry_quantities(transfers, folder_id);
     return transfers.length;
   },
 
-  updateEntriesLanguage(entryIds: string[], languageId: string): number {
-    if (!languageId) return 0;
-    const requestedIds = new Set(entryIds);
-    const entries = state.entries.filter((entry) => requestedIds.has(entry.id));
+  update_entries_language(entry_ids: string[], language_id: string): number {
+    if (!language_id) return 0;
+    const requested_ids = new Set(entry_ids);
+    const entries = state.entries.filter((entry) => requested_ids.has(entry.id));
     if (entries.length === 0) return 0;
 
     const now = new Date().toISOString();
@@ -1046,7 +1284,7 @@ export const collectionStore = {
           candidate.set_id === entry.set_id &&
           candidate.card_id === entry.card_id &&
           candidate.variant_id === entry.variant_id &&
-          candidate.language_id === languageId &&
+          candidate.language_id === language_id &&
           candidate.condition === entry.condition &&
           candidate.wanted === entry.wanted,
       );
@@ -1056,7 +1294,7 @@ export const collectionStore = {
         matching.updated_at = now;
         state.entries.splice(state.entries.indexOf(entry), 1);
       } else {
-        entry.language_id = languageId;
+        entry.language_id = language_id;
         entry.updated_at = now;
       }
     }
@@ -1064,8 +1302,8 @@ export const collectionStore = {
     return entries.length;
   },
 
-  removeEntry(entryId: string): void {
-    const index = state.entries.findIndex((entry) => entry.id === entryId);
+  remove_entry(entry_id: string): void {
+    const index = state.entries.findIndex((entry) => entry.id === entry_id);
     if (index === -1) return;
     if (state.entries[index].wanted && state.entries[index].pokedex_requirement_id) return;
     const [entry] = state.entries.splice(index, 1);
@@ -1076,13 +1314,13 @@ export const collectionStore = {
           candidate.set_id === 'manual-collection' && candidate.card_id === entry.card_id,
       )
     ) {
-      const cardIndex = state.manual_cards.findIndex((card) => card.id === entry.card_id);
-      if (cardIndex !== -1) state.manual_cards.splice(cardIndex, 1);
-      for (const image of [...manualImageStore.entries.value].filter(
+      const card_index = state.manual_cards.findIndex((card) => card.id === entry.card_id);
+      if (card_index !== -1) state.manual_cards.splice(card_index, 1);
+      for (const image of [...manual_image_store.entries.value].filter(
         (candidate) =>
           candidate.set_id === 'manual-collection' && candidate.card_id === entry.card_id,
       )) {
-        void manualImageStore.remove(
+        void manual_image_store.remove(
           image.set_id,
           image.card_id,
           image.variant_id,
@@ -1090,7 +1328,111 @@ export const collectionStore = {
         );
       }
     }
-    reconcilePokedexFolder(entry.folder_id);
+    reconcile_pokedex_folder(entry.folder_id);
     persist();
+  },
+};
+
+export const collection_store = {
+  ...collection_operations,
+  create_folder(
+    ...args: Parameters<typeof collection_operations.create_folder>
+  ): ReturnType<typeof collection_operations.create_folder> {
+    return commit_result('collection/create_folder', args);
+  },
+  create_pokedex_folder(
+    ...args: Parameters<typeof collection_operations.create_pokedex_folder>
+  ): ReturnType<typeof collection_operations.create_pokedex_folder> {
+    return commit_result('collection/create_pokedex_folder', args);
+  },
+  update_pokedex_config(
+    ...args: Parameters<typeof collection_operations.update_pokedex_config>
+  ): ReturnType<typeof collection_operations.update_pokedex_config> {
+    return commit_result('collection/update_pokedex_config', args);
+  },
+  rename_folder(
+    ...args: Parameters<typeof collection_operations.rename_folder>
+  ): ReturnType<typeof collection_operations.rename_folder> {
+    return commit_result('collection/rename_folder', args);
+  },
+  update_folder(
+    ...args: Parameters<typeof collection_operations.update_folder>
+  ): ReturnType<typeof collection_operations.update_folder> {
+    return commit_result('collection/update_folder', args);
+  },
+  delete_folder(
+    ...args: Parameters<typeof collection_operations.delete_folder>
+  ): ReturnType<typeof collection_operations.delete_folder> {
+    return commit_result('collection/delete_folder', args);
+  },
+  ensure_default_folder(
+    ...args: Parameters<typeof collection_operations.ensure_default_folder>
+  ): ReturnType<typeof collection_operations.ensure_default_folder> {
+    return commit_result('collection/ensure_default_folder', args);
+  },
+  add_cards(
+    ...args: Parameters<typeof collection_operations.add_cards>
+  ): ReturnType<typeof collection_operations.add_cards> {
+    return commit_result('collection/add_cards', args);
+  },
+  add_wanted(
+    ...args: Parameters<typeof collection_operations.add_wanted>
+  ): ReturnType<typeof collection_operations.add_wanted> {
+    return commit_result('collection/add_wanted', args);
+  },
+  add_wanted_entries(
+    ...args: Parameters<typeof collection_operations.add_wanted_entries>
+  ): ReturnType<typeof collection_operations.add_wanted_entries> {
+    return commit_result('collection/add_wanted_entries', args);
+  },
+  fulfill_wanted(
+    ...args: Parameters<typeof collection_operations.fulfill_wanted>
+  ): ReturnType<typeof collection_operations.fulfill_wanted> {
+    return commit_result('collection/fulfill_wanted', args);
+  },
+  create_manual_card(
+    ...args: Parameters<typeof collection_operations.create_manual_card>
+  ): ReturnType<typeof collection_operations.create_manual_card> {
+    return commit_result('collection/create_manual_card', args);
+  },
+  update_manual_card(
+    ...args: Parameters<typeof collection_operations.update_manual_card>
+  ): ReturnType<typeof collection_operations.update_manual_card> {
+    return commit_result('collection/update_manual_card', args);
+  },
+  set_quantity(
+    ...args: Parameters<typeof collection_operations.set_quantity>
+  ): ReturnType<typeof collection_operations.set_quantity> {
+    return commit_result('collection/set_quantity', args);
+  },
+  update_entry(
+    ...args: Parameters<typeof collection_operations.update_entry>
+  ): ReturnType<typeof collection_operations.update_entry> {
+    return commit_result('collection/update_entry', args);
+  },
+  transfer_entry(
+    ...args: Parameters<typeof collection_operations.transfer_entry>
+  ): ReturnType<typeof collection_operations.transfer_entry> {
+    return commit_result('collection/transfer_entry', args);
+  },
+  transfer_entry_quantities(
+    ...args: Parameters<typeof collection_operations.transfer_entry_quantities>
+  ): ReturnType<typeof collection_operations.transfer_entry_quantities> {
+    return commit_result('collection/transfer_entry_quantities', args);
+  },
+  transfer_entries(
+    ...args: Parameters<typeof collection_operations.transfer_entries>
+  ): ReturnType<typeof collection_operations.transfer_entries> {
+    return commit_result('collection/transfer_entries', args);
+  },
+  update_entries_language(
+    ...args: Parameters<typeof collection_operations.update_entries_language>
+  ): ReturnType<typeof collection_operations.update_entries_language> {
+    return commit_result('collection/update_entries_language', args);
+  },
+  remove_entry(
+    ...args: Parameters<typeof collection_operations.remove_entry>
+  ): ReturnType<typeof collection_operations.remove_entry> {
+    return commit_result('collection/remove_entry', args);
   },
 };

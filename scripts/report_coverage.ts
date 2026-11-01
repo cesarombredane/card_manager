@@ -1,4 +1,6 @@
+// import utils
 import { dirname, basename, join, resolve } from 'node:path';
+import { log } from './update_logging';
 import {
   read_json,
   write_json,
@@ -9,15 +11,17 @@ import {
   is_main,
   entry,
 } from './runtime';
-import { log } from './update_logging';
+
+// import types
 import type {
   Card,
   Set as Card_Set,
   Series,
-  CoverageCounts,
-  CoverageReport,
-  SetCoverage,
+  Coverage_Counts,
+  Coverage_Report,
+  Set_Coverage,
 } from '../frontend/src/models/catalog';
+
 const metadata_fields = [
   'name',
   'category',
@@ -33,13 +37,13 @@ export function percentage(filled: number, total: number): number {
     floor = Math.floor(scaled);
   return (scaled - floor === 0.5 ? floor + (floor % 2) : Math.round(scaled)) / 100;
 }
-function counts(slots = 0, filled = 0): CoverageCounts {
+function counts(slots = 0, filled = 0): Coverage_Counts {
   return { slots, filled, missing: slots - filled, percent: percentage(filled, slots) };
 }
 export function generate_coverage(
   root: string,
   output = join(root, 'coverage.json'),
-): CoverageReport {
+): Coverage_Report {
   const metadata = new Map(
     read_json<Series[]>(join(root, 'series.json'), []).map((row) => [row.id, row]),
   );
@@ -47,14 +51,14 @@ export function generate_coverage(
   const increment = (key: string, value = 1) => {
     totals[key] = (totals[key] || 0) + value;
   };
-  const language_counts: Record<string, CoverageCounts> = {};
+  const language_counts: Record<string, Coverage_Counts> = {};
   const series_counts: Record<string, { sets: number; cards: number; cards_with_image: number }> =
     {};
   const missing_metadata: Record<string, string[]> = Object.fromEntries(
     metadata_fields.map((field) => [field, []]),
   );
   const missing_set_assets = { logo: [] as string[], symbol: [] as string[] },
-    reports: SetCoverage[] = [];
+    reports: Set_Coverage[] = [];
   for (const path of set_paths(root)) {
     const series_id = basename(dirname(path)),
       series = metadata.get(series_id);
@@ -71,7 +75,7 @@ export function generate_coverage(
       const cards = read_json<Card[]>(join(dirname(path), `cards_${row.id}.json`), []);
       let variants = 0,
         cards_with_image = 0;
-      const set_languages: Record<string, CoverageCounts> = {},
+      const set_languages: Record<string, Coverage_Counts> = {},
         missing_images: Record<string, string[]> = {},
         missing_card_ids: string[] = [];
       for (const card of cards) {
@@ -142,7 +146,7 @@ export function generate_coverage(
     }
   }
   const total = (key: string) => totals[key] || 0;
-  const report: CoverageReport = {
+  const report: Coverage_Report = {
     schema_version: 1,
     generated_at: new Date().toISOString(),
     totals: {

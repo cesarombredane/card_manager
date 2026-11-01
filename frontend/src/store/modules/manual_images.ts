@@ -1,95 +1,133 @@
-import type { ManualImageEntry } from '../../models/manual_images';
-export type { ManualImageEntry } from '../../models/manual_images';
+// import hooks
+import { computed } from 'vue';
+
+// import utils
 import {
   read_manual_images,
   save_manual_image,
   remove_manual_image,
 } from '../../services/personal_data';
-import { computed, reactive, ref } from 'vue';
+import {
+  parse_manual_image_data,
+  parse_manual_image_entry,
+} from '../../services/personal_validation';
+import { store } from '../core';
 
-const entries = reactive<ManualImageEntry[]>([]);
-const isReady = ref<boolean>(false);
-const error = ref<string | null>(null);
+// import types
+import type { Manual_Image_Data, Manual_Image_Entry } from '../../models/manual_images';
 
-const replaceEntries = (nextEntries: ManualImageEntry[]): void => {
-  entries.splice(0, entries.length, ...nextEntries);
+export type { Manual_Image_Entry } from '../../models/manual_images';
+
+type Upload_Input = {
+  set_id: string;
+  card_id: string;
+  variant_id: string;
+  language_id: string;
+  data_url: string;
 };
+type Image_Key = Omit<Upload_Input, 'data_url'>;
+const matches = (entry: Manual_Image_Entry, key: Image_Key): boolean =>
+  entry.set_id === key.set_id &&
+  entry.card_id === key.card_id &&
+  entry.variant_id === key.variant_id &&
+  entry.language_id === key.language_id;
 
-const load = async (): Promise<void> => {
-  try {
-    const response = await read_manual_images();
-    if (!response.ok) throw new Error(`Unable to load manual images (${response.status})`);
-    const data = (await response.json()) as { entries?: ManualImageEntry[] };
-    replaceEntries(Array.isArray(data.entries) ? data.entries : []);
-    isReady.value = true;
-    error.value = null;
-  } catch (loadError) {
-    error.value = loadError instanceof Error ? loadError.message : String(loadError);
-  }
-};
+store.registerModule('manual_images', {
+  namespaced: true,
+  state: () => ({
+    data: { version: 1, entries: [] } as Manual_Image_Data,
+    ready: false,
+    error: null as string | null,
+  }),
+  mutations: {
+    loaded(state, data: Manual_Image_Data) {
+      state.data.entries.splice(0, state.data.entries.length, ...data.entries);
+      state.ready = true;
+      state.error = null;
+    },
+    not_ready(state) {
+      state.ready = false;
+    },
+    failure(state, err: unknown) {
+      state.error = err instanceof Error ? err.message : String(err);
+    },
+    upsert(state, entry: Manual_Image_Entry) {
+      const old = state.data.entries.find((item) => matches(item, entry));
+      if (old) Object.assign(old, entry);
+      else state.data.entries.push(entry);
+      state.error = null;
+    },
+    remove(state, key: Image_Key) {
+      const index = state.data.entries.findIndex((entry) => matches(entry, key));
+      if (index >= 0) state.data.entries.splice(index, 1);
+      state.error = null;
+    },
+  },
+  actions: {
+    load({ commit }) {
+      return read_manual_images()
+        .then((res) => {
+          if (!res.ok) throw new Error(`Unable to load manual images (${res.status})`);
+          return res.json();
+        })
+        .then((res) => {
+          commit('loaded', parse_manual_image_data(res));
+        })
+        .catch((err) => {
+          commit('not_ready');
+          commit('failure', err);
+        });
+    },
+    upload({ commit }, input: Upload_Input) {
+      return save_manual_image(input)
+        .then(async (res) => {
+          const body: unknown = await res.json();
+          if (!res.ok) throw new Error('Unable to save manual image');
+          return parse_manual_image_entry(body);
+        })
+        .then((res) => {
+          commit('upsert', res);
+        })
+        .catch((err) => {
+          commit('failure', err);
+          throw err;
+        });
+    },
+    remove({ commit }, key: Image_Key) {
+      return remove_manual_image(key)
+        .then((res) => {
+          if (!res.ok) throw new Error('Unable to delete manual image');
+          commit('remove', key);
+        })
+        .catch((err) => {
+          commit('failure', err);
+          throw err;
+        });
+    },
+  },
+});
 
-void load();
-
-export const manualImageStore = {
-  entries: computed<ManualImageEntry[]>(() => entries),
-  isReady: computed<boolean>(() => isReady.value),
-  error: computed<string | null>(() => error.value),
-
+export const manual_image_store = {
+  entries: computed<Manual_Image_Entry[]>(() => store.state.manual_images.data.entries),
+  is_ready: computed<boolean>(() => store.state.manual_images.ready),
+  error: computed<string | null>(() => store.state.manual_images.error),
   find(
-    setId: string,
-    cardId: string,
-    variantId: string,
-    languageId: string,
-  ): ManualImageEntry | null {
+    set_id: string,
+    card_id: string,
+    variant_id: string,
+    language_id: string,
+  ): Manual_Image_Entry | null {
     return (
-      entries.find(
-        (entry) =>
-          entry.set_id === setId &&
-          entry.card_id === cardId &&
-          entry.variant_id === variantId &&
-          entry.language_id === languageId,
+      store.state.manual_images.data.entries.find((entry) =>
+        matches(entry, { set_id, card_id, variant_id, language_id }),
       ) ?? null
     );
   },
-
-  async upload(input: {
-    set_id: string;
-    card_id: string;
-    variant_id: string;
-    language_id: string;
-    data_url: string;
-  }): Promise<void> {
-    const response = await save_manual_image(input);
-    const result = (await response.json()) as ManualImageEntry & { error?: string };
-    if (!response.ok) throw new Error(result.error ?? 'Unable to save manual image');
-    const existing = this.find(input.set_id, input.card_id, input.variant_id, input.language_id);
-    if (existing) Object.assign(existing, result);
-    else entries.push(result);
-    error.value = null;
+  upload(input: Upload_Input): Promise<void> {
+    return store.dispatch('manual_images/upload', input);
   },
-
-  async remove(
-    setId: string,
-    cardId: string,
-    variantId: string,
-    languageId: string,
-  ): Promise<void> {
-    const response = await remove_manual_image({
-      set_id: setId,
-      card_id: cardId,
-      variant_id: variantId,
-      language_id: languageId,
-    });
-    const result = (await response.json()) as { error?: string };
-    if (!response.ok) throw new Error(result.error ?? 'Unable to delete manual image');
-    const index = entries.findIndex(
-      (entry) =>
-        entry.set_id === setId &&
-        entry.card_id === cardId &&
-        entry.variant_id === variantId &&
-        entry.language_id === languageId,
-    );
-    if (index !== -1) entries.splice(index, 1);
-    error.value = null;
+  remove(set_id: string, card_id: string, variant_id: string, language_id: string): Promise<void> {
+    return store.dispatch('manual_images/remove', { set_id, card_id, variant_id, language_id });
   },
 };
+void store.dispatch('manual_images/load');

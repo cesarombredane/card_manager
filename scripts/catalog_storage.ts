@@ -1,7 +1,11 @@
+// import utils
 import { cpSync, existsSync, mkdirSync, rmSync, copyFileSync } from 'node:fs';
-import { join, dirname } from 'node:path';
 import { read_json, write_json, directories, set_paths } from './runtime';
+import { join, dirname } from 'node:path';
+
+// import types
 import type { Card, Set as Card_Set } from '../frontend/src/models/catalog';
+
 export type Id_Record = { id: string };
 export const personal_data_files = [
   'collection.json',

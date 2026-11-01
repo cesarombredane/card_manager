@@ -1,6 +1,13 @@
-# Tasks
+<!--
+This file tracks project tasks. Use one Markdown checkbox per task, with a short
+action starting with a verb. Add useful details on the following indented lines.
+Mark a task complete only after implementation and verification:
+[ ] pending, [x] complete.
 
-Use `- [ ]` for an open task and `- [x]` for a completed task. Include a concrete
-acceptance criterion. Keep completed tasks only while they provide useful context.
+Example:
+- [ ] Add a settings page.
+  Allow users to choose the layout density.
+- [x] Define the shared colours.
+-->
 
-- [x] Adopt template organization, TypeScript updates and isolated CI verification while preserving existing saved data.
+# TODO

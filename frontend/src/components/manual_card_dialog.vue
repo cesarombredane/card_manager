@@ -1,9 +1,9 @@
 <template>
-  <q-dialog v-model="isOpen">
-    <q-card class="bg-grey-10 text-white" style="width: 720px; max-width: 94vw">
+  <q-dialog v-model="is_open">
+    <q-card class="app_surface text-white" style="width: 720px; max-width: 94vw">
       <q-card-section>
         <div class="text-h6">Add a manual card</div>
-        <div class="text-body2 text-grey-4">This card will exist only in your collection.</div>
+        <div class="text-body2 text_secondary">This card will exist only in your collection.</div>
       </q-card-section>
 
       <q-card-section class="row q-col-gutter-md">
@@ -11,15 +11,15 @@
           <q-input v-model="name" dark outlined label="Card name *" />
         </div>
         <div class="col-12 col-sm-6">
-          <q-input v-model="setName" dark outlined label="Set name" />
+          <q-input v-model="set_name" dark outlined label="Set name" />
         </div>
         <div class="col-12 col-sm-4">
           <q-input v-model="number" dark outlined label="Set number" />
         </div>
         <div class="col-12 col-sm-4">
           <q-select
-            v-model="languageId"
-            :options="languageOptions"
+            v-model="language_id"
+            :options="language_options"
             emit-value
             map-options
             dark
@@ -29,7 +29,7 @@
         </div>
         <div class="col-12 col-sm-4">
           <q-input
-            v-model="variantId"
+            v-model="variant_id"
             dark
             outlined
             label="Variant"
@@ -39,7 +39,7 @@
         <div class="col-12 col-sm-4">
           <q-select
             v-model="condition"
-            :options="conditionOptions"
+            :options="condition_options"
             emit-value
             map-options
             dark
@@ -52,32 +52,32 @@
         </div>
         <div class="col-12 col-sm-4">
           <collection-folder-select
-            v-model="folderId"
-            :folders="collectionStore.folders.value"
+            v-model="folder_id"
+            :folders="collection_store.folders.value"
             dark
             outlined
             label="Collection"
           />
         </div>
         <div class="col-12 col-sm-4">
-          <q-select v-model="category" :options="categoryOptions" dark outlined label="Category" />
+          <q-select v-model="category" :options="category_options" dark outlined label="Category" />
         </div>
         <div class="col-12 col-sm-4"><q-input v-model="rarity" dark outlined label="Rarity" /></div>
         <div class="col-12 col-sm-4">
-          <q-input v-model="pokemonName" dark outlined label="Pokémon name" />
+          <q-input v-model="pokemon_name" dark outlined label="Pokémon name" />
         </div>
         <div class="col-12 col-sm-4">
           <q-input v-model.number="hp" type="number" min="1" dark outlined label="HP" />
         </div>
         <div class="col-12 col-sm-6">
-          <q-input v-model="typesText" dark outlined label="Types" hint="Comma-separated" />
+          <q-input v-model="types_text" dark outlined label="Types" hint="Comma-separated" />
         </div>
         <div class="col-12 col-sm-6">
           <q-input v-model="illustrator" dark outlined label="Illustrator" />
         </div>
         <div class="col-12 col-sm-6">
           <q-input
-            v-model.number="estimatedValue"
+            v-model.number="estimated_value"
             type="number"
             min="0"
             step="0.01"
@@ -88,7 +88,7 @@
         </div>
         <div class="col-12 col-sm-6">
           <q-input
-            v-model="releaseDate"
+            v-model="release_date"
             mask="##-##-####"
             dark
             outlined
@@ -101,197 +101,218 @@
         </div>
         <div class="col-12">
           <q-file
-            v-model="imageFile"
+            v-model="image_file"
             dark
             outlined
             accept="image/jpeg,image/png,image/webp"
             label="Card image"
-            @update:model-value="prepareImage"
+            @update:model-value="prepare_image"
           >
             <template #prepend><q-icon name="image" /></template>
           </q-file>
         </div>
-        <div v-if="imagePreview" class="col-12">
+        <div v-if="image_preview" class="col-12">
           <q-img
-            :src="imagePreview"
+            :src="image_preview"
             fit="contain"
-            class="bg-grey-9 rounded-borders"
+            class="app_surface rounded-borders"
             style="max-height: 440px"
           />
         </div>
-        <div v-if="saveError" class="col-12 text-negative">{{ saveError }}</div>
+        <div v-if="save_error" class="col-12 text-negative">{{ save_error }}</div>
       </q-card-section>
 
-      <q-card-actions align="right">
-        <q-btn v-close-popup flat color="grey-4" label="Cancel" />
+      <q-card-actions>
+        <q-space />
+        <q-btn v-close-popup flat color="secondary" label="Cancel" no-caps
+          ><q-tooltip :delay="1000">Cancel</q-tooltip></q-btn
+        >
         <q-btn
           color="primary"
-          text-color="black"
+          text-color="dark"
           label="Add manual card"
-          :disable="!name.trim() || !folderId || quantity < 1"
+          :disable="!name.trim() || !folder_id || quantity < 1"
           :loading="saving"
+          no-caps
           @click="save"
-        />
+          ><q-tooltip :delay="1000">Add manual card</q-tooltip></q-btn
+        >
       </q-card-actions>
     </q-card>
   </q-dialog>
 </template>
 
 <script setup lang="ts">
+  // import hooks
   import { computed, ref, watch } from 'vue';
-  import { cardConditions, collectionStore } from '../store/modules/collection';
-  import type {
-    CardCondition,
-    CollectionEntry,
-    ManualCollectionCard,
-  } from '../store/modules/collection';
-  import { getLanguages } from '../services/catalog_storage';
-  import { manualImageStore } from '../store/modules/manual_images';
-  import { parseFrenchDate } from '../utils/dates';
+
+  // import components
   import CollectionFolderSelect from './collection_folder_select.vue';
 
-  const props = withDefaults(defineProps<{ modelValue: boolean; initialFolderId?: string }>(), {
-    initialFolderId: '',
+  // import utils
+  import { card_conditions, collection_store } from '../store/modules/collection';
+  import { manual_image_store } from '../store/modules/manual_images';
+  import { get_languages } from '../services/catalog_storage';
+  import { parse_french_date } from '../utils/dates';
+
+  // import types
+  import type {
+    Card_Condition,
+    Collection_Entry,
+    Manual_Collection_Card,
+  } from '../store/modules/collection';
+
+  /* hooks */
+  const props = withDefaults(defineProps<{ modelValue: boolean; initial_folder_id?: string }>(), {
+    initial_folder_id: '',
   });
   const emit = defineEmits<{
     'update:modelValue': [value: boolean];
     created: [];
   }>();
 
-  const isOpen = computed<boolean>({
+  /* computed vars */
+  const is_open = computed<boolean>({
     get: () => props.modelValue,
     set: (value: boolean) => emit('update:modelValue', value),
   });
+
+  /* reactive vars */
   const name = ref<string>('');
-  const setName = ref<string>('');
+  const set_name = ref<string>('');
   const number = ref<string>('');
-  const languageId = ref<string>('en');
-  const variantId = ref<string>('normal');
-  const condition = ref<CardCondition>('NM');
+  const language_id = ref<string>('en');
+  const variant_id = ref<string>('normal');
+  const condition = ref<Card_Condition>('NM');
   const quantity = ref<number>(1);
-  const folderId = ref<string>(props.initialFolderId);
+  const folder_id = ref<string>(props.initial_folder_id);
   const category = ref<string>('pokemon');
   const rarity = ref<string>('');
-  const pokemonName = ref<string>('');
+  const pokemon_name = ref<string>('');
   const hp = ref<number | null>(null);
-  const typesText = ref<string>('');
+  const types_text = ref<string>('');
   const illustrator = ref<string>('');
   const notes = ref<string>('');
-  const estimatedValue = ref<number | null>(null);
-  const releaseDate = ref<string>('');
-  const imageFile = ref<File | null>(null);
-  const imageDataUrl = ref<string | null>(null);
-  const imagePreview = ref<string | null>(null);
-  const saveError = ref<string | null>(null);
+  const estimated_value = ref<number | null>(null);
+  const release_date = ref<string>('');
+  const image_file = ref<File | null>(null);
+  const image_data_url = ref<string | null>(null);
+  const image_preview = ref<string | null>(null);
+  const save_error = ref<string | null>(null);
   const saving = ref<boolean>(false);
-  const pendingCreated = ref<{ card: ManualCollectionCard; entry: CollectionEntry } | null>(null);
+  const pending_created = ref<{ card: Manual_Collection_Card; entry: Collection_Entry } | null>(
+    null,
+  );
 
-  const languageOptions = getLanguages().map((language) => ({
+  /* const vars */
+  const language_options = get_languages().map((language) => ({
     label: language.name,
     value: language.id,
   }));
-  const conditionOptions = cardConditions.map((entry) => ({ ...entry }));
-  const categoryOptions = ['pokemon', 'trainer', 'energy'];
+  const condition_options = card_conditions.map((entry) => ({ ...entry }));
+  const category_options = ['pokemon', 'trainer', 'energy'];
 
-  watch(isOpen, (open) => {
+  /* watchers */
+  watch(is_open, (open) => {
     if (!open) return;
-    const defaultFolder = collectionStore.ensureDefaultFolder();
-    folderId.value = collectionStore.folders.value.some(
-      (folder) => folder.id === props.initialFolderId,
+    const default_folder = collection_store.ensure_default_folder();
+    folder_id.value = collection_store.folders.value.some(
+      (folder) => folder.id === props.initial_folder_id,
     )
-      ? props.initialFolderId
-      : defaultFolder.id;
-    saveError.value = null;
+      ? props.initial_folder_id
+      : default_folder.id;
+    save_error.value = null;
   });
 
-  const prepareImage = (file: File | null): void => {
-    imageDataUrl.value = null;
-    imagePreview.value = null;
-    pendingCreated.value = null;
-    saveError.value = null;
+  /* functions */
+  const prepare_image = (file: File | null): void => {
+    image_data_url.value = null;
+    image_preview.value = null;
+    pending_created.value = null;
+    save_error.value = null;
     if (!file) return;
     if (!['image/jpeg', 'image/png', 'image/webp'].includes(file.type) || file.size > 15_000_000) {
-      saveError.value = 'Choose a JPEG, PNG, or WebP image smaller than 15 MB.';
+      save_error.value = 'Choose a JPEG, PNG, or WebP image smaller than 15 MB.';
       return;
     }
     const reader = new FileReader();
     reader.onload = () => {
-      imageDataUrl.value = typeof reader.result === 'string' ? reader.result : null;
-      imagePreview.value = imageDataUrl.value;
+      image_data_url.value = typeof reader.result === 'string' ? reader.result : null;
+      image_preview.value = image_data_url.value;
     };
     reader.onerror = () => {
-      saveError.value = 'Unable to read the selected image.';
+      save_error.value = 'Unable to read the selected image.';
     };
     reader.readAsDataURL(file);
   };
 
   const reset = (): void => {
     name.value = '';
-    setName.value = '';
+    set_name.value = '';
     number.value = '';
-    variantId.value = 'normal';
+    variant_id.value = 'normal';
     condition.value = 'NM';
     quantity.value = 1;
     rarity.value = '';
-    pokemonName.value = '';
+    pokemon_name.value = '';
     hp.value = null;
-    typesText.value = '';
+    types_text.value = '';
     illustrator.value = '';
     notes.value = '';
-    estimatedValue.value = null;
-    releaseDate.value = '';
-    imageFile.value = null;
-    imageDataUrl.value = null;
-    imagePreview.value = null;
+    estimated_value.value = null;
+    release_date.value = '';
+    image_file.value = null;
+    image_data_url.value = null;
+    image_preview.value = null;
   };
 
   const save = async (): Promise<void> => {
-    if (!name.value.trim() || !folderId.value || quantity.value < 1) return;
-    const parsedReleaseDate = parseFrenchDate(releaseDate.value);
-    if (releaseDate.value && !parsedReleaseDate) {
-      saveError.value = 'Release date must use DD-MM-YYYY and be a valid date.';
+    if (!name.value.trim() || !folder_id.value || quantity.value < 1) return;
+    const parsed_release_date = parse_french_date(release_date.value);
+    if (release_date.value && !parsed_release_date) {
+      save_error.value = 'Release date must use DD-MM-YYYY and be a valid date.';
       return;
     }
     saving.value = true;
-    saveError.value = null;
+    save_error.value = null;
     try {
       const result =
-        pendingCreated.value ??
-        collectionStore.createManualCard({
-          folder_id: folderId.value,
+        pending_created.value ??
+        collection_store.create_manual_card({
+          folder_id: folder_id.value,
           name: name.value,
-          set_name: setName.value,
+          set_name: set_name.value,
           number: number.value,
-          language_id: languageId.value,
-          variant_id: variantId.value,
+          language_id: language_id.value,
+          variant_id: variant_id.value,
           condition: condition.value,
           quantity: quantity.value,
           category: category.value,
           rarity: rarity.value,
-          pokemon_name: pokemonName.value,
+          pokemon_name: pokemon_name.value,
           hp: hp.value,
-          types: typesText.value.split(','),
+          types: types_text.value.split(','),
           illustrator: illustrator.value,
           notes: notes.value,
-          estimated_value: estimatedValue.value,
-          release_date: parsedReleaseDate,
+          estimated_value: estimated_value.value,
+          release_date: parsed_release_date,
         });
-      pendingCreated.value = result;
-      if (imageDataUrl.value) {
-        await manualImageStore.upload({
+      pending_created.value = result;
+      if (image_data_url.value) {
+        await manual_image_store.upload({
           set_id: 'manual-collection',
           card_id: result.card.id,
           variant_id: result.entry.variant_id,
           language_id: result.entry.language_id,
-          data_url: imageDataUrl.value,
+          data_url: image_data_url.value,
         });
       }
-      pendingCreated.value = null;
+      pending_created.value = null;
       reset();
-      isOpen.value = false;
+      is_open.value = false;
       emit('created');
     } catch (error) {
-      saveError.value = error instanceof Error ? error.message : String(error);
+      save_error.value = error instanceof Error ? error.message : String(error);
     } finally {
       saving.value = false;
     }

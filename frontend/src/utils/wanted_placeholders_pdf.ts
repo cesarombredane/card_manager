@@ -1,33 +1,36 @@
+// import utils
 import { jsPDF } from 'jspdf';
-import type { DisplayCard } from './card_display';
 
-export type WantedPlaceholder = {
-  card: DisplayCard;
+// import types
+import type { Display_Card } from './card_display';
+
+export type Wanted_Placeholder = {
+  card: Display_Card;
   quantity: number;
 };
 
-const cardWidthMm = 63;
-const cardHeightMm = 88;
-const gapMm = 3;
+const card_width_mm = 63;
+const card_height_mm = 88;
+const gap_mm = 3;
 const columns = 3;
 const rows = 3;
-const pageWidthMm = 210;
-const pageHeightMm = 297;
-const gridWidthMm = columns * cardWidthMm + (columns - 1) * gapMm;
-const gridHeightMm = rows * cardHeightMm + (rows - 1) * gapMm;
-const marginLeftMm = (pageWidthMm - gridWidthMm) / 2;
-const marginTopMm = (pageHeightMm - gridHeightMm) / 2;
+const page_width_mm = 210;
+const page_height_mm = 297;
+const grid_width_mm = columns * card_width_mm + (columns - 1) * gap_mm;
+const grid_height_mm = rows * card_height_mm + (rows - 1) * gap_mm;
+const margin_left_mm = (page_width_mm - grid_width_mm) / 2;
+const margin_top_mm = (page_height_mm - grid_height_mm) / 2;
 
-const grayscaleImage = async (url: string): Promise<string> => {
+const grayscale_image = async (url: string): Promise<string> => {
   const response = await fetch(url);
   if (!response.ok) throw new Error(`Unable to load card image (${response.status})`);
-  const objectUrl = URL.createObjectURL(await response.blob());
+  const object_url = URL.createObjectURL(await response.blob());
   try {
     const image = await new Promise<HTMLImageElement>((resolve, reject) => {
       const element = new Image();
       element.onload = () => resolve(element);
       element.onerror = () => reject(new Error('Unable to decode card image'));
-      element.src = objectUrl;
+      element.src = object_url;
     });
     const canvas = document.createElement('canvas');
     canvas.width = image.naturalWidth;
@@ -38,19 +41,19 @@ const grayscaleImage = async (url: string): Promise<string> => {
     context.drawImage(image, 0, 0);
     return canvas.toDataURL('image/jpeg', 0.9);
   } finally {
-    URL.revokeObjectURL(objectUrl);
+    URL.revokeObjectURL(object_url);
   }
 };
 
-const safeFileName = (value: string): string =>
+const safe_file_name = (value: string): string =>
   value
     .normalize('NFKD')
     .replace(/[^\w.-]+/g, '-')
     .replace(/^-+|-+$/g, '') || 'collection';
 
-export const downloadWantedPlaceholdersPdf = async (
-  collectionName: string,
-  placeholders: WantedPlaceholder[],
+export const download_wanted_placeholders_pdf = async (
+  collection_name: string,
+  placeholders: Wanted_Placeholder[],
 ): Promise<void> => {
   const cards = placeholders.flatMap(({ card, quantity }) =>
     Array.from({ length: Math.max(1, Math.floor(quantity)) }, () => card),
@@ -59,38 +62,38 @@ export const downloadWantedPlaceholdersPdf = async (
 
   const pdf = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4', compress: true });
   pdf.setProperties({
-    title: `${collectionName} wanted card placeholders`,
+    title: `${collection_name} wanted card placeholders`,
     subject: 'Black-and-white placeholders sized for Pokémon cards',
   });
 
-  const cachedImages = new Map<string, Promise<string>>();
+  const cached_images = new Map<string, Promise<string>>();
   for (let index = 0; index < cards.length; index += 1) {
     if (index > 0 && index % (columns * rows) === 0) pdf.addPage();
     const position = index % (columns * rows);
     const column = position % columns;
     const row = Math.floor(position / columns);
-    const x = marginLeftMm + column * (cardWidthMm + gapMm);
-    const y = marginTopMm + row * (cardHeightMm + gapMm);
+    const x = margin_left_mm + column * (card_width_mm + gap_mm);
+    const y = margin_top_mm + row * (card_height_mm + gap_mm);
     const card = cards[index];
 
     pdf.setDrawColor(70);
     pdf.setLineWidth(0.25);
-    pdf.rect(x, y, cardWidthMm, cardHeightMm);
+    pdf.rect(x, y, card_width_mm, card_height_mm);
 
     if (card.image_url) {
-      let imagePromise = cachedImages.get(card.image_url);
-      if (!imagePromise) {
-        imagePromise = grayscaleImage(card.image_url);
-        cachedImages.set(card.image_url, imagePromise);
+      let image_promise = cached_images.get(card.image_url);
+      if (!image_promise) {
+        image_promise = grayscale_image(card.image_url);
+        cached_images.set(card.image_url, image_promise);
       }
       try {
         pdf.addImage(
-          await imagePromise,
+          await image_promise,
           'JPEG',
           x,
           y,
-          cardWidthMm,
-          cardHeightMm,
+          card_width_mm,
+          card_height_mm,
           undefined,
           'FAST',
         );
@@ -103,20 +106,20 @@ export const downloadWantedPlaceholdersPdf = async (
     pdf.setTextColor(30);
     pdf.setFont('helvetica', 'bold');
     pdf.setFontSize(12);
-    const title = pdf.splitTextToSize(card.display_name, cardWidthMm - 8);
-    pdf.text(title, x + cardWidthMm / 2, y + cardHeightMm / 2 - 4, { align: 'center' });
+    const title = pdf.splitTextToSize(card.display_name, card_width_mm - 8);
+    pdf.text(title, x + card_width_mm / 2, y + card_height_mm / 2 - 4, { align: 'center' });
     pdf.setFont('helvetica', 'normal');
     pdf.setFontSize(8);
     pdf.text(
       `${card.set_name ?? card.set_id} · #${card.number}`,
-      x + cardWidthMm / 2,
-      y + cardHeightMm / 2 + 8,
+      x + card_width_mm / 2,
+      y + card_height_mm / 2 + 8,
       {
         align: 'center',
-        maxWidth: cardWidthMm - 8,
+        maxWidth: card_width_mm - 8,
       },
     );
   }
 
-  pdf.save(`${safeFileName(collectionName)}-wanted-placeholders.pdf`);
+  pdf.save(`${safe_file_name(collection_name)}-wanted-placeholders.pdf`);
 };

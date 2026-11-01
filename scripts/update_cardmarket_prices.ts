@@ -1,6 +1,14 @@
+// import utils
 import { isDeepStrictEqual } from 'node:util';
+import { log } from './update_logging';
 import { existsSync } from 'node:fs';
 import { join } from 'node:path';
+import {
+  download_price_guide,
+  index_price_guide,
+  normalized_price,
+  product_url,
+} from './cardmarket_prices';
 import {
   data_root,
   project_root,
@@ -12,14 +20,10 @@ import {
   entry,
   cli,
 } from './runtime';
-import {
-  download_price_guide,
-  index_price_guide,
-  normalized_price,
-  product_url,
-} from './cardmarket_prices';
-import { log } from './update_logging';
+
+// import types
 import type { Card } from '../frontend/src/models/catalog';
+
 export async function update_prices(
   root = data_root,
   cache = join(project_root, 'tcgdex_data/cardmarket-price-guide.json'),

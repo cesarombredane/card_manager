@@ -1,9 +1,11 @@
-import { existsSync } from 'node:fs';
-import { join } from 'node:path';
-import { data_root, project_root, cli, is_main, entry } from './runtime';
+// import utils
 import { sync_assets, image_workers, request_timeout } from './image_assets';
+import { data_root, project_root, cli, is_main, entry } from './runtime';
 import { generate_coverage } from './report_coverage';
 import { duration, log } from './update_logging';
+import { existsSync } from 'node:fs';
+import { join } from 'node:path';
+
 export async function main(): Promise<number> {
   const args = cli({ 'set-only': { type: 'boolean' } });
   if (args.help) {

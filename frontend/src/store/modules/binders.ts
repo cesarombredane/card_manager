@@ -1,136 +1,323 @@
-import type {
-  BinderLayout,
-  BinderProxy,
-  BinderImage,
-  BinderImagePlacement,
-  CollectionBinder,
-  BindersData,
-} from '../../models/binders';
-export type {
-  BinderLayout,
-  BinderProxy,
-  BinderImage,
-  BinderImagePlacement,
-  CollectionBinder,
-  BindersData,
-} from '../../models/binders';
-import { read_binders, save_binders } from '../../services/personal_data';
-import { computed, reactive, ref } from 'vue';
+// import hooks
+import { computed } from 'vue';
 
-const state = reactive<BindersData>({ version: 1, binders: [] });
-const isReady = ref<boolean>(false);
-const saveError = ref<string | null>(null);
-let pendingSave: Promise<void> = Promise.resolve();
-const displayProxyDate = (value: unknown): string => {
+// import utils
+import { read_binders, save_binders } from '../../services/personal_data';
+import { parse_binders_data } from '../../services/personal_validation';
+import { commit_result } from '../commit_result';
+import { store } from '../core';
+
+// import types
+import type { Mutation_Call } from '../../models/personal_state';
+import type {
+  Binder_Layout,
+  Binder_Proxy,
+  Binder_Image,
+  Binder_Image_Placement,
+  Collection_Binder,
+  Binders_Data,
+} from '../../models/binders';
+
+export type {
+  Binder_Layout,
+  Binder_Proxy,
+  Binder_Image,
+  Binder_Image_Placement,
+  Collection_Binder,
+  Binders_Data,
+} from '../../models/binders';
+
+store.registerModule('binders', {
+  namespaced: true,
+  state: () => ({
+    data: { version: 1, binders: [] } as Binders_Data,
+    ready: false,
+    error: null as string | null,
+  }),
+  mutations: {
+    set_ready(module_state, value: boolean) {
+      module_state.ready = value;
+    },
+    set_error(module_state, value: string | null) {
+      module_state.error = value;
+    },
+    replace_data(module_state, binders: Collection_Binder[]) {
+      module_state.data.binders.splice(0, module_state.data.binders.length, ...binders);
+    },
+    create(
+      _state,
+      call: Mutation_Call<
+        Parameters<typeof binders_operations.create>,
+        ReturnType<typeof binders_operations.create>
+      >,
+    ) {
+      call.result = binders_operations.create(...call.args);
+    },
+    remove(
+      _state,
+      call: Mutation_Call<
+        Parameters<typeof binders_operations.remove>,
+        ReturnType<typeof binders_operations.remove>
+      >,
+    ) {
+      call.result = binders_operations.remove(...call.args);
+    },
+    set_page_locked(
+      _state,
+      call: Mutation_Call<
+        Parameters<typeof binders_operations.set_page_locked>,
+        ReturnType<typeof binders_operations.set_page_locked>
+      >,
+    ) {
+      call.result = binders_operations.set_page_locked(...call.args);
+    },
+    reset_settings(
+      _state,
+      call: Mutation_Call<
+        Parameters<typeof binders_operations.reset_settings>,
+        ReturnType<typeof binders_operations.reset_settings>
+      >,
+    ) {
+      call.result = binders_operations.reset_settings(...call.args);
+    },
+    set_slot(
+      _state,
+      call: Mutation_Call<
+        Parameters<typeof binders_operations.set_slot>,
+        ReturnType<typeof binders_operations.set_slot>
+      >,
+    ) {
+      call.result = binders_operations.set_slot(...call.args);
+    },
+    create_proxy(
+      _state,
+      call: Mutation_Call<
+        Parameters<typeof binders_operations.create_proxy>,
+        ReturnType<typeof binders_operations.create_proxy>
+      >,
+    ) {
+      call.result = binders_operations.create_proxy(...call.args);
+    },
+    create_image(
+      _state,
+      call: Mutation_Call<
+        Parameters<typeof binders_operations.create_image>,
+        ReturnType<typeof binders_operations.create_image>
+      >,
+    ) {
+      call.result = binders_operations.create_image(...call.args);
+    },
+    update_proxy(
+      _state,
+      call: Mutation_Call<
+        Parameters<typeof binders_operations.update_proxy>,
+        ReturnType<typeof binders_operations.update_proxy>
+      >,
+    ) {
+      call.result = binders_operations.update_proxy(...call.args);
+    },
+    update_image(
+      _state,
+      call: Mutation_Call<
+        Parameters<typeof binders_operations.update_image>,
+        ReturnType<typeof binders_operations.update_image>
+      >,
+    ) {
+      call.result = binders_operations.update_image(...call.args);
+    },
+    remove_asset(
+      _state,
+      call: Mutation_Call<
+        Parameters<typeof binders_operations.remove_asset>,
+        ReturnType<typeof binders_operations.remove_asset>
+      >,
+    ) {
+      call.result = binders_operations.remove_asset(...call.args);
+    },
+    place_image(
+      _state,
+      call: Mutation_Call<
+        Parameters<typeof binders_operations.place_image>,
+        ReturnType<typeof binders_operations.place_image>
+      >,
+    ) {
+      call.result = binders_operations.place_image(...call.args);
+    },
+    remove_image_placement(
+      _state,
+      call: Mutation_Call<
+        Parameters<typeof binders_operations.remove_image_placement>,
+        ReturnType<typeof binders_operations.remove_image_placement>
+      >,
+    ) {
+      call.result = binders_operations.remove_image_placement(...call.args);
+    },
+    apply_layout(
+      _state,
+      call: Mutation_Call<
+        Parameters<typeof binders_operations.apply_layout>,
+        ReturnType<typeof binders_operations.apply_layout>
+      >,
+    ) {
+      call.result = binders_operations.apply_layout(...call.args);
+    },
+    move_slot(
+      _state,
+      call: Mutation_Call<
+        Parameters<typeof binders_operations.move_slot>,
+        ReturnType<typeof binders_operations.move_slot>
+      >,
+    ) {
+      call.result = binders_operations.move_slot(...call.args);
+    },
+    clean(
+      _state,
+      call: Mutation_Call<
+        Parameters<typeof binders_operations.clean>,
+        ReturnType<typeof binders_operations.clean>
+      >,
+    ) {
+      call.result = binders_operations.clean(...call.args);
+    },
+  },
+  actions: {
+    load() {
+      return load_binders();
+    },
+    save() {
+      queue_persist();
+      return pending_save;
+    },
+  },
+});
+const persist = (): void => {
+  void store.dispatch('binders/save');
+};
+const state = store.state.binders.data;
+const is_ready = computed<boolean>({
+  get: () => store.state.binders.ready,
+  set: (value) => store.commit('binders/set_ready', value),
+});
+const save_error = computed<string | null>({
+  get: () => store.state.binders.error,
+  set: (value) => store.commit('binders/set_error', value),
+});
+let pending_save: Promise<void> = Promise.resolve();
+const display_proxy_date = (value: unknown): string => {
   const date = typeof value === 'string' ? value : '';
-  const isoMatch = /^(\d{4})-(\d{2})-(\d{2})$/.exec(date);
-  return isoMatch ? `${isoMatch[3]}/${isoMatch[2]}/${isoMatch[1]}` : date;
+  const iso_match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(date);
+  return iso_match ? `${iso_match[3]}/${iso_match[2]}/${iso_match[1]}` : date;
 };
 
-const loadPromise = read_binders()
-  .then(async (response) => {
-    if (!response.ok) throw new Error(`Unable to load binders.json (${response.status})`);
-    const parsed = (await response.json()) as Partial<BindersData>;
-    if (!Array.isArray(parsed.binders)) throw new Error('Invalid binders JSON');
-    const binders = parsed.binders.map((binder) => {
-      const binderData = { ...binder } as CollectionBinder & { locked?: boolean };
-      delete binderData.locked;
-      const expectedSlots = binder.page_count * 2 * slotsPerPage(binder.layout);
-      return {
-        ...binderData,
-        locked_pages: Array.isArray(binder.locked_pages)
-          ? [...new Set(binder.locked_pages)].filter(
-              (page) => Number.isInteger(page) && page >= 0 && page < binder.page_count * 2,
-            )
-          : [],
-        slots:
-          binder.slots.length < expectedSlots
-            ? [...binder.slots, ...Array(expectedSlots - binder.slots.length).fill(null)]
-            : binder.slots.slice(0, expectedSlots),
-        proxies: Array.isArray(binder.proxies)
-          ? binder.proxies.map((proxy) => ({
-              ...proxy,
-              quantity: Math.max(1, proxy.quantity ?? 1),
-              date: displayProxyDate(proxy.date),
-            }))
-          : [],
-        images: Array.isArray(binder.images)
-          ? binder.images.map((image) => ({
-              ...image,
-              card_slots: Array.isArray(image.card_slots)
-                ? image.card_slots
-                : Array.from({ length: image.width * image.height }, (_, index) => index),
-              crop_zoom: Math.min(3, Math.max(1, Number(image.crop_zoom) || 1)),
-              crop_x: Math.min(100, Math.max(-100, Number(image.crop_x) || 0)),
-              crop_y: Math.min(100, Math.max(-100, Number(image.crop_y) || 0)),
-            }))
-          : [],
-        image_placements: Array.isArray(binder.image_placements) ? binder.image_placements : [],
-      };
+const load_binders = () =>
+  read_binders()
+    .then(async (res) => {
+      if (!res.ok) throw new Error(`Unable to load binders.json (${res.status})`);
+      const parsed = parse_binders_data(await res.json());
+      if (!Array.isArray(parsed.binders)) throw new Error('Invalid binders JSON');
+      const binders = parsed.binders.map((binder) => {
+        const binder_data = { ...binder } as Collection_Binder & { locked?: boolean };
+        delete binder_data.locked;
+        const expected_slots = binder.page_count * 2 * slots_per_page(binder.layout);
+        return {
+          ...binder_data,
+          locked_pages: Array.isArray(binder.locked_pages)
+            ? [...new Set(binder.locked_pages)].filter(
+                (page) => Number.isInteger(page) && page >= 0 && page < binder.page_count * 2,
+              )
+            : [],
+          slots:
+            binder.slots.length < expected_slots
+              ? [...binder.slots, ...Array(expected_slots - binder.slots.length).fill(null)]
+              : binder.slots.slice(0, expected_slots),
+          proxies: Array.isArray(binder.proxies)
+            ? binder.proxies.map((proxy) => ({
+                ...proxy,
+                quantity: Math.max(1, proxy.quantity ?? 1),
+                date: display_proxy_date(proxy.date),
+              }))
+            : [],
+          images: Array.isArray(binder.images)
+            ? binder.images.map((image) => ({
+                ...image,
+                card_slots: Array.isArray(image.card_slots)
+                  ? image.card_slots
+                  : Array.from({ length: image.width * image.height }, (_, index) => index),
+                crop_zoom: Math.min(3, Math.max(1, Number(image.crop_zoom) || 1)),
+                crop_x: Math.min(100, Math.max(-100, Number(image.crop_x) || 0)),
+                crop_y: Math.min(100, Math.max(-100, Number(image.crop_y) || 0)),
+              }))
+            : [],
+          image_placements: Array.isArray(binder.image_placements) ? binder.image_placements : [],
+        };
+      });
+      store.commit('binders/replace_data', binders);
+      is_ready.value = true;
+      save_error.value = null;
+    })
+    .catch((err) => {
+      is_ready.value = false;
+      save_error.value = err instanceof Error ? err.message : String(err);
     });
-    state.binders.splice(0, state.binders.length, ...binders);
-    isReady.value = true;
-  })
-  .catch((error: unknown) => {
-    saveError.value = error instanceof Error ? error.message : String(error);
-  });
 
-const persist = (): void => {
-  if (!isReady.value) return;
-  pendingSave = pendingSave
+const load_promise = store.dispatch('binders/load');
+
+const queue_persist = (): void => {
+  if (!is_ready.value) return;
+  pending_save = pending_save
     .then(async () => {
-      await loadPromise;
+      await load_promise;
       const response = await save_binders(state);
       if (!response.ok) throw new Error(`Unable to save binders.json (${response.status})`);
-      saveError.value = null;
+      save_error.value = null;
     })
-    .catch((error: unknown) => {
-      saveError.value = error instanceof Error ? error.message : String(error);
+    .catch((err) => {
+      save_error.value = err instanceof Error ? err.message : String(err);
     });
 };
 
-const slotsPerPage = (layout: BinderLayout): number => (layout === '2x2' ? 4 : 9);
-const pageForSlot = (binder: CollectionBinder, slotIndex: number): number | null => {
-  const pageIndex = Math.floor(slotIndex / slotsPerPage(binder.layout));
-  return binder.locked_pages.includes(pageIndex) ? null : pageIndex;
+const slots_per_page = (layout: Binder_Layout): number => (layout === '2x2' ? 4 : 9);
+const page_for_slot = (binder: Collection_Binder, slot_index: number): number | null => {
+  const page_index = Math.floor(slot_index / slots_per_page(binder.layout));
+  return binder.locked_pages.includes(page_index) ? null : page_index;
 };
-const assetTouchesLockedPage = (
-  binder: CollectionBinder,
+const asset_touches_locked_page = (
+  binder: Collection_Binder,
   kind: 'proxy' | 'image',
-  assetId: string,
+  asset_id: string,
 ): boolean =>
   kind === 'proxy'
     ? binder.slots.some(
         (slot, index) =>
-          slot === `proxy:${assetId}` &&
-          binder.locked_pages.includes(Math.floor(index / slotsPerPage(binder.layout))),
+          slot === `proxy:${asset_id}` &&
+          binder.locked_pages.includes(Math.floor(index / slots_per_page(binder.layout))),
       )
     : binder.image_placements.some(
         (placement) =>
-          placement.image_id === assetId && binder.locked_pages.includes(placement.side_index),
+          placement.image_id === asset_id && binder.locked_pages.includes(placement.side_index),
       );
-const newAssetId = (prefix: string): string =>
+const new_asset_id = (prefix: string): string =>
   `${prefix}-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 9)}`;
 
-export const binderStore = {
-  binders: computed<CollectionBinder[]>(() => state.binders),
-  isReady: computed<boolean>(() => isReady.value),
-  saveError: computed<string | null>(() => saveError.value),
+const binders_operations = {
+  binders: computed<Collection_Binder[]>(() => state.binders),
+  is_ready: computed<boolean>(() => is_ready.value),
+  save_error: computed<string | null>(() => save_error.value),
 
-  get(folderId: string): CollectionBinder | null {
-    return state.binders.find((binder) => binder.folder_id === folderId) ?? null;
+  get(folder_id: string): Collection_Binder | null {
+    return state.binders.find((binder) => binder.folder_id === folder_id) ?? null;
   },
 
-  create(folderId: string, pageCount: number, layout: BinderLayout): CollectionBinder {
-    const existing = this.get(folderId);
+  create(folder_id: string, page_count: number, layout: Binder_Layout): Collection_Binder {
+    const existing = this.get(folder_id);
     if (existing) return existing;
     const now = new Date().toISOString();
-    const binder: CollectionBinder = {
-      folder_id: folderId,
-      page_count: Math.max(1, Math.floor(pageCount)),
+    const binder: Collection_Binder = {
+      folder_id: folder_id,
+      page_count: Math.max(1, Math.floor(page_count)),
       layout,
       locked_pages: [],
-      slots: Array(Math.max(1, Math.floor(pageCount)) * 2 * slotsPerPage(layout)).fill(null),
+      slots: Array(Math.max(1, Math.floor(page_count)) * 2 * slots_per_page(layout)).fill(null),
       proxies: [],
       images: [],
       image_placements: [],
@@ -142,37 +329,37 @@ export const binderStore = {
     return binder;
   },
 
-  remove(folderId: string): void {
-    const index = state.binders.findIndex((binder) => binder.folder_id === folderId);
+  remove(folder_id: string): void {
+    const index = state.binders.findIndex((binder) => binder.folder_id === folder_id);
     if (index === -1) return;
     state.binders.splice(index, 1);
     persist();
   },
 
-  setPageLocked(folderId: string, pageIndex: number, locked: boolean): void {
-    const binder = this.get(folderId);
+  set_page_locked(folder_id: string, page_index: number, locked: boolean): void {
+    const binder = this.get(folder_id);
     if (
       !binder ||
-      !Number.isInteger(pageIndex) ||
-      pageIndex < 0 ||
-      pageIndex >= binder.page_count * 2
+      !Number.isInteger(page_index) ||
+      page_index < 0 ||
+      page_index >= binder.page_count * 2
     )
       return;
-    const currentlyLocked = binder.locked_pages.includes(pageIndex);
-    if (currentlyLocked === locked) return;
+    const currently_locked = binder.locked_pages.includes(page_index);
+    if (currently_locked === locked) return;
     binder.locked_pages = locked
-      ? [...binder.locked_pages, pageIndex].sort((left, right) => left - right)
-      : binder.locked_pages.filter((candidate) => candidate !== pageIndex);
+      ? [...binder.locked_pages, page_index].sort((left, right) => left - right)
+      : binder.locked_pages.filter((candidate) => candidate !== page_index);
     binder.updated_at = new Date().toISOString();
     persist();
   },
 
-  resetSettings(folderId: string, pageCount: number, layout: BinderLayout): void {
-    const binder = this.get(folderId);
+  reset_settings(folder_id: string, page_count: number, layout: Binder_Layout): void {
+    const binder = this.get(folder_id);
     if (!binder || binder.locked_pages.length) return;
-    binder.page_count = Math.max(1, Math.floor(pageCount));
+    binder.page_count = Math.max(1, Math.floor(page_count));
     binder.layout = layout;
-    binder.slots = Array(binder.page_count * 2 * slotsPerPage(layout)).fill(null);
+    binder.slots = Array(binder.page_count * 2 * slots_per_page(layout)).fill(null);
     binder.image_placements = [];
     binder.locked_pages = [];
     const dimension = layout === '2x2' ? 2 : 3;
@@ -194,25 +381,25 @@ export const binderStore = {
     persist();
   },
 
-  setSlot(folderId: string, slotIndex: number, entryId: string | null): void {
-    const binder = this.get(folderId);
+  set_slot(folder_id: string, slot_index: number, entry_id: string | null): void {
+    const binder = this.get(folder_id);
     if (
       !binder ||
-      slotIndex < 0 ||
-      slotIndex >= binder.slots.length ||
-      pageForSlot(binder, slotIndex) === null
+      slot_index < 0 ||
+      slot_index >= binder.slots.length ||
+      page_for_slot(binder, slot_index) === null
     )
       return;
-    binder.slots[slotIndex] = entryId;
+    binder.slots[slot_index] = entry_id;
     binder.updated_at = new Date().toISOString();
     persist();
   },
 
-  createProxy(folderId: string, name: string, quantity: number, date = ''): BinderProxy {
-    const binder = this.get(folderId);
+  create_proxy(folder_id: string, name: string, quantity: number, date = ''): Binder_Proxy {
+    const binder = this.get(folder_id);
     if (!binder || !name.trim()) throw new Error('Proxy name is required');
     const proxy = {
-      id: newAssetId('proxy'),
+      id: new_asset_id('proxy'),
       name: name.trim(),
       quantity: Math.max(1, Math.floor(quantity)),
       date,
@@ -224,12 +411,12 @@ export const binderStore = {
     return proxy;
   },
 
-  createImage(folderId: string, name: string, width: number, height: number): BinderImage {
-    const binder = this.get(folderId);
+  create_image(folder_id: string, name: string, width: number, height: number): Binder_Image {
+    const binder = this.get(folder_id);
     if (!binder || !name.trim()) throw new Error('Image name is required');
     const limit = binder.layout === '2x2' ? 2 : 3;
     const image = {
-      id: newAssetId('image'),
+      id: new_asset_id('image'),
       name: name.trim(),
       width: Math.min(limit, Math.max(1, Math.floor(width))),
       height: Math.min(limit, Math.max(1, Math.floor(height))),
@@ -245,18 +432,18 @@ export const binderStore = {
     return image;
   },
 
-  updateProxy(
-    folderId: string,
-    proxyId: string,
+  update_proxy(
+    folder_id: string,
+    proxy_id: string,
     values: { name: string; quantity: number; date: string },
   ): void {
-    const binder = this.get(folderId);
-    const proxy = binder?.proxies.find((candidate) => candidate.id === proxyId);
+    const binder = this.get(folder_id);
+    const proxy = binder?.proxies.find((candidate) => candidate.id === proxy_id);
     if (
       !binder ||
       !proxy ||
       !values.name.trim() ||
-      assetTouchesLockedPage(binder, 'proxy', proxyId)
+      asset_touches_locked_page(binder, 'proxy', proxy_id)
     )
       return;
     proxy.name = values.name.trim();
@@ -266,26 +453,26 @@ export const binderStore = {
     persist();
   },
 
-  updateImage(
-    folderId: string,
-    imageId: string,
+  update_image(
+    folder_id: string,
+    image_id: string,
     values: {
       name: string;
       width: number;
       height: number;
-      cardSlots: number[];
-      cropZoom: number;
-      cropX: number;
-      cropY: number;
+      card_slots: number[];
+      crop_zoom: number;
+      crop_x: number;
+      crop_y: number;
     },
   ): void {
-    const binder = this.get(folderId);
-    const image = binder?.images.find((candidate) => candidate.id === imageId);
+    const binder = this.get(folder_id);
+    const image = binder?.images.find((candidate) => candidate.id === image_id);
     if (
       !binder ||
       !image ||
       !values.name.trim() ||
-      assetTouchesLockedPage(binder, 'image', imageId)
+      asset_touches_locked_page(binder, 'image', image_id)
     )
       return;
     const limit = binder.layout === '2x2' ? 2 : 3;
@@ -294,25 +481,25 @@ export const binderStore = {
     image.name = values.name.trim();
     image.width = width;
     image.height = height;
-    image.card_slots = [...new Set(values.cardSlots)]
+    image.card_slots = [...new Set(values.card_slots)]
       .filter((index) => Number.isInteger(index) && index >= 0 && index < width * height)
       .sort((left, right) => left - right);
-    image.crop_zoom = Math.min(3, Math.max(1, values.cropZoom));
-    image.crop_x = Math.min(100, Math.max(-100, values.cropX));
-    image.crop_y = Math.min(100, Math.max(-100, values.cropY));
-    const placement = binder.image_placements.find((candidate) => candidate.image_id === imageId);
+    image.crop_zoom = Math.min(3, Math.max(1, values.crop_zoom));
+    image.crop_x = Math.min(100, Math.max(-100, values.crop_x));
+    image.crop_y = Math.min(100, Math.max(-100, values.crop_y));
+    const placement = binder.image_placements.find((candidate) => candidate.image_id === image_id);
     if (placement) {
       placement.row = Math.min(placement.row, limit - image.height);
       placement.column = Math.min(placement.column, limit - image.width);
       for (let row = 0; row < image.height; row += 1) {
         for (let column = 0; column < image.width; column += 1) {
           if (image.card_slots.includes(row * image.width + column)) continue;
-          const slotIndex =
-            placement.side_index * slotsPerPage(binder.layout) +
+          const slot_index =
+            placement.side_index * slots_per_page(binder.layout) +
             (placement.row + row) * limit +
             placement.column +
             column;
-          binder.slots[slotIndex] = null;
+          binder.slots[slot_index] = null;
         }
       }
     }
@@ -320,92 +507,92 @@ export const binderStore = {
     persist();
   },
 
-  removeAsset(folderId: string, kind: 'proxy' | 'image', assetId: string): void {
-    const binder = this.get(folderId);
-    if (!binder || assetTouchesLockedPage(binder, kind, assetId)) return;
+  remove_asset(folder_id: string, kind: 'proxy' | 'image', asset_id: string): void {
+    const binder = this.get(folder_id);
+    if (!binder || asset_touches_locked_page(binder, kind, asset_id)) return;
     if (kind === 'proxy') {
-      binder.proxies = binder.proxies.filter((proxy) => proxy.id !== assetId);
-      binder.slots = binder.slots.map((slot) => (slot === `proxy:${assetId}` ? null : slot));
+      binder.proxies = binder.proxies.filter((proxy) => proxy.id !== asset_id);
+      binder.slots = binder.slots.map((slot) => (slot === `proxy:${asset_id}` ? null : slot));
     } else {
-      binder.images = binder.images.filter((image) => image.id !== assetId);
+      binder.images = binder.images.filter((image) => image.id !== asset_id);
       binder.image_placements = binder.image_placements.filter(
-        (placement) => placement.image_id !== assetId,
+        (placement) => placement.image_id !== asset_id,
       );
     }
     binder.updated_at = new Date().toISOString();
     persist();
   },
 
-  placeImage(
-    folderId: string,
-    imageId: string,
-    sideIndex: number,
+  place_image(
+    folder_id: string,
+    image_id: string,
+    side_index: number,
     row: number,
     column: number,
   ): void {
-    const binder = this.get(folderId);
-    const image = binder?.images.find((candidate) => candidate.id === imageId);
-    if (!binder || !image || binder.locked_pages.includes(sideIndex)) return;
-    const currentPlacement = binder.image_placements.find(
-      (candidate) => candidate.image_id === imageId,
+    const binder = this.get(folder_id);
+    const image = binder?.images.find((candidate) => candidate.id === image_id);
+    if (!binder || !image || binder.locked_pages.includes(side_index)) return;
+    const current_placement = binder.image_placements.find(
+      (candidate) => candidate.image_id === image_id,
     );
-    if (currentPlacement && binder.locked_pages.includes(currentPlacement.side_index)) return;
+    if (current_placement && binder.locked_pages.includes(current_placement.side_index)) return;
     const dimension = binder.layout === '2x2' ? 2 : 3;
-    const placement: BinderImagePlacement = {
-      image_id: imageId,
-      side_index: sideIndex,
+    const placement: Binder_Image_Placement = {
+      image_id: image_id,
+      side_index: side_index,
       row: Math.min(Math.max(0, row), dimension - image.height),
       column: Math.min(Math.max(0, column), dimension - image.width),
     };
-    const conflictsWithCard = Array.from(
+    const conflicts_with_card = Array.from(
       { length: image.width * image.height },
       (_, index) => index,
     ).some((index) => {
       if (image.card_slots.includes(index)) return false;
-      const imageRow = Math.floor(index / image.width);
-      const imageColumn = index % image.width;
-      const slotIndex =
-        sideIndex * slotsPerPage(binder.layout) +
-        (placement.row + imageRow) * dimension +
+      const image_row = Math.floor(index / image.width);
+      const image_column = index % image.width;
+      const slot_index =
+        side_index * slots_per_page(binder.layout) +
+        (placement.row + image_row) * dimension +
         placement.column +
-        imageColumn;
-      return binder.slots[slotIndex] !== null;
+        image_column;
+      return binder.slots[slot_index] !== null;
     });
-    if (conflictsWithCard) return;
+    if (conflicts_with_card) return;
     binder.image_placements = [
-      ...binder.image_placements.filter((candidate) => candidate.image_id !== imageId),
+      ...binder.image_placements.filter((candidate) => candidate.image_id !== image_id),
       placement,
     ];
     binder.updated_at = new Date().toISOString();
     persist();
   },
 
-  removeImagePlacement(folderId: string, imageId: string): void {
-    const binder = this.get(folderId);
-    const placement = binder?.image_placements.find((candidate) => candidate.image_id === imageId);
+  remove_image_placement(folder_id: string, image_id: string): void {
+    const binder = this.get(folder_id);
+    const placement = binder?.image_placements.find((candidate) => candidate.image_id === image_id);
     if (!binder || (placement && binder.locked_pages.includes(placement.side_index))) return;
     binder.image_placements = binder.image_placements.filter(
-      (placement) => placement.image_id !== imageId,
+      (placement) => placement.image_id !== image_id,
     );
     binder.updated_at = new Date().toISOString();
     persist();
   },
 
-  applyLayout(
-    folderId: string,
+  apply_layout(
+    folder_id: string,
     slots: Array<string | null>,
-    imagePlacements: BinderImagePlacement[],
+    image_placements: Binder_Image_Placement[],
   ): void {
-    const binder = this.get(folderId);
+    const binder = this.get(folder_id);
     if (!binder || slots.length !== binder.slots.length) return;
-    const sideSize = slotsPerPage(binder.layout);
+    const side_size = slots_per_page(binder.layout);
     const locked = new Set(binder.locked_pages);
     binder.slots = slots.map((slot, index) =>
-      locked.has(Math.floor(index / sideSize)) ? binder.slots[index] : slot,
+      locked.has(Math.floor(index / side_size)) ? binder.slots[index] : slot,
     );
     binder.image_placements = [
       ...binder.image_placements.filter((placement) => locked.has(placement.side_index)),
-      ...imagePlacements
+      ...image_placements
         .filter((placement) => !locked.has(placement.side_index))
         .map((placement) => ({ ...placement })),
     ];
@@ -413,61 +600,140 @@ export const binderStore = {
     persist();
   },
 
-  moveSlot(folderId: string, sourceIndex: number, targetIndex: number): void {
-    const binder = this.get(folderId);
+  move_slot(folder_id: string, source_index: number, target_index: number): void {
+    const binder = this.get(folder_id);
     if (
       !binder ||
-      sourceIndex === targetIndex ||
-      sourceIndex < 0 ||
-      sourceIndex >= binder.slots.length ||
-      targetIndex < 0 ||
-      targetIndex >= binder.slots.length ||
-      pageForSlot(binder, sourceIndex) === null ||
-      pageForSlot(binder, targetIndex) === null
+      source_index === target_index ||
+      source_index < 0 ||
+      source_index >= binder.slots.length ||
+      target_index < 0 ||
+      target_index >= binder.slots.length ||
+      page_for_slot(binder, source_index) === null ||
+      page_for_slot(binder, target_index) === null
     )
       return;
-    const source = binder.slots[sourceIndex] ?? null;
-    const target = binder.slots[targetIndex] ?? null;
-    binder.slots[sourceIndex] = target;
-    binder.slots[targetIndex] = source;
+    const source = binder.slots[source_index] ?? null;
+    const target = binder.slots[target_index] ?? null;
+    binder.slots[source_index] = target;
+    binder.slots[target_index] = source;
     binder.updated_at = new Date().toISOString();
     persist();
   },
 
-  clean(folderId: string, validQuantities: Map<string, number>): void {
-    const binder = this.get(folderId);
+  clean(folder_id: string, valid_quantities: Map<string, number>): void {
+    const binder = this.get(folder_id);
     if (!binder) return;
     const used = new Map<string, number>();
-    const usedProxies = new Map<string, number>();
+    const used_proxies = new Map<string, number>();
     let changed = false;
-    const nextSlots = binder.slots.map((entryId, slotIndex) => {
-      if (!entryId) return null;
+    const next_slots = binder.slots.map((entry_id, slot_index) => {
+      if (!entry_id) return null;
       const locked = binder.locked_pages.includes(
-        Math.floor(slotIndex / slotsPerPage(binder.layout)),
+        Math.floor(slot_index / slots_per_page(binder.layout)),
       );
-      if (entryId.startsWith('proxy:')) {
-        const proxyId = entryId.slice(6);
-        const proxy = binder.proxies.find((candidate) => candidate.id === proxyId);
-        const nextCount = (usedProxies.get(proxyId) ?? 0) + 1;
-        usedProxies.set(proxyId, nextCount);
-        if (locked) return entryId;
-        if (proxy && nextCount <= proxy.quantity) return entryId;
+      if (entry_id.startsWith('proxy:')) {
+        const proxy_id = entry_id.slice(6);
+        const proxy = binder.proxies.find((candidate) => candidate.id === proxy_id);
+        const next_count = (used_proxies.get(proxy_id) ?? 0) + 1;
+        used_proxies.set(proxy_id, next_count);
+        if (locked) return entry_id;
+        if (proxy && next_count <= proxy.quantity) return entry_id;
         changed = true;
         return null;
       }
-      const nextCount = (used.get(entryId) ?? 0) + 1;
-      used.set(entryId, nextCount);
-      if (locked) return entryId;
-      if (nextCount <= (validQuantities.get(entryId) ?? 0)) return entryId;
+      const next_count = (used.get(entry_id) ?? 0) + 1;
+      used.set(entry_id, next_count);
+      if (locked) return entry_id;
+      if (next_count <= (valid_quantities.get(entry_id) ?? 0)) return entry_id;
       changed = true;
       return null;
     });
     if (changed) {
-      binder.slots = nextSlots;
+      binder.slots = next_slots;
       binder.updated_at = new Date().toISOString();
       persist();
     }
   },
 };
 
-export const binderSlotsPerPage = slotsPerPage;
+export const binder_slots_per_page = slots_per_page;
+
+export const binder_store = {
+  ...binders_operations,
+  create(
+    ...args: Parameters<typeof binders_operations.create>
+  ): ReturnType<typeof binders_operations.create> {
+    return commit_result('binders/create', args);
+  },
+  remove(
+    ...args: Parameters<typeof binders_operations.remove>
+  ): ReturnType<typeof binders_operations.remove> {
+    return commit_result('binders/remove', args);
+  },
+  set_page_locked(
+    ...args: Parameters<typeof binders_operations.set_page_locked>
+  ): ReturnType<typeof binders_operations.set_page_locked> {
+    return commit_result('binders/set_page_locked', args);
+  },
+  reset_settings(
+    ...args: Parameters<typeof binders_operations.reset_settings>
+  ): ReturnType<typeof binders_operations.reset_settings> {
+    return commit_result('binders/reset_settings', args);
+  },
+  set_slot(
+    ...args: Parameters<typeof binders_operations.set_slot>
+  ): ReturnType<typeof binders_operations.set_slot> {
+    return commit_result('binders/set_slot', args);
+  },
+  create_proxy(
+    ...args: Parameters<typeof binders_operations.create_proxy>
+  ): ReturnType<typeof binders_operations.create_proxy> {
+    return commit_result('binders/create_proxy', args);
+  },
+  create_image(
+    ...args: Parameters<typeof binders_operations.create_image>
+  ): ReturnType<typeof binders_operations.create_image> {
+    return commit_result('binders/create_image', args);
+  },
+  update_proxy(
+    ...args: Parameters<typeof binders_operations.update_proxy>
+  ): ReturnType<typeof binders_operations.update_proxy> {
+    return commit_result('binders/update_proxy', args);
+  },
+  update_image(
+    ...args: Parameters<typeof binders_operations.update_image>
+  ): ReturnType<typeof binders_operations.update_image> {
+    return commit_result('binders/update_image', args);
+  },
+  remove_asset(
+    ...args: Parameters<typeof binders_operations.remove_asset>
+  ): ReturnType<typeof binders_operations.remove_asset> {
+    return commit_result('binders/remove_asset', args);
+  },
+  place_image(
+    ...args: Parameters<typeof binders_operations.place_image>
+  ): ReturnType<typeof binders_operations.place_image> {
+    return commit_result('binders/place_image', args);
+  },
+  remove_image_placement(
+    ...args: Parameters<typeof binders_operations.remove_image_placement>
+  ): ReturnType<typeof binders_operations.remove_image_placement> {
+    return commit_result('binders/remove_image_placement', args);
+  },
+  apply_layout(
+    ...args: Parameters<typeof binders_operations.apply_layout>
+  ): ReturnType<typeof binders_operations.apply_layout> {
+    return commit_result('binders/apply_layout', args);
+  },
+  move_slot(
+    ...args: Parameters<typeof binders_operations.move_slot>
+  ): ReturnType<typeof binders_operations.move_slot> {
+    return commit_result('binders/move_slot', args);
+  },
+  clean(
+    ...args: Parameters<typeof binders_operations.clean>
+  ): ReturnType<typeof binders_operations.clean> {
+    return commit_result('binders/clean', args);
+  },
+};

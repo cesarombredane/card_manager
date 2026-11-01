@@ -1,61 +1,62 @@
-import type { BinderImage, BinderImagePlacement, BinderLayout } from '../store/modules/binders';
+// import types
+import type { Binder_Image, Binder_Image_Placement, Binder_Layout } from '../store/modules/binders';
 
-export type MichiMode = 'date' | 'color' | 'pokedex';
+export type Michi_Mode = 'date' | 'color' | 'pokedex';
 
-export type MichiCardInput = {
-  slotValue: string | null;
+export type Michi_Card_Input = {
+  slot_value: string | null;
   name: string;
-  imageUrl: string | null;
+  image_url: string | null;
   date: string | null;
-  groupKey: string;
-  setOrder: string;
-  undatedFlexible: boolean;
-  pokedexOrder: number | null;
-  pokedexGroupKey: string | null;
-  isProxy: boolean;
+  group_key: string;
+  set_order: string;
+  undated_flexible: boolean;
+  pokedex_order: number | null;
+  pokedex_group_key: string | null;
+  is_proxy: boolean;
   quantity: number;
 };
 
-export type MichiImageInput = BinderImage & {
-  imageUrl: string;
+export type Michi_Image_Input = Binder_Image & {
+  image_url: string;
 };
 
-export type MichiOptions = {
-  mode: MichiMode;
-  lockedPages: number[];
+export type Michi_Options = {
+  mode: Michi_Mode;
+  locked_pages: number[];
   seed: number;
-  pokedexLineFocus?: boolean;
+  pokedex_line_focus?: boolean;
 };
 
-export type MichiOrganizerInput = {
-  pageCount: number;
-  layout: BinderLayout;
-  currentSlots: Array<string | null>;
-  currentImagePlacements: BinderImagePlacement[];
-  cards: MichiCardInput[];
-  images: MichiImageInput[];
-  pokedexSlots: Array<{
+export type Michi_Organizer_Input = {
+  page_count: number;
+  layout: Binder_Layout;
+  current_slots: Array<string | null>;
+  current_image_placements: Binder_Image_Placement[];
+  cards: Michi_Card_Input[];
+  images: Michi_Image_Input[];
+  pokedex_slots: Array<{
     key: string;
     order: number;
     name: string;
     generation: number;
-    lineKey?: string;
+    line_key?: string;
   }>;
-  options: MichiOptions;
+  options: Michi_Options;
 };
 
-export type MichiLayoutProposal = {
+export type Michi_Layout_Proposal = {
   slots: Array<string | null>;
-  imagePlacements: BinderImagePlacement[];
+  image_placements: Binder_Image_Placement[];
   score: number;
   warnings: string[];
   seed: number;
-  placedCards: number;
-  placedImages: number;
-  emptySlots: number;
+  placed_cards: number;
+  placed_images: number;
+  empty_slots: number;
 };
 
-type VisualFeatures = {
+type Visual_Features = {
   lab: [number, number, number];
   edges: {
     top: [number, number, number];
@@ -67,25 +68,25 @@ type VisualFeatures = {
   readable: boolean;
 };
 
-type CardInstance = MichiCardInput & {
-  features: VisualFeatures;
+type Card_Instance = Michi_Card_Input & {
+  features: Visual_Features;
   ordinal: number;
 };
 
-const neutralLab: [number, number, number] = [50, 0, 0];
-const neutralFeatures: VisualFeatures = {
-  lab: neutralLab,
-  edges: { top: neutralLab, right: neutralLab, bottom: neutralLab, left: neutralLab },
+const neutral_lab: [number, number, number] = [50, 0, 0];
+const neutral_features: Visual_Features = {
+  lab: neutral_lab,
+  edges: { top: neutral_lab, right: neutral_lab, bottom: neutral_lab, left: neutral_lab },
   hue: 0,
   readable: false,
 };
-const featureCache = new Map<string, Promise<VisualFeatures>>();
+const feature_cache = new Map<string, Promise<Visual_Features>>();
 
-const slotsPerSide = (layout: BinderLayout): number => (layout === '2x2' ? 4 : 9);
-const dimensionForLayout = (layout: BinderLayout): number => (layout === '2x2' ? 2 : 3);
+const slots_per_side = (layout: Binder_Layout): number => (layout === '2x2' ? 4 : 9);
+const dimension_for_layout = (layout: Binder_Layout): number => (layout === '2x2' ? 2 : 3);
 
-const seededRandom = (initialSeed: number): (() => number) => {
-  let state = initialSeed >>> 0 || 0x9e3779b9;
+const seeded_random = (initial_seed: number): (() => number) => {
+  let state = initial_seed >>> 0 || 0x9e3779b9;
   return () => {
     state += 0x6d2b79f5;
     let value = state;
@@ -95,15 +96,15 @@ const seededRandom = (initialSeed: number): (() => number) => {
   };
 };
 
-const srgbToLinear = (value: number): number => {
+const srgb_to_linear = (value: number): number => {
   const channel = value / 255;
   return channel <= 0.04045 ? channel / 12.92 : ((channel + 0.055) / 1.055) ** 2.4;
 };
 
-const rgbToLab = (red: number, green: number, blue: number): [number, number, number] => {
-  const r = srgbToLinear(red);
-  const g = srgbToLinear(green);
-  const b = srgbToLinear(blue);
+const rgb_to_lab = (red: number, green: number, blue: number): [number, number, number] => {
+  const r = srgb_to_linear(red);
+  const g = srgb_to_linear(green);
+  const b = srgb_to_linear(blue);
   const x = (r * 0.4124 + g * 0.3576 + b * 0.1805) / 0.95047;
   const y = r * 0.2126 + g * 0.7152 + b * 0.0722;
   const z = (r * 0.0193 + g * 0.1192 + b * 0.9505) / 1.08883;
@@ -115,7 +116,7 @@ const rgbToLab = (red: number, green: number, blue: number): [number, number, nu
   return [116 * fy - 16, 500 * (fx - fy), 200 * (fy - fz)];
 };
 
-const averagePixels = (
+const average_pixels = (
   pixels: Uint8ClampedArray,
   width: number,
   predicate: (x: number, y: number) => boolean,
@@ -136,17 +137,17 @@ const averagePixels = (
       weight += alpha;
     }
   }
-  return weight ? rgbToLab(red / weight, green / weight, blue / weight) : neutralLab;
+  return weight ? rgb_to_lab(red / weight, green / weight, blue / weight) : neutral_lab;
 };
 
-const labHue = (lab: [number, number, number]): number =>
+const lab_hue = (lab: [number, number, number]): number =>
   ((Math.atan2(lab[2], lab[1]) * 180) / Math.PI + 360) % 360;
 
-const analyzeImage = (url: string | null): Promise<VisualFeatures> => {
-  if (!url) return Promise.resolve(neutralFeatures);
-  const cached = featureCache.get(url);
+const analyze_image = (url: string | null): Promise<Visual_Features> => {
+  if (!url) return Promise.resolve(neutral_features);
+  const cached = feature_cache.get(url);
   if (cached) return cached;
-  const promise = new Promise<VisualFeatures>((resolve) => {
+  const promise = new Promise<Visual_Features>((resolve) => {
     const image = new Image();
     image.crossOrigin = 'anonymous';
     image.onload = () => {
@@ -159,34 +160,34 @@ const analyzeImage = (url: string | null): Promise<VisualFeatures> => {
         if (!context) throw new Error('Canvas is unavailable');
         context.drawImage(image, 0, 0, size, size);
         const pixels = context.getImageData(0, 0, size, size).data;
-        const lab = averagePixels(pixels, size, () => true);
-        const edgeSize = 5;
+        const lab = average_pixels(pixels, size, () => true);
+        const edge_size = 5;
         resolve({
           lab,
           edges: {
-            top: averagePixels(pixels, size, (_x, y) => y < edgeSize),
-            right: averagePixels(pixels, size, (x) => x >= size - edgeSize),
-            bottom: averagePixels(pixels, size, (_x, y) => y >= size - edgeSize),
-            left: averagePixels(pixels, size, (x) => x < edgeSize),
+            top: average_pixels(pixels, size, (_x, y) => y < edge_size),
+            right: average_pixels(pixels, size, (x) => x >= size - edge_size),
+            bottom: average_pixels(pixels, size, (_x, y) => y >= size - edge_size),
+            left: average_pixels(pixels, size, (x) => x < edge_size),
           },
-          hue: labHue(lab),
+          hue: lab_hue(lab),
           readable: true,
         });
       } catch {
-        resolve(neutralFeatures);
+        resolve(neutral_features);
       }
     };
-    image.onerror = () => resolve(neutralFeatures);
+    image.onerror = () => resolve(neutral_features);
     image.src = url;
   });
-  featureCache.set(url, promise);
+  feature_cache.set(url, promise);
   return promise;
 };
 
-const colorDistance = (left: [number, number, number], right: [number, number, number]): number =>
+const color_distance = (left: [number, number, number], right: [number, number, number]): number =>
   Math.hypot(left[0] - right[0], left[1] - right[1], left[2] - right[2]);
 
-const parseDate = (value: string | null): number => {
+const parse_date = (value: string | null): number => {
   if (!value) return Number.POSITIVE_INFINITY;
   const localized = /^(\d{2})\/(\d{2})\/(\d{4})$/.exec(value);
   const normalized = localized ? `${localized[3]}-${localized[2]}-${localized[1]}` : value;
@@ -194,15 +195,15 @@ const parseDate = (value: string | null): number => {
   return Number.isFinite(timestamp) ? timestamp : Number.POSITIVE_INFINITY;
 };
 
-const chronologicalCompare = (left: CardInstance, right: CardInstance): number => {
-  const dateDifference = parseDate(left.date) - parseDate(right.date);
-  if (Number.isFinite(dateDifference) && dateDifference !== 0) return dateDifference;
-  if (Number.isFinite(parseDate(left.date)) !== Number.isFinite(parseDate(right.date))) {
-    return Number.isFinite(parseDate(left.date)) ? -1 : 1;
+const chronological_compare = (left: Card_Instance, right: Card_Instance): number => {
+  const date_difference = parse_date(left.date) - parse_date(right.date);
+  if (Number.isFinite(date_difference) && date_difference !== 0) return date_difference;
+  if (Number.isFinite(parse_date(left.date)) !== Number.isFinite(parse_date(right.date))) {
+    return Number.isFinite(parse_date(left.date)) ? -1 : 1;
   }
   return (
-    left.groupKey.localeCompare(right.groupKey) ||
-    left.setOrder.localeCompare(right.setOrder, undefined, {
+    left.group_key.localeCompare(right.group_key) ||
+    left.set_order.localeCompare(right.set_order, undefined, {
       numeric: true,
       sensitivity: 'base',
     }) ||
@@ -211,218 +212,228 @@ const chronologicalCompare = (left: CardInstance, right: CardInstance): number =
   );
 };
 
-const partitionPreservedInstances = (
-  instances: CardInstance[],
-  preservedSlots: Array<string | null>,
-): { remaining: CardInstance[]; preserved: CardInstance[] } => {
+const partition_preserved_instances = (
+  instances: Card_Instance[],
+  preserved_slots: Array<string | null>,
+): { remaining: Card_Instance[]; preserved: Card_Instance[] } => {
   const remaining = [...instances];
-  const preserved: CardInstance[] = [];
-  for (const value of preservedSlots) {
+  const preserved: Card_Instance[] = [];
+  for (const value of preserved_slots) {
     if (!value) continue;
-    const index = remaining.findIndex((candidate) => candidate.slotValue === value);
+    const index = remaining.findIndex((candidate) => candidate.slot_value === value);
     if (index !== -1) preserved.push(...remaining.splice(index, 1));
   }
   return { remaining, preserved };
 };
 
-export const generateMichiLayout = async (
-  input: MichiOrganizerInput,
-): Promise<MichiLayoutProposal> => {
+export const generate_michi_layout = async (
+  input: Michi_Organizer_Input,
+): Promise<Michi_Layout_Proposal> => {
   const { options } = input;
-  const dimension = dimensionForLayout(input.layout);
-  const sideSize = slotsPerSide(input.layout);
-  const totalSlots = input.pageCount * 2 * sideSize;
-  const random = seededRandom(options.seed);
+  const dimension = dimension_for_layout(input.layout);
+  const side_size = slots_per_side(input.layout);
+  const total_slots = input.page_count * 2 * side_size;
+  const random = seeded_random(options.seed);
   const warnings: string[] = [];
 
-  const uniqueUrls = [
+  const unique_urls = [
     ...new Set(
       [
-        ...input.cards.map((card) => card.imageUrl),
-        ...input.images.map((image) => image.imageUrl),
+        ...input.cards.map((card) => card.image_url),
+        ...input.images.map((image) => image.image_url),
       ].filter((url): url is string => Boolean(url)),
     ),
   ];
-  const analyzed = new Map<string, VisualFeatures>();
-  await Promise.all(uniqueUrls.map(async (url) => analyzed.set(url, await analyzeImage(url))));
+  const analyzed = new Map<string, Visual_Features>();
+  await Promise.all(unique_urls.map(async (url) => analyzed.set(url, await analyze_image(url))));
 
-  const instances: CardInstance[] = input.cards.flatMap((card) =>
+  const instances: Card_Instance[] = input.cards.flatMap((card) =>
     Array.from({ length: Math.max(0, Math.floor(card.quantity)) }, (_, ordinal) => ({
       ...card,
       ordinal,
-      features: card.imageUrl ? (analyzed.get(card.imageUrl) ?? neutralFeatures) : neutralFeatures,
+      features: card.image_url
+        ? (analyzed.get(card.image_url) ?? neutral_features)
+        : neutral_features,
     })),
   );
-  const unreadableCards = instances.filter((card) => !card.features.readable).length;
-  const unreadableImages = input.images.filter(
-    (image) => !analyzed.get(image.imageUrl)?.readable,
+  const unreadable_cards = instances.filter((card) => !card.features.readable).length;
+  const unreadable_images = input.images.filter(
+    (image) => !analyzed.get(image.image_url)?.readable,
   ).length;
-  if (options.mode === 'color' && (unreadableCards || unreadableImages)) {
+  if (options.mode === 'color' && (unreadable_cards || unreadable_images)) {
     warnings.push(
-      `${unreadableCards + unreadableImages} visual asset(s) could not be color-analyzed and were treated as neutral.`,
+      `${unreadable_cards + unreadable_images} visual asset(s) could not be color-analyzed and were treated as neutral.`,
     );
   }
 
-  const lockedPages = new Set(options.lockedPages);
-  const lockedCells = new Set(
-    Array.from(lockedPages).flatMap((pageIndex) =>
-      Array.from({ length: sideSize }, (_, offset) => pageIndex * sideSize + offset),
+  const locked_pages = new Set(options.locked_pages);
+  const locked_cells = new Set(
+    Array.from(locked_pages).flatMap((page_index) =>
+      Array.from({ length: side_size }, (_, offset) => page_index * side_size + offset),
     ),
   );
-  const slots: Array<string | null> = Array(totalSlots).fill(null);
-  for (const pageIndex of lockedPages) {
-    const start = pageIndex * sideSize;
-    slots.splice(start, sideSize, ...input.currentSlots.slice(start, start + sideSize));
+  const slots: Array<string | null> = Array(total_slots).fill(null);
+  for (const page_index of locked_pages) {
+    const start = page_index * side_size;
+    slots.splice(start, side_size, ...input.current_slots.slice(start, start + side_size));
   }
-  const preservedPartition = partitionPreservedInstances(
+  const preserved_partition = partition_preserved_instances(
     instances,
-    slots.filter((_slot, index) => lockedPages.has(Math.floor(index / sideSize))),
+    slots.filter((_slot, index) => locked_pages.has(Math.floor(index / side_size))),
   );
-  let remainingCards = preservedPartition.remaining;
-  const insertAtGroupBoundaries = (
-    orderedCards: CardInstance[],
-    flexibleCards: CardInstance[],
-    groupKey: (card: CardInstance) => string,
-  ): CardInstance[] => {
-    const groupBoundaries = [
+  let remaining_cards = preserved_partition.remaining;
+  const insert_at_group_boundaries = (
+    ordered_cards: Card_Instance[],
+    flexible_cards: Card_Instance[],
+    group_key: (card: Card_Instance) => string,
+  ): Card_Instance[] => {
+    const group_boundaries = [
       0,
-      ...orderedCards.flatMap((card, index) =>
-        index > 0 && groupKey(orderedCards[index - 1]) !== groupKey(card) ? [index] : [],
+      ...ordered_cards.flatMap((card, index) =>
+        index > 0 && group_key(ordered_cards[index - 1]) !== group_key(card) ? [index] : [],
       ),
-      orderedCards.length,
+      ordered_cards.length,
     ];
-    const cardsAtBoundary = new Map<number, CardInstance[]>();
-    for (const card of flexibleCards) {
-      const boundary = groupBoundaries[Math.floor(random() * groupBoundaries.length)];
-      cardsAtBoundary.set(boundary, [...(cardsAtBoundary.get(boundary) ?? []), card]);
+    const cards_at_boundary = new Map<number, Card_Instance[]>();
+    for (const card of flexible_cards) {
+      const boundary = group_boundaries[Math.floor(random() * group_boundaries.length)];
+      cards_at_boundary.set(boundary, [...(cards_at_boundary.get(boundary) ?? []), card]);
     }
-    const result: CardInstance[] = [];
-    for (let index = 0; index <= orderedCards.length; index += 1) {
-      result.push(...(cardsAtBoundary.get(index) ?? []));
-      if (index < orderedCards.length) result.push(orderedCards[index]);
+    const result: Card_Instance[] = [];
+    for (let index = 0; index <= ordered_cards.length; index += 1) {
+      result.push(...(cards_at_boundary.get(index) ?? []));
+      if (index < ordered_cards.length) result.push(ordered_cards[index]);
     }
     return result;
   };
   if (options.mode === 'date') {
-    const flexibleProxies = remainingCards.filter((card) => card.undatedFlexible);
-    const datedCards = remainingCards
-      .filter((card) => !card.undatedFlexible)
-      .sort(chronologicalCompare);
-    remainingCards = insertAtGroupBoundaries(datedCards, flexibleProxies, (card) => card.groupKey);
+    const flexible_proxies = remaining_cards.filter((card) => card.undated_flexible);
+    const dated_cards = remaining_cards
+      .filter((card) => !card.undated_flexible)
+      .sort(chronological_compare);
+    remaining_cards = insert_at_group_boundaries(
+      dated_cards,
+      flexible_proxies,
+      (card) => card.group_key,
+    );
   } else if (options.mode === 'pokedex') {
-    const proxies = remainingCards.filter((card) => card.isProxy);
-    const preservedPokedexGroups = new Set(
-      preservedPartition.preserved.flatMap((card) =>
-        card.pokedexGroupKey ? [card.pokedexGroupKey] : [],
+    const proxies = remaining_cards.filter((card) => card.is_proxy);
+    const preserved_pokedex_groups = new Set(
+      preserved_partition.preserved.flatMap((card) =>
+        card.pokedex_group_key ? [card.pokedex_group_key] : [],
       ),
     );
-    const cardsByGroup = new Map<string, CardInstance[]>();
-    const ungroupedCards: CardInstance[] = [];
-    for (const card of remainingCards.filter((candidate) => !candidate.isProxy)) {
-      if (!card.pokedexGroupKey) {
-        ungroupedCards.push(card);
+    const cards_by_group = new Map<string, Card_Instance[]>();
+    const ungrouped_cards: Card_Instance[] = [];
+    for (const card of remaining_cards.filter((candidate) => !candidate.is_proxy)) {
+      if (!card.pokedex_group_key) {
+        ungrouped_cards.push(card);
         continue;
       }
-      cardsByGroup.set(card.pokedexGroupKey, [
-        ...(cardsByGroup.get(card.pokedexGroupKey) ?? []),
+      cards_by_group.set(card.pokedex_group_key, [
+        ...(cards_by_group.get(card.pokedex_group_key) ?? []),
         card,
       ]);
     }
-    const orderedCards: CardInstance[] = [];
-    let previousLineKey: string | undefined;
-    let previousGeneration: number | undefined;
-    const focusedLineSizes = new Map<string, number>();
-    if (options.pokedexLineFocus) {
-      for (const slot of input.pokedexSlots) {
-        if (!slot.lineKey) continue;
-        if (!cardsByGroup.get(slot.key)?.length && preservedPokedexGroups.has(slot.key)) continue;
-        focusedLineSizes.set(
-          slot.lineKey,
-          (focusedLineSizes.get(slot.lineKey) ?? 0) + (cardsByGroup.get(slot.key)?.length || 1),
+    const ordered_cards: Card_Instance[] = [];
+    let previous_line_key: string | undefined;
+    let previous_generation: number | undefined;
+    const focused_line_sizes = new Map<string, number>();
+    if (options.pokedex_line_focus) {
+      for (const slot of input.pokedex_slots) {
+        if (!slot.line_key) continue;
+        if (!cards_by_group.get(slot.key)?.length && preserved_pokedex_groups.has(slot.key))
+          continue;
+        focused_line_sizes.set(
+          slot.line_key,
+          (focused_line_sizes.get(slot.line_key) ?? 0) +
+            (cards_by_group.get(slot.key)?.length || 1),
         );
       }
     }
-    for (const slot of input.pokedexSlots) {
-      const cards = cardsByGroup.get(slot.key);
-      if (!cards?.length && preservedPokedexGroups.has(slot.key)) continue;
-      if (previousGeneration !== undefined && slot.generation !== previousGeneration) {
-        while (orderedCards.length % sideSize !== 0) {
-          orderedCards.push({
-            slotValue: null,
+    for (const slot of input.pokedex_slots) {
+      const cards = cards_by_group.get(slot.key);
+      if (!cards?.length && preserved_pokedex_groups.has(slot.key)) continue;
+      if (previous_generation !== undefined && slot.generation !== previous_generation) {
+        while (ordered_cards.length % side_size !== 0) {
+          ordered_cards.push({
+            slot_value: null,
             name: '',
-            imageUrl: null,
+            image_url: null,
             date: null,
-            groupKey: `generation-padding:${previousGeneration}`,
-            setOrder: '',
-            undatedFlexible: false,
-            pokedexOrder: slot.order,
-            pokedexGroupKey: `generation-padding:${previousGeneration}`,
-            isProxy: false,
+            group_key: `generation-padding:${previous_generation}`,
+            set_order: '',
+            undated_flexible: false,
+            pokedex_order: slot.order,
+            pokedex_group_key: `generation-padding:${previous_generation}`,
+            is_proxy: false,
             quantity: 1,
-            features: neutralFeatures,
+            features: neutral_features,
             ordinal: 0,
           });
         }
       }
-      if (options.pokedexLineFocus && previousLineKey && slot.lineKey !== previousLineKey) {
-        const usedColumns = orderedCards.length % dimension;
-        const nextLineSize = slot.lineKey ? (focusedLineSizes.get(slot.lineKey) ?? 1) : 1;
+      if (options.pokedex_line_focus && previous_line_key && slot.line_key !== previous_line_key) {
+        const used_columns = ordered_cards.length % dimension;
+        const next_line_size = slot.line_key ? (focused_line_sizes.get(slot.line_key) ?? 1) : 1;
         while (
-          usedColumns > 0 &&
-          nextLineSize > dimension - usedColumns &&
-          orderedCards.length % dimension !== 0
+          used_columns > 0 &&
+          next_line_size > dimension - used_columns &&
+          ordered_cards.length % dimension !== 0
         ) {
-          orderedCards.push({
-            slotValue: null,
+          ordered_cards.push({
+            slot_value: null,
             name: '',
-            imageUrl: null,
+            image_url: null,
             date: null,
-            groupKey: `line-padding:${previousLineKey}`,
-            setOrder: '',
-            undatedFlexible: false,
-            pokedexOrder: slot.order,
-            pokedexGroupKey: `line-padding:${previousLineKey}`,
-            isProxy: false,
+            group_key: `line-padding:${previous_line_key}`,
+            set_order: '',
+            undated_flexible: false,
+            pokedex_order: slot.order,
+            pokedex_group_key: `line-padding:${previous_line_key}`,
+            is_proxy: false,
             quantity: 1,
-            features: neutralFeatures,
+            features: neutral_features,
             ordinal: 0,
           });
         }
       }
-      orderedCards.push(
+      ordered_cards.push(
         ...(cards?.length
-          ? cards.sort(chronologicalCompare)
+          ? cards.sort(chronological_compare)
           : [
               {
-                slotValue: null,
+                slot_value: null,
                 name: slot.name,
-                imageUrl: null,
+                image_url: null,
                 date: null,
-                groupKey: slot.key,
-                setOrder: '',
-                undatedFlexible: false,
-                pokedexOrder: slot.order,
-                pokedexGroupKey: slot.key,
-                isProxy: false,
+                group_key: slot.key,
+                set_order: '',
+                undated_flexible: false,
+                pokedex_order: slot.order,
+                pokedex_group_key: slot.key,
+                is_proxy: false,
                 quantity: 1,
-                features: neutralFeatures,
+                features: neutral_features,
                 ordinal: 0,
               },
             ]),
       );
-      previousLineKey = slot.lineKey;
-      previousGeneration = slot.generation;
+      previous_line_key = slot.line_key;
+      previous_generation = slot.generation;
     }
-    const oversizedLines = [...focusedLineSizes.values()].filter((size) => size > dimension).length;
-    if (oversizedLines) {
+    const oversized_lines = [...focused_line_sizes.values()].filter(
+      (size) => size > dimension,
+    ).length;
+    if (oversized_lines) {
       warnings.push(
-        `${oversizedLines} evolution line(s) contain more than ${dimension} cards and continue on the next row.`,
+        `${oversized_lines} evolution line(s) contain more than ${dimension} cards and continue on the next row.`,
       );
     }
-    orderedCards.push(...ungroupedCards.sort(chronologicalCompare));
-    remainingCards = [...orderedCards, ...proxies];
+    ordered_cards.push(...ungrouped_cards.sort(chronological_compare));
+    remaining_cards = [...ordered_cards, ...proxies];
   } else {
-    remainingCards.sort(
+    remaining_cards.sort(
       (left, right) =>
         left.features.hue - right.features.hue ||
         left.features.lab[0] - right.features.lab[0] ||
@@ -430,121 +441,128 @@ export const generateMichiLayout = async (
         left.ordinal - right.ordinal,
     );
   }
-  const firstOrganizedSide = 0;
-  const pageColorAnchors = new Map<number, [number, number, number]>();
-  for (let offset = 0; offset < remainingCards.length; offset += sideSize) {
-    const pageCards = remainingCards.slice(offset, offset + sideSize);
-    const divisor = Math.max(1, pageCards.length);
-    pageColorAnchors.set(firstOrganizedSide + Math.floor(offset / sideSize), [
-      pageCards.reduce((total, card) => total + card.features.lab[0], 0) / divisor,
-      pageCards.reduce((total, card) => total + card.features.lab[1], 0) / divisor,
-      pageCards.reduce((total, card) => total + card.features.lab[2], 0) / divisor,
+  const first_organized_side = 0;
+  const page_color_anchors = new Map<number, [number, number, number]>();
+  for (let offset = 0; offset < remaining_cards.length; offset += side_size) {
+    const page_cards = remaining_cards.slice(offset, offset + side_size);
+    const divisor = Math.max(1, page_cards.length);
+    page_color_anchors.set(first_organized_side + Math.floor(offset / side_size), [
+      page_cards.reduce((total, card) => total + card.features.lab[0], 0) / divisor,
+      page_cards.reduce((total, card) => total + card.features.lab[1], 0) / divisor,
+      page_cards.reduce((total, card) => total + card.features.lab[2], 0) / divisor,
     ]);
   }
 
-  const placements: BinderImagePlacement[] = [];
-  const occupiedImageCells = new Set<number>();
-  const reservedCells = new Set<number>();
-  const imageAtCell = new Map<number, MichiImageInput>();
-  const preservedImageIds = new Set<string>();
+  const placements: Binder_Image_Placement[] = [];
+  const occupied_image_cells = new Set<number>();
+  const reserved_cells = new Set<number>();
+  const image_at_cell = new Map<number, Michi_Image_Input>();
+  const preserved_image_ids = new Set<string>();
 
-  const registerPlacement = (image: MichiImageInput, placement: BinderImagePlacement): void => {
+  const register_placement = (
+    image: Michi_Image_Input,
+    placement: Binder_Image_Placement,
+  ): void => {
     placements.push(placement);
-    preservedImageIds.add(image.id);
+    preserved_image_ids.add(image.id);
     for (let row = 0; row < image.height; row += 1) {
       for (let column = 0; column < image.width; column += 1) {
-        const localIndex = row * image.width + column;
-        const slotIndex =
-          placement.side_index * sideSize +
+        const local_index = row * image.width + column;
+        const slot_index =
+          placement.side_index * side_size +
           (placement.row + row) * dimension +
           placement.column +
           column;
-        occupiedImageCells.add(slotIndex);
-        imageAtCell.set(slotIndex, image);
-        if (!image.card_slots.includes(localIndex)) reservedCells.add(slotIndex);
+        occupied_image_cells.add(slot_index);
+        image_at_cell.set(slot_index, image);
+        if (!image.card_slots.includes(local_index)) reserved_cells.add(slot_index);
       }
     }
   };
 
-  const fixedPlacements = input.currentImagePlacements.filter((placement) =>
-    lockedPages.has(placement.side_index),
+  const fixed_placements = input.current_image_placements.filter((placement) =>
+    locked_pages.has(placement.side_index),
   );
-  for (const placement of fixedPlacements) {
+  for (const placement of fixed_placements) {
     const image = input.images.find((candidate) => candidate.id === placement.image_id);
-    if (image) registerPlacement(image, placement);
+    if (image) register_placement(image, placement);
   }
 
-  const imagesToPlace = input.images
-    .filter((image) => !preservedImageIds.has(image.id))
+  const images_to_place = input.images
+    .filter((image) => !preserved_image_ids.has(image.id))
     .sort((left, right) => {
-      const areaDifference = right.width * right.height - left.width * left.height;
-      if (areaDifference) return areaDifference;
+      const area_difference = right.width * right.height - left.width * left.height;
+      if (area_difference) return area_difference;
       if (options.mode === 'color') {
-        return (analyzed.get(left.imageUrl)?.hue ?? 0) - (analyzed.get(right.imageUrl)?.hue ?? 0);
+        return (analyzed.get(left.image_url)?.hue ?? 0) - (analyzed.get(right.image_url)?.hue ?? 0);
       }
       return random() - 0.5;
     });
-  const totalReservedImageCells = input.images.reduce(
+  const total_reserved_image_cells = input.images.reduce(
     (total, image) => total + image.width * image.height - image.card_slots.length,
     0,
   );
-  const availableOrganizedSides = input.pageCount * 2 - lockedPages.size;
-  const estimatedActiveSideCount = Math.min(
-    availableOrganizedSides,
-    Math.max(1, Math.ceil((remainingCards.length + totalReservedImageCells) / sideSize)),
+  const available_organized_sides = input.page_count * 2 - locked_pages.size;
+  const estimated_active_side_count = Math.min(
+    available_organized_sides,
+    Math.max(1, Math.ceil((remaining_cards.length + total_reserved_image_cells) / side_size)),
   );
 
-  for (const [imageIndex, image] of imagesToPlace.entries()) {
-    const desiredSideOffset =
-      imagesToPlace.length <= 1
-        ? Math.floor((estimatedActiveSideCount - 1) / 2)
-        : Math.round((imageIndex * (estimatedActiveSideCount - 1)) / (imagesToPlace.length - 1));
-    const desiredSide = firstOrganizedSide + desiredSideOffset;
+  for (const [image_index, image] of images_to_place.entries()) {
+    const desired_side_offset =
+      images_to_place.length <= 1
+        ? Math.floor((estimated_active_side_count - 1) / 2)
+        : Math.round(
+            (image_index * (estimated_active_side_count - 1)) / (images_to_place.length - 1),
+          );
+    const desired_side = first_organized_side + desired_side_offset;
     const candidates: Array<{ side: number; row: number; column: number; score: number }> = [];
-    for (let side = 0; side < input.pageCount * 2; side += 1) {
-      if (lockedPages.has(side)) continue;
+    for (let side = 0; side < input.page_count * 2; side += 1) {
+      if (locked_pages.has(side)) continue;
       for (let row = 0; row <= dimension - image.height; row += 1) {
         for (let column = 0; column <= dimension - image.width; column += 1) {
           const cells = Array.from({ length: image.width * image.height }, (_, index) => {
-            const localRow = Math.floor(index / image.width);
-            const localColumn = index % image.width;
-            return side * sideSize + (row + localRow) * dimension + column + localColumn;
+            const local_row = Math.floor(index / image.width);
+            const local_column = index % image.width;
+            return side * side_size + (row + local_row) * dimension + column + local_column;
           });
-          if (cells.some((cell) => occupiedImageCells.has(cell))) continue;
-          const newReservedCells = cells.filter(
+          if (cells.some((cell) => occupied_image_cells.has(cell))) continue;
+          const new_reserved_cells = cells.filter(
             (_cell, index) => !image.card_slots.includes(index),
           );
-          const totalSides = input.pageCount * 2;
-          const spreadStart = side === 0 ? null : side % 2 === 1 ? side : side - 1;
-          const isFacingSpread = spreadStart !== null && spreadStart + 1 < totalSides - 1;
-          if (isFacingSpread) {
-            const reservedOnSpread = [...reservedCells].filter((cell) => {
-              const cellSide = Math.floor(cell / sideSize);
-              return cellSide === spreadStart || cellSide === spreadStart + 1;
+          const total_sides = input.page_count * 2;
+          const spread_start = side === 0 ? null : side % 2 === 1 ? side : side - 1;
+          const is_facing_spread = spread_start !== null && spread_start + 1 < total_sides - 1;
+          if (is_facing_spread) {
+            const reserved_on_spread = [...reserved_cells].filter((cell) => {
+              const cell_side = Math.floor(cell / side_size);
+              return cell_side === spread_start || cell_side === spread_start + 1;
             }).length;
-            if (reservedOnSpread + newReservedCells.length >= sideSize * 2) continue;
+            if (reserved_on_spread + new_reserved_cells.length >= side_size * 2) continue;
           }
-          const centerDistance =
+          const center_distance =
             Math.abs(column + image.width / 2 - dimension / 2) +
             Math.abs(row + image.height / 2 - dimension / 2);
-          const existingImageCells = [...occupiedImageCells].filter(
-            (cell) => Math.floor(cell / sideSize) === side,
+          const existing_image_cells = [...occupied_image_cells].filter(
+            (cell) => Math.floor(cell / side_size) === side,
           ).length;
-          const imageFeatures = analyzed.get(image.imageUrl) ?? neutralFeatures;
-          const pageAnchor = pageColorAnchors.get(side);
-          const pageColorDistance = pageAnchor ? colorDistance(imageFeatures.lab, pageAnchor) : 90;
-          const existingIllustrationPenalty = existingImageCells
-            ? (input.layout === '2x2' ? 75 : 50) + existingImageCells * 4
+          const image_features = analyzed.get(image.image_url) ?? neutral_features;
+          const page_anchor = page_color_anchors.get(side);
+          const page_color_distance = page_anchor
+            ? color_distance(image_features.lab, page_anchor)
+            : 90;
+          const existing_illustration_penalty = existing_image_cells
+            ? (input.layout === '2x2' ? 75 : 50) + existing_image_cells * 4
             : 0;
           candidates.push({
             side,
             row,
             column,
             score:
-              Math.abs(side - desiredSide) * 90 +
-              existingIllustrationPenalty +
-              pageColorDistance * 0.35 +
-              centerDistance * 2 +
+              Math.abs(side - desired_side) * 90 +
+              existing_illustration_penalty +
+              page_color_distance * 0.35 +
+              center_distance * 2 +
               random() * 8,
           });
         }
@@ -555,7 +573,7 @@ export const generateMichiLayout = async (
       throw new Error(
         `No valid page position could be found for “${image.name}” (${image.width}×${image.height}).`,
       );
-    registerPlacement(image, {
+    register_placement(image, {
       image_id: image.id,
       side_index: selected.side,
       row: selected.row,
@@ -563,125 +581,126 @@ export const generateMichiLayout = async (
     });
   }
 
-  for (let spreadStart = 1; spreadStart + 1 < input.pageCount * 2 - 1; spreadStart += 2) {
-    const reservedOnSpread = [...reservedCells].filter((cell) => {
-      const side = Math.floor(cell / sideSize);
-      return side === spreadStart || side === spreadStart + 1;
+  for (let spread_start = 1; spread_start + 1 < input.page_count * 2 - 1; spread_start += 2) {
+    const reserved_on_spread = [...reserved_cells].filter((cell) => {
+      const side = Math.floor(cell / side_size);
+      return side === spread_start || side === spread_start + 1;
     }).length;
-    if (reservedOnSpread >= sideSize * 2) {
+    if (reserved_on_spread >= side_size * 2) {
       throw new Error(
-        `Pages ${spreadStart + 1}–${spreadStart + 2} would contain only illustrations. ` +
+        `Pages ${spread_start + 1}–${spread_start + 2} would contain only illustrations. ` +
           'Every facing-page spread must contain at least one card.',
       );
     }
   }
 
-  const availableSlotCount = slots.reduce(
+  const available_slot_count = slots.reduce(
     (count, value, index) =>
-      count + (!value && !reservedCells.has(index) && !lockedCells.has(index) ? 1 : 0),
+      count + (!value && !reserved_cells.has(index) && !locked_cells.has(index) ? 1 : 0),
     0,
   );
-  if (remainingCards.length > availableSlotCount) {
-    const missing = remainingCards.length - availableSlotCount;
+  if (remaining_cards.length > available_slot_count) {
+    const missing = remaining_cards.length - available_slot_count;
     throw new Error(
       `The binder needs ${missing} more usable slot${missing === 1 ? '' : 's'} to fit every card and illustration.`,
     );
   }
-  const placedFeatures = new Map<number, VisualFeatures>();
-  const featureForPreserved = new Map(instances.map((card) => [card.slotValue, card.features]));
+  const placed_features = new Map<number, Visual_Features>();
+  const feature_for_preserved = new Map(instances.map((card) => [card.slot_value, card.features]));
   slots.forEach((value, index) => {
-    if (value) placedFeatures.set(index, featureForPreserved.get(value) ?? neutralFeatures);
+    if (value) placed_features.set(index, feature_for_preserved.get(value) ?? neutral_features);
   });
 
-  const placeCard = (slotIndex: number, card: CardInstance): void => {
-    slots[slotIndex] = card.slotValue;
-    placedFeatures.set(slotIndex, card.features);
+  const place_card = (slot_index: number, card: Card_Instance): void => {
+    slots[slot_index] = card.slot_value;
+    placed_features.set(slot_index, card.features);
   };
-  const usableIndices = (): number[] =>
-    Array.from({ length: totalSlots }, (_, index) => index).filter(
-      (index) => !slots[index] && !reservedCells.has(index) && !lockedCells.has(index),
+  const usable_indices = (): number[] =>
+    Array.from({ length: total_slots }, (_, index) => index).filter(
+      (index) => !slots[index] && !reserved_cells.has(index) && !locked_cells.has(index),
     );
 
   if (options.mode === 'date' || options.mode === 'pokedex') {
-    const available = usableIndices();
-    remainingCards.forEach((card, index) => {
-      const slotIndex = available[index];
-      if (slotIndex === undefined) {
+    const available = usable_indices();
+    remaining_cards.forEach((card, index) => {
+      const slot_index = available[index];
+      if (slot_index === undefined) {
         throw new Error(
           `No preview slot was available for “${card.name}”. Increase the binder capacity.`,
         );
       }
-      placeCard(slotIndex, card);
+      place_card(slot_index, card);
     });
-    remainingCards = [];
+    remaining_cards = [];
   } else {
-    for (let slotIndex = 0; slotIndex < totalSlots && remainingCards.length; slotIndex += 1) {
-      if (slots[slotIndex] || reservedCells.has(slotIndex) || lockedCells.has(slotIndex)) continue;
-      const row = Math.floor((slotIndex % sideSize) / dimension);
-      const column = slotIndex % dimension;
-      const neighborFeatures = [
-        column > 0 ? placedFeatures.get(slotIndex - 1) : undefined,
-        row > 0 ? placedFeatures.get(slotIndex - dimension) : undefined,
-      ].filter((features): features is VisualFeatures => Boolean(features));
-      const background = imageAtCell.get(slotIndex);
-      const backgroundFeatures = background ? analyzed.get(background.imageUrl) : undefined;
-      const windowSize = remainingCards.length;
-      let bestIndex = 0;
-      let bestScore = Number.POSITIVE_INFINITY;
-      for (let index = 0; index < windowSize; index += 1) {
-        const candidate = remainingCards[index];
-        const adjacency = neighborFeatures.reduce(
-          (total, neighbor) => total + colorDistance(candidate.features.lab, neighbor.lab),
+    for (let slot_index = 0; slot_index < total_slots && remaining_cards.length; slot_index += 1) {
+      if (slots[slot_index] || reserved_cells.has(slot_index) || locked_cells.has(slot_index))
+        continue;
+      const row = Math.floor((slot_index % side_size) / dimension);
+      const column = slot_index % dimension;
+      const neighbor_features = [
+        column > 0 ? placed_features.get(slot_index - 1) : undefined,
+        row > 0 ? placed_features.get(slot_index - dimension) : undefined,
+      ].filter((features): features is Visual_Features => Boolean(features));
+      const background = image_at_cell.get(slot_index);
+      const background_features = background ? analyzed.get(background.image_url) : undefined;
+      const window_size = remaining_cards.length;
+      let best_index = 0;
+      let best_score = Number.POSITIVE_INFINITY;
+      for (let index = 0; index < window_size; index += 1) {
+        const candidate = remaining_cards[index];
+        const adjacency = neighbor_features.reduce(
+          (total, neighbor) => total + color_distance(candidate.features.lab, neighbor.lab),
           0,
         );
-        const backgroundDistance = backgroundFeatures
-          ? colorDistance(candidate.features.lab, backgroundFeatures.lab)
+        const background_distance = background_features
+          ? color_distance(candidate.features.lab, background_features.lab)
           : 0;
-        const score = adjacency + backgroundDistance * 0.7 + random() * 0.05;
-        if (score < bestScore) {
-          bestIndex = index;
-          bestScore = score;
+        const score = adjacency + background_distance * 0.7 + random() * 0.05;
+        if (score < best_score) {
+          best_index = index;
+          best_score = score;
         }
       }
-      const [selected] = remainingCards.splice(bestIndex, 1);
-      placeCard(slotIndex, selected);
+      const [selected] = remaining_cards.splice(best_index, 1);
+      place_card(slot_index, selected);
     }
   }
 
-  if (remainingCards.length) throw new Error('The layout could not place every card.');
+  if (remaining_cards.length) throw new Error('The layout could not place every card.');
 
-  let totalDistance = 0;
+  let total_distance = 0;
   let comparisons = 0;
-  for (let index = 0; index < totalSlots; index += 1) {
-    const current = placedFeatures.get(index);
+  for (let index = 0; index < total_slots; index += 1) {
+    const current = placed_features.get(index);
     if (!current) continue;
-    const localIndex = index % sideSize;
-    if (localIndex % dimension < dimension - 1) {
-      const right = placedFeatures.get(index + 1);
+    const local_index = index % side_size;
+    if (local_index % dimension < dimension - 1) {
+      const right = placed_features.get(index + 1);
       if (right) {
-        totalDistance += colorDistance(current.edges.right, right.edges.left);
+        total_distance += color_distance(current.edges.right, right.edges.left);
         comparisons += 1;
       }
     }
-    if (Math.floor(localIndex / dimension) < dimension - 1) {
-      const bottom = placedFeatures.get(index + dimension);
+    if (Math.floor(local_index / dimension) < dimension - 1) {
+      const bottom = placed_features.get(index + dimension);
       if (bottom) {
-        totalDistance += colorDistance(current.edges.bottom, bottom.edges.top);
+        total_distance += color_distance(current.edges.bottom, bottom.edges.top);
         comparisons += 1;
       }
     }
   }
-  const averageDistance = comparisons ? totalDistance / comparisons : 0;
-  const score = Math.max(0, Math.round(1000 - averageDistance * 10));
+  const average_distance = comparisons ? total_distance / comparisons : 0;
+  const score = Math.max(0, Math.round(1000 - average_distance * 10));
 
   return {
     slots,
-    imagePlacements: placements,
+    image_placements: placements,
     score,
     warnings,
     seed: options.seed,
-    placedCards: slots.filter(Boolean).length,
-    placedImages: placements.length,
-    emptySlots: slots.filter((value, index) => !value && !reservedCells.has(index)).length,
+    placed_cards: slots.filter(Boolean).length,
+    placed_images: placements.length,
+    empty_slots: slots.filter((value, index) => !value && !reserved_cells.has(index)).length,
   };
 };

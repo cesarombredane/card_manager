@@ -22,7 +22,8 @@
     "format:check": "prettier --check .",
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:e2e": "playwright test --config frontend/playwright.config.ts"
+    "test:e2e": "playwright test --config frontend/playwright.config.ts",
+    "build:fixture": "node --import tsx scripts/fixture_build.ts"
   },
   "devDependencies": {
     "tsx": "^4.20.0",

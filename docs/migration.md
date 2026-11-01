@@ -10,9 +10,8 @@ local persistence API, URLs, stored identifiers and file formats.
 Stop development/preview servers before moving an installation so that an old
 process cannot save to `app/` after the migration. Move the entire `app/` folder
 to `frontend/`, including ignored data and images. A Git checkout alone does not
-move ignored files. Keep the old installation or an independent backup until
-checksums and application behavior have been verified. Do not regenerate the
-catalog to migrate personal data.
+move ignored files. Preserve the original files while checking the moved
+installation. Do not regenerate the catalog to migrate personal data.
 
 Personal paths become `frontend/data/collection.json`, `binders.json`,
 `manual-images.json` and `frontend/public/images/manual/`. Their contents and
@@ -26,19 +25,17 @@ recovering an interrupted publication from `data.previous` when `data` is absent
 
 ## Verification and rollback
 
-Before migrating, save a SHA-256 inventory of catalog files, all images, the
-source cache and reports, and copy the complete installation outside the checkout.
-After the move, compare original `app/` paths with `frontend/` paths. Check file
-counts and content hashes, including ignored files. Never include personal data
-or a backup archive in a commit.
+For code-only alignment of an installation already using `frontend/`, leave all
+existing catalog, personal JSON, image indexes and artwork in place. Do not make
+an installation backup or run any update, reset, download, price-refresh or catalog
+generation command as part of this migration. Verify with synthetic fixtures and
+temporary storage, using the commands in [contributing](contributing.md).
 
-The migration's full catalog comparison used the same local TCGdex snapshot with
-prices disabled in both implementations: all 418 JSON files matched after removing
-only the coverage generation timestamp. Synthetic Python-generated fixtures in
-`tests/fixtures/expected_catalog.json` make this comparison repeatable in CI.
-Network, retries, cache fallback and reset behavior have separate fixture tests.
-This comparison does not claim a live full image re-download was performed.
+The TypeScript updater is protected by the Python-generated synthetic fixture in
+`tests/fixtures/expected_catalog.json`, plus focused network, retry, cache and reset
+fixtures. These tests do not claim a live update or full artwork download was run.
 
-For rollback, stop the server, retain a copy of any newer personal data, and restore
-the pre-migration code and folders from the backup. Restore data and code together;
-never run the old server against a partially moved installation.
+For a code-only rollback, stop the local server and restore the previous code while
+retaining the existing data paths and files. If moving an older `app/` installation,
+follow the path instructions above and retain its original files. Any installation
+backup or data-moving operation needs its own explicit authorization.

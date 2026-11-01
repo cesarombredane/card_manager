@@ -1,9 +1,10 @@
-import type { LocalizedText } from '../models/catalog';
+// import types
+import type { Localized_Text } from '../models/catalog';
 
 // Returns a localized value with stable fallbacks for incomplete translations.
-export const localizedValue = (value: LocalizedText, languageId: string): string | null => {
+export const localized_value = (value: Localized_Text, language_id: string): string | null => {
   return (
-    value[languageId] ??
+    value[language_id] ??
     value.en ??
     Object.values(value).find((item): item is string => Boolean(item)) ??
     null

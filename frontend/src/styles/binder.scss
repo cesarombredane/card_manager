@@ -1,0 +1,279 @@
+.binder-spread {
+  display: grid;
+  width: min(100%, calc((100dvh - 190px) * 16 / 11));
+  margin-inline: auto;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  align-items: end;
+  padding: 12px;
+  border-radius: 10px;
+  background: var(--app_background);
+  box-shadow: inset 0 0 18px rgb(0 0 0 / 70%);
+}
+
+.binder-leaf {
+  min-width: 0;
+}
+
+.binder-page {
+  display: grid;
+  gap: 7px;
+  border: 7px solid var(--app_border);
+  background: var(--app_surface);
+  box-shadow: inset 0 0 0 2px rgb(255 255 255 / 6%);
+}
+
+.binder-page--empty {
+  display: flex;
+  aspect-ratio: 8 / 11;
+  border-style: dashed;
+  background: var(--app_background);
+}
+
+.binder-page--locked {
+  border-color: var(--q-warning);
+  box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--q-warning) 22%, transparent);
+}
+
+.binder-slot {
+  z-index: 2;
+  aspect-ratio: 8 / 11;
+  overflow: hidden;
+  border: 2px dashed var(--app_text_muted);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--app_surface) 32%, transparent);
+}
+
+.binder-slot--filled {
+  border-style: solid;
+  border-color: var(--app_border);
+  background: var(--app_surface);
+}
+
+.binder-slot--decorated {
+  border-color: transparent;
+  background: transparent;
+}
+
+.binder-slot--decorated:hover {
+  border-color: color-mix(in srgb, var(--q-primary) 55%, transparent);
+}
+
+.binder-decoration {
+  z-index: 1;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  border-radius: 6px;
+  pointer-events: none;
+}
+
+.binder-decoration img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.binder-slot img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  cursor: grab;
+}
+
+.wanted-image {
+  filter: grayscale(1);
+}
+
+.binder-preview-collage {
+  display: flex;
+  width: 44px;
+  height: 60px;
+  overflow: hidden;
+}
+
+.binder-preview-collage > div {
+  position: relative;
+  flex: 1 1 0;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.binder-preview-collage img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.slot-status-overlay {
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  background: color-mix(in srgb, var(--q-negative) 62%, transparent);
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.slot-remove {
+  opacity: 0;
+  transition: opacity 120ms ease;
+}
+
+.slot-got-it {
+  right: auto;
+  bottom: 8px;
+  left: 50%;
+  z-index: 3;
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: opacity 120ms ease;
+}
+
+.binder-slot:hover .slot-remove,
+.binder-slot:focus-within .slot-remove {
+  opacity: 1;
+}
+
+.binder-slot:hover .slot-got-it,
+.binder-slot:focus-within .slot-got-it {
+  opacity: 1;
+}
+
+.cursor-grab {
+  cursor: grab;
+}
+
+.crop-frame {
+  position: relative;
+  max-height: 360px;
+  margin-inline: auto;
+  overflow: hidden;
+  border: 2px solid var(--q-primary);
+  border-radius: 4px;
+  background: var(--app_surface);
+}
+
+.crop-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.crop-slot-grid {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  gap: 3px;
+  padding: 3px;
+}
+
+.crop-slot-toggle {
+  display: grid;
+  min-width: 0;
+  min-height: 0;
+  place-items: center;
+  border: 2px dashed rgb(255 255 255 / 60%);
+  border-radius: 4px;
+  color: white;
+  background: rgb(0 0 0 / 35%);
+  cursor: pointer;
+}
+
+.crop-slot-toggle--selected {
+  border-style: solid;
+  border-color: var(--q-primary);
+  color: var(--q-primary);
+  background: rgb(0 0 0 / 12%);
+}
+
+.crop-position-control + .crop-position-control {
+  margin-top: 4px;
+}
+
+.michi-dialog-body {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 24px;
+  max-height: 68vh;
+  overflow: hidden;
+}
+
+.michi-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.michi-preview {
+  min-height: 360px;
+  max-height: 68vh;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.michi-page-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.michi-page {
+  display: grid;
+  gap: 3px;
+  padding: 5px;
+  border: 3px solid var(--app_border);
+  background: var(--app_surface);
+}
+
+.michi-cell {
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 8 / 11;
+  overflow: hidden;
+  border: 1px dashed rgb(255 255 255 / 18%);
+}
+
+.michi-cell img,
+.michi-decoration img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.michi-decoration {
+  z-index: 1;
+  overflow: hidden;
+}
+
+@media (max-width: 700px) {
+  .michi-dialog-body {
+    display: block;
+    overflow-y: auto;
+  }
+
+  .michi-preview {
+    margin-top: 24px;
+    overflow: visible;
+  }
+}
+
+@media (hover: none) {
+  .slot-remove {
+    opacity: 1;
+  }
+
+  .slot-got-it {
+    opacity: 1;
+  }
+}

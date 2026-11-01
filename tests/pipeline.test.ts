@@ -1,7 +1,9 @@
-import { afterEach, describe, expect, it } from 'vitest';
+// import utils
 import { existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync, mkdirSync } from 'node:fs';
-import { tmpdir } from 'node:os';
+import { capture_run_log } from '../scripts/update_logging';
+import { afterEach, describe, expect, it } from 'vitest';
 import { dirname, join } from 'node:path';
+import { tmpdir } from 'node:os';
 import {
   parse_update_options,
   pipeline,
@@ -10,7 +12,7 @@ import {
   Stage_Error,
   stages,
 } from '../update_data';
-import { capture_run_log } from '../scripts/update_logging';
+
 const temporary: string[] = [];
 function directory(): string {
   const path = mkdtempSync(join(tmpdir(), 'card-pipeline-test-'));

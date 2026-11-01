@@ -1,3 +1,8 @@
+// import utils
+import { dirname, resolve, join } from 'node:path';
+import { execFileSync } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
+import { parseArgs } from 'node:util';
 import {
   existsSync,
   mkdirSync,
@@ -6,10 +11,6 @@ import {
   writeFileSync,
   readdirSync,
 } from 'node:fs';
-import { dirname, resolve, join } from 'node:path';
-import { fileURLToPath } from 'node:url';
-import { execFileSync } from 'node:child_process';
-import { parseArgs } from 'node:util';
 
 export const project_root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 export const data_root = join(project_root, 'frontend/data');

@@ -1,6 +1,6 @@
-export type BinderLayout = '2x2' | '3x3';
+export type Binder_Layout = '2x2' | '3x3';
 
-export type BinderProxy = {
+export type Binder_Proxy = {
   id: string;
   name: string;
   quantity: number;
@@ -8,7 +8,7 @@ export type BinderProxy = {
   created_at: string;
 };
 
-export type BinderImage = {
+export type Binder_Image = {
   id: string;
   name: string;
   width: number;
@@ -20,27 +20,27 @@ export type BinderImage = {
   created_at: string;
 };
 
-export type BinderImagePlacement = {
+export type Binder_Image_Placement = {
   image_id: string;
   side_index: number;
   row: number;
   column: number;
 };
 
-export type CollectionBinder = {
+export type Collection_Binder = {
   folder_id: string;
   page_count: number;
-  layout: BinderLayout;
+  layout: Binder_Layout;
   locked_pages: number[];
   slots: Array<string | null>;
-  proxies: BinderProxy[];
-  images: BinderImage[];
-  image_placements: BinderImagePlacement[];
+  proxies: Binder_Proxy[];
+  images: Binder_Image[];
+  image_placements: Binder_Image_Placement[];
   created_at: string;
   updated_at: string;
 };
 
-export type BindersData = {
+export type Binders_Data = {
   version: 1;
-  binders: CollectionBinder[];
+  binders: Collection_Binder[];
 };

@@ -19,25 +19,25 @@ export type Series = {
 };
 
 // Localized text keyed by language code.
-export type LocalizedText = Record<string, string | null>;
+export type Localized_Text = Record<string, string | null>;
 
 // A standardized Pokemon species or requested special form.
 export type Pokemon = {
   id: string;
   pokedex_id: number;
   name: string;
-  names: LocalizedText;
+  names: Localized_Text;
   form: 'mega' | 'alolan' | 'galarian' | 'hisuian' | 'paldean' | null;
 };
 
-export type CoverageCounts = {
+export type Coverage_Counts = {
   slots: number;
   filled: number;
   missing: number;
   percent: number;
 };
 
-export type SetCoverage = {
+export type Set_Coverage = {
   id: string;
   name: string;
   series_id: string;
@@ -52,13 +52,13 @@ export type SetCoverage = {
   cards_with_image: number;
   cards_without_image: number;
   image_coverage_percent: number;
-  language_coverage: Record<string, CoverageCounts>;
+  language_coverage: Record<string, Coverage_Counts>;
   missing_card_ids: string[];
   missing_images: Record<string, string[]>;
   sources: Record<string, unknown>;
 };
 
-export type CoverageReport = {
+export type Coverage_Report = {
   schema_version: number;
   generated_at: string;
   totals: Record<string, number>;
@@ -68,7 +68,7 @@ export type CoverageReport = {
     matched_cards: number;
     metadata_fields_filled: number;
   };
-  languages: Record<string, CoverageCounts>;
+  languages: Record<string, Coverage_Counts>;
   missing_metadata: Record<string, string[]>;
   missing_set_assets: { logo: string[]; symbol: string[] };
   series: Record<
@@ -83,7 +83,7 @@ export type CoverageReport = {
       percent: number;
     }
   >;
-  sets: SetCoverage[];
+  sets: Set_Coverage[];
 };
 
 // A set inside one series, with language-specific availability.
@@ -92,7 +92,7 @@ export type Set = {
   tcgdex_id: string;
   tcgdex_series_id: string;
   series_id: string;
-  name: LocalizedText;
+  name: Localized_Text;
   title_image_url: string | null;
   symbol_image_url: string | null;
   release_date: string;
@@ -101,21 +101,21 @@ export type Set = {
 };
 
 // A damage modifier attached to a card.
-export type CardModifier = {
+export type Card_Modifier = {
   type: string;
   value: string;
 };
 
 // A Pokemon card attack with localized name and text.
-export type CardAttack = {
-  name: LocalizedText;
+export type Card_Attack = {
+  name: Localized_Text;
   cost: string[];
   damage: string;
-  text: LocalizedText;
+  text: Localized_Text;
 };
 
 // A specific collectible version of a card.
-export type CardVariant = {
+export type Card_Variant = {
   id: string;
   type?: string;
   subtype?: string;
@@ -123,10 +123,10 @@ export type CardVariant = {
   stamps?: string[];
   language_ids?: string[];
   images: Record<string, string>;
-  cardmarket?: CardmarketPrice;
+  cardmarket?: Cardmarket_Price;
 };
 
-export type CardmarketPrice = {
+export type Cardmarket_Price = {
   product_id: number;
   currency: 'EUR';
   updated_at: string;
@@ -146,7 +146,7 @@ export type Card = {
   set_id: string;
   number: string;
   category: 'pokemon' | 'trainer' | 'energy';
-  name: LocalizedText;
+  name: Localized_Text;
   pokemon?: string[];
   illustrator?: string | null;
   rarity: string;
@@ -154,15 +154,15 @@ export type Card = {
   hp?: number;
   types?: string[];
   stage?: string;
-  evolves_from?: LocalizedText | null;
+  evolves_from?: Localized_Text | null;
   rule_box?: string;
-  attacks?: CardAttack[];
-  weaknesses?: CardModifier[];
-  resistances?: CardModifier[];
+  attacks?: Card_Attack[];
+  weaknesses?: Card_Modifier[];
+  resistances?: Card_Modifier[];
   retreat_cost?: number;
   trainer_type?: string;
-  rules_text?: LocalizedText;
-  flavor_text?: LocalizedText;
+  rules_text?: Localized_Text;
+  flavor_text?: Localized_Text;
   legalities?: Record<string, string>;
-  variants: CardVariant[];
+  variants: Card_Variant[];
 };
