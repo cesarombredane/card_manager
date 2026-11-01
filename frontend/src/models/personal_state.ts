@@ -8,4 +8,5 @@ export type Personal_Module_State<Data> = {
 export type Mutation_Call<Args extends unknown[], Result> = {
   args: Args;
   result?: Result;
+  failure?: { cause: unknown };
 };

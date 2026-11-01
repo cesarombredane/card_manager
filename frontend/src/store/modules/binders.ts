@@ -4,7 +4,8 @@ import { computed } from 'vue';
 // import utils
 import { read_binders, save_binders } from '../../services/personal_data';
 import { parse_binders_data } from '../../services/personal_validation';
-import { commit_result } from '../commit_result';
+import { commit_result, mutation_result } from '../commit_result';
+import { immutable_data } from '../immutable_data';
 import { store } from '../core';
 
 // import types
@@ -30,7 +31,7 @@ export type {
 store.registerModule('binders', {
   namespaced: true,
   state: () => ({
-    data: { version: 1, binders: [] } as Binders_Data,
+    data: immutable_data<Binders_Data>({ version: 1, binders: [] }),
     ready: false,
     error: null as string | null,
   }),
@@ -42,7 +43,7 @@ store.registerModule('binders', {
       module_state.error = value;
     },
     replace_data(module_state, binders: Collection_Binder[]) {
-      module_state.data.binders.splice(0, module_state.data.binders.length, ...binders);
+      module_state.data = immutable_data({ version: 1, binders });
     },
     create(
       _state,
@@ -51,7 +52,7 @@ store.registerModule('binders', {
         ReturnType<typeof binders_operations.create>
       >,
     ) {
-      call.result = binders_operations.create(...call.args);
+      mutation_result(call, () => edit_binders(() => binders_operations.create(...call.args)));
     },
     remove(
       _state,
@@ -60,7 +61,7 @@ store.registerModule('binders', {
         ReturnType<typeof binders_operations.remove>
       >,
     ) {
-      call.result = binders_operations.remove(...call.args);
+      mutation_result(call, () => edit_binders(() => binders_operations.remove(...call.args)));
     },
     set_page_locked(
       _state,
@@ -69,7 +70,9 @@ store.registerModule('binders', {
         ReturnType<typeof binders_operations.set_page_locked>
       >,
     ) {
-      call.result = binders_operations.set_page_locked(...call.args);
+      mutation_result(call, () =>
+        edit_binders(() => binders_operations.set_page_locked(...call.args)),
+      );
     },
     reset_settings(
       _state,
@@ -78,7 +81,9 @@ store.registerModule('binders', {
         ReturnType<typeof binders_operations.reset_settings>
       >,
     ) {
-      call.result = binders_operations.reset_settings(...call.args);
+      mutation_result(call, () =>
+        edit_binders(() => binders_operations.reset_settings(...call.args)),
+      );
     },
     set_slot(
       _state,
@@ -87,7 +92,7 @@ store.registerModule('binders', {
         ReturnType<typeof binders_operations.set_slot>
       >,
     ) {
-      call.result = binders_operations.set_slot(...call.args);
+      mutation_result(call, () => edit_binders(() => binders_operations.set_slot(...call.args)));
     },
     create_proxy(
       _state,
@@ -96,7 +101,9 @@ store.registerModule('binders', {
         ReturnType<typeof binders_operations.create_proxy>
       >,
     ) {
-      call.result = binders_operations.create_proxy(...call.args);
+      mutation_result(call, () =>
+        edit_binders(() => binders_operations.create_proxy(...call.args)),
+      );
     },
     create_image(
       _state,
@@ -105,7 +112,9 @@ store.registerModule('binders', {
         ReturnType<typeof binders_operations.create_image>
       >,
     ) {
-      call.result = binders_operations.create_image(...call.args);
+      mutation_result(call, () =>
+        edit_binders(() => binders_operations.create_image(...call.args)),
+      );
     },
     update_proxy(
       _state,
@@ -114,7 +123,9 @@ store.registerModule('binders', {
         ReturnType<typeof binders_operations.update_proxy>
       >,
     ) {
-      call.result = binders_operations.update_proxy(...call.args);
+      mutation_result(call, () =>
+        edit_binders(() => binders_operations.update_proxy(...call.args)),
+      );
     },
     update_image(
       _state,
@@ -123,7 +134,9 @@ store.registerModule('binders', {
         ReturnType<typeof binders_operations.update_image>
       >,
     ) {
-      call.result = binders_operations.update_image(...call.args);
+      mutation_result(call, () =>
+        edit_binders(() => binders_operations.update_image(...call.args)),
+      );
     },
     remove_asset(
       _state,
@@ -132,7 +145,9 @@ store.registerModule('binders', {
         ReturnType<typeof binders_operations.remove_asset>
       >,
     ) {
-      call.result = binders_operations.remove_asset(...call.args);
+      mutation_result(call, () =>
+        edit_binders(() => binders_operations.remove_asset(...call.args)),
+      );
     },
     place_image(
       _state,
@@ -141,7 +156,7 @@ store.registerModule('binders', {
         ReturnType<typeof binders_operations.place_image>
       >,
     ) {
-      call.result = binders_operations.place_image(...call.args);
+      mutation_result(call, () => edit_binders(() => binders_operations.place_image(...call.args)));
     },
     remove_image_placement(
       _state,
@@ -150,7 +165,9 @@ store.registerModule('binders', {
         ReturnType<typeof binders_operations.remove_image_placement>
       >,
     ) {
-      call.result = binders_operations.remove_image_placement(...call.args);
+      mutation_result(call, () =>
+        edit_binders(() => binders_operations.remove_image_placement(...call.args)),
+      );
     },
     apply_layout(
       _state,
@@ -159,7 +176,9 @@ store.registerModule('binders', {
         ReturnType<typeof binders_operations.apply_layout>
       >,
     ) {
-      call.result = binders_operations.apply_layout(...call.args);
+      mutation_result(call, () =>
+        edit_binders(() => binders_operations.apply_layout(...call.args)),
+      );
     },
     move_slot(
       _state,
@@ -168,7 +187,7 @@ store.registerModule('binders', {
         ReturnType<typeof binders_operations.move_slot>
       >,
     ) {
-      call.result = binders_operations.move_slot(...call.args);
+      mutation_result(call, () => edit_binders(() => binders_operations.move_slot(...call.args)));
     },
     clean(
       _state,
@@ -177,7 +196,7 @@ store.registerModule('binders', {
         ReturnType<typeof binders_operations.clean>
       >,
     ) {
-      call.result = binders_operations.clean(...call.args);
+      mutation_result(call, () => edit_binders(() => binders_operations.clean(...call.args)));
     },
   },
   actions: {
@@ -190,10 +209,33 @@ store.registerModule('binders', {
     },
   },
 });
+let working_data: Binders_Data | null = null;
+let needs_persist = false;
+const binder_data = (): Binders_Data => working_data ?? store.state.binders.data;
+
+function edit_binders<Result>(edit: () => Result): Result {
+  if (working_data) return edit();
+  working_data = structuredClone(store.state.binders.data);
+  let result: Result;
+  let published: Binders_Data | null = null;
+  try {
+    result = edit();
+    if (needs_persist) published = immutable_data(working_data);
+    else if (result !== null && typeof result === 'object') immutable_data(result);
+  } finally {
+    working_data = null;
+    needs_persist = false;
+  }
+  if (published) {
+    store.state.binders.data = published;
+    void store.dispatch('binders/save');
+  }
+  return result;
+}
+
 const persist = (): void => {
-  void store.dispatch('binders/save');
+  needs_persist = true;
 };
-const state = store.state.binders.data;
 const is_ready = computed<boolean>({
   get: () => store.state.binders.ready,
   set: (value) => store.commit('binders/set_ready', value),
@@ -267,7 +309,7 @@ const queue_persist = (): void => {
   pending_save = pending_save
     .then(async () => {
       await load_promise;
-      const response = await save_binders(state);
+      const response = await save_binders(store.state.binders.data);
       if (!response.ok) throw new Error(`Unable to save binders.json (${response.status})`);
       save_error.value = null;
     })
@@ -300,12 +342,12 @@ const new_asset_id = (prefix: string): string =>
   `${prefix}-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 9)}`;
 
 const binders_operations = {
-  binders: computed<Collection_Binder[]>(() => state.binders),
+  binders: computed<Collection_Binder[]>(() => binder_data().binders),
   is_ready: computed<boolean>(() => is_ready.value),
   save_error: computed<string | null>(() => save_error.value),
 
   get(folder_id: string): Collection_Binder | null {
-    return state.binders.find((binder) => binder.folder_id === folder_id) ?? null;
+    return binder_data().binders.find((binder) => binder.folder_id === folder_id) ?? null;
   },
 
   create(folder_id: string, page_count: number, layout: Binder_Layout): Collection_Binder {
@@ -324,15 +366,15 @@ const binders_operations = {
       created_at: now,
       updated_at: now,
     };
-    state.binders.push(binder);
+    binder_data().binders.push(binder);
     persist();
     return binder;
   },
 
   remove(folder_id: string): void {
-    const index = state.binders.findIndex((binder) => binder.folder_id === folder_id);
+    const index = binder_data().binders.findIndex((binder) => binder.folder_id === folder_id);
     if (index === -1) return;
-    state.binders.splice(index, 1);
+    binder_data().binders.splice(index, 1);
     persist();
   },
 

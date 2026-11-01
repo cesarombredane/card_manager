@@ -2,6 +2,7 @@
 import { computed } from 'vue';
 
 // import utils
+import { immutable_data } from '../immutable_data';
 import {
   parse_manual_image_data,
   parse_manual_image_entry,
@@ -35,13 +36,13 @@ const matches = (entry: Manual_Image_Entry, key: Image_Key): boolean =>
 store.registerModule('manual_images', {
   namespaced: true,
   state: () => ({
-    data: { version: 1, entries: [] } as Manual_Image_Data,
+    data: immutable_data<Manual_Image_Data>({ version: 1, entries: [] }),
     ready: false,
     error: null as string | null,
   }),
   mutations: {
     loaded(state, data: Manual_Image_Data) {
-      state.data.entries.splice(0, state.data.entries.length, ...data.entries);
+      state.data = immutable_data({ version: 1, entries: data.entries });
       state.ready = true;
       state.error = null;
     },
@@ -52,14 +53,26 @@ store.registerModule('manual_images', {
       state.error = err instanceof Error ? err.message : String(err);
     },
     upsert(state, entry: Manual_Image_Entry) {
-      const old = state.data.entries.find((item) => matches(item, entry));
-      if (old) Object.assign(old, entry);
-      else state.data.entries.push(entry);
+      const old = state.data.entries.findIndex((item) => matches(item, entry));
+      state.data = immutable_data({
+        version: 1,
+        entries:
+          old < 0
+            ? [...state.data.entries, entry]
+            : state.data.entries.map((item, index) =>
+                index === old ? { ...item, ...entry } : item,
+              ),
+      });
       state.error = null;
     },
     remove(state, key: Image_Key) {
       const index = state.data.entries.findIndex((entry) => matches(entry, key));
-      if (index >= 0) state.data.entries.splice(index, 1);
+      if (index >= 0) {
+        state.data = immutable_data({
+          version: 1,
+          entries: state.data.entries.filter((_, entry_index) => entry_index !== index),
+        });
+      }
       state.error = null;
     },
   },

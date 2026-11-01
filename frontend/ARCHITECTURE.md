@@ -36,7 +36,25 @@ mutations apply domain edits; actions load and persist them. Compatibility facad
 expose computed reads and route edits through mutations. `commit_result.ts` preserves
 existing synchronous return values such as a newly created folder or proxy.
 
+Personal datasets are immutable snapshots, published through their Vuex module's
+`data` property. `store/immutable_data.ts` marks each snapshot raw and recursively
+freezes its JSON records. Vuex strict mode remains enabled in development and
+checks module/root assignments; frozen records reject nested writes in every
+build. This avoids its synchronous deep watcher traversing thousands of records
+for each field change or unrelated filter update.
+
+Collection and binder mutations prepare a writable `structuredClone` draft, run
+the existing domain operations, then publish once. Nested operations share that
+draft and request one save. Failed edits discard the draft and propagate their
+error after Vuex finishes its mutation bookkeeping. Loads reconcile before
+publication. Unchanged Pokédex requirements retain their timestamps. Queries must
+read the current module snapshot, and consumers derive values with computed reads;
+do not cache a mutable reference to an earlier dataset or modify returned records.
+
 Collection saves retain the ordered delta queue and cross-tab synchronization.
+The queue holds immutable before/after snapshots without cloning the entire
+reactive collection for each save; an explicit flush without a new snapshot does
+not enqueue an empty operation.
 Binder saves retain their ordered queue. Manual artwork is uploaded through actions
 and committed only after a validated successful response. A failed load leaves the
 module unready and preserves its previous in-memory data; persistence cannot replace

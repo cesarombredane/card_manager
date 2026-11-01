@@ -55,3 +55,18 @@ manual-card editing (including variant changes), transfers, bulk language edits,
 Pokédex settings, binder assets and import/export confirmation before signing off
 on the interactive migration. Agents record user-reported results and leave this
 verification pending until the user provides them; agents do not run it themselves.
+
+## Development performance follow-up
+
+Personal collection, binder and manual-image datasets now publish as frozen
+snapshots. Vuex strict checking remains enabled in development, while draft edits
+and startup reconciliation run outside reactive state and publish once. Unchanged
+Pokédex records keep their timestamps. Stored JSON formats and persistence paths
+are unchanged.
+
+After restarting `npm run dev`, check the initial load, several F5 reloads, typing
+in filters, collection quantity edits, Pokédex reconciliation, and binder slot
+moves. Confirm saves survive another refresh. The implementation has synthetic
+unit/performance verification; actual browser responsiveness is user-verified.
+Agents do not run browser automation or end-to-end tests. The optional user-run
+regression command remains `npm run test:e2e`.
