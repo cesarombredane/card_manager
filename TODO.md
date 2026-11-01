@@ -11,3 +11,7 @@ Example:
 -->
 
 # TODO
+
+- [x] toolbar spacing is weird
+- [ ] be sure the migration is finished
+- [ ] redo opti (lag on load page and on any action)

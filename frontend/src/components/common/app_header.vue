@@ -1,6 +1,6 @@
 <template>
   <q-header bordered class="app_header">
-    <q-toolbar class="page_content">
+    <q-toolbar class="q-px-md">
       <q-toolbar-title class="text-weight-bold">
         <router-link to="/" class="text-white">{{ app_config.title }}</router-link>
       </q-toolbar-title>
