@@ -37,7 +37,7 @@ test('preserves synchronous domain edits, queued deltas and load failure safety 
   const { collection_store } = await import('../../src/store/modules/collection');
   const { binder_store } = await import('../../src/store/modules/binders');
   const { store } = await import('../../src/store/core');
-  expect(store.strict).toBe(true);
+  expect('strict' in store && store.strict).toBe(true);
   await store.dispatch('collection/load');
   await store.dispatch('binders/load');
 
@@ -64,6 +64,49 @@ test('preserves synchronous domain edits, queued deltas and load failure safety 
   collection_store.create_folder('Recovery', 'box');
   await store.dispatch('collection/save');
   expect(collection_store.save_error.value).toBeNull();
+
+  const manual = collection_store.create_manual_card({
+    folder_id: second.id,
+    name: 'Manual card',
+    set_name: '',
+    number: '1',
+    language_id: 'en',
+    variant_id: 'normal',
+    condition: 'NM',
+    quantity: 1,
+    category: 'pokemon',
+    rarity: '',
+    pokemon_name: '',
+    hp: null,
+    types: [],
+    illustrator: '',
+    notes: '',
+    estimated_value: null,
+    release_date: null,
+  });
+  const update = {
+    folder_id: second.id,
+    language_id: 'en',
+    condition: 'NM' as const,
+    quantity: 2,
+    variant_id: 'holo',
+  };
+  expect(() => collection_store.update_entry(manual.entry.id, update)).not.toThrow();
+  expect(
+    collection_store.entries.value.find((entry) => entry.id === manual.entry.id),
+  ).toMatchObject({ variant_id: 'holo', quantity: 2 });
+  await store.dispatch('collection/save');
+  expect(operations).toEqual(
+    expect.arrayContaining([
+      expect.objectContaining({
+        after: expect.objectContaining({
+          entries: expect.arrayContaining([
+            expect.objectContaining({ id: manual.entry.id, variant_id: 'holo', quantity: 2 }),
+          ]),
+        }),
+      }),
+    ]),
+  );
 
   const saved_binder = JSON.stringify(binder_store.get(first.id));
   invalid_binders = true;

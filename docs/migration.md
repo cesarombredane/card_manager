@@ -39,3 +39,19 @@ For a code-only rollback, stop the local server and restore the previous code wh
 retaining the existing data paths and files. If moving an older `app/` installation,
 follow the path instructions above and retain its original files. Any installation
 backup or data-moving operation needs its own explicit authorization.
+
+## Final template alignment
+
+Collection and dashboard editing workflows have independent components. Personal
+JSON keeps its existing identifiers, schema versions and paths. Legacy manual
+cards missing optional historical fields receive in-memory defaults before use;
+invalid field types are rejected. Entry variant changes pass through Vuex
+mutations, and frontend unit tests participate in type checking.
+
+Agent verification uses lint, formatting, type checks, synthetic unit tests and
+`npm run build:fixture`. End-to-end verification is user-run: execute
+`npm run test:e2e` from the root. It uses temporary data. Review collection creation,
+manual-card editing (including variant changes), transfers, bulk language edits,
+Pokédex settings, binder assets and import/export confirmation before signing off
+on the interactive migration. Agents must leave this verification pending rather
+than running it themselves.

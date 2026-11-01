@@ -26,15 +26,14 @@
   /* types */
   // A language selector option formatted for q-btn-toggle.
 
-  /* types */
   type Language_Option = {
     label: string;
     value: string;
   };
 
+  /* hooks */
   // Component props used to render and update the selected language.
 
-  /* hooks */
   const props = defineProps<{
     modelValue: string;
     language_ids: string[];
@@ -47,14 +46,14 @@
     (event: 'update:modelValue', language_id: string): void;
   }>();
 
+  /* const vars */
   // Languages configured in local data.
 
-  /* const vars */
   const languages: Language[] = get_languages();
 
+  /* computed vars */
   // Selected language proxied to the parent v-model.
 
-  /* computed vars */
   const selected_language_id = computed<string>({
     get: (): string => props.modelValue,
     set: (language_id: string): void => emit('update:modelValue', language_id),
@@ -71,9 +70,9 @@
     })),
   ]);
 
+  /* functions */
   // Returns a compact label for a language id.
 
-  /* functions */
   const get_language_label = (language_id: string): string => {
     const language: Language | undefined = languages.find((item) => item.id === language_id);
     return language?.id ?? language_id;

@@ -8,7 +8,7 @@
 </template>
 
 <script setup lang="ts">
-  /* hooks */
+  /* initialization */
   defineProps<{
     title: string;
     description: string;

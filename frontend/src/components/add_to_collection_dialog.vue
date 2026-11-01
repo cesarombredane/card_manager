@@ -109,10 +109,25 @@
     language_id: string;
     card_name: string;
   }>();
+
   const emit = defineEmits<{
     'update:modelValue': [value: boolean];
     added: [];
   }>();
+
+  const store = use_store();
+
+  /* const vars */
+  const condition_options = card_conditions.map((entry) => ({ ...entry }));
+
+  /* reactive vars */
+  const folder_id = ref<string>(store.state.last_collection_folder_id);
+
+  const condition = ref<Card_Condition>('NM');
+
+  const quantity = ref<number>(1);
+
+  const pokedex_requirement_id = ref<string>('');
 
   /* computed vars */
   const is_open = computed<boolean>({
@@ -120,25 +135,13 @@
     set: (value: boolean) => emit('update:modelValue', value),
   });
 
-  /* hooks */
-  const store = use_store();
-
-  /* reactive vars */
-  const folder_id = ref<string>(store.state.last_collection_folder_id);
-  const condition = ref<Card_Condition>('NM');
-  const quantity = ref<number>(1);
-  const pokedex_requirement_id = ref<string>('');
-
-  /* const vars */
-  const condition_options = card_conditions.map((entry) => ({ ...entry }));
-
-  /* computed vars */
   const is_pokedex_folder = computed<boolean>(() =>
     Boolean(
       collection_store.folders.value.find((folder) => folder.id === folder_id.value)
         ?.pokedex_config,
     ),
   );
+
   const pokedex_requirement_options = computed<{ label: string; value: string }[]>(() =>
     collection_store.matching_pokedex_requirements({
       folder_id: folder_id.value,
@@ -148,6 +151,28 @@
       language_id: props.language_id,
     }),
   );
+
+  /* functions */
+  const add_cards = (): void => {
+    collection_store.add_cards({
+      folder_id: folder_id.value,
+      set_id: props.set_id,
+      card_id: props.card_id,
+      variant_id: props.variant_id,
+      language_id: props.language_id,
+      condition: condition.value,
+      quantity: quantity.value,
+      pokedex_requirement_id:
+        pokedex_requirement_id.value ||
+        (pokedex_requirement_options.value.length === 1
+          ? pokedex_requirement_options.value[0].value
+          : undefined),
+    });
+    store.commit('set_last_collection_folder_id', folder_id.value);
+    quantity.value = 1;
+    is_open.value = false;
+    emit('added');
+  };
 
   /* watchers */
   watch(
@@ -172,26 +197,4 @@
     },
     { immediate: true },
   );
-
-  /* functions */
-  const add_cards = (): void => {
-    collection_store.add_cards({
-      folder_id: folder_id.value,
-      set_id: props.set_id,
-      card_id: props.card_id,
-      variant_id: props.variant_id,
-      language_id: props.language_id,
-      condition: condition.value,
-      quantity: quantity.value,
-      pokedex_requirement_id:
-        pokedex_requirement_id.value ||
-        (pokedex_requirement_options.value.length === 1
-          ? pokedex_requirement_options.value[0].value
-          : undefined),
-    });
-    store.commit('set_last_collection_folder_id', folder_id.value);
-    quantity.value = 1;
-    is_open.value = false;
-    emit('added');
-  };
 </script>

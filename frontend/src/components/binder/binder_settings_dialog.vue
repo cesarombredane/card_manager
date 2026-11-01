@@ -67,14 +67,6 @@
 
   const emit = defineEmits<{ 'update:modelValue': [value: boolean]; saved: [] }>();
 
-  /* computed vars */
-  const is_open = computed<boolean>({
-    get: () => props.modelValue,
-    set: (value) => emit('update:modelValue', value),
-  });
-
-  const binder = computed<Collection_Binder | null>(() => binder_store.get(props.folder_id));
-
   /* const vars */
   const layout_options = [
     { label: '2 × 2 — 4 cards per page', value: '2x2' },
@@ -87,6 +79,13 @@
   const settings_layout = ref<Binder_Layout>('3x3');
 
   /* computed vars */
+  const is_open = computed<boolean>({
+    get: () => props.modelValue,
+    set: (value) => emit('update:modelValue', value),
+  });
+
+  const binder = computed<Collection_Binder | null>(() => binder_store.get(props.folder_id));
+
   const settings_changed = computed<boolean>(() =>
     Boolean(
       binder.value &&

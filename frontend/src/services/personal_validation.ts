@@ -72,7 +72,27 @@ export function parse_collection_data(value: unknown): Collection_Data {
   ) {
     throw new Error('Invalid collection data; existing data has not been replaced.');
   }
-  return { ...value, version: 2, manual_cards: value.manual_cards ?? [] } as Collection_Data;
+  const manual_cards = (value.manual_cards ?? []) as Record<string, unknown>[];
+  return {
+    ...value,
+    version: 2,
+    manual_cards: manual_cards.map((card) => ({
+      ...card,
+      set_name: card.set_name ?? '',
+      number: card.number ?? '',
+      category: card.category ?? 'pokemon',
+      rarity: card.rarity ?? 'unknown',
+      pokemon_name: card.pokemon_name ?? '',
+      types: card.types ?? [],
+      hp: card.hp ?? null,
+      estimated_value: card.estimated_value ?? null,
+      illustrator: card.illustrator ?? '',
+      notes: card.notes ?? '',
+      release_date: card.release_date ?? null,
+      created_at: card.created_at ?? '',
+      updated_at: card.updated_at ?? '',
+    })),
+  } as Collection_Data;
 }
 function valid_pokedex_config(value: unknown): boolean {
   return (

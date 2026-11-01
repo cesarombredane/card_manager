@@ -166,62 +166,75 @@
   const props = withDefaults(defineProps<{ modelValue: boolean; initial_folder_id?: string }>(), {
     initial_folder_id: '',
   });
+
   const emit = defineEmits<{
     'update:modelValue': [value: boolean];
     created: [];
   }>();
-
-  /* computed vars */
-  const is_open = computed<boolean>({
-    get: () => props.modelValue,
-    set: (value: boolean) => emit('update:modelValue', value),
-  });
-
-  /* reactive vars */
-  const name = ref<string>('');
-  const set_name = ref<string>('');
-  const number = ref<string>('');
-  const language_id = ref<string>('en');
-  const variant_id = ref<string>('normal');
-  const condition = ref<Card_Condition>('NM');
-  const quantity = ref<number>(1);
-  const folder_id = ref<string>(props.initial_folder_id);
-  const category = ref<string>('pokemon');
-  const rarity = ref<string>('');
-  const pokemon_name = ref<string>('');
-  const hp = ref<number | null>(null);
-  const types_text = ref<string>('');
-  const illustrator = ref<string>('');
-  const notes = ref<string>('');
-  const estimated_value = ref<number | null>(null);
-  const release_date = ref<string>('');
-  const image_file = ref<File | null>(null);
-  const image_data_url = ref<string | null>(null);
-  const image_preview = ref<string | null>(null);
-  const save_error = ref<string | null>(null);
-  const saving = ref<boolean>(false);
-  const pending_created = ref<{ card: Manual_Collection_Card; entry: Collection_Entry } | null>(
-    null,
-  );
 
   /* const vars */
   const language_options = get_languages().map((language) => ({
     label: language.name,
     value: language.id,
   }));
+
   const condition_options = card_conditions.map((entry) => ({ ...entry }));
+
   const category_options = ['pokemon', 'trainer', 'energy'];
 
-  /* watchers */
-  watch(is_open, (open) => {
-    if (!open) return;
-    const default_folder = collection_store.ensure_default_folder();
-    folder_id.value = collection_store.folders.value.some(
-      (folder) => folder.id === props.initial_folder_id,
-    )
-      ? props.initial_folder_id
-      : default_folder.id;
-    save_error.value = null;
+  /* reactive vars */
+  const name = ref<string>('');
+
+  const set_name = ref<string>('');
+
+  const number = ref<string>('');
+
+  const language_id = ref<string>('en');
+
+  const variant_id = ref<string>('normal');
+
+  const condition = ref<Card_Condition>('NM');
+
+  const quantity = ref<number>(1);
+
+  const folder_id = ref<string>(props.initial_folder_id);
+
+  const category = ref<string>('pokemon');
+
+  const rarity = ref<string>('');
+
+  const pokemon_name = ref<string>('');
+
+  const hp = ref<number | null>(null);
+
+  const types_text = ref<string>('');
+
+  const illustrator = ref<string>('');
+
+  const notes = ref<string>('');
+
+  const estimated_value = ref<number | null>(null);
+
+  const release_date = ref<string>('');
+
+  const image_file = ref<File | null>(null);
+
+  const image_data_url = ref<string | null>(null);
+
+  const image_preview = ref<string | null>(null);
+
+  const save_error = ref<string | null>(null);
+
+  const saving = ref<boolean>(false);
+
+  const pending_created = ref<{ card: Manual_Collection_Card; entry: Collection_Entry } | null>(
+    null,
+  );
+
+  /* computed vars */
+  const is_open = computed<boolean>({
+    get: () => props.modelValue,
+    set: (value: boolean) => emit('update:modelValue', value),
   });
 
   /* functions */
@@ -311,10 +324,22 @@
       reset();
       is_open.value = false;
       emit('created');
-    } catch (error) {
-      save_error.value = error instanceof Error ? error.message : String(error);
+    } catch (err) {
+      save_error.value = err instanceof Error ? err.message : String(err);
     } finally {
       saving.value = false;
     }
   };
+
+  /* watchers */
+  watch(is_open, (open) => {
+    if (!open) return;
+    const default_folder = collection_store.ensure_default_folder();
+    folder_id.value = collection_store.folders.value.some(
+      (folder) => folder.id === props.initial_folder_id,
+    )
+      ? props.initial_folder_id
+      : default_folder.id;
+    save_error.value = null;
+  });
 </script>

@@ -152,13 +152,6 @@
   /* hooks */
   const props = defineProps<{ folder_id: string }>();
 
-  /* computed vars */
-  const folder_id = computed<string>(() => props.folder_id);
-
-  const binder = computed<Collection_Binder | null>(() => binder_store.get(folder_id.value));
-
-  const binder_columns = computed<2 | 3>(() => (binder.value?.layout === '2x2' ? 2 : 3));
-
   /* reactive vars */
   const show_asset_dialog = ref<boolean>(false);
 
@@ -195,30 +188,16 @@
   const crop_y = ref<number>(0);
 
   /* computed vars */
+  const folder_id = computed<string>(() => props.folder_id);
+
+  const binder = computed<Collection_Binder | null>(() => binder_store.get(folder_id.value));
+
+  const binder_columns = computed<2 | 3>(() => (binder.value?.layout === '2x2' ? 2 : 3));
+
   const asset_dimensions = computed<number[]>(() =>
     Array.from({ length: binder_columns.value }, (_, index) => index + 1),
   );
 
-  /* functions */
-  const open_asset_dialog = (tab: string): void => {
-    asset_kind.value = tab === 'images' ? 'image' : 'proxy';
-    asset_name.value = '';
-    asset_quantity.value = 1;
-    asset_date.value = '';
-    asset_width.value = 1;
-    asset_height.value = 1;
-    asset_file.value = null;
-    asset_data_url.value = null;
-    asset_preview.value = null;
-    asset_error.value = null;
-    crop_image.value = null;
-    crop_zoom.value = 1;
-    crop_x.value = 0;
-    crop_y.value = 0;
-    show_asset_dialog.value = true;
-  };
-
-  /* computed vars */
   const crop_aspect = computed<number>(() =>
     asset_kind.value === 'proxy' ? 8 / 11 : (asset_width.value * 8) / (asset_height.value * 11),
   );
@@ -253,6 +232,24 @@
   );
 
   /* functions */
+  const open_asset_dialog = (tab: string): void => {
+    asset_kind.value = tab === 'images' ? 'image' : 'proxy';
+    asset_name.value = '';
+    asset_quantity.value = 1;
+    asset_date.value = '';
+    asset_width.value = 1;
+    asset_height.value = 1;
+    asset_file.value = null;
+    asset_data_url.value = null;
+    asset_preview.value = null;
+    asset_error.value = null;
+    crop_image.value = null;
+    crop_zoom.value = 1;
+    crop_x.value = 0;
+    crop_y.value = 0;
+    show_asset_dialog.value = true;
+  };
+
   const prepare_asset_image = (file: File | null): void => {
     asset_data_url.value = null;
     asset_preview.value = null;
@@ -332,14 +329,14 @@
         });
       }
       show_asset_dialog.value = false;
-    } catch (error) {
+    } catch (err) {
       binder_store.remove_asset(folder_id.value, asset_kind.value, asset.id);
       if (asset_kind.value === 'image') {
         await manual_image_store
           .remove('binder-assets', folder_id.value, asset.id, 'image-source')
           .catch(() => undefined);
       }
-      asset_error.value = error instanceof Error ? error.message : String(error);
+      asset_error.value = err instanceof Error ? err.message : String(err);
     } finally {
       asset_saving.value = false;
     }

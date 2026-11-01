@@ -13,5 +13,8 @@ Example:
 # TODO
 
 - [x] toolbar spacing is weird
-- [ ] be sure the migration is finished
+- [ ] Verify the template migration.
+      Remaining code alignment is implemented and checked with static checks, unit
+      tests and a fixture build. User-run browser verification is pending:
+      `npm run test:e2e` and the checklist in `docs/migration.md`.
 - [ ] redo opti (lag on load page and on any action)

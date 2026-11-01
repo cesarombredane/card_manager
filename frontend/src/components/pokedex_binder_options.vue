@@ -175,18 +175,29 @@
 
   /* const vars */
   const config = defineModel<Pokedex_Binder_Config>({ required: true });
+
   const region_options = [
     { label: 'Both', value: 'all' },
     { label: 'International', value: 'intl' },
     { label: 'Asia', value: 'asia' },
   ];
+
   const sets = get_sets();
+
   const international_language_ids = unique_values(
     sets.filter((set) => !set.series_id.startsWith('asia-')).flatMap((set) => set.language_ids),
   );
+
   const asia_language_ids = unique_values(
     sets.filter((set) => set.series_id.startsWith('asia-')).flatMap((set) => set.language_ids),
   );
+
+  const variant_options = pokedex_variant_types.map((value) => ({
+    value,
+    label: value.replaceAll('_', ' ').replace(/\b\w/g, (character) => character.toUpperCase()),
+  }));
+
+  const rarity_options = [...pokedex_rarities];
 
   /* computed vars */
   const series_options = computed<{ label: string; value: string; region_id: string }[]>(() =>
@@ -197,34 +208,33 @@
     ),
   );
 
-  /* const vars */
-  const variant_options = pokedex_variant_types.map((value) => ({
-    value,
-    label: value.replaceAll('_', ' ').replace(/\b\w/g, (character) => character.toUpperCase()),
-  }));
-  const rarity_options = [...pokedex_rarities];
-
   /* functions */
   const selection_label = (selected: number, available: number, noun: string): string => {
     if (selected === available) return `All ${noun}`;
     if (selected === 0) return `No ${noun}`;
     return `${selected} ${noun} selected`;
   };
+
   const select_all_series = (): void => {
     config.value.series_ids = series_options.value.map((option) => option.value);
   };
+
   const clear_series = (): void => {
     config.value.series_ids = [];
   };
+
   const select_all_variants = (): void => {
     config.value.variant_types = [...pokedex_variant_types];
   };
+
   const clear_variants = (): void => {
     config.value.variant_types = [];
   };
+
   const select_all_rarities = (): void => {
     config.value.rarities = [...pokedex_rarities];
   };
+
   const clear_rarities = (): void => {
     config.value.rarities = [];
   };

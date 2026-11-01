@@ -1,10 +1,10 @@
 // import utils
-import { dirname, relative, resolve } from 'node:path';
-import { fileURLToPath } from 'node:url';
-import { defineConfig } from 'vite';
-import vue from '@vitejs/plugin-vue';
 import { quasar, transformAssetUrls } from '@quasar/vite-plugin';
 import { personal_data_plugins } from './server/personal_data';
+import { dirname, relative, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import vue from '@vitejs/plugin-vue';
+import { defineConfig } from 'vite';
 
 // import types
 import type { Plugin } from 'vite';

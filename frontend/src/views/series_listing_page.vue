@@ -161,16 +161,16 @@
   import BackToTopButton from '../components/back_to_top_button.vue';
 
   // import utils
+  import { cardmarket_display_price, format_euro_price } from '../utils/card_display';
+  import { collection_store } from '../store/modules/collection';
+  import { localized_value } from '../utils/localization';
+  import { format_french_date } from '../utils/dates';
   import {
     get_cards_by_set_id,
     get_regions,
     get_series,
     get_sets,
   } from '../services/catalog_storage';
-  import { cardmarket_display_price, format_euro_price } from '../utils/card_display';
-  import { collection_store } from '../store/modules/collection';
-  import { localized_value } from '../utils/localization';
-  import { format_french_date } from '../utils/dates';
   import { use_store } from '../store';
 
   // import types
@@ -179,7 +179,6 @@
   /* types */
   // A region selector option formatted for q-btn-toggle.
 
-  /* types */
   type Region_Option = {
     label: string;
     value: string;
@@ -192,9 +191,14 @@
     sets: Set[];
   };
 
-  // All configured regions available to the region switcher.
+  /* hooks */
+  // Shared application state.
+
+  const store = use_store();
 
   /* const vars */
+  // All configured regions available to the region switcher.
+
   const regions: Region[] = get_regions();
 
   // All configured series used to group sets.
@@ -220,22 +224,17 @@
     ]),
   );
 
-  // Shared application state.
-
-  /* hooks */
-  const store = use_store();
-
+  /* reactive vars */
   // Search text used to filter set names in every available language.
 
-  /* reactive vars */
   const sets_search_input = ref<string>(store.state.sets_search_input);
 
   // Currently selected printing region. International is the default view.
   const selected_region_id = ref<string>(store.state.selected_region_id);
 
+  /* computed vars */
   // Region options rendered by the q-btn-toggle.
 
-  /* computed vars */
   const region_options = computed<Region_Option[]>(() =>
     regions.map((r) => ({ label: r.id, value: r.id })),
   );
@@ -283,9 +282,9 @@
     return new Map([...variants_by_set].map(([set_id, variants]) => [set_id, variants.size]));
   });
 
+  /* functions */
   // Resolves a set name using the shared language preference and stable fallbacks.
 
-  /* functions */
   const set_display_name = (set: Set): string => {
     return localized_value(set.name, store.state.selected_language_id) ?? set.id;
   };
@@ -298,9 +297,9 @@
     return set.card_count > 0 ? Math.min(owned_card_count(set.id) / set.card_count, 1) : 0;
   };
 
+  /* watchers */
   // Update the store when the selected region changes.
 
-  /* watchers */
   watch(selected_region_id, (region_id): void => {
     store.commit('set_selected_region_id', region_id);
   });

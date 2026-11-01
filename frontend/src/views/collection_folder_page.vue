@@ -115,7 +115,7 @@
           icon="filter_alt"
           label="Pokédex options"
           no-caps
-          @click="open_pokedex_options"
+          @click="pokedex_dialog?.open()"
           ><q-tooltip :delay="1000">Pokédex options</q-tooltip></q-btn
         >
       </div>
@@ -179,7 +179,7 @@
         label="Edit selected"
         no-caps
         :disable="selected_entry_ids.size === 0"
-        @click="open_bulk_edit_dialog"
+        @click="bulk_editor?.open()"
         ><q-tooltip :delay="1000">Edit selected</q-tooltip></q-btn
       >
       <q-btn
@@ -189,7 +189,7 @@
         label="Move to collection"
         no-caps
         :disable="selected_entry_ids.size === 0 || destination_folders.length === 0"
-        @click="open_transfer_dialog"
+        @click="transfer_dialog?.open()"
         ><q-tooltip :delay="1000">Move to collection</q-tooltip></q-btn
       >
     </section>
@@ -276,7 +276,7 @@
             icon="close"
             color="secondary"
             no-caps
-            aria-label="close"
+            aria-label="Close card candidates"
             ><q-tooltip :delay="1000">close</q-tooltip></q-btn
           >
         </q-card-section>
@@ -287,296 +287,20 @@
       </q-card>
     </q-dialog>
 
-    <q-dialog v-model="show_transfer_dialog">
-      <q-card class="app_surface text-white" style="width: 480px; max-width: 94vw">
-        <q-card-section>
-          <div class="text-h6">Move selected cards</div>
-          <div class="text-body2 text_secondary">
-            Move {{ selected_entry_ids.size }} selected
-            {{ selected_entry_ids.size === 1 ? 'entry' : 'entries' }} to another collection.
-          </div>
-        </q-card-section>
-        <q-card-section>
-          <collection-folder-select
-            v-model="transfer_folder_id"
-            :folders="destination_folders"
-            dark
-            outlined
-            label="Destination collection"
-          />
-          <q-list v-if="selected_transfer_rows.length > 0" class="q-mt-md" separator>
-            <q-item v-for="row in selected_transfer_rows" :key="row.entry.id" class="q-px-none">
-              <q-item-section>
-                <q-item-label>{{ row.card.display_name }}</q-item-label>
-                <q-item-label caption class="text_secondary">
-                  {{ row.entry.language_id.toUpperCase() }} · {{ row.entry.condition }}
-                </q-item-label>
-                <q-select
-                  v-if="transfer_pokedex_options(row).length > 1"
-                  v-model="transfer_pokedex_requirements[row.entry.id]"
-                  :options="transfer_pokedex_options(row)"
-                  emit-value
-                  map-options
-                  dark
-                  dense
-                  outlined
-                  class="q-mt-sm"
-                  label="Pokédex slot"
-                />
-              </q-item-section>
-              <q-item-section side>
-                <div v-if="row.entry.quantity > 1" class="row items-center no-wrap q-gutter-xs">
-                  <q-btn
-                    flat
-                    round
-                    dense
-                    icon="remove"
-                    color="secondary"
-                    :disable="transfer_quantities[row.entry.id] <= 1"
-                    aria-label="Move one fewer copy"
-                    no-caps
-                    @click="change_transfer_quantity(row.entry.id, -1, row.entry.quantity)"
-                    ><q-tooltip :delay="1000">remove</q-tooltip></q-btn
-                  >
-                  <span class="text-body1 text-center" style="min-width: 24px">
-                    {{ transfer_quantities[row.entry.id] }}
-                  </span>
-                  <q-btn
-                    flat
-                    round
-                    dense
-                    icon="add"
-                    color="primary"
-                    :disable="transfer_quantities[row.entry.id] >= row.entry.quantity"
-                    aria-label="Move one more copy"
-                    no-caps
-                    @click="change_transfer_quantity(row.entry.id, 1, row.entry.quantity)"
-                    ><q-tooltip :delay="1000">add</q-tooltip></q-btn
-                  >
-                </div>
-                <span v-else class="text-caption text_secondary">1 copy</span>
-              </q-item-section>
-            </q-item>
-          </q-list>
-        </q-card-section>
-        <q-card-actions>
-          <q-space />
-          <q-btn v-close-popup flat color="secondary" label="Cancel" no-caps
-            ><q-tooltip :delay="1000">Cancel</q-tooltip></q-btn
-          >
-          <q-btn
-            color="primary"
-            text-color="dark"
-            label="Move cards"
-            :disable="!transfer_folder_id || missing_transfer_pokedex_choices"
-            no-caps
-            @click="confirm_bulk_transfer"
-            ><q-tooltip :delay="1000">Move cards</q-tooltip></q-btn
-          >
-        </q-card-actions>
-      </q-card>
-    </q-dialog>
+    <collection-transfer-dialog
+      ref="transfer_dialog"
+      :rows="selected_transfer_rows"
+      :destination_folders="destination_folders"
+      @saved="clear_selection"
+    />
 
-    <q-dialog v-model="show_bulk_edit_dialog">
-      <q-card class="app_surface text-white" style="width: 480px; max-width: 94vw">
-        <q-card-section>
-          <div class="text-h6">Edit selected cards</div>
-          <div class="text-body2 text_secondary">
-            Change the language of {{ selected_entry_ids.size }} selected
-            {{ selected_entry_ids.size === 1 ? 'entry' : 'entries' }}.
-          </div>
-        </q-card-section>
-        <q-card-section>
-          <q-select
-            v-model="bulk_edit_language_id"
-            :options="all_language_options"
-            emit-value
-            map-options
-            dark
-            outlined
-            label="Language"
-          />
-        </q-card-section>
-        <q-card-actions>
-          <q-space />
-          <q-btn v-close-popup flat color="secondary" label="Cancel" no-caps
-            ><q-tooltip :delay="1000">Cancel</q-tooltip></q-btn
-          >
-          <q-btn
-            color="primary"
-            text-color="dark"
-            label="Apply changes"
-            :disable="!bulk_edit_language_id"
-            no-caps
-            @click="confirm_bulk_edit"
-            ><q-tooltip :delay="1000">Apply changes</q-tooltip></q-btn
-          >
-        </q-card-actions>
-      </q-card>
-    </q-dialog>
+    <collection-bulk-edit-dialog
+      ref="bulk_editor"
+      :entry_ids="[...selected_entry_ids]"
+      @saved="clear_selection"
+    />
 
-    <q-dialog v-model="show_edit_dialog">
-      <q-card class="app_surface text-white" style="width: 720px; max-width: 94vw">
-        <q-card-section>
-          <div class="text-h6">
-            {{ editing_entry?.entry.wanted ? 'Edit wanted card' : 'Edit collection card' }}
-          </div>
-          <div class="text-body2 text_secondary">{{ editing_entry?.card.display_name }}</div>
-        </q-card-section>
-        <q-card-section class="row q-col-gutter-md q-row-gutter-md">
-          <template v-if="editing_manual_card">
-            <div class="col-12">
-              <q-input v-model="edit_manual_name" dark outlined label="Card name *" />
-            </div>
-            <div class="col-12 col-sm-6">
-              <q-input v-model="edit_manual_set_name" dark outlined label="Set name" />
-            </div>
-            <div class="col-12 col-sm-6">
-              <q-input v-model="edit_manual_number" dark outlined label="Set number" />
-            </div>
-            <div class="col-12 col-sm-6">
-              <q-select
-                v-model="edit_manual_category"
-                :options="category_options"
-                dark
-                outlined
-                label="Category"
-              />
-            </div>
-            <div class="col-12 col-sm-6">
-              <q-input v-model="edit_manual_rarity" dark outlined label="Rarity" />
-            </div>
-            <div class="col-12 col-sm-6">
-              <q-input v-model="edit_manual_pokemon_name" dark outlined label="Pokémon name" />
-            </div>
-            <div class="col-12 col-sm-6">
-              <q-input
-                v-model.number="edit_manual_hp"
-                type="number"
-                min="1"
-                dark
-                outlined
-                label="HP"
-              />
-            </div>
-            <div class="col-12 col-sm-6">
-              <q-input v-model="edit_manual_types" dark outlined label="Types (comma-separated)" />
-            </div>
-            <div class="col-12 col-sm-6">
-              <q-input v-model="edit_manual_illustrator" dark outlined label="Illustrator" />
-            </div>
-            <div class="col-12 col-sm-6">
-              <q-input
-                v-model.number="edit_manual_value"
-                type="number"
-                min="0"
-                step="0.01"
-                dark
-                outlined
-                label="Estimated value (€)"
-              />
-            </div>
-            <div class="col-12 col-sm-6">
-              <q-input
-                v-model="edit_manual_release_date"
-                mask="##-##-####"
-                dark
-                outlined
-                label="Release date"
-                hint="DD-MM-YYYY"
-              />
-            </div>
-            <div class="col-12">
-              <q-input v-model="edit_manual_notes" type="textarea" dark outlined label="Notes" />
-            </div>
-            <div class="col-12">
-              <q-file
-                v-model="edit_manual_image_file"
-                dark
-                outlined
-                accept="image/jpeg,image/png,image/webp"
-                label="Replace or add image"
-                @update:model-value="prepare_edit_manual_image"
-              >
-                <template #prepend><q-icon name="image" /></template>
-              </q-file>
-            </div>
-            <div v-if="edit_manual_image_preview" class="col-12">
-              <q-img
-                :src="edit_manual_image_preview"
-                fit="contain"
-                class="app_surface rounded-borders"
-                style="max-height: 400px"
-              />
-            </div>
-            <div v-if="edit_save_error" class="col-12 text-negative">{{ edit_save_error }}</div>
-          </template>
-          <div class="col-12 col-sm-6">
-            <q-input
-              v-model.number="edit_quantity"
-              type="number"
-              min="1"
-              step="1"
-              dark
-              outlined
-              label="Quantity"
-            />
-          </div>
-          <div class="col-12 col-sm-6">
-            <q-select
-              v-model="edit_language_id"
-              :options="edit_language_options"
-              emit-value
-              map-options
-              dark
-              outlined
-              label="Language"
-            />
-          </div>
-          <div v-if="editing_manual_card" class="col-12 col-sm-6">
-            <q-input v-model="edit_variant_id" dark outlined label="Variant" />
-          </div>
-          <div v-if="!editing_entry?.entry.wanted" class="col-12 col-sm-6">
-            <q-select
-              v-model="edit_condition"
-              :options="condition_options"
-              emit-value
-              map-options
-              dark
-              outlined
-              label="Condition"
-            />
-          </div>
-          <div v-else class="col-12 col-sm-6 flex items-center">
-            <q-checkbox v-model="edit_strong_language" dark label="Require this exact language" />
-          </div>
-          <div class="col-12" :class="{ 'col-sm-6': editing_manual_card }">
-            <collection-folder-select
-              v-model="edit_folder_id"
-              :folders="collection_store.folders.value"
-              dark
-              outlined
-              label="Collection"
-            />
-          </div>
-        </q-card-section>
-        <q-card-actions>
-          <q-space />
-          <q-btn v-close-popup flat color="secondary" label="Cancel" no-caps
-            ><q-tooltip :delay="1000">Cancel</q-tooltip></q-btn
-          >
-          <q-btn
-            color="primary"
-            text-color="dark"
-            label="Save changes"
-            :disable="edit_quantity < 1 || !edit_language_id || !edit_folder_id"
-            no-caps
-            @click="save_entry"
-            ><q-tooltip :delay="1000">Save changes</q-tooltip></q-btn
-          >
-        </q-card-actions>
-      </q-card>
-    </q-dialog>
+    <collection-entry-dialog ref="entry_editor" />
 
     <q-dialog
       :model-value="entry_to_delete !== null"
@@ -638,26 +362,7 @@
       </q-card>
     </q-dialog>
 
-    <q-dialog v-model="show_pokedex_options">
-      <q-card class="app_surface text-white" style="width: 1200px; max-width: 96vw">
-        <q-card-section><div class="text-h6">Pokédex binder options</div></q-card-section>
-        <q-card-section><pokedex-binder-options v-model="editing_pokedex_config" /></q-card-section>
-        <q-card-actions>
-          <q-space />
-          <q-btn v-close-popup flat color="secondary" label="Cancel" no-caps
-            ><q-tooltip :delay="1000">Cancel</q-tooltip></q-btn
-          >
-          <q-btn
-            color="primary"
-            text-color="dark"
-            label="Save and recalculate"
-            no-caps
-            @click="save_pokedex_options"
-            ><q-tooltip :delay="1000">Save and recalculate</q-tooltip></q-btn
-          >
-        </q-card-actions>
-      </q-card>
-    </q-dialog>
+    <collection-pokedex-dialog ref="pokedex_dialog" :folder_id="folder_id" />
 
     <manual-card-dialog v-model="show_manual_card_dialog" :initial_folder_id="folder_id" />
   </q-page>
@@ -669,133 +374,125 @@
   import { computed, ref, watch } from 'vue';
 
   // import components
-  import CollectionFolderSelect from '../components/collection_folder_select.vue';
-  import PokedexBinderOptions from '../components/pokedex_binder_options.vue';
+  import CollectionBulkEditDialog from '../components/collection/collection_bulk_edit_dialog.vue';
+  import CollectionTransferDialog from '../components/collection/collection_transfer_dialog.vue';
+  import CollectionPokedexDialog from '../components/collection/collection_pokedex_dialog.vue';
+  import CollectionEntryDialog from '../components/collection/collection_entry_dialog.vue';
   import ManualCardDialog from '../components/manual_card_dialog.vue';
   import CardSortSelector from '../components/card_sort_selector.vue';
   import BackToTopButton from '../components/back_to_top_button.vue';
   import CardList from '../components/card_list.vue';
 
   // import utils
+  import { download_wanted_placeholders_pdf } from '../utils/wanted_placeholders_pdf';
+  import { collection_store } from '../store/modules/collection';
+  import { format_euro_price } from '../utils/card_display';
+  import { resolve_card_image } from '../utils/card_images';
+  import { binder_store } from '../store/modules/binders';
+  import { localized_value } from '../utils/localization';
   import {
     get_card_by_id,
     get_languages,
     get_pokemon,
     get_set_by_id,
   } from '../services/catalog_storage';
-  import { download_wanted_placeholders_pdf } from '../utils/wanted_placeholders_pdf';
-  import { card_conditions, collection_store } from '../store/modules/collection';
-  import { format_french_date, parse_french_date } from '../utils/dates';
-  import { manual_image_store } from '../store/modules/manual_images';
-  import { resolve_card_image } from '../utils/card_images';
-  import { localized_value } from '../utils/localization';
-  import { binder_store } from '../store/modules/binders';
   import { store } from '../store/index';
   import {
     build_display_card,
     cardmarket_display_price,
     compare_card_release_and_number,
-    format_euro_price,
   } from '../utils/card_display';
   import {
-    copy_pokedex_binder_config,
     pokedex_candidates_by_target,
     pokedex_placeholder_card,
     pokemon_id_from_requirement,
   } from '../utils/pokedex_binder';
 
   // import types
-  import type { Pokedex_Binder_Config } from '../utils/pokedex_binder';
-  import type { Manual_Collection_Card } from '../models/collection';
+  import type { Collection_Entry, Collection_Folder } from '../store/modules/collection';
+  import type { Collection_Row } from '../models/collection_view';
   import type { Collection_Folder_Filters } from '../store/index';
   import type { Display_Card } from '../utils/card_display';
   import type { Card_Sort } from '../utils/card_sorting';
-  import type {
-    Card_Condition,
-    Collection_Entry,
-    Collection_Folder,
-  } from '../store/modules/collection';
-
-  /* types */
-  type Collection_Row = {
-    entry: Collection_Entry;
-    card: Display_Card;
-    release_date: string | null;
-    pokedex_number: number | null;
-    unit_price: number | null;
-    total_value: number;
-  };
 
   /* hooks */
   const route = useRoute();
+
   const router = useRouter();
 
   /* const vars */
   const initial_folder_id = String(route.params.folderId ?? '');
+
   const stored_filters = store.state.collection_folder_filters[initial_folder_id];
 
-  /* reactive vars */
-  const search = ref<string>(stored_filters?.search ?? '');
-  const collection_tab = ref<'owned' | 'wanted'>(stored_filters?.tab ?? 'owned');
-  const selected_language_id = ref<string | null>(stored_filters?.language_id ?? null);
-  const only_non_fitting = ref<boolean>(stored_filters?.only_non_fitting ?? false);
-  const only_duplicates = ref<boolean>(stored_filters?.only_duplicates ?? false);
-  const only_available_wanted = ref<boolean>(stored_filters?.only_available_wanted ?? false);
-  const selected_sort = ref<Card_Sort>(stored_filters?.sort ?? 'release-desc');
-
-  /* const vars */
   const collection_row_step = 48;
 
+  const language_names = new Map(get_languages().map((language) => [language.id, language.name]));
+
+  const pokemon = get_pokemon();
+
+  const pokedex_by_pokemon_id = new Map(pokemon.map((entry) => [entry.id, entry.pokedex_id]));
+
+  const pokedex_by_pokemon_name = new Map(
+    pokemon.flatMap((entry) =>
+      [
+        entry.name,
+        ...Object.values(entry.names).filter((name): name is string => Boolean(name)),
+      ].map((name) => [name.toLocaleLowerCase(), entry.pokedex_id] as const),
+    ),
+  );
+
   /* reactive vars */
+  const entry_editor = ref<InstanceType<typeof CollectionEntryDialog> | null>(null);
+
+  const transfer_dialog = ref<InstanceType<typeof CollectionTransferDialog> | null>(null);
+
+  const bulk_editor = ref<InstanceType<typeof CollectionBulkEditDialog> | null>(null);
+
+  const pokedex_dialog = ref<InstanceType<typeof CollectionPokedexDialog> | null>(null);
+
+  const search = ref<string>(stored_filters?.search ?? '');
+
+  const collection_tab = ref<'owned' | 'wanted'>(stored_filters?.tab ?? 'owned');
+
+  const selected_language_id = ref<string | null>(stored_filters?.language_id ?? null);
+
+  const only_non_fitting = ref<boolean>(stored_filters?.only_non_fitting ?? false);
+
+  const only_duplicates = ref<boolean>(stored_filters?.only_duplicates ?? false);
+
+  const only_available_wanted = ref<boolean>(stored_filters?.only_available_wanted ?? false);
+
+  const selected_sort = ref<Card_Sort>(stored_filters?.sort ?? 'release-desc');
+
   const visible_row_count = ref<number>(collection_row_step);
+
   const selection_mode = ref<boolean>(false);
+
   const selected_entry_ids = ref<Set<string>>(new Set<string>());
-  const show_transfer_dialog = ref<boolean>(false);
-  const transfer_folder_id = ref<string>('');
-  const transfer_quantities = ref<Record<string, number>>({});
-  const transfer_pokedex_requirements = ref<Record<string, string>>({});
-  const show_bulk_edit_dialog = ref<boolean>(false);
+
   const show_bulk_delete_dialog = ref<boolean>(false);
-  const bulk_edit_language_id = ref<string>('');
+
   const entry_to_delete = ref<Collection_Row | null>(null);
+
   const show_manual_card_dialog = ref<boolean>(false);
-  const show_pokedex_options = ref<boolean>(false);
-  const editing_pokedex_config = ref<Pokedex_Binder_Config>({} as Pokedex_Binder_Config);
+
   const show_pokedex_candidates = ref<boolean>(false);
+
   const selected_pokedex_placeholder = ref<Display_Card | null>(null);
-  const show_edit_dialog = ref<boolean>(false);
-  const editing_entry = ref<Collection_Row | null>(null);
-  const edit_quantity = ref<number>(1);
-  const edit_language_id = ref<string>('');
-  const edit_strong_language = ref<boolean>(false);
-  const edit_condition = ref<Card_Condition>('NM');
-  const edit_folder_id = ref<string>('');
-  const edit_variant_id = ref<string>('normal');
-  const edit_manual_name = ref<string>('');
-  const edit_manual_set_name = ref<string>('');
-  const edit_manual_number = ref<string>('');
-  const edit_manual_category = ref<string>('pokemon');
-  const edit_manual_rarity = ref<string>('');
-  const edit_manual_pokemon_name = ref<string>('');
-  const edit_manual_hp = ref<number | null>(null);
-  const edit_manual_types = ref<string>('');
-  const edit_manual_illustrator = ref<string>('');
-  const edit_manual_notes = ref<string>('');
-  const edit_manual_value = ref<number | null>(null);
-  const edit_manual_release_date = ref<string>('');
-  const edit_manual_image_file = ref<File | null>(null);
-  const edit_manual_image_data_url = ref<string | null>(null);
-  const edit_manual_image_preview = ref<string | null>(null);
-  const edit_save_error = ref<string | null>(null);
+
   const generating_placeholders = ref<boolean>(false);
+
   const placeholder_error = ref<string | null>(null);
 
   /* computed vars */
   const folder_id = computed<string>(() => String(route.params.folderId ?? ''));
+
   const folder = computed<Collection_Folder | null>(
     () =>
       collection_store.folders.value.find((candidate) => candidate.id === folder_id.value) ?? null,
   );
+
   const selected_pokedex_candidates = computed<Display_Card[]>(() => {
     const config = folder.value?.pokedex_config;
     const placeholder = selected_pokedex_placeholder.value;
@@ -811,73 +508,8 @@
     });
   });
 
-  /* functions */
-  const open_pokedex_options = (): void => {
-    if (!folder.value?.pokedex_config) return;
-    editing_pokedex_config.value = copy_pokedex_binder_config(folder.value.pokedex_config);
-    show_pokedex_options.value = true;
-  };
-  const save_pokedex_options = (): void => {
-    collection_store.update_pokedex_config(folder_id.value, editing_pokedex_config.value);
-    show_pokedex_options.value = false;
-  };
-
-  /* computed vars */
   const destination_folders = computed<Collection_Folder[]>(() =>
     collection_store.folders.value.filter((candidate) => candidate.id !== folder_id.value),
-  );
-
-  /* const vars */
-  const language_names = new Map(get_languages().map((language) => [language.id, language.name]));
-  const all_language_options = get_languages().map((language) => ({
-    label: language.name,
-    value: language.id,
-  }));
-  const pokemon = get_pokemon();
-  const pokedex_by_pokemon_id = new Map(pokemon.map((entry) => [entry.id, entry.pokedex_id]));
-  const pokedex_by_pokemon_name = new Map(
-    pokemon.flatMap((entry) =>
-      [
-        entry.name,
-        ...Object.values(entry.names).filter((name): name is string => Boolean(name)),
-      ].map((name) => [name.toLocaleLowerCase(), entry.pokedex_id] as const),
-    ),
-  );
-
-  /* computed vars */
-  const edit_language_options = computed<{ label: string; value: string }[]>(() => {
-    if (!editing_entry.value) return [];
-    if (editing_entry.value.entry.set_id === 'manual-collection') {
-      return get_languages().map((language) => ({ label: language.name, value: language.id }));
-    }
-    const set = get_set_by_id(editing_entry.value.entry.set_id);
-    const card = get_card_by_id(
-      editing_entry.value.entry.set_id,
-      editing_entry.value.entry.card_id,
-    );
-    const variant = card?.variants.find(
-      (candidate) => candidate.id === editing_entry.value?.entry.variant_id,
-    );
-    const language_ids = variant?.language_ids?.length
-      ? variant.language_ids
-      : (set?.language_ids ?? []);
-    return language_ids.map((language_id) => ({
-      label: language_names.get(language_id) ?? language_id.toUpperCase(),
-      value: language_id,
-    }));
-  });
-
-  /* const vars */
-  const condition_options = card_conditions.map((entry) => ({ ...entry }));
-  const category_options = ['pokemon', 'trainer', 'energy'];
-
-  /* computed vars */
-  const editing_manual_card = computed<Manual_Collection_Card | null>(() =>
-    editing_entry.value?.entry.set_id === 'manual-collection'
-      ? (collection_store.manual_cards.value.find(
-          (card) => card.id === editing_entry.value?.entry.card_id,
-        ) ?? null)
-      : null,
   );
 
   const collection_rows = computed<Collection_Row[]>(() =>
@@ -978,9 +610,11 @@
   const active_rows = computed<Collection_Row[]>(() =>
     collection_rows.value.filter((row) => row.entry.wanted === (collection_tab.value === 'wanted')),
   );
+
   const selected_transfer_rows = computed<Collection_Row[]>(() =>
     collection_rows.value.filter((row) => selected_entry_ids.value.has(row.entry.id)),
   );
+
   const wanted_rows = computed<Collection_Row[]>(() =>
     collection_rows.value.filter((row) => row.entry.wanted),
   );
@@ -1065,6 +699,7 @@
         return left.card.display_name.localeCompare(right.card.display_name);
       });
   });
+
   const displayed_rows = computed<Collection_Row[]>(() =>
     filtered_rows.value.slice(0, visible_row_count.value),
   );
@@ -1074,80 +709,41 @@
       .filter((row) => !row.entry.wanted)
       .reduce((total, row) => total + row.entry.quantity, 0),
   );
+
   const wanted_count = computed<number>(() =>
     collection_rows.value
       .filter((row) => row.entry.wanted)
       .reduce((total, row) => total + row.entry.quantity, 0),
   );
+
   const folder_value = computed<number>(() =>
     collection_rows.value
       .filter((row) => !row.entry.wanted)
       .reduce((total, row) => total + row.total_value, 0),
   );
+
   const displayed_entry_ids = computed<string[]>(() =>
     displayed_rows.value
       .filter((row) => !row.entry.pokedex_requirement_id || !row.entry.wanted)
       .map((row) => row.entry.id),
   );
+
   const all_displayed_selected = computed<boolean>(
     () =>
       displayed_entry_ids.value.length > 0 &&
       displayed_entry_ids.value.every((entry_id) => selected_entry_ids.value.has(entry_id)),
   );
+
   const some_displayed_selected = computed<boolean>(() =>
     displayed_entry_ids.value.some((entry_id) => selected_entry_ids.value.has(entry_id)),
   );
 
-  /* watchers */
-  watch(collection_tab, () => {
-    selected_entry_ids.value = new Set();
-    selected_language_id.value = null;
-    only_non_fitting.value = false;
-    only_duplicates.value = false;
-    visible_row_count.value = collection_row_step;
-  });
-  watch(
-    [
-      search,
-      selected_language_id,
-      only_non_fitting,
-      only_duplicates,
-      only_available_wanted,
-      selected_sort,
-    ],
-    () => {
-      visible_row_count.value = collection_row_step;
-    },
-  );
-  watch(
-    [
-      folder_id,
-      search,
-      collection_tab,
-      selected_language_id,
-      only_non_fitting,
-      only_duplicates,
-      only_available_wanted,
-      selected_sort,
-    ],
-    () => {
-      store.commit('set_collection_folder_filters', {
-        folder_id: folder_id.value,
-        filters: {
-          search: search.value,
-          tab: collection_tab.value,
-          language_id: selected_language_id.value,
-          only_non_fitting: only_non_fitting.value,
-          only_duplicates: only_duplicates.value,
-          only_available_wanted: only_available_wanted.value,
-          sort: selected_sort.value,
-        } satisfies Collection_Folder_Filters,
-      });
-    },
-    { immediate: true },
-  );
-
   /* functions */
+  const clear_selection = (): void => {
+    selected_entry_ids.value = new Set();
+    selection_mode.value = false;
+  };
+
   const set_only_non_fitting = (enabled: boolean): void => {
     only_non_fitting.value = enabled;
     if (enabled) only_duplicates.value = false;
@@ -1181,99 +777,6 @@
     selected_entry_ids.value = next;
   };
 
-  const open_transfer_dialog = (): void => {
-    transfer_folder_id.value = destination_folders.value[0]?.id ?? '';
-    transfer_quantities.value = Object.fromEntries(
-      selected_transfer_rows.value.map((row) => [row.entry.id, 1]),
-    );
-    transfer_pokedex_requirements.value = {};
-    show_transfer_dialog.value = true;
-  };
-
-  /* computed vars */
-  const transfer_pokedex_options_by_entry = computed<
-    Record<string, Array<{ label: string; value: string }>>
-  >(() =>
-    Object.fromEntries(
-      selected_transfer_rows.value.map((row) => [
-        row.entry.id,
-        collection_store.matching_pokedex_requirements({
-          folder_id: transfer_folder_id.value,
-          set_id: row.entry.set_id,
-          card_id: row.entry.card_id,
-          variant_id: row.entry.variant_id,
-          language_id: row.entry.language_id,
-        }),
-      ]),
-    ),
-  );
-
-  /* functions */
-  const transfer_pokedex_options = (row: Collection_Row): Array<{ label: string; value: string }> =>
-    transfer_pokedex_options_by_entry.value[row.entry.id] ?? [];
-
-  /* computed vars */
-  const missing_transfer_pokedex_choices = computed<boolean>(() =>
-    selected_transfer_rows.value.some(
-      (row) =>
-        transfer_pokedex_options(row).length > 1 &&
-        !transfer_pokedex_requirements.value[row.entry.id],
-    ),
-  );
-
-  /* functions */
-  const change_transfer_quantity = (entry_id: string, change: number, maximum: number): void => {
-    const current = transfer_quantities.value[entry_id] ?? 1;
-    transfer_quantities.value[entry_id] = Math.min(maximum, Math.max(1, current + change));
-  };
-
-  const confirm_bulk_transfer = (): void => {
-    if (!transfer_folder_id.value) return;
-    collection_store.transfer_entry_quantities(
-      selected_transfer_rows.value.map((row) => ({
-        entry_id: row.entry.id,
-        quantity: Math.min(
-          row.entry.quantity,
-          Math.max(1, Math.floor(Number(transfer_quantities.value[row.entry.id]) || 1)),
-        ),
-        pokedex_requirement_id:
-          transfer_pokedex_requirements.value[row.entry.id] ||
-          (transfer_pokedex_options(row).length === 1
-            ? transfer_pokedex_options(row)[0].value
-            : undefined),
-      })),
-      transfer_folder_id.value,
-    );
-    selected_entry_ids.value = new Set();
-    selection_mode.value = false;
-    show_transfer_dialog.value = false;
-    transfer_folder_id.value = '';
-    transfer_quantities.value = {};
-    transfer_pokedex_requirements.value = {};
-  };
-
-  const open_bulk_edit_dialog = (): void => {
-    const selected_entries = collection_store.entries.value.filter((entry) =>
-      selected_entry_ids.value.has(entry.id),
-    );
-    const selected_languages = new Set(selected_entries.map((entry) => entry.language_id));
-    bulk_edit_language_id.value =
-      selected_languages.size === 1 ? (selected_entries[0]?.language_id ?? '') : '';
-    show_bulk_edit_dialog.value = true;
-  };
-
-  const confirm_bulk_edit = (): void => {
-    if (!bulk_edit_language_id.value) return;
-    collection_store.update_entries_language(
-      [...selected_entry_ids.value],
-      bulk_edit_language_id.value,
-    );
-    selected_entry_ids.value = new Set();
-    selection_mode.value = false;
-    show_bulk_edit_dialog.value = false;
-    bulk_edit_language_id.value = '';
-  };
-
   const confirm_bulk_delete = (): void => {
     for (const entry_id of selected_entry_ids.value) {
       collection_store.remove_entry(entry_id);
@@ -1283,71 +786,9 @@
     show_bulk_delete_dialog.value = false;
   };
 
-  const open_edit_entry = (row: Collection_Row): void => {
-    editing_entry.value = row;
-    edit_quantity.value = row.entry.quantity;
-    edit_language_id.value = row.entry.language_id;
-    edit_strong_language.value = row.entry.strong_language === true;
-    edit_condition.value = row.entry.condition;
-    edit_folder_id.value = row.entry.folder_id;
-    edit_variant_id.value = row.entry.variant_id;
-    edit_manual_image_file.value = null;
-    edit_manual_image_data_url.value = null;
-    edit_save_error.value = null;
-    const manual_card =
-      row.entry.set_id === 'manual-collection'
-        ? collection_store.manual_cards.value.find((card) => card.id === row.entry.card_id)
-        : null;
-    if (manual_card) {
-      edit_manual_name.value = manual_card.name;
-      edit_manual_set_name.value = manual_card.set_name;
-      edit_manual_number.value = manual_card.number;
-      edit_manual_category.value = manual_card.category;
-      edit_manual_rarity.value = manual_card.rarity;
-      edit_manual_pokemon_name.value = manual_card.pokemon_name;
-      edit_manual_hp.value = manual_card.hp;
-      edit_manual_types.value = manual_card.types.join(', ');
-      edit_manual_illustrator.value = manual_card.illustrator;
-      edit_manual_notes.value = manual_card.notes;
-      edit_manual_value.value = manual_card.estimated_value;
-      edit_manual_release_date.value = manual_card.release_date
-        ? format_french_date(manual_card.release_date)
-        : '';
-      const image = manual_image_store.find(
-        'manual-collection',
-        manual_card.id,
-        row.entry.variant_id,
-        row.entry.language_id,
-      );
-      edit_manual_image_preview.value = image
-        ? `${image.url}?v=${encodeURIComponent(image.updated_at)}`
-        : null;
-    }
-    show_edit_dialog.value = true;
-  };
-
-  const prepare_edit_manual_image = (file: File | null): void => {
-    edit_manual_image_data_url.value = null;
-    edit_save_error.value = null;
-    if (!file) return;
-    if (!['image/jpeg', 'image/png', 'image/webp'].includes(file.type) || file.size > 15_000_000) {
-      edit_save_error.value = 'Choose a JPEG, PNG, or WebP image smaller than 15 MB.';
-      return;
-    }
-    const reader = new FileReader();
-    reader.onload = () => {
-      edit_manual_image_data_url.value = typeof reader.result === 'string' ? reader.result : null;
-      edit_manual_image_preview.value = edit_manual_image_data_url.value;
-    };
-    reader.onerror = () => {
-      edit_save_error.value = 'Unable to read the image.';
-    };
-    reader.readAsDataURL(file);
-  };
-
   const open_edit_entry_by_id = (entry: Collection_Entry): void => {
     const row = collection_rows.value.find((candidate) => candidate.entry.id === entry.id);
-    if (row) open_edit_entry(row);
+    if (row) entry_editor.value?.open(row);
   };
 
   const set_entry_to_delete = (entry: Collection_Entry): void => {
@@ -1366,7 +807,7 @@
       const row = collection_rows.value.find(
         (candidate) => candidate.entry.card_id === card.card_id,
       );
-      if (row) open_edit_entry(row);
+      if (row) entry_editor.value?.open(row);
       return;
     }
     void router.push({
@@ -1381,64 +822,6 @@
       path: `/set/${card.set_id}/card/${card.card_id}`,
       query: { variant: card.variant_id, from: 'collection', folder: folder_id.value },
     });
-  };
-
-  const save_entry = async (): Promise<void> => {
-    if (
-      !editing_entry.value ||
-      edit_quantity.value < 1 ||
-      !edit_language_id.value ||
-      !edit_folder_id.value
-    )
-      return;
-    const entry = editing_entry.value.entry;
-    const manual_card = editing_manual_card.value;
-    if (manual_card) {
-      if (!edit_manual_name.value.trim()) return;
-      const parsed_release_date = parse_french_date(edit_manual_release_date.value);
-      if (edit_manual_release_date.value && !parsed_release_date) {
-        edit_save_error.value = 'Release date must use DD-MM-YYYY and be a valid date.';
-        return;
-      }
-      collection_store.update_manual_card(manual_card.id, {
-        name: edit_manual_name.value,
-        set_name: edit_manual_set_name.value,
-        number: edit_manual_number.value,
-        category: edit_manual_category.value,
-        rarity: edit_manual_rarity.value,
-        pokemon_name: edit_manual_pokemon_name.value,
-        hp: edit_manual_hp.value,
-        types: edit_manual_types.value.split(','),
-        illustrator: edit_manual_illustrator.value,
-        notes: edit_manual_notes.value,
-        estimated_value: edit_manual_value.value,
-        release_date: parsed_release_date,
-      });
-      entry.variant_id = edit_variant_id.value.trim() || 'normal';
-      if (edit_manual_image_data_url.value) {
-        try {
-          await manual_image_store.upload({
-            set_id: 'manual-collection',
-            card_id: manual_card.id,
-            variant_id: entry.variant_id,
-            language_id: edit_language_id.value,
-            data_url: edit_manual_image_data_url.value,
-          });
-        } catch (error) {
-          edit_save_error.value = error instanceof Error ? error.message : String(error);
-          return;
-        }
-      }
-    }
-    collection_store.update_entry(entry.id, {
-      folder_id: edit_folder_id.value,
-      language_id: edit_language_id.value,
-      condition: edit_condition.value,
-      quantity: edit_quantity.value,
-      strong_language: edit_strong_language.value,
-    });
-    show_edit_dialog.value = false;
-    editing_entry.value = null;
   };
 
   const confirm_remove_entry = (): void => {
@@ -1461,4 +844,55 @@
         generating_placeholders.value = false;
       });
   };
+
+  /* watchers */
+  watch(collection_tab, () => {
+    selected_entry_ids.value = new Set();
+    selected_language_id.value = null;
+    only_non_fitting.value = false;
+    only_duplicates.value = false;
+    visible_row_count.value = collection_row_step;
+  });
+
+  watch(
+    [
+      search,
+      selected_language_id,
+      only_non_fitting,
+      only_duplicates,
+      only_available_wanted,
+      selected_sort,
+    ],
+    () => {
+      visible_row_count.value = collection_row_step;
+    },
+  );
+
+  watch(
+    [
+      folder_id,
+      search,
+      collection_tab,
+      selected_language_id,
+      only_non_fitting,
+      only_duplicates,
+      only_available_wanted,
+      selected_sort,
+    ],
+    () => {
+      store.commit('set_collection_folder_filters', {
+        folder_id: folder_id.value,
+        filters: {
+          search: search.value,
+          tab: collection_tab.value,
+          language_id: selected_language_id.value,
+          only_non_fitting: only_non_fitting.value,
+          only_duplicates: only_duplicates.value,
+          only_available_wanted: only_available_wanted.value,
+          sort: selected_sort.value,
+        } satisfies Collection_Folder_Filters,
+      });
+    },
+    { immediate: true },
+  );
 </script>

@@ -36,7 +36,6 @@
     window.addEventListener('scroll', update_visibility, { passive: true });
   });
 
-  /* const vars */
   onBeforeUnmount(() => {
     window.removeEventListener('scroll', update_visibility);
   });

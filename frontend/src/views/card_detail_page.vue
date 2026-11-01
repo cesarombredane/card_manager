@@ -86,7 +86,7 @@
                 icon="delete"
                 :loading="manual_image_saving"
                 no-caps
-                aria-label="delete"
+                aria-label="Delete manual image"
                 @click="delete_manual_image"
               >
                 <q-tooltip :delay="1000">Delete manual image</q-tooltip>
@@ -134,7 +134,7 @@
                     :icon="is_wanted ? 'favorite' : 'favorite_border'"
                     :disable="!current_card || !selected_variant"
                     no-caps
-                    aria-label="Perform this action"
+                    :aria-label="is_wanted ? 'Add another wanted copy' : 'Add to want list'"
                     @click="show_want_list_dialog = true"
                   >
                     <q-tooltip :delay="1000">{{
@@ -456,11 +456,6 @@
   import LanguageSelector from '../components/language_selector.vue';
 
   // import utils
-  import {
-    card_image_ratio,
-    cardmarket_display_price,
-    format_euro_price,
-  } from '../utils/card_display';
   import { get_card_by_id, get_pokemon, get_set_by_id } from '../services/catalog_storage';
   import { manual_image_store } from '../store/modules/manual_images';
   import { collection_store } from '../store/modules/collection';
@@ -468,6 +463,11 @@
   import { localized_value } from '../utils/localization';
   import { format_french_date } from '../utils/dates';
   import { use_store } from '../store';
+  import {
+    card_image_ratio,
+    cardmarket_display_price,
+    format_euro_price,
+  } from '../utils/card_display';
 
   // import types
   import type { Manual_Image_Entry } from '../store/modules/manual_images';
@@ -481,9 +481,16 @@
     Set,
   } from '../models/catalog';
 
-  // Current route used to identify the selected card.
+  /* types */
+  type Card_Folder_Location = {
+    folder_id: string;
+    folder_name: string;
+    quantity: number;
+  };
 
   /* hooks */
+  // Current route used to identify the selected card.
+
   const route = useRoute();
 
   // Router used to navigate back to the set detail page.
@@ -492,9 +499,9 @@
   // Shared application state.
   const store = use_store();
 
+  /* const vars */
   // Current set id read from the route.
 
-  /* const vars */
   const set_id: string = String(route.params.setId ?? '');
 
   // Current card id read from the route.
@@ -535,18 +542,26 @@
       ? requested_variant_id
       : (current_card?.variants[0]?.id ?? 'normal'),
   );
+
   const show_collection_dialog = ref<boolean>(false);
+
   const show_want_list_dialog = ref<boolean>(false);
+
   const show_manual_image_dialog = ref<boolean>(false);
+
   const manual_image_file = ref<File | null>(null);
+
   const manual_image_data_url = ref<string | null>(null);
+
   const manual_image_preview = ref<string | null>(null);
+
   const manual_image_error = ref<string | null>(null);
+
   const manual_image_saving = ref<boolean>(false);
 
+  /* computed vars */
   // Currently selected language for localized card text and image.
 
-  /* computed vars */
   const selected_language_id = computed<string>({
     get: (): string => {
       const preferred_language_id: string = store.state.selected_language_id;
@@ -584,9 +599,11 @@
   });
 
   const selected_image_url = computed<string | null>(() => selected_image.value.url);
+
   const has_automatic_image = computed<boolean>(() =>
     Boolean(selected_variant.value?.images[selected_language_id.value]),
   );
+
   const current_manual_image = computed<Manual_Image_Entry | null>(() =>
     selected_variant.value
       ? manual_image_store.find(
@@ -606,12 +623,39 @@
     cardmarket_display_price(selected_cardmarket.value),
   );
 
-  /* types */
-  type Card_Folder_Location = {
-    folder_id: string;
-    folder_name: string;
-    quantity: number;
-  };
+  const owned_locations = computed<Card_Folder_Location[]>(() => card_locations(false));
+
+  const wanted_locations = computed<Card_Folder_Location[]>(() => card_locations(true));
+
+  const owned_quantity = computed<number>(() =>
+    owned_locations.value.reduce((total, location) => total + location.quantity, 0),
+  );
+
+  const is_wanted = computed<boolean>(() => wanted_locations.value.length > 0);
+
+  // Localized card display name.
+  const display_name = computed<string>(() => {
+    return (
+      localized_value(current_card?.name ?? {}, selected_language_id.value) ??
+      current_card?.id ??
+      'Unknown card'
+    );
+  });
+
+  // Localized evolution source.
+  const localized_evolves_from = computed<string | null>(() => {
+    return current_card?.evolves_from
+      ? localized_value(current_card.evolves_from, selected_language_id.value)
+      : null;
+  });
+
+  // Localized trainer rules text.
+
+  const localized_rules_text = computed<string | null>(() => {
+    return current_card?.rules_text
+      ? localized_value(current_card.rules_text, selected_language_id.value)
+      : null;
+  });
 
   /* functions */
   const card_locations = (wanted: boolean): Card_Folder_Location[] => {
@@ -640,35 +684,9 @@
       .sort((left, right) => left.folder_name.localeCompare(right.folder_name));
   };
 
-  /* computed vars */
-  const owned_locations = computed<Card_Folder_Location[]>(() => card_locations(false));
-  const wanted_locations = computed<Card_Folder_Location[]>(() => card_locations(true));
-  const owned_quantity = computed<number>(() =>
-    owned_locations.value.reduce((total, location) => total + location.quantity, 0),
-  );
-
-  const is_wanted = computed<boolean>(() => wanted_locations.value.length > 0);
-
-  // Localized card display name.
-  const display_name = computed<string>(() => {
-    return (
-      localized_value(current_card?.name ?? {}, selected_language_id.value) ??
-      current_card?.id ??
-      'Unknown card'
-    );
-  });
-
-  // Localized evolution source.
-  const localized_evolves_from = computed<string | null>(() => {
-    return current_card?.evolves_from
-      ? localized_value(current_card.evolves_from, selected_language_id.value)
-      : null;
-  });
-
   // Always displays both supported names so the species remains unambiguous
   // regardless of the currently selected card language.
 
-  /* functions */
   const pokemon_names = (pokemon_id: string): string => {
     const pokemon = pokemon_by_id.get(pokemon_id);
     if (!pokemon) return pokemon_id;
@@ -677,18 +695,8 @@
     return `English: ${english_name} · French: ${french_name}`;
   };
 
-  // Localized trainer rules text.
-
-  /* computed vars */
-  const localized_rules_text = computed<string | null>(() => {
-    return current_card?.rules_text
-      ? localized_value(current_card.rules_text, selected_language_id.value)
-      : null;
-  });
-
   // Formats enum-like values for display.
 
-  /* functions */
   const format_value = (value: string): string => {
     return value.replaceAll('_', ' ');
   };

@@ -1107,6 +1107,7 @@ const collection_operations = {
       condition: Card_Condition;
       quantity: number;
       strong_language?: boolean;
+      variant_id?: string;
     },
   ): void {
     const entry = state.entries.find((candidate) => candidate.id === entry_id);
@@ -1118,6 +1119,10 @@ const collection_operations = {
       !input.language_id
     )
       return;
+
+    if (entry.set_id === 'manual-collection' && input.variant_id !== undefined) {
+      entry.variant_id = input.variant_id.trim() || 'normal';
+    }
 
     const matching = state.entries.find(
       (candidate) =>

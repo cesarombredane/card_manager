@@ -361,17 +361,9 @@
   import type { Display_Card } from '../utils/card_display';
   import type { Card_Sort } from '../utils/card_sorting';
 
-  // Number of card results shown on the first render.
-
-  /* const vars */
-  const initial_visible_card_count = 12;
-
-  // Number of extra card results added when clicking show more.
-  const visible_card_step = 12;
-
+  /* hooks */
   // Current route used to read deep-linked filters.
 
-  /* hooks */
   const route = useRoute();
 
   // Router used to open the card detail page.
@@ -380,9 +372,16 @@
   // Shared application state.
   const store = use_store();
 
+  /* const vars */
+  // Number of card results shown on the first render.
+
+  const initial_visible_card_count = 12;
+
+  // Number of extra card results added when clicking show more.
+  const visible_card_step = 12;
+
   // Every set in the local data catalog.
 
-  /* const vars */
   const sets: Set[] = get_sets();
 
   // Every release series in the local data catalog.
@@ -395,6 +394,7 @@
   const all_international_language_ids: string[] = unique_values(
     sets.filter((set) => !set.series_id.startsWith('asia-')).flatMap((set) => set.language_ids),
   );
+
   const all_asia_language_ids: string[] = unique_values(
     sets.filter((set) => set.series_id.startsWith('asia-')).flatMap((set) => set.language_ids),
   );
@@ -411,6 +411,7 @@
       card.variants.map((variant) => variant.type ?? variant.id.split('-')[0]),
     ),
   );
+
   const variant_options: { label: string; value: string }[] = variant_types.map((variant_type) => ({
     label: variant_type
       .replaceAll('_', ' ')
@@ -427,13 +428,17 @@
 
   // Release dates indexed once for efficient card sorting.
   const set_release_dates = new Map<string, string>(sets.map((set) => [set.id, set.release_date]));
+
   const series_id_by_set_id = new Map<string, string>(sets.map((set) => [set.id, set.series_id]));
+
   const asia_set_ids = new globalThis.Set<string>(
     sets.filter((set) => set.series_id.startsWith('asia-')).map((set) => set.id),
   );
+
   const pokedex_by_pokemon_id = new Map<string, number>(
     pokemon.map((entry) => [entry.id, entry.pokedex_id]),
   );
+
   const pokemon_id_by_name = new Map<string, string>(
     pokemon.flatMap((entry) =>
       [entry.name, ...Object.values(entry.names)]
@@ -442,20 +447,17 @@
     ),
   );
 
-  // Reads a string query parameter from the current route.
-
-  /* functions */
-  const query_value = (key: string): string | null => {
-    const value = route.query[key];
-    return typeof value === 'string' && value !== '' ? value : null;
-  };
-
-  /* const vars */
   const stored_filters: Card_Search_Filters = store.state.card_search_filters;
 
-  // Preferred language for localized International labels and scans.
+  // Energy/type options represented by Pokemon cards in the catalog.
+
+  const energy_options: string[] = unique_values(
+    cards.filter((card) => card.category === 'pokemon').flatMap((card) => card.types ?? []),
+  );
 
   /* reactive vars */
+  // Preferred language for localized International labels and scans.
+
   const selected_international_language_id = ref<string>(
     stored_filters.international_language_id ??
       (sets.some(
@@ -472,15 +474,6 @@
 
   // Search text used to filter card names.
   const search = ref<string>(stored_filters.search);
-
-  // Selected artist filter.
-  const selected_artist = ref<string | null>(query_value('artist') ?? stored_filters.artist);
-
-  // Selected Pokemon filter.
-  const selected_pokemon = ref<string | null>(query_value('pokemon') ?? stored_filters.pokemon);
-
-  // Selected energy/type filter for Pokemon cards.
-  const selected_energy = ref<string | null>(query_value('energy') ?? stored_filters.energy);
 
   // Exact printed card number filter.
   const set_number = ref<string>(stored_filters.set_number ?? '');
@@ -535,9 +528,18 @@
   // Number of filtered cards currently visible.
   const visible_card_count = ref<number>(initial_visible_card_count);
 
-  // Artist filter options found across every card.
+  // Selected artist filter.
+  const selected_artist = ref<string | null>(query_value('artist') ?? stored_filters.artist);
+
+  // Selected Pokemon filter.
+  const selected_pokemon = ref<string | null>(query_value('pokemon') ?? stored_filters.pokemon);
+
+  // Selected energy/type filter for Pokemon cards.
+  const selected_energy = ref<string | null>(query_value('energy') ?? stored_filters.energy);
 
   /* computed vars */
+  // Artist filter options found across every card.
+
   const artist_options = computed<string[]>(() =>
     unique_values(cards.map((card) => card.illustrator ?? '')),
   );
@@ -554,17 +556,9 @@
       .map((item) => ({ label: item.name, value: item.id })),
   );
 
-  // Energy/type options represented by Pokemon cards in the catalog.
-
-  /* const vars */
-  const energy_options: string[] = unique_values(
-    cards.filter((card) => card.category === 'pokemon').flatMap((card) => card.types ?? []),
-  );
-
   // Pokemon filter options found across every card.
   // Base-species options display English canonical names while retaining stable ids.
 
-  /* computed vars */
   const pokemon_options = computed<{ label: string; value: string; search_names: string[] }[]>(() =>
     pokemon
       .filter((entry) => entry.form === null)
@@ -578,21 +572,8 @@
       })),
   );
 
-  // Keep the complete option objects available on initial/deep-linked loads so
-  // QSelect can resolve a stored Pokémon id to its human-readable label.
-
-  /* watchers */
-  watch(
-    pokemon_options,
-    (options): void => {
-      filtered_pokemon_options.value = options;
-    },
-    { immediate: true },
-  );
-
   // Index of the selected base species in Pokedex order.
 
-  /* computed vars */
   const selected_pokemon_index = computed<number>(() =>
     pokemon_options.value.findIndex((option) => option.value === selected_pokemon.value),
   );
@@ -850,9 +831,113 @@
     );
   });
 
-  // A region change exposes and selects exactly the series belonging to that region.
+  /* functions */
+  // Reads a string query parameter from the current route.
+
+  function query_value(key: string): string | null {
+    const value = route.query[key];
+    return typeof value === 'string' && value !== '' ? value : null;
+  }
+
+  // Narrows select options using a case-insensitive prefix match.
+
+  const filter_select_options = (
+    input_value: string,
+    options: string[],
+    filtered_options: { value: string[] },
+    update: (callback: () => void) => void,
+  ): void => {
+    const query: string = input_value.trim().toLowerCase();
+    update(() => {
+      filtered_options.value =
+        query === '' ? options : options.filter((option) => option.toLowerCase().startsWith(query));
+    });
+  };
+
+  // Filters artist suggestions as the user types.
+  const filter_artists = (input_value: string, update: (callback: () => void) => void): void => {
+    filter_select_options(input_value, artist_options.value, filtered_artist_options, update);
+  };
+
+  // Filters Pokemon suggestions as the user types.
+  const filter_pokemon = (input_value: string, update: (callback: () => void) => void): void => {
+    const query: string = input_value.trim().toLocaleLowerCase();
+    update(() => {
+      filtered_pokemon_options.value = pokemon_options.value.filter(
+        (option) =>
+          query === '' ||
+          option.search_names.some((name) => name.toLocaleLowerCase().startsWith(query)),
+      );
+    });
+  };
+
+  // Changes only the Pokemon filter, preserving every other search field.
+  const select_adjacent_pokemon = (option: { value: string } | null): void => {
+    if (!option) return;
+
+    // Keep the selected id-to-label mapping available after a narrowed text search.
+    filtered_pokemon_options.value = pokemon_options.value;
+    selected_pokemon.value = option.value;
+  };
+
+  // Deselects every series in the active card region.
+  const clear_series = (): void => {
+    selected_series_ids.value = [];
+  };
+
+  // Selects every series belonging to the active card region.
+  const select_all_series = (): void => {
+    selected_series_ids.value = available_series_options.value.map((option) => option.value);
+  };
+
+  // Deselects every broad physical card variant type.
+  const clear_variants = (): void => {
+    selected_variant_types.value = [];
+  };
+
+  // Selects every broad physical card variant type in the catalog.
+  const select_all_variants = (): void => {
+    selected_variant_types.value = [...variant_types];
+  };
+
+  // Deselects every rarity so the user can rebuild the filter from scratch.
+  const clear_rarities = (): void => {
+    selected_rarities.value = [];
+  };
+
+  // Selects every rarity represented in the card catalog.
+  const select_all_rarities = (): void => {
+    selected_rarities.value = [...rarity_options];
+  };
+
+  // Increases the number of rendered card results.
+  const show_more_cards = (): void => {
+    visible_card_count.value += visible_card_step;
+  };
+
+  // Opens the detail page for a card from its set.
+  const go_to_card = (card: Display_Card): void => {
+    if (card.is_manual) return;
+    router.push({
+      path: `/set/${card.set_id}/card/${card.card_id}`,
+      query: { variant: card.variant_id, from: 'search' },
+    });
+  };
 
   /* watchers */
+  // Keep the complete option objects available on initial/deep-linked loads so
+  // QSelect can resolve a stored Pokémon id to its human-readable label.
+
+  watch(
+    pokemon_options,
+    (options): void => {
+      filtered_pokemon_options.value = options;
+    },
+    { immediate: true },
+  );
+
+  // A region change exposes and selects exactly the series belonging to that region.
+
   watch(selected_region, (): void => {
     selected_series_ids.value = available_series_options.value.map((option) => option.value);
   });
@@ -956,90 +1041,4 @@
     },
     { deep: true, immediate: true },
   );
-
-  // Narrows select options using a case-insensitive prefix match.
-
-  /* functions */
-  const filter_select_options = (
-    input_value: string,
-    options: string[],
-    filtered_options: { value: string[] },
-    update: (callback: () => void) => void,
-  ): void => {
-    const query: string = input_value.trim().toLowerCase();
-    update(() => {
-      filtered_options.value =
-        query === '' ? options : options.filter((option) => option.toLowerCase().startsWith(query));
-    });
-  };
-
-  // Filters artist suggestions as the user types.
-  const filter_artists = (input_value: string, update: (callback: () => void) => void): void => {
-    filter_select_options(input_value, artist_options.value, filtered_artist_options, update);
-  };
-
-  // Filters Pokemon suggestions as the user types.
-  const filter_pokemon = (input_value: string, update: (callback: () => void) => void): void => {
-    const query: string = input_value.trim().toLocaleLowerCase();
-    update(() => {
-      filtered_pokemon_options.value = pokemon_options.value.filter(
-        (option) =>
-          query === '' ||
-          option.search_names.some((name) => name.toLocaleLowerCase().startsWith(query)),
-      );
-    });
-  };
-
-  // Changes only the Pokemon filter, preserving every other search field.
-  const select_adjacent_pokemon = (option: { value: string } | null): void => {
-    if (!option) return;
-
-    // Keep the selected id-to-label mapping available after a narrowed text search.
-    filtered_pokemon_options.value = pokemon_options.value;
-    selected_pokemon.value = option.value;
-  };
-
-  // Deselects every series in the active card region.
-  const clear_series = (): void => {
-    selected_series_ids.value = [];
-  };
-
-  // Selects every series belonging to the active card region.
-  const select_all_series = (): void => {
-    selected_series_ids.value = available_series_options.value.map((option) => option.value);
-  };
-
-  // Deselects every broad physical card variant type.
-  const clear_variants = (): void => {
-    selected_variant_types.value = [];
-  };
-
-  // Selects every broad physical card variant type in the catalog.
-  const select_all_variants = (): void => {
-    selected_variant_types.value = [...variant_types];
-  };
-
-  // Deselects every rarity so the user can rebuild the filter from scratch.
-  const clear_rarities = (): void => {
-    selected_rarities.value = [];
-  };
-
-  // Selects every rarity represented in the card catalog.
-  const select_all_rarities = (): void => {
-    selected_rarities.value = [...rarity_options];
-  };
-
-  // Increases the number of rendered card results.
-  const show_more_cards = (): void => {
-    visible_card_count.value += visible_card_step;
-  };
-
-  // Opens the detail page for a card from its set.
-  const go_to_card = (card: Display_Card): void => {
-    if (card.is_manual) return;
-    router.push({
-      path: `/set/${card.set_id}/card/${card.card_id}`,
-      query: { variant: card.variant_id, from: 'search' },
-    });
-  };
 </script>

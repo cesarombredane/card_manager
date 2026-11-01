@@ -81,10 +81,20 @@
     language_id: string;
     card_name: string;
   }>();
+
   const emit = defineEmits<{
     'update:modelValue': [value: boolean];
     added: [];
   }>();
+
+  const store = use_store();
+
+  /* reactive vars */
+  const folder_id = ref<string>(store.state.last_collection_folder_id);
+
+  const quantity = ref<number>(1);
+
+  const strong_language = ref<boolean>(false);
 
   /* computed vars */
   const is_open = computed<boolean>({
@@ -92,13 +102,22 @@
     set: (value: boolean) => emit('update:modelValue', value),
   });
 
-  /* hooks */
-  const store = use_store();
-
-  /* reactive vars */
-  const folder_id = ref<string>(store.state.last_collection_folder_id);
-  const quantity = ref<number>(1);
-  const strong_language = ref<boolean>(false);
+  /* functions */
+  const add_wanted = (): void => {
+    collection_store.add_wanted({
+      folder_id: folder_id.value,
+      set_id: props.set_id,
+      card_id: props.card_id,
+      variant_id: props.variant_id,
+      language_id: props.language_id,
+      quantity: quantity.value,
+      strong_language: strong_language.value,
+    });
+    store.commit('set_last_collection_folder_id', folder_id.value);
+    quantity.value = 1;
+    is_open.value = false;
+    emit('added');
+  };
 
   /* watchers */
   watch(
@@ -117,21 +136,4 @@
     },
     { immediate: true },
   );
-
-  /* functions */
-  const add_wanted = (): void => {
-    collection_store.add_wanted({
-      folder_id: folder_id.value,
-      set_id: props.set_id,
-      card_id: props.card_id,
-      variant_id: props.variant_id,
-      language_id: props.language_id,
-      quantity: quantity.value,
-      strong_language: strong_language.value,
-    });
-    store.commit('set_last_collection_folder_id', folder_id.value);
-    quantity.value = 1;
-    is_open.value = false;
-    emit('added');
-  };
 </script>

@@ -1,10 +1,10 @@
 // import utils
+import { mkdir, readFile, rename, rm, unlink, writeFile } from 'node:fs/promises';
 import {
   parse_collection_data,
   parse_binders_data,
   parse_manual_image_data,
 } from '../src/services/personal_validation';
-import { mkdir, readFile, rename, rm, unlink, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import AdmZip from 'adm-zip';
@@ -84,8 +84,8 @@ export function personal_data_plugins(
       ) as Partial<Manual_Images_Data>;
       if (!Array.isArray(parsed.entries)) throw new Error('Invalid manual-images JSON');
       return { version: 1, entries: parsed.entries };
-    } catch (error) {
-      if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error;
+    } catch (err) {
+      if ((err as NodeJS.ErrnoException).code !== 'ENOENT') throw err;
       await mkdir(dirname(manual_images_path), { recursive: true });
       await writeFile(
         manual_images_path,
@@ -122,8 +122,8 @@ export function personal_data_plugins(
           throw new Error('Invalid collection JSON');
         }
         return parsed;
-      } catch (error) {
-        if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error;
+      } catch (err) {
+        if ((err as NodeJS.ErrnoException).code !== 'ENOENT') throw err;
         return structuredClone(empty_collection) as Collection_Document;
       }
     };
@@ -334,11 +334,9 @@ export function personal_data_plugins(
               .then(() => write_collection(parsed as Collection_Document));
             await collection_write_queue;
             reply.end(JSON.stringify({ ok: true }));
-          } catch (error) {
+          } catch (err) {
             reply.statusCode = 400;
-            reply.end(
-              JSON.stringify({ error: error instanceof Error ? error.message : String(error) }),
-            );
+            reply.end(JSON.stringify({ error: err instanceof Error ? err.message : String(err) }));
           }
         });
         return;
@@ -538,8 +536,8 @@ export function personal_data_plugins(
             try {
               await rename(manual_images_root, backup_images);
               previous_images_moved = true;
-            } catch (error) {
-              if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error;
+            } catch (err) {
+              if ((err as NodeJS.ErrnoException).code !== 'ENOENT') throw err;
             }
             try {
               await rename(staged_images, manual_images_root);
@@ -554,10 +552,10 @@ export function personal_data_plugins(
                 await rename(temporary, path);
               }
               if (previous_images_moved) await rm(backup_images, { recursive: true, force: true });
-            } catch (error) {
+            } catch (err) {
               await rm(manual_images_root, { recursive: true, force: true });
               if (previous_images_moved) await rename(backup_images, manual_images_root);
-              throw error;
+              throw err;
             }
             reply.setHeader('Content-Type', 'application/json; charset=utf-8');
             reply.end(JSON.stringify({ ok: true }));

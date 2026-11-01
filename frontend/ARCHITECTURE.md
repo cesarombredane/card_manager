@@ -12,8 +12,12 @@ route parameter names remain compatible. Unknown URLs show the not-found page.
 Views coordinate routes and domain values. Each binder editing component owns its
 own draft, validation, save/cancel workflow and feedback: setup, settings, automatic
 layout, individual asset creation/editing and bulk image uploads. The PDF button
-owns export progress and errors. Shared confirmation and empty-state components
-provide presentation; their parents retain domain decisions.
+owns export progress and errors. Collection workflows live in `components/collection`: entry editing, transfers,
+bulk language edits, Pokédex options, folder creation/settings, template creation,
+folder deletion, and personal-data import/export. Each component owns its drafts,
+validation, progress and feedback. Route views select context and clear selection
+after a successful bulk edit or transfer. Shared confirmation and empty-state
+components provide presentation; their parents retain domain decisions.
 
 `models/` defines domain contracts. Services load the catalog and transport requests
 to the local personal-data API. `personal_validation.ts` checks untrusted personal
@@ -37,7 +41,9 @@ Binder saves retain their ordered queue. Manual artwork is uploaded through acti
 and committed only after a validated successful response. A failed load leaves the
 module unready and preserves its previous in-memory data; persistence cannot replace
 an unread file with empty defaults. Existing legacy normalization remains in the
-load path. Stored keys, IDs, image URLs, archive entries and schema versions remain
+load path; missing legacy manual-card fields receive safe in-memory defaults
+without rewriting the original file. Manual-card variant edits run inside the
+collection mutation before entry matching and queued persistence. Stored keys, IDs, image URLs, archive entries and schema versions remain
 compatibility contracts.
 
 `server/personal_data.ts` provides the same local middleware in development and
@@ -52,7 +58,9 @@ fixture and builds production assets there, without copying installation artwork
 `CARD_MANAGER_FIXTURE_ROOT` redirects catalog imports, build output and personal
 middleware to that temporary directory. Playwright serves that production bundle
 through Vite preview and removes the temporary directory when stopped. Neither
-verification path invokes the updater or writes installation data.
+verification path invokes the updater or writes installation data. Frontend unit
+tests are included in type checking. Agents do not run browser or end-to-end
+verification; those checks are user-run or run by CI.
 
 ## Growing the application
 

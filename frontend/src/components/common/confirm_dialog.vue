@@ -34,17 +34,6 @@
 
 <script setup lang="ts">
   /* hooks */
-  defineProps<{
-    modelValue: boolean;
-    title: string;
-    message: string;
-    confirm_label: string;
-    cancel_label: string;
-    confirm_tooltip: string;
-    cancel_tooltip: string;
-    destructive?: boolean;
-  }>();
-
   const emit = defineEmits<{
     'update:modelValue': [value: boolean];
     confirm: [];
@@ -56,4 +45,16 @@
     emit('confirm');
     emit('update:modelValue', false);
   }
+
+  /* initialization */
+  defineProps<{
+    modelValue: boolean;
+    title: string;
+    message: string;
+    confirm_label: string;
+    cancel_label: string;
+    confirm_tooltip: string;
+    cancel_tooltip: string;
+    destructive?: boolean;
+  }>();
 </script>

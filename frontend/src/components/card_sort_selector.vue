@@ -32,10 +32,12 @@
       include_set_order: false,
     },
   );
-  defineEmits<{ 'update:modelValue': [value: Card_Sort] }>();
 
   /* computed vars */
   const options = computed<{ label: string; value: Card_Sort }[]>(() =>
     props.include_set_order ? set_card_sort_options : card_sort_options,
   );
+
+  /* initialization */
+  defineEmits<{ 'update:modelValue': [value: Card_Sort] }>();
 </script>

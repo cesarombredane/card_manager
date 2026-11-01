@@ -151,9 +151,9 @@
   import type { Display_Card } from '../utils/card_display';
   import type { Card_Sort } from '../utils/card_sorting';
 
+  /* hooks */
   // Current route used to identify the selected set.
 
-  /* hooks */
   const route = useRoute();
 
   // Router used to navigate back to the series listing page.
@@ -162,9 +162,9 @@
   // Shared application state.
   const store = use_store();
 
+  /* const vars */
   // The current set id read from the route.
 
-  /* const vars */
   const set_id: string = String(route.params.setId ?? '');
 
   // The selected set metadata.
@@ -183,22 +183,9 @@
     get_pokemon().map((pokemon) => [pokemon.id, pokemon.pokedex_id]),
   );
 
-  // Currently selected language for localized card names.
-
-  /* computed vars */
-  const selected_language_id = computed<string>({
-    get: (): string => {
-      const preferred_language_id: string = store.state.selected_language_id;
-      return current_set?.language_ids.includes(preferred_language_id)
-        ? preferred_language_id
-        : (current_set?.language_ids[0] ?? 'en');
-    },
-    set: (language_id: string): void => store.commit('set_selected_language_id', language_id),
-  });
-
+  /* reactive vars */
   // Search text used to filter card names and numbers.
 
-  /* reactive vars */
   const search = ref<string>('');
 
   // Selected rarity filter.
@@ -219,9 +206,21 @@
   // The printed card number order is the natural default inside a set.
   const selected_sort = ref<Card_Sort>('set-order');
 
+  /* computed vars */
+  // Currently selected language for localized card names.
+
+  const selected_language_id = computed<string>({
+    get: (): string => {
+      const preferred_language_id: string = store.state.selected_language_id;
+      return current_set?.language_ids.includes(preferred_language_id)
+        ? preferred_language_id
+        : (current_set?.language_ids[0] ?? 'en');
+    },
+    set: (language_id: string): void => store.commit('set_selected_language_id', language_id),
+  });
+
   // Every card variant in this set as an individual display row.
 
-  /* computed vars */
   const all_cards = computed<Display_Card[]>(() =>
     cards.flatMap((card) =>
       card.variants.map((variant) => build_display_card(card, variant, selected_language_id.value)),
@@ -332,9 +331,9 @@
       });
   });
 
+  /* functions */
   // Returns sorted unique string values.
 
-  /* functions */
   const unique_values = (values: string[]): string[] => {
     return [...new Set(values.filter(Boolean))].sort();
   };

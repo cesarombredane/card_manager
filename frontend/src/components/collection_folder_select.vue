@@ -41,7 +41,6 @@
     modelValue: string;
     folders: Collection_Folder[];
   }>();
-  defineEmits<{ 'update:modelValue': [value: string] }>();
 
   /* computed vars */
   const options = computed<{ label: string; value: string; icon: string; caption: string }[]>(() =>
@@ -60,4 +59,7 @@
         caption: folder.type === 'box' ? 'Box' : 'Binder',
       })),
   );
+
+  /* initialization */
+  defineEmits<{ 'update:modelValue': [value: string] }>();
 </script>

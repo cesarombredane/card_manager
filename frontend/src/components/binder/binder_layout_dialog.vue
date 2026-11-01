@@ -176,6 +176,30 @@
 
   const emit = defineEmits<{ (event: 'update:modelValue', value: boolean): void }>();
 
+  /* const vars */
+  const pokemon = get_pokemon();
+
+  const michi_mode_options = [
+    { label: 'Date first', value: 'date' },
+    { label: 'Pokédex order', value: 'pokedex' },
+    { label: 'Color first', value: 'color' },
+  ];
+
+  /* reactive vars */
+  const michi_mode = ref<Michi_Mode>('date');
+
+  const michi_evolution_order = ref<boolean>(false);
+
+  const michi_line_focus = ref<boolean>(false);
+
+  const michi_seed = ref<number>(1);
+
+  const michi_generating = ref<boolean>(false);
+
+  const michi_proposal = ref<Michi_Layout_Proposal | null>(null);
+
+  const michi_error = ref<string | null>(null);
+
   /* computed vars */
   const show_michi_dialog = computed<boolean>({
     get: () => props.modelValue,
@@ -194,8 +218,84 @@
 
   const binder_columns = computed<2 | 3>(() => (binder.value?.layout === '2x2' ? 2 : 3));
 
-  /* const vars */
-  const pokemon = get_pokemon();
+  const michi_preview_sides = computed<
+    {
+      side_index: number;
+      cells: {
+        name: string;
+        image_url: string | null;
+        index: number;
+        row: number;
+        column: number;
+      }[];
+      decorations: {
+        image: Binder_Image;
+        placement: { image_id: string; side_index: number; row: number; column: number };
+      }[];
+    }[]
+  >(() => {
+    if (!binder.value || !michi_proposal.value) return [];
+    const side_size = binder_slots_per_page(binder.value.layout);
+    const preview_slots = michi_proposal.value.slots;
+    const preview_placements = michi_proposal.value.image_placements;
+    return Array.from({ length: binder.value.page_count * 2 }, (_, side_index) => ({
+      side_index: side_index,
+      cells: preview_slots
+        .slice(side_index * side_size, (side_index + 1) * side_size)
+        .map((slot_value, index) => ({
+          index,
+          row: Math.floor(index / binder_columns.value),
+          column: index % binder_columns.value,
+          ...michi_preview_content(slot_value),
+        })),
+      decorations: preview_placements
+        .filter((placement) => placement.side_index === side_index)
+        .flatMap((placement) => {
+          const image = binder.value?.images.find(
+            (candidate) => candidate.id === placement.image_id,
+          );
+          return image ? [{ image, placement }] : [];
+        }),
+    }));
+  });
+
+  const michi_preview_spreads = computed<
+    {
+      key: string;
+      sides: {
+        side_index: number;
+        cells: {
+          name: string;
+          image_url: string | null;
+          index: number;
+          row: number;
+          column: number;
+        }[];
+        decorations: {
+          image: Binder_Image;
+          placement: { image_id: string; side_index: number; row: number; column: number };
+        }[];
+      }[];
+      align: 'left' | 'right' | 'pair';
+    }[]
+  >(() => {
+    const sides = michi_preview_sides.value;
+    if (!sides.length) return [];
+    const spreads: Array<{
+      key: string;
+      sides: typeof sides;
+      align: 'left' | 'right' | 'pair';
+    }> = [{ key: 'opening', sides: [sides[0]], align: 'right' }];
+    for (let index = 1; index < sides.length; index += 2) {
+      const spread_sides = sides.slice(index, index + 2);
+      spreads.push({
+        key: `spread-${index}`,
+        sides: spread_sides,
+        align: spread_sides.length === 1 ? 'left' : 'pair',
+      });
+    }
+    return spreads;
+  });
 
   /* functions */
   const binder_asset_url = (asset_id: string, kind: 'proxy' | 'image'): string => {
@@ -203,29 +303,6 @@
     return asset ? `${asset.url}?v=${encodeURIComponent(asset.updated_at)}` : '';
   };
 
-  /* reactive vars */
-  const michi_mode = ref<Michi_Mode>('date');
-
-  const michi_evolution_order = ref<boolean>(false);
-
-  const michi_line_focus = ref<boolean>(false);
-
-  const michi_seed = ref<number>(1);
-
-  const michi_generating = ref<boolean>(false);
-
-  const michi_proposal = ref<Michi_Layout_Proposal | null>(null);
-
-  const michi_error = ref<string | null>(null);
-
-  /* const vars */
-  const michi_mode_options = [
-    { label: 'Date first', value: 'date' },
-    { label: 'Pokédex order', value: 'pokedex' },
-    { label: 'Color first', value: 'color' },
-  ];
-
-  /* functions */
   const pokedex_group_key_for_row = (row: Omit<Binder_Row, 'available'>): string | null => {
     if (folder.value?.pokedex_config) return row.entry.pokedex_requirement_id ?? null;
     if (row.pokedex_number === null) return null;
@@ -374,87 +451,6 @@
     return { name: row?.card.display_name ?? 'Card', image_url: row?.card.image_url ?? null };
   };
 
-  /* computed vars */
-  const michi_preview_sides = computed<
-    {
-      side_index: number;
-      cells: {
-        name: string;
-        image_url: string | null;
-        index: number;
-        row: number;
-        column: number;
-      }[];
-      decorations: {
-        image: Binder_Image;
-        placement: { image_id: string; side_index: number; row: number; column: number };
-      }[];
-    }[]
-  >(() => {
-    if (!binder.value || !michi_proposal.value) return [];
-    const side_size = binder_slots_per_page(binder.value.layout);
-    const preview_slots = michi_proposal.value.slots;
-    const preview_placements = michi_proposal.value.image_placements;
-    return Array.from({ length: binder.value.page_count * 2 }, (_, side_index) => ({
-      side_index: side_index,
-      cells: preview_slots
-        .slice(side_index * side_size, (side_index + 1) * side_size)
-        .map((slot_value, index) => ({
-          index,
-          row: Math.floor(index / binder_columns.value),
-          column: index % binder_columns.value,
-          ...michi_preview_content(slot_value),
-        })),
-      decorations: preview_placements
-        .filter((placement) => placement.side_index === side_index)
-        .flatMap((placement) => {
-          const image = binder.value?.images.find(
-            (candidate) => candidate.id === placement.image_id,
-          );
-          return image ? [{ image, placement }] : [];
-        }),
-    }));
-  });
-
-  const michi_preview_spreads = computed<
-    {
-      key: string;
-      sides: {
-        side_index: number;
-        cells: {
-          name: string;
-          image_url: string | null;
-          index: number;
-          row: number;
-          column: number;
-        }[];
-        decorations: {
-          image: Binder_Image;
-          placement: { image_id: string; side_index: number; row: number; column: number };
-        }[];
-      }[];
-      align: 'left' | 'right' | 'pair';
-    }[]
-  >(() => {
-    const sides = michi_preview_sides.value;
-    if (!sides.length) return [];
-    const spreads: Array<{
-      key: string;
-      sides: typeof sides;
-      align: 'left' | 'right' | 'pair';
-    }> = [{ key: 'opening', sides: [sides[0]], align: 'right' }];
-    for (let index = 1; index < sides.length; index += 2) {
-      const spread_sides = sides.slice(index, index + 2);
-      spreads.push({
-        key: `spread-${index}`,
-        sides: spread_sides,
-        align: spread_sides.length === 1 ? 'left' : 'pair',
-      });
-    }
-    return spreads;
-  });
-
-  /* functions */
   const apply_michi_proposal = (): void => {
     if (!binder.value || !michi_proposal.value) return;
     binder_store.apply_layout(

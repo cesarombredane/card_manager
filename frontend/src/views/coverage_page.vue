@@ -276,23 +276,18 @@
   /* const vars */
   const coverage = get_coverage();
 
-  /* reactive vars */
-  const active_tab = ref<string>('overview');
-  const set_search = ref<string>('');
-  const selected_region = ref<string>('all');
-  const missing_only = ref<boolean>(false);
-
-  /* const vars */
   const number_formatter = new Intl.NumberFormat();
+
   const language_names = new Map(get_languages().map((language) => [language.id, language.name]));
 
-  /* functions */
-  const format_number = (value: number | undefined): string => number_formatter.format(value ?? 0);
-  const percent = (filled: number, total: number): number => (total ? (filled * 100) / total : 100);
-  const language_name = (id: string): string => language_names.get(id) ?? id;
-  const display_field = (field: string): string =>
-    field.replaceAll('_', ' ').replace(/^./, (value) => value.toUpperCase());
-  const reload_page = (): void => window.location.reload();
+  /* reactive vars */
+  const active_tab = ref<string>('overview');
+
+  const set_search = ref<string>('');
+
+  const selected_region = ref<string>('all');
+
+  const missing_only = ref<boolean>(false);
 
   /* computed vars */
   const generated_at = computed<string>(() =>
@@ -302,6 +297,7 @@
         )
       : 'Never',
   );
+
   const summary_metrics = computed<{ label: string; value: number; icon: string }[]>(() =>
     coverage
       ? [
@@ -320,6 +316,7 @@
         ]
       : [],
   );
+
   const overview_progress = computed<
     { label: string; percent: number; filled: number; total: number }[]
   >(() =>
@@ -352,6 +349,7 @@
         ]
       : [],
   );
+
   const language_rows = computed<
     { slots: number; filled: number; missing: number; percent: number; id: string }[]
   >(() =>
@@ -361,12 +359,14 @@
           .sort((a, b) => a.percent - b.percent)
       : [],
   );
+
   const region_options = computed<{ label: string; value: string }[]>(() => [
     { label: 'All regions', value: 'all' },
     ...Array.from(new Set(coverage?.sets.map((set) => set.region_id) ?? []))
       .sort()
       .map((id) => ({ label: id, value: id })),
   ]);
+
   const filtered_sets = computed<Set_Coverage[]>(() => {
     const query = set_search.value.trim().toLocaleLowerCase();
     return (coverage?.sets ?? [])
@@ -380,22 +380,33 @@
           !query || `${set.name} ${set.id} ${set.series_name}`.toLocaleLowerCase().includes(query),
       );
   });
+
   const sets_missing_cards = computed<Set_Coverage[]>(() =>
     (coverage?.sets ?? [])
       .filter((set) => set.cards_without_image > 0)
       .sort((a, b) => b.cards_without_image - a.cards_without_image),
   );
 
-  /* functions */
-  const missing_slot_count = (set: Set_Coverage): number =>
-    Object.values(set.missing_images).reduce((total, items) => total + items.length, 0);
-
-  /* computed vars */
   const sets_missing_slots = computed<Set_Coverage[]>(() =>
     (coverage?.sets ?? [])
       .filter((set) => missing_slot_count(set) > 0)
       .sort((a, b) => missing_slot_count(b) - missing_slot_count(a)),
   );
+
+  /* functions */
+  const format_number = (value: number | undefined): string => number_formatter.format(value ?? 0);
+
+  const percent = (filled: number, total: number): number => (total ? (filled * 100) / total : 100);
+
+  const language_name = (id: string): string => language_names.get(id) ?? id;
+
+  const display_field = (field: string): string =>
+    field.replaceAll('_', ' ').replace(/^./, (value) => value.toUpperCase());
+
+  const reload_page = (): void => window.location.reload();
+
+  const missing_slot_count = (set: Set_Coverage): number =>
+    Object.values(set.missing_images).reduce((total, items) => total + items.length, 0);
 </script>
 
 <style scoped>

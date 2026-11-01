@@ -30,7 +30,9 @@ Use English for all project content, including comments, documentation and UI te
 - Apply the [test policy](../docs/contributing.md#test-policy): add tests for
   meaningful risks, not automatically for every edit or UI detail.
 - After Vue or TypeScript changes, run lint, typecheck and relevant existing tests.
-- After style, route or interaction changes, also verify in the browser.
+- After style, route or interaction changes, provide browser verification steps
+  for the user. Follow the root instructions prohibiting agent-run end-to-end
+  tests and equivalent browser automation.
 - After dependency or bundling changes, run build and relevant tests.
 - Before delivery, review the final diff and acceptance criteria using the
   [delivery review](../docs/contributing.md#delivery-review).

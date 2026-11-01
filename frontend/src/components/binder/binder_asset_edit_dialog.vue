@@ -167,28 +167,6 @@
     is_locked: (kind: 'proxy' | 'image', id: string) => boolean;
   }>();
 
-  /* computed vars */
-  const folder_id = computed<string>(() => props.folder_id);
-
-  const binder = computed<Collection_Binder | null>(() => binder_store.get(folder_id.value));
-
-  /* functions */
-  const is_asset_locked = (kind: 'proxy' | 'image', id: string): boolean =>
-    props.is_locked(kind, id);
-
-  /* computed vars */
-  const binder_columns = computed<2 | 3>(() => (binder.value?.layout === '2x2' ? 2 : 3));
-
-  const asset_dimensions = computed<number[]>(() =>
-    Array.from({ length: binder_columns.value }, (_, index) => index + 1),
-  );
-
-  /* functions */
-  const binder_asset_url = (asset_id: string, kind: 'proxy' | 'image'): string => {
-    const asset = manual_image_store.find('binder-assets', folder_id.value, asset_id, kind);
-    return asset ? `${asset.url}?v=${encodeURIComponent(asset.updated_at)}` : '';
-  };
-
   /* reactive vars */
   const show_edit_asset_dialog = ref<boolean>(false);
 
@@ -233,6 +211,16 @@
   const edit_asset_error = ref<string | null>(null);
 
   /* computed vars */
+  const folder_id = computed<string>(() => props.folder_id);
+
+  const binder = computed<Collection_Binder | null>(() => binder_store.get(folder_id.value));
+
+  const binder_columns = computed<2 | 3>(() => (binder.value?.layout === '2x2' ? 2 : 3));
+
+  const asset_dimensions = computed<number[]>(() =>
+    Array.from({ length: binder_columns.value }, (_, index) => index + 1),
+  );
+
   const edit_reserved_slot_conflicts = computed<number>(() => {
     if (edit_asset_kind.value !== 'image' || !binder.value) return 0;
     const placement = binder.value.image_placements.find(
@@ -292,6 +280,14 @@
   );
 
   /* functions */
+  const is_asset_locked = (kind: 'proxy' | 'image', id: string): boolean =>
+    props.is_locked(kind, id);
+
+  const binder_asset_url = (asset_id: string, kind: 'proxy' | 'image'): string => {
+    const asset = manual_image_store.find('binder-assets', folder_id.value, asset_id, kind);
+    return asset ? `${asset.url}?v=${encodeURIComponent(asset.updated_at)}` : '';
+  };
+
   const render_edit_crop = (): void => {
     const canvas = edit_crop_canvas.value;
     const image = edit_crop_image.value;
@@ -439,8 +435,8 @@
           crop_x: edit_crop_x.value,
           crop_y: edit_crop_y.value,
         });
-      } catch (error) {
-        edit_asset_error.value = error instanceof Error ? error.message : String(error);
+      } catch (err) {
+        edit_asset_error.value = err instanceof Error ? err.message : String(err);
         edit_asset_saving.value = false;
         return;
       }

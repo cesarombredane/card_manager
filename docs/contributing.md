@@ -69,6 +69,12 @@ both speculative infrastructure and shortcuts that leave the request incomplete.
 
 ## Verification storage boundary
 
+Agents must not run end-to-end tests or equivalent browser automation. Report
+browser verification as pending and give the user `npm run test:e2e` to run.
+Do not install or launch browsers as a verification workaround. CI may continue
+to run its configured browser suite. Static checks, unit tests with synthetic
+fixtures, and the temporary production fixture build remain available to agents.
+
 Use `npm run build:fixture` and `npm run test:e2e` for isolated production checks.
 They build a synthetic catalog into temporary storage and serve it through preview.
 Unit tests use synthetic inputs and temporary directories. Never run update, reset,

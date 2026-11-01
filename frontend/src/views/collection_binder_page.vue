@@ -94,7 +94,7 @@
                   color="primary"
                   icon="add_photo_alternate"
                   no-caps
-                  aria-label="add photo alternate"
+                  aria-label="Add multiple binder images"
                   @click="show_bulk_image_dialog = true"
                 >
                   <q-tooltip :delay="1000">Add multiple images automatically</q-tooltip>
@@ -106,7 +106,7 @@
                   color="primary"
                   icon="add"
                   no-caps
-                  aria-label="add"
+                  :aria-label="selector_tab === 'proxies' ? 'Add proxy card' : 'Add binder image'"
                   @click="asset_create_dialog?.open(selector_tab)"
                 >
                   <q-tooltip :delay="1000"
@@ -234,7 +234,7 @@
                       color="secondary"
                       icon="edit"
                       no-caps
-                      aria-label="edit"
+                      :aria-label="`Edit proxy ${proxy.name}`"
                       @click="asset_edit_dialog?.open('proxy', proxy.id)"
                     >
                       <q-tooltip :delay="1000">Edit proxy</q-tooltip>
@@ -246,7 +246,7 @@
                       color="negative"
                       icon="delete"
                       no-caps
-                      aria-label="delete"
+                      :aria-label="`Delete proxy ${proxy.name}`"
                       @click="request_delete_asset('proxy', proxy.id)"
                       ><q-tooltip :delay="1000">delete</q-tooltip></q-btn
                     >
@@ -297,7 +297,7 @@
                       color="secondary"
                       icon="edit"
                       no-caps
-                      aria-label="edit"
+                      :aria-label="`Edit image ${image.name}`"
                       @click="asset_edit_dialog?.open('image', image.id)"
                     >
                       <q-tooltip :delay="1000">Edit image</q-tooltip>
@@ -310,7 +310,7 @@
                       color="secondary"
                       icon="remove_circle"
                       no-caps
-                      aria-label="remove circle"
+                      aria-label="Remove image from binder page"
                       @click="binder_store.remove_image_placement(folder_id, image.id)"
                     >
                       <q-tooltip :delay="1000">Remove from binder page</q-tooltip>
@@ -322,7 +322,7 @@
                       color="negative"
                       icon="delete"
                       no-caps
-                      aria-label="delete"
+                      :aria-label="`Delete image ${image.name}`"
                       @click="request_delete_asset('image', image.id)"
                       ><q-tooltip :delay="1000">delete</q-tooltip></q-btn
                     >
@@ -347,7 +347,7 @@
             icon="chevron_left"
             :disable="current_spread === 0"
             no-caps
-            aria-label="chevron left"
+            aria-label="Previous binder spread"
             @click="current_spread--"
             ><q-tooltip :delay="1000">chevron left</q-tooltip></q-btn
           >
@@ -358,7 +358,7 @@
             icon="chevron_right"
             :disable="current_spread >= binder.page_count"
             no-caps
-            aria-label="chevron right"
+            aria-label="Next binder spread"
             @click="current_spread++"
             ><q-tooltip :delay="1000">chevron right</q-tooltip></q-btn
           >
@@ -377,7 +377,9 @@
                 color="primary"
                 :icon="is_page_locked(side.side_index) ? 'lock' : 'lock_open'"
                 no-caps
-                aria-label="Perform this action"
+                :aria-label="
+                  is_page_locked(side.side_index) ? 'Unlock this page face' : 'Lock this page face'
+                "
                 @click="toggle_page_lock(side.side_index)"
               >
                 <q-tooltip :delay="1000">{{
@@ -448,7 +450,7 @@
                     color="dark"
                     icon="close"
                     no-caps
-                    aria-label="close"
+                    aria-label="Remove card from binder slot"
                     @click="binder_store.set_slot(folder_id, slot.index, null)"
                   >
                     <q-tooltip :delay="1000">Remove from binder</q-tooltip>
@@ -595,12 +597,12 @@
   import { useRoute } from 'vue-router';
 
   // import components
-  import BinderPrintButton from '../components/binder/binder_print_button.vue';
   import BinderAssetCreateDialog from '../components/binder/binder_asset_create_dialog.vue';
-  import BinderAssetEditDialog from '../components/binder/binder_asset_edit_dialog.vue';
-  import BinderLayoutDialog from '../components/binder/binder_layout_dialog.vue';
   import BinderBulkImagesDialog from '../components/binder/binder_bulk_images_dialog.vue';
+  import BinderAssetEditDialog from '../components/binder/binder_asset_edit_dialog.vue';
   import BinderSettingsDialog from '../components/binder/binder_settings_dialog.vue';
+  import BinderLayoutDialog from '../components/binder/binder_layout_dialog.vue';
+  import BinderPrintButton from '../components/binder/binder_print_button.vue';
   import BinderSetupDialog from '../components/binder/binder_setup_dialog.vue';
   import CardSortSelector from '../components/card_sort_selector.vue';
 
@@ -610,17 +612,17 @@
   import { card_conditions, collection_store } from '../store/modules/collection';
   import { binder_slots_per_page, binder_store } from '../store/modules/binders';
   import { manual_image_store } from '../store/modules/manual_images';
+  import { pokedex_placeholder_card } from '../utils/pokedex_binder';
   import { cardmarket_display_price } from '../utils/card_display';
   import { resolve_card_image } from '../utils/card_images';
   import { localized_value } from '../utils/localization';
-  import { pokedex_placeholder_card } from '../utils/pokedex_binder';
 
   // import types
-  import type { Binder_Row } from '../models/binder_view';
   import type { Card_Condition, Collection_Entry } from '../store/modules/collection';
   import type { Collection_Binder } from '../store/modules/binders';
   import type { Collection_Folder } from '../models/collection';
   import type { Display_Card } from '../utils/card_display';
+  import type { Binder_Row } from '../models/binder_view';
   import type { Card_Sort } from '../utils/card_sorting';
   import type {
     Binder_Image,
@@ -628,53 +630,19 @@
     Binder_Proxy,
   } from '../store/modules/binders';
 
-  const asset_create_dialog = ref<InstanceType<typeof BinderAssetCreateDialog> | null>(null);
-  const asset_edit_dialog = ref<InstanceType<typeof BinderAssetEditDialog> | null>(null);
   /* types */
-
   type Selector_Tab = 'collection' | 'wanted' | 'proxies' | 'images';
 
   /* hooks */
   const route = useRoute();
 
-  /* computed vars */
-  const folder_id = computed<string>(() => String(route.params.folderId ?? ''));
-  const folder = computed<Collection_Folder | null>(
-    () =>
-      collection_store.folders.value.find((candidate) => candidate.id === folder_id.value) ?? null,
-  );
-  const binder = computed<Collection_Binder | null>(() => binder_store.get(folder_id.value));
-  const show_create_dialog = computed<boolean>(() =>
-    Boolean(folder.value?.type === 'binder' && binder_store.is_ready.value && !binder.value),
-  );
-
-  /* reactive vars */
-  const show_settings = ref<boolean>(false);
-  const show_michi_dialog = ref<boolean>(false);
-
-  const current_spread = ref<number>(0);
-  const search = ref<string>('');
-  const selected_card_sort = ref<Card_Sort>('release-desc');
-  const selector_tab = ref<Selector_Tab>('collection');
-
-  const show_bulk_image_dialog = ref<boolean>(false);
-
-  const delete_target = ref<{ kind: 'proxy' | 'image'; id: string; name: string } | null>(null);
-  const delete_saving = ref<boolean>(false);
-  const selected_image_ids = ref<string[]>([]);
-
-  const got_it_target = ref<{ slot_index: number; entry_id: string } | null>(null);
-  const got_it_condition = ref<Card_Condition>('NM');
-
   /* const vars */
-
   const condition_options = card_conditions.map((condition) => ({ ...condition }));
 
-  /* functions */
-
-  /* const vars */
   const pokemon = get_pokemon();
+
   const pokedex_by_pokemon_id = new Map(pokemon.map((entry) => [entry.id, entry.pokedex_id]));
+
   const pokedex_by_pokemon_name = new Map(
     pokemon.flatMap((entry) =>
       [
@@ -684,62 +652,49 @@
     ),
   );
 
-  /* functions */
-  const card_for_entry = (entry: Collection_Entry): Display_Card | null => {
-    if (entry.set_id === 'pokedex-requirement' && entry.pokedex_requirement_id) {
-      return pokedex_placeholder_card(
-        entry.pokedex_requirement_id,
-        entry.pokedex_candidate_count ?? 0,
-        folder.value?.pokedex_config?.international_language_id ?? 'en',
-        folder.value?.pokedex_config,
-      );
-    }
-    if (entry.set_id === 'manual-collection') {
-      const manual = collection_store.manual_cards.value.find((card) => card.id === entry.card_id);
-      if (!manual) return null;
-      const image = resolve_card_image({}, entry.language_id, entry.language_id, {
-        set_id: 'manual-collection',
-        card_id: manual.id,
-        variant_id: entry.variant_id,
-      });
-      return {
-        id: manual.id,
-        card_id: manual.id,
-        set_id: entry.set_id,
-        set_name: manual.set_name || null,
-        language_id: entry.language_id,
-        variant_id: entry.variant_id,
-        number: manual.number || '?',
-        display_name: manual.name,
-        category: manual.category,
-        rarity: manual.rarity,
-        hp: manual.hp,
-        illustrator: manual.illustrator || null,
-        types: manual.types,
-        pokemon_names: manual.pokemon_name ? [manual.pokemon_name] : [],
-        energy_costs: [],
-        image_url: image.url,
-        image_language_id: image.language_id,
-        image_is_fallback: false,
-        image_source: image.source,
-        cardmarket: null,
-        is_manual: true,
-        estimated_value: manual.estimated_value,
-      };
-    }
-    const card = get_card_by_id(entry.set_id, entry.card_id);
-    const set = get_set_by_id(entry.set_id);
-    const variant = card?.variants.find((candidate) => candidate.id === entry.variant_id);
-    if (!card || !variant) return null;
-    return build_display_card(
-      card,
-      variant,
-      entry.language_id,
-      set ? (localized_value(set.name, entry.language_id) ?? set.id) : null,
-    );
-  };
+  /* reactive vars */
+  const asset_create_dialog = ref<InstanceType<typeof BinderAssetCreateDialog> | null>(null);
+
+  const asset_edit_dialog = ref<InstanceType<typeof BinderAssetEditDialog> | null>(null);
+
+  const show_settings = ref<boolean>(false);
+
+  const show_michi_dialog = ref<boolean>(false);
+
+  const current_spread = ref<number>(0);
+
+  const search = ref<string>('');
+
+  const selected_card_sort = ref<Card_Sort>('release-desc');
+
+  const selector_tab = ref<Selector_Tab>('collection');
+
+  const show_bulk_image_dialog = ref<boolean>(false);
+
+  const delete_target = ref<{ kind: 'proxy' | 'image'; id: string; name: string } | null>(null);
+
+  const delete_saving = ref<boolean>(false);
+
+  const selected_image_ids = ref<string[]>([]);
+
+  const got_it_target = ref<{ slot_index: number; entry_id: string } | null>(null);
+
+  const got_it_condition = ref<Card_Condition>('NM');
 
   /* computed vars */
+  const folder_id = computed<string>(() => String(route.params.folderId ?? ''));
+
+  const folder = computed<Collection_Folder | null>(
+    () =>
+      collection_store.folders.value.find((candidate) => candidate.id === folder_id.value) ?? null,
+  );
+
+  const binder = computed<Collection_Binder | null>(() => binder_store.get(folder_id.value));
+
+  const show_create_dialog = computed<boolean>(() =>
+    Boolean(folder.value?.type === 'binder' && binder_store.is_ready.value && !binder.value),
+  );
+
   const base_rows = computed<Omit<Binder_Row, 'available'>[]>(() =>
     collection_store.entries.value
       .filter((entry) => entry.folder_id === folder_id.value)
@@ -771,6 +726,7 @@
         ];
       }),
   );
+
   const used_counts = computed<Map<string, number>>(() => {
     const counts = new Map<string, number>();
     for (const entry_id of binder.value?.slots ?? []) {
@@ -778,15 +734,18 @@
     }
     return counts;
   });
+
   const rows = computed<Binder_Row[]>(() =>
     base_rows.value.map((row) => ({
       ...row,
       available: Math.max(0, row.entry.quantity - (used_counts.value.get(row.entry.id) ?? 0)),
     })),
   );
+
   const rows_by_entry_id = computed<Map<string, Binder_Row>>(
     () => new Map(rows.value.map((row) => [row.entry.id, row])),
   );
+
   const available_rows = computed<Binder_Row[]>(() => {
     const query = search.value.trim().toLocaleLowerCase();
     return rows.value
@@ -843,6 +802,7 @@
         return left.card.display_name.localeCompare(right.card.display_name);
       });
   });
+
   const binder_columns = computed<2 | 3>(() => (binder.value?.layout === '2x2' ? 2 : 3));
 
   const selector_help = computed<string>(
@@ -854,6 +814,7 @@
         images: 'Upload background images that can span several slots.',
       })[selector_tab.value],
   );
+
   const used_proxy_counts = computed<Map<string, number>>(() => {
     const counts = new Map<string, number>();
     for (const slot of binder.value?.slots ?? []) {
@@ -864,17 +825,14 @@
     return counts;
   });
 
-  /* functions */
-  const proxy_available = (proxy: Binder_Proxy): number =>
-    Math.max(0, proxy.quantity - (used_proxy_counts.value.get(proxy.id) ?? 0));
-
-  /* computed vars */
   const placed_image_ids = computed<Set<string>>(
     () => new Set((binder.value?.image_placements ?? []).map((placement) => placement.image_id)),
   );
+
   const binder_images_by_id = computed<Map<string, Binder_Image>>(
     () => new Map((binder.value?.images ?? []).map((image) => [image.id, image])),
   );
+
   const image_placements_by_side = computed<Map<number, Binder_Image_Placement[]>>(() => {
     const placements = new Map<number, Binder_Image_Placement[]>();
     for (const placement of binder.value?.image_placements ?? []) {
@@ -884,34 +842,13 @@
     return placements;
   });
 
-  /* functions */
-  const is_page_locked = (side_index: number): boolean =>
-    binder.value?.locked_pages.includes(side_index) ?? false;
-  const is_slot_locked = (slot_index: number): boolean =>
-    Boolean(
-      binder.value &&
-      is_page_locked(Math.floor(slot_index / binder_slots_per_page(binder.value.layout))),
-    );
-  const is_asset_locked = (kind: 'proxy' | 'image', asset_id: string): boolean => {
-    if (!binder.value) return false;
-    if (kind === 'image') {
-      return binder.value.image_placements.some(
-        (placement) => placement.image_id === asset_id && is_page_locked(placement.side_index),
-      );
-    }
-    return binder.value.slots.some(
-      (slot, index) => slot === `proxy:${asset_id}` && is_slot_locked(index),
-    );
-  };
-
-  /* computed vars */
-
   const filtered_proxies = computed<Binder_Proxy[]>(() => {
     const query = search.value.trim().toLocaleLowerCase();
     return (binder.value?.proxies ?? []).filter(
       (proxy) => !query || proxy.name.toLocaleLowerCase().includes(query),
     );
   });
+
   const filtered_images = computed<Binder_Image[]>(() => {
     const query = search.value.trim().toLocaleLowerCase();
     return (binder.value?.images ?? []).filter(
@@ -919,101 +856,6 @@
     );
   });
 
-  /* functions */
-  const binder_asset_url = (asset_id: string, kind: 'proxy' | 'image'): string => {
-    const asset = manual_image_store.find('binder-assets', folder_id.value, asset_id, kind);
-    return asset ? `${asset.url}?v=${encodeURIComponent(asset.updated_at)}` : '';
-  };
-  const open_michi_dialog = (): void => {
-    show_michi_dialog.value = true;
-  };
-
-  /* computed vars */
-
-  /* functions */
-
-  const slot_content = (
-    slot_value: string | null,
-  ): {
-    name: string;
-    image_url: string | null;
-    wanted: boolean;
-    entry_id: string | null;
-    status: string | null;
-    pokedex_requirement: boolean;
-  } | null => {
-    if (!slot_value) return null;
-    if (slot_value.startsWith('proxy:')) {
-      const proxy_id = slot_value.slice(6);
-      const proxy = binder.value?.proxies.find((candidate) => candidate.id === proxy_id);
-      return proxy
-        ? {
-            name: proxy.name,
-            image_url: binder_asset_url(proxy.id, 'proxy'),
-            wanted: false,
-            entry_id: null,
-            status: null,
-            pokedex_requirement: false,
-          }
-        : null;
-    }
-    const row = rows_by_entry_id.value.get(slot_value);
-    return row
-      ? {
-          name: row.card.display_name,
-          image_url: row.card.image_url,
-          wanted: row.entry.wanted,
-          entry_id: row.entry.id,
-          status: collection_store.pokedex_entry_status(row.entry.id),
-          pokedex_requirement: Boolean(row.entry.pokedex_requirement_id),
-        }
-      : null;
-  };
-  const slots_for_side = (side_index: number) => {
-    if (!binder.value) return [];
-    const count = binder_slots_per_page(binder.value.layout);
-    const start = side_index * count;
-    return binder.value.slots.slice(start, start + count).map((entry_id, offset) => {
-      const row_index = Math.floor(offset / binder_columns.value);
-      const column = offset % binder_columns.value;
-      const covering_decorations = (image_placements_by_side.value.get(side_index) ?? []).flatMap(
-        (placement) => {
-          const image = binder_images_by_id.value.get(placement.image_id);
-          const covers_slot = Boolean(
-            image &&
-            row_index >= placement.row &&
-            row_index < placement.row + image.height &&
-            column >= placement.column &&
-            column < placement.column + image.width,
-          );
-          return covers_slot && image ? [{ image, placement }] : [];
-        },
-      );
-      const has_decoration = covering_decorations.length > 0;
-      const accepts_card = covering_decorations.every(({ image, placement }) => {
-        const relative_row = row_index - placement.row;
-        const relative_column = column - placement.column;
-        return image.card_slots.includes(relative_row * image.width + relative_column);
-      });
-      return {
-        index: start + offset,
-        row_index: row_index,
-        column,
-        has_decoration: has_decoration,
-        accepts_card: accepts_card,
-        content: slot_content(entry_id),
-      };
-    });
-  };
-  const decorations_for_side = (side_index: number) => {
-    if (!binder.value) return [];
-    return (image_placements_by_side.value.get(side_index) ?? []).flatMap((placement) => {
-      const image = binder_images_by_id.value.get(placement.image_id);
-      return image ? [{ placement, image }] : [];
-    });
-  };
-
-  /* computed vars */
   const visible_sides = computed<
     {
       position: string;
@@ -1057,6 +899,7 @@
       },
     ];
   });
+
   const spread_label = computed<string>(() => {
     const page_count = binder.value?.page_count ?? 0;
     if (current_spread.value === 0) return 'Page 1';
@@ -1064,39 +907,192 @@
     return `Pages ${current_spread.value}–${current_spread.value + 1}`;
   });
 
-  /* watchers */
-  watchEffect(() => {
-    if (!binder_store.is_ready.value || !collection_store.is_file_connected.value || !binder.value)
-      return;
-    const quantities = new Map(base_rows.value.map((row) => [row.entry.id, row.entry.quantity]));
-    binder_store.clean(folder_id.value, quantities);
-    if (binder.value && current_spread.value > binder.value.page_count) {
-      current_spread.value = binder.value.page_count;
-    }
+  const got_it_card_name = computed<string>(() => {
+    const entry_id = got_it_target.value?.entry_id;
+    return entry_id
+      ? (rows.value.find((row) => row.entry.id === entry_id)?.card.display_name ?? '')
+      : '';
   });
 
   /* functions */
+  const card_for_entry = (entry: Collection_Entry): Display_Card | null => {
+    if (entry.set_id === 'pokedex-requirement' && entry.pokedex_requirement_id) {
+      return pokedex_placeholder_card(
+        entry.pokedex_requirement_id,
+        entry.pokedex_candidate_count ?? 0,
+        folder.value?.pokedex_config?.international_language_id ?? 'en',
+        folder.value?.pokedex_config,
+      );
+    }
+    if (entry.set_id === 'manual-collection') {
+      const manual = collection_store.manual_cards.value.find((card) => card.id === entry.card_id);
+      if (!manual) return null;
+      const image = resolve_card_image({}, entry.language_id, entry.language_id, {
+        set_id: 'manual-collection',
+        card_id: manual.id,
+        variant_id: entry.variant_id,
+      });
+      return {
+        id: manual.id,
+        card_id: manual.id,
+        set_id: entry.set_id,
+        set_name: manual.set_name || null,
+        language_id: entry.language_id,
+        variant_id: entry.variant_id,
+        number: manual.number || '?',
+        display_name: manual.name,
+        category: manual.category,
+        rarity: manual.rarity,
+        hp: manual.hp,
+        illustrator: manual.illustrator || null,
+        types: manual.types,
+        pokemon_names: manual.pokemon_name ? [manual.pokemon_name] : [],
+        energy_costs: [],
+        image_url: image.url,
+        image_language_id: image.language_id,
+        image_is_fallback: false,
+        image_source: image.source,
+        cardmarket: null,
+        is_manual: true,
+        estimated_value: manual.estimated_value,
+      };
+    }
+    const card = get_card_by_id(entry.set_id, entry.card_id);
+    const set = get_set_by_id(entry.set_id);
+    const variant = card?.variants.find((candidate) => candidate.id === entry.variant_id);
+    if (!card || !variant) return null;
+    return build_display_card(
+      card,
+      variant,
+      entry.language_id,
+      set ? (localized_value(set.name, entry.language_id) ?? set.id) : null,
+    );
+  };
+
+  const proxy_available = (proxy: Binder_Proxy): number =>
+    Math.max(0, proxy.quantity - (used_proxy_counts.value.get(proxy.id) ?? 0));
+
+  const is_page_locked = (side_index: number): boolean =>
+    binder.value?.locked_pages.includes(side_index) ?? false;
+
+  const is_slot_locked = (slot_index: number): boolean =>
+    Boolean(
+      binder.value &&
+      is_page_locked(Math.floor(slot_index / binder_slots_per_page(binder.value.layout))),
+    );
+
+  const is_asset_locked = (kind: 'proxy' | 'image', asset_id: string): boolean => {
+    if (!binder.value) return false;
+    if (kind === 'image') {
+      return binder.value.image_placements.some(
+        (placement) => placement.image_id === asset_id && is_page_locked(placement.side_index),
+      );
+    }
+    return binder.value.slots.some(
+      (slot, index) => slot === `proxy:${asset_id}` && is_slot_locked(index),
+    );
+  };
+
+  const binder_asset_url = (asset_id: string, kind: 'proxy' | 'image'): string => {
+    const asset = manual_image_store.find('binder-assets', folder_id.value, asset_id, kind);
+    return asset ? `${asset.url}?v=${encodeURIComponent(asset.updated_at)}` : '';
+  };
+
+  const open_michi_dialog = (): void => {
+    show_michi_dialog.value = true;
+  };
+
+  const slot_content = (
+    slot_value: string | null,
+  ): {
+    name: string;
+    image_url: string | null;
+    wanted: boolean;
+    entry_id: string | null;
+    status: string | null;
+    pokedex_requirement: boolean;
+  } | null => {
+    if (!slot_value) return null;
+    if (slot_value.startsWith('proxy:')) {
+      const proxy_id = slot_value.slice(6);
+      const proxy = binder.value?.proxies.find((candidate) => candidate.id === proxy_id);
+      return proxy
+        ? {
+            name: proxy.name,
+            image_url: binder_asset_url(proxy.id, 'proxy'),
+            wanted: false,
+            entry_id: null,
+            status: null,
+            pokedex_requirement: false,
+          }
+        : null;
+    }
+    const row = rows_by_entry_id.value.get(slot_value);
+    return row
+      ? {
+          name: row.card.display_name,
+          image_url: row.card.image_url,
+          wanted: row.entry.wanted,
+          entry_id: row.entry.id,
+          status: collection_store.pokedex_entry_status(row.entry.id),
+          pokedex_requirement: Boolean(row.entry.pokedex_requirement_id),
+        }
+      : null;
+  };
+
+  const slots_for_side = (side_index: number) => {
+    if (!binder.value) return [];
+    const count = binder_slots_per_page(binder.value.layout);
+    const start = side_index * count;
+    return binder.value.slots.slice(start, start + count).map((entry_id, offset) => {
+      const row_index = Math.floor(offset / binder_columns.value);
+      const column = offset % binder_columns.value;
+      const covering_decorations = (image_placements_by_side.value.get(side_index) ?? []).flatMap(
+        (placement) => {
+          const image = binder_images_by_id.value.get(placement.image_id);
+          const covers_slot = Boolean(
+            image &&
+            row_index >= placement.row &&
+            row_index < placement.row + image.height &&
+            column >= placement.column &&
+            column < placement.column + image.width,
+          );
+          return covers_slot && image ? [{ image, placement }] : [];
+        },
+      );
+      const has_decoration = covering_decorations.length > 0;
+      const accepts_card = covering_decorations.every(({ image, placement }) => {
+        const relative_row = row_index - placement.row;
+        const relative_column = column - placement.column;
+        return image.card_slots.includes(relative_row * image.width + relative_column);
+      });
+      return {
+        index: start + offset,
+        row_index: row_index,
+        column,
+        has_decoration: has_decoration,
+        accepts_card: accepts_card,
+        content: slot_content(entry_id),
+      };
+    });
+  };
+
+  const decorations_for_side = (side_index: number) => {
+    if (!binder.value) return [];
+    return (image_placements_by_side.value.get(side_index) ?? []).flatMap((placement) => {
+      const image = binder_images_by_id.value.get(placement.image_id);
+      return image ? [{ placement, image }] : [];
+    });
+  };
+
   const toggle_page_lock = (side_index: number): void => {
     binder_store.set_page_locked(folder_id.value, side_index, !is_page_locked(side_index));
   };
+
   const open_settings = (): void => {
     if (!binder.value || binder.value.locked_pages.length) return;
     show_settings.value = true;
   };
-
-  /* computed vars */
-
-  /* functions */
-
-  /* watchers */
-
-  /* computed vars */
-
-  /* functions */
-
-  /* watchers */
-
-  /* functions */
 
   const request_delete_asset = (kind: 'proxy' | 'image', asset_id: string): void => {
     if (is_asset_locked(kind, asset_id)) return;
@@ -1106,6 +1102,7 @@
         : binder.value?.images.find((candidate) => candidate.id === asset_id);
     if (asset) delete_target.value = { kind, id: asset_id, name: asset.name };
   };
+
   const confirm_delete_asset = async (): Promise<void> => {
     if (!delete_target.value || is_asset_locked(delete_target.value.kind, delete_target.value.id))
       return;
@@ -1123,6 +1120,7 @@
     delete_saving.value = false;
     delete_target.value = null;
   };
+
   const start_entry_drag = (entry_id: string, event: DragEvent): void => {
     const row = rows.value.find((candidate) => candidate.entry.id === entry_id);
     if (!row || row.available < 1 || !event.dataTransfer) {
@@ -1132,6 +1130,7 @@
     event.dataTransfer.setData('text/plain', `entry:${entry_id}`);
     event.dataTransfer.effectAllowed = 'copy';
   };
+
   const start_slot_drag = (slot_index: number, event: DragEvent): void => {
     if (is_slot_locked(slot_index)) {
       event.preventDefault();
@@ -1141,6 +1140,7 @@
     event.dataTransfer.setData('text/plain', `slot:${slot_index}`);
     event.dataTransfer.effectAllowed = 'move';
   };
+
   const start_proxy_drag = (proxy_id: string, event: DragEvent): void => {
     const proxy = binder.value?.proxies.find((candidate) => candidate.id === proxy_id);
     if (!proxy || proxy_available(proxy) < 1 || !event.dataTransfer) {
@@ -1150,6 +1150,7 @@
     event.dataTransfer.setData('text/plain', `proxy:${proxy_id}`);
     event.dataTransfer.effectAllowed = 'copy';
   };
+
   const start_image_drag = (image_id: string, event: DragEvent): void => {
     if (is_asset_locked('image', image_id)) {
       event.preventDefault();
@@ -1159,6 +1160,7 @@
     event.dataTransfer.setData('text/plain', `image:${image_id}`);
     event.dataTransfer.effectAllowed = 'move';
   };
+
   const card_allowed_at_slot = (slot_index: number): boolean => {
     if (!binder.value) return false;
     const count = binder_slots_per_page(binder.value.layout);
@@ -1182,6 +1184,7 @@
       );
     });
   };
+
   const drop_on_slot = (target_index: number, event: DragEvent): void => {
     if (is_slot_locked(target_index)) return;
     const payload = event.dataTransfer?.getData('text/plain') ?? '';
@@ -1224,15 +1227,6 @@
     got_it_target.value = { slot_index: slot_index, entry_id: entry_id };
   };
 
-  /* computed vars */
-  const got_it_card_name = computed<string>(() => {
-    const entry_id = got_it_target.value?.entry_id;
-    return entry_id
-      ? (rows.value.find((row) => row.entry.id === entry_id)?.card.display_name ?? '')
-      : '';
-  });
-
-  /* functions */
   const confirm_got_it = (): void => {
     if (!got_it_target.value) return;
     const owned_entry = collection_store.fulfill_wanted(
@@ -1243,4 +1237,15 @@
       binder_store.set_slot(folder_id.value, got_it_target.value.slot_index, owned_entry.id);
     got_it_target.value = null;
   };
+
+  /* watchers */
+  watchEffect(() => {
+    if (!binder_store.is_ready.value || !collection_store.is_file_connected.value || !binder.value)
+      return;
+    const quantities = new Map(base_rows.value.map((row) => [row.entry.id, row.entry.quantity]));
+    binder_store.clean(folder_id.value, quantities);
+    if (binder.value && current_spread.value > binder.value.page_count) {
+      current_spread.value = binder.value.page_count;
+    }
+  });
 </script>

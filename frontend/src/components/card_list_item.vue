@@ -134,7 +134,7 @@
             color="negative"
             icon="delete"
             no-caps
-            aria-label="delete"
+            :aria-label="`Remove ${card.display_name} from ${collection_entry?.wanted ? 'want list' : 'collection'}`"
             @click.stop="$emit('delete-entry', collection_entry)"
           >
             <q-tooltip :delay="1000"
@@ -161,7 +161,7 @@
             :color="wanted ? 'negative' : 'secondary'"
             :icon="wanted ? 'favorite' : 'favorite_border'"
             no-caps
-            aria-label="Perform this action"
+            :aria-label="wanted ? 'Add another wanted copy' : 'Add to want list'"
             @click.stop="$emit('add-to-want-list', card)"
           >
             <q-tooltip :delay="1000">{{
@@ -219,14 +219,6 @@
       status_overlay: '',
     },
   );
-  defineEmits<{
-    click: [card: Display_Card];
-    'add-to-collection': [card: Display_Card];
-    'add-to-want-list': [card: Display_Card];
-    'edit-entry': [entry: Collection_Entry];
-    'delete-entry': [entry: Collection_Entry];
-    'toggle-selection': [entry: Collection_Entry];
-  }>();
 
   /* computed vars */
   const display_price = computed<number | null>(() =>
@@ -234,9 +226,11 @@
       ? (props.card.estimated_value ?? null)
       : cardmarket_display_price(props.card.cardmarket),
   );
+
   const owned_quantity = computed<number>(() =>
     collection_store.owned_quantity(props.card.set_id, props.card.card_id, props.card.variant_id),
   );
+
   const wanted = computed<boolean>(() =>
     collection_store.is_wanted(
       props.card.set_id,
@@ -245,6 +239,16 @@
       props.card.language_id,
     ),
   );
+
+  /* initialization */
+  defineEmits<{
+    click: [card: Display_Card];
+    'add-to-collection': [card: Display_Card];
+    'add-to-want-list': [card: Display_Card];
+    'edit-entry': [entry: Collection_Entry];
+    'delete-entry': [entry: Collection_Entry];
+    'toggle-selection': [entry: Collection_Entry];
+  }>();
 </script>
 
 <style scoped>

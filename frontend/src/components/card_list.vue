@@ -65,7 +65,27 @@
   import type { Collection_Entry } from '../store/modules/collection';
   import type { Display_Card } from '../utils/card_display';
 
-  /* const vars */
+  /* reactive vars */
+  const selected_card = ref<Display_Card | null>(null);
+
+  const show_collection_dialog = ref<boolean>(false);
+
+  const selected_wanted_card = ref<Display_Card | null>(null);
+
+  const show_want_list_dialog = ref<boolean>(false);
+
+  /* functions */
+  const open_collection_dialog = (card: Display_Card): void => {
+    selected_card.value = card;
+    show_collection_dialog.value = true;
+  };
+
+  const open_want_list_dialog = (card: Display_Card): void => {
+    selected_wanted_card.value = card;
+    show_want_list_dialog.value = true;
+  };
+
+  /* initialization */
   withDefaults(
     defineProps<{
       cards: Display_Card[];
@@ -84,28 +104,10 @@
     },
   );
 
-  /* hooks */
   defineEmits<{
     'card-click': [card: Display_Card];
     'edit-entry': [entry: Collection_Entry];
     'delete-entry': [entry: Collection_Entry];
     'toggle-selection': [entry: Collection_Entry];
   }>();
-
-  /* reactive vars */
-  const selected_card = ref<Display_Card | null>(null);
-  const show_collection_dialog = ref<boolean>(false);
-  const selected_wanted_card = ref<Display_Card | null>(null);
-  const show_want_list_dialog = ref<boolean>(false);
-
-  /* functions */
-  const open_collection_dialog = (card: Display_Card): void => {
-    selected_card.value = card;
-    show_collection_dialog.value = true;
-  };
-
-  const open_want_list_dialog = (card: Display_Card): void => {
-    selected_wanted_card.value = card;
-    show_want_list_dialog.value = true;
-  };
 </script>

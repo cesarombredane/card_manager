@@ -3,14 +3,14 @@ import { computed } from 'vue';
 
 // import utils
 import {
+  parse_manual_image_data,
+  parse_manual_image_entry,
+} from '../../services/personal_validation';
+import {
   read_manual_images,
   save_manual_image,
   remove_manual_image,
 } from '../../services/personal_data';
-import {
-  parse_manual_image_data,
-  parse_manual_image_entry,
-} from '../../services/personal_validation';
 import { store } from '../core';
 
 // import types

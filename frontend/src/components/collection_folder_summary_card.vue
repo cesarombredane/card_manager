@@ -39,7 +39,7 @@
         color="secondary"
         icon="edit"
         no-caps
-        aria-label="edit"
+        :aria-label="`Edit ${folder.name} collection settings`"
         @click="$emit('settings', folder)"
       >
         <q-tooltip :delay="1000">Collection settings</q-tooltip>
@@ -52,7 +52,7 @@
         color="negative"
         icon="delete"
         no-caps
-        aria-label="delete"
+        :aria-label="`Delete ${folder.name} collection`"
         @click="$emit('delete', folder)"
       >
         <q-tooltip :delay="1000">Delete collection</q-tooltip>
@@ -80,13 +80,15 @@
     value: number;
     locked?: boolean;
   }>();
-  defineEmits<{
-    settings: [folder: Collection_Folder];
-    delete: [folder: Collection_Folder];
-  }>();
 
   /* computed vars */
   const icon = computed<'inventory' | 'auto_stories'>(() =>
     props.folder.type === 'box' ? 'inventory' : 'auto_stories',
   );
+
+  /* initialization */
+  defineEmits<{
+    settings: [folder: Collection_Folder];
+    delete: [folder: Collection_Folder];
+  }>();
 </script>

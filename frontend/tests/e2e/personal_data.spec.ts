@@ -134,7 +134,7 @@ test('creates, edits and reloads a binder asset through the separated workflows'
   await page.getByLabel('Number of pages', { exact: true }).fill('2');
   await page.getByRole('button', { name: 'Reset and save', exact: true }).click();
   await page.getByRole('tab', { name: 'Proxies', exact: true }).click();
-  await page.getByRole('button', { name: 'add', exact: true }).click();
+  await page.getByRole('button', { name: 'Add proxy card', exact: true }).click();
   await page.getByLabel('Proxy name', { exact: true }).fill('Fixture proxy');
   await page.locator('input[type=file]').setInputFiles({
     name: 'fixture.png',
@@ -147,7 +147,7 @@ test('creates, edits and reloads a binder asset through the separated workflows'
   await expect(page.locator('canvas')).toHaveJSProperty('height', 900);
   await page.getByRole('dialog').getByRole('button', { name: 'Add', exact: true }).click();
   await expect(page.getByRole('dialog')).toHaveCount(0);
-  await page.getByRole('button', { name: 'edit', exact: true }).click();
+  await page.getByRole('button', { name: 'Edit proxy Fixture proxy', exact: true }).click();
   await page.getByLabel('Name', { exact: true }).fill('Edited fixture proxy');
   await page.getByRole('dialog').getByRole('button', { name: 'Save', exact: true }).click();
   await page.getByRole('button', { name: 'Auto Michi', exact: true }).click();
@@ -181,4 +181,69 @@ test('supports keyboard content navigation and recovers from an unknown history 
   await expect(page.getByRole('main')).toBeFocused();
   await page.getByRole('link', { name: 'Return home', exact: true }).click();
   await expect(page.getByText('Manage your Pokemon card collection')).toBeVisible();
+});
+
+test('saves a manual-card variant change and restores it after reload', async ({
+  page,
+  request,
+}) => {
+  const collection = await (await request.get('/api/collection')).json();
+  const date = '2020-01-01T00:00:00.000Z';
+  collection.folders.push({
+    id: 'manual-edit-folder',
+    name: 'Manual edit fixture',
+    type: 'box',
+    created_at: date,
+  });
+  collection.manual_cards.push({
+    id: 'manual-edit-card',
+    name: 'Manual fixture card',
+    set_name: '',
+    number: '1',
+    category: 'pokemon',
+    rarity: 'unknown',
+    pokemon_name: '',
+    hp: null,
+    types: [],
+    illustrator: '',
+    notes: '',
+    estimated_value: null,
+    release_date: null,
+    created_at: date,
+    updated_at: date,
+  });
+  collection.entries.push({
+    id: 'manual-edit-entry',
+    folder_id: 'manual-edit-folder',
+    set_id: 'manual-collection',
+    card_id: 'manual-edit-card',
+    variant_id: 'normal',
+    language_id: 'en',
+    condition: 'NM',
+    quantity: 1,
+    wanted: false,
+    added_at: date,
+    updated_at: date,
+  });
+  expect((await request.put('/api/collection', { data: collection })).ok()).toBe(true);
+  await page.goto('/collection/folder/manual-edit-folder');
+  await page.getByRole('button', { name: 'Edit', exact: true }).click();
+  await page.getByLabel('Variant', { exact: true }).fill('holo');
+  await page.getByLabel('Quantity', { exact: true }).fill('2');
+  const saved = page.waitForResponse((res) => {
+    if (!res.url().endsWith('/api/collection/operations') || res.request().method() !== 'POST')
+      return false;
+    const body = res.request().postDataJSON();
+    return body.after.entries.some(
+      (entry: { id: string; variant_id: string }) =>
+        entry.id === 'manual-edit-entry' && entry.variant_id === 'holo',
+    );
+  });
+  await page.getByRole('button', { name: 'Save changes', exact: true }).click();
+  expect((await saved).ok()).toBe(true);
+  await expect(page.getByRole('dialog')).toHaveCount(0);
+  await page.reload();
+  await page.getByRole('button', { name: 'Edit', exact: true }).click();
+  await expect(page.getByLabel('Variant', { exact: true })).toHaveValue('holo');
+  await expect(page.getByLabel('Quantity', { exact: true })).toHaveValue('2');
 });

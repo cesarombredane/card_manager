@@ -93,3 +93,7 @@ Use synthetic fixtures and temporary storage for automated verification. Do not
 run update, reset, download, price-refresh or catalog-generation commands as a
 verification shortcut. Do not modify existing catalog files, personal JSON, image
 indexes or artwork. Installation backups require an explicit request.
+
+Do not run end-to-end tests as the agent. Provide the command for the user to run
+and report that verification as user-run or pending. Do not launch equivalent
+browser automation as a workaround for this boundary.

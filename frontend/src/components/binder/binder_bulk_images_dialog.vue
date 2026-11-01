@@ -95,10 +95,30 @@
   // import types
   import type { Collection_Binder } from '../../models/binders';
 
+  /* types */
+  type Bulk_Image_Row = {
+    file: File;
+    width: number;
+    height: number;
+    status: 'ready' | 'uploading' | 'done' | 'error';
+    error: string | null;
+  };
+
   /* hooks */
   const props = defineProps<{ modelValue: boolean; folder_id: string }>();
 
   const emit = defineEmits<{ 'update:modelValue': [value: boolean] }>();
+
+  /* reactive vars */
+  const bulk_image_files = ref<File[] | null>(null);
+
+  const bulk_image_rows = ref<Bulk_Image_Row[]>([]);
+
+  const bulk_image_preparing = ref<boolean>(false);
+
+  const bulk_image_saving = ref<boolean>(false);
+
+  const bulk_image_error = ref<string | null>(null);
 
   /* computed vars */
   const folder_id = computed<string>(() => props.folder_id);
@@ -113,26 +133,6 @@
   const asset_dimensions = computed<number[]>(() =>
     Array.from({ length: binder.value?.layout === '2x2' ? 2 : 3 }, (_, index) => index + 1),
   );
-
-  /* types */
-  type Bulk_Image_Row = {
-    file: File;
-    width: number;
-    height: number;
-    status: 'ready' | 'uploading' | 'done' | 'error';
-    error: string | null;
-  };
-
-  /* reactive vars */
-  const bulk_image_files = ref<File[] | null>(null);
-
-  const bulk_image_rows = ref<Bulk_Image_Row[]>([]);
-
-  const bulk_image_preparing = ref<boolean>(false);
-
-  const bulk_image_saving = ref<boolean>(false);
-
-  const bulk_image_error = ref<string | null>(null);
 
   /* functions */
   const best_image_dimensions = (image_aspect: number): { width: number; height: number } => {
@@ -183,13 +183,13 @@
           status: 'ready',
           error: null,
         });
-      } catch (error) {
+      } catch (err) {
         rows.push({
           file,
           width: 1,
           height: 1,
           status: 'error',
-          error: error instanceof Error ? error.message : String(error),
+          error: err instanceof Error ? err.message : String(err),
         });
       }
     }
@@ -243,13 +243,13 @@
         });
         row.status = 'done';
         generic_number += 1;
-      } catch (error) {
+      } catch (err) {
         binder_store.remove_asset(folder_id.value, 'image', asset.id);
         await manual_image_store
           .remove('binder-assets', folder_id.value, asset.id, 'image-source')
           .catch(() => undefined);
         row.status = 'error';
-        row.error = error instanceof Error ? error.message : String(error);
+        row.error = err instanceof Error ? err.message : String(err);
         failed += 1;
       }
     }

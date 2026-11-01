@@ -17,8 +17,6 @@ import { router } from './router/index';
 import './store/modules/collection';
 import './store/modules/binders';
 
-// Preserve icon, Quasar and application stylesheet precedence.
-
 Dark.set(true);
 
 createApp(App)
